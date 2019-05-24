@@ -1,4 +1,6 @@
 module.exports = {
+    base: '/skills/skills-docs/',
+    dest: 'public',
     title: 'Skills as a Service Docs',
     description: 'Skills as a Service Documentation',
     themeConfig: {
