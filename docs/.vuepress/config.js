@@ -4,7 +4,7 @@ module.exports = {
     themeConfig: {
         // logo: '/assets/img/logo.png',
         nav: [
-            { text: 'Overview', link: '/' },
+            { text: 'Overview', link: '/overview/' },
             { text: 'Dashboard User Guide', link: '/dashboard/user-guide/' },
             { text: 'Quick Start', link: '/quick-start/' },
         ],
