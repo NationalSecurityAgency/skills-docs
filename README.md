@@ -1,28 +1,13 @@
 # skills-docs
 
-## Project setup
+## Develop
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+ npm run docs:dev
 ```
 
-### Compiles and minifies for production
+### Build 
 ```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
+ npm run docs:build
 ```
 
 ### Customize configuration
