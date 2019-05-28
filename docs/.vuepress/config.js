@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'Skills as a Service Docs',
-    description: 'Skills as a Service Documentation',
+    title: 'Skills as a Service',
+    description: 'Innovative approach for application training!',
     themeConfig: {
         // logo: '/assets/img/logo.png',
         nav: [
@@ -11,7 +11,7 @@ module.exports = {
         // displayAllHeaders: true,
         sidebarDepth: 2,
         sidebar: [
-            '/',
+            '/overview/',
             '/quick-start/',
             '/dashboard/install-guide',
             {
@@ -21,15 +21,16 @@ module.exports = {
                     '/dashboard/user-guide/',
                     '/dashboard/user-guide/projects',
                     '/dashboard/user-guide/subjects',
-                    '/dashboard/user-guide/skills.md',
-                    '/dashboard/user-guide/levels.md',
-                    '/dashboard/user-guide/badges.md',
-                    '/dashboard/user-guide/dependencies.md',
-                    '/dashboard/user-guide/cross-project-deps.md',
-                    '/dashboard/user-guide/users.md',
-                    '/dashboard/user-guide/access-management.md',
-                    '/dashboard/user-guide/root-user.md',
-                    '/dashboard/user-guide/programmatic-interface.md',
+                    '/dashboard/user-guide/skills',
+                    '/dashboard/user-guide/skills-versioning',
+                    '/dashboard/user-guide/levels',
+                    '/dashboard/user-guide/badges',
+                    '/dashboard/user-guide/dependencies',
+                    '/dashboard/user-guide/cross-project-deps',
+                    '/dashboard/user-guide/users',
+                    '/dashboard/user-guide/access-management',
+                    '/dashboard/user-guide/root-user',
+                    '/dashboard/user-guide/programmatic-interface',
                 ]
             },
             '/skills-display/',
@@ -37,5 +38,6 @@ module.exports = {
 
         ],
         lastUpdated: 'Last Updated',
+        home: true,
     }
 }
