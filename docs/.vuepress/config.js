@@ -31,6 +31,7 @@ module.exports = {
                     '/dashboard/user-guide/access-management',
                     '/dashboard/user-guide/root-user',
                     '/dashboard/user-guide/programmatic-interface',
+                    '/dashboard/user-guide/inception',
                 ]
             },
             '/skills-display/',

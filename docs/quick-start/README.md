@@ -22,7 +22,7 @@ TBD
 ### Distribution-based install
 
 1. Download Latest Distribution
-1.  
+1. TBD 
 
 ## Integrate User Skills Display
 
