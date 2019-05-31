@@ -34,7 +34,7 @@ module.exports = {
                     '/dashboard/user-guide/inception',
                 ]
             },
-            '/skills-display/',
+            '/skills-client/',
             '/report-events/'
 
         ],
