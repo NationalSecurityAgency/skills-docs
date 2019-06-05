@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Skills as a Service',
-    description: 'Innovative approach for application training!',
+    description: 'Innovative approach to application training!',
     themeConfig: {
         // logo: '/assets/img/logo.png',
         nav: [

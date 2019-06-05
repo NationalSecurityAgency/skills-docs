@@ -4,7 +4,7 @@ actionText: Get Started →
 actionLink: /overview/
 features:
 - title: User Engagement
-  details: Enalbe users to Quickly learn new features and effectively master advanced features. Improve training recall through continued user
+  details: Enable users to Quickly learn new features and effectively master advanced features. Improve training recall through continued user
            engagement.
 - title: Rich Gamification Platform
   details: Corporate solution takes the guesswork and maintenance out of implementing gamified user training. Provides a template
