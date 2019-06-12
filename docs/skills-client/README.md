@@ -1,5 +1,6 @@
 # Skills Client
 
+[[toc]]
 
 ## Authorization
 
@@ -19,18 +20,173 @@ stay protected.
 :::
 
 
-
-
-
 ## Integration
 ### Vue.js
 
-#### User Display
+To install client libraries:
 
-To install User Display:
+``` js
+npm install @skills/skills-client-vue --save
+```
+
+This will give you access to 
+1. Skills Display - Visualize your website users' skill profile
+1. Skill Event Reporting - Report skill events using Vue.js directives or JS utility 
+
+Step one is to globally configure Skills client, we suggest application's entry point
+such as main.js or App.vue: 
+
+``` js
+import SkillsConfiguration from '@skills/skills-client-configuration';
+
+SkillsConfiguration.configure({
+  serviceUrl: 'http://localhost:8080',
+  projectId: 'movies',
+  authenticator: 'http://localhost:8091/api/users/user1/token',
+});
 
 ```
-npm install @skills/skills-client-vue --save
+
+This configuration is used by Skills Display and Skills Reporting libraries so you won't need to configure those separately.  
+ 
+ ```SkillsConfiguration.configure``` parameters:
+
+| Parameter        | Explanation           |
+| ------------- |:-------------|
+| serviceUrl      | url to the skills service - this is the same url as the dashboard - User Interface and service endpoints are colocated | 
+| projectId      | the id of project that was created in dashboard; visualize and report skills for the project with this id |   
+| authenticator | url to your [Authorization Endpoint](/skills-client/#authorization-endpoint); if skills platform is installed in pki mode then you must set this value to ``pki`` |   
+
+#### Skills Display
+
+Skills Display component which provides comprehensive visualization of user's skill and progress profile!
+
+![User Skills Image](./Screenshot_2019-06-12_UserSkills.png)
+
+Previously installed ```skills-client-vue``` library is packaged with Skills Display component. 
+
+Usage is trivial:
+1. Import SkillsDisplay component: ```import { SkillsDisplay } from '@skills/skills-client-vue';```
+1. Utilize SkillsDisplay component: ```<skills-display/>```
+
+Here is a full example of a Vue.js single-file component that uses SkillsDisplay: 
+
+``` js{3,8,11}
+<template>
+    <div class="container">
+        <skills-display/>
+    </div>
+</template>
+
+<script>
+    import { SkillsDisplay } from '@skills/skills-client-vue';
+    export default {
+        name: "ShowSkills",
+        components: {SkillsDisplay},
+        data() {
+            return {
+                token: '',
+                version: 0,
+            };
+        },
+    }
+</script>
+
+<style scoped>
+</style>
+``` 
+
+If you are taking advantage of [Skills Versioning](/dashboard/user-guide/skills-versioning.html) then you need to provide version property to 
+the SkillsDisplay component:
+
+``` js
+<skills-display :version="currentVersion"/>
+```
+
+ SkillsDisplay component properties:
+
+| Prop        | Explanation           |
+| ------------- |:-------------|
+| version      | (opational) version to use in [Skills Versioning](/dashboard/user-guide/skills-versioning.html) paradigm | 
+
+#### Skill Event Reporting 
+
+```skills-client-vue``` library is packaged with ability to report skill events either using Vue.js directives or JS utility. 
+
+##### v-skill directive 
+
+Globally install the directive, we suggest placing in your application's entry point such as main.js or App.vue: 
+
+``` js
+import { SkillsDirective } from '@skills/skills-client-vue';
+
+Vue.use(SkillsDirective);
+``` 
+
+Now you can use v-skills directive to report skill events, the following example will report an event for a skill with id 'IronMan' when the button is clicked:
+
+``` js
+<button v-skills="'IronMan'">Report Skill</button>
+```
+
+By default v-skills directive will utilize click event, so the following code is functionally equivalent to the example above:
+
+``` js
+<button v-skills:click="'IronMan'">Report Skill</button>
+```
+
+v-skills directive supports any arbitrary event, here is an example of input event: 
+
+``` js
+<input type="text" v-skills:input="\'Thor\'"/>
+```  
+
+For an extensive list of events take a look at [Mozilla's documentation](https://developer.mozilla.org/en-US/docs/Web/Events). 
+
+Skills service add-skill-event endpoint responds with a comprehensive metatdata describing how that skill influenced user's skills posture. 
+v-skills directive provides a way to capture that result via a callback method, for example: 
+
+``` js{3}
+<input type="text" 
+    v-skills:input="'Thor'" 
+    @skills-report-response="onReporterResponse"/>
+```
+
+and then let's say:
+
+``` js
+onReporterResponse(response) {
+   // do what you need with response object
+},
+```
+
+a response object may look something like this:
+``` js
+{
+  "success": true,
+  "skillApplied": true,
+  "explanation": "Skill event was applied",
+  "completed": []
+}
+```
+
+For a full description of the response object please take a look at [Programmatic API section of this guide](/dashboard/user-guide/programmatic-interface.html).
+
+##### SkillsReporter JS utility 
+  
+If you find that v-skills directive is not meeting your needs then there is always JS utility to report skills: 
+
+``` js
+import SkillsReporter from '@skills/skills-client-reporter';
+
+
+SkillsReporter.reportSkill(skillId)
+    .then((res) => {
+        // res = metatdata describing how that skill influenced user's skills posture
+    })
+    .catch((err) => {
+        // err = object describing why this error occrued
+    });
 ```
 
 ### React

@@ -1,6 +1,11 @@
 module.exports = {
     title: 'Skills as a Service',
     description: 'Innovative approach to application training!',
+    markdown: {
+        toc: {
+            includeLevel: [2, 3, 4, 5],
+        },
+    },
     themeConfig: {
         // logo: '/assets/img/logo.png',
         nav: [
