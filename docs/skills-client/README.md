@@ -33,8 +33,16 @@ This will give you access to
 1. Skills Display - Visualize your website users' skill profile
 1. Skill Event Reporting - Report skill events using Vue.js directives or JS utility 
 
+#### Skills Configuration
+
 Step one is to globally configure Skills client, we suggest application's entry point
 such as main.js or App.vue: 
+
+::: warning Reminder
+SkillsConfiguration is a singleton and you only need to provide configuration information once per your applications
+runtime.
+:::
+
 
 ``` js
 import SkillsConfiguration from '@skills/skills-client-configuration';
@@ -68,6 +76,13 @@ Previously installed ```skills-client-vue``` library is packaged with Skills Dis
 Usage is trivial:
 1. Import SkillsDisplay component: ```import { SkillsDisplay } from '@skills/skills-client-vue';```
 1. Utilize SkillsDisplay component: ```<skills-display/>```
+
+::: warning Tip
+The @skills/skills-client-vue package also exports [Skills Configuration](/skills-client/#skills-configuration) as
+a named export. An alternative to installing the @skills/skills-client-configuration package is to use 
+
+```import { SkillsDisplay, SkillsConfiguration } from '@skills/skills-client-vue';```
+:::
 
 Here is a full example of a Vue.js single-file component that uses SkillsDisplay: 
 
@@ -107,7 +122,7 @@ the SkillsDisplay component:
 
 | Prop        | Explanation           |
 | ------------- |:-------------|
-| version      | (opational) version to use in [Skills Versioning](/dashboard/user-guide/skills-versioning.html) paradigm | 
+| version      | (optional) version to use in [Skills Versioning](/dashboard/user-guide/skills-versioning.html) paradigm | 
 
 #### Skill Event Reporting 
 
@@ -171,6 +186,16 @@ a response object may look something like this:
 ```
 
 For a full description of the response object please take a look at [Programmatic API section of this guide](/dashboard/user-guide/programmatic-interface.html).
+
+In some extreme cases a not success HTTP call could be made, such as access denied or internal server error.  You can
+also listen on the @skills-report-error event to handle these situations.
+
+``` js{4}
+<input type="text" 
+    v-skills:input="'Thor'" 
+    @skills-report-response="onReporterResponse"
+    @skills-report-error="onReporterError" />
+```
 
 ##### SkillsReporter JS utility 
   
