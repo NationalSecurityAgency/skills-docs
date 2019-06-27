@@ -25,10 +25,32 @@ Dashboard user that creates a project is automatically granted a role of adminis
 
 ## Settings
 
-Navigate to Project -> Settings: these are project-wide settings.
+To manage and view project-wide settings navigate to ``Project -> Settings``. The following project-level settings are available: 
 
-| Settings | Explanation |
-|:-------- |:------------|
-| Use Points For Levels | By default levels are calculated based on configured percentages of total available points (ex. Level 1 = 10% of total points). Switching this property to true enables explicit level point management - project admins specify start and end number of points for each level. To learn more please see [Levels](/dashboard/user-guide/levels.html) section. <span style="color:#ffc107">*WARNING: You must define at least 100 points before switching to point-based system*</span> | 
+#### Setting: Use Points For Levels
+
+``Use Points For Levels`` setting allows to switch between 2 level management strategies: 
+1. Percentage-based - levels are calculated based on configured percentages of total available points (ex. Level 1 = 10% of total points)
+1. Point based - project admins specify start and end number of points for each level
+
+By default Percentage-based strategy is selected, changing ``Use Points For Levels`` setting to ``true`` enables Point Based explicit level point management. To learn more please see [Levels](/dashboard/user-guide/levels.html) section.
+
+::: warning
+You must define at least 100 points before switching to point-based system
+:::
+
+#### Setting: Root Help Url
+
+Skill definition's ``Help Url/Path`` will be treated relative to this ``Root Help Url``. For example, if 
+
+- ``Root Help Url`` =  ``http://www.myHelpDocs.com``
+-  and skill definition ``Help Url`` = ``/importan/article`` 
+
+then client display will append ``Root Help Url`` and  ``Help Url`` to produce ``http://www.myHelpDocs.com/importan/article``.
+
+::: tip
+If ``Help Url`` starts with ``http`` or ``https`` then ``Root Help Url`` will NOT be utilized.
+:::  
+
 
  
