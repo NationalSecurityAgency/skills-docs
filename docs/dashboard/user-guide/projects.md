@@ -29,6 +29,6 @@ Navigate to Project -> Settings: these are project-wide settings.
 
 | Settings | Explanation |
 |:-------- |:------------|
-| Use Points For Levels | By default levels are calculated based on configured percentages of total available points (ex. Level 1 = 10% of total points). Switching this property to true enables explicit level point management - project admins specify start and end number of points for each level. To learn more please see [Levels](/dashboard/user-guide/levels.html) section. | 
+| Use Points For Levels | By default levels are calculated based on configured percentages of total available points (ex. Level 1 = 10% of total points). Switching this property to true enables explicit level point management - project admins specify start and end number of points for each level. To learn more please see [Levels](/dashboard/user-guide/levels.html) section. <span style="color:#ffc107">*WARNING: You must define at least 100 points before switching to point-based system*</span> | 
 
  
