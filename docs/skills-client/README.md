@@ -45,7 +45,7 @@ runtime.
 
 
 ``` js
-import SkillsConfiguration from '@skills/skills-client-configuration';
+import { SkillsConfiguration } from '@skills/skills-client-vue';
 
 SkillsConfiguration.configure({
   serviceUrl: 'http://localhost:8080',
@@ -76,13 +76,6 @@ Previously installed ```skills-client-vue``` library is packaged with Skills Dis
 Usage is trivial:
 1. Import SkillsDisplay component: ```import { SkillsDisplay } from '@skills/skills-client-vue';```
 1. Utilize SkillsDisplay component: ```<skills-display/>```
-
-::: warning Tip
-The @skills/skills-client-vue package also exports [Skills Configuration](/skills-client/#skills-configuration) as
-a named export. An alternative to installing the @skills/skills-client-configuration package is to use 
-
-```import { SkillsDisplay, SkillsConfiguration } from '@skills/skills-client-vue';```
-:::
 
 Here is a full example of a Vue.js single-file component that uses SkillsDisplay: 
 
