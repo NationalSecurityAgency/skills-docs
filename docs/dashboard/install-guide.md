@@ -2,13 +2,13 @@
 
 ## Configuration 
 
-Out of the box dashboard comes packaged with smart defaults that are designed to work well for 
-development and prototyping. To start customizing configuration properties create ``application.properties`` file under either: 
+Out of the box the dashboard comes packaged with smart defaults that are designed to work well for 
+development and prototyping. To start customizing configuration properties create a ``application.properties`` file under either: 
 
 - A /config subdirectory of the current directory OR
 - The current directory.
 
-``application.properties`` contain application specific properties, for example database configuration: 
+``application.properties`` contains application specific configuration, for example database configuration: 
 
 ```
 spring.datasource.url=jdbc:postgresql://localhost:5432/skills
@@ -19,8 +19,8 @@ spring.datasource.password=skillspass
 
 ## Database 
 
-By default skills dashboards stores its data into embedded in-memory H2 database. That data is ephermal and will not persist between restarts. 
-While this is a great way to get started quickly is obviously is not appropriate for development, test or production installation. 
+By default the skills dashboard stores its data into an embedded in-memory H2 database. That data is ephermal and will not persist between restarts. 
+While this is a great way to get started quickly it is obviously not appropriate for a test or production installation. 
 Please note that you can easily add a property (discussed below) to make embedded H2 database persist to disk, however we don't recommend using 
 H2 database in a production install. 
  
@@ -62,6 +62,14 @@ To configure PostgresQL database set the following properties:
 spring.datasource.url=jdbc:postgresql://localhost:5432/skills
 spring.datasource.username=postgres
 spring.datasource.password=skillspass
+```
+
+Also, ensure that the CITEXT extension has been installed for the skills database
+in your PostgreSQL installation:
+
+```
+\c skills;
+create extension citext;
 ```
 
 ### MySQL Database
