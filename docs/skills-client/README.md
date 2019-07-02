@@ -2,24 +2,6 @@
 
 [[toc]]
 
-## Authorization
-
-### Authorization Endpoint
-
-Production based installation will require you to implement an authorization endpoint. 
-The goal of the endpoint is to authorize a specific user so skills display and skills reporting can be properly secured.    
-
-
-The authorization endpoint produces a user specific temporary client token by utilizing a project's ```Client ID``` and ```Client Secret``` 
-(found in dashboard under ```Project -> Access -> 'Trusted Client Properties'``` ) 
-
-::: warning Reminder
-Friendly reminder that you ***must*** keep ```Client ID``` and ```Client Secret``` protected/hidden/private as it serves as the
-project's authentication mechanism. That is why these attributes must only be used within your server-side endpoint so they can
-stay protected. 
-:::
-
-
 ## Integration
 ### Vue.js
 
@@ -65,6 +47,19 @@ This configuration is used by Skills Display and Skills Reporting libraries so y
 | projectId      | the id of project that was created in dashboard; visualize and report skills for the project with this id |   
 | authenticator | url to your [Authorization Endpoint](/skills-client/#authorization-endpoint); if skills platform is installed in pki mode then you must set this value to ``pki`` |   
 
+If you are running in ``pki`` mode then your configuration will look something like this:
+
+ ``` js
+ import SkillsConfiguration from '@skills/skills-client-configuration';
+ 
+ SkillsConfiguration.configure({
+   serviceUrl: 'http://localhost:8080',
+   projectId: 'movies',
+   authenticator: 'pki',
+ });
+ 
+ ```
+
 #### Skills Display
 
 Skills Display component which provides comprehensive visualization of user's skill and progress profile!
@@ -91,12 +86,6 @@ Here is a full example of a Vue.js single-file component that uses SkillsDisplay
     export default {
         name: "ShowSkills",
         components: {SkillsDisplay},
-        data() {
-            return {
-                token: '',
-                version: 0,
-            };
-        },
     }
 </script>
 
@@ -195,8 +184,7 @@ also listen on the @skills-report-error event to handle these situations.
 If you find that v-skills directive is not meeting your needs then there is always JS utility to report skills: 
 
 ``` js
-import SkillsReporter from '@skills/skills-client-reporter';
-
+import { SkillsReporter } from '@skills/skills-client-vue';
 
 SkillsReporter.reportSkill(skillId)
     .then((res) => {
@@ -210,5 +198,74 @@ SkillsReporter.reportSkill(skillId)
 ### React
 ### Angular Display
 ### Pure JavaScript Display
-## Architecture
+## Authorization
+
+### Authorization Endpoint
+
+::: tip Note
+Please note that Authorization Endpoint is not needed if you are running dashboard in PKI mode. 
+:::
+
+Production based installation will require you to implement an authorization endpoint. 
+The goal of the endpoint is to authorize a specific user so skills display and skills reporting can be properly secured.    
+
+The authorization endpoint produces a user specific temporary client token by utilizing a project's ```Client ID``` and ```Client Secret``` 
+(found in dashboard under ```Project -> Access -> 'Trusted Client Properties'``` ) 
+
+::: warning Reminder
+Friendly reminder that you ***must*** keep ```Client ID``` and ```Client Secret``` protected/hidden/private as it serves as the
+project's authentication mechanism. That is why these attributes must only be used within your server-side endpoint so they can
+stay protected. 
+:::
+
+To retrieve temporary client token skill dashboard provides ``/oauth/token`` endpoint and expects the following parameters:
+1. Auth Param: ``Client Id`` (from skills dashboard)
+1. Auth Param: ``Client Secret`` (from skills dashboard)
+1. Data Variable Asking for client credentials:  ``grant_type=client_credentials`` (can be hardcoded)
+1. Data Variable specifies which user to retrieve credentials for: ``proxy_user=<user name>`` (specific to user that client display is being loaded for)
+
+This is an implementation of OAuth2 protocol to retrieve temporary client token. To learn more about OAuth2 here are a couple of resources: 
+- [https://auth0.com/docs/protocols/oauth2](https://auth0.com/docs/protocols/oauth2)
+- [https://oauth.net/2/](https://oauth.net/2/)
+- [https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) 
+
+Below are a number of examples of how you could implement authentication endpoint that will be utilized by client display. 
+
+#### Spring Boot Example
+
+Here is a working example of REST endpoint within Spring Boot's application: 
+
+```java
+    @CrossOrigin()
+    @GetMapping("/users/{user}/token")
+    public String getUserAuthToken1(@PathVariable String user) {
+        // this is skill's service endpoint that will provide you client token
+        String serviceTokenUrl = this.dashboardUrl + "/oauth/token";
+        // 1. auth param: client id
+        String clientId = this.clientId;
+        // 2. auth param: client secret
+        String clientSecret = this.secret;
+        
+        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+        // 3. Data Variable Asking for client credentials
+        body.add("grant_type", "client_credentials");
+        // 4. Data Variable specifies which user to retrieve credentials for
+        body.add("proxy_user", user);
+
+        RestTemplate oAuthRestTemplate = new RestTemplate();
+        oAuthRestTemplate.setInterceptors(Arrays.asList(new BasicAuthenticationInterceptor(clientId, clientSecret)));
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+
+        ResponseEntity<String> responseEntity = oAuthRestTemplate.postForEntity(serviceTokenUrl, new HttpEntity<>(body, headers), String.class);
+        return responseEntity.getBody();
+    }
+```
+
+#### CURL Example
+Here is an example using CURL (please substitute your values of ``client-id``, ``client-secret``, ``dashboard-url`` and ``user-to-proxy-for``):
+
+```bash
+curl client-id:client-secret@dashboard-url/oauth/token -d "grant_type=client_credentials&proxy-user=user-to-proxy-for"
+```
 
