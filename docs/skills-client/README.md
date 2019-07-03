@@ -2,6 +2,12 @@
 
 [[toc]]
 
+## Skills Display
+
+Skills Display component which provides comprehensive visualization of user's skill and progress profile!
+
+![User Skills Image](./Screenshot_2019-06-12_UserSkills.png)
+
 ## Integration
 ### Vue.js
 
@@ -93,7 +99,7 @@ Here is a full example of a Vue.js single-file component that uses SkillsDisplay
 </style>
 ``` 
 
-If you are taking advantage of [Skills Versioning](/dashboard/user-guide/skills-versioning.html) then you need to provide version property to 
+If you are taking advantage of [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) then you need to provide version property to 
 the SkillsDisplay component:
 
 ``` js
@@ -104,7 +110,7 @@ the SkillsDisplay component:
 
 | Prop        | Explanation           |
 | ------------- |:-------------|
-| version      | (optional) version to use in [Skills Versioning](/dashboard/user-guide/skills-versioning.html) paradigm | 
+| version      | (optional) version to use in [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) paradigm | 
 
 #### Skill Event Reporting 
 
@@ -194,6 +200,40 @@ SkillsReporter.reportSkill(skillId)
         // err = object describing why this error occrued
     });
 ```
+
+##### Report Event By Listening to Routes
+
+While skills client library doesn't provide an automatic way to report skills based on route changes it is quite 
+easy to implement if you are using [Vue Router](https://router.vuejs.org/). Here is an example using Vue Router 
+[Global After Hooks](https://router.vuejs.org/guide/advanced/navigation-guards.html#global-after-hooks):
+
+```js
+import Vue from 'vue';
+import Router from 'vue-router';
+import { SkillsReporter } from '@skills/skills-client-vue';
+
+Vue.use(Router);
+
+const router = new Router({
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
+      name: 'HomePage',
+      component: HomePage,
+      meta: {
+        reportSkillId: 'ViewHomePage',
+      },
+    },
+  ],
+});
+
+router.afterEach((to) => {
+  if (to.meta.reportSkillId) {
+    SkillsReporter.reportSkill(to.meta.reportSkillId);
+  }
+});
+```  
 
 ### React
 ### Angular Display

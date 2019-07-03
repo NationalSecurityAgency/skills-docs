@@ -5,7 +5,7 @@ Project's administrator(s) manage training skills definitions, subjects, levels,
 
 To create a project all you need is to specify a name. While project id is required it will be automatically generated which you can optionally override.
 
-Project is composed of Subjects which are made of Skills and a single skill a smallest training unit within the gamification framework. 
+Project is composed of Subjects which are made of Skills and a single skill defines a training unit within the gamification framework. 
 Once the project is created you have an empty canvas to compose and manage your trainign profile. 
 Generally the next step is to create number of subjects and then start constructing skills definitions within those subjects.
 
