@@ -236,8 +236,8 @@ router.afterEach((to) => {
 ```  
 
 ### React
-### Angular Display
-### Pure JavaScript Display
+### Angular
+### Pure JavaScript
 ## Authorization
 
 ### Authorization Endpoint

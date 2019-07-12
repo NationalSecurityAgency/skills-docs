@@ -50,4 +50,53 @@ You can also disable Time Window all together which will force each event to be 
 
 ## Skills Versioning
 
+Skill versioning is a mechanism that allows addition of the new skills without affecting existing software running with an older skill profile.
+Versioning is mostly pertinent to the Display Libraries that visualize skill profile for the version they were declared with. 
+
+Here are simple steps to enable Skills Versioning in your application:
+1. When creating a skill specify a target version (always last deployed version + 1)
+   - Version selection can be found on the top-right in create/edit skills modal
+1. When initializing display component provide the latest target version for that instance. 
+   - [Vue.Js](/skills-client/#vue-js)  
+   - [React](/skills-client/#react)
+   - [Angular](/skills-client/#angular)
+   - [Pure JavaScript](/skills-client/#pure-javascript)
+
+
+Let's walk trough a simple scenario to get a better understanding how Skill Versioning operates. 
+
+We have developed software and releasing ``version 0`` that integrates skills display and event reporting using Vue.js library. 
+In the initial release all of the skills will be created with ``version 0``. Integrated display component will then be initialized with ``version 0``,
+like this:
+``` js
+<skills-display version="0"/>
+```
+This software instance will then get deployed and skill profile for ``version 0`` is displayed. 
+
+Now we are working on the next release which we will label as ``version 1``. 
+Any skill created with ``version 1`` will not be visible in the already deployed software configured to visualize ``version 0``
+Version will need to be updated in the integrated display component to use ``version 1``, like this:
+ ``` js
+ <skills-display version="1"/>
+ ```
+The updated software running ``version 1`` profile will expose skills declared with both ``version 0`` and ``version 1``.
+Both version of software can then runs simultaneously and each will present its own gamification profile. 
+::: tip Please Note
+Please note that skills from previous versions are automatically included, so version 3 will contain skills declared with versions 3, 2, 1 and 0  
+:::   
+
+::: warning Important
+Conveniently Skills Dashboard provides a way to view [Client Display](/dashboard/user-guide/users.html#client-display) for a specific version. 
+Navigate to ``Project -> User -> Client Display`` and then select a previous version on the drop-down located above the client display.  
+:::
+
+Limitations: 
+- Deletes are not directly supported. To remove a skill please follow the following procedure:
+  1. update all the client code that is reporting events for the skill to be deleted
+  1. deploy the version that is not using the skill
+  1. delete skill using dashboard
+- Edits to skills are not versioned and will be immediately visible to any display with this or earlier versions. This is mostly likely the behavior you want as any edit to a skill is a fix or an improvement.
+- Versioning is only applicable to new skills and doesn't apply to operations done on subjects, badges or other items within gamficiation framework.  
+  
+     
 ## Manually Add Skill Event
