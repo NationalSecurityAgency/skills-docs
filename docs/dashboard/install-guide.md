@@ -10,7 +10,7 @@ development and prototyping. To start customizing configuration properties creat
 
 ``application.properties`` contains application specific configuration, for example database configuration: 
 
-```
+```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/skills
 spring.datasource.username=postgres
 spring.datasource.password=skillspass
@@ -30,7 +30,6 @@ Here an overview of supported options with followed by sections depicting each c
 | ------------- |:-------------:| ----- |
 | [H2](http://www.h2database.com) | 1.4 + | Dev Only |
 | [PostgresQL](https://www.postgresql.org/) | 10 + | Production + Dev |
-| [MySQL](https://dev.mysql.com/) | 8 +  | Production + Dev |
 
 
 ### H2 Database
@@ -38,13 +37,13 @@ Here an overview of supported options with followed by sections depicting each c
 Embedded H2 will be used by default where data is ephermal and will not persist between restarts. 
 You can make embedded H2 persistent to a file via a configuration property: 
 
-``` 
+``` properties
 spring.datasource.url=jdbc:h2:file:~/spring-boot-h2-db
 ```
 
 You can also use H2 database in server mode, if so you'll need to specify the following properties:
 
-```
+```properties
 spring.datasource.url=jdbc:h2:tcp://localhost:1521/skills
 spring.datasource.username=sa
 spring.datasource.password=
@@ -56,29 +55,15 @@ H2 is purely for prototyping and development and shouldn't be used in production
 
 ### PostgresQL Database
 
-To configure PostgresQL database set the following properties: 
-
-```
-spring.datasource.url=jdbc:postgresql://localhost:5432/skills
-spring.datasource.username=postgres
-spring.datasource.password=skillspass
-```
-
-Also, ensure that the CITEXT extension has been installed for the skills database
-in your PostgreSQL installation:
-
-```
+Please note that ensure that the CITEXT extension has been installed for the skills database in your PostgreSQL installation:
+```sql
 \c skills;
 create extension citext;
 ```
 
-### MySQL Database
-
-To configure MySQL database set the following properties: 
-
+To configure PostgresQL database set the following properties: 
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/skills
+spring.datasource.username=postgres
+spring.datasource.password=skillspass
 ```
-#spring.datasource.url=jdbc:mysql://localhost:3306/skills?serverTimezone=UTC
-#spring.datasource.username=skillsUser
-#spring.datasource.password=skillsPass
-```
-
