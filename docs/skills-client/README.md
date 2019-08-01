@@ -185,6 +185,30 @@ also listen on the @skills-report-error event to handle these situations.
     @skills-report-error="onReporterError" />
 ```
 
+In many cases it useful to define a **global** success and/or error handler function rather than defining event listeners on
+each element you include the v-skills directive.  For example, if you wanted to global display a toaster message if the recording 
+of a skill failed.  The v-skills directive supports this through a configuration option using the **configure** function when 
+you import the directive.
+
+``` js{13,14,15,16}
+import { SkillsDirective } from '@skills/skills-client-vue';
+
+Vue.use(SkillsDirective);
+
+const myGlobalSuccessHandler = (event) => {
+    toastr.success('skill successfully recorded!');
+};
+
+const myGlobalErrorHandler = (event) => {
+    toastr.error('There was an error recording your skill');
+};
+
+SkillsDirective.configure({
+  globalSuccessHandler: myGlobalSuccessHandler,
+  globalErrorHandler: myGlobalErrorHandler,
+});
+```
+
 ##### SkillsReporter JS utility 
   
 If you find that v-skills directive is not meeting your needs then there is always JS utility to report skills: 
