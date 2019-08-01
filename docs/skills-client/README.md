@@ -185,8 +185,8 @@ also listen on the @skills-report-error event to handle these situations.
     @skills-report-error="onReporterError" />
 ```
 
-In many cases it useful to define a **global** success and/or error handler function rather than defining event listeners on
-each element you include the v-skills directive.  For example, if you wanted to global display a toaster message if the recording 
+In many cases its useful to define a **global** success and/or error handler function rather than defining event listeners on
+each element you include the v-skills directive.  For example, if you wanted to globally display a toaster message if the recording 
 of a skill failed.  The v-skills directive supports this through a configuration option using the **configure** function when 
 you import the directive.
 
