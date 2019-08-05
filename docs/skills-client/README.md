@@ -175,7 +175,7 @@ a response object may look something like this:
 
 For a full description of the response object please take a look at [Programmatic API section of this guide](/dashboard/user-guide/programmatic-interface.html).
 
-In some extreme cases a not success HTTP call could be made, such as access denied or internal server error.  You can
+There are times when HTTP call could fail, such as access denied or internal server error.  You can
 also listen on the @skills-report-error event to handle these situations.
 
 ``` js{4}
@@ -184,6 +184,8 @@ also listen on the @skills-report-error event to handle these situations.
     @skills-report-response="onReporterResponse"
     @skills-report-error="onReporterError" />
 ```
+
+##### Global Event Handling
 
 In many cases its useful to define a **global** success and/or error handler function rather than defining event listeners on
 each element you include the v-skills directive.  For example, if you wanted to globally display a toaster message if the recording 
