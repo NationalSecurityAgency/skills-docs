@@ -31,10 +31,8 @@ module.exports = {
                     '/dashboard/user-guide/badges',
                     '/dashboard/user-guide/icons',
                     '/dashboard/user-guide/dependencies',
-                    '/dashboard/user-guide/cross-project-deps',
                     '/dashboard/user-guide/users',
-                    '/dashboard/user-guide/access-management',
-                    '/dashboard/user-guide/root-user',
+                    '/dashboard/user-guide/metrics',
                     '/dashboard/user-guide/programmatic-interface',
                     '/dashboard/user-guide/inception',
                 ]

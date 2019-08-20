@@ -1,3 +1,0 @@
-# Root User
-
-## Email Settings
