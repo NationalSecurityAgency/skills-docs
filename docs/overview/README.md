@@ -1,6 +1,6 @@
 # Overview
 
-Skills as a Service is an innovative approach to implement application training.  This service reduces an application's training learning curve and drastically reduces the cost burden for providing comprehensive training. 
+Skills as a Service is an innovative approach to implementing application training.  This service reduces an application's training learning curve and drastically reduces the cost burden for providing comprehensive training. 
 
 ::: tip Note
 A Gamification based approach significantly simplifies the training process while making the process more enjoyable for the user community.

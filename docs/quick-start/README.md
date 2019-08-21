@@ -13,7 +13,7 @@ Dashboard requires Java Runtime Environment 11 +, we suggest using [OpenJDK pack
 
 ## Install Dashboard
 
-You can utilize a pre-built docker image to run production grade Skills Dashboard or you can download the latest distribution. 
+You can utilize a pre-built docker image to run a production grade Skills Dashboard or you can download the latest distribution. 
 
 ### Docker-based install
 

@@ -4,7 +4,7 @@
 
 ## Skills Display
 
-Skills Display component which provides comprehensive visualization of user's skill and progress profile!
+The Skills Display component provides comprehensive visualization of user's skill and progress profile!
 
 ![User Skills Image](./Screenshot_2019-06-12_UserSkills.png)
 
@@ -23,11 +23,11 @@ This will give you access to
 
 #### Skills Configuration
 
-Step one is to globally configure Skills client, we suggest application's entry point
+Step one is to globally configure the Skills client, we suggest including it in the application's entry point
 such as main.js or App.vue: 
 
 ::: warning Reminder
-SkillsConfiguration is a singleton and you only need to provide configuration information once per your applications
+SkillsConfiguration is a singleton and you only need to provide configuration information once per your application's
 runtime.
 :::
 
@@ -43,15 +43,15 @@ SkillsConfiguration.configure({
 
 ```
 
-This configuration is used by Skills Display and Skills Reporting libraries so you won't need to configure those separately.  
+This configuration is used by the Skills Display and Skills Reporting libraries so you won't need to configure those separately.  
  
  ```SkillsConfiguration.configure``` parameters:
 
 | Parameter        | Explanation           |
 | ------------- |:-------------|
-| serviceUrl      | url to the skills service - this is the same url as the dashboard - User Interface and service endpoints are colocated | 
-| projectId      | the id of project that was created in dashboard; visualize and report skills for the project with this id |   
-| authenticator | url to your [Authorization Endpoint](/skills-client/#authorization-endpoint); if skills platform is installed in pki mode then you must set this value to ``pki`` |   
+| serviceUrl      | url to the skills service - this is the same url as the dashboard - User Interface and service endpoints are co-located | 
+| projectId      | the id of the project that was created in the dashboard; visualize and report skills for the project with this id |   
+| authenticator | url to your [Authorization Endpoint](/skills-client/#authorization-endpoint); if the skills platform is installed in pki mode then you must set this value to ``pki`` |   
 
 If you are running in ``pki`` mode then your configuration will look something like this:
 
@@ -68,11 +68,11 @@ If you are running in ``pki`` mode then your configuration will look something l
 
 #### Skills Display
 
-Skills Display component which provides comprehensive visualization of user's skill and progress profile!
+The Skills Display component provides comprehensive visualization of user's skill and progress profile!
 
 ![User Skills Image](./Screenshot_2019-06-12_UserSkills.png)
 
-Previously installed ```skills-client-vue``` library is packaged with Skills Display component. 
+Previously installed ```skills-client-vue``` library is packaged with the Skills Display component. 
 
 Usage is trivial:
 1. Import SkillsDisplay component: ```import { SkillsDisplay } from '@skills/skills-client-vue';```
@@ -99,7 +99,7 @@ Here is a full example of a Vue.js single-file component that uses SkillsDisplay
 </style>
 ``` 
 
-If you are taking advantage of [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) then you need to provide version property to 
+If you are taking advantage of [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) then you need to provide the version property to 
 the SkillsDisplay component:
 
 ``` js
@@ -114,11 +114,11 @@ the SkillsDisplay component:
 
 #### Skill Event Reporting 
 
-```skills-client-vue``` library is packaged with ability to report skill events either using Vue.js directives or JS utility. 
+The ```skills-client-vue``` library is packaged with the ability to report skill events using either Vue.js directives or the JS utility. 
 
 ##### v-skill directive 
 
-Globally install the directive, we suggest placing in your application's entry point such as main.js or App.vue: 
+Globally install the directive, we suggest placing it in your application's entry point such as main.js or App.vue: 
 
 ``` js
 import { SkillsDirective } from '@skills/skills-client-vue';
@@ -126,19 +126,19 @@ import { SkillsDirective } from '@skills/skills-client-vue';
 Vue.use(SkillsDirective);
 ``` 
 
-Now you can use v-skills directive to report skill events, the following example will report an event for a skill with id 'IronMan' when the button is clicked:
+Now you can use the v-skills directive to report skill events, the following example will report an event for a skill with id 'IronMan' when the button is clicked:
 
 ``` js
 <button v-skills="'IronMan'">Report Skill</button>
 ```
 
-By default v-skills directive will utilize click event, so the following code is functionally equivalent to the example above:
+By default, the v-skills directive will utilize a click event, so the following code is functionally equivalent to the example above:
 
 ``` js
 <button v-skills:click="'IronMan'">Report Skill</button>
 ```
 
-v-skills directive supports any arbitrary event, here is an example of input event: 
+The v-skills directive supports any arbitrary event, here is an example of input event: 
 
 ``` js
 <input type="text" v-skills:input="\'Thor\'"/>
@@ -146,8 +146,8 @@ v-skills directive supports any arbitrary event, here is an example of input eve
 
 For an extensive list of events take a look at [Mozilla's documentation](https://developer.mozilla.org/en-US/docs/Web/Events). 
 
-Skills service add-skill-event endpoint responds with a comprehensive metatdata describing how that skill influenced user's skills posture. 
-v-skills directive provides a way to capture that result via a callback method, for example: 
+The Skills service add-skill-event endpoint responds with a comprehensive metatdata object describing how that skill influenced the user's skills posture. 
+The v-skills directive provides a way to capture that result via a callback method, for example: 
 
 ``` js{3}
 <input type="text" 
@@ -173,9 +173,9 @@ a response object may look something like this:
 }
 ```
 
-For a full description of the response object please take a look at [Programmatic API section of this guide](/dashboard/user-guide/programmatic-interface.html).
+For a full description of the response object please take a look at the [Programmatic API section of this guide](/dashboard/user-guide/programmatic-interface.html).
 
-There are times when HTTP call could fail, such as access denied or internal server error.  You can
+There are times when the HTTP call could fail, such as access denied or internal server error.  You can
 also listen on the @skills-report-error event to handle these situations.
 
 ``` js{4}
@@ -187,8 +187,8 @@ also listen on the @skills-report-error event to handle these situations.
 
 ##### Global Event Handling
 
-In many cases its useful to define a **global** success and/or error handler function rather than defining event listeners on
-each element you include the v-skills directive.  For example, if you wanted to globally display a toaster message if the recording 
+In many cases it is useful to define a **global** success and/or error handler function rather than defining event listeners on
+each element where you include the v-skills directive.  For example, if you wanted to globally display a toaster message if the recording 
 of a skill failed.  The v-skills directive supports this through a configuration option using the **configure** function when 
 you import the directive.
 
@@ -213,7 +213,7 @@ SkillsDirective.configure({
 
 ##### SkillsReporter JS utility 
   
-If you find that v-skills directive is not meeting your needs then there is always JS utility to report skills: 
+If you find that the v-skills directive is not meeting your needs then there is always the JS utility to report skills: 
 
 ``` js
 import { SkillsReporter } from '@skills/skills-client-vue';
@@ -229,7 +229,7 @@ SkillsReporter.reportSkill(skillId)
 
 ##### Report Event By Listening to Routes
 
-While skills client library doesn't provide an automatic way to report skills based on route changes it is quite 
+While the skills client library doesn't provide an automatic way to report skills based on route changes it is quite 
 easy to implement if you are using [Vue Router](https://router.vuejs.org/). Here is an example using Vue Router 
 [Global After Hooks](https://router.vuejs.org/guide/advanced/navigation-guards.html#global-after-hooks):
 
@@ -269,14 +269,14 @@ router.afterEach((to) => {
 ### Authorization Endpoint
 
 ::: tip Note
-Please note that Authorization Endpoint is not needed if you are running dashboard in PKI mode. 
+Please note that the Authorization Endpoint is not needed if you are running the dashboard in PKI mode. 
 :::
 
 Production based installation will require you to implement an authorization endpoint. 
-The goal of the endpoint is to authorize a specific user so skills display and skills reporting can be properly secured.    
+The goal of the endpoint is to authorize a specific user so that the skills display and skills reporting can be properly secured.    
 
 The authorization endpoint produces a user specific temporary client token by utilizing a project's ```Client ID``` and ```Client Secret``` 
-(found in dashboard under ```Project -> Access -> 'Trusted Client Properties'``` ) 
+(found in the dashboard under ```Project -> Access -> 'Trusted Client Properties'``` ) 
 
 ::: warning Reminder
 Friendly reminder that you ***must*** keep ```Client ID``` and ```Client Secret``` protected/hidden/private as it serves as the
@@ -284,22 +284,22 @@ project's authentication mechanism. That is why these attributes must only be us
 stay protected. 
 :::
 
-To retrieve temporary client token skill dashboard provides ``/oauth/token`` endpoint and expects the following parameters:
+To retrieve a temporary client token skill, the dashboard provides a ``/oauth/token`` endpoint and expects the following parameters:
 1. Auth Param: ``Client Id`` (from skills dashboard)
 1. Auth Param: ``Client Secret`` (from skills dashboard)
 1. Data Variable Asking for client credentials:  ``grant_type=client_credentials`` (can be hardcoded)
 1. Data Variable specifies which user to retrieve credentials for: ``proxy_user=<user name>`` (specific to user that client display is being loaded for)
 
-This is an implementation of OAuth2 protocol to retrieve temporary client token. To learn more about OAuth2 here are a couple of resources: 
+This is an implementation of the OAuth2 protocol to retrieve a temporary client token. To learn more about OAuth2 here are a couple of resources: 
 - [https://auth0.com/docs/protocols/oauth2](https://auth0.com/docs/protocols/oauth2)
 - [https://oauth.net/2/](https://oauth.net/2/)
 - [https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) 
 
-Below are a number of examples of how you could implement authentication endpoint that will be utilized by client display. 
+Below are a number of examples of how you could implement an authentication endpoint that will be utilized by the client display. 
 
 #### Spring Boot Example
 
-Here is a working example of REST endpoint within Spring Boot's application: 
+Here is a working example of a REST endpoint within a Spring Boot application: 
 
 ```java
     @CrossOrigin()
