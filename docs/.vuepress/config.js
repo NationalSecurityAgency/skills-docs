@@ -11,6 +11,7 @@ module.exports = {
         nav: [
             { text: 'Overview', link: '/overview/' },
             { text: 'Dashboard User Guide', link: '/dashboard/user-guide/' },
+            { text: 'Integration Guide', link: '/skills-client/' },
             { text: 'Quick Start', link: '/quick-start/' },
         ],
         // displayAllHeaders: true,
@@ -33,13 +34,23 @@ module.exports = {
                     '/dashboard/user-guide/dependencies',
                     '/dashboard/user-guide/users',
                     '/dashboard/user-guide/metrics',
-                    '/dashboard/user-guide/programmatic-interface',
                     '/dashboard/user-guide/inception',
                 ]
             },
-            '/skills-client/',
-            '/report-events/'
-
+            {
+                title: 'Integration Guide',
+                collapsable: true,
+                children: [
+                    '/skills-client/',
+                    '/skills-client/vuejs',
+                    '/skills-client/react',
+                    '/skills-client/angular',
+                    '/skills-client/js',
+                    '/skills-client/display',
+                    '/skills-client/authorization',
+                    '/skills-client/endpoints',
+                ]
+            },
         ],
         lastUpdated: 'Last Updated',
         home: true,
