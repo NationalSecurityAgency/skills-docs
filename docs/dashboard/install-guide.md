@@ -15,8 +15,6 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/skills
 spring.datasource.username=postgres
 spring.datasource.password=skillspass
 ``` 
-
-
 ## Database 
 
 By default the skills dashboard stores its data into an embedded in-memory H2 database. That data is ephemeral and will not persist between application restarts. 
@@ -63,3 +61,9 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/skills
 spring.datasource.username=postgres
 spring.datasource.password=skillspass
 ```
+
+## Installation Modes
+
+### FORM Mode
+
+### PKI Mode
