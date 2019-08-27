@@ -20,6 +20,11 @@ SkillsConfiguration is a singleton and you only need to provide configuration in
 runtime.
 :::
 
+::: danger Stop
+***SkillsConfiguration.logout()*** must be called when a user logs out of your 
+application. SkillsConfiguration caches the authenticator end point which is more 
+than likely specific to the currently logged in user.
+:::
 
 ``` js
 import { SkillsConfiguration } from '@skills/skills-client-vue';
@@ -28,6 +33,14 @@ SkillsConfiguration.configure({
   serviceUrl: 'http://localhost:8080',
   projectId: 'movies',
   authenticator: 'http://localhost:8091/api/users/user1/token',
+});
+
+ . . . .
+
+// User logs out
+logoutButton.onClick(() => {
+    // VERY IMPORTANT
+    SkillsConfiguration.logout();
 });
 
 ```
@@ -53,6 +66,23 @@ If you are running in ``pki`` mode then your configuration will look something l
    authenticator: 'pki',
  });
  
+ ```
+
+SkillsConfiguration supplies the ***afterConfigure()*** method which returns a promise which will be resolved once the ***SkillsConfiguration.configure*** method
+completes.  This allows support, for example, for configuration options to be supplied by the server asynchronously.
+
+ ``` js
+ import SkillsConfiguration from '@skills/skills-client-configuration';
+ 
+ SkillsConfiguration.afterConfigure()
+   .then(() => {
+     // SkillsConfiguration.configure has been called 
+   });
+
+ axios.get('my/configuration/endpoint')
+   .then((result) => {
+      SkillsConfiguration.configure(result.data);
+    });
  ```
 
 ## Skills Display
@@ -227,7 +257,7 @@ easy to implement if you are using [Vue Router](https://router.vuejs.org/). Here
 ```js
 import Vue from 'vue';
 import Router from 'vue-router';
-import { SkillsReporter } from '@skills/skills-client-vue';
+import { SkillsReporter, SkillsConfiguration } from '@skills/skills-client-vue';
 
 Vue.use(Router);
 
@@ -247,7 +277,10 @@ const router = new Router({
 
 router.afterEach((to) => {
   if (to.meta.reportSkillId) {
-    SkillsReporter.reportSkill(to.meta.reportSkillId);
+    SkillsConfiguration.afterConfigure()
+      .then(() => {
+        SkillsReporter.reportSkill(to.meta.reportSkillId);
+      });    
   }
 });
 ```  
