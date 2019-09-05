@@ -66,5 +66,5 @@ Here is a working example of a REST endpoint within a Spring Boot application:
 Here is an example using CURL (please substitute your values of ``client-id``, ``client-secret``, ``dashboard-url`` and ``user-to-proxy-for``):
 
 ```bash
-curl client-id:client-secret@dashboard-url/oauth/token -d "grant_type=client_credentials&proxy-user=user-to-proxy-for"
+curl client-id:client-secret@dashboard-url/oauth/token -d "grant_type=client_credentials&proxy_user=user-to-proxy-for"
 ```
