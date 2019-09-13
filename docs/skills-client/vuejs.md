@@ -71,7 +71,7 @@ If you are running in ``pki`` mode then your configuration will look something l
 SkillsConfiguration supplies the ***afterConfigure()*** method which returns a promise which will be resolved once the ***SkillsConfiguration.configure*** method
 completes.  This allows support, for example, for configuration options to be supplied by the server asynchronously.
 
- ``` js
+ ``` js{3,4,5,6}
  import SkillsConfiguration from '@skills/skills-client-configuration';
  
  SkillsConfiguration.afterConfigure()
