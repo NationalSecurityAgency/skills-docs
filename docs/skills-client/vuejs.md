@@ -219,31 +219,6 @@ also listen on the @skills-report-error event to handle these situations.
     @skills-report-error="onReporterError" />
 ```
 
-### Global Event Handling
-
-In many cases it is useful to define a **global** success and/or error handler function rather than defining event listeners on
-each element where you include the v-skills directive.  For example, if you wanted to globally display a toaster message if the recording 
-of a skill failed.  The v-skills directive supports this by allowing you to attach one or many handlers to the directive.
-
-``` js{13,14}
-import { SkillsDirective } from '@skills/skills-client-vue';
-
-Vue.use(SkillsDirective);
-
-const myGlobalSuccessHandler = (event) => {
-    toastr.success('skill successfully recorded!');
-};
-
-const myGlobalErrorHandler = (event) => {
-    toastr.error('There was an error recording your skill');
-};
-
-SkillsDirective.addSuccessHandler(myGlobalSuccessHandler);
-SkillsDirective.addErrorHandler(myGlobalErrorHandler);
-```
-
-For a full description of the success response object please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
-
 ### SkillsReporter JS utility 
   
 If you find that the v-skills directive is not meeting your needs then there is always the JS utility to report skills: 
@@ -260,7 +235,15 @@ SkillsReporter.reportSkill(skillId)
     });
 ```
 
-As described above in [Global Event Handling](#global-event-handling) the SkillsReporter native javascript utility allows
+### Global Event Handling
+
+In many cases it is useful to define a **global** success and/or error handler function rather than defining event listeners on
+each element where you include the [v-skills directive](#v-skill-directive) or use [reporting utility](#skillsreporter-js-utility).  
+For example:
+- display messages congratulating users on skills completion as well as level and badge achievements 
+- handle all reporting errors by sending them to a logging service  
+
+ SkillsReporter native javascript utility allows
 you to configure global success and error handlers utilizing the ***addSuccessHandler*** and the ***addErrorHandler*** methods.
 
 ``` js{11,12}
@@ -277,6 +260,8 @@ const myGlobalErrorHandler = (event) => {
 SkillsReporter.addSuccessHandler(myGlobalSuccessHandler);
 SkillsReporter.addErrorHandler(myGlobalErrorHandler);
 ```
+
+For a full description of the success response object please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
 
 ### Report Event By Listening to Routes
 
