@@ -261,7 +261,52 @@ SkillsReporter.addSuccessHandler(myGlobalSuccessHandler);
 SkillsReporter.addErrorHandler(myGlobalErrorHandler);
 ```
 
-For a full description of the success response object please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
+For a full description of the success response object (named ``event`` in the above example) please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
+
+Here is a full example that registers and handles an event by displaying a toast message: 
+
+``` js
+methods: {
+    registerToDisplayProgress() {
+        const myGlobalSuccessHandler = (event) => {
+          if (event.completed) {
+            event.completed.forEach((completedItem) => {
+              this.handleEvent(completedItem);
+            });
+          }
+        };
+        SkillsReporter.addSuccessHandler(myGlobalSuccessHandler);
+    },
+    handleEvent(completedItem) {
+        let title = '';
+        let msg = '';
+        switch (completedItem.type) {
+        case 'Overall':
+          title = `Level ${completedItem.level}!!!!`;
+          msg = `Wow! Congratulations on the Overall Level ${completedItem.level}!`;
+          break;
+        case 'Subject':
+          title = 'Subject Level Achieved!!';
+          msg = `Impressive!! Level ${completedItem.level} in ${completedItem.name} subject!`;
+          break;
+        case 'Skill':
+          title = 'Skill Completed!!';
+          msg = `Way to complete ${completedItem.name} skill!!!`;
+          break;
+        case 'Badge':
+          title = `${completedItem.name}!!!`;
+          msg = `You are now a proud owner of ${completedItem.name} badge!!!`;
+          break;
+        default:
+          title = 'Completed!!';
+          msg = `Way to finish ${completedItem.name}!`;
+        }
+        
+        this.displayToast(msg, title);
+    },
+}
+```
+Please note that displayToast implementation is omitted as that will be specific to your application. 
 
 ### Report Event By Listening to Routes
 
