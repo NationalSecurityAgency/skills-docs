@@ -17,7 +17,7 @@ This is the same exact pluggable [Skills Display](/skills-client/#skills-display
 The client display will depict the project skills profile and user's points at that exact moment. 
 
 ::: tip 
-We suggest visiting the [Skills Display](/skills-client/#skills-display) view often while building a skill profile to better understand how your users will view the gamificaiton profile and their progress. 
+We suggest visiting the [Skills Display](/skills-client/#skills-display) view often while building a skill profile to better understand how your users will view the gamification profile and their progress. 
 Optionally you can also [Add Events Manually](/dashboard/user-guide/skills.html#skills-versioning) to better understand the client's display.  
 ::: 
 

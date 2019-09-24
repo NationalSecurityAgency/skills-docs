@@ -1,6 +1,6 @@
 # Badges
 
-Badges add another facet to the overall gamificaiton profile and allows you to further reward your users by providing these prestigious symbols. 
+Badges add another facet to the overall gamification profile and allows you to further reward your users by providing these prestigious symbols. 
 Badges are a collection of skills and when all of the skills are accomplished that badge is earned. 
 
 Creating badges is simple: 
