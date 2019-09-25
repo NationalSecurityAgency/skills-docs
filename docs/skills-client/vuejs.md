@@ -249,11 +249,11 @@ you to configure global success and error handlers utilizing the ***addSuccessHa
 ``` js{11,12}
 import { SkillsReporter } from '@skills/skills-client-vue';
 
-const myGlobalSuccessHandler = (event) => {
+const myGlobalSuccessHandler = (result) => {
     toastr.success('skill successfully recorded!');
 };
 
-const myGlobalErrorHandler = (event) => {
+const myGlobalErrorHandler = (result) => {
     toastr.error('There was an error recording your skill');
 };
 
@@ -261,15 +261,15 @@ SkillsReporter.addSuccessHandler(myGlobalSuccessHandler);
 SkillsReporter.addErrorHandler(myGlobalErrorHandler);
 ```
 
-For a full description of the success response object (named ``event`` in the above example) please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
+For a full description of the success response object (named ``result`` in the above example) please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
 
 Here is a full example that registers and handles an event by displaying a toast message: 
 
 ``` js
 methods: {
     registerToDisplayProgress() {
-        const myGlobalSuccessHandler = (event) => {
-          if (event.completed) {
+        const myGlobalSuccessHandler = (result) => {
+          if (result.completed) {
             event.completed.forEach((completedItem) => {
               this.handleEvent(completedItem);
             });
