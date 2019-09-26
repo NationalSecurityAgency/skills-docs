@@ -21,7 +21,7 @@ You can enable and configure a gem within the badge edit dialog by selecting ``E
 Global Badges are a special kind of badge that is made up of a collection of skills and/or levels that span across project boundaries.  
 
 Global Badges consist of:
-- *Project's Levels*: Project levels that user must achieve in order to earn the badge
+- *Project's Levels*: Project levels that a user must achieve in order to earn the badge
 - *List of Skills*: Skills from any project
  
 When all of the configured skills and levels are accomplished that badge is earned.
