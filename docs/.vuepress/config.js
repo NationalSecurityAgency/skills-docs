@@ -37,7 +37,6 @@ module.exports = {
                     '/dashboard/user-guide/users',
                     '/dashboard/user-guide/metrics',
                     '/dashboard/user-guide/inception',
-                    '/dashboard/user-guide/globalBadges',
                 ]
             },
             {

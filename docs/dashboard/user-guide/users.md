@@ -2,9 +2,11 @@
 
 ## Access Management
 
-## User Types
+## User Roles
 
-# Root User
+- Project Admin
+- Root
+- Supervisor 
 
 ## Email Settings
 
