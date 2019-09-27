@@ -8,6 +8,14 @@ Creating badges is simple:
    - You can (and should) assign an [Icon](/dashboard/user-guide/icons.html) to your badge.
 1. Once a badge is created you can assign existing skills to that badge under ``Project -> Badge -> Skills``
  
+| Property | Explanation | 
+|:------- |:----------- | 
+| Badge Name | Display name of the badge |
+| Badge ID | The badge ID |
+| Description | *(Optional)* Description, can be used to describe how to achieve the badge or what it's significance is. The Description property supports markdown.
+| Help URL/Path | *(Optional)* URL pointing to a help article further depicting information about this badge. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting|
+| Enable Gem Feature | *(Optional)* Enables the [Gem](#Gem) feature, allowing badges to be only available within a specific time window
+
 ## Gem
 
 Gems are special badges that are only available within a configured time window. 

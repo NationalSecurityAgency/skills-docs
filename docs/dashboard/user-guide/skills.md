@@ -14,9 +14,9 @@ To create a skill, navigate to ``Project -> Subject`` then click on ``Skill +``,
 | Occurrences to Completion | Number of successful occurrences to fully accomplish this skill; used in conjunction with the 'Point Increment' property |
 | [Time Window](/dashboard/user-guide/skills.html#time-window) | Used in conjunction with the 'Max Occurrences Within Window' property; once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window). When 'Time Window' is disabled skill events are applied immediately."
 | Max Occurrences Within Window | Used in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property; Once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window). |    
-| Version | (Optional) Utilize [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) to support running multiple versions of client software |
-| Description | (Optional) Description of how to perform this skill. The Description property supports markdown. 
-| Help URL/Path | (Optional) URL pointing to a help article further depicting information about this skill or capability. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting| 
+| Version | *(Optional)* Utilize [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) to support running multiple versions of client software |
+| Description | *(Optional)* Description of how to perform this skill. The Description property supports markdown. 
+| Help URL/Path | *(Optional)* URL pointing to a help article further depicting information about this skill or capability. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting| 
 
 ::: tip
 To calculate the total points that completion of a particular skill will give a user:

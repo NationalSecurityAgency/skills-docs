@@ -129,8 +129,8 @@ the SkillsDisplay component:
 
 | Prop        | Explanation           |
 | ------------- |:-------------|
-| version      | (optional) version to use in [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) paradigm | 
-| options      | (optional) options object to control various behaviors of skills-display. See [Skills Display Options Object](#skills-display-options-object)
+| version      | *(Optional)* version to use in [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) paradigm | 
+| options      | *(Optional)* options object to control various behaviors of skills-display. See [Skills Display Options Object](#skills-display-options-object)
 
 ### Skills Display Options Object
 
