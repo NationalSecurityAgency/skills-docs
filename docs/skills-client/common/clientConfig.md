@@ -6,30 +6,10 @@ SkillsConfiguration is a singleton and you only need to provide configuration in
 runtime.
 :::
 
-::: danger Stop
-***SkillsConfiguration.logout()*** must be called when a user logs out of your 
-application. SkillsConfiguration caches the authenticator end point which is more 
-than likely specific to the currently logged in user.
-:::
+<form-and-pki 
+    pki-path="/skills-client/common/configExamplePki.html"
+    form-path="/skills-client/common/configExampleForm.html"/>
 
-``` js
-import SkillsConfiguration from '@skills/skills-client-configuration';
-
-SkillsConfiguration.configure({
-  serviceUrl: 'http://localhost:8080',
-  projectId: 'movies',
-  authenticator: 'http://localhost:8091/api/users/user1/token',
-});
-
- . . . .
-
-// User logs out
-logoutButton.onClick(() => {
-    // VERY IMPORTANT
-    SkillsConfiguration.logout();
-});
-
-```
 
 This configuration is used by the Skills Display and Skills Reporting libraries so you won't need to configure those separately.  
  
@@ -39,20 +19,7 @@ This configuration is used by the Skills Display and Skills Reporting libraries 
 | ------------- |:-------------|
 | serviceUrl      | url to the skills service - this is the same url as the dashboard - User Interface and service endpoints are co-located | 
 | projectId      | the id of the project that was created in the dashboard; visualize and report skills for the project with this id |   
-| authenticator | url to your [Authorization Endpoint](/skills-client/#authorization-endpoint); if the skills platform is installed in pki mode then you must set this value to ``pki`` |   
-
-If you are running in ``pki`` mode then your configuration will look something like this:
-
- ``` js
- import SkillsConfiguration from '@skills/skills-client-configuration';
- 
- SkillsConfiguration.configure({
-   serviceUrl: 'http://localhost:8080',
-   projectId: 'movies',
-   authenticator: 'pki',
- });
- 
- ```
+| authenticator | url to your [Authorization Endpoint](/skills-client/authorization.html#authorization-endpoint); if the skills platform is installed in pki mode then you must set this value to ``pki`` |   
 
 SkillsConfiguration supplies the ***afterConfigure()*** method which returns a promise which will be resolved once the ***SkillsConfiguration.configure*** method
 completes.  This allows support, for example, for configuration options to be supplied by the server asynchronously.

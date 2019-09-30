@@ -1,8 +1,5 @@
 <template>
     <Content :page-key="getPageKey($site.pages)"/>
-<!--    <div>-->
-<!--        {{ $site.pages }}-->
-<!--    </div>-->
 </template>
 
 <script>

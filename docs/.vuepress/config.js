@@ -54,5 +54,6 @@ module.exports = {
         ],
         lastUpdated: 'Last Updated',
         home: true,
+        installType: 'pki',
     }
 }
