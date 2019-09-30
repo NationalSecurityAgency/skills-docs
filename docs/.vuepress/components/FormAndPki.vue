@@ -36,12 +36,12 @@
             getNavItems() {
                let res = [
                    {
-                       name: '<b>PKI</b> Install',
+                       name: '<b>PKI Auth</b> Install',
                        path: this.pkiPath,
                        icon: 'fas fa-key',
                    },
                    {
-                       name: '<b>FORM</b> Install',
+                       name: '<b>Pass Auth</b> Install',
                        path: this.formPath,
                        icon: 'fab fa-wpforms',
                    },
