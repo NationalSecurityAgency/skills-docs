@@ -64,6 +64,6 @@ spring.datasource.password=skillspass
 
 ## Installation Modes
 
-### FORM Mode
+### Pass Auth Mode
 
-### PKI Mode
+### PKI Auth Mode
