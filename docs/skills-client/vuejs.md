@@ -61,17 +61,7 @@ the SkillsDisplay component:
 
 ### Skills Display Options Object
 
-#### Auto scroll behavior
-
-As a convenience, by default, the Skills Client Display will auto scroll to top whenever the user navigates to a new
-page (route) within the display. You can disable this setting with the ``options.disableAutoScroll`` option described below.
-There is also an option to affect scroll behavior via ``options.autoScrollStrategy``. 
-
-| Prop          | Type          | Default      | Explanation  |
-| ------------- | ------------- |:-------------| -----------  |
-| options.disableAutoScroll     | boolean | false          | Disable auto scroll to top on route change. | 
-| options.autoScrollStrategy    | string  | 'top-of-frame' | On route change, either scroll to the top of the entire document, or the top of skills-display ('top-of-page' or 'top-of-frame') |
-
+<import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>
 
 ## Skill Event Reporting 
 
