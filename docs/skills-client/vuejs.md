@@ -63,6 +63,10 @@ the SkillsDisplay component:
 
 <import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>
 
+### Skills Display Theme Object
+
+<import-content path="/skills-client/common/slillsDisplayTheme.html"/>
+
 ## Skill Event Reporting 
 
 The ```skills-client-vue``` library is packaged with the ability to report skill events using either Vue.js directives or the JS utility. 
