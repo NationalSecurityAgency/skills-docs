@@ -3,9 +3,8 @@
         <b-tabs content-class="mt-3">
             <b-tab v-for="(tabItem) of tabItems" :key="tabItem.name">
                 <template v-slot:title>
-                    <span v-html="tabItem.name"></span>
+                    <i :class="tabItem.icon" class="mr-1"></i> <span v-html="tabItem.name"></span>
                 </template>
-
                 <import-content :path="tabItem.path"/>
             </b-tab>
         </b-tabs>
@@ -39,12 +38,12 @@
                    {
                        name: '<b>PKI</b> Install',
                        path: this.pkiPath,
-                       active: true,
+                       icon: 'fas fa-key',
                    },
                    {
                        name: '<b>FORM</b> Install',
                        path: this.formPath,
-                       active: false,
+                       icon: 'fab fa-wpforms',
                    },
                ];
 
