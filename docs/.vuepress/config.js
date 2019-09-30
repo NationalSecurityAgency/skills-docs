@@ -12,8 +12,6 @@ module.exports = {
             { text: 'Overview', link: '/overview/' },
             { text: 'Dashboard User Guide', link: '/dashboard/user-guide/' },
             { text: 'Integration Guide', link: '/skills-client/' },
-            { text: 'Quick Start', link: '/quick-start/' },
-            { text: 'Common Troubleshooting', link: '/common-troubleshooting/' },
         ],
         // displayAllHeaders: true,
         sidebarDepth: 2,
@@ -21,7 +19,6 @@ module.exports = {
             '/overview/',
             '/quick-start/',
             '/dashboard/install-guide',
-            '/common-troubleshooting/',
             {
                 title: 'Dashboard User Guide',
                 collapsable: true,
@@ -51,6 +48,7 @@ module.exports = {
                     '/skills-client/display',
                     '/skills-client/authorization',
                     '/skills-client/endpoints',
+                    '/skills-client/troubleshooting',
                 ]
             },
         ],
