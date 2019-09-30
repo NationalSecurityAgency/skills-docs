@@ -2,7 +2,7 @@
 
 ## Authorization Endpoint
 
-::: tip Note
+::: danger Important!!
 Please note that the Authorization Endpoint is not needed if you are running the dashboard in PKI mode. 
 :::
 

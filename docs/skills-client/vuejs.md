@@ -16,9 +16,7 @@ This will give you access to
 
 ## Skills Display
 
-The Skills Display component provides a comprehensive visualization of a user's skill and progress profile!
-
-![User Skills Image](./screenshots/Screenshot_2019-06-12_UserSkills.png)
+<import-content path="/skills-client/common/skillsDisplayIntro.html"/>
 
 The previously installed ```skills-client-vue``` library is packaged with the Skills Display component. 
 

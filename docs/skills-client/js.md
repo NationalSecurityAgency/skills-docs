@@ -6,4 +6,6 @@
 
 ## Skills Display
 
+<import-content path="/skills-client/common/skillsDisplayIntro.html"/>
+
 ## Skills Event Reporting

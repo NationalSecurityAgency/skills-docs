@@ -45,7 +45,6 @@ module.exports = {
                     '/skills-client/react',
                     '/skills-client/angular',
                     '/skills-client/js',
-                    '/skills-client/display',
                     '/skills-client/authorization',
                     '/skills-client/endpoints',
                     '/skills-client/troubleshooting',
