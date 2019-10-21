@@ -1,8 +1,8 @@
 <import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationHeader.html"/>
 
 <form-and-pki 
-    pki-path="/skills-client/common/configExamplePki.html"
-    form-path="/skills-client/common/configExampleForm.html"/>
+    pki-path="/skills-client/common/skillsConfiguration/vuejs/configExamplePki.html"
+    form-path="/skills-client/common/skillsConfiguration/vuejs/configExampleForm.html"/>
 
 <import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.html"/>
 
