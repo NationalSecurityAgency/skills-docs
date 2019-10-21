@@ -9,6 +9,7 @@ npm install @skills/skills-client-vue --save
 This will give you access to 
 1. Skills Display - Visualize your website users' skill profile
 1. Skill Event Reporting - Report skill events using Vue.js directives or JS utility 
+1. Skills Configuration - Global configuration used by Skills utilities.
 
 ## Skills Configuration
 
@@ -40,9 +41,6 @@ Here is a full example of a Vue.js single-file component that uses SkillsDisplay
         components: {SkillsDisplay},
     }
 </script>
-
-<style scoped>
-</style>
 ``` 
 
 If you are taking advantage of [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) then you need to provide the version property to 
@@ -54,10 +52,7 @@ the SkillsDisplay component:
 
  SkillsDisplay component properties:
 
-| Prop        | Explanation           |
-| ------------- |:-------------|
-| version      | *(Optional)* version to use in [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) paradigm | 
-| options      | *(Optional)* options object to control various behaviors of skills-display. See [Skills Display Options Object](#skills-display-options-object)
+<import-content path="/skills-client/common/skillsDisplayArguments.html"/>
 
 ### Skills Display Options Object
 
