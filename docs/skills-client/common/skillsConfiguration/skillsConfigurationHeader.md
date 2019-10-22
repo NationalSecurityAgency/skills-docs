@@ -3,5 +3,5 @@ applications, or as the first script tag import in multi-page applications.
 
 ::: warning Reminder
 SkillsConfiguration is a singleton and you only need to provide configuration information once per your application's
-runtime.
+runtime for single page applications.
 :::
