@@ -19,8 +19,6 @@ This will give you access to
 
 <import-content path="/skills-client/common/skillsDisplayIntro.html"/>
 
-The previously installed ```skills-client-js``` library is packaged with the SkillsDisplayJS library.
-  
 Usage is trivial:
 1. First you must include the UMD module SkillsConfiguration
     
@@ -99,7 +97,7 @@ with your system settings.  See the [SkillsConfiguration Documentation](/skills-
 
 Import the SkillsReporter into your project
 
-```
+``` js
 <head>
   ...
   <script type="text/javascript" src="assets/@skills/skills-client-reporter/dist/SkillsReporter.umd.min.js" />
@@ -114,6 +112,7 @@ Import the SkillsReporter into your project
         // error = object describing why this error occrued
       });
   </script>
+</head>
 ```
 
 a response object may look something like this:
