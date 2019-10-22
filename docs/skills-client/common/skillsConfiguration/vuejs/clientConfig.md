@@ -6,7 +6,7 @@
 
 <import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.html"/>
 
- ``` js{3,4,5,6}
+ ``` js{3-6}
  import SkillsConfiguration from '@skills/skills-client-configuration';
  
  SkillsConfiguration.afterConfigure()

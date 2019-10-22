@@ -13,7 +13,7 @@ This will give you access to
 
 ## Skills Configuration
 
-<import-content path="/skills-client/common/clientConfig.html"/>
+<import-content path="/skills-client/common/skillsConfiguration/js/clientConfig.html"/>
 
 ## Skills Display
 

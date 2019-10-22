@@ -1,6 +1,6 @@
 This configuration is used by the Skills Display and Skills Reporting libraries so you won't need to configure those separately.  
  
- ```SkillsConfiguration.configure``` parameters:
+ ```SkillsConfiguration``` ```configure``` parameters:
 
 | Parameter        |Type| Explanation           |
 | ------------- |:-------------- |:-------------|
