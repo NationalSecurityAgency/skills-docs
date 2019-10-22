@@ -39,7 +39,7 @@ Here is a full example of configuring as well as initializing SkillsDisplayJS
 * Note: This assumes there is a DIV in your DOM with id ```skills-display-container``` for SkillsDisplayJS to attach to
 * Note: This javascript should be executed AFTER the imports of the ```@skills``` libraries above
 
-``` js{1-5,9-10,13}
+``` js{1-5,9-10,13-14}
 SkillsConfiguration.default.configure({
   projectId: 'yourProjectId',
   serviceUrl: 'http://yourServiceEndpoint',
@@ -52,7 +52,8 @@ SkillsConfiguration.default.afterConfigure().then(() => {
     clientDisplay.attachTo(document.querySelector('#skills-client-container'));
   };
 
-  // Make sure DOM is loaded, otherwise wait until it is to initialize the SkillsDisplay
+  // Make sure #skills-client-container is loaded on the DOM, otherwise 
+  // wait until it is to initialize the SkillsDisplay.
   if (document.readyState === "complete"
     || document.readyState === "loaded"
     || document.readyState === "interactive") {
@@ -86,3 +87,47 @@ const clientDisplay = new SkillsDisplayJS.SkillsDisplayJS({
 <import-content path="/skills-client/common/slillsDisplayTheme.html"/>
 
 ## Skills Event Reporting
+
+The ```skills-client-js``` library is packaged with the service used to report skills events.
+
+### SkillsReporter JS Utility
+
+::: warning Reminder
+Before using the SkillsReporter utility, you must make sure to initialize SkillsConfiguration
+with your system settings.  See the [SkillsConfiguration Documentation](/skills-client/js.html#skills-configuration) 
+:::
+
+Import the SkillsReporter into your project
+
+```
+<head>
+  ...
+  <script type="text/javascript" src="assets/@skills/skills-client-reporter/dist/SkillsReporter.umd.min.js" />
+  ...
+
+  <script type="text/javascript">
+    SkillsReporter.SkillsReporter.reportSkill(skillId)
+      .then((response) => {
+        // response = metatdata describing how that skill influenced user's skills posture
+      })
+      .catch((error) => {
+        // error = object describing why this error occrued
+      });
+  </script>
+```
+
+a response object may look something like this:
+``` js
+{
+  "success": true,
+  "skillApplied": true,
+  "explanation": "Skill event was applied",
+  "completed": []
+}
+```
+
+For a full description of the response object please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
+
+### Global Event Handling
+
+<import-content path="/skills-client/common/skillsReporter/globalEventHandling.html"/>
