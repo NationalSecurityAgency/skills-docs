@@ -29,3 +29,8 @@ To facilitate rapid application incorporation, the platform provides the followi
 
 ## Platform Architecture
 
+## Browser Support
+
+Skills as a service is supported on all major browsers since the following versions.
+
+<browser-support />
