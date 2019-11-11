@@ -31,6 +31,6 @@ To facilitate rapid application incorporation, the platform provides the followi
 
 ## Browser Support
 
-Skills as a service is supported on all major browsers since the following versions.
+Skills as a Service is supported on all major browsers since the following versions:
 
 <browser-support />

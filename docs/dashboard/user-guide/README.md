@@ -12,3 +12,10 @@ Consider creating skills that won't be reported automatically but rather will re
 [Manually add the Skill](/dashboard/user-guide/skills.html#manually-add-skill-event). Why would you do that? If you want to encourage
 customer interaction such as collecting success stories. In fact ``Report A Success Story`` can be a skill of its own!
 :::
+
+
+## Browser Support
+
+Skills as a Service is supported on all major browsers since the following versions:
+
+<browser-support />

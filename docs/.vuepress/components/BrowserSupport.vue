@@ -8,7 +8,8 @@
         :src="browser.icon"
         :style="browser.iconHeightOverride ? `height: ${browser.iconHeightOverride}px` : 'height: auto;'"
         style="width: auto;"/>
-      <div class="browser-version">{{ browser.version }}</div>
+      <div>{{ browser.name }}</div>
+      <div class="browser-version">{{ browser.version }}+</div>
     </div>
   </div>
 </template>
@@ -61,14 +62,15 @@
     display: inline-block;
     border-radius: 5px;
     padding: 0.5rem 0.5rem;
+    text-align: center;
   }
 
   .browser-container .browser-version {
     padding: 0.5rem 0;
     margin-top: 0.5rem;
-    text-align: center;
     background-color: #f3f3f3;
     border-radius: 5px;
     border: 1px solid #ccc;
   }
+
 </style>
