@@ -49,8 +49,8 @@ Skill definition's ``Help Url/Path`` will be treated relative to this ``Root Hel
 then the client display will append ``Root Help Url`` and  ``Help Url`` to produce ``http://www.myHelpDocs.com/importan/article``.
 
 ::: tip
-If ``Help Url`` starts with ``http`` or ``https`` then ``Root Help Url`` will NOT be utilized.
+If skill's ``Help Url`` starts with ``http`` or ``https`` then ``Root Help Url`` will NOT be utilized.
 :::  
 
-
- 
+If skill's ``Help Url`` is blank then no url will be displayed even if ``Root Help Url`` is configured. 
+In other words ``Root Help Url`` only works in conjunction with skill's ``Help Url``.
