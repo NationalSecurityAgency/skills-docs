@@ -4,7 +4,7 @@ For example:
 - display messages congratulating users on skills completion as well as level and badge achievements 
 - handle all reporting errors by sending them to a logging service  
 
-Along side standard promised based success and error handling, SkillsReporter native javascript utility allows
+Alongside standard promised based success and error handling, SkillsReporter native javascript utility allows
 you to configure global success and error handlers utilizing the ***addSuccessHandler*** and the ***addErrorHandler*** methods.
 
 ``` js{9-10}
