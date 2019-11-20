@@ -4,20 +4,23 @@ Theme object supports the following properties:
 
 | Prop          | Explanation  |
 | ------------- | -----------  |
-| backgroundColor | | 
-| pageTitleTextColor | | 
-| textSecondaryColor | | 
-| textPrimaryColor | | 
-| stars.unearnedColor | | 
-| stars.earnedColor | | 
-| progressIndicators.beforeTodayColor | | 
-| progressIndicators.earnedTodayColor | | 
-| progressIndicators.completeColor | | 
-| progressIndicators. incompleteColor | | 
-| charts.axisLabelColor | | 
-| tiles.backgroundColor | | 
-| tiles.watermarkIconColor | | 
-| graphLegendBorderColor | | 
+| backgroundColor | page background color | 
+| pageTitleTextColor | page header title text color | 
+| circleProgressInteriorTextColor | 'x out of yyyy' text color inside circle progress widgets |
+| progressIndicators.beforeTodayColor | progress bar color for points earned before today | 
+| progressIndicators.earnedTodayColor | progress bar color for points earned today | 
+| progressIndicators.completeColor | progress bar color for 100% completion | 
+| progressIndicators.incompleteColor | progress bar color for points not yet earned  | 
+| textSecondaryColor | secondary text, for example 'Need Help?' and dependent skill text | 
+| textPrimaryColor | chart titles, progress titles, tile titles, descriptions, rank tile text | 
+| stars.unearnedColor | color of unearned level stars | 
+| stars.earnedColor | color of earned level stars | 
+| charts.axisLabelColor | color of scales/axis text on charts | 
+| tiles.backgroundColor | tile background color, such as subject tiles | 
+| tiles.watermarkIconColor | My Rank, Rank overview, My Badges watermark icon color | 
+| graphLegendBorderColor | border color of dependency graph legend | 
+| subjectTileIconColor | color of subject tile icons |
+| trophyIconColor | color of the My Level trophy |
 
 Example of a 'Dark Blue' theme object
 
