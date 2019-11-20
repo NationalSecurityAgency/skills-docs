@@ -9,9 +9,9 @@ npm install @skills/skills-client-react --save
 
 This will give you access to
 
-Skills Display - Visualize your website users' skill profile
-Skill Event Reporting - Report skill events using Vue.js directives or JS utility
-Skills Configuration - Global configuration used by Skills utilities.
+1. Skills Display - Visualize your website users' skill profile
+1. Skill Event Reporting - Report skill events using Vue.js directives or JS utility
+1. Skills Configuration - Global configuration used by Skills utilities.
 
 ## Skills Configuration
 ::: warning Reminder
@@ -76,10 +76,10 @@ with your system settings.
 import { SkillsLevel } from '@skills/skills-client-reporter';
 import Button from "react-bootstrap/Button"
 
-const MyLevelDisplay = () => {
+const MyLevelDisplay = (props) => {
     return (
       <Button variant="primary">
-          <SkillsLevel projectId={projectId}/>
+          <SkillsLevel projectId={props.projectId}/>
       </Button>
     );
 };
@@ -90,7 +90,7 @@ export default MyLevelDisplay;
 
 ## Skills Event Reporting
 
-The ```skills-client-reporter``` library is contains the service used to report skills events.
+The ```skills-client-reporter``` library contains the service used to report skills events.
 
 ### SkillsReporter JS Utility
 ::: warning Reminder

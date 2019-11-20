@@ -1,8 +1,8 @@
 # Skills
 
 Projects are composed of Subjects which are made of Skills and a single skill defines a training unit within the gamification framework. 
-To complete a skill users may need to perform the same action multiple times - repetition is important for retention after all. A Skill definition specifies
-how many times a skill has to be performed and each occurrence is called a Skill Event.   
+To complete a skill, users may need to perform the same action multiple times - repetition is important for retention after all. A Skill definition specifies
+how many times a skill has to be performed. Each occurrence is called a Skill Event.   
 
 To create a skill, navigate to ``Project -> Subject`` then click on ``Skill +``, the following skill properties can be specified:
 
@@ -16,7 +16,7 @@ To create a skill, navigate to ``Project -> Subject`` then click on ``Skill +``,
 | Max Occurrences Within Window | Used in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property; Once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window). |    
 | Version | *(Optional)* Utilize [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) to support running multiple versions of client software |
 | Description | *(Optional)* Description of how to perform this skill. The Description property supports markdown. 
-| Help URL/Path | *(Optional)* URL pointing to a help article further depicting information about this skill or capability. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting| 
+| Help URL/Path | *(Optional)* URL pointing to a help article providing further information about this skill or capability. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting| 
 
 ::: tip
 To calculate the total points that completion of a particular skill will give a user:
@@ -27,7 +27,7 @@ Total Points = Point Increment * Occurrences to Completion
 ##### Best Practices
 
 - "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition 
-- For Help Url - configure the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) for the project and then enter a path relative to that root. It will then be an easy change if the location of help articles changes.   
+- Help Url - configure the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) for the project and then enter a path relative to that root. It will then be an easy change if the location of help articles changes.   
 
 ## Time Window
 
@@ -50,11 +50,11 @@ You can also disable the Time Window property of a Skill, which will force each 
 
 ## Skills Versioning
 
-Skill versioning is a mechanism that allows addition of the new skills without affecting existing software running with an older skill profile.
+Skill versioning is a mechanism that allows addition of new skills without affecting existing software running with an older skill profile.
 Versioning is mostly pertinent to the Display Libraries that visualize the skill profile for the version they were declared with. 
 
 Here are simple steps to enable Skills Versioning in your application:
-1. When creating a skill specify a target version (always last deployed version + 1)
+1. When creating a skill, specify a target version (always last deployed version + 1)
    - Version selection can be found on the top-right in the create/edit skills modal
 1. When initializing the display component, provide the latest target version for that instance. 
    - [Vue.Js](/skills-client/#vue-js)  
@@ -74,7 +74,7 @@ like this:
 This software instance will then get deployed and the skill profile for ``version 0`` is displayed. 
 
 Now we are working on the next release which we will label as ``version 1``. 
-Any skill created with ``version 1`` will not be visible in the already deployed software, configured to visualize skills with ``version 0``
+Any skill created with ``version 1`` will not be visible in the already deployed software, configured to visualize skills with ``version 0``.
 The version will need to be updated in the integrated display component to use ``version 1``, like this:
  ``` js
  <skills-display version="1"/>
@@ -82,7 +82,7 @@ The version will need to be updated in the integrated display component to use `
 The updated software running the ``version 1`` profile will expose skills declared with both ``version 0`` and ``version 1``.
 Both versions of software can then run simultaneously and each version will present its own gamification profile. 
 ::: tip Please Note
-Please note that skills from previous versions are automatically included, so version 3 will contain skills declared with versions 3, 2, 1 and 0  
+The skills from previous versions are automatically included, so version 3 will contain skills declared with versions 3, 2, 1 and 0  
 :::   
 
 ::: warning Important

@@ -33,7 +33,7 @@ To manage and view project-wide settings navigate to ``Project -> Settings``. Th
 1. Percentage based - levels are calculated based on configured percentages of total available points (ex. Level 1 = 10% of total points)
 1. Point based - project admins specify start and end number of points for each level
 
-By default the Percentage based strategy is selected, changing ``Use Points For Levels`` setting to ``true`` enables Point Based explicit level point management. To learn more please see the [Levels](/dashboard/user-guide/levels.html) section.
+By default the Percentage based strategy is selected, changing the ``Use Points For Levels`` setting to ``true`` enables Point Based explicit level point management. To learn more please see the [Levels](/dashboard/user-guide/levels.html) section.
 
 ::: warning
 You must define at least 100 points for a project before switching to point-based levels management
@@ -46,7 +46,7 @@ Skill definition's ``Help Url/Path`` will be treated relative to this ``Root Hel
 - ``Root Help Url`` =  ``http://www.myHelpDocs.com``
 -  and skill definition ``Help Url`` = ``/importan/article`` 
 
-then the client display will append ``Root Help Url`` and  ``Help Url`` to produce ``http://www.myHelpDocs.com/importan/article``.
+then the client display will concatenate ``Root Help Url`` and  ``Help Url`` to produce ``http://www.myHelpDocs.com/importan/article``.
 
 ::: tip
 If skill's ``Help Url`` starts with ``http`` or ``https`` then ``Root Help Url`` will NOT be utilized.
