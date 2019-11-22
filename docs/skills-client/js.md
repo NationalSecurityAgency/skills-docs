@@ -46,7 +46,7 @@ SkillsConfiguration.default.configure({
 
 SkillsConfiguration.default.afterConfigure().then(() => {
   const initializeSkillsDisplay = () => {
-    const clientDisplay = new SkillsDisplayJS.SkillsDisplayJS();
+    const clientDisplay = new SkillsClient.SkillsDisplayJS();
     clientDisplay.attachTo(document.querySelector('#skills-client-container'));
   };
 
@@ -66,7 +66,7 @@ If you are taking advantage of [Skills Versioning](/dashboard/user-guide/skills.
 the SkillsDisplayJS constructor:
 
 ``` js
-const clientDisplay = new SkillsDisplayJS.SkillsDisplayJS({
+const clientDisplay = new SkillsClient.SkillsDisplayJS({
     version: 1,
 });
 ```
