@@ -3,6 +3,7 @@
 To install client libraries:
 
 ``` js
+npm install @skills/skills-client-configuration --save
 npm install @skills/skills-client-reporter --save
 npm install @skills/skills-client-react --save
 ```
@@ -10,7 +11,7 @@ npm install @skills/skills-client-react --save
 This will give you access to
 
 1. Skills Display - Visualize your website users' skill profile
-1. Skill Event Reporting - Report skill events using Vue.js directives or JS utility
+1. Skill Event Reporting - Report skill events using JS utility
 1. Skills Configuration - Global configuration used by Skills utilities.
 
 ## Skills Configuration
