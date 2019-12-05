@@ -1,6 +1,9 @@
 module.exports = {
-    title: 'Skills as a Service',
+    title: 'Skills as a Service Docs',
     description: 'Innovative approach to application training!',
+    head: [
+        ['link', { rel: 'icon', href: '/img/skills.ico' }]
+    ],
     markdown: {
         toc: {
             includeLevel: [2, 3, 4, 5],
