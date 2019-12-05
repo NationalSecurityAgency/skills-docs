@@ -10,6 +10,7 @@ module.exports = {
         // logo: '/assets/img/logo.png',
         nav: [
             { text: 'Overview', link: '/overview/' },
+            { text: 'Install Guide', link: '/dashboard/install-guide/' },
             { text: 'Dashboard User Guide', link: '/dashboard/user-guide/' },
             { text: 'Integration Guide', link: '/skills-client/' },
         ],
