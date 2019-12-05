@@ -74,7 +74,7 @@ Before using the SkillsLevel component, you must make sure to initialize SkillsC
 with your system settings.  
 :::
 ``` js
-import { SkillsLevel } from '@skills/skills-client-reporter';
+import { SkillsLevel } from '@skills/skills-client-react';
 import Button from "react-bootstrap/Button"
 
 const MyLevelDisplay = (props) => {
