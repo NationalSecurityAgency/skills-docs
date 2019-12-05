@@ -18,9 +18,7 @@ To facilitate rapid application incorporation, the platform provides the followi
 - **Skill Event Reporting Libraries:** Easily integrate your application by reporting skill events to the centralized service.
   - Out-of-the-box support for Vue.js, React, Anagular and pure JavaScript
 
-::: danger STOP
-< insert diagram here>
-:::
+![Skills Platform Overview Image](./diagrams/SkillsPlatformOverview.jpg)
   
 
 ## Who is it for?
