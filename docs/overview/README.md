@@ -20,12 +20,41 @@ To facilitate rapid application incorporation, the platform provides the followi
 
 ![Skills Platform Overview Image](./diagrams/SkillsPlatformOverview.jpg)
   
-
 ## Who is it for?
+
+Any application with numerous features could benefit from in-context training using this gamfication strategy. 
+
+With that said, Skills as a Service platform provides substantial benefits in this scenarios:
+
+1. Application has a lot of complex and sophisticated features. Training is time consuming, complicated and expensive. You can utilize Skills as a Service to:
+   - Enable users to Quickly learn new features and effectively master advanced features. 
+   - Improve training recall through continued user engagement.  
+   - Continued user engagement in application training promotes local experts.
+   - Fewer training sessions - less support costs. Continued user engagement in application training promotes local experts.
+1. Workforce utilizes multiple home-grown tools to accomplish their jobs. You can then use Skills as a Service to:
+   - Cross-application and cross-org training - strongly encourages user engagement to become domain and application experts.
+   - [Cross-application dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) teach users cross-domain workflow skills
+   - [Global Badges](/dashboard/user-guide/badges.html#global-badges) expand training across project boundaries     
 
 ## Benefits
 
-## Platform Architecture
+Gamification is a proven training strategy, using Skills as a Service platform yields numerous benefits: 
+
+**Four Your Application Users:**
+1. Fun way to master application features
+1. Friendly competition keeps them motivated to learn
+1. Clear path to locate new features and explore features previously unused 
+
+**For System Owners:**
+1. Implement in existing and new application with minimal time and effort
+1. Greater system engagement and a strategy to grow your user base
+1. Significant reduction in training costs
+1. Another facet of application usage visibility (ex. identify expert users)
+
+**For Upper Management:**
+1. Corporate visibility of application expertise
+1. Greater insight via sophisticated analytics
+1. Proven training strategy
 
 ## Browser Support
 
