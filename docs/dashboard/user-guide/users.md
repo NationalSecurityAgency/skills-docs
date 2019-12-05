@@ -1,16 +1,24 @@
 # Users
 
-## Access Management
+This section describes different types of dashboard users and their corresponding roles and permissions. 
+It will also touch on access management, email settings and a way to view Skill Display through your users' eyes.  
 
 ## User Roles
 
-- Project Admin
-- Root
-- Supervisor 
+### Project Admin
+Project admins are assigned to a particular project. 
+Project admin role enables management of the training profile for that project such as creating and modifying subjects, skills, badges, etc..    
+
+### Root
+Root role is meant for administering dashboard itself and not any specific project. With that said Root role can view Inception project. 
+Users with Root role can also assign Supervisor and Root roles to other dashboard users. 
+
+### Supervisor
+Supervisor role allows users to manage Global Badges. Only users with Root role can assign Supervisor role.   
 
 ## Email Settings
 
-## Achievements
+Coming very soon...
 
 ## Skills Display / Client Display
 

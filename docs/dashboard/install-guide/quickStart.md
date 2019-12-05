@@ -17,17 +17,17 @@ You can utilize a pre-built docker image to run a production grade Skills Dashbo
 
 ### Docker-based install
 
-TBD
+Coming very soon...
 
 ### Distribution-based install
 
 1. Download Latest Distribution
-1. TBD 
+1. Coming very soon...
 
 ## Integrate User Skills Display
 
-TODO: Document
+Coming very soon...
 
 ## Report Skill Events
 
-TODO: Document
+Coming very soon...
