@@ -1,20 +1,14 @@
-# Authorization
-
 ## Authorization Endpoint
-
-::: danger Important!!
-Please note that the Authorization Endpoint is not needed if you are running the dashboard in PKI mode. 
-:::
 
 Production based installation will require you to implement an authorization endpoint. 
 The goal of the endpoint is to authorize a specific user so that the skills display and skills reporting can be properly secured.    
 
-The authorization endpoint produces a user specific temporary client token by utilizing a project's ```Client ID``` and ```Client Secret``` 
+The authentication endpoint produces a user specific temporary client token by utilizing a project's ```Client ID``` and ```Client Secret``` 
 (found in the dashboard under ```Project -> Access -> 'Trusted Client Properties'``` ) 
 
 ::: warning Reminder
 Friendly reminder that you ***must*** keep ```Client ID``` and ```Client Secret``` protected/hidden/private as it serves as the
-project's authentication mechanism. That is why these attributes must only be used within your server-side endpoint so they can
+project's authorization mechanism. That is why these attributes must only be used within your server-side endpoint so they can
 stay protected. 
 :::
 
@@ -29,7 +23,7 @@ This is an implementation of the OAuth2 protocol to retrieve a temporary client 
 - [https://oauth.net/2/](https://oauth.net/2/)
 - [https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) 
 
-Below are a number of examples of how you could implement an authentication endpoint that will be utilized by the client display. 
+Below are a number of examples of how you could implement an authorization endpoint that will be utilized by the client display. 
 
 ### Spring Boot Example
 
@@ -68,3 +62,4 @@ Here is an example using CURL (please substitute your values of ``client-id``, `
 ```bash
 curl client-id:client-secret@dashboard-url/oauth/token -d "grant_type=client_credentials&proxy_user=user-to-proxy-for"
 ```
+

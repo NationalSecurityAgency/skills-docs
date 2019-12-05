@@ -17,13 +17,13 @@ Public Endpoints:
   - *Purpose:* Retrieve user's current overall level
   - *Detailed Description:* [Click Here](#retrieve-current-level-endpoint)
 
-Both of these endpoints require authentication and a user id in order to perform their functions. 
+Both of these endpoints require authorization and a user id in order to perform their functions. 
 When running in [PKI Auth Installation](/dashboard/install-guide/installModes.html#pass-auth-mode), user id will be implicitly retrieved from the certificate. 
 
 In [Pass Auth Installation](/dashboard/install-guide/installModes.html#pass-auth-mode), the OAuth2 protocol is utilized, you will need to:
 1. retrieve user specific temporary client token
    - using project's ```Client ID``` and ```Client Secret``` (found in the dashboard under ```Project -> Access -> 'Trusted Client Properties'``` ).
-   - this action accomplishes authentication.
+   - this action accomplishes authorization.
    - ``user-to-proxy-for`` is provided in the request (this is the ``user id``).
    - result token encapsulates the ``user id`` so the service will know what user to perform this action for 
 1. call the endpoint and set the user token on the request.
