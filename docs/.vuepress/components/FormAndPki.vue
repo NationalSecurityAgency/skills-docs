@@ -42,13 +42,13 @@
                        name: '<b>PKI Auth</b> Install',
                        path: this.pkiPath,
                        icon: 'fas fa-key',
-                       helpUrl: '/dashboard/install-guide.html#pki-auth-mode',
+                       helpUrl: '/dashboard/install-guide/installModes.html#pki-auth-mode',
                    },
                    {
                        name: '<b>Pass Auth</b> Install',
                        path: this.formPath,
                        icon: 'fab fa-wpforms',
-                       helpUrl: '/dashboard/install-guide.html#pass-auth-mode',
+                       helpUrl: '/dashboard/install-guide/installModes.html#pass-auth-mode',
                    },
                ];
 

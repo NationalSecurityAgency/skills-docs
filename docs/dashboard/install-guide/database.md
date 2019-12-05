@@ -1,21 +1,4 @@
-# Dashboard Install Guide
-
-## Configuration 
-
-Out of the box the dashboard comes packaged with smart defaults that are designed to work well for 
-development and prototyping. To start customizing configuration properties create an ``application.properties`` file under either: 
-
-- A /config subdirectory of the current directory OR
-- The current directory.
-
-``application.properties`` contains application specific configuration, for example database configuration: 
-
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/skills
-spring.datasource.username=postgres
-spring.datasource.password=skillspass
-``` 
-## Database 
+# Database 
 
 By default the skills dashboard stores its data into an embedded in-memory H2 database. That data is ephemeral and will not persist between application restarts. 
 While this is a great way to get started quickly it is obviously not appropriate for a test or production installation. 
@@ -30,7 +13,7 @@ Here is an overview of supported options followed by sections depicting each cho
 | [PostgresQL](https://www.postgresql.org/) | 10 + | Production + Dev |
 
 
-### H2 Database
+## H2 Database
 
 Embedded H2 will be used by default - data will be ephemeral and will not persist between application restarts. 
 You can make the embedded H2 database persistent to a file via a configuration property: 
@@ -53,7 +36,7 @@ and ensure that an instance of the H2 database is running at the configured loca
 H2 is purely for prototyping and development and shouldn't be used in production mode
 :::
 
-### PostgresQL Database
+## PostgresQL Database
 
 To configure PostgreSQL as the database, set the following properties: 
 ```properties
@@ -61,9 +44,3 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/skills
 spring.datasource.username=postgres
 spring.datasource.password=skillspass
 ```
-
-## Installation Modes
-
-### Pass Auth Mode
-
-### PKI Auth Mode

@@ -17,8 +17,17 @@ module.exports = {
         sidebarDepth: 2,
         sidebar: [
             '/overview/',
-            '/quick-start/',
-            '/dashboard/install-guide',
+            {
+                title: 'Install Guide',
+                collapsable: true,
+                children: [
+                    '/dashboard/install-guide/',
+                    '/dashboard/install-guide/quickStart',
+                    '/dashboard/install-guide/config',
+                    '/dashboard/install-guide/database',
+                    '/dashboard/install-guide/installModes',
+                ]
+            },
             {
                 title: 'Dashboard User Guide',
                 collapsable: true,

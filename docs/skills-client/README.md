@@ -5,6 +5,8 @@ Generally integration follows the following steps:
 1. Create and customize your training profile in the skill's dashboard
 1. Integrate client [Skill Display](/skills-client/#client-display-integration) libraries
 1. Integrate skill [event reporting](/skills-client/#report-events-integration) either using client libraries and/or REST endpoints
+
+![An image](./diagrams/IntegratedApplication.jpg)
    
 Please visit [Dashboard Guide](/dashboard/user-guide/) to learn about the best practices and options for customizing your gamificaiton training profile.
 This Integration Guide focuses on step 2 and 3: integration of the Client Display and the reporting libraries. 
@@ -21,7 +23,7 @@ We generally recommend the following integration pattern:
 1. (Optional) Theme Skills Display to match your application   
 1. (Optional) Display user progress summary on your home page or splash page
    - Pass ``true`` to skills display ``options.isSummaryOnly``
-   
+
 Skills Display support is provided for the following libraries: 
 - [Vue.js](/skills-client/vuejs.html)
 - [React](/skills-client/react.html)
@@ -35,7 +37,7 @@ Your can either use one of the supported libraries or utilize endpoint directly:
 - [React](/skills-client/react.html)
 - Angular (Coming soon)
 - [Pure JS](/skills-client/js.html)
-- [REST Endpoints](/skills-client/endpoints.html#programmatic-endpoints) 
+- [REST Endpoints](/skills-client/endpoints.html#programmatic-endpoints)
 
 ## Browser Support
 

@@ -18,9 +18,9 @@ Public Endpoints:
   - *Detailed Description:* [Click Here](#retrieve-current-level-endpoint)
 
 Both of these endpoints require authentication and a user id in order to perform their functions. 
-When running in [PKI Auth Installation](/dashboard/install-guide.html#pki-auth-mode), user id will be implicitly retrieved from the certificate. 
+When running in [PKI Auth Installation](/dashboard/install-guide/installModes.html#pass-auth-mode), user id will be implicitly retrieved from the certificate. 
 
-In [Pass Auth Installation](/dashboard/install-guide.html#pass-auth-mode), the OAuth2 protocol is utilized, you will need to:
+In [Pass Auth Installation](/dashboard/install-guide/installModes.html#pass-auth-mode), the OAuth2 protocol is utilized, you will need to:
 1. retrieve user specific temporary client token
    - using project's ```Client ID``` and ```Client Secret``` (found in the dashboard under ```Project -> Access -> 'Trusted Client Properties'``` ).
    - this action accomplishes authentication.
