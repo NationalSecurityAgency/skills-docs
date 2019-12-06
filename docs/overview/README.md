@@ -8,7 +8,7 @@ A Gamification based approach significantly simplifies the training process whil
 
 ## What is it?
 
-To facilitate rapid application incorporation, the platform provides the following services, components and libraries: 
+To facilitate rapid application incorporation, the platform provides the following services, components, and libraries: 
 
 - **Dashboard and Service:** Simple management through a centralized Web-Based User Interface and data API service. 
   - Effective and visual skill definition management
@@ -24,32 +24,31 @@ To facilitate rapid application incorporation, the platform provides the followi
 
 Any application with numerous features could benefit from in-context training using this gamfication strategy. 
 
-With that said, Skills as a Service platform provides substantial benefits in this scenarios:
+With that said, the Skills as a Service platform provides substantial benefits in these scenarios:
 
-1. Application has a lot of complex and sophisticated features. Training is time consuming, complicated and expensive. You can utilize Skills as a Service to:
+1. Application with many complex and sophisticated features. Training is time consuming, complicated and expensive. You can utilize Skills as a Service to:
    - Enable users to Quickly learn new features and effectively master advanced features. 
-   - Improve training recall through continued user engagement.  
-   - Continued user engagement in application training promotes local experts.
-   - Fewer training sessions - less support costs. Continued user engagement in application training promotes local experts.
+   - Improve training recall through continued user engagement and required repetition.  
+   - Reduce training sessions - less support costs. Continued user engagement in application training promotes local experts.
 1. Workforce utilizes multiple home-grown tools to accomplish their jobs. You can then use Skills as a Service to:
-   - Cross-application and cross-org training - strongly encourages user engagement to become domain and application experts.
+   - Provide cross-application and cross-org training - strongly encourages user engagement to become domain and application experts.
    - [Cross-application dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) teach users cross-domain workflow skills
    - [Global Badges](/dashboard/user-guide/badges.html#global-badges) expand training across project boundaries     
 
 ## Benefits
 
-Gamification is a proven training strategy, using Skills as a Service platform yields numerous benefits: 
+Gamification is a proven training strategy, using the Skills as a Service platform yields numerous benefits: 
 
-**Four Your Application Users:**
+**For Your Application Users:**
 1. Fun way to master application features
-1. Friendly competition keeps them motivated to learn
-1. Clear path to locate new features and explore features previously unused 
+1. Friendly competition provides motivation to continue learning
+1. Clear path to locate new features and explore previously unused features 
 
 **For System Owners:**
-1. Implement in existing and new application with minimal time and effort
+1. Implement in existing and new applications with minimal time and effort
 1. Greater system engagement and a strategy to grow your user base
 1. Significant reduction in training costs
-1. Another facet of application usage visibility (ex. identify expert users)
+1. Additional facet of application usage visibility (ex. identify expert users)
 
 **For Upper Management:**
 1. Corporate visibility of application expertise

@@ -26,7 +26,7 @@ Total Points = Point Increment * Occurrences to Completion
 
 ##### Best Practices
 
-- "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition 
+- "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition (for example, prevent users from spamming an action in one sitting to max out a Skill by setting a Time Window of 1-8 hours)
 - Help Url - configure the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) for the project and then enter a path relative to that root. It will then be an easy change if the location of help articles changes.   
 
 ## Time Window
@@ -50,12 +50,12 @@ You can also disable the Time Window property of a Skill, which will force each 
 
 ## Skills Versioning
 
-Skill versioning is a mechanism that allows addition of new skills without affecting existing software running with an older skill profile.
+Skill versioning is a mechanism that allows the addition of new skills without affecting existing software running with an older skill profile.
 Versioning is mostly pertinent to the Display Libraries that visualize the skill profile for the version they were declared with. 
 
 Here are simple steps to enable Skills Versioning in your application:
 1. When creating a skill, specify a target version (always last deployed version + 1)
-   - Version selection can be found on the top-right in the create/edit skills modal
+   - Version selection can be found on the top-right in the create/edit skills dialogued
 1. When initializing the display component, provide the latest target version for that instance. 
    - [Vue.Js](/skills-client/#vue-js)  
    - [React](/skills-client/#react)

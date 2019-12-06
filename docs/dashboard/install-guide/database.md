@@ -5,7 +5,7 @@ While this is a great way to get started quickly it is obviously not appropriate
 Please note that you can easily add a property (discussed below) to make the embedded H2 database persist to disk, however we don't recommend using 
 a H2 database in a production install. 
  
-Here is an overview of supported options followed by sections depicting each choice: 
+Here is an overview of supported options followed by sections describing each choice: 
 
 | Database | Supported Version | Use Case | 
 | ------------- |:-------------:| ----- |
@@ -36,7 +36,7 @@ and ensure that an instance of the H2 database is running at the configured loca
 H2 is purely for prototyping and development and shouldn't be used in production mode
 :::
 
-## PostgresQL Database
+## PostgreSQL Database
 
 To configure PostgreSQL as the database, set the following properties: 
 ```properties

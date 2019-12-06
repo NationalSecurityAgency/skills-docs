@@ -10,13 +10,13 @@ When creating or editing these items you can click on the default icon to bring 
 
 ![Select Icon Image](./screenshots/Screenshot_SelectIcon_2019-07-10.png)
 
-The icon selector supports 2 font packs: 
+The icon selector supports 2 icon packs: 
 
 - [Font Awesome Free](https://fontawesome.com/)
 - [Material](https://material.io/tools/icons) 
 
 ::: tip
-To provide consistent branding use the same icon packs for all of the items
+To provide consistent branding, use the same icon packs for all of your items
 :::
 
 ## Custom Icons

@@ -1,6 +1,6 @@
 # Levels
 
-Levels are users' achievement path - the overall goal of the application usage is to achieve the highest level. 
+Levels are users' achievement path - the overall goal of the gameified training profile is to encourage users to achieve the highest level. 
 Levels are tracked for the entire [project](/dashboard/user-guide/projects.html) as well as for each [subject](/dashboard/user-guide/subjects.html) which provides users many ways to progress forward.    
 
 The Skills dashboard supports two flexible ways to manage levels: 
@@ -38,7 +38,7 @@ This allows levels to be fluid as Skills are defined and **overall** points chan
 Using ``Project -> Settings``, levels can be changed to a points based strategy, where each level requires the project administrator to define an explicit point range. From and to points are defined with ``from`` being exclusive and ``to`` being inclusive. 
 
 ::: tip Please Note
- Note that a project must have at least 100 total points defined before this setting can be enabled.
+ A project must have at least 100 total points defined before this setting can be enabled.
 ::: 
  
 ::: warning Empty Project and Subject

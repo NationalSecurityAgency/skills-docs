@@ -13,7 +13,7 @@ Creating badges is simple:
 | Badge Name | Display name of the badge |
 | Badge ID | The badge ID |
 | Description | *(Optional)* Description, can be used to describe how to achieve the badge or what it's significance is. The Description property supports markdown.
-| Help URL/Path | *(Optional)* URL pointing to a help article further depicting information about this badge. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting|
+| Help URL/Path | *(Optional)* URL pointing to a help article further documenting information about this badge. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting|
 | Enable Gem Feature | *(Optional)* Enables the [Gem](#Gem) feature, allowing badges to be only available within a specific time window
 
 ## Gem
@@ -32,7 +32,7 @@ Global Badges consist of:
 - *Project's Levels*: Project levels that a user must achieve in order to earn the badge
 - *List of Skills*: Skills from any project
  
-When all of the configured skills and levels are accomplished that badge is earned.
+When all of the configured skills and levels are accomplished, that badge is achieved.
 Global Badges are specifically used to reward users for achieving skills that involve multiple projects, 
 and can only be created by Dashboard users that have the [Supervisor](/dashboard/user-guide/users.html#user-roles) role.  
 
