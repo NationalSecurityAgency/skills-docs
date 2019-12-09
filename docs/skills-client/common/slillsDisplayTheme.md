@@ -1,6 +1,6 @@
-Theme object allows to customize color palette of Skills Display to match your application. 
+The theme object supports the customization of the color palette of the Skills Display to match your application. 
 
-Theme object supports the following properties:
+The theme object supports the following properties:
 
 | Prop          | Explanation  |
 | ------------- | -----------  |

@@ -88,7 +88,7 @@ By default, the v-skills directive will utilize a click event, so the following 
 <button v-skills:click="'IronMan'">Report Skill</button>
 ```
 
-The v-skills directive supports any arbitrary event, here is an example of input event: 
+The v-skills directive supports any arbitrary event, here is an example of an input event: 
 
 ``` js
 <input type="text" v-skills:input="\'Thor\'"/>
@@ -198,7 +198,7 @@ methods: {
     },
 }
 ```
-Please note that displayToast implementation is omitted as that will be specific to your application. 
+Please note that the displayToast implementation is omitted as that will be specific to your application. 
 
 ### Report Event By Listening to Routes
 

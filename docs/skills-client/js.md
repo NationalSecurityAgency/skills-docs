@@ -20,17 +20,17 @@ This will give you access to
 <import-content path="/skills-client/common/skillsDisplayIntro.html"/>
 
 Usage is trivial:
-1. First you must include the UMD module SkillsConfiguration
+1. First you must include the [UMD](https://github.com/umdjs/umd) module SkillsConfiguration
     
     * Download the artifact ```@skills/skills-client-configuration``` from npm
     * Copy ```./node_modules/@skills/skills-client-configuration/dist``` to your assets folder in your project
-1. Next you must include the UMD module SkillsDisplayJS 
+1. Next you must include the [UMD](https://github.com/umdjs/umd) module SkillsDisplayJS 
   
     * Download the artifact ```@skills/skills-client-js``` from npm
     * Copy ```./node_modules/@skills/skills-client-js/dist``` to your assets folder in your project
 
 ::: tip
-These libraries are UMD modules so if you are using CommonJS you can use ```require``` statements (or ```import``` statements if you are using a bundler) to import them, or you can use AMD.
+These libraries are [UMD](https://github.com/umdjs/umd) modules so if you are using CommonJS you can use ```require``` statements (or ```import``` statements if you are using a bundler) to import them, or you can use [AMD](https://github.com/amdjs/amdjs-api).
 :::
 
 Here is a full example of configuring as well as initializing SkillsDisplayJS

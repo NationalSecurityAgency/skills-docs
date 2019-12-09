@@ -1,6 +1,6 @@
 # Overview
 
-Generally integration follows the following steps:
+Generally integration follows the proceeding steps:
 
 1. Create and customize your training profile in the skill's dashboard
 1. Integrate client [Skill Display](/skills-client/#client-display-integration) libraries
@@ -8,18 +8,18 @@ Generally integration follows the following steps:
 
 ![Integrated Application Image](./diagrams/IntegratedApplication.jpg)
    
-Please visit [Dashboard Guide](/dashboard/user-guide/) to learn about the best practices and options for customizing your gamificaiton training profile.
+Please visit the [Dashboard Guide](/dashboard/user-guide/) to learn about the best practices and options for customizing your gamification training profile.
 This Integration Guide focuses on step 2 and 3: integration of the Client Display and the reporting libraries. 
 
 ## Client Display Integration 
 
 We generally recommend the following integration pattern:
 
-1. Put a button in the header that depicts the level (ex. ``Level 1``)
-   - We like on the top right but this really depends on your layout
-1. Clicking on the button will take you to the page that renders Skills Display
-   - All client JS libraries support Skills Display
-   - Dedicate a full page to Skills Display    
+1. Put a button in the header that displays the user's level (ex. ``Level 1``)
+   - We like placement on the top right but this really depends on your layout
+1. Clicking on the button will take you to the page that renders the Skills Display
+   - All client JS libraries support the Skills Display
+   - Dedicate a full page to the Skills Display    
 1. (Optional) Theme Skills Display to match your application   
 1. (Optional) Display user progress summary on your home page or splash page
    - Pass ``true`` to skills display ``options.isSummaryOnly``
@@ -32,7 +32,7 @@ Skills Display support is provided for the following libraries:
 
 ## Report Events Integration
 
-Your can either use one of the supported libraries or utilize endpoint directly:
+Your can either use one of the supported libraries or utilize the endpoint directly:
 - [Vue.js](/skills-client/vuejs.html)
 - [React](/skills-client/react.html)
 - Angular (Coming soon)

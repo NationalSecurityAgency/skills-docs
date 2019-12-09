@@ -124,8 +124,8 @@ You can use this result object to implement a messaging center - to report messa
 
 ## Retrieve Current Level Endpoint
 
-An endpoint that supports retrieving the user's overall level. You may want to use this endpoint to show the user's level in the header of your application. 
-Keep in mind that it will be the user's current level and you will need to check the result of the [Report Skills Events Endpoint](#report-skill-events-endpoint) in order to discover when that user leveled-up. 
+/level is an endpoint that supports retrieving the user's overall level. You may want to use this endpoint to show the user's level in the header of your application. 
+Keep in mind that it will be the user's current level and you will need to check the result of the [Report Skills Events Endpoint](#report-skill-events-endpoint) in order to discover when that user levels-up. 
 
 ::: warning
 If you are using one of the supported frameworks (Vue.js, React, Angular) there is no reason to ever call this endpoint directly. 
