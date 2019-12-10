@@ -100,3 +100,13 @@ Limitations:
   
      
 ## Manually Add Skill Event
+In the event that a Skill is not automatically reported (Skills such as "Attend Presentation" or "Submit a Success Story" are examples of Skill events that might require manual addition), Skill Events can be manually added through the Dashboard.
+1. Locate the Subject that contains the Skill for which you would like to add an event
+1. Select ```Manage``` for the located Subject
+1. Locate the Skill and select ```Manage```
+    * The ```Filter``` box on the top left of the Skills table can be used to quickly locate a particular Skill
+1. Select ```Add Event``` from the Navigation menu on the left
+1. Enter the ```User Id``` of the user for whom the Skill Event will be added (note that the field supports type-ahead to locate existing users)
+1. Enter a date on which the Skill Event occurred (this will default to today's date)
+1. Select ```Add```
+
