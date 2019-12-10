@@ -162,7 +162,7 @@ methods: {
     registerToDisplayProgress() {
         const myGlobalSuccessHandler = (result) => {
           if (result.completed) {
-            event.completed.forEach((completedItem) => {
+            result.completed.forEach((completedItem) => {
               this.handleEvent(completedItem);
             });
           }
