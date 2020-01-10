@@ -62,6 +62,32 @@ the SkillsDisplay component:
 
 <import-content path="/skills-client/common/slillsDisplayTheme.html"/>
 
+## Skills Level Display
+
+The ```skills-client-vue``` library also includes a convenient component to display the users's current overall level in the application. This can be
+used to display the user's current level consistently throughout the application, for example, in the application header.
+
+::: warning Reminder
+Before using the SkillsLevel component, you must make sure to initialize SkillsConfiguration
+with your system settings.  
+:::
+
+``` js
+<template>
+    <div>
+        <skills-level/>
+    </div>
+</template>
+
+<script>
+    import { SkillsLevel } from '@skills/skills-client-vue';
+
+    export default {
+        components: { SkillsLevel },
+    }
+</script>
+```
+
 ## Skill Event Reporting 
 
 The ```skills-client-vue``` library is packaged with the ability to report skill events using either Vue.js directives or the JS utility. 
