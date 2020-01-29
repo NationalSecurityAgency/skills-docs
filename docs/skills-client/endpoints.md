@@ -108,7 +108,8 @@ Here is an example where the skill event did not contribute any points because i
    "completed":[]
 }
 ```
-Here is an example where the skill contributed points but did not complete anything:
+
+Below is an example where the skill contributed points but did not complete anything: 
 ```json
 {
    "success":true,
@@ -117,6 +118,8 @@ Here is an example where the skill contributed points but did not complete anyth
    "completed":[]
 }
 ```
+Above skill has `Occurrences to Completion > 1` and additional skill events must be reported to fulfill the required occurrences. 
+Once all of the required occurrences are reported then the skill completion will appear in the *completed* field. 
 
 ::: tip
 You can use this result object to implement a messaging center - to report messages of encouragement to your users as they complete skills, level-up and earn badges. 

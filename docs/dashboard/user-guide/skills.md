@@ -110,3 +110,56 @@ In the event that a Skill is not automatically reported (Skills such as "Attend 
 1. Enter a date on which the Skill Event occurred (this will default to today's date)
 1. Select ```Add```
 
+## Incremental Changes
+This section explain how various scenarios are handled when skills are modified/removed/added 
+*AFTER* your application users already earned points, completed skills, achieved levels and obtained badges.
+
+::: tip Overall Strategy
+1. Never take away achieved levels and/or earned badges. 
+1. Re-calculate users' points when skill's points and/or occurrences are mutated. 
+:::
+
+*SCENARIO:* **Point Increment is increased** :arrow_up:
+
+Recall that *Point Increment* is the number of points applied for each skill event. 
+Delta in *Point Increment* will then be added for any of the already performed skill events. 
+For example if a user performed 2 skill events and *Point Increment* changed from 5 points to 8 points (delta = 3) then 
+user will be awarded additional 6 (3 * 2) points. 
+If these additional points place a user into the next level then that level will be awarded the next time an event is reported for that user. 
+
+*SCENARIO:* **Point Increment is increased** :arrow_down:
+
+Recall that *Point Increment* is the number of points applied for each skill event. 
+Delta in *Point Increment* will then be substructed for any of the already performed skill events. 
+For example if a user performed 2 skill events and *Point Increment* changed from 10 points to 6 points (delta = 4) then 
+8 (4 * 2) points will be substructed from the user's points.
+
+*SCENARIO:* **Occurrences to Completion is increased** :arrow_up:
+
+Recall *Occurrences to Completion* is the number of successful occurrences to fully accomplish a skill. 
+Any users that's already completed the skill based on the lower number of the occurrences will now have an opportunity to complete new/additional occurrences and earn those points. 
+
+Additional occurrences will equate to the extra points which in turn may shift points profile which then may technically place certain users outside of their currently earned level. 
+If so, those users will *NOT* lose their current level (per our overall strategy) but rather it will take them a bit longer to achieve the next level.  
+
+If the increase to the occurrences were made for a skill that belongs to a badge then any user that has already earned that badge will retain the badge achievement. 
+     
+*SCENARIO:* **Occurrences to Completion is decreased** :arrow_down:
+
+Recall *Occurrences to Completion* is the number of successful occurrences to fully accomplish a skill. 
+Points are sustructed for users that already achieved the removed occurrences. 
+
+If the removal places a user into the completion of the skill then skill is awarded to that user. 
+Subsequently if the completion of that skill completes a badge then the badge is awarded to that user.   
+
+Any previously achieved levels and badges are retained if the removed occurrences contributed to the achievement of those levels and/or badges. 
+
+*SCENARIO:* **Skill is removed**
+
+For a given user, if this was the last skill to be completed before a badge is achieved then the badge is awarded to that user.
+
+*SCENARIO:* **Skill is added**
+
+New skill will equate to extra points which in turn may shift points profile which then may technically place certain users outside of their currently earned level. 
+If so, those users will *NOT* lose their current level (per our overall strategy) but rather it will take them a bit longer to achieve the next level.  
+ 
