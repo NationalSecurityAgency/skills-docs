@@ -1,4 +1,7 @@
 The theme object supports the customization of the color palette of the Skills Display to match your application. 
+For example, you can easily style Skills Display to look something like this: 
+
+![User Skills Image](../screenshots/Screenshot_2020-02-05_UserSkillsTheme.png)
 
 The theme object supports the following properties:
 
