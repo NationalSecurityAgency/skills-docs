@@ -42,6 +42,26 @@ For example, to report a skill with id ``SkillA`` for a project with id ``Projec
 http://localhost:8082/api/projects/ProjectA/skills/SkillA
 ```
 
+Endpoint takes **optional** JSON payload parameters. 
+
+| Parameter     | Explanation   | 
+| ------------- | -------------|
+| userId        | *(optional)* Report skill event on behalf of another user **(must be an admin of the project)**. | 
+| timestamp     | *(optional)* Report skill event in the past **(must be an admin of the project)**.  |
+
+Here is an example of JSON payload reporting skill event for another user in the past: 
+
+```json
+{
+  "userId":"valueForUserId",
+  "timestamp":1581349194294
+}
+```
+
+::: warning Keep In Mind
+Only project's admin is allowed to supply ``userId`` and ``timestamp``.   
+:::
+
 ### Endpoint Result Object 
 
 Skill events are applied immediately and atomically based on the currently configured ruleset (via dashboard). 
