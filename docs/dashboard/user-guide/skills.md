@@ -136,23 +136,23 @@ For example if a user performed 2 skill events and *Point Increment* changed fro
 
 *SCENARIO:* **Occurrences to Completion is increased** :arrow_up:
 
-Recall *Occurrences to Completion* is the number of successful occurrences to fully accomplish a skill. 
-Any users that's already completed the skill based on the lower number of the occurrences will now have an opportunity to complete new/additional occurrences and earn those points. 
+Recall that *Occurrences to Completion* is the number of successful occurrences to fully accomplish a skill. 
+Any users that have already completed the skill based on the lower number of occurrences will now have an opportunity to complete new/additional occurrences and earn those points. 
 
-Additional occurrences will equate to the extra points which in turn may shift points profile which then may technically place certain users outside of their currently earned level. 
+Additional occurrences will cause a completed skill to be worth additional points which in turn may shift the points profile of a user, technically placing certain users outside of their currently achieved level. 
 If so, those users will *NOT* lose their current level (per our overall strategy) but rather it will take them a bit longer to achieve the next level.  
 
-If the increase to the occurrences were made for a skill that belongs to a badge then any user that has already earned that badge will retain the badge achievement. 
+If the increase to occurrences was made for a skill that belongs to a badge, then any user that has already earned that badge will retain the badge achievement. 
      
 *SCENARIO:* **Occurrences to Completion is decreased** :arrow_down:
 
-Recall *Occurrences to Completion* is the number of successful occurrences to fully accomplish a skill. 
-Points are sustructed for users that already achieved the removed occurrences. 
+Recall that *Occurrences to Completion* is the number of successful occurrences to fully accomplish a skill. 
+Points are subtracted for users that already achieved the removed occurrences. 
 
-If the removal places a user into the completion of the skill then skill is awarded to that user. 
+If the removal causes a user to qualify for achievement of the edited skill, then that completed skill is awarded to the user. 
 Subsequently if the completion of that skill completes a badge then the badge is awarded to that user.   
 
-Any previously achieved levels and badges are retained if the removed occurrences contributed to the achievement of those levels and/or badges. 
+Any previously achieved levels and badges are retained even if the removed occurrences contributed to the achievement of those levels and/or badges. 
 
 *SCENARIO:* **Skill is removed**
 

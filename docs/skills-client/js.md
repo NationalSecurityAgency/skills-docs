@@ -33,7 +33,7 @@ Usage is trivial:
 These libraries are [UMD](https://github.com/umdjs/umd) modules so if you are using CommonJS you can use ```require``` statements (or ```import``` statements if you are using a bundler) to import them, or you can use [AMD](https://github.com/amdjs/amdjs-api).
 :::
 
-Here is an initializing of SkillsDisplayJS (assuming you already configured via ``` SkillsConfiguration.default.configure```, see the [SkillsConfiguration Documentation](/skills-client/js.html#skills-configuration) )
+Here is example of initializing SkillsDisplayJS (assuming you already configured via ``` SkillsConfiguration.default.configure```, see the [SkillsConfiguration Documentation](/skills-client/js.html#skills-configuration) )
 * Note: This assumes there is a DIV in your DOM with id ```skills-display-container``` for SkillsDisplayJS to attach to
 * Note: This javascript should be executed AFTER the imports of the ```@skills``` libraries above
 
