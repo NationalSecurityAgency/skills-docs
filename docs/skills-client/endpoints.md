@@ -24,7 +24,7 @@ Please select your installation type below for the instructions:
     pki-path="/skills-client/auth/endpointsAuthPKI.html"
     form-path="/skills-client/auth/endpointsFormPKI.html"/>
 
-## Report Skill Events Endpoint
+## Report Skill Event Endpoint
 
 If the existing libraries do not suffice or you need to report skill events from your server components (e.g., batch, async, streaming, etc..),
 then you can [POST](https://en.wikipedia.org/wiki/POST_(HTTP) / [PUT](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) to the endpoint directly in order to report a single skill event:
@@ -42,14 +42,14 @@ For example, to report a skill with id ``SkillA`` for a project with id ``Projec
 http://localhost:8082/api/projects/ProjectA/skills/SkillA
 ```
 
-Endpoint takes **optional** JSON payload parameters. 
+The Report Skill Endpoint also accepts **optional** JSON payload parameters. 
 
 | Parameter     | Explanation   | 
 | ------------- | -------------|
 | userId        | *(optional)* Report skill event on behalf of another user **(must be an admin of the project)**. | 
 | timestamp     | *(optional)* Report skill event in the past **(must be an admin of the project)**.  |
 
-Here is an example of JSON payload reporting skill event for another user in the past: 
+Here is an example JSON payload for reporting a skill event for another user in the past: 
 
 ```json
 {
@@ -59,7 +59,7 @@ Here is an example of JSON payload reporting skill event for another user in the
 ```
 
 ::: warning Keep In Mind
-Only project's admin is allowed to supply ``userId`` and ``timestamp``.   
+Only a project admin is allowed to supply ``userId`` and ``timestamp``.   
 :::
 
 ### Endpoint Result Object 
