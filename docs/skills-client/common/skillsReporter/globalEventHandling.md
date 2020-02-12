@@ -20,4 +20,14 @@ SkillsReporter.addSuccessHandler(myGlobalSuccessHandler);
 SkillsReporter.addErrorHandler(myGlobalErrorHandler);
 ```
 
+Note: By default, a global success handler will only by invoked for results where a skill has been applied (``skillApplied=true``).
+To change the default behavior and enable notifications even when a reported skill has not been applied, set the ``notifyIfSkillNotApplied``
+configuration option on the SkillReporter utility:
+
+``` js{9-10}
+SkillsReporter.configure({
+    notifyIfSkillNotApplied: true,
+});
+``` 
+
 For a full description of the success response object (named ``result`` in the above example) please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
