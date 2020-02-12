@@ -80,6 +80,9 @@ Here is an example of an event that (1) was successfully applied, (2) completed/
 ```json
 {
    "success":true,
+   "projectId":"sampleProject",
+   "skillId":"ImportantSkill",
+   "name":"Important Skill",
    "skillApplied":true,
    "explanation":"Skill event was applied",
    "completed":[{
@@ -101,6 +104,9 @@ Here is a reference table for result fields and their meaning:
 | Field | Type | Explanation | 
 | :------- | :----------- | :----------- | 
 | success | *boolean* | ``true`` if there were no issues reporting the skill, ``false`` if there was a server side failure - this could happen if the service is down or you stumbled on a bug |
+| projectId | *string* | the projectId that the report skill belongs to |
+| skillId | *string* | the skillId of the report skill |
+| name | *string* | the display name of the report skill |
 | skillApplied | *boolean* | ``true`` if this event contributed points to the skill; ``false`` if the event didn't contribute points - ``explanation`` field will tell you why (see examples below) |
 | explanation | *string* | human readable explanation about how this skill event was handled; this field will explain why an event wasn't able to contribute points (see examples below) |
 | completed | *list* | metadata of a completed item if this event caused user to level-up, complete a skill or earn a badge/gem (just to mention a few) | 
@@ -113,6 +119,9 @@ Here is an example where the skill event did not contribute any points because i
 ```json
 {
    "success":true,
+   "projectId":"sampleProject",
+   "skillId":"ImportantSkill",
+   "name":"Important Skill",
    "skillApplied":false,
    "explanation":"This skill reached its maximum points",
    "completed":[]
@@ -123,6 +132,9 @@ Here is an example where the skill event did not contribute any points because i
 ```json
 {
    "success":true,
+   "projectId":"sampleProject",
+   "skillId":"ImportantSkill",
+   "name":"Important Skill",
    "skillApplied":false,
    "explanation":"Not all dependent skills have been achieved. Missing achievements for 1 out of 1. Waiting on completion of [FirstProject:skill1Skill].",
    "completed":[]
@@ -133,6 +145,9 @@ Below is an example where the skill contributed points but did not complete anyt
 ```json
 {
    "success":true,
+   "projectId":"sampleProject",
+   "skillId":"ImportantSkill",
+   "name":"Important Skill",
    "skillApplied":true,
    "explanation":"Skill event was applied",
    "completed":[]
