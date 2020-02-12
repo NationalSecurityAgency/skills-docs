@@ -83,6 +83,7 @@ Here is an example of an event that (1) was successfully applied, (2) completed/
    "projectId":"sampleProject",
    "skillId":"ImportantSkill",
    "name":"Important Skill",
+   "pointsEarned": 15,
    "skillApplied":true,
    "explanation":"Skill event was applied",
    "completed":[{
@@ -122,6 +123,7 @@ Here is an example where the skill event did not contribute any points because i
    "projectId":"sampleProject",
    "skillId":"ImportantSkill",
    "name":"Important Skill",
+   "pointsEarned": 0,
    "skillApplied":false,
    "explanation":"This skill reached its maximum points",
    "completed":[]
@@ -135,6 +137,7 @@ Here is an example where the skill event did not contribute any points because i
    "projectId":"sampleProject",
    "skillId":"ImportantSkill",
    "name":"Important Skill",
+   "pointsEarned": 0,
    "skillApplied":false,
    "explanation":"Not all dependent skills have been achieved. Missing achievements for 1 out of 1. Waiting on completion of [FirstProject:skill1Skill].",
    "completed":[]
@@ -148,6 +151,7 @@ Below is an example where the skill contributed points but did not complete anyt
    "projectId":"sampleProject",
    "skillId":"ImportantSkill",
    "name":"Important Skill",
+   "pointsEarned": 15,
    "skillApplied":true,
    "explanation":"Skill event was applied",
    "completed":[]
