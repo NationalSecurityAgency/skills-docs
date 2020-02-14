@@ -110,6 +110,7 @@ Here is a reference table for result fields and their meaning:
 | projectId | *string* | the projectId that the report skill belongs to |
 | skillId | *string* | the skillId of the report skill |
 | name | *string* | the display name of the report skill |
+| pointsEarned | *number* | number of points earned by this request |
 | skillApplied | *boolean* | ``true`` if this event contributed points to the skill; ``false`` if the event didn't contribute points - ``explanation`` field will tell you why (see examples below) |
 | explanation | *string* | human readable explanation about how this skill event was handled; this field will explain why an event wasn't able to contribute points (see examples below) |
 | completed | *list* | metadata of a completed item if this event caused user to level-up, complete a skill or earn a badge/gem (just to mention a few) | 
