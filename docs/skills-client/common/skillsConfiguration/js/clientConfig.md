@@ -6,22 +6,22 @@
 
 <import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.html"/>
 
- ``` js{6-9}
+ ``` js{7-10}
 <head>
 ...
-    <script type="text/javascript" src="assets/js/@skills/skills-client-js/dist/skills-client-js.umd.min.js">
+    <script type="module">
 
-    <script type="text/javascript">
-         SkillsClient.SkillsConfiguration.afterConfigure()
-            .then(() => {
-                // SkillsConfiguration.configure has been called 
-            });
-        
-         axios.get('my/configuration/endpoint')
-            .then((result) => {
-                  SkillsClient.SkillsConfiguration.configure(result.data);
-            });
-    </script>
+    import { SkillsConfiguration } from './assets/js/@skills/skills-client-js/dist/skills-client-js.esm.min.js'
+
+     SkillsConfiguration.afterConfigure()
+        .then(() => {
+            // SkillsConfiguration.configure has been called 
+        });
+    
+     axios.get('my/configuration/endpoint')
+        .then((result) => {
+              SkillsConfiguration.configure(result.data);
+        });
 ...    
 </head>
  ```

@@ -140,14 +140,7 @@ onReporterResponse(response) {
 ```
 
 a response object may look something like this:
-``` js
-{
-  "success": true,
-  "skillApplied": true,
-  "explanation": "Skill event was applied",
-  "completed": []
-}
-```
+<import-content path="/skills-client/common/skillsReporter/responseObject.html"/>
 
 For a full description of the response object please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
 
