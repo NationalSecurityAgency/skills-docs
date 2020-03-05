@@ -9,17 +9,17 @@
  ``` js{6-9}
 <head>
 ...
-    <script type="text/javascript" src="assets/@skills/skills-configuration/dist/SkillsConfiguration.umd.min.js">
+    <script type="text/javascript" src="assets/js/@skills/skills-client-js/dist/skills-client-js.umd.min.js">
 
     <script type="text/javascript">
-         SkillsConfiguration.default.afterConfigure()
+         SkillsClient.SkillsConfiguration.afterConfigure()
             .then(() => {
                 // SkillsConfiguration.configure has been called 
             });
         
          axios.get('my/configuration/endpoint')
             .then((result) => {
-                  SkillsConfiguration.default.configure(result.data);
+                  SkillsClient.SkillsConfiguration.configure(result.data);
             });
     </script>
 ...    

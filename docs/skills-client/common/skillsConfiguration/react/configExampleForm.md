@@ -6,7 +6,7 @@ than likely specific to the currently logged in user.
 :::
 
 ``` js
-import { SkillsConfiguration } from '@skills/skills-client-vue';
+import { SkillsConfiguration } from '@skills/skills-client-react';
 
 SkillsConfiguration.configure({
   serviceUrl: 'http://localhost:8080',

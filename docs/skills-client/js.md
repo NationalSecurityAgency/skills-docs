@@ -20,25 +20,21 @@ This will give you access to
 <import-content path="/skills-client/common/skillsDisplayIntro.html"/>
 
 Usage is trivial:
-1. First you must include the [UMD](https://github.com/umdjs/umd) module SkillsConfiguration
+1. First you must include the [UMD](https://github.com/umdjs/umd) module SkillsClient
     
-    * Download the artifact ```@skills/skills-client-configuration``` from npm
-    * Copy ```./node_modules/@skills/skills-client-configuration/dist``` to your assets folder in your project
-1. Next you must include the [UMD](https://github.com/umdjs/umd) module SkillsDisplayJS 
-  
     * Download the artifact ```@skills/skills-client-js``` from npm
     * Copy ```./node_modules/@skills/skills-client-js/dist``` to your assets folder in your project
 
 ::: tip
-These libraries are [UMD](https://github.com/umdjs/umd) modules so if you are using CommonJS you can use ```require``` statements (or ```import``` statements if you are using a bundler) to import them, or you can use [AMD](https://github.com/amdjs/amdjs-api).
+This library is [UMD](https://github.com/umdjs/umd) module so if you are using CommonJS you can use ```require``` statements (or ```import``` statements if you are using a bundler) to import them, or you can use [AMD](https://github.com/amdjs/amdjs-api).
 :::
 
-Here is example of initializing SkillsDisplayJS (assuming you already configured via ``` SkillsConfiguration.default.configure```, see the [SkillsConfiguration Documentation](/skills-client/js.html#skills-configuration) )
+Here is example of initializing SkillsDisplayJS (assuming you already configured via ``` SkillsClient.SkillsConfiguration.configure```, see the [SkillsConfiguration Documentation](/skills-client/js.html#skills-configuration) )
 * Note: This assumes there is a DIV in your DOM with id ```skills-display-container``` for SkillsDisplayJS to attach to
 * Note: This javascript should be executed AFTER the imports of the ```@skills``` libraries above
 
 ``` js{3-4,12,14}
-SkillsConfiguration.default.afterConfigure().then(() => {
+SkillsClient.SkillsConfiguration.afterConfigure().then(() => {
   const initializeSkillsDisplay = () => {
     const clientDisplay = new SkillsClient.SkillsDisplayJS();
     clientDisplay.attachTo(document.querySelector('#skills-client-container'));
@@ -94,11 +90,11 @@ Import the SkillsReporter into your project
 ``` js
 <head>
   ...
-  <script type="text/javascript" src="assets/@skills/skills-client-reporter/dist/SkillsReporter.umd.min.js" />
+  <script type="text/javascript" src="assets/js/@skills/skills-client-reporter/dist/skills-client-js.umd.min.js" />
   ...
 
   <script type="text/javascript">
-    SkillsReporter.SkillsReporter.reportSkill(skillId)
+    SkillsClient.SkillsReporter.reportSkill(skillId)
       .then((response) => {
         // response = metatdata describing how that skill influenced user's skills posture
       })

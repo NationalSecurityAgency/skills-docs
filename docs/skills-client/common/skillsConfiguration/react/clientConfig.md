@@ -1,13 +1,13 @@
 <import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationHeader.html"/>
 
 <form-and-pki 
-    pki-path="/skills-client/common/skillsConfiguration/vuejs/configExamplePki.html"
-    form-path="/skills-client/common/skillsConfiguration/vuejs/configExampleForm.html"/>
+    pki-path="/skills-client/common/skillsConfiguration/react/configExamplePki.html"
+    form-path="/skills-client/common/skillsConfiguration/react/configExampleForm.html"/>
 
 <import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.html"/>
 
  ``` js{3-6}
- import { SkillsConfiguration } from '@skills/skills-client-vue';
+ import { SkillsConfiguration } from '@skills/skills-client-react';
  
  SkillsConfiguration.afterConfigure()
    .then(() => {
@@ -19,3 +19,4 @@
       SkillsConfiguration.configure(result.data);
     });
  ```
+e

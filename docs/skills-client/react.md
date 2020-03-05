@@ -3,8 +3,6 @@
 To install client libraries:
 
 ``` js
-npm install @skills/skills-client-configuration --save
-npm install @skills/skills-client-reporter --save
 npm install @skills/skills-client-react --save
 ```
 
@@ -19,7 +17,7 @@ This will give you access to
 Before using the SkillsDisplay, you must make sure to initialize SkillsConfiguration
 with your system settings. 
 :::
-<import-content path="/skills-client/common/skillsConfiguration/vuejs/clientConfig.html"/>
+<import-content path="/skills-client/common/skillsConfiguration/react/clientConfig.html"/>
 
 ## Skills Display
 
@@ -102,7 +100,7 @@ with your system settings.  See the [SkillsConfiguration Documentation](/skills-
 Import the SkillsReporter into your project and integrate it into actions within your UI.
 
 ``` js
-import { SkillsReporter } from '@skills/skills-client-reporter';
+import { SkillsReporter } from '@skills/skills-client-react';
 
 const MyComponent = () => {
     const reportSkill = (skillId) => {
