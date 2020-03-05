@@ -1,15 +1,15 @@
  ``` js
 <head>
 ...
-    <script type="text/javascript" src="assets/js/@skills/skills-client-js/dist/skills-client-js.umd.min.js">
+    <script type="module">
 
-    <script type="text/javascript">
-        SkillsClient.SkillsConfiguration.configure({
-            serviceUrl: 'http://localhost:8080',
-            projectId: 'movies',
-            authenticator: 'pki',
-        });
-    </script>
+    import { SkillsConfiguration } from './assets/js/@skills/skills-client-js/dist/skills-client-js.esm.min.js'
+
+    SkillsClient.SkillsConfiguration.configure({
+        serviceUrl: 'http://localhost:8080',
+        projectId: 'movies',
+        authenticator: 'pki',
+    });
 ...    
 </head>
 ```
