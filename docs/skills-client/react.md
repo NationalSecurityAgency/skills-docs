@@ -94,7 +94,7 @@ The ```skills-client-react``` library also includes the SkillsReporter utility u
 ### SkillsReporter JS Utility
 ::: warning Reminder
 Before using the SkillsReporter utility, you must make sure to initialize SkillsConfiguration
-with your system settings.  See the [SkillsConfiguration Documentation](/skills-client/js.html#skills-configuration) 
+with your system settings.  See the [SkillsConfiguration Documentation](/skills-client/react.html#skills-configuration) 
 :::
 
 Import the SkillsReporter into your project and integrate it into actions within your UI.
