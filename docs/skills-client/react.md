@@ -89,7 +89,7 @@ export default MyLevelDisplay;
 
 ## Skills Event Reporting
 
-The ```skills-client-reporter``` library contains the service used to report skills events.
+The ```skills-client-react``` library also includes the SkillsReporter utility used to report skills events.
 
 ### SkillsReporter JS Utility
 ::: warning Reminder
