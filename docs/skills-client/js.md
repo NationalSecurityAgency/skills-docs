@@ -68,7 +68,7 @@ const clientDisplay = new SkillsDisplayJS({
 
 ## Skills Event Reporting
 
-The ```skills-client-js``` library is packaged with the service used to report skills events.
+The ```skills-client-js```  library also includes the SkillsReporter utility used to report skills events.
 
 ### SkillsReporter JS Utility
 
