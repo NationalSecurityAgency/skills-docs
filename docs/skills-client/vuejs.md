@@ -6,10 +6,10 @@ To install client libraries:
 npm install @skills/skills-client-vue --save
 ```
 
-This will give you access to 
-1. Skills Display - Visualize your website users' skill profile
-1. Skill Event Reporting - Report skill events using Vue.js directives or JS utility 
+This JS library contains:
 1. Skills Configuration - Global configuration used by Skills utilities.
+1. Skills Display - Visualize your website users' skill profile
+1. Skill Event Reporting - Report skill events using JS utility
 
 ## Skills Configuration
 

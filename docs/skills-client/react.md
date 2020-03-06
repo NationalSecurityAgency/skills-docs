@@ -6,11 +6,10 @@ To install client libraries:
 npm install @skills/skills-client-react --save
 ```
 
-This will give you access to
-
+This JS library contains:
+1. Skills Configuration - Global configuration used by Skills utilities.
 1. Skills Display - Visualize your website users' skill profile
 1. Skill Event Reporting - Report skill events using JS utility
-1. Skills Configuration - Global configuration used by Skills utilities.
 
 ## Skills Configuration
 ::: warning Reminder
