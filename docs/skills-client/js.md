@@ -6,15 +6,10 @@ To install client libraries using npm:
 npm install @skills/skills-client-js --save
 ```
 
-This will give you access to 
-1. Skills Display - Visualize your website users' skill profile
-1. Skill Event Reporting - Report skill events using Vue.js directives or JS utility 
-1. Skills Configuration - Global configuration used by Skills utilities.
-
 If you're not using a JavaScript module bundler such as webpack or rollup.js, you may wish to import the module
-using the ```<script>``` tag.
+using the html ```<script>``` tag.
 
-1. First you must include the SkillsClient [ESM](https://tc39.es/ecma262/#sec-modules) module
+1. Simply download and include the SkillsClient [ESM](https://tc39.es/ecma262/#sec-modules) module with the script tag.
     
     * Download the artifact ```@skills/skills-client-js``` from npm
     * Copy ```./node_modules/@skills/skills-client-js/dist``` to your assets folder in your project
@@ -22,6 +17,11 @@ using the ```<script>``` tag.
 ::: tip
 This library is also available as a [UMD](https://github.com/umdjs/umd) module so if you are using CommonJS you can use ```require``` statements (or ```import``` statements if you are using a bundler) to import them, or you can use [AMD](https://github.com/amdjs/amdjs-api).
 :::
+
+This will give you access to 
+1. Skills Display - Visualize your website users' skill profile
+1. Skill Event Reporting - Report skill events using Vue.js directives or JS utility 
+1. Skills Configuration - Global configuration used by Skills utilities.
 ## Skills Configuration
 
 <import-content path="/skills-client/common/skillsConfiguration/js/clientConfig.html"/>
