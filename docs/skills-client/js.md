@@ -11,16 +11,17 @@ This JS library contains:
 1. Skills Display - Visualize your website users' skill profile
 1. Skill Event Reporting - Report skill events using Vue.js directives or JS utility
 
-Generally you will be in one of **these two scenarios**: 
+Generally you will be in one of **these scenarios**: 
 1. [Option 1](/skills-client/js.html#option-1-javascript-module-bundler): Use a JavaScript module bundler such as [webpack](https://webpack.js.org/) or [rollup.js](https://rollupjs.org)
-1. [Option 2](/skills-client/js.html#option-2-script-tag): Import the skills JS library via the html ```<script>``` tag 
+1. [Option 2](/skills-client/js.html#option-2-script-type-module-tag): Import the skills JS library via the html ```<script type="module">``` tag 
+1. [Option 3](/skills-client/js.html#option-3-script-type-text-javascript-tag): Import the skills JS library via the html ```<script type="text/javascript">``` tag
 
 ## Option 1: JavaScript module bundler
 
 When using module bundler such as [webpack](https://webpack.js.org/) or [rollup.js](https://rollupjs.org) 
 you can take advantage of module imports, for example: 
 
-```
+```  js
 import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from '@skills/skills-client-js';
  
 // code using SkillsConfiguration, SkillsDisplay and SkillsReporter
@@ -29,25 +30,25 @@ import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from '@skills/skil
 
 Alternatively you can import individually:
 
-```
+```  js
 import { SkillsConfiguration } from '@skills/skills-client-js';
  
 // code using SkillsConfiguration
 // examples in the following sections
  ``` 
 
-## Option 2: ```<script>``` tag
+## Option 2: ```<script type="module">``` tag
 
 If you're not using a JavaScript module bundler such as webpack or rollup.js, you may wish to import the module
-using the html ```<script>``` tag.
+using the html ```<script type="module">``` tag.
 
-1. Simply download and include the SkillsClient [ESM](https://tc39.es/ecma262/#sec-modules) module with the script tag.
+1. Simply download and include the SkillsTree [ESM](https://tc39.es/ecma262/#sec-modules) module with the script tag.
     
     * Download the artifact ```@skills/skills-client-js``` from npm
     * Copy ```./node_modules/@skills/skills-client-js/dist``` to your assets folder in your project
 
 Then your import will look something like this
-``` 
+```   js{2}
 <head>
     <script type="module">
         import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from './assets/js/@skills/skills-client-js/dist/skills-client-js.esm.min.js'
@@ -60,7 +61,7 @@ Then your import will look something like this
 
 Alternatively you can import individually:
 
-```
+```  js{2}
 <head>
     <script type="module">
         import { SkillsConfiguration } from './assets/js/@skills/skills-client-js/dist/skills-client-js.esm.min.js'
@@ -71,8 +72,36 @@ Alternatively you can import individually:
 </head>
  ``` 
 
-::: tip
-This library is also available as a [UMD](https://github.com/umdjs/umd) module so if you are using CommonJS you can use ```require``` statements (or ```import``` statements if you are using a bundler) to import them, or you can use [AMD](https://github.com/amdjs/amdjs-api).
+## Option 3: ```<script type="text/javascript">``` tag
+
+You may also import import the module using the html ```<script type="text/javascript">``` tag in order to support older
+browser version.  When importing the library this way you will need to reference SkillTree objects  using a global wrapper 
+object named SkillsClient.
+
+1. Simply download and include the SkillsTree [UMD](https://github.com/umdjs/umd) module with the script tag using type="text/javascript".
+    
+    * Download the artifact ```@skills/skills-client-js``` from npm
+    * Copy ```./node_modules/@skills/skills-client-js/dist``` to your assets folder in your project
+
+Then your import will look something like this
+```  js{2,7}
+<head>
+    <script type="text/javascript" src="assets/js/@skills/skills-client-js/dist/skills-client-js.umd.min.js"></script>
+    
+        // code using SkillsConfiguration, SkillsDisplay and SkillsReporter examples
+        // in the following sections, but using the global SkillsClient wrapper
+
+        SkillsClient.SkillsConfiguration.configure({
+           serviceUrl: 'http://localhost:8080',
+           projectId: 'movies',
+           authenticator: 'pki',
+        });
+    </script> 
+</head>
+ ```
+
+::: tip Note
+Since the library is also available as a [UMD](https://github.com/umdjs/umd) module, if you are using CommonJS you can use ```require``` statements (or ```import``` statements if you are using a bundler) to import them, or you can use [AMD](https://github.com/amdjs/amdjs-api).
 :::
 
 ## Skills Configuration
