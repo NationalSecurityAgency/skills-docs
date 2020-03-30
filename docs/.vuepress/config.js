@@ -1,4 +1,5 @@
 module.exports = {
+    port: 9999,
     title: 'Skills as a Service Docs',
     description: 'Innovative approach to application training!',
     head: [
@@ -61,6 +62,15 @@ module.exports = {
                     '/skills-client/auth',
                     '/skills-client/endpoints',
                     '/skills-client/troubleshooting',
+                ]
+            },
+            {
+                title: 'Open Source Contributions',
+                collapsable: true,
+                children: [
+                    '/contribution/',
+                    '/contribution/architecture.md',
+                    '/contribution/devEnv.md',
                 ]
             },
         ],
