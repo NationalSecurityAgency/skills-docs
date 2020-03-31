@@ -13,7 +13,7 @@ We recommend developing SkillTree in *nix environment.
 
 ## Development Overview
 
-The follow-on sections will cover:
+The following sections will cover:
 1. skills-service project development 
 1. skills-client project development
 
@@ -56,7 +56,7 @@ mvn install
 ```
 Since this process runs all of the service integration tests it will take a while (5 to 20 minutes depending on your hardware). 
 
-SkillsTree uses [maven](https://maven.apache.org/) and [npm](https://www.npmjs.com/) for its dependency management and to facilitate build lifecycle.  Let's get familiar with the project's layout:
+SkillTree uses [maven](https://maven.apache.org/) and [npm](https://www.npmjs.com/) for its dependency management and to facilitate build lifecycle.  Let's get familiar with the project's layout:
 ``` markdown
 skills-service
 └───service
@@ -80,8 +80,8 @@ skills-service
 
 The runtime artifact is a [spring boot](https://spring.io/projects/spring-boot) application and will be created in ``service/skills-service-<version>.jar``; 
 we ran ``mvn install`` to generate this artifact and the following sequence of steps was performed:
-- Build dashboard web application: ``npm build`` in dashboard project
-- Build client display web application: ``npm build`` in client-display project
+- Build dashboard web application: ``npm run build`` in dashboard project
+- Build client display web application: ``npm run build`` in client-display project
 - Compile Java and Groovy classes in the ``service`` project: ``mvn compile``
 - Copy dashboard and client-display built apps to ``service/src/main/resources/public`` so the spring boot app can host the dashboard and the client-display web-applications
 - Generate runtime artifact: ``mvn package`` in the service project
@@ -97,12 +97,12 @@ The app will run on [http://localhost:8080](http://localhost:8080), visit it to 
 To learn more about the features of the SkillTree dashboard, please visit the [Dashboard Guide](/dashboard/user-guide/).
   
 This will start SkillTree application with all of the default properties, some things to note:
-- By default in-memory H2 database is used - data will be ephemeral and will not persist between application restarts.
-- App runs in [Pass Auth Mode](/dashboard/install-guide/installModes.html#pass-auth-mode) which is the common use-case. 
+- By default an in-memory H2 database is used - data will be ephemeral and will not persist between application restarts.
+- App runs in [Password Auth Mode](/dashboard/install-guide/installModes.html#password-auth-mode) which is the common use-case. 
 
 ### Cypress.io end-to-end tests
 
-SkillTree utilizes [cypress.io](https://www.cypress.io/) framework to perform the end-to-end tests and specifically verify features of the dashboard and client-display web applications. 
+SkillTree utilizes the [cypress.io](https://www.cypress.io/) framework to perform end-to-end tests and specifically verify features of the dashboard and client-display web applications. 
 Cypress tests are located in ``e2e-tests`` project: 
 
 ``` markdown
@@ -133,15 +133,15 @@ npm run cy:run
 npm run cyServices:kill 
 ```
 
-Buckle down as these tests will take awhile to run, and depending on your system specs you should expect anywhere from 5 to 20 minutes. 
+Buckle down as these tests will take a while to run, and depending on your system specs you should expect anywhere from 5 to 20 minutes. 
 
 :::tip
-Please note that ports 8080 and 8083 has to be available on your system
+Please note that ports 8080 and 8083 have to be available on your system
 :::
 
 ``npm run cyServices:start`` command starts:
-- The programmatic service and the dashboard by utilizing already built jar; will run on port 8080
-- the client-display using dev webpack server; will run on port 8083
+- The programmatic service and the dashboard by utilizing the already built jar; will run on port 8080
+- the client-display using webpack dev server; will run on port 8083
 
 Now that you can build and run integration tests let's discuss day-to-day development setup for the skill-service project.
 
@@ -149,15 +149,15 @@ Now that you can build and run integration tests let's discuss day-to-day develo
 
 Most IDEs (Intellij, Eclipse, etc...) provide first-class support for maven projects so the very first step would be to import the skills-service project into your favorite IDE. 
 
-Please note that code additions will generally fall into these:
-1. Enhancing skill's service programmatic REST API
+Please note that code additions will generally fall into these categories:
+1. Enhancing the skills-service programmatic REST API
 1. Making changes to the web-based dashboard application or the client-display web-based application
 
-###### Skill's service programmatic REST API
+###### skills-service programmatic REST API
 
-The code for the API can be found under ``skills-service/service`` which follows standard maven's convention. 
+The code for the API can be found under ``skills-service/service`` which follows standard maven conventions. 
 
-Programmatic API tests reside in ```service/src/test/java``` and you can run all of the tests via
+The programmatic API tests reside in ```service/src/test/java``` and you can run all of the tests via
 ```bash
 cd skills-service/service
 mvn test
@@ -174,13 +174,15 @@ Skills Service integration tests stand-up the skills-service application and the
 These integration tests reside in the ``skills.intTests`` package and extend ``DefaultIntSpec.groovy`` class. 
 
 ``DefaultIntSpec.groovy`` is annotated with the [``@SpringBootTest``](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) annotation
-which then facilitates running the Spring Boot application which exposes endpoints on a random port. Few things to note: 
-- You should interact with the service using test client ``skills.intTests.utils.SkillsService`` class 
+which then facilitates running the Spring Boot application which exposes endpoints on a random port. 
+
+A few things to note: 
+- You should interact with the skills-service using the test client ``skills.intTests.utils.SkillsService`` class 
   - Available via ``skills.intTests.utils.DefaultIntSpec#skillsService``
   - ``SkillsService`` class represent an authenticated dashboard user
 - Runtime port can be retrieved via ``skills.intTests.utils.DefaultIntSpec#localPort`` but should rarely be used directly; instead please use ``skills.intTests.utils.DefaultIntSpec#skillsService`` instead
 - ``DefaultIntSpec`` setup and cleanup methods purge data from DB between each test case
-- By default, tests are executed against in-memory H2 DB
+- By default, tests are executed against the in-memory H2 DB
 - Use the ``skills.intTests.utils.DefaultIntSpec#createService`` if you need a new ``SkillsService``
   - For example to represent another dashboard user       
 
@@ -193,7 +195,7 @@ Steps to develop the web-based dashboard are:
 1. Bring up the webpack dev server
 1. Use browser and cypress tests to drive the development
 
-To stand the service you can execute ``skills.SpringBootApp`` in the ``service`` project from your IDE. 
+To stand up the service you can execute ``skills.SpringBootApp`` in the ``service`` project from your IDE. 
 If that's not an option you can always build a jar and run it from the command line:
  ```bash
  java -jar service/target/skills-service-<version>.jar
@@ -216,7 +218,7 @@ npm run cy:open:dev
 ``` 
 You can then start adding tests under e2e-tests/cypress/integration to an existing file or by creating a new file. 
 
-If you making changes to the client display OR want to run all of the cypress integration tess then will need to start the client-display webpack dev server:
+If you making changes to the client display OR want to run all of the cypress integration tests then will need to start the client-display webpack dev server:
 
 ```bash
 cd client-display
@@ -230,8 +232,8 @@ The dev server will run on port 8083 and will make the requests for the data to 
 SkillTree overall testing strategy is to implement black-box integration tests and supplement with unit tests whenever an integration test is not possible.
 :::
 
-We like test  (especially integration tests), make sure you thoroughly test your code.  
-Prior making a Pull Request make sure that ALL tests pass:
+We like tests (especially integration tests), so please make sure you thoroughly test your code.  
+Prior to making a Pull Request make sure that ALL tests pass:
 1. Run services tests against PostgreSQL in addition to the build-in in-memory H2 database
 1. Run all Cypress tests 
 

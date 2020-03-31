@@ -1,8 +1,8 @@
 # Contribution Guidelines
 
 SkillTree is an open source project that welcomes community involvement and contributions. 
-If you are interested in improving SkillTree platform there are many ways that you can contribute. 
-Some of the examples include: 
+If you are interested in improving the SkillTree platform there are many ways that you can contribute. 
+Some examples include: 
 - Submit a bug report
 - Suggest a new feature 
 - Provide feedback by commenting on feature requests/proposals
@@ -21,12 +21,12 @@ to create a new issue and provide as many details as you can to assist in reprod
 
 ## Submission Guidelines
 
-SkillTree will gladly consider patch submission via [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) to one of its GitHub repositories. 
-Please consider the following tips to ensure smooth submission process:  
+SkillTree will gladly consider patch submissions via a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) to one of its GitHub repositories. 
+Please consider the following tips to ensure a smooth submission process:  
 - Please Make sure that your patch compiles and does not break any of the unit or integration tests!
 - Please make sure to implement appropriate unit and especially comprehensive integration tests. We will not accept contributions without proper tests!
 - Please be understanding, patient, and friendly; developers may need time to review your submissions before they can take action or respond. This does not mean your contribution is not valued. If your contribution has not received a response in a reasonable time, consider commenting with a polite inquiry for an update.
-- Please Limit your patches to the smallest reasonable change to achieve your intended goal. For example, do not make unnecessary indentation changes; but don't go out of your way to make the patch so minimal that it isn't easy to read, either. Consider the reviewer's perspective.
+- Please Limit your patches to the smallest reasonable change to achieve your intended goal. For example, do not make unnecessary indentation changes; but also don't go out of your way to make the patch so minimal it makes it difficult to read, either. Consider the reviewer's perspective.
 - Please isolate multiple patches from each other. If you wish to make several independent patches, do so in separate, smaller pull requests that can be reviewed more easily.
 - Please be prepared to answer questions from reviewers. They may have further questions before accepting your patch, and may even propose changes. Please accept this feedback constructively, and not as a rejection of your proposed change.
 
@@ -34,7 +34,7 @@ Please consider the following tips to ensure smooth submission process:
 
 Here are the high-level contribution steps:
 1. Create a GitHub ticket to propose a feature, improvement and/or a bug fix 
-   - Annotate the ticket that you would like to submit a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork). 
+   - Annotate in the ticket that you would like to submit a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork). 
    - Monitor the ticket for comments - work with the core team to make sure that the proposed change fits well into the [SkillTree architecture](/contribution/architecture.html)
 1. [Fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-forks) the repository (generally that would be skills-service)
 1. Clone the forked repository
@@ -44,7 +44,7 @@ Here are the high-level contribution steps:
 cd skills-service
 git checkout -b ticket#111/tree_should_grow_apples
 ```
-5. Implement the feature and/or fix bug
+5. Implement the feature and/or fix the bug
    - Please see the [Development Environment](/contribution/devEnv.html) section
    - Continuously commit to your branch (``ticket#<ticket number>/name``)
       - We suggest that all commits start with the ticket number, for example: ``#111: Adding new feature...``
