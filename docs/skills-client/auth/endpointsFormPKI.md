@@ -1,4 +1,4 @@
-In [Pass Auth Installation](/dashboard/install-guide/installModes.html#pass-auth-mode), the OAuth2 protocol is utilized, you will need to:
+In [Password Auth Installation](/dashboard/install-guide/installModes.html#passwordauth-mode), the OAuth2 protocol is utilized, you will need to:
 1. retrieve user specific temporary client token
    - using project's ```Client ID``` and ```Client Secret``` (found in the dashboard under ```Project -> Access -> 'Trusted Client Properties'``` ).
    - ``user-to-proxy-for`` is provided in the request (this is the ``user id``).

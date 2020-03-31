@@ -2,7 +2,7 @@
 
 Coming very soon...
 
-## Pass Auth Mode
+## Password Auth Mode
 
 Coming very soon...
 
