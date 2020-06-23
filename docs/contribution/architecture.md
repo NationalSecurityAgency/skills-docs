@@ -8,7 +8,7 @@ SkillTree's skills-service is designed with minimal runtime requirements.
 You can start the SkillTree skills-service with zero configuration and it will use an in-memory [H2 database](https://www.h2database.com). 
 Please visit the [Install Guide](/dashboard/install-guide/) to better understand your installation options. 
 
-Let's now focus on what the production deployment would look like. Production installation of the skills-service will require the following infrastructure: 
+Let's now focus on what the production deployment would look like. A production installation of the skills-service will require the following infrastructure: 
 - [PostgreSQL](https://www.postgresql.org/) - Relational store for the project definitions and the skill events. 
 - [RabitMQ Stomp Brokers](https://www.rabbitmq.com/stomp.html) - Used to support [WebSocket](https://en.wikipedia.org/wiki/WebSocket) functionality. 
 

@@ -23,10 +23,10 @@ to create a new issue and provide as many details as you can to assist in reprod
 
 SkillTree will gladly consider patch submissions via a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) to one of its GitHub repositories. 
 Please consider the following tips to ensure a smooth submission process:  
-- Please Make sure that your patch compiles and does not break any of the unit or integration tests!
+- Please make sure that your patch compiles and does not break any of the unit or integration tests!
 - Please make sure to implement appropriate unit and especially comprehensive integration tests. We will not accept contributions without proper tests!
 - Please be understanding, patient, and friendly; developers may need time to review your submissions before they can take action or respond. This does not mean your contribution is not valued. If your contribution has not received a response in a reasonable time, consider commenting with a polite inquiry for an update.
-- Please Limit your patches to the smallest reasonable change to achieve your intended goal. For example, do not make unnecessary indentation changes; but also don't go out of your way to make the patch so minimal it makes it difficult to read, either. Consider the reviewer's perspective.
+- Please limit your patches to the smallest reasonable change to achieve your intended goal. For example, do not make unnecessary indentation changes; but also don't go out of your way to make the patch so minimal it makes it difficult to read, either. Consider the reviewer's perspective.
 - Please isolate multiple patches from each other. If you wish to make several independent patches, do so in separate, smaller pull requests that can be reviewed more easily.
 - Please be prepared to answer questions from reviewers. They may have further questions before accepting your patch, and may even propose changes. Please accept this feedback constructively, and not as a rejection of your proposed change.
 

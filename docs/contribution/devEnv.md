@@ -1,6 +1,6 @@
 # Development Environment
 
-We recommend developing SkillTree in *nix environment.
+We recommend developing SkillTree in a *nix environment.
 
 ## Prerequisites 
 
@@ -17,7 +17,7 @@ The following sections will cover:
 1. skills-service project development 
 1. skills-client project development
 
-:::tip
+::: tip
 More than likely your development will be scoped to the skills-service project but, although rare, there are situations when you'll need to modify the skills-client as well. 
 If you are making improvements to the SkillTree dashboard or its Skills Display views then your development will be scoped within the skills-service project. 
 If you have not yet, please take few minutes to review the [architecture](/contribution/architecture.html) section.
@@ -56,7 +56,7 @@ mvn install
 ```
 Since this process runs all of the service integration tests it will take a while (5 to 20 minutes depending on your hardware). 
 
-SkillTree uses [maven](https://maven.apache.org/) and [npm](https://www.npmjs.com/) for its dependency management and to facilitate build lifecycle.  Let's get familiar with the project's layout:
+SkillTree uses [maven](https://maven.apache.org/) and [npm](https://www.npmjs.com/) for its dependency management and to facilitate the build lifecycle.  Let's get familiar with the project's layout:
 ``` markdown
 skills-service
 └───service
@@ -79,7 +79,7 @@ skills-service
 ```
 
 The runtime artifact is a [spring boot](https://spring.io/projects/spring-boot) application and will be created in ``service/skills-service-<version>.jar``; 
-we ran ``mvn install`` to generate this artifact and the following sequence of steps was performed:
+we ran ``mvn install`` to generate this artifact and the following sequence of steps were performed:
 - Build dashboard web application: ``npm run build`` in dashboard project
 - Build client display web application: ``npm run build`` in client-display project
 - Compile Java and Groovy classes in the ``service`` project: ``mvn compile``
@@ -103,7 +103,7 @@ This will start SkillTree application with all of the default properties, some t
 ### Cypress.io end-to-end tests
 
 SkillTree utilizes the [cypress.io](https://www.cypress.io/) framework to perform end-to-end tests and specifically verify features of the dashboard and client-display web applications. 
-Cypress tests are located in ``e2e-tests`` project: 
+Cypress tests are located in the ``e2e-tests`` project: 
 
 ``` markdown
 skills-service
@@ -135,7 +135,7 @@ npm run cyServices:kill
 
 Buckle down as these tests will take a while to run, and depending on your system specs you should expect anywhere from 5 to 20 minutes. 
 
-:::tip
+::: tip
 Please note that ports 8080 and 8083 have to be available on your system
 :::
 
@@ -164,7 +164,7 @@ mvn test
 ``` 
 You can also run any of the tests using your favorite IDE. 
 
-:::tip
+::: tip
 SkillTree overall testing strategy is to implement black-box integration tests and supplement with unit tests whenever an integration test is not possible.
 :::
 
@@ -208,7 +208,7 @@ Next is to start the webpack dev server in the ``dashboard`` project:
 cd dashboard
 npm run serve
 ```
-This webpack dev server will run on port 8082 and will make the requests for the data to the service running on port 8080. 
+This webpack dev server will run on port 8082 and will make the requests for data to the service running on port 8080. 
 
 Generally development is facilitated by writing cypress tests:
 
@@ -228,7 +228,7 @@ The dev server will run on port 8083 and will make the requests for the data to 
 
 ### Test Checklist
 
-:::tip
+::: tip
 SkillTree overall testing strategy is to implement black-box integration tests and supplement with unit tests whenever an integration test is not possible.
 :::
 
@@ -237,7 +237,7 @@ Prior to making a Pull Request make sure that ALL tests pass:
 1. Run services tests against PostgreSQL in addition to the build-in in-memory H2 database
 1. Run all Cypress tests 
 
-Provide the following property to run the service tests against PostgreSQL:
+Provide the following properties to run the service tests against PostgreSQL:
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/skills
 spring.datasource.username=<username>
