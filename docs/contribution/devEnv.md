@@ -29,12 +29,12 @@ The tech stack is large but to get started you will need to be familiar (but mor
 - Spring Framework (especially Spring Boot)
 - Web stack: Javascript, html, css
 - Vue.js
-- Cypress.io
+- [cypress.io](https://www.cypress.io/)
 - Build tools: maven, npm & webpack
 
 Each sub-section follows the same flow: 
 1. Get, build and test 
-1. Cypress.io end-to-end tests 
+1. [cypress.io](https://www.cypress.io/) end-to-end tests 
 1. Day-to-day development
 1. Test Checklist
 
@@ -263,14 +263,16 @@ npm run cyServices:kill
 
 ## Skills-client development
 
-Skills-client JS libraries provide skill event reporting utilities and a thin iFrame-based wrapper for the client display. 
+Skills-client JS libraries provide skills event reporting utilities and a thin iFrame-based wrapper for the Client Display. 
 
-::: tip
-Please keep in mind that majority of SkillTree features are encapsulated in the [skill-service](/contribution/devEnv.html#skills-service-development) project. 
-If you are not sure whether you need to make skill-client changes contact SkillTree core development team.
+::: tip Is this the right project for me?
+
+Please keep in mind that majority of the SkillTree features are encapsulated in the [skill-service](/contribution/devEnv.html#skills-service-development) project. 
 
 If you are making improvements to the SkillTree dashboard or its Skills Display views then your development will be scoped within the skills-service project. I
 f you have not yet, please take few minutes to review the [architecture](/contribution/architecture.html#skilltree-repositories) section.
+
+If you are not sure whether you need to make skill-client changes contact SkillTree core development team.
 :::  
 
 
@@ -283,16 +285,16 @@ git clone <github>:skills-client.git
 cd skills-client
 ```
 
-skills-client is an assembly of JS projects that build JS client libraries AND integration tests that enable comprehensive testing of these libraries:
+skills-client is an assembly of projects that build JS client libraries AND integration tests that enable comprehensive testing of these libraries:
 
 - **skills-client-js:** pure JS implementation, please see [Pure JS Integration Guide](/skills-client/js.html#pure-js-integration) to understand how these artifacts are utilized by a SkillTree integrator
-  - Majority of client code resides here, framework specific libraries are think wrappers around this pure JS implementation
+  - Majority of client code resides here, framework specific libraries are minimal wrappers around this pure JS implementation
   - Provides support for [Skill Event Reporting](/skills-client/js.html#skills-event-reporting), [Skills Display](/skills-client/js.html#skills-display) as well as [Skills Configuration](/skills-client/js.html#skills-configuration)
-- **skills-client-vue:** provides native support for Vue.js applications, thing wrapper around skills-client-js; please see [Vue.js Integration Guide](/skills-client/vuejs.html) to understand how this library is utilized by a SkillTree integrator
-- **skills-client-react:** provides native support for React applications, thing wrapper around skills-client-js; please see [React Integration Guide](/skills-client/react.html) to understand how this library is utilized by a SkillTree integrator
-- **skills-client-angular:** provides native support for Angular applications, thing wrapper around skills-client-js; please see [Angular Integration Guide](/skills-client/angular.html) to understand how this library is utilized by a SkillTree integrator    
+- **skills-client-vue:** provides native support for Vue.js applications, thin wrapper around skills-client-js; please see [Vue.js Integration Guide](/skills-client/vuejs.html) to understand how this library is utilized by a SkillTree integrator
+- **skills-client-react:** provides native support for React applications, thin wrapper around skills-client-js; please see [React Integration Guide](/skills-client/react.html) to understand how this library is utilized by a SkillTree integrator
+- **skills-client-angular:** provides native support for Angular applications, thin wrapper around skills-client-js; please see [Angular Integration Guide](/skills-client/angular.html) to understand how this library is utilized by a SkillTree integrator    
 - **skills-client-integration:** integration tests that enable comprehensive testing of skills-client-js and all of the framework specific libraries.
-  - A set of web-applications that integrate and exercise all skills client libraries
+  - A set of web-applications that integrate and exercise these skills client libraries
   - Cypress tests that utilize these applications to end-to-end test functionality of the skills client libraries
 
 SkillTree uses [maven](https://maven.apache.org/) and [npm](https://www.npmjs.com/) for its dependency management and to facilitate the build lifecycle.  Let's get familiar with the projects layout:
@@ -334,20 +336,25 @@ To build integration tests artifacts:
 cd skills-client-integration
 mvn install
 ```
-Multiple steps happens in this command including building and running a set of web-applications that integrate and exercise all skills client libraries. 
-End-to-end Cypress.io tests can then exercise these applications in order to thoroughly test our client libraries. 
-The next section will break this process down in the greater detail.    
+Several actions were performed in ``mvn install`` command: 
+- client libraries were built
+- client libraries' unit tests were executed
+- integration apps were build (these apps utilize client libs)
+- This step does not execute end-to-end test. 
+
+End-to-end [cypress.io](https://www.cypress.io/) tests then exercise these integration applications in order to thoroughly test our client libraries. 
+The next section will break this process down in the detail.    
 
 ### Cypress.io end-to-end tests
 
 There are number of challenges when integration testing client libraries. 
-These JS libraries themselves don't present an executable artifact since the purposes of them is to be utilized by external web applications.
+These JS libraries themselves don't present an executable artifact since the purposes of them is to be utilized by the external web applications.
 
 To enable end-to-end testing of skills-client-js and all of the framework specific libraries we developed a set of web-applications that integrate and exercise these libraries. 
 These applications mimic real world integration and usage scenarios. 
-Cypress.io is then used to execute numerous end-to-end tests against these web applications ensuring that these libraries will properly work in an integrated environment.  
+[cypress.io](https://www.cypress.io/) is then used to execute numerous end-to-end tests against these web applications ensuring that these libraries do properly work in an integrated environment.  
    
-The code for web applications that mimic real world usage and end-to-end Cypress.io tests reside in ``skills-client/skills-client-integration`` project. 
+The code for the web applications that mimic real world usage and end-to-end [cypress.io](https://www.cypress.io/) tests reside in ``skills-client/skills-client-integration`` project. 
 Let's take a look at its directory structure:   
 
 ``` markdown
@@ -358,17 +365,14 @@ skills-client
 |   │   │   package.json
 |   │   │   pom.xml
 |   |   └───target
-|   |   |   skills-int-client-js-<version>.jar
 |   └───skills-int-client-react
 |   │   │   package.json
 |   │   │   pom.xml
 |   |   └───target
-|   |   |   skills-int-client-react-<version>.jar
 |   └───skills-int-client-vue
 |   │   │   package.json
 |   │   │   pom.xml
 |   |   └───target
-|   |   |   skills-int-client-vue-<version>.jar
 |   └───skills-int-e2e-test
 |   │   │   package.json
 |   │   │   pom.xml
@@ -381,23 +385,25 @@ skills-client
 ```
 
 Here is an explanation for each project:
-- **skills-int-client-js**: Web application that depends on skills-client-js artifact and mimics its real world usage
-- **skills-int-client-react**: Web application that depends on skills-client-react artifact and mimics its real world usage
-- **skills-int-client-vue**: Web application that depends on skills-client-vue artifact and mimics its real world usage
-- **skills-int-service**: Pulls together all the web applications (skills-int-client-js, skills-int-client-vue, etc.) and facilitates a web server to server these applications. Cypress.io end-to-end tests will user this service to utilized theses web applications.  
-- **skills-int-e2e-test**: Cypress.io tests that utilize skills-int-service to perform thorough end-to-end tests of the integrated libraries.  
+- **skills-int-client-js**: Web application that depends on the skills-client-js artifact and mimics its real world usage
+- **skills-int-client-react**: Web application that depends on the skills-client-react artifact and mimics its real world usage
+- **skills-int-client-vue**: Web application that depends on the skills-client-vue artifact and mimics its real world usage
+- **skills-int-service**: Pulls together all the web applications (skills-int-client-js, skills-int-client-vue, etc.) and facilitates a web server to serve these applications. [Cypress.io](https://www.cypress.io/) tests execute tests against this service.  
+- **skills-int-e2e-test**: [Cypress.io](https://www.cypress.io/) tests that utilize skills-int-service to perform thorough end-to-end tests of the integrated libraries.  
 
-To run cypress.io tests you will need to 
-1. Start backend service (skills-service)
+To run [cypress.io](https://www.cypress.io/) tests you will need to 
+1. Start backend service
+   - skills-service: REST data endpoints
+   - serves Skills Display application
 1. Start integrations web applications (skills-int-service)
 1. Run cypress tests
 
 Please visit the [architecture](/contribution/architecture.html#skilltree-repositories) section to further explore the relationship between these services. 
 
-We are going assume that you are verse in skills-service installation and development, 
+We are going assume that you are verse in the skills-service installation and development, 
 but if not please visit [skills-service development](/contribution/devEnv.html#skills-service-development) section.
-Below commands assume:
-- ``skills-service-XXX.jar`` was generated and that skills-service and skills-client directories reside in the same parent directory.
+Commands below assume:
+- ``skills-service-XXX.jar`` was generated and that skills-service and skills-client projects reside in the same parent directory.
 - ``skills-int-service--XXX.jar`` was generated via earlier steps.
 
 To run cypress end-to-end tests:
@@ -411,7 +417,7 @@ npm run cyServices:start
 # run cypress integration tests
 npm run cy:run
 
-# kill background servers
+# kill background servers (skills-service and skills-int-service)
 npm run cyServices:kill 
 ``` 
 Buckle down as these tests will take a while to run, and depending on your system specs you should expect anywhere from 2 to 15 minutes.
@@ -420,63 +426,64 @@ Buckle down as these tests will take a while to run, and depending on your syste
 Please note that ports 8080 and 8090 have to be available on your system
 :::
 
-Now that you can build and run integration tests let's discuss day-to-day development setup for the skill-client project.
+Now that you can build and run the integration tests let's discuss day-to-day development setup for the skill-client project.
 
 ### Day-to-day development
-Most IDEs (Intellij, Eclipse, etc...) provide first-class support for maven projects so the very first step would be to import the skills-service project into your favorite IDE.
+Most IDEs (Intellij, Eclipse, etc...) provide first-class support for maven projects so the very first step would be to import the skills-client project into your favorite IDE.
 
 Let's first understand JS dependency chain. 
 
 ![JS Dependencies Image](./diagrams/JsDeps.jpg) 
 
 Diagram above depicts JS dependencies that can be traced using package.json files in each project.  
-Because we are authoring code across multiple projects in the dependency chain traditional npm-publish approach falls short. 
-With npm-public approach, in order to test the change, the artifact would have to be built and pushed to the npm repository.
+Because we are authoring code across multiple projects in the dependency chain traditional [npm-publish](https://docs.npmjs.com/cli/publish) approach falls short. 
+With the [npm-publish](https://docs.npmjs.com/cli/publish) approach, in order to test the change, the artifact would have to be built and pushed to the npm repository.
 Then all of the projects that depend on this resource would have to be updated to point to it (package.json). 
-And then any follow on projects that depend on the updated projects. That is a large amount of overhead to make a test potentially trivial change. 
+And then any follow-on projects that depend on the updated projects need to be modified as well. 
+That is a large amount of overhead to test a potentially trivial change. 
 
-SkillsTree have selected to utilize [npm link](https://docs.npmjs.com/cli/link) mechanism to work around this issue. 
-``Npm link`` enables to depend on the local version of code and will not require new artifact version to be generate and published.  
-This way we can make changes to several projects in the chain then build them and test them all locally before committing. 
+SkillsTree selected to utilize [npm link](https://docs.npmjs.com/cli/link) mechanism to work around this issue. 
+``Npm link`` enables to depend on the local version of the code and will not require new artifact version to be generate and published.  
+This way we can make changes to the several projects in the chain then build and test them locally before committing. 
 It also reduces the number of versions we publish and reduces the risk of publishing JS libs with critical bugs.
 
-We've crated a script that build ``npm links`` for all the connections depicted in the above diagram:
+We've created a script that facilitates ``npm links`` for all the connections depicted in the above diagram:
 ```bash
 cd skills-client/skills-client-integration/skills-int-e2e-test
 npm run dev:setupNpmLinks
 ```     
 
-Now that links established you will be able to make changes then build and see those changes affected. 
-For example ``skills-int-client-js`` depends on ``skills-client-js``, we can make the code change and see it right away:
+Now that links are  established you will be able to make changes to multiple JS projects then build them and see those changes persist. 
+For example ``skills-int-client-vue`` depends on ``skills-client-vue``, we can make the code change and see it right away:
 
 Terminal 1:
 ```bash
-cd skills-client/skills-client-integration/skills-int-client-js
+cd skills-client/skills-client-integration/skills-int-client-vue
 npm run serve
-# view dev server on http://localhost:8092/app/
+# view dev server on http://localhost:8091/vuejs/
 ```
-Then make a code change in ``skills-client/skills-client-js``, followed by in 
+Then make a code change in ``skills-client/skills-client-vue``, followed by in 
 
 Terminal 2:  
 ```bash 
-cd skills-client/skills-client-js
+cd skills-client/skills-client-vue
 npm run build
 ```
 
-The change is automatically reflected in the dev server hosted on ``http://localhost:8092/app/`` 
+The change is automatically reflected in the dev server hosted on ``http://localhost:8091/vuejs/`` 
 
-What happened is that when ``skills-client-js`` was build it created js artifacts in its ``dist`` directory and
-``skills-int-client-js`` points to that directory using ``npm-link`` mechanism. 
+What happened is that ``npm run build`` in  ``skills-client-vue``  created js artifacts in its ``dist`` directory and
+``skills-int-client-vue`` points to that directory using ``npm-link`` mechanism. 
 
-::: tip 
-keep in mind that some of the project has 2 levels of dependencies, for example 
-``skills-int-client-vue`` depends on ``skills-int-client-vue`` which depends on ``skills-client-js``.
+::: tip Dependency Chain
+Keep in mind that some of the projects have 2 levels of dependencies, for example 
+``skills-int-client-vue`` depends on ``skills-client-vue`` which depends on ``skills-client-js``.
 If you made a change in ``skills-client-js`` and want to propagate it up to ``skills-int-client-vue`` then will need to
 1. execute ``npm run build`` in ``skills-client-js`` 
-1. execute ``npm run build`` in ``skills-int-client-vue``.
+1. execute ``npm run build`` in ``skills-client-vue``.
 :::
 
-Here is a summary of each client lib and corresponding integration app. 
+Here is the summary of each client lib and its corresponding integration app. 
 
 | client lib | corresponding integration app | 
 | ------------- | -----------  | 
@@ -484,25 +491,35 @@ Here is a summary of each client lib and corresponding integration app.
 | skills-client-vue | skills-int-client-vue | 
 | skills-client-react | skills-int-client-vue | 
 
-Please note that you can start development server from integration app by executing ``npm run serve``.  
+::: tip
+Please note that you can start the development server from an integration app by executing ``npm run serve``.
+:::  
 
-Now that we covered JS dependencies challenges let's talk through the steps of modifying code in ``skills-client-js`` and adding adding cypress.ip integration tests:
+::: danger Exception to the Rule
+``skills-int-client-js`` has a unique setup and requires to run ``npm install`` for its dependencies to be picked up!
 
-- start ``skills-service`` service - will serve data via REST and Skills Display application
-   - if have the project setup locally you can start it from IDE OR
-   - can build it and start it from command line ```npm run cyServices:start:skills-service```  in the ``skills-int-e2e-test`` project
+This integration apps mimics a pure JS application without the use of webpack (uses ``<script> tag``) so it packages all of its dependencies in the ``assets`` directory. 
+``npm install`` will copy dependencies from ``node_modules`` directory into its ``assets`` folder. 
+:::
+
+Now that we covered JS dependencies challenges, as an example, let's talk through the steps of modifying code in the ``skills-client-js`` project
+ and then adding adding [cypress.io](https://www.cypress.io/) integration tests:
+
+- start ``skills-service`` daemon 
+   - if you have the project setup locally you can start it from the IDE OR
+   - can build the project and start it from the command line ```npm run cyServices:start:skills-service``` in the ``skills-int-e2e-test`` project
 - start development server of the corresponding integration app (``npm run serve``)
-- navigate to ``skills-int-e2e-test`` and start cypress dev console, for example if you are working on ``skills-client-js`` lib:
+- navigate to ``skills-int-e2e-test`` and start the cypress dev console; for example if you are working on the ``skills-client-js`` lib:
 ```bash
 cd skills-client/skills-client-integration/skills-int-client-js
 npm run cy:open:dev:js
 ```
-- run test that correspond to the integration app you are working on (ex. ``js.specs.js```).
-- write new cypress.io tests, etc... 
+- run the test that correspond to the integration app you are working on (in this case that would be ``js.specs.js```).
+- write new [cypress.io](https://www.cypress.io/) tests
 
-There is a different command to open cypress.io dev console depending which integration app you are using/testing:
+[Cypress.io](https://www.cypress.io/) dev console command depends on which integration app you are using/testing:
 | integration app | command | 
-| ------------- | -----------  | 
+| ------------- | -----------  |    
 | skills-int-client-js | npm run cy:open:dev:js | 
 | skills-int-client-vue | npm run cy:open:dev:vue | 
 | skills-int-client-react | npm run cy:open:dev:react | 
@@ -510,21 +527,22 @@ There is a different command to open cypress.io dev console depending which inte
 ### Test Checklist
 Once you are done developing and writing tests then please follow these steps to run all the tests:
 
-1. Remove npm links
+1. To test the latest/updated code make sure ``npm links`` are up-to-date: (1) remove npm links (2) recreate
 1. Build and run unit tests
-1. Execute all cypress.io integration tests
+1. Execute all [cypress.io](https://www.cypress.io/) integration tests
 
-To remove the links:
+To re-create the links:
 ```bash
 cd skills-client/skills-client-integration/skills-int-e2e-test
 npm run dev:removeNpmLinks
+npm run dev:setupNpmLinks
 ```
 
-Build, run unit tests and execute cypress.io integration tests:
+Build, run unit tests and execute [cypress.io](https://www.cypress.io/) integration tests:
 ```bash
 # build
 cd skills-client/skills-client-integration
-mvn clean install
+mvn install
 
 cd skills-int-e2e-test
 npm prune 
