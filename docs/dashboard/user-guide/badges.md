@@ -6,7 +6,11 @@ Badges are a collection of skills and when all of the skills are accomplished th
 By default, when badges are created, they are in a disabled state. Disabled badges will not show up in the client display, nor can they be achieved by users.
 This is to allow all dependencies to be added to the badge before a user can trigger achievement. 
 When a badge is published, all users with existing achievements that meet the Badge criteria will be immediately awarded that badge.
-:::tip A Badge can only be published one time. Once a Badge has Gone Live, it can no longer be placed into a disabled state :::
+
+:::tip 
+A Badge can only be published one time. Once a Badge has Gone Live, it can no longer be placed into a disabled state 
+:::
+
 Examples:
  * Badge1 requires SkillA and SkillB, users who have achieved SkillA and SkillB at the time the badge is published will be awarded Badge1
  * Badge2 is configured as a Gem. Badge2 has an active time window of 01/01/2050 - 02/01/2050 and requires SkillA and SkillB. When Badge2 is published, users who have achieved SkillA and SkillB will be immediately awarded Badge2 so long as SkillA OR SkillB where achieved within the specified time frame. 
