@@ -272,7 +272,7 @@ Please keep in mind that majority of the SkillTree features are encapsulated in 
 If you are making improvements to the SkillTree dashboard or its Skills Display views then your development will be scoped within the skills-service project. I
 f you have not yet, please take few minutes to review the [architecture](/contribution/architecture.html#skilltree-repositories) section.
 
-If you are not sure whether you need to make skill-client changes contact SkillTree core development team.
+If you are not sure whether you need to make skill-client changes contact the SkillTree core development team.
 :::  
 
 
