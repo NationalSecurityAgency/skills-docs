@@ -114,7 +114,7 @@ Since the library is also available as a [UMD](https://github.com/umdjs/umd) mod
 
 Usage is trivial:
 
-Here is example of initializing SkillsDisplayJS (assuming you already configured via ``` SkillsConfiguration.configure```, see the [SkillsConfiguration Documentation](/skills-client/js.html#skills-configuration) )
+Here is an example of initializing SkillsDisplayJS (assuming you already configured via ``` SkillsConfiguration.configure```, see the [SkillsConfiguration Documentation](/skills-client/js.html#skills-configuration) )
 * Note: This assumes there is a DIV in your DOM with id ```skills-client-container``` for SkillsDisplayJS to attach to
 
 ``` js{3-4}
@@ -147,6 +147,25 @@ const clientDisplay = new SkillsDisplayJS({
 ### Skills Display Theme Object
 
 <import-content path="/skills-client/common/slillsDisplayTheme.html"/>
+
+## Skills Level Display
+
+The ```skills-client-js``` library also includes a convenient component to display the users's current overall level in the application. This can be
+used to display the user's current level consistently throughout the application, for example, in the application header.
+
+::: warning Reminder
+Before using the SkillsLevel component, you must make sure to initialize SkillsConfiguration
+with your system settings.  
+:::
+
+* Note: This assumes there is a DIV in your DOM with id ```skills-level-container``` for SkillsLevelJS to attach to
+
+``` js{2-3}
+SkillsConfiguration.afterConfigure().then(() => {
+    const skillsLevel = new SkillsLevelJS();
+    skillsLevel.attachTo(document.querySelector('#skills-level-container'));
+});
+```
 
 ## Skills Event Reporting
 
