@@ -27,29 +27,29 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: actions/setup-node@v2-beta
-      with:
-        node-version: '12'
-
-    - name: npm install
-      run : npm install
-
-    - name: build docs
-      run: npm run docs:build
+#    - uses: actions/setup-node@v2-beta
+#      with:
+#        node-version: '12'
 #
-#    - name: publish docs
-#      run: ./.github/workflows/publish-docs.sh
+#    - name: npm install
+#      run : npm install
 #
-#    - name: Commit files
-#      run: |
-#        git config --local user.email "action@github.com"
-#        git config --local user.name "GitHub Action"
-#        git commit -m "Add changes" -a
-
-    - name: publics docs
-      uses: ad-m/github-push-action@master
-      with:
-        branch: test
-        force: true
-        directory: ./docs/.vuepress/dist
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+#    - name: build docs
+#      run: npm run docs:build
+##
+##    - name: publish docs
+##      run: ./.github/workflows/publish-docs.sh
+##
+##    - name: Commit files
+##      run: |
+##        git config --local user.email "action@github.com"
+##        git config --local user.name "GitHub Action"
+##        git commit -m "Add changes" -a
+#
+#    - name: publics docs
+#      uses: ad-m/github-push-action@master
+#      with:
+#        branch: test
+#        force: true
+#        directory: ./docs/.vuepress/dist
+#        github_token: ${{ secrets.GITHUB_TOKEN }}
