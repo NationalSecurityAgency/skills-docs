@@ -41,6 +41,6 @@ Your can either use one of the supported libraries or utilize the endpoint direc
 
 ## Browser Support
 
-Skills as a Service is supported on all major browsers since the following versions:
+SkillTree is supported on all major browsers since the following versions:
 
 <browser-support />
