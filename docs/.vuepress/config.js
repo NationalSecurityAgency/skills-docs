@@ -1,6 +1,6 @@
 module.exports = {
     port: 9999,
-    title: 'Skills as a Service Docs',
+    title: 'SkillTree Docs',
     description: 'Innovative approach to application training!',
     head: [
         ['link', { rel: 'icon', href: '/img/skills.ico' }]

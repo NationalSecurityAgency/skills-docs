@@ -6,8 +6,8 @@ The dashboard is used by application administrators/integrators as well as super
  
 ![Dashboard with Integrated Application Image](./diagrams/DashboardWithIntegratedApp.jpg)
 
-If your organization is running the Skills as a Service platform, then you will be provided with its URL to get started. 
-If you are installing the Skills as a Service platform from scratch (see [Install Guide](/dashboard/install-guide/)) then... well you just know where it's running. 
+If your organization is running the SkillTree platform, then you will be provided with its URL to get started. 
+If you are installing the the SkillTree platform from scratch (see [Install Guide](/dashboard/install-guide/)) then... well you just know where it's running. 
    
 ## Building Training Profile
 
@@ -43,6 +43,6 @@ customer interaction such as collecting success stories. In fact ``Report A Succ
 
 ## Browser Support
 
-Skills as a Service is supported on all major browsers since the following versions:
+SkillTree is supported on all major browsers since the following versions:
 
 <browser-support />

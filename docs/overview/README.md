@@ -1,6 +1,6 @@
 # Overview
 
-Skills as a Service is an innovative approach to implementing application training.  This service reduces an application's training learning curve and drastically reduces the cost burden for providing comprehensive training. 
+SkillTree is an innovative approach to implementing application training.  This service reduces an application's training learning curve and drastically reduces the cost burden for providing comprehensive training. 
 
 ::: tip Note
 A Gamification based approach significantly simplifies the training process while making the process more enjoyable for the user community.
@@ -24,20 +24,20 @@ To facilitate rapid application incorporation, the platform provides the followi
 
 Any application with numerous features could benefit from in-context training using this gamfication strategy. 
 
-With that said, the Skills as a Service platform provides substantial benefits in these scenarios:
+With that said, the SkillTree platform provides substantial benefits in these scenarios:
 
-1. Application with many complex and sophisticated features. Training is time consuming, complicated and expensive. You can utilize Skills as a Service to:
+1. Application with many complex and sophisticated features. Training is time consuming, complicated and expensive. You can utilize SkillTree to:
    - Enable users to Quickly learn new features and effectively master advanced features. 
    - Improve training recall through continued user engagement and required repetition.  
    - Reduce training sessions - less support costs. Continued user engagement in application training promotes local experts.
-1. Workforce utilizes multiple home-grown tools to accomplish their jobs. You can then use Skills as a Service to:
+1. Workforce utilizes multiple home-grown tools to accomplish their jobs. You can then use SkillTree to:
    - Provide cross-application and cross-org training - strongly encourages user engagement to become domain and application experts.
    - [Cross-application dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) teach users cross-domain workflow skills
    - [Global Badges](/dashboard/user-guide/badges.html#global-badges) expand training across project boundaries     
 
 ## Benefits
 
-Gamification is a proven training strategy, using the Skills as a Service platform yields numerous benefits: 
+Gamification is a proven training strategy, using the SkillTree platform yields numerous benefits: 
 
 **For Your Application Users:**
 1. Fun way to master application features
@@ -57,13 +57,13 @@ Gamification is a proven training strategy, using the Skills as a Service platfo
 
 ## Browser Support
 
-Skills as a Service is supported on all major browsers since the following versions:
+SkillTree is supported on all major browsers since the following versions:
 
 <browser-support />
 
 ## License
 
-Skills as a Service platform is released under Apache 2 license.  
+SkillTree platform is released under Apache 2 license.  
 
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
