@@ -48,5 +48,5 @@ jobs:
       with:
         branch: test
         force: true
-        directory: docs/.vuepress/dist
+        directory: ./docs/.vuepress/dist
         github_token: ${{ secrets.GITHUB_TOKEN }}
