@@ -1,5 +1,5 @@
  ``` js
- import { SkillsConfiguration } from '@skills/skills-client-react';
+ import { SkillsConfiguration } from '@skilltree/skills-client-react';
  
  SkillsConfiguration.configure({
    serviceUrl: 'http://localhost:8080',

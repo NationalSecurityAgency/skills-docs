@@ -7,7 +7,7 @@
 <import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.html"/>
 
  ``` js{3-6}
- import { SkillsConfiguration } from '@skills/skills-client-react';
+ import { SkillsConfiguration } from '@skilltree/skills-client-react';
  
  SkillsConfiguration.afterConfigure()
    .then(() => {

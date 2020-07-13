@@ -3,7 +3,7 @@
 To install client libraries:
 
 ``` js
-npm install @skills/skills-client-react --save
+npm install @skilltree/skills-client-react --save
 ```
 
 This JS library contains:
@@ -25,13 +25,13 @@ with your system settings.
 The previously installed ```skills-client-react``` library is packaged with the Skills Display component. 
 
 Usage is trivial:
-1. Import SkillsDisplay component: ```import { SkillsDisplay } from '@skills/skills-client-react';```
+1. Import SkillsDisplay component: ```import { SkillsDisplay } from '@skilltree/skills-client-react';```
 1. Utilize SkillsDisplay component: ```<SkillsDisplay/>```
 
 Here is a full example of a React component that uses SkillsDisplay: 
 
 ``` js{3,8,11}
-import { SkillsDisplay } from '@skills/skills-client-react';
+import { SkillsDisplay } from '@skilltree/skills-client-react';
 
 const MyComponent = (props) => {
     return (
@@ -71,7 +71,7 @@ Before using the SkillsLevel component, you must make sure to initialize SkillsC
 with your system settings.  
 :::
 ``` js
-import { SkillsLevel } from '@skills/skills-client-react';
+import { SkillsLevel } from '@skilltree/skills-client-react';
 import Button from "react-bootstrap/Button"
 
 const MyLevelDisplay = (props) => {
@@ -99,7 +99,7 @@ with your system settings.  See the [SkillsConfiguration Documentation](/skills-
 Import the SkillsReporter into your project and integrate it into actions within your UI.
 
 ``` js
-import { SkillsReporter } from '@skills/skills-client-react';
+import { SkillsReporter } from '@skilltree/skills-client-react';
 
 const MyComponent = () => {
     const reportSkill = (skillId) => {

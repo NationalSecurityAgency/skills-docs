@@ -1,5 +1,5 @@
  ``` js
- import { SkillsConfiguration } from '@skills/skills-client-vue';
+ import { SkillsConfiguration } from '@skilltree/skills-client-vue';
  
  SkillsConfiguration.configure({
    serviceUrl: 'http://localhost:8080',
