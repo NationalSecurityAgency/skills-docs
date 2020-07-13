@@ -7,7 +7,7 @@
 <import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.html"/>
 
  ``` js{3-6}
- import { SkillsConfiguration } from '@skills/skills-client-vue';
+ import { SkillsConfiguration } from '@skilltree/skills-client-vue';
  
  SkillsConfiguration.afterConfigure()
    .then(() => {

@@ -3,7 +3,7 @@
 To install client libraries:
 
 ``` js
-npm install @skills/skills-client-vue --save
+npm install @skilltree/skills-client-vue --save
 ```
 
 This JS library contains:
@@ -22,7 +22,7 @@ This JS library contains:
 The previously installed ```skills-client-vue``` library is packaged with the Skills Display component. 
 
 Usage is trivial:
-1. Import SkillsDisplay component: ```import { SkillsDisplay } from '@skills/skills-client-vue';```
+1. Import SkillsDisplay component: ```import { SkillsDisplay } from '@skilltree/skills-client-vue';```
 1. Utilize SkillsDisplay component: ```<skills-display/>```
 
 Here is a full example of a Vue.js single-file component that uses SkillsDisplay: 
@@ -35,7 +35,7 @@ Here is a full example of a Vue.js single-file component that uses SkillsDisplay
 </template>
 
 <script>
-    import { SkillsDisplay } from '@skills/skills-client-vue';
+    import { SkillsDisplay } from '@skilltree/skills-client-vue';
     export default {
         name: "ShowSkills",
         components: {SkillsDisplay},
@@ -80,7 +80,7 @@ with your system settings.
 </template>
 
 <script>
-    import { SkillsLevel } from '@skills/skills-client-vue';
+    import { SkillsLevel } from '@skilltree/skills-client-vue';
 
     export default {
         components: { SkillsLevel },
@@ -97,7 +97,7 @@ The ```skills-client-vue``` library is packaged with the ability to report skill
 Globally install the directive, we suggest placing it in your application's entry point such as main.js or App.vue: 
 
 ``` js
-import { SkillsDirective } from '@skills/skills-client-vue';
+import { SkillsDirective } from '@skilltree/skills-client-vue';
 
 Vue.use(SkillsDirective);
 ``` 
@@ -159,7 +159,7 @@ also listen on the @skills-report-error event to handle these situations.
 If you find that the v-skills directive is not meeting your needs then there is always the JS utility to report skills: 
 
 ``` js
-import { SkillsReporter } from '@skills/skills-client-vue';
+import { SkillsReporter } from '@skilltree/skills-client-vue';
 
 SkillsReporter.reportSkill(skillId)
     .then((res) => {
@@ -228,7 +228,7 @@ easy to implement if you are using [Vue Router](https://router.vuejs.org/). Here
 ```js
 import Vue from 'vue';
 import Router from 'vue-router';
-import { SkillsReporter, SkillsConfiguration } from '@skills/skills-client-vue';
+import { SkillsReporter, SkillsConfiguration } from '@skilltree/skills-client-vue';
 
 Vue.use(Router);
 

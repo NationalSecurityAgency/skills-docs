@@ -3,7 +3,7 @@
 To install client libraries using npm:
 
 ``` js
-npm install @skills/skills-client-js --save
+npm install @skilltree/skills-client-js --save
 ```
 
 This JS library contains: 
@@ -22,7 +22,7 @@ When using module bundler such as [webpack](https://webpack.js.org/) or [rollup.
 you can take advantage of module imports, for example: 
 
 ```  js
-import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from '@skills/skills-client-js';
+import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from '@skilltree/skills-client-js';
  
 // code using SkillsConfiguration, SkillsDisplay and SkillsReporter
 // examples in the following sections
@@ -31,7 +31,7 @@ import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from '@skills/skil
 Alternatively you can import individually:
 
 ```  js
-import { SkillsConfiguration } from '@skills/skills-client-js';
+import { SkillsConfiguration } from '@skilltree/skills-client-js';
  
 // code using SkillsConfiguration
 // examples in the following sections
@@ -44,14 +44,14 @@ using the html ```<script type="module">``` tag.
 
 1. Simply download and include the SkillsTree [ESM](https://tc39.es/ecma262/#sec-modules) module with the script tag.
     
-    * Download the artifact ```@skills/skills-client-js``` from npm
-    * Copy ```./node_modules/@skills/skills-client-js/dist``` to your assets folder in your project
+    * Download the artifact ```@skilltree/skills-client-js``` from npm
+    * Copy ```./node_modules/@skilltree/skills-client-js/dist``` to your assets folder in your project
 
 Then your import will look something like this
 ```   js{2}
 <head>
     <script type="module">
-        import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from './assets/js/@skills/skills-client-js/dist/skills-client-js.esm.min.js'
+        import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from './assets/js/@skilltree/skills-client-js/dist/skills-client-js.esm.min.js'
     
         // code using SkillsConfiguration, SkillsDisplay and SkillsReporter
         // examples in the following sections
@@ -64,7 +64,7 @@ Alternatively you can import individually:
 ```  js{2}
 <head>
     <script type="module">
-        import { SkillsConfiguration } from './assets/js/@skills/skills-client-js/dist/skills-client-js.esm.min.js'
+        import { SkillsConfiguration } from './assets/js/@skilltree/skills-client-js/dist/skills-client-js.esm.min.js'
     
         // code using SkillsConfiguration
         // examples in the following sections
@@ -80,13 +80,13 @@ object named SkillsClient.
 
 1. Simply download and include the SkillsTree [UMD](https://github.com/umdjs/umd) module with the script tag using type="text/javascript".
     
-    * Download the artifact ```@skills/skills-client-js``` from npm
-    * Copy ```./node_modules/@skills/skills-client-js/dist``` to your assets folder in your project
+    * Download the artifact ```@skilltree/skills-client-js``` from npm
+    * Copy ```./node_modules/@skilltree/skills-client-js/dist``` to your assets folder in your project
 
 Then your import will look something like this
 ```  js{2,7}
 <head>
-    <script type="text/javascript" src="assets/js/@skills/skills-client-js/dist/skills-client-js.umd.min.js"></script>
+    <script type="text/javascript" src="assets/js/@skilltree/skills-client-js/dist/skills-client-js.umd.min.js"></script>
     
         // code using SkillsConfiguration, SkillsDisplay and SkillsReporter examples
         // in the following sections, but using the global SkillsClient wrapper
