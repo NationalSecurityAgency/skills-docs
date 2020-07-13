@@ -27,12 +27,25 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: actions/setup-node@v2-beta
+#    - uses: actions/setup-node@v2-beta
+#      with:
+#        node-version: '12'
+#
+#    - name: npm install
+#      run : npm install
+#
+#    - name: publish docs
+#      run: ./.github/workflows/publish-docs.sh
+#
+#    - name: Commit files
+#      run: |
+#        git config --local user.email "action@github.com"
+#        git config --local user.name "GitHub Action"
+#        git commit -m "Add changes" -a
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-        node-version: '12'
-
-    - name: npm install
-      run : npm install
-
-    - name: publish docs
-      run: ./.github/workflows/publish-docs.sh
+        branch: test
+        force
+        github_token: ${{ secrets.GITHUB_TOKEN }}
