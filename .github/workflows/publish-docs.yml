@@ -27,15 +27,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Build and Publish
-      uses: grasilife/github-pages-deploy-action@v1.2
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master # The branch the action should deploy from.
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: docs/.vuepress/dist # The folder the action should deploy.
-        BUILD_SCRIPT: npm install && npm run docs:build # The build script the action should run prior to deploying.
-
+        TARGET_BRANCH: gh-pages
+        BUILD_SCRIPT: npm install &&  npm run docs:build
+        BUILD_DIR: docs/.vuepress/dist/
 
 #    - uses: actions/setup-node@v2-beta
 #      with:
