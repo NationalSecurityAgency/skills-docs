@@ -16,3 +16,7 @@ To Build
  npm run docs:build
 ```
 
+# Workflows Status
+
+[![CI Badge](https://github.com/NationalSecurityAgency/skills-docs/workflows/Publish%20SkillTree%20Docs/badge.svg)](https://github.com/NationalSecurityAgency/skills-docs/actions?query=workflow%3A%22Publish+SkillTree+Docs%22)
+
