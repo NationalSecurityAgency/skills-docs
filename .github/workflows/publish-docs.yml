@@ -27,18 +27,23 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-#    - uses: actions/setup-node@v2-beta
-#      with:
-#        node-version: '12'
-#
-#    - name: npm install
-#      run : npm install
+    - uses: actions/setup-node@v2-beta
+      with:
+        node-version: '12'
+
+    - name: npm install
+      run : npm install
+
+    - name: git config
+      run: git config --global github.token ${{ secrets.GITHUB_TOKEN }}
+
+    - name: publish docs
+      run: ./.github/workflows/publish-docs.sh
+
 #
 #    - name: build docs
 #      run: npm run docs:build
 ##
-##    - name: publish docs
-##      run: ./.github/workflows/publish-docs.sh
 ##
 ##    - name: Commit files
 ##      run: |
