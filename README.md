@@ -1,14 +1,18 @@
-# skills-docs
+# SkillTree Docs
 
-## Develop
+SkillTree is an innovative approach to implementing application training.
+
+These docs are hosted on GitHub Pages. Please visit https://code.nsa.gov/skills-docs
+
+## Commands
+
+To develop: 
+
 ```
  npm run docs:dev
 ```
-
-### Build 
+To Build 
 ```
  npm run docs:build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

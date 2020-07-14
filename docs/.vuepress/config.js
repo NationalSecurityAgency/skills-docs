@@ -18,6 +18,7 @@ module.exports = {
             { text: 'Install Guide', link: '/dashboard/install-guide/' },
             { text: 'Dashboard User Guide', link: '/dashboard/user-guide/' },
             { text: 'Integration Guide', link: '/skills-client/' },
+            { text: 'Contribute', link: '/contribution/' },
         ],
         // displayAllHeaders: true,
         sidebarDepth: 2,
