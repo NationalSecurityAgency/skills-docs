@@ -27,13 +27,21 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
+    # It only supports uploading to the gh-pages branch!
+    - name: Build and Deploy
+      uses: testthedocs/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_BRANCH: gh-pages
-        BUILD_SCRIPT: npm install &&  npm run docs:build
-        BUILD_DIR: docs/.vuepress/dist/
+        BUILD_DIR: docs/.vuepress/dist/ # The folder, the action should deploy.
+        BUILD_SCRIPT: npm install &&  npm run docs:build # The build script the action should run prior to deploying.
+
+#    - name: vuepress-deploy
+#      uses: jenkey2011/vuepress-deploy@master
+#      env:
+#        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#        TARGET_BRANCH: gh-pages
+#        BUILD_SCRIPT: npm install &&  npm run docs:build
+#        BUILD_DIR: docs/.vuepress/dist/
 
 #    - uses: actions/setup-node@v2-beta
 #      with:
