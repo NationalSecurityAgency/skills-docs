@@ -27,13 +27,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # It only supports uploading to the gh-pages branch!
-    - name: Build and Deploy
-      uses: testthedocs/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BUILD_DIR: docs/.vuepress/dist/ # The folder, the action should deploy.
-        BUILD_SCRIPT: npm install &&  npm run docs:build # The build script the action should run prior to deploying.
+#    # It only supports uploading to the gh-pages branch!
+#    - name: Build and Deploy
+#      uses: testthedocs/github-pages-deploy-action@master
+#      env:
+#        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#        BUILD_DIR: docs/.vuepress/dist/ # The folder, the action should deploy.
+#        BUILD_SCRIPT: npm install &&  npm run docs:build # The build script the action should run prior to deploying.
 
 #    - name: vuepress-deploy
 #      uses: jenkey2011/vuepress-deploy@master
@@ -43,12 +43,22 @@ jobs:
 #        BUILD_SCRIPT: npm install &&  npm run docs:build
 #        BUILD_DIR: docs/.vuepress/dist/
 
-#    - uses: actions/setup-node@v2-beta
-#      with:
-#        node-version: '12'
-#
-#    - name: npm install
-#      run : npm install
+    - uses: actions/setup-node@v2-beta
+      with:
+        node-version: '12'
+
+    - name: npm install
+      run : npm install
+
+    - name: build docs
+      run: npm run docs:build
+
+    - name: publish docs
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/.vuepress/dist
+
 #
 #    - name: git config
 #      run: git config --global github.token ${{ secrets.GITHUB_TOKEN }}
@@ -56,9 +66,6 @@ jobs:
 #    - name: publish docs
 #      run: ./.github/workflows/publish-docs.sh
 
-#
-#    - name: build docs
-#      run: npm run docs:build
 ##
 ##
 ##    - name: Commit files
