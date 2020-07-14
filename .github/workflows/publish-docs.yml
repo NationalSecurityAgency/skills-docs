@@ -21,14 +21,14 @@ on:
 
 jobs:
 
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
     - name: Build and Publish
-      uses: grasilife/github-pages-deploy-action@master
+      uses: grasilife/github-pages-deploy-action@v1.2
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
