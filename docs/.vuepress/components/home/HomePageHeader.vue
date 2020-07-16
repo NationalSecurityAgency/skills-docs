@@ -4,7 +4,7 @@
             <div class="container">
                 <h1 class="masthead-heading mb-0"><i class="fab fa-pagelines"></i> SkillTree</h1>
                 <h2 class="masthead-subheading mb-0">Innovative approach to implementing application training</h2>
-                <a href="overview/" class="btn btn-lg btn-primary mt-5">Read Docs</a>
+                <a href="overview/" class="btn btn-lg btn-primary mt-5"><i class="fas fa-book"></i> Read Docs</a>
             </div>
         </div>
         <div class="bg-circle-1 bg-circle"></div>
@@ -21,10 +21,14 @@
 </script>
 
 <style scoped>
+    /*.container a {*/
+    /*    font-size: 1.5rem;*/
+    /*}*/
+
     header.masthead {
         position: relative;
         overflow: hidden;
-        padding-top: calc(7rem + 72px);
+        padding-top: 9rem;
         padding-bottom: 7rem;
         background: linear-gradient(0deg, #42b983 0%, #ee0979 100%);
         background-repeat: no-repeat;
@@ -39,11 +43,12 @@
     }
 
     header.masthead .masthead-content .masthead-heading {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     header.masthead .masthead-content .masthead-subheading {
         font-size: 1rem;
+        color: rgba(255, 255, 255, 0.80) !important;
     }
 
     header.masthead .bg-circle {
@@ -88,7 +93,7 @@
         }
 
         header.masthead .masthead-content .masthead-heading {
-            font-size: 6rem;
+            font-size: 5rem;
         }
 
         header.masthead .masthead-content .masthead-subheading {

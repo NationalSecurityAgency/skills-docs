@@ -3,13 +3,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2" style="margin-top: -6rem;">
-                    <div class="p-5">
+                    <div class="p-md-5">
                         <img src="/img/home/Screenshot_2020-07-15_SkillTree_ClientDisplay.png"
                              class="image-border-dark"/>
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
-                    <div class="p-5 text-white">
+                    <div class="p-md-5 text-white">
                         <h1 class="border-bottom text-uppercase">User Display</h1>
                         <p class="text-white-50">Pluggable user skill and ranking visualization - customize and use the display component
                             in your application within minutes.</p>
@@ -38,13 +38,17 @@
         width: 30rem;
         border-style: solid;
         border-image: linear-gradient(#124430, transparent) 1;
-        /*border-bottom: 0*/
     }
     .dark-bg {
         background: #124430;
     }
-
     section i {
         width: 2.5rem;
+    }
+
+    @media (max-width: 1200px) {
+        .container img {
+            width: 100%;
+        }
     }
 </style>

@@ -3,12 +3,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="p-5">
+                    <div class="p-xlg-5">
                         <img src="/img/home/Screenshot_2020-07-15_SkillTree_Dashboard.png" class="image-border"/>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="p-5 mt-1">
+                    <div class="p-xlg-5 mt-1">
                         <h1 class="border-bottom text-uppercase">Dashboard</h1>
                         <p class="text-secondary">A web-based user interface that enables creation and management of an applications'
                             training profile</p>
@@ -36,7 +36,12 @@
         width: 30rem;
         border-style: solid;
         border-image: linear-gradient(#17a2b8, transparent) 1;
-        /*border-bottom: 0*/
+    }
+
+    @media (max-width: 1200px) {
+        .container img {
+            width: 100%;
+        }
     }
 
     section i {

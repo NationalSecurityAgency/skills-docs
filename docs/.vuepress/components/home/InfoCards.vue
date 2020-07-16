@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
+            <div class="col-md mb-2">
                 <div class="card h-100 card-border-top1">
                     <div class="card-body">
                         <div class="media">
@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col-md mb-2">
                 <div class="card h-100 card-border-top2">
                     <div class="card-body">
                         <div class="media">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-lg mb-2">
                 <div class="card h-100 card-border-top3">
                     <div class="card-body">
                         <div class="media">
@@ -80,47 +80,47 @@
         border-top-right-r-adius: 50%;
     }
 
-    .media-body {
+    .card .media-body {
         color: #c1b9b9;
     }
 
-    .media-body h5 {
+    .card .media-body h5 {
         color: #efe7e7;
     }
 
-    .fa-stack {
+    .card .fa-stack {
         font-size: 2rem;
         margin-right: 1rem;
-        margin-left: 1rem;
+        /*margin-left: 1rem;*/
     }
 
-    .icon-foreground {
+    .card .icon-foreground {
         color: #efe7e7;
     }
 
-    .card-border-top1 {
+    .card.card-border-top1 {
         border-top: 5px solid #ee0979;
         border-top-leftradius: 50%;
         border-top-right-r-adius: 50%;
     }
 
-    .icon-background1 {
+    .card .icon-background1 {
         color: #ee0979;
     }
 
-    .card-border-top2 {
+    .card.card-border-top2 {
         border-top: 5px solid #007bff;
     }
 
-    .icon-background2 {
+    .card .icon-background2 {
         color: #007bff;
     }
 
-    .card-border-top3 {
+    .card.card-border-top3 {
         border-top: 5px solid #42b983;
     }
 
-    .icon-background3 {
+    .card .icon-background3 {
         color: #42b983;
     }
 
