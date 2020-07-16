@@ -5,7 +5,7 @@
       :key="browser.name"
       class="browser-container">
       <img
-        :src="browser.icon"
+        :src="$withBase(browser.icon)"
         :style="browser.iconHeightOverride ? `height: ${browser.iconHeightOverride}px` : 'height: auto;'"
         style="width: auto;"/>
       <div>{{ browser.name }}</div>
@@ -21,28 +21,28 @@
         browsers: [
           {
             name: 'Firefox',
-            icon: 'img/browser-icons/firefox.png',
+            icon: '/img/browser-icons/firefox.png',
             version: 50,
           },
           {
             name: 'Chrome',
-            icon: 'img/browser-icons/chrome.png',
+            icon: '/img/browser-icons/chrome.png',
             version: 50,
           },
           {
             name: 'Edge',
-            icon: 'img/browser-icons/edge.png',
+            icon: '/img/browser-icons/edge.png',
             iconHeightOverride: 64,
             version: 16,
           },
           {
             name: 'Safari',
-            icon: 'img/browser-icons/safari.png',
+            icon: '/img/browser-icons/safari.png',
             version: '5.1',
           },
           {
             name: 'Opera',
-            icon: 'img/browser-icons/opera.png',
+            icon: '/img/browser-icons/opera.png',
             version: 60,
           },
         ]
