@@ -13,22 +13,22 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2",
-    "bootstrap": "^4.3.1",
-    "bootstrap-vue": "^2.0.2",
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "@fortawesome/fontawesome-free": "5.14.0",
+    "bootstrap": "4.5.0",
+    "bootstrap-vue": "2.15.0",
+    "core-js": "3.6.5",
+    "vue": "2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "license-checker": "^25.0.1",
-    "vue-template-compiler": "^2.5.21",
-    "vuepress": "^1.1.0"
+    "@vue/cli-plugin-babel": "4.4.6",
+    "@vue/cli-plugin-eslint": "4.4.6",
+    "@vue/cli-service": "4.4.6",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.4.0",
+    "eslint-plugin-vue": "6.2.2",
+    "license-checker": "25.0.1",
+    "vue-template-compiler": "2.6.11",
+    "vuepress": "1.5.2"
   },
   "eslintConfig": {
     "root": true,
