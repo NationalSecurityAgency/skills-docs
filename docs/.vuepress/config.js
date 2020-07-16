@@ -78,6 +78,6 @@ module.exports = {
         ],
         lastUpdated: 'Last Updated',
         home: true,
-        installType: 'pki',
+        installType: 'form',
     }
 }
