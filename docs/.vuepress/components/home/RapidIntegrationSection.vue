@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="p-md-5">
-                        <img src="/img/home/Screenshot_2020-07-15_Vue_js_Integration_SkillTree_Docs.png"/>
+                        <img src="img/home/Screenshot_2020-07-15_Vue_js_Integration_SkillTree_Docs.png"/>
                     </div>
                 </div>
                 <div class="col-lg-6">

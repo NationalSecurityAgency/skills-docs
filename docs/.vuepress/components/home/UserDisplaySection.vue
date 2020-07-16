@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 order-lg-2" style="margin-top: -6rem;">
                     <div class="p-md-5">
-                        <img src="/img/home/Screenshot_2020-07-15_SkillTree_ClientDisplay.png"
+                        <img src="img/home/Screenshot_2020-07-15_SkillTree_ClientDisplay.png"
                              class="image-border-dark"/>
                     </div>
                 </div>
