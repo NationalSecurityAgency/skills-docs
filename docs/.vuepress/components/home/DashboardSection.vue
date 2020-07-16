@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="p-xlg-5">
-                        <img src="img/home/Screenshot_2020-07-15_SkillTree_Dashboard.png" class="image-border"/>
+                        <img :src="$withBase('/img/home/Screenshot_2020-07-15_SkillTree_Dashboard.png')" class="image-border"/>
                     </div>
                 </div>
                 <div class="col-lg-6">
