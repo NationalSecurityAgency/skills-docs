@@ -1,0 +1,127 @@
+<template>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card h-100 card-border-top1">
+                    <div class="card-body">
+                        <div class="media">
+                                <span class="fa-stack">
+                                  <i class="fa fa-circle fa-stack-2x icon-background1"></i>
+                                  <i class="fa fa-user-graduate fa-stack-1x icon-foreground"></i>
+                                </span>
+
+                            <div class="media-body">
+                                <h5 class="mt-0">User Engagement</h5>
+                                Enable users to Quickly learn new features and effectively master advanced features.
+                                Improve training recall through continued user engagement.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card-border-top2">
+                    <div class="card-body">
+                        <div class="media">
+                                <span class="fa-stack">
+                                  <i class="fa fa-circle fa-stack-2x icon-background2"></i>
+                                  <i class="fa fa-chess-king fa-stack-1x icon-foreground"></i>
+                                </span>
+
+                            <div class="media-body">
+                                <h5 class="mt-0">Gamification</h5>
+                                Consistent and innovative solution takes the guesswork and maintenance out of
+                                implementing gamified user training.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card-border-top3">
+                    <div class="card-body">
+                        <div class="media">
+                                <span class="fa-stack">
+                                  <i class="fa fa-circle fa-stack-2x icon-background3"></i>
+                                  <i class="fa fa-money-bill-wave fa-stack-1x icon-foreground"></i>
+                                </span>
+
+                            <div class="media-body">
+                                <h5 class="mt-0">Reduced Cost</h5>
+                                Fewer training sessions - less support costs. Continued user engagement in
+                                application
+                                training promotes local experts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "InfoCards"
+    }
+</script>
+
+<style scoped>
+
+    .container-fluid {
+        max-width: 1281px;
+    }
+
+    .card {
+        background: #124430;
+        border-top-leftradius: 50%;
+        border-top-right-r-adius: 50%;
+    }
+
+    .media-body {
+        color: #c1b9b9;
+    }
+
+    .media-body h5 {
+        color: #efe7e7;
+    }
+
+    .fa-stack {
+        font-size: 2rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .icon-foreground {
+        color: #efe7e7;
+    }
+
+    .card-border-top1 {
+        border-top: 5px solid #ee0979;
+        border-top-leftradius: 50%;
+        border-top-right-r-adius: 50%;
+    }
+
+    .icon-background1 {
+        color: #ee0979;
+    }
+
+    .card-border-top2 {
+        border-top: 5px solid #007bff;
+    }
+
+    .icon-background2 {
+        color: #007bff;
+    }
+
+    .card-border-top3 {
+        border-top: 5px solid #42b983;
+    }
+
+    .icon-background3 {
+        color: #42b983;
+    }
+
+</style>
