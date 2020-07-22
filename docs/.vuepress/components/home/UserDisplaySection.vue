@@ -15,10 +15,10 @@
                             in your application within minutes.</p>
                         <div class="p-2">
                             <div class="mb-2">Out-of-the-box support for:</div>
-                            <div class="ml-2 mb-2"><i class="fab fa-vuejs fa-2x"></i> Vue.js</div>
-                            <div class="ml-2 mb-2"><i class="fab fa-react fa-2x"></i> React</div>
-                            <div class="ml-2 mb-2"><i class="fab fa-angular fa-2x"></i> Anagular</div>
-                            <div class="ml-2 mb-2"><i class="fab fa-js fa-2x"></i> Pure JavaScript</div>
+                            <div class="ml-2 mb-2"><i class="fab fa-vuejs fa-2x"></i> <a href="https://vuejs.org/" target="_blank">Vue.js</a></div>
+                            <div class="ml-2 mb-2"><i class="fab fa-react fa-2x"></i> <a href="https://reactjs.org/" target="_blank">React</a></div>
+                            <div class="ml-2 mb-2"><i class="fab fa-angular fa-2x"></i> <a href="https://angular.io/" target="_blank">Angular</a></div>
+                            <div class="ml-2 mb-2"><i class="fab fa-js fa-2x"></i> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Pure JavaScript</a></div>
                         </div>
                     </div>
                 </div>
