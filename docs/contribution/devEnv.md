@@ -26,23 +26,23 @@ If you have not yet, please take few minutes to review the [architecture](/contr
 The tech stack is large but to get started you will need to be familiar (but more likely experienced) with these core technologies:
 
 - Java and Groovy
-- Spring Framework (especially Spring Boot)
+- Spring Framework (especially [Spring Boot](https://spring.io/projects/spring-boot))
 - Web stack: Javascript, html, css
-- Vue.js
+- [Vue.js](https://vuejs.org/)
 - [cypress.io](https://www.cypress.io/)
 - Build tools: maven, npm & webpack
 
 Each sub-section follows the same flow: 
-1. Get, build and test 
+1. Get, build, and test 
 1. [cypress.io](https://www.cypress.io/) end-to-end tests 
 1. Day-to-day development
-1. Test Checklist
+1. Test checklist
 
 ## Skills-service development
 
 The skills-service project encapsulates code for the SkillTree dashboard, REST apis and Skills Display views. 
 
-### Get, build and test
+### Get, build, and test
 First things first, **fork** and checkout the code (please see the [Contribution Steps](/contribution/#contribution-steps)), build it and run all of the unit and integration tests. 
 Then we'll discuss development and testing steps.
 
@@ -86,8 +86,8 @@ we ran ``mvn install`` to generate this artifact and the following sequence of s
 - Copy dashboard and client-display built apps to ``service/src/main/resources/public`` so the spring boot app can host the dashboard and the client-display web-applications
 - Generate runtime artifact: ``mvn package`` in the service project
 
-Of course this doesn't cover then entire build cycle so please familiarize yourself with all of the pom.xml and package.json files. 
-Now that you have the runtime artifact, you can start the SkillTree dashboard and service like this:
+Of course this doesn't cover the entire build cycle so please familiarize yourself with all of the pom.xml and package.json files. 
+Now that you have the runtime artifact, you can start the SkillTree dashboard and service using the following command:
 
 ```bash
 java -jar service/target/skills-service-<version>.jar
@@ -96,9 +96,9 @@ java -jar service/target/skills-service-<version>.jar
 The app will run on [http://localhost:8080](http://localhost:8080), visit it to create an account, new project, subjects, skills, etc. 
 To learn more about the features of the SkillTree dashboard, please visit the [Dashboard Guide](/dashboard/user-guide/).
   
-This will start SkillTree application with all of the default properties, some things to note:
+The SkillTree application will be started using default properties. Some things to note:
 - By default an in-memory H2 database is used - data will be ephemeral and will not persist between application restarts.
-- App runs in [Password Auth Mode](/dashboard/install-guide/installModes.html#password-auth-mode) which is the common use-case. 
+- By default the app runs in [Password Auth Mode](/dashboard/install-guide/installModes.html#password-auth-mode) which is the common use-case. 
 
 ### Cypress.io end-to-end tests
 
@@ -117,9 +117,9 @@ skills-service
 |   |   |   |   <client-display test name>_spec.js   
 ```
 
-The end-to-end tests stand-up the skills-service, the dashboard and the client display web applications and then execute numerous tests against these web-applications to mimic users' actions.  
+The end-to-end tests stand-up the skills-service, the dashboard, and the client display web applications and then execute numerous tests against these web-applications to mimic users' actions.  
 
-To run cypress end-to-end tests (assumes that you have built skills-service.jar via the previous step):
+To run cypress end-to-end tests (assumes that you have built the skills-service.jar via the previous step):
 
 ```bash
 cd skills-service/e2e-tests
@@ -136,12 +136,13 @@ npm run cyServices:kill
 Buckle down as these tests will take a while to run, and depending on your system specs you should expect anywhere from 5 to 20 minutes. 
 
 ::: tip
-Please note that ports 8080 and 8083 have to be available on your system
+Please note that ports 8080, 8083, 1026, and 1081 have to be available on your system
 :::
 
 ``npm run cyServices:start`` command starts:
 - The programmatic service and the dashboard by utilizing the already built jar; will run on port 8080
 - the client-display using webpack dev server; will run on port 8083
+- A mock smtp server; will run on ports 1026 and 1081
 
 Now that you can build and run integration tests let's discuss day-to-day development setup for the skill-service project.
 
@@ -165,35 +166,35 @@ mvn test
 You can also run any of the tests using your favorite IDE. 
 
 ::: tip
-SkillTree overall testing strategy is to implement black-box integration tests and supplement with unit tests whenever an integration test is not possible.
+SkillTree's overall testing strategy is to implement black-box integration tests and supplement with unit tests whenever an integration test is not possible.
 :::
 
-Generally programmatic API service development is facilitated via the integration tests .
+Generally, programmatic API service development is facilitated via the integration tests .
 
-Skills Service integration tests stand-up the skills-service application and then execute various endpoints validating the result.
-These integration tests reside in the ``skills.intTests`` package and extend ``DefaultIntSpec.groovy`` class. 
+Skills Service integration tests stand-up the skills-service application and then execute various endpoints, validating the result.
+These integration tests reside in the ``skills.intTests`` package and extend the ``DefaultIntSpec.groovy`` class. 
 
 ``DefaultIntSpec.groovy`` is annotated with the [``@SpringBootTest``](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) annotation
-which then facilitates running the Spring Boot application which exposes endpoints on a random port. 
+which facilitates running the Spring Boot application, exposing endpoints on a random port. 
 
 A few things to note: 
 - You should interact with the skills-service using the test client ``skills.intTests.utils.SkillsService`` class 
   - Available via ``skills.intTests.utils.DefaultIntSpec#skillsService``
-  - ``SkillsService`` class represent an authenticated dashboard user
+  - ``SkillsService`` class represents an authenticated dashboard user
 - Runtime port can be retrieved via ``skills.intTests.utils.DefaultIntSpec#localPort`` but should rarely be used directly; instead please use ``skills.intTests.utils.DefaultIntSpec#skillsService`` instead
 - ``DefaultIntSpec`` setup and cleanup methods purge data from DB between each test case
-- By default, tests are executed against the in-memory H2 DB
-- Use the ``skills.intTests.utils.DefaultIntSpec#createService`` if you need a new ``SkillsService``
+- By default, tests are executed against an in-memory H2 DB
+- Use the ``skills.intTests.utils.DefaultIntSpec#createService`` method if you need a new ``SkillsService`` instance
   - For example to represent another dashboard user       
 
-There are hundred of tests in the ``skills.intTests`` package, please feel free to explore. 
+There are hundreds of tests in the ``skills.intTests`` package, please feel free to explore. 
 
 ###### Web-Based Dashboard and/or Client Display
 
 Steps to develop the web-based dashboard are:
 1. Stand up the service (programmatic API)
 1. Bring up the webpack dev server
-1. Use browser and cypress tests to drive the development
+1. Use browser and cypress tests to drive development
 
 To stand up the service you can execute ``skills.SpringBootApp`` in the ``service`` project from your IDE. 
 If that's not an option you can always build a jar and run it from the command line:
@@ -208,7 +209,7 @@ Next is to start the webpack dev server in the ``dashboard`` project:
 cd dashboard
 npm run serve
 ```
-This webpack dev server will run on port 8082 and will make the requests for data to the service running on port 8080. 
+This webpack dev server will run on port 8082 and will make requests for data to the service running on port 8080. 
 
 Generally development is facilitated by writing cypress tests:
 
@@ -229,7 +230,7 @@ The dev server will run on port 8083 and will make requests for data to the serv
 ### Test Checklist
 
 ::: tip
-SkillTree overall testing strategy is to implement black-box integration tests and supplement with unit tests whenever an integration test is not possible.
+SkillTree's overall testing strategy is to implement black-box integration tests and supplement with unit tests whenever an integration test is not possible.
 :::
 
 We like tests (especially integration tests), so please make sure you thoroughly test your code.  
@@ -243,7 +244,7 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/skills
 spring.datasource.username=<username>
 spring.datasource.password=<password>
 ```
-On a command line it would look something like this:
+On the command line it would look something like this:
 ```bash
 mvn --batch-mode test -Dspring.datasource.url=jdbc:postgresql://postgres:5432/skills -Dspring.datasource.username=user -Dspring.datasource.password=pass
 ```
@@ -330,7 +331,7 @@ npm install
 npm run build
 ```
 
-To build integration tests artifacts:
+To build integration test artifacts:
 
 ```bash
 cd skills-client-integration
@@ -339,7 +340,7 @@ mvn install
 Several actions were performed in the ``mvn install`` command: 
 - client libraries were built
 - client libraries' unit tests were executed
-- integration apps were build (these apps utilize client libs)
+- integration apps were built (these apps utilize client libs)
 - This step does not execute end-to-end tests. 
 
 End-to-end [cypress.io](https://www.cypress.io/) tests then exercise these integration applications in order to thoroughly test our client libraries. 
@@ -352,7 +353,7 @@ These JS libraries themselves don't present an executable artifact since the pur
 
 To enable end-to-end testing of skills-client-js and all of the framework specific libraries, we developed a set of web-applications that integrate and exercise these libraries. 
 These applications mimic real world integration and usage scenarios. 
-[cypress.io](https://www.cypress.io/) is then used to execute numerous end-to-end tests against these web applications ensuring that these libraries do properly work in an integrated environment.  
+[cypress.io](https://www.cypress.io/) is then used to execute numerous end-to-end tests against these web applications, ensuring that these libraries properly work in an integrated environment.  
    
 The code for the web applications that mimics real world usage and end-to-end [cypress.io](https://www.cypress.io/) tests resides in the ``skills-client/skills-client-integration`` project. 
 Let's take a look at its directory structure:   
@@ -388,7 +389,7 @@ Here is an explanation for each project:
 - **skills-int-client-js**: Web application that depends on the skills-client-js artifact and mimics its real world usage
 - **skills-int-client-react**: Web application that depends on the skills-client-react artifact and mimics its real world usage
 - **skills-int-client-vue**: Web application that depends on the skills-client-vue artifact and mimics its real world usage
-- **skills-int-service**: Pulls together all the web applications (skills-int-client-js, skills-int-client-vue, etc.) and facilitates a web server to serve these applications. [Cypress.io](https://www.cypress.io/) tests execute tests against this service.  
+- **skills-int-service**: Pulls together all the web applications (skills-int-client-js, skills-int-client-vue, etc.) and exposes a web server to serve these applications. [Cypress.io](https://www.cypress.io/) tests execute tests against this service.  
 - **skills-int-e2e-test**: [Cypress.io](https://www.cypress.io/) tests that utilize skills-int-service to perform thorough end-to-end tests of the integrated libraries.  
 
 To run [cypress.io](https://www.cypress.io/) tests you will need to 
@@ -435,14 +436,14 @@ Let's first understand JS dependency chain.
 
 ![JS Dependencies Image](./diagrams/JsDeps.jpg) 
 
-Diagram above depicts JS dependencies that can be traced using package.json files in each project.  
+The Diagram above depicts JS dependencies that can be traced using package.json files in each project.  
 Because we are authoring code across multiple projects in the dependency chain, a traditional [npm-publish](https://docs.npmjs.com/cli/publish) approach falls short. 
 With the [npm-publish](https://docs.npmjs.com/cli/publish) approach, in order to test the change, the artifact would have to be built and pushed to the npm repository.
 Then all of the projects that depend on this resource would have to be updated to point to it (package.json). 
 And then any follow-on projects that depend on the updated projects need to be modified as well. 
 That is a large amount of overhead to test a potentially trivial change. 
 
-SkillsTree selected to utilize the [npm link](https://docs.npmjs.com/cli/link) mechanism to work around this issue. 
+SkillsTree opted to utilize the [npm link](https://docs.npmjs.com/cli/link) mechanism to work around this issue. 
 ``Npm link`` enables dependency on the local version of the code and will not require a new artifact version to be generated and published.  
 This way we can make changes to several projects in the chain then build and test them locally before committing. 
 It also reduces the number of versions we publish and reduces the risk of publishing JS libs with critical bugs.
@@ -518,6 +519,7 @@ npm run cy:open:dev:js
 - write new [cypress.io](https://www.cypress.io/) tests
 
 The [Cypress.io](https://www.cypress.io/) dev console command depends on which integration app you are using/testing:
+
 | integration app | command | 
 | ------------- | -----------  |    
 | skills-int-client-js | npm run cy:open:dev:js | 
