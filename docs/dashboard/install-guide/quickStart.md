@@ -199,7 +199,7 @@ Now you can use these components in the ``App.vue``:
     }
 </style>
 ```
-
+For further detail of how to integrate SkillTree into your application please visit our [Integration Guide](/skills-client/).
 
 ### Option 2 - React Integration Example
 
@@ -212,6 +212,9 @@ npm run start
 ```
 React CLI displays development server url, it will likely be this: 
 [ http://localhost:3000]( http://localhost:3000) 
+
+
+If you want to build Hello World Vue.js application yourself, here are the steps:
 
 This example used [Create React App](https://reactjs.org/docs/create-a-new-react-app.html/) to quickly scaffold Single Page Application.
 
@@ -296,6 +299,7 @@ function App() {
 
 export default App;
 ```
+For further detail of how to integrate SkillTree into your application please visit our [Integration Guide](/skills-client/).
 
 ### Option 3 - Angular Integration Example
 
@@ -303,4 +307,96 @@ Coming Soon ...
 
 ### Option 4 - Pure JS Integration Example
 
-Coming Soon ...
+To run Hello World Pure JS example clone ``skills-client-examples`` project and start [live-server](https://www.npmjs.com/package/live-server)  development server:
+
+```bash
+git clone git@github.com:NationalSecurityAgency/skills-client-examples.git
+cd skills-client-examples/js-example
+npm run serve
+```
+[live-server](https://www.npmjs.com/package/live-server) displays development server url, it will likely be this: 
+[http://127.0.0.1:8092](http://127.0.0.1:8092) 
+
+
+If you want to build Hello World Pure JS application yourself, here are the steps:
+
+```bash
+mkdir js-example
+cd js-example
+npm init
+# accept defaults
+npm install --save-dev live-server
+```
+
+You can install SkillTree JS lib using npm:
+```bash
+npm install @skilltree/skills-client-js --save
+```
+However, these examples will utilize ``<script>`` to import the SkillTree library: 
+
+```js
+<script type="module">
+    import {
+        SkillsConfiguration,
+        SkillsDisplayJS,
+        SkillsReporter
+    } from 'https://unpkg.com/@skilltree/skills-client-js/dist/skills-client-js.esm.min.js'
+
+// Use imported components
+// ...
+</script>
+```
+
+Configure SkillTree client library - only need to happen once per app:
+```js
+SkillsConfiguration.configure({
+    serviceUrl: 'http://localhost:8080',
+    projectId: 'movies',
+    authenticator: 'http://localhost:8090/api/users/user4@email.com/token',
+});
+```
+:::tip
+In production environment we'd configure ``https`` protocol.  
+:::
+:::tip
+In a production environment the authenticator URL will come from the same 
+host as the served web-application with a secure channel in between. 
+Please review [Authorizatoin](/skills-client/auth.html) and [Configuration](/skills-docs/dashboard/install-guide/config.html) 
+sections to learn more, 
+but for now let's keep going with this quick-start guide! 
+:::
+
+Pluggable user skill and ranking visualization:
+```js
+const clientDisplay = new SkillsDisplayJS({version: 1});
+clientDisplay.attachTo(document.querySelector('#skills-client-container'));
+```
+
+Report Skill Events when user preforms actions in the application:
+```js
+document.querySelector('#reportSkillButton').onclick = function () {
+    SkillsReporter.reportSkill('IronMan');
+};
+```
+Handle event reporting results in one place:
+```js
+// just so we can always see the response
+SkillsReporter.configure({notifyIfSkillNotApplied: true});
+SkillsReporter.addSuccessHandler((result) => {
+    document.querySelector('#reportResultContainer').innerHTML = JSON.stringify(result, null, ' ');
+});
+```
+
+The full example can be found @ [skills-client-examples/js-example/index.html](https://github.com/NationalSecurityAgency/skills-client-examples/blob/master/js-example/index.html)
+
+Now start the server:
+```bash
+npx live-server --no-browser --port=8092 --open=app --cors --proxy=/api:http://localhost:8090/api --proxy=/native:http://localhost:8092/
+```
+[live-server](https://www.npmjs.com/package/live-server) displays development server url, it will likely be this: 
+[http://127.0.0.1:8092](http://127.0.0.1:8092). 
+
+For further detail of how to integrate SkillTree into your application please visit our [Integration Guide](/skills-client/).  
+
+
+
