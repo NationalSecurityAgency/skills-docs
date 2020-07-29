@@ -505,15 +505,30 @@ This integration apps mimics a pure JS application without the use of webpack (u
 Now that we covered the JS dependencies challenges, as an example, let's walk through the steps of modifying code in the ``skills-client-js`` project
  and then adding [cypress.io](https://www.cypress.io/) integration tests:
 
-- start ``skills-service`` daemon 
+- start the ``skills-service`` daemon 
    - if you have the project setup locally you can start it from the IDE OR
    - build the project and start it from the command line ```npm run cyServices:start:skills-service``` in the ``skills-int-e2e-test`` project
-- start development server of the corresponding integration app (``npm run serve``)
-- navigate to ``skills-int-e2e-test`` and start the cypress dev console; for example if you are working on the ``skills-client-js`` lib:
+- start the ``skills-int-service`` daemon
+  - start from your IDE OR
+  - build the project and start it from the command line:
+```bash
+cd skills-client/skills-client-integration/skills-int-e2e-test
+npm run integration:start
+```
+- start the development server of the corresponding integration app
 ```bash
 cd skills-client/skills-client-integration/skills-int-client-js
+npm run serve
+```
+- navigate to ``skills-int-e2e-test`` and start the cypress dev console:
+```bash
+cd skills-client/skills-client-integration/skills-int-e2e-test
 npm run cy:open:dev:js
 ```
+:::tip
+If you are working on a different client library, the ``cy:open:dev:`` command will be different,
+for example, if you are working on skills-client-vue, you would run ``cy:open:dev:vue``
+:::
 - run the test that corresponds to the integration app you are working on (in this case that would be ``js.specs.js```).
 - write new [cypress.io](https://www.cypress.io/) tests
 
