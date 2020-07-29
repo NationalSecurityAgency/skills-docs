@@ -53,7 +53,7 @@ This section assumes that you already have running
 - ``skills-service`` on port ``8080`` 
 - ``java-backend-example`` on port ``8090``
 
-Belows are the directions for each supported library, please proceed to one of your liking:
+Below are the directions for each supported library, please proceed to one of your liking:
 - [Option 1 - Vue.js Example](/dashboard/install-guide/quickStart.html#option-1-vue-js-example)
 - [Option 2 - React Example](/dashboard/install-guide/quickStart.html#option-2-react-integration-example)
 - [Option 3 - Angular Example](/dashboard/install-guide/quickStart.html#option-3-angular-integration-example)
@@ -66,6 +66,7 @@ To run the Hello World Vue.js example, clone the ``skills-client-examples`` proj
 ```bash
 git clone git@github.com:NationalSecurityAgency/skills-client-examples.git
 cd skills-client-examples/vuejs-example
+npm install
 npm run serve
 ```
 Vue CLI displays the development server url at startup, it will likely be this: 
@@ -115,7 +116,7 @@ new Vue({
 ```
 :::tip
 In a production environment we'd configure these resources using the ``https`` protocol. 
-Please review the [Authorization](/skills-client/auth.html) and [Configuration](/skills-docs/dashboard/install-guide/config.html) for greater detail. 
+Please review the [Authorization](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
 :::
 
 Copy the HelloWorld components from ``skills-client-examples/vuejs-example/src/components``:
@@ -170,6 +171,7 @@ To run the Hello World React example clone the ``skills-client-examples`` projec
 ```bash
 git clone git@github.com:NationalSecurityAgency/skills-client-examples.git
 cd skills-client-examples/react-example
+npm install
 npm run start
 ```
 React CLI displays the development server url at startup, it will likely be this: 
@@ -223,7 +225,7 @@ serviceWorker.unregister();
 
 :::tip
 In a production environment we'd configure these resources using the ``https`` protocol. 
-Please review the [Authorization](/skills-client/auth.html) and [Configuration](/skills-docs/dashboard/install-guide/config.html) for greater detail. 
+Please review the [Authorization](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
 :::
 
 Copy the HelloWorld components from ``skills-client-examples/react-example/src/skilltree``:
@@ -236,9 +238,9 @@ Now you can use these components in ``App.js``:
 ```js{3-5,11,14,16}
 import React from 'react';
 import './App.css';
-import HelloWorldSkillsDisplay from './skilltree/HelloWorldSkillsDisplay';
-import HelloWorldSkillsEventReporting from './skilltree/HelloWorldSkillsEventReporting';
-import HelloWorldGlobalEventHandler from './skilltree/HelloWorldGlobalEventHandler';
+import HelloWorldSkillsDisplay from './HelloWorldSkillsDisplay';
+import HelloWorldSkillsEventReporting from './HelloWorldSkillsEventReporting';
+import HelloWorldGlobalEventHandler from './HelloWorldGlobalEventHandler';
 
 function App() {
   return (
@@ -269,6 +271,7 @@ To run the Hello World Pure JS example, clone the ``skills-client-examples`` pro
 ```bash
 git clone git@github.com:NationalSecurityAgency/skills-client-examples.git
 cd skills-client-examples/js-example
+npm install
 npm run serve
 ```
 [live-server](https://www.npmjs.com/package/live-server) displays the development server url at startup, it will likely be this: 
@@ -314,7 +317,7 @@ SkillsConfiguration.configure({
 ```
 :::tip
 In a production environment we'd configure these resources using the ``https`` protocol. 
-Please review the [Authorization](/skills-client/auth.html) and [Configuration](/skills-docs/dashboard/install-guide/config.html) for greater detail. 
+Please review the [Authorization](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
 :::
 
 Pluggable user skill and ranking visualization:

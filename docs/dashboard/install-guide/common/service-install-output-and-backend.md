@@ -27,7 +27,7 @@ Please visit the [Database Section](/dashboard/install-guide/database.html) to l
 :::
 
 The next step is to start the ``java-backend-example`` service which:
-1. Populates ``skills-service`` with sample data
+1. Populates the ``skills-service`` with sample data
 1. Implements an example [Authorization Endpoint](/skills-client/auth.html) that's required to run client components
 
 Download the latest ``java-backend-example`` from [skills-client-examples/releases](https://github.com/NationalSecurityAgency/skills-client-examples/releases)
@@ -42,7 +42,7 @@ You will know the service is running when the following line appears on standard
 o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
 ```
 
-On start, ``java-backend-example`` populates ``skills-service`` with a sample project named Movies. 
+On start, the ``java-backend-example`` populates the ``skills-service`` with a sample project named Movies. 
 Once it starts, logout from the dashboard and log back in as 
 - username=bill@email.org
 - password=password
