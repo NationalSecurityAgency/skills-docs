@@ -1,11 +1,11 @@
-In many cases it is useful to define a **global** success and/or error handler function rather than defining event listeners on
+In many cases, it is useful to define a **global** success and/or error handler function rather than defining event listeners on
 each element where you include the [reporting utility](#skillsreporter-js-utility).  
 For example:
 - display messages congratulating users on skills completion as well as level and badge achievements 
 - handle all reporting errors by sending them to a logging service  
 
-Alongside standard promised based success and error handling, the SkillsReporter native javascript utility allows
-you to configure global success and error handlers utilizing the ***addSuccessHandler*** and the ***addErrorHandler*** methods.
+Alongside standard, promise based, success and error handling, the SkillsReporter native javascript utility allows
+you to configure global success and error handlers utilizing the ***addSuccessHandler*** and ***addErrorHandler*** methods.
 
 ``` js{9-10}
 const myGlobalSuccessHandler = (result) => {
