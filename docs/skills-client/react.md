@@ -25,8 +25,8 @@ with your system settings.
 The previously installed ```skills-client-react``` library is packaged with the Skills Display component. 
 
 Usage is trivial:
-1. Import SkillsDisplay component: ```import { SkillsDisplay } from '@skilltree/skills-client-react';```
-1. Utilize SkillsDisplay component: ```<SkillsDisplay/>```
+1. Import the SkillsDisplay component: ```import { SkillsDisplay } from '@skilltree/skills-client-react';```
+1. Utilize the SkillsDisplay component: ```<SkillsDisplay/>```
 
 Here is a full example of a React component that uses SkillsDisplay: 
 
@@ -48,7 +48,7 @@ If you are taking advantage of [Skills Versioning](/dashboard/user-guide/skills.
 the SkillsDisplay component:
 
 ``` js
-<SkillsDisplay version="currentVersion"/>
+<SkillsDisplay version="1"/>
 ```
 
 SkillsDisplay component properties:

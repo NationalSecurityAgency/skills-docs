@@ -1,4 +1,4 @@
-Your output will look something like this (majority of the output was omitted for brevity): 
+Your output will look something like this (the majority of the output was omitted for brevity): 
 ```
  .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -15,20 +15,20 @@ Your output will look something like this (majority of the output was omitted fo
 2020-07-16 19:43:01.192  INFO 9103 --- [           main] skills.SpringBootApp                     : Started SpringBootApp in 20.159 seconds (JVM running for 21.368)
 ```
 
-Dashboard is now running on [http://localhost:8080](http://localhost:8080). It will prompt you to create a [Dashboard root account](/dashboard/user-guide/users.html#root).  
+The dashboard is now running on [http://localhost:8080](http://localhost:8080). It will prompt you to create a [Dashboard root account](/dashboard/user-guide/users.html#root).  
 
 Well... that's it! 
 
 :::tip Good to Know!
-Please note that ``skills-service``, by default, stores its data into an embedded in-memory H2 database. 
-That data is ephemeral and will not persist between application restarts. While this is a great way to get started quickly 
+Please note that the ``skills-service``, by default, stores its data into an embedded in-memory H2 database. 
+That data is ephemeral and will not persist between application restarts. While this is a great way to get started quickly, 
 it is obviously not appropriate for a test or production installation. 
-Please visit [Database Section](/dashboard/install-guide/database.html) to learn more.  
+Please visit the [Database Section](/dashboard/install-guide/database.html) to learn more.  
 :::
 
-Next step is to start ``java-backend-example`` service which:
+The next step is to start the ``java-backend-example`` service which:
 1. Populates ``skills-service`` with sample data
-1. Implements example [Authorization Endpoint](/skills-client/auth.html) that's required to run client components
+1. Implements an example [Authorization Endpoint](/skills-client/auth.html) that's required to run client components
 
 Download the latest ``java-backend-example`` from [skills-client-examples/releases](https://github.com/NationalSecurityAgency/skills-client-examples/releases)
 
@@ -36,14 +36,14 @@ Download the latest ``java-backend-example`` from [skills-client-examples/releas
 java -jar java-backend-example-X.X.X.jar
 ```
 
-Please note that service generate and populate skill-service with sample data so it may take few minutes to start. 
+Please note that the service generates and populates the skill-service with sample data so it may take few minutes to start. 
 You will know the service is running when the following line appears on standard out: 
 ```bash
 o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
 ```
 
-On start ``java-backend-example`` populates ``skills-service`` with a sample project called Movies. 
-Once it starts logout from the dashboard and log back in as 
+On start, ``java-backend-example`` populates ``skills-service`` with a sample project named Movies. 
+Once it starts, logout from the dashboard and log back in as 
 - username=bill@email.org
 - password=password
 and explore the sample Movies project. 
