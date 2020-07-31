@@ -6,6 +6,9 @@ To install client libraries using npm:
 npm install @skilltree/skills-client-js --save
 ```
 
+Distribution is also available through Content Delivery Network (CDN) using https://unpkg.com:
+[https://unpkg.com/@skilltree/skills-client-js@latest/dist/skills-client-js.esm.min.js](https://unpkg.com/@skilltree/skills-client-js@latest/dist/skills-client-js.esm.min.js)
+
 This JS library contains: 
 1. Skills Configuration - Global configuration used by Skills utilities.
 1. Skills Display - Visualize your website users' skill profile
@@ -14,7 +17,6 @@ This JS library contains:
 Generally you will be in one of **these scenarios**: 
 1. [Option 1](/skills-client/js.html#option-1-javascript-module-bundler): Use a JavaScript module bundler such as [webpack](https://webpack.js.org/) or [rollup.js](https://rollupjs.org)
 1. [Option 2](/skills-client/js.html#option-2-script-type-module-tag): Import the skills JS library via the html ```<script type="module">``` tag 
-1. [Option 3](/skills-client/js.html#option-3-script-type-text-javascript-tag): Import the skills JS library via the html ```<script type="text/javascript">``` tag
 
 ## Option 1: JavaScript module bundler
 
@@ -42,17 +44,16 @@ import { SkillsConfiguration } from '@skilltree/skills-client-js';
 If you're not using a JavaScript module bundler such as webpack or rollup.js, you may wish to import the module
 using the html ```<script type="module">``` tag.
 
-1. Simply download and include the SkillsTree [ESM](https://tc39.es/ecma262/#sec-modules) module with the script tag.
-    
-    * Download the artifact ```@skilltree/skills-client-js``` from npm
-    * Copy ```./node_modules/@skilltree/skills-client-js/dist``` to your assets folder in your project
-
-Then your import will look something like this
+Then your import will look something like this:
 ```   js{2}
 <head>
     <script type="module">
-        import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from './assets/js/@skilltree/skills-client-js/dist/skills-client-js.esm.min.js'
-    
+        import {
+            SkillsConfiguration,
+            SkillsDisplayJS,
+            SkillsReporter
+        } from 'https://unpkg.com/@skilltree/skills-client-js/dist/skills-client-js.esm.min.js';
+
         // code using SkillsConfiguration, SkillsDisplay and SkillsReporter
         // examples in the following sections
     </script> 
@@ -64,45 +65,13 @@ Alternatively you can import individually:
 ```  js{2}
 <head>
     <script type="module">
-        import { SkillsConfiguration } from './assets/js/@skilltree/skills-client-js/dist/skills-client-js.esm.min.js'
+        import { SkillsConfiguration } from 'https://unpkg.com/@skilltree/skills-client-js/dist/skills-client-js.esm.min.js';
     
         // code using SkillsConfiguration
         // examples in the following sections
     </script> 
 </head>
  ``` 
-
-## Option 3: ```<script type="text/javascript">``` tag
-
-You may also import import the module using the html ```<script type="text/javascript">``` tag in order to support older
-browser version.  When importing the library this way you will need to reference SkillTree objects  using a global wrapper 
-object named SkillsClient.
-
-1. Simply download and include the SkillsTree [UMD](https://github.com/umdjs/umd) module with the script tag using type="text/javascript".
-    
-    * Download the artifact ```@skilltree/skills-client-js``` from npm
-    * Copy ```./node_modules/@skilltree/skills-client-js/dist``` to your assets folder in your project
-
-Then your import will look something like this
-```  js{2,7}
-<head>
-    <script type="text/javascript" src="assets/js/@skilltree/skills-client-js/dist/skills-client-js.umd.min.js"></script>
-    
-        // code using SkillsConfiguration, SkillsDisplay and SkillsReporter examples
-        // in the following sections, but using the global SkillsClient wrapper
-
-        SkillsClient.SkillsConfiguration.configure({
-           serviceUrl: 'http://localhost:8080',
-           projectId: 'movies',
-           authenticator: 'pki',
-        });
-    </script> 
-</head>
- ```
-
-::: tip Note
-Since the library is also available as a [UMD](https://github.com/umdjs/umd) module, if you are using CommonJS you can use ```require``` statements (or ```import``` statements if you are using a bundler) to import them, or you can use [AMD](https://github.com/amdjs/amdjs-api).
-:::
 
 ## Skills Configuration
 
