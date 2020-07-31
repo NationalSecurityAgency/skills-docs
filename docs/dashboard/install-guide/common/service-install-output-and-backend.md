@@ -33,6 +33,10 @@ The next step is to start the ``java-backend-example`` service which:
 Download the latest ``java-backend-example`` from [skills-client-examples/releases](https://github.com/NationalSecurityAgency/skills-client-examples/releases)
 
 ```bash
+curl -s https://api.github.com/repos/NationalSecurityAgency/skills-client-examples/releases/latest | grep browser_download_url | cut -d '"' -f 4 | wget -qi -
+```
+Start ``java-backend-example`` service using the downloaded jar (make sure to substitute X.X.X for an actual version):
+```bash
 java -jar java-backend-example-X.X.X.jar
 ```
 
