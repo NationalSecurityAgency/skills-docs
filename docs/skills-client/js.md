@@ -17,6 +17,7 @@ This JS library contains:
 Generally you will be in one of **these scenarios**: 
 1. [Option 1](/skills-client/js.html#option-1-javascript-module-bundler): Use a JavaScript module bundler such as [webpack](https://webpack.js.org/) or [rollup.js](https://rollupjs.org)
 1. [Option 2](/skills-client/js.html#option-2-script-type-module-tag): Import the skills JS library via the html ```<script type="module">``` tag 
+1. [Option 3](/skills-client/js.html#option-3-script-type-text-javascript-tag): Import the skills JS library via the html ```<script type="text/javascript">``` tag
 
 ## Option 1: JavaScript module bundler
 
@@ -72,6 +73,29 @@ Alternatively you can import individually:
     </script> 
 </head>
  ``` 
+
+## Option 3: ```<script type="text/javascript">``` tag
+
+You may also import the module using the html ```<script type="text/javascript">``` tag in order to support older
+browsers.  When importing the library this way you will need to reference SkillTree objects  using a global wrapper 
+object named SkillsClient.
+
+Then your code will look something like this
+```  js{2,7}
+<head>
+    <script type="text/javascript" src="https://unpkg.com/@skilltree/skills-client-js/dist/skills-client-js.umd.min.js"></script>
+    <script>
+        // code using SkillsConfiguration, SkillsDisplay and SkillsReporter examples
+        // in the following sections, but using the global SkillsClient wrapper
+
+        this.SkillsClient.SkillsConfiguration.configure({
+           serviceUrl: 'http://localhost:8080',
+           projectId: 'movies',
+           authenticator: 'pki',
+        });
+    </script> 
+</head>
+ ```
 
 ## Skills Configuration
 
