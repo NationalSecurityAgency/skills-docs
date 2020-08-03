@@ -76,8 +76,8 @@ Alternatively you can import individually:
 
 ## Option 3: ```<script type="text/javascript">``` tag
 
-You may also import import the module using the html ```<script type="text/javascript">``` tag in order to support older
-browser version.  When importing the library this way you will need to reference SkillTree objects  using a global wrapper 
+You may also import the module using the html ```<script type="text/javascript">``` tag in order to support older
+browsers.  When importing the library this way you will need to reference SkillTree objects  using a global wrapper 
 object named SkillsClient.
 
 Then your code will look something like this
