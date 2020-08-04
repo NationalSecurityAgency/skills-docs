@@ -1,7 +1,7 @@
 # Users
 
 This section describes different types of dashboard users and their corresponding roles and permissions. 
-It will also touch on access management, email settings and a way to view the Skill Display through your users' eyes.  
+It will also touch on access management, and a way to view the Skill Display through your users' eyes.  
 
 ## User Roles
 
@@ -14,11 +14,7 @@ The Root role is meant for administering the dashboard itself and not any specif
 Users with the Root role can also assign Supervisor and Root roles to other dashboard users. 
 
 ### Supervisor
-The Supervisor role allows users to manage Global Badges. Only users with the Root role can assign the Supervisor role.   
-
-## Email Settings
-
-Coming very soon...
+The Supervisor role allows users to manage Global Badges. Only users with the Root role can assign the Supervisor role.     
 
 ## Skills Display / Client Display
 
