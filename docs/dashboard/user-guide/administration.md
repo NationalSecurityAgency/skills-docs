@@ -1,8 +1,8 @@
-# Dashboard Administration
+# Administration Settings
 
 The SkillTree Dashboard requires very little administration, however there are several settings that may need attention depending on your configuration.
 
-Administration settings can be accessed by the ```Root``` user via the ```Settings``` menu entry in the drop down menu available by clicking on the Root user's username.
+Administration settings can be accessed by the [Root](/dashboard/user-guide/users.html#root) user via the ```Settings``` menu entry in the drop down menu available by clicking on the Root user's username.
 
 ![Settings Menu](./screenshots/settings_menu_20200804.png)
 
@@ -40,7 +40,7 @@ The ```From Email``` settings allows the ```Root``` user to configure what from 
 ``Custom Header`` and ```Custom Footer``` allow the ```Root``` user to specify HTML to be used as a custom header and footer that will be applied to the SkillTree dashboard.
 
 ::: warning
-<script> tags are not permitted in the html configured for the header or footer
+&lt;script&gt; tags are not permitted in the html configured for the header or footer
 :::
 
 for example:
