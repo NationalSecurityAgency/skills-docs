@@ -8,7 +8,7 @@ Some examples include:
 - You are using plain old Javascript support and you want to preview a user's level
 
 Public Endpoints:
-- [``[Service URL]``/api/projects/``[Project Id]``/skills/``[Skill Id]``](#report-skill-events-endpoint)
+- [``[Service URL]``/api/projects/``[Project Id]``/skills/``[Skill Id]``](#report-skill-event-endpoint)
   - *HTTP Methods:* POST, PUT
   - *Purpose:* Report Skill Events
   - *Detailed Description:* [Click Here](#report-skill-event-endpoint)
