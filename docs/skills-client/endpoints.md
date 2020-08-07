@@ -11,7 +11,7 @@ Public Endpoints:
 - [``[Service URL]``/api/projects/``[Project Id]``/skills/``[Skill Id]``](#report-skill-events-endpoint)
   - *HTTP Methods:* POST, PUT
   - *Purpose:* Report Skill Events
-  - *Detailed Description:* [Click Here](#report-skill-events-endpoint)
+  - *Detailed Description:* [Click Here](#report-skill-event-endpoint)
 - [``[Service URL]``/api/projects/``[Project Id]``/level](#retrieve-current-level-endpoint)
   - *HTTP Method:* GET
   - *Purpose:* Retrieve user's current overall level
