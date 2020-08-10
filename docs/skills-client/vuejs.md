@@ -128,7 +128,7 @@ The v-skills directive provides a way to capture that result via a callback meth
 ``` js{3}
 <input type="text" 
     v-skills:input="'Thor'" 
-    @skills-report-response="onReporterResponse"/>
+    @skills-report-success="onReporterResponse"/>
 ```
 
 and then let's say:
@@ -150,7 +150,7 @@ also listen on the @skills-report-error event to handle these situations.
 ``` js{4}
 <input type="text" 
     v-skills:input="'Thor'" 
-    @skills-report-response="onReporterResponse"
+    @skills-report-success="onReporterResponse"
     @skills-report-error="onReporterError" />
 ```
 
