@@ -223,7 +223,7 @@ If you are making changes to the client display OR want to run all of the cypres
 
 ```bash
 cd client-display
-nmp run serve
+npm run serve
 ```
 The dev server will run on port 8083 and will make requests for data to the service running on port 8080.
 
