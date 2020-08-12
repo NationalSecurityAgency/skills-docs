@@ -27,7 +27,7 @@ We generally recommend the following integration pattern:
 Skills Display support is provided for the following libraries: 
 - [Vue.js](/skills-client/vuejs.html)
 - [React](/skills-client/react.html)
-- Angular (Coming soon)
+- [Angular](/skills-client/angular.htm)
 - [Pure JS](/skills-client/js.html)
 
 ## Report Events Integration
@@ -35,7 +35,7 @@ Skills Display support is provided for the following libraries:
 Your can either use one of the supported libraries or utilize the endpoint directly:
 - [Vue.js](/skills-client/vuejs.html)
 - [React](/skills-client/react.html)
-- Angular (Coming soon)
+- [Angular](/skills-client/angular.htm)
 - [Pure JS](/skills-client/js.html)
 - [REST Endpoints](/skills-client/endpoints.html#programmatic-endpoints)
 
