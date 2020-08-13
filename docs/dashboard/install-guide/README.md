@@ -8,4 +8,27 @@ Please note that this section is only applicable if you are installing the Skill
 If your organization is already running a centralized service please proceed to [Integration User Guide](/skills-client/) or [Dashboard User Guide](/dashboard/user-guide/)
 :::
 
-Coming very soon...
+There are two official distributions: 
+
+- Jar-based: hosted on [GitHub](https://github.com/NationalSecurityAgency/skills-service/releases/latest)
+- Docker: hosted on [DockerHub](https://hub.docker.com/r/skilltree/skills-service)
+
+[Quick Start](/dashboard/install-guide/quickStart.html#_2-install-start-dashboard-and-service) shows how to install and start each type of the distribution. 
+
+The next consideration would be to select installation mode. 
+SkillTree platforms supports two modes:
+
+- [Password Auth Mode](/dashboard/install-guide/installModes.html#password-auth-mode): Accounts created and managed by SkillTree and/or delegated to OAuth2 authentication provider (ex. GitHub, Google, etc..)  
+- [PKI Auth Mode](/dashboard/install-guide/installModes.html#pki-auth-mode): User's browser must be setup with a personal PKI certificate and that certificate must be issued by a Certificate Authority trusted in the dashboard application's truststore.
+
+PKI Mode is generally more applicable to intranets where organizations utilize certificates to implement authentication and authorization. Definitely use Password Auth Mode if you are not sure which mode is applicable to you.
+Please visit [Installation Modes](/dashboard/install-guide/installModes.html) section to learn more. 
+
+So what's next: 
+- [Production Installation](/dashboard/install-guide/prodInstall.html): A detailed documentation for production-grade installation.
+- [Quick Start](/dashboard/install-guide/quickStart.html#_2-install-start-dashboard-and-service): Become familiar with starting service, dashboard and what client-lib integration looks like.
+- [Configuration](/dashboard/install-guide/config.html): SkillTree configuration options. 
+
+
+   
+

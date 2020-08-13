@@ -2,6 +2,15 @@
 
 The Skill Tree dashboard application supports two separate modes of authentication.  The dashboard can be configured for password based authentication, *or*, PKI based authentication. 
 
+
+- [Password Auth Mode](/dashboard/install-guide/installModes.html#password-auth-mode): Accounts created and managed by SkillTree and/or delegated to OAuth2 authentication provider (ex. GitHub, Google, etc..)  
+- [PKI Auth Mode](/dashboard/install-guide/installModes.html#pki-auth-mode): User's browser must be setup with a personal PKI certificate and that certificate must be issued by a Certificate Authority trusted in the dashboard application's truststore.
+
+PKI Mode is generally more applicable to intranets where organizations utilize certificates to implement authentication and authorization. 
+:::tip
+Definitely use Password Auth Mode if you are not sure which mode is applicable to you.
+:::
+
 ## Password Auth Mode
 When configured for password based authentication, users will need to manually create a Skill Tree account by clicking on the "Sign Up" link on the main login page.  After creating an account, users can login using the username and password that was used when creating the account.
 
