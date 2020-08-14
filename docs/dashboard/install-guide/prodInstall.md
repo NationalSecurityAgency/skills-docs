@@ -1,5 +1,21 @@
 # Production Installation
 
+SkillTree production installation strives for high-availability and horizontal scalability. 
+To achieve both of these goals multiple instances of skill-service must be installed on different nodes/instances. 
+Each skill-service node will have the same configuration and is designed to scale-up or scale down horizontally. 
+You can add or remove instances any time. 
+
+<import-content path="/dashboard/install-guide/common/install-tip.html"/>
+
+There are two installation modes: 
+
+- [Password Auth Mode Install](/dashboard/install-guide/prodInstall.html#password-auth-mode-install): Accounts created and managed by SkillTree and/or delegated to OAuth2 authentication provider (ex. GitHub, Google, etc..)  
+- [PKI Auth Mode Install](/dashboard/install-guide/prodInstall.html#pki-auth-mode-install): User's browser must be setup with a personal PKI certificate and that certificate must be issued by a Certificate Authority trusted in the dashboard application's truststore.
+  
+:::tip
+Definitely use Password Auth Mode if you are not sure which mode is applicable to you.
+:::
+
 ## Password Auth Mode Install
 
 Production grade installation requires a cluster of ``skills-service`` daemons which must reside on multiple machines/instances with a load balancer in between.
@@ -23,32 +39,9 @@ There is a number of products that needs to be installed in high-availability mo
 1. Redis: Required for clustered skill-service deployment to persist HttpSession  
     - [Redis](https://redis.io/)'s installation, setup and management is outside of the scope of this section, please visit [https://redis.io/](https://redis.io/)        
  
-## skill-service configuration
+### skill-service configuration
 
-Here is a minimum required list of configuration in order to run production grade skill-service instance(s):
-
-DB configs:
-```properties
-spring.datasource.url=jdbc:postgresql://<server>:5432/skills
-spring.datasource.username=
-spring.datasource.password=
-```
-Please visit [Database](/skills-docs/dashboard/install-guide/database.html) section for further inforamtion
-            
-WebSocket Stomp:
-```properties
-skills.websocket.enableStompBrokerRelay=true
-skills.websocket.relayHost=
-skills.websocket.relayPort=
-```
-
-Store HttpSession in Redis:
-```properties
-spring.session.store-type=redis
-spring.redis.host=
-spring.redis.password=
-spring.redis.port=6379
-```
+<import-content path="/dashboard/install-guide/common/prod-install-basic-config.html"/>
              
 Configure ``https``:
 ```properties
@@ -60,11 +53,12 @@ server.ssl.key-store-password=
 server.ssl.enabled-protocols=TLSv1.2
 ```   
 
-Java VM option to increase ``skill-service`` size of heap, in case of jar based install
-```bash
-java -Xmx2g -Xms2g -jar skills-service-<version>.jar
-```
-or docker:
-```bash
-docker run --name skills-service -d -p 8080:8080 -e EXTRA_JAVA_OPTS="-Xmx2g -Xms2g" skilltree/skills-service
-```
+<import-content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.html"/>
+
+## PKI Auth Mode Install
+
+### skill-service configuration
+
+<import-content path="/dashboard/install-guide/common/prod-install-basic-config.html"/>
+
+<import-content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.html"/>

@@ -1,12 +1,9 @@
 # Overview
 
 This section focuses on installing the SkillTree platform. 
-Once the service is installed you will have access to the management dashboard and API. 
+Once the service installed you will have access to the management dashboard and API. 
 
-::: tip
-Please note that this section is only applicable if you are installing the SkillTree platform from scratch. 
-If your organization is already running a centralized service please proceed to [Integration User Guide](/skills-client/) or [Dashboard User Guide](/dashboard/user-guide/)
-:::
+<import-content path="/dashboard/install-guide/common/install-tip.html"/>
 
 There are two official distributions: 
 
@@ -21,7 +18,10 @@ SkillTree platforms supports two modes:
 - [Password Auth Mode](/dashboard/install-guide/installModes.html#password-auth-mode): Accounts created and managed by SkillTree and/or delegated to OAuth2 authentication provider (ex. GitHub, Google, etc..)  
 - [PKI Auth Mode](/dashboard/install-guide/installModes.html#pki-auth-mode): User's browser must be setup with a personal PKI certificate and that certificate must be issued by a Certificate Authority trusted in the dashboard application's truststore.
 
-PKI Mode is generally more applicable to intranets where organizations utilize certificates to implement authentication and authorization. Definitely use Password Auth Mode if you are not sure which mode is applicable to you.
+PKI Mode is generally more applicable to intranets where organizations utilize certificates to implement authentication and authorization. 
+:::tip
+Definitely use Password Auth Mode if you are not sure which mode is applicable to you.
+:::
 Please visit [Installation Modes](/dashboard/install-guide/installModes.html) section to learn more. 
 
 So what's next: 

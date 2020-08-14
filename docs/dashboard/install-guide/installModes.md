@@ -71,7 +71,7 @@ The userInfoUri endpoint must return valid JSON with the following properties fo
     String userDn
 ``` 
 
-The userQueryUri must retun a list of the above JSON objects for user DN's that meet the query criteria.
+The userQueryUri must return a list of the above JSON objects for user DN's that meet the query criteria.
 
 The userInfoHealthCheckUri endpoint should return the following JSON object:
 
