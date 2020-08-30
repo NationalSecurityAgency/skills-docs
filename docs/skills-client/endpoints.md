@@ -17,7 +17,7 @@ Public Endpoints:
   - *Purpose:* Retrieve user's current overall level
   - *Detailed Description:* [Click Here](#retrieve-current-level-endpoint)
 
-Both of these endpoints require authorization and a user id in order to perform their functions. 
+Both of these endpoints require authentication and authorization and a user id in order to perform their functions. 
 Please select your installation type below for the instructions:
 
 <form-and-pki 

@@ -116,7 +116,7 @@ new Vue({
 ```
 :::tip
 In a production environment we'd configure these resources using the ``https`` protocol. 
-Please review the [Authorization](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
+Please review the [Authentication](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
 :::
 
 Copy the HelloWorld components from ``skills-client-examples/vuejs-example/src/components``:
@@ -225,7 +225,7 @@ serviceWorker.unregister();
 
 :::tip
 In a production environment we'd configure these resources using the ``https`` protocol. 
-Please review the [Authorization](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
+Please review the [Authentication](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
 :::
 
 Copy the HelloWorld components from ``skills-client-examples/react-example/src/skilltree``:
@@ -317,7 +317,7 @@ SkillsConfiguration.configure({
 ```
 :::tip
 In a production environment we'd configure these resources using the ``https`` protocol. 
-Please review the [Authorization](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
+Please review the [Authentication](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
 :::
 
 Pluggable user skill and ranking visualization:
