@@ -1,6 +1,6 @@
-## Authorization Endpoint
+## Authentication Endpoint
 
-Production based installation will require you to implement an authorization endpoint. 
+Production based installation will require you to implement an authentication endpoint. 
 The goal of the endpoint is to authorize a specific user so that the skills display and skills reporting can be properly secured.    
 
 The authentication endpoint produces a user specific temporary client token by utilizing a project's ```Client ID``` and ```Client Secret``` 
@@ -23,7 +23,7 @@ This is an implementation of the OAuth2 protocol to retrieve a temporary client 
 - [https://oauth.net/2/](https://oauth.net/2/)
 - [https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) 
 
-Below are a number of examples of how you could implement an authorization endpoint that will be utilized by the client display. 
+Below are a number of examples of how you could implement an authentication endpoint that will be utilized by the client display. 
 
 ### Spring Boot Example
 

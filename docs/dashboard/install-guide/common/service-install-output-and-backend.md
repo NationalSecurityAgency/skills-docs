@@ -28,7 +28,7 @@ Please visit the [Database Section](/dashboard/install-guide/database.html) to l
 
 The next step is to start the ``java-backend-example`` service which:
 1. Populates the ``skills-service`` with sample data
-1. Implements an example [Authorization Endpoint](/skills-client/auth.html) that's required to run client components
+1. Implements an example [Authentication Endpoint](/skills-client/auth.html) that's required to run client components
 
 Download the latest ``java-backend-example`` from [skills-client-examples/releases](https://github.com/NationalSecurityAgency/skills-client-examples/releases)
 
