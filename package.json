@@ -14,21 +14,21 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.14.0",
-    "bootstrap": "4.5.0",
-    "bootstrap-vue": "2.15.0",
+    "bootstrap": "4.5.2",
+    "bootstrap-vue": "2.16.0",
     "core-js": "3.6.5",
     "vue": "2.6.12"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.4.6",
-    "@vue/cli-plugin-eslint": "4.4.6",
-    "@vue/cli-service": "4.4.6",
+    "@vue/cli-plugin-babel": "4.5.4",
+    "@vue/cli-plugin-eslint": "4.5.4",
+    "@vue/cli-service": "4.5.4",
     "babel-eslint": "10.1.0",
-    "eslint": "7.4.0",
+    "eslint": "7.8.1",
     "eslint-plugin-vue": "6.2.2",
     "license-checker": "25.0.1",
     "vue-template-compiler": "2.6.12",
-    "vuepress": "1.5.2"
+    "vuepress": "1.5.4"
   },
   "eslintConfig": {
     "root": true,
