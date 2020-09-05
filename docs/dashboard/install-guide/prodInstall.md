@@ -18,15 +18,13 @@ Definitely use Password Auth Mode if you are not sure which mode is applicable t
 
 ## Password Auth Mode Install
 
-Production grade installation requires a cluster of ``skills-service`` daemons which must reside on multiple machines/instances with a load balancer in between.
-There is a number of products that needs to be installed in high-availability mode in order to support clustered SkillTree setup.  
-
+<import-content path="/dashboard/install-guide/common/instal-type-intro.html"/> 
 
 ![Production Installation for Pass Auth Mode](./diagrams/ProdInstall-Pass.jpg) 
 
 <import-content path="/dashboard/install-guide/common/services-explanations.html"/>
-1. Redis: Required for clustered skill-service deployment to persist HttpSession  
-    - [Redis](https://redis.io/)'s installation, setup and management is outside of the scope of this section, please visit [https://redis.io/](https://redis.io/)        
+**4: Redis:** Required for clustered skill-service deployment to persist HttpSession  
+   - [Redis](https://redis.io/)'s installation, setup and management is outside of the scope of this section, please visit [https://redis.io/](https://redis.io/)        
  
 ### skill-service configuration
 
@@ -45,8 +43,14 @@ server.ssl.enabled-protocols=TLSv1.2
 <import-content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.html"/>
 
 ## PKI Auth Mode Install
+<import-content path="/dashboard/install-guide/common/instal-type-intro.html"/>
 
 ![Production Installation for Pass PKI Mode](./diagrams/ProdInstall-Pki.jpg)
+
+<import-content path="/dashboard/install-guide/common/services-explanations.html"/>
+**4: User Info Service** - Provides user information based on PKI's Distinguished Name (DN)
+   - You are responsible to implement this service
+   - Make sure to run it in High Availibility mode 
 
 ### skill-service configuration
 
