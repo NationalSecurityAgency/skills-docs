@@ -16,9 +16,8 @@ The next consideration would be to select installation mode.
 SkillTree platforms supports two modes:
 
 - [Password Auth Mode](/dashboard/install-guide/installModes.html#password-auth-mode): Accounts created and managed by SkillTree and/or delegated to OAuth2 authentication provider (ex. GitHub, Google, etc..)  
-- [PKI Auth Mode](/dashboard/install-guide/installModes.html#pki-auth-mode): User's browser must be setup with a personal PKI certificate and that certificate must be issued by a Certificate Authority trusted in the dashboard application's truststore.
-
-PKI Mode is generally more applicable to intranets where organizations utilize certificates to implement authentication and authorization. 
+- [PKI Auth Mode](/dashboard/install-guide/installModes.html#pki-auth-mode): PKI Mode is for intranets where organizations utilize PKI with 2-way SSL certificates to implement authentication and authorization. User's browser must be setup with a personal PKI certificate and that certificate must be issued by a Certificate Authority trusted in the dashboard application's truststore.
+ 
 :::tip
 Definitely use Password Auth Mode if you are not sure which mode is applicable to you.
 :::

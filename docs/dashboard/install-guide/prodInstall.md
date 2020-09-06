@@ -9,9 +9,9 @@ You can add or remove instances any time.
 
 There are two installation modes: 
 
-- [Password Auth Mode Install](/dashboard/install-guide/prodInstall.html#password-auth-mode-install): Accounts created and managed by SkillTree and/or delegated to OAuth2 authentication provider (ex. GitHub, Google, etc..)  
-- [PKI Auth Mode Install](/dashboard/install-guide/prodInstall.html#pki-auth-mode-install): User's browser must be setup with a personal PKI certificate and that certificate must be issued by a Certificate Authority trusted in the dashboard application's truststore.
-  
+- [Password Auth Mode](/dashboard/install-guide/prodInstall.html#password-auth-mode-install): Accounts created and managed by SkillTree and/or delegated to OAuth2 authentication provider (ex. GitHub, Google, etc..)  
+- [PKI Auth Mode](/dashboard/install-guide/prodInstall.html#pki-auth-mode-install): User's browser must be setup with a personal PKI certificate and that certificate must be issued by a Certificate Authority trusted in the dashboard application's truststore.
+
 :::tip
 Definitely use Password Auth Mode if you are not sure which mode is applicable to you.
 :::
@@ -55,5 +55,49 @@ server.ssl.enabled-protocols=TLSv1.2
 ### skill-service configuration
 
 <import-content path="/dashboard/install-guide/common/prod-install-basic-config.html"/>
+
+Enable PKI mode install:
+```properties
+skills.authorization.authMode=PKI
+```
+
+Configure ``https`` and 2-way SSL:
+```properties
+server.port=8443
+
+# keystore
+server.ssl.enabled=true
+server.ssl.key-store=/certs/keystore.p12
+server.ssl.key-store-password=
+server.ssl.keyStoreType=PKCS12
+
+# truststore
+server.ssl.trust-store=/certs/truststore.p12
+server.ssl.trust-store-password=
+server.ssl.trustStoreType=PKCS12
+```
+
+``User Info Service`` client properties:
+```properties
+# To retrieve user info by DN
+skills.authorization.userInfoUri=https://<host>:<port>/userInfo?dn={dn}
+# Used by dashboard dropdowns to suggest existing users
+skills.authorization.userQueryUri=https://<host>:<port>/userQuery?query={query}
+# skills-service checks the health of User Info Service
+skills.authorization.userInfoHealthCheckUri=https://<host>:<port>/actuator/health
+``` 
+
+``User Info Service`` client authentication use 2-way SSL (add the following Java System Properties):
+```properties
+# Keystore
+-Djavax.net.ssl.keyStore=/certs/keystore.p12
+-Djavax.net.ssl.keyStoreType=PKCS12
+-Djavax.net.ssl.keyStorePassword=changeme
+
+# Truststore
+-Djavax.net.ssl.trustStore=/certs/truststore.p12
+-Djavax.net.ssl.trustStoreType=PKCS12
+-Djavax.net.ssl.trustStorePassword=
+```
 
 <import-content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.html"/>
