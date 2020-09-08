@@ -78,26 +78,9 @@ server.ssl.trustStoreType=PKCS12
 ```
 
 ``User Info Service`` client properties:
-```properties
-# To retrieve user info by DN
-skills.authorization.userInfoUri=https://<host>:<port>/userInfo?dn={dn}
-# Used by dashboard dropdowns to suggest existing users
-skills.authorization.userQueryUri=https://<host>:<port>/userQuery?query={query}
-# skills-service checks the health of User Info Service
-skills.authorization.userInfoHealthCheckUri=https://<host>:<port>/actuator/health
-``` 
+<import-content path="/dashboard/install-guide/common/user-info-service-props-endpoints.html"/>
 
-``User Info Service`` client authentication use 2-way SSL (add the following Java System Properties):
-```properties
-# Keystore
--Djavax.net.ssl.keyStore=/certs/keystore.p12
--Djavax.net.ssl.keyStoreType=PKCS12
--Djavax.net.ssl.keyStorePassword=changeme
-
-# Truststore
--Djavax.net.ssl.trustStore=/certs/truststore.p12
--Djavax.net.ssl.trustStoreType=PKCS12
--Djavax.net.ssl.trustStorePassword=
-```
+If ``User Info Service`` utilizes 2-way SSL then add the following client authentication properties (Java System Properties):
+<import-content path="/dashboard/install-guide/common/user-info-service-props-ssl.html"/>
 
 <import-content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.html"/>

@@ -54,23 +54,28 @@ skills.authorization.authMode=PKI
 ```
 
 PKI Mode requires:
-- configured PKI 2-way SSL certificates
 - running ``User Info Service``
 - configure client properties to communicate with ``User Info Service``
 
+### User Info Service
 
-Additionally, the dashboard must be configured with an external "User Info Service".  The User Info Service will need to provide REST based endpoints that can return user information for the client certificate's Distinguished Name (DN).  The User Info Service is configured by adding the following configuration properties:
+In PKI Mode, authentication performed using PKI certificate - the only information that is extracted from certificate is a Distinguished Name (DN). 
+User Info Service provides a way to look up users' metadata by DN, such and name and email. 
+It is your responsibility to implement and run User Info Service.   
 
-```properties
-# To retrieve user info by DN
-skills.authorization.userInfoUri=https://<host>:<port>/userInfo?dn={dn}
-# Used by dashboard dropdowns to suggest existing users
-skills.authorization.userQueryUri=https://<host>:<port>/userQuery?query={query}
-# skills-service checks the health of User Info Service
-skills.authorization.userInfoHealthCheckUri=https://<host>:<port>/actuator/healt
-```  
+The User Info Service configured in skills-service by adding the following configuration properties:
 
-The endpoint configured via ``skills.authorization.userInfoUri`` must return valid JSON with the following properties for a given user's DN:
+<import-content path="/dashboard/install-guide/common/user-info-service-props-endpoints.html"/> 
+
+The User Info Service will need to implement the following REST endpoints that can return user information for the client certificate's Distinguished Name (DN):
+- skills.authorization.userInfoUri
+- skills.authorization.userQueryUri
+- skills.authorization.userInfoHealthCheckUri
+
+#### skills.authorization.userInfoUri endpoint
+
+The endpoint returns user information by DN. The endpoint configured via ``skills.authorization.userInfoUri`` and expects dn parameter, for example ``/userInfo?dn={dn}``.  
+This endpoint must return valid JSON with the following properties for a given user's DN:
 
 ``` json
 {
@@ -85,7 +90,13 @@ The endpoint configured via ``skills.authorization.userInfoUri`` must return val
 - *username:* property is a unique user's identifier; can be a number formatted as a string, ex. ``000001``
 - *usernameForDisplay:* this is how user will be display in SkillTree dashboard
 
-The endpoint configured by ``skills.authorization.userQueryUri`` must return a list of the above JSON objects for user DN's that meet the query criteria. For example: 
+#### skills.authorization.userQueryUri endpoint
+
+This endpoint used by the SkillTree dashboard dropdowns to suggest existing users. 
+
+The endpoint configured by ``skills.authorization.userQueryUri`` and expects query parameter, for example: ``/userQuery?query={query}``.
+This endpoint must return a list of the above JSON objects for user DN's that meet the query criteria. For example: 
+
 ```json
 [
     {
@@ -106,9 +117,15 @@ The endpoint configured by ``skills.authorization.userQueryUri`` must return a l
     }
 ]
 ```
+#### skills.authorization.userInfoHealthCheckUri endpoint
 
+Health check endpoint. 
 The endpoint configured by ``skills.authorization.userInfoHealthCheckUri`` property should return the following JSON object:
 
 ``` json
 {"status":"UP"}
 ```
+
+#### optional 2-way SSL
+If your ``User Info Service`` is configured to use 2-way SSL then ``skills-service`` must add the following client authentication properties (Java System Properties):
+<import-content path="/dashboard/install-guide/common/user-info-service-props-ssl.html"/>
