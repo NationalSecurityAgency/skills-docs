@@ -30,15 +30,8 @@ Definitely use Password Auth Mode if you are not sure which mode is applicable t
 
 <import-content path="/dashboard/install-guide/common/prod-install-basic-config.html"/>
              
-Configure ``https``:
-```properties
-server.port=8443
-server.ssl.enabled=true
-server.ssl.key-store-type=PKCS12
-server.ssl.key-store=/path/to/keystore.p12
-server.ssl.key-store-password=
-server.ssl.enabled-protocols=TLSv1.2
-```   
+
+<import-content path="/dashboard/install-guide/common/ssl-props.html"/>
 
 <import-content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.html"/>
 
@@ -61,21 +54,7 @@ Enable PKI mode install:
 skills.authorization.authMode=PKI
 ```
 
-Configure ``https`` and 2-way SSL:
-```properties
-server.port=8443
-
-# keystore
-server.ssl.enabled=true
-server.ssl.key-store=/certs/keystore.p12
-server.ssl.key-store-password=
-server.ssl.keyStoreType=PKCS12
-
-# truststore
-server.ssl.trust-store=/certs/truststore.p12
-server.ssl.trust-store-password=
-server.ssl.trustStoreType=PKCS12
-```
+<import-content path="/dashboard/install-guide/common/two-way-ssl-props.html"/>
 
 ``User Info Service`` client properties:
 <import-content path="/dashboard/install-guide/common/user-info-service-props-endpoints.html"/>

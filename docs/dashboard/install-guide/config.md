@@ -19,6 +19,8 @@ Application properties follow the following conventions:
 - Spring Boot props - these start with **spring.** prefix
   - skills-service is a Spring Boot application
 
+Table of Contents:
+[[toc]]
 
 ## How to configure Jar-based install   
 
@@ -72,70 +74,136 @@ skilltree/skills-service:<version>
 All of these properties are Application properties unless explicitly specified otherwise.
 :::  
 
-skills.config.ui.minimumSubjectPoints
-skills.config.ui.minimumProjectPoints
-skills.config.ui.maxTimeWindowInMinutes
-skills.config.ui.maxProjectsPerAdmin
-skills.config.ui.maxSubjectsPerProject
-skills.config.ui.maxBadgesPerProject
-skills.config.ui.maxSkillsPerSubject
+### Dashboard Project and Skill Definitions 
 
-skills.config.ui.descriptionMaxLength
+Limit number of items that a Dashboard user can create:
+```properties
+# Maximum projects that a single user can be administrator for
+skills.config.ui.maxProjectsPerAdmin=25
+# Maximum number of subjects in a project
+skills.config.ui.maxSubjectsPerProject=25
+# Maximum number of badges in a project
+skills.config.ui.maxBadgesPerProject=25
+# Maximum number of skills in a project
+skills.config.ui.maxSkillsPerSubject=100
+```
 
-skills.config.ui.docsHost
+When project first created it may not have enough total points to calculate levels breakdown.  
+Therefore, Skill Events are not be applied until minimum amount of points created as specified by these properties:  
+```properties
+# Must create at least 100 points for project 
+# before skill events are applied
+skills.config.ui.minimumSubjectPoints=100
+# Must create at least 100 points for each 
+# subject before skill events are applied 
+# for skills under this subject
+skills.config.ui.minimumProjectPoints=100
+```
 
-skills.config.ui.paragraphValidationRegex
-skills.config.ui.paragraphValidationMessage
-skills.config.ui.nameValidationRegex
-skills.config.ui.nameValidationMessage
+Skill's Time Window threshold:
+```properties
+# Maximum number of minutes that can be assigned 
+# to skill's Time Window property (default: 43,200 minutes = 30 days)
+skills.config.ui.maxTimeWindowInMinutes=43200
 
-skills.config.ui.maxFirstNameLength
-skills.config.ui.maxLastNameLength
-skills.config.ui.maxNicknameLength
-skills.config.ui.minUsernameLength
-skills.config.ui.minPasswordLength
-skills.config.ui.maxPasswordLength
 
-skills.config.ui.minNameLength
-skills.config.ui.maxBadgeNameLength
-skills.config.ui.maxProjectNameLength
-skills.config.ui.maxSkillNameLength
-skills.config.ui.maxSubjectNameLength
-skills.config.ui.maxLevelNameLength
-
-skills.config.ui.minIdLength
-skills.config.ui.maxIdLength
 skills.config.ui.maxSkillVersion
 skills.config.ui.maxPointIncrement
 skills.config.ui.maxNumPerformToCompletion
 skills.config.ui.maxNumPointIncrementMaxOccurrences
+```
 
-skills.config.ui.userSuggestOptions
+### Dashboard: User Account Thresholds
+
+
+```properties
+skills.config.ui.maxFirstNameLength=30
+skills.config.ui.maxLastNameLength=30
+skills.config.ui.maxNicknameLength=70
+skills.config.ui.minUsernameLength=5
+skills.config.ui.minPasswordLength=8
+skills.config.ui.maxPasswordLength=40
+```
+
+:::tip
+These attributes are not applicable in the PKI Mode 
+:::
+
+### SkillTree Documentation Link
+
+Root URL to SkillTree documentation:
+```properties
+skills.config.ui.docsHost=https://code.nsa.gov/skills-docs
+```
+
+### Dashboard: Input Validation
+
+Here are some basic thresholds that are applied at the Dashboard UI and the backend:
+```properties
+# Maximum number of characters for a description (ex. Subject, Badge, Skill, etc..)
+skills.config.ui.descriptionMaxLength=2000
+
+# Minimum number of characters for the name (ex. Subject, Badge, Skill, etc..) 
+skills.config.ui.minNameLength=3
+# Maximum number of characters for Badge's name
+skills.config.ui.maxBadgeNameLength=50
+# Maximum number of characters for Project's name
+skills.config.ui.maxProjectNameLength=50
+# Maximum number of characters for Skill's name
+skills.config.ui.maxSkillNameLength=100
+# Maximum number of characters for Subject's name
+skills.config.ui.maxSubjectNameLength=50
+# Maximum number of characters for Level's name
+skills.config.ui.maxLevelNameLength=50
+# Minimum number of characters for id (ex. Subject, Badge, Skill, etc..)
+skills.config.ui.minIdLength=3
+# Maximum number of characters for id (ex. Subject, Badge, Skill, etc..)
+skills.config.ui.maxIdLength=50
+```
+
+Regex based validation for Name and Description *(this validation not enabled by default)*:
+```properties
+# Regular expression that each paragraph in the description must comply to
+skills.config.ui.paragraphValidationRegex=
+# Message to display if regex validation fails
+skills.config.ui.paragraphValidationMessage=
+
+# Regular expression that a name (ex. Subject, Badge, Skill, etc..) must comply to
+skills.config.ui.nameValidationRegex=
+# Message to display if regex validation fails
+skills.config.ui.nameValidationMessage=
+```
+
+### Latency Profiling
+
+``skill-service`` comes with built-in latency profiling of its endpoints, to enable:
+```properties
+# Enable profiling
+skills.prof.enabled=false
+# Profiling is only generated if endpoint's performance exceeds this number of milliseconds
+skills.prof.minMillisToPrint=500
+```
+SkillTree profiling uses [Call Stack Profiler](https://github.com/NationalSecurityAgency/call-stack-profiler) library
+
 
 ### Database
 
+Configure DB:
 ```properties
 spring.datasource.url=
 spring.datasource.username=
 spring.datasource.password=
 ```
 
+Please visit [Database Section](/dashboard/install-guide/database.html) for more information.
+
 ### WebSocket Stomp
 
+Configure external WebSocket Stomp:
 ```properties
 skills.websocket.enableStompBrokerRelay=true
 skills.websocket.relayHost=
 skills.websocket.relayPort=
-```
-
-### https
-```properties
-server.port=8443
-server.ssl.enabled=true
-server.ssl.key-store-type=PKCS12
-server.ssl.key-store=/path/to/keystore.p12
-server.ssl.key-store-password=
-server.ssl.enabled-protocols=TLSv1.2
 ```
 
 ### JVM Heap
@@ -170,6 +238,24 @@ server.servlet.session.timeout=
 spring.session.redis.flush-mode=on_save 
 # Stores session namespace to use for the keys
 spring.session.redis.namespace=spring:session 
+```
+
+### https SSL (Auth Mode Onlly)
+<import-content path="/dashboard/install-guide/common/ssl-props.html"/>
+
+### 2-way SSL (PKI Mode Only)
+<import-content path="/dashboard/install-guide/common/two-way-ssl-props.html"/>
+
+### User Info Service (PKI Mode Only)
+``User Info Service`` client properties:
+<import-content path="/dashboard/install-guide/common/user-info-service-props-endpoints.html"/>
+
+If ``User Info Service`` utilizes 2-way SSL then add the following client authentication properties (Java System Properties):
+<import-content path="/dashboard/install-guide/common/user-info-service-props-ssl.html"/>
+
+If you are running with self-signed certs you can optionally disable host verification (development only):
+```properties
+skills.disableHostnameVerifier=false
 ```
 
 ### Spring Boot Properties
