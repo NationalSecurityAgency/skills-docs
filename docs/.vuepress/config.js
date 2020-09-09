@@ -12,7 +12,8 @@ module.exports = {
         },
     },
     themeConfig: {
-        // logo: '/assets/img/logo.png',
+        nextLinks: false,
+        prevLinks: false,
         nav: [
             { text: 'Overview', link: '/overview/' },
             { text: 'Install Guide', link: '/dashboard/install-guide/' },

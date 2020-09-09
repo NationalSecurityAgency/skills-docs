@@ -24,9 +24,10 @@ Definitely use Password Auth Mode if you are not sure which mode is applicable t
 Please visit [Installation Modes](/dashboard/install-guide/installModes.html) section to learn more. 
 
 So what's next: 
-- [Production Installation](/dashboard/install-guide/prodInstall.html): A detailed documentation for production-grade installation.
 - [Quick Start](/dashboard/install-guide/quickStart.html#_2-install-start-dashboard-and-service): Become familiar with starting service, dashboard and what client-lib integration looks like.
-- [Configuration](/dashboard/install-guide/config.html): SkillTree configuration options. 
+- [Development Installation](/dashboard/install-guide/devInstall.html): Run the dashboard and the service on your test and/or development environments.
+- [Production Installation](/dashboard/install-guide/prodInstall.html): A detailed documentation for production-grade installation.
+- [Configuration](/dashboard/install-guide/config.html): SkillTree configuration and catalog of options. 
 
 
    

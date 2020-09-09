@@ -1,4 +1,4 @@
-Here is a minimum required list of configuration in order to run production grade skill-service instance(s).
+Here is a minimum required list of configuration in order to run production-grade skill-service instance(s).
 Please visit [Configuration](/dashboard/install-guide/config.html) section to learn how to configure skill-service.  
 Each skill-service instance should be configured with the following: 
 

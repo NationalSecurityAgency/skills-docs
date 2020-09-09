@@ -1,7 +1,7 @@
 **1: Clustered deployment of ``skill-service``** for high-availability and higher throughput
    - Route requests through a load balancer
 
-**2: Database** - We currently only support [PostgreSQL](https://www.postgresql.org/) for a production grade install
+**2: Database** - We currently only support [PostgreSQL](https://www.postgresql.org/) for a production-grade install
    - Visit [Database](/skills-docs/dashboard/install-guide/database.html) section to configure skill-service
    - Make sure to install [PostgreSQL](https://www.postgresql.org/) in high-availability mode
    - [PostgreSQL](https://www.postgresql.org/)'s installation, setup and management is outside of the scope of this section, please visit [https://www.postgresql.org](https://www.postgresql.org/).

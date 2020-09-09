@@ -1,13 +1,13 @@
 # Development Installation
 
-SkillTree's ``skills-service`` is configured smart defaults and will work out-of-the-box. 
-The only sticky wicket is by default SkillTree stores its data into an embedded in-memory H2 database.
+SkillTree's ``skills-service`` is configured with smart defaults and will work out-of-the-box. 
+The only sticky wicket is that by default SkillTree stores its data in an embedded in-memory H2 database.
 That data is ephemeral and will not persist between application restarts. 
 
 You can easily setup one of the 3 options: 
 1. Make the embedded H2 database persistent to a file
 1. Configure to use external H2 database (in a server mode)
-1. Configure to use PostgreSQL
+1. Configure to use PostgreSQL (would also be used in production)
 
 The following 2 sections will provide examples using Docker and Jar-based distributions: 
 
@@ -25,7 +25,8 @@ docker run --name skills-service -d -p 8080:8080 \
 spring.datasource.url=jdbc:h2:file:/h2-db" \
 skilltree/skills-service:<version>
 ```
-Please note that in this example H2 database persisted in ``~/h2-db`` files within that container only.   
+Please note that in this example H2 database persisted in ``/h2-db`` files within that container only. 
+Removing the container will cause data loss.    
 
 Run ``skills-service`` with external H2 database:
 ```bash

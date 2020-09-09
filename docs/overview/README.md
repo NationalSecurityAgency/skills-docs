@@ -57,14 +57,16 @@ Gamification is a proven training strategy, using the SkillTree platform yields 
 
 ## On GitHub
 
-SkillTree is Open Source and can be found on [GitHub](https://github.com/)
+SkillTree Platfrom is Open Source and can be found on [GitHub](https://github.com/): 
 
 - [skills-service](https://github.com/NationalSecurityAgency/skills-service): SkillTree Centralized Service that implements Dashboard UI and SkillTree APIs
-- [skills-client](https://github.com/NationalSecurityAgency/skills-client): Client JS libraries which allow rapid Skill integration. 
+- [skills-client](https://github.com/NationalSecurityAgency/skills-client): Client JS libraries which allow rapid SkillTree integration. 
 - [skills-docs](https://github.com/NationalSecurityAgency/skills-docs): Documentation, you are reading this now!
 - [skills-stress-test](https://github.com/NationalSecurityAgency/skills-stress-test): Web-based application that facilitates stress tests against the SkillTree service.
 - [call-stack-profiler](https://github.com/NationalSecurityAgency/call-stack-profiler): Groovy annotation-driven in-code profiling utility used by the services.
 - [skills-client-examples](https://github.com/NationalSecurityAgency/skills-client-examples): Simple Integration examples using client libraries. 
+
+Please support SkillTree by adding a :star: [skills-service](https://github.com/NationalSecurityAgency/skills-service) and [skills-client](https://github.com/NationalSecurityAgency/skills-client) projects on GitHub. 
 
 Please visit [Contribution Guide](/contribution/#contribution-guidelines) if you are interested to contribute to the SkillTree platform. 
 

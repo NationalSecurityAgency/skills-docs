@@ -1,23 +1,25 @@
 # Configuration 
 
-Out of the box the SkillTree service (skills-service) comes packaged with smart defaults that are designed to work well for 
-development and prototyping. In this section we'll discuss how to configure each distribution time follow by the catalog of available options.
+Out-of-the-box the SkillTree service (skills-service) comes packaged with smart defaults that are designed to work well for 
+the development and prototyping. In this section we'll discuss how to configure each distribution type followed by the catalog of available options.
 
 There are two official types of distributions: 
 
 - Jar-based: hosted on [GitHub](https://github.com/NationalSecurityAgency/skills-service/releases/latest)
 - Docker: hosted on [DockerHub](https://hub.docker.com/r/skilltree/skills-service)
 
-There generally types of configuration properties: 
+There are generally these types of configuration properties: 
 
 - *Application properties* - passed to the application
-- *JVM System properties* - passed to JVM via ```-D``` on the command line
+- *JVM System properties* - passed to JVM via ``-D`` or ``-X`` on the command line
 
-Application properties follow the following conventions: 
-
-- SkillTree specific props - these start with **skills.** prefix
-- Spring Boot props - these start with **spring.** prefix
+ 
+:::tip
+Application properties conventions:
+- SkillTree specific properties start with **skills.** prefix
+- Spring Boot specific properties start with **spring.** prefix
   - skills-service is a Spring Boot application
+:::
 
 Table of Contents:
 [[toc]]
@@ -45,7 +47,7 @@ Docker-based install uses environment variables to configure Application and Sys
 - *SPRING_PROPS* - Application properties
 - *EXTRA_JAVA_OPTS* - System properties
 
-The following example configures Application properties (multiple properties separated by comma): 
+The following example configures Application properties
 ```bash
 docker run --name skills-service -d -p 8080:8080 \
 -e SPRING_PROPS="\
@@ -54,6 +56,9 @@ spring.datasource.username=<username>,\
 spring.datasource.password=<password>" \
 skilltree/skills-service:<version>
 ```
+:::tip 
+Multiple properties separated by a comma
+:::
 
 This example configures both Application and System properties:
 ```bash
@@ -100,28 +105,36 @@ skills.config.ui.minimumSubjectPoints=100
 skills.config.ui.minimumProjectPoints=100
 ```
 
-Skill's Time Window threshold:
+Skill definition thresholds: 
 ```properties
-# Maximum number of minutes that can be assigned 
+# Skill's Time Window threshold: Maximum number of minutes that can be assigned 
 # to skill's Time Window property (default: 43,200 minutes = 30 days)
 skills.config.ui.maxTimeWindowInMinutes=43200
 
-
-skills.config.ui.maxSkillVersion
-skills.config.ui.maxPointIncrement
-skills.config.ui.maxNumPerformToCompletion
-skills.config.ui.maxNumPointIncrementMaxOccurrences
+# Maximum assignable skill version
+skills.config.ui.maxSkillVersion=999
+# maximum point increment for a sill
+skills.config.ui.maxPointIncrement=10000
+# maximum number of iterations required to complete a skill
+skills.config.ui.maxNumPerformToCompletion=10000
+# maximum number of occurrences within a time window
+skills.config.ui.maxNumPointIncrementMaxOccurrences=999
 ```
 
-### Dashboard: User Account Thresholds
-
+### Dashboard: User Account Thresholds (Pass Auth Mode Only)
 
 ```properties
+# Maximum number of characters for the first name 
 skills.config.ui.maxFirstNameLength=30
+# Maximum number of characters for the last name
 skills.config.ui.maxLastNameLength=30
+# Maximum number of characters for the nick name
 skills.config.ui.maxNicknameLength=70
+# Minimum number of characters for the user name
 skills.config.ui.minUsernameLength=5
+# Minimum number of characters for the password
 skills.config.ui.minPasswordLength=8
+# Maximum number of characters for the password
 skills.config.ui.maxPasswordLength=40
 ```
 
@@ -223,6 +236,7 @@ Generally is only enabled in development.
 :::
 
 ### Redis HttpStore
+Required for clustered skill-service deployment to persist HttpSession:
 ```properties
 spring.session.store-type=redis
 spring.redis.host=localhost
@@ -240,7 +254,7 @@ spring.session.redis.flush-mode=on_save
 spring.session.redis.namespace=spring:session 
 ```
 
-### https SSL (Auth Mode Onlly)
+### https SSL (Pass Auth Mode Only)
 <import-content path="/dashboard/install-guide/common/ssl-props.html"/>
 
 ### 2-way SSL (PKI Mode Only)
@@ -258,7 +272,10 @@ If you are running with self-signed certs you can optionally disable host verifi
 skills.disableHostnameVerifier=false
 ```
 
+### OAuth Support (Pass Auth Mode Only)
+<import-content path="/dashboard/install-guide/common/oath2-support.html"/>
+
 ### Spring Boot Properties
 
-``skills-service`` is a Spring Boot application and will respect majority (if not all) Spring Bool properties.  
+``skills-service`` is a Spring Boot application and will respect majority (if not all) Spring Boot properties.  
 Here is the complete list of available [Spring Boot Properties](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data-properties) 
