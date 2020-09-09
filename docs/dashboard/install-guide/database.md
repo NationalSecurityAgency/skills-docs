@@ -22,7 +22,7 @@ You can make the embedded H2 database persistent to a file via a configuration p
 spring.datasource.url=jdbc:h2:file:~/spring-boot-h2-db
 ```
 
-You can also use the H2 database in server mode, if so you'll need to specify the following properties:
+You can also use the H2 database in server mode via the following properties:
 
 ```properties
 spring.datasource.url=jdbc:h2:tcp://localhost:1521/skills

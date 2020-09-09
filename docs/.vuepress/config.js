@@ -12,7 +12,8 @@ module.exports = {
         },
     },
     themeConfig: {
-        // logo: '/assets/img/logo.png',
+        nextLinks: false,
+        prevLinks: false,
         nav: [
             { text: 'Overview', link: '/overview/' },
             { text: 'Install Guide', link: '/dashboard/install-guide/' },
@@ -30,6 +31,9 @@ module.exports = {
                 children: [
                     '/dashboard/install-guide/',
                     '/dashboard/install-guide/quickStart',
+                    '/dashboard/install-guide/distributions',
+                    '/dashboard/install-guide/devInstall',
+                    '/dashboard/install-guide/prodInstall',
                     '/dashboard/install-guide/config',
                     '/dashboard/install-guide/database',
                     '/dashboard/install-guide/installModes',

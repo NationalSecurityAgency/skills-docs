@@ -30,7 +30,7 @@ With that said, the SkillTree platform provides substantial benefits in these sc
    - Enable users to Quickly learn new features and effectively master advanced features. 
    - Improve training recall through continued user engagement and required repetition.  
    - Reduce training sessions - less support costs. Continued user engagement in application training promotes local experts.
-1. Workforce utilizes multiple home-grown tools to accomplish their jobs. You can then use SkillTree to:
+1. Workforce utilizes multiple home-grown tools to accomplish their jobs. You can use SkillTree to:
    - Provide cross-application and cross-org training - strongly encourages user engagement to become domain and application experts.
    - [Cross-application dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) teach users cross-domain workflow skills
    - [Global Badges](/dashboard/user-guide/badges.html#global-badges) expand training across project boundaries     
@@ -54,6 +54,21 @@ Gamification is a proven training strategy, using the SkillTree platform yields 
 1. Corporate visibility of application expertise
 1. Greater insight via sophisticated analytics
 1. Proven training strategy
+
+## On GitHub
+
+SkillTree Platfrom is Open Source and can be found on [GitHub](https://github.com/): 
+
+- [skills-service](https://github.com/NationalSecurityAgency/skills-service): SkillTree Centralized Service that implements Dashboard UI and SkillTree APIs
+- [skills-client](https://github.com/NationalSecurityAgency/skills-client): Client JS libraries which allow rapid SkillTree integration. 
+- [skills-docs](https://github.com/NationalSecurityAgency/skills-docs): Documentation, you are reading this now!
+- [skills-stress-test](https://github.com/NationalSecurityAgency/skills-stress-test): Web-based application that facilitates stress tests against the SkillTree service.
+- [call-stack-profiler](https://github.com/NationalSecurityAgency/call-stack-profiler): Groovy annotation-driven in-code profiling utility used by the services.
+- [skills-client-examples](https://github.com/NationalSecurityAgency/skills-client-examples): Simple Integration examples using client libraries. 
+
+Please support SkillTree by adding a :star: [skills-service](https://github.com/NationalSecurityAgency/skills-service) and [skills-client](https://github.com/NationalSecurityAgency/skills-client) projects on GitHub. 
+
+Please visit [Contribution Guide](/contribution/#contribution-guidelines) if you are interested to contribute to the SkillTree platform. 
 
 ## Browser Support
 

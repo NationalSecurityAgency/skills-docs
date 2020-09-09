@@ -32,10 +32,11 @@ External clients may report skill events directly via the [Report Skill Event En
 
 ## SkillTree Repositories
 
-1. skills-service: has code for the skills service, dashboard and client display. This is where the majority of code changes occur. 
-1. skills-client: client JS libraries that provide skill event reporting utilities and a thin iFrame-based wrapper for the client display. 
-1. skills-docs: documentation, you are reading this now!
-1. skills-stress-test: web-based application that facilitates stress tests against the skills-service.
-1. call-stack-profiler-core: Groovy annotation-driven in-code profiling utility used by the services. 
+1. [skills-service](https://github.com/NationalSecurityAgency/skills-service): has code for the skills service, dashboard and client display. This is where the majority of code changes occur. 
+1. [skills-client](https://github.com/NationalSecurityAgency/skills-client): client JS libraries that provide skill event reporting utilities and a thin iFrame-based wrapper for the client display. 
+1. [skills-docs](https://github.com/NationalSecurityAgency/skills-docs): Documentation, you are reading this now!
+1. [skills-stress-test](https://github.com/NationalSecurityAgency/skills-stress-test): Web-based application that facilitates stress tests against the SkillTree service.
+1. [call-stack-profiler](https://github.com/NationalSecurityAgency/call-stack-profiler): Groovy annotation-driven in-code profiling utility used by the services.
+1. [skills-client-examples](https://github.com/NationalSecurityAgency/skills-client-examples): Simple Integration examples using client libraries. 
 
     

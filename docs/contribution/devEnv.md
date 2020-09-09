@@ -144,7 +144,7 @@ Please note that ports 8080, 8083, 1026, and 1081 have to be available on your s
 - the client-display using webpack dev server; will run on port 8083
 - A mock smtp server; will run on ports 1026 and 1081
 
-Now that you can build and run integration tests let's discuss day-to-day development setup for the skill-service project.
+Now that you can build and run integration tests let's discuss day-to-day development setup for the skills-service project.
 
 ### Day-to-day development
 
@@ -268,7 +268,7 @@ Skills-client JS libraries provide skills event reporting utilities and a thin i
 
 ::: tip Is this the right project for me?
 
-Please keep in mind that the majority of the SkillTree features are encapsulated in the [skill-service](/contribution/devEnv.html#skills-service-development) project. 
+Please keep in mind that the majority of the SkillTree features are encapsulated in the [skills-service](/contribution/devEnv.html#skills-service-development) project. 
 
 If you are making improvements to the SkillTree dashboard or its Skills Display views then your development will be scoped within the skills-service project. I
 f you have not yet, please take few minutes to review the [architecture](/contribution/architecture.html#skilltree-repositories) section.
