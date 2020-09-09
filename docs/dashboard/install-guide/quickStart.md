@@ -21,7 +21,7 @@ You have 2 options:
 The ``skills-service`` docker image is hosted on [DockerHub](https://hub.docker.com/r/skilltree/skills-service) and can be started like this: 
 
 ```bash
-docker run --name skills-service -d -p 8080:8080 skilltree/skills-service:latest
+docker run --name skills-service -d -p 8080:8080 skilltree/skills-service:<version>
 ```
 
 then you can tail the running container's logs:
