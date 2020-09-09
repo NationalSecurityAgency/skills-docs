@@ -24,7 +24,7 @@ The ``skills-service`` docker image is hosted on [DockerHub](https://hub.docker.
 docker run --name skills-service -d -p 8080:8080 skilltree/skills-service:<version>
 ```
 
-then you can tail the running container's logs:
+You can tail the application logs via:
 ```bash
 docker logs -f <container_id>
 ```
@@ -114,10 +114,8 @@ new Vue({
   render: h => h(App),
 }).$mount('#app')
 ```
-:::tip
-In a production environment we'd configure these resources using the ``https`` protocol. 
-Please review the [Authentication](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
-:::
+
+<import-content path="/dashboard/install-guide/common/prod-env-tip.html"/>
 
 Copy the HelloWorld components from ``skills-client-examples/vuejs-example/src/components``:
 
@@ -178,7 +176,7 @@ React CLI displays the development server url at startup, it will likely be this
 [ http://localhost:3000]( http://localhost:3000) 
 
 
-If you want to build the Hello World Vue.js application yourself, here are the steps:
+If you want to build the Hello World React application yourself, here are the steps:
 
 ::: tip
 This example uses [Create React App](https://reactjs.org/docs/create-a-new-react-app.html/) to quickly scaffold a Single Page Application.
@@ -223,10 +221,7 @@ ReactDOM.render(
 serviceWorker.unregister();
 ```
 
-:::tip
-In a production environment we'd configure these resources using the ``https`` protocol. 
-Please review the [Authentication](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
-:::
+<import-content path="/dashboard/install-guide/common/prod-env-tip.html"/>
 
 Copy the HelloWorld components from ``skills-client-examples/react-example/src/skilltree``:
 
@@ -315,10 +310,7 @@ SkillsConfiguration.configure({
     authenticator: 'http://localhost:8090/api/users/user4@email.com/token',
 });
 ```
-:::tip
-In a production environment we'd configure these resources using the ``https`` protocol. 
-Please review the [Authentication](/skills-client/auth.html) and [Configuration](/dashboard/install-guide/config.html) for greater detail. 
-:::
+<import-content path="/dashboard/install-guide/common/prod-env-tip.html"/>
 
 Pluggable user skill and ranking visualization:
 ```js

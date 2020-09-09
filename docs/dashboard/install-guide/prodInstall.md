@@ -1,8 +1,8 @@
 # Production Installation
 
-SkillTree production installation strives for high-availability and horizontal scalability. 
-To achieve both of these goals multiple instances of skill-service must be installed on different nodes/instances. 
-Each skill-service node will have the same configuration and is designed to scale-up or scale down horizontally. 
+SkillTree encourages a high-availability and horizontally scalable production installation. 
+To achieve both of these goals, multiple instances of skills-service must be installed on different nodes/instances. 
+Each skills-service node will have the same configuration and is designed to scale-up or scale down horizontally. 
 You can add or remove instances any time. 
 
 <import-content path="/dashboard/install-guide/common/install-tip.html"/>
@@ -23,10 +23,10 @@ Definitely use Password Auth Mode if you are not sure which mode is applicable t
 ![Production Installation for Pass Auth Mode](./diagrams/ProdInstall-Pass.jpg) 
 
 <import-content path="/dashboard/install-guide/common/services-explanations.html"/>
-**4: Redis:** Required for clustered skill-service deployment to persist HttpSession  
+**4: Redis:** Required for clustered skills-service deployment to persist HttpSession  
    - [Redis](https://redis.io/)'s installation, setup and management is outside of the scope of this section, please visit [https://redis.io/](https://redis.io/)        
  
-### Auth Mode skill-service Configuration
+### Auth Mode skills-service Configuration
 
 <import-content path="/dashboard/install-guide/common/prod-install-basic-config.html"/>
              
@@ -42,10 +42,10 @@ Definitely use Password Auth Mode if you are not sure which mode is applicable t
 
 <import-content path="/dashboard/install-guide/common/services-explanations.html"/>
 **4: User Info Service** - Provides user information based on PKI's Distinguished Name (DN)
-   - You are responsible to implement this service, please visit [User Info Service](/dashboard/install-guide/installModes.html#user-info-service) section to learn more.
+   - You are responsible for implementing this service, please visit the [User Info Service](/dashboard/install-guide/installModes.html#user-info-service) section to learn more.
    - Make sure to run it in High Availibility mode 
 
-### PKI Mode skill-service configuration
+### PKI Mode skills-service configuration
 
 <import-content path="/dashboard/install-guide/common/prod-install-basic-config.html"/>
 

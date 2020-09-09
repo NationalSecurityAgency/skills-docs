@@ -35,18 +35,18 @@ Download the latest ``java-backend-example`` from [skills-client-examples/releas
 ```bash
 curl -s https://api.github.com/repos/NationalSecurityAgency/skills-client-examples/releases/latest | grep browser_download_url | cut -d '"' -f 4 | wget -qi -
 ```
-Start ``java-backend-example`` service using the downloaded jar (make sure to substitute X.X.X for an actual version):
+Start ``java-backend-example`` using the downloaded jar (make sure to substitute X.X.X for an actual version):
 ```bash
 java -jar java-backend-example-X.X.X.jar
 ```
 
-Please note that the service generates and populates the skill-service with sample data so it may take few minutes to start. 
-You will know the service is running when the following line appears on standard out: 
+Please note that ``java-backend-example`` populates the skills-service with sample data so it may take few minutes to start. 
+Once sample data population has completed, the following line appears on standard out: 
 ```bash
 o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
 ```
 
-On start, the ``java-backend-example`` populates the ``skills-service`` with a sample project named Movies. 
+On start, ``java-backend-example`` populates the ``skills-service`` with a sample project named Movies. 
 Once it starts, logout from the dashboard and log back in as 
 - username=bill@email.org
 - password=password

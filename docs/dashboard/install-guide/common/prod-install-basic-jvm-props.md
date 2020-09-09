@@ -1,4 +1,4 @@
-Java VM option to increase ``skill-service`` size of heap:, in case of jar based install
+Java VM option to increase ``skills-service`` heap size:
 ```properties
 -Xmx2g -Xms2g
 ```

@@ -1,14 +1,14 @@
 # Configuration 
 
 Out-of-the-box the SkillTree service (skills-service) comes packaged with smart defaults that are designed to work well for 
-the development and prototyping. In this section we'll discuss how to configure each distribution type followed by the catalog of available options.
+development and prototyping. In this section we'll discuss how to configure each distribution type followed by the catalog of available options.
 
 There are two official types of distributions: 
 
 - Jar-based: hosted on [GitHub](https://github.com/NationalSecurityAgency/skills-service/releases/latest)
 - Docker: hosted on [DockerHub](https://hub.docker.com/r/skilltree/skills-service)
 
-There are generally these types of configuration properties: 
+There are generally two types of configuration properties: 
 
 - *Application properties* - passed to the application
 - *JVM System properties* - passed to JVM via ``-D`` or ``-X`` on the command line
@@ -16,8 +16,8 @@ There are generally these types of configuration properties:
  
 :::tip
 Application properties conventions:
-- SkillTree specific properties start with **skills.** prefix
-- Spring Boot specific properties start with **spring.** prefix
+- SkillTree specific properties start with a **skills.** prefix
+- Spring Boot specific properties start with a **spring.** prefix
   - skills-service is a Spring Boot application
 :::
 
@@ -43,7 +43,7 @@ java -Xmx2G -Xms2G -jar ~/Downloads/skills-service-X.X.X.jar
 
 ## How to configure Docker-based install
 
-Docker-based install uses environment variables to configure Application and System properties:
+The Docker-based install uses environment variables to configure Application and System properties:
 - *SPRING_PROPS* - Application properties
 - *EXTRA_JAVA_OPTS* - System properties
 
@@ -57,7 +57,7 @@ spring.datasource.password=<password>" \
 skilltree/skills-service:<version>
 ```
 :::tip 
-Multiple properties separated by a comma
+Multiple properties are separated by a comma
 :::
 
 This example configures both Application and System properties:
@@ -93,8 +93,8 @@ skills.config.ui.maxBadgesPerProject=25
 skills.config.ui.maxSkillsPerSubject=100
 ```
 
-When project first created it may not have enough total points to calculate levels breakdown.  
-Therefore, Skill Events are not be applied until minimum amount of points created as specified by these properties:  
+When a project is first created it may not have enough total points to calculate a sensible levels breakdown.  
+Therefore, Skill Events cannot be applied until a minimum amount of points have been created for a project/subject as specified by these properties:  
 ```properties
 # Must create at least 100 points for project 
 # before skill events are applied
@@ -113,7 +113,7 @@ skills.config.ui.maxTimeWindowInMinutes=43200
 
 # Maximum assignable skill version
 skills.config.ui.maxSkillVersion=999
-# maximum point increment for a sill
+# maximum point increment for a skill
 skills.config.ui.maxPointIncrement=10000
 # maximum number of iterations required to complete a skill
 skills.config.ui.maxNumPerformToCompletion=10000
@@ -139,12 +139,12 @@ skills.config.ui.maxPasswordLength=40
 ```
 
 :::tip
-These attributes are not applicable in the PKI Mode 
+These attributes are not applicable to the PKI Mode and will be ignored if PKI Mode is enabled 
 :::
 
 ### SkillTree Documentation Link
 
-Root URL to SkillTree documentation:
+Root URL of SkillTree documentation:
 ```properties
 skills.config.ui.docsHost=https://code.nsa.gov/skills-docs
 ```
@@ -174,14 +174,14 @@ skills.config.ui.minIdLength=3
 skills.config.ui.maxIdLength=50
 ```
 
-Regex based validation for Name and Description *(this validation not enabled by default)*:
+Regex based validation for Name and Description *(this validation is not enabled by default)*:
 ```properties
-# Regular expression that each paragraph in the description must comply to
+# Regular expression that each paragraph in the description must comply with
 skills.config.ui.paragraphValidationRegex=
 # Message to display if regex validation fails
 skills.config.ui.paragraphValidationMessage=
 
-# Regular expression that a name (ex. Subject, Badge, Skill, etc..) must comply to
+# Regular expression that a name (ex. Subject, Badge, Skill, etc..) must comply with
 skills.config.ui.nameValidationRegex=
 # Message to display if regex validation fails
 skills.config.ui.nameValidationMessage=
@@ -189,14 +189,14 @@ skills.config.ui.nameValidationMessage=
 
 ### Latency Profiling
 
-``skill-service`` comes with built-in latency profiling of its endpoints, to enable:
+``skills-service`` comes with built-in latency profiling of its endpoints, to enable:
 ```properties
 # Enable profiling
-skills.prof.enabled=false
+skills.prof.enabled=true
 # Profiling is only generated if endpoint's performance exceeds this number of milliseconds
 skills.prof.minMillisToPrint=500
 ```
-SkillTree profiling uses [Call Stack Profiler](https://github.com/NationalSecurityAgency/call-stack-profiler) library
+SkillTree profiling uses the [Call Stack Profiler](https://github.com/NationalSecurityAgency/call-stack-profiler) library
 
 
 ### Database
@@ -208,11 +208,11 @@ spring.datasource.username=
 spring.datasource.password=
 ```
 
-Please visit [Database Section](/dashboard/install-guide/database.html) for more information.
+Please visit the [Database Section](/dashboard/install-guide/database.html) for more information.
 
-### WebSocket Stomp
+### WebSocket Stomp Broker
 
-Configure external WebSocket Stomp:
+Configure external WebSocket Stomp Broker:
 ```properties
 skills.websocket.enableStompBrokerRelay=true
 skills.websocket.relayHost=
@@ -222,7 +222,7 @@ skills.websocket.relayPort=
 ### JVM Heap
 These are System Properties.
 ```properties
--Xmx2g -Xms2g
+-Xms2g -Xmx2g
 ``` 
 
 ### GC Logging
@@ -232,11 +232,11 @@ These are System Properties.
 -Xlog:gc=debug:file=./gc.log:time,uptime,level,tags:filecount=5,filesize=100m
 ```
 :::tip
-Generally is only enabled in development. 
+Generally gc logging is only enabled in development deployments. 
 :::
 
 ### Redis HttpStore
-Required for clustered skill-service deployment to persist HttpSession:
+Required for clustered skills-service deployment to persist HttpSession:
 ```properties
 spring.session.store-type=redis
 spring.redis.host=localhost
@@ -277,5 +277,5 @@ skills.disableHostnameVerifier=false
 
 ### Spring Boot Properties
 
-``skills-service`` is a Spring Boot application and will respect majority (if not all) Spring Boot properties.  
+``skills-service`` is a Spring Boot application and will respect the majority (if not all) of Spring Boot configuration properties.  
 Here is the complete list of available [Spring Boot Properties](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data-properties) 

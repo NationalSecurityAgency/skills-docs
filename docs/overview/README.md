@@ -30,7 +30,7 @@ With that said, the SkillTree platform provides substantial benefits in these sc
    - Enable users to Quickly learn new features and effectively master advanced features. 
    - Improve training recall through continued user engagement and required repetition.  
    - Reduce training sessions - less support costs. Continued user engagement in application training promotes local experts.
-1. Workforce utilizes multiple home-grown tools to accomplish their jobs. You can then use SkillTree to:
+1. Workforce utilizes multiple home-grown tools to accomplish their jobs. You can use SkillTree to:
    - Provide cross-application and cross-org training - strongly encourages user engagement to become domain and application experts.
    - [Cross-application dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) teach users cross-domain workflow skills
    - [Global Badges](/dashboard/user-guide/badges.html#global-badges) expand training across project boundaries     

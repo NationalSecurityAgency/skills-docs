@@ -1,6 +1,6 @@
 # Installation Modes
 
-The SkillTree dashboard and service (skills-service) supports two separate modes of authentication.  The dashboard can be configured for password based authentication, *or*, PKI based authentication. 
+The SkillTree dashboard and service (skills-service) support two separate modes of authentication.  The dashboard can be configured for password based authentication *or* PKI based authentication. 
 
 
 - [Password Auth Mode](/dashboard/install-guide/installModes.html#password-auth-mode): Accounts created and managed by SkillTree and/or delegated to OAuth2 authentication provider (ex. GitHub, Google, etc..)  
@@ -33,15 +33,15 @@ skills.authorization.authMode=PKI
 
 PKI Mode requires:
 - running ``User Info Service``
-- configure client properties to communicate with ``User Info Service``
+- configuring client properties to communicate with ``User Info Service``
 
 ### User Info Service
 
-In the PKI Mode, authentication performed using PKI certificate - the only information that is extracted from certificate is a Distinguished Name (DN). 
-User Info Service provides a way to look up users' metadata by DN, such as name and email. 
-It is your responsibility to implement and run User Info Service.   
+In PKI Mode, users authenticate using PKI certificates - the only information that is extracted from a client certificate is the Distinguished Name (DN). 
+The User Info Service provides a way to look up users' metadata by DN, such as name and email. 
+It is your responsibility to implement and run an instance of User Info Service specific to your organization.   
 
-The User Info Service configured in skills-service by adding the following configuration properties:
+The User Info Service is configured in the skills-service by adding the following configuration properties:
 
 <import-content path="/dashboard/install-guide/common/user-info-service-props-endpoints.html"/> 
 
@@ -52,7 +52,7 @@ The User Info Service will need to implement the following REST endpoints that c
 
 #### skills.authorization.userInfoUri endpoint
 
-The endpoint returns user information by DN. The endpoint configured via ``skills.authorization.userInfoUri`` and expects dn parameter, for example ``/userInfo?dn={dn}``.  
+This endpoint returns user information by DN. The endpoint is configured via the ``skills.authorization.userInfoUri`` property and expects a DN parameter, for example ``/userInfo?dn={dn}``.  
 This endpoint must return valid JSON with the following properties for a given user's DN:
 
 ``` json
@@ -65,14 +65,14 @@ This endpoint must return valid JSON with the following properties for a given u
     "usernameForDisplay":"<value>"
 }
 ``` 
-- *username:* property is a unique user's identifier; can be a number formatted as a string, ex. ``000001``
+- *username:* property is a user's unique identifier; can be a number formatted as a string, ex. ``000001``
 - *usernameForDisplay:* this is how user will be display in the SkillTree dashboard
 
 #### skills.authorization.userQueryUri endpoint
 
-This endpoint used by the SkillTree dashboard dropdowns to suggest existing users. 
+This endpoint is used by the SkillTree dashboard dropdowns to suggest existing users. 
 
-The endpoint configured by ``skills.authorization.userQueryUri`` and expects query parameter, for example: ``/userQuery?query={query}``.
+The endpoint is configured via the ``skills.authorization.userQueryUri`` property and expects a query parameter, for example: ``/userQuery?query={query}``.
 This endpoint must return a list of the above JSON objects for user DN's that meet the query criteria. For example: 
 
 ```json
@@ -98,7 +98,7 @@ This endpoint must return a list of the above JSON objects for user DN's that me
 #### skills.authorization.userInfoHealthCheckUri endpoint
 
 Health check endpoint. 
-The endpoint configured by ``skills.authorization.userInfoHealthCheckUri`` property should return the following JSON object:
+The endpoint is configured via the ``skills.authorization.userInfoHealthCheckUri`` property and should return the following JSON object:
 
 ``` json
 {"status":"UP"}
