@@ -257,7 +257,147 @@ For further details regarding integrating SkillTree into your application, pleas
 
 ### Option 3 - Angular Integration Example
 
-Coming Soon ...
+
+To run the Hello World Angular example, clone the ``skills-client-examples`` project and start the Angular development server:
+
+```bash
+git clone git@github.com:NationalSecurityAgency/skills-client-examples.git
+cd skills-client-examples/ng-example
+npm install
+npm run serve
+```
+Angular CLI displays the development server url at startup, it will likely be this: 
+[http://localhost:4200/](http://localhost:4200/) 
+
+If you want to build the Hello World Angular application yourself, here are the steps: 
+
+::: tip
+This example uses [Angular CLI](https://angular.io/cli/) to quickly scaffold a Single Page Application.
+:::
+
+```bash
+npm install -g @angular/cli
+ng new ng-example
+# accept all of the defaults, press enter
+cd ng-example
+npm run start
+``` 
+
+Feel free to check out the Angular splash page then kill the server. 
+Let's install and use some of the SkillTree components.
+
+```bash
+npm install --save @skilltree/skills-client-ng
+```
+
+Configure SkillTree:
+
+``main.ts``
+```js{3,1-16}
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { SkillsConfiguration } from '@skilltree/skills-client-ng';
+
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
+
+if (environment.production) {
+  enableProdMode();
+}
+
+SkillsConfiguration.configure({
+  serviceUrl: 'http://localhost:8080',
+  projectId: 'movies',
+  authenticator: 'http://localhost:8090/api/users/user4@email.com/token',
+});
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+```
+
+<import-content path="/dashboard/install-guide/common/prod-env-tip.html"/>
+
+Copy the HelloWorld components from ``skills-client-examples/ng-example/src/app/components/*/*.ts`` to ``src/app/``:
+
+- ``hello-world-skills-display.component.ts`` - Pluggable user skill and ranking visualization 
+- ``hello-world-event-reporting.component.ts`` - Report Skill Events when user preforms actions in the application
+- ``hello-world-global-event-reporting.component.ts`` - Handle event reporting results in one place
+
+Now you can import and declare the components in ``app.module.ts``:
+
+```js
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { SkillsLevelModule, SkillsDisplayModule, SkilltreeModule } from '@skilltree/skills-client-ng'
+
+import { AppComponent } from './app.component';
+import { HelloWorldGlobalEventHandlerComponent } from './hello-world-global-event-handler.component';
+import { HelloWorldSkillsDisplayComponent } from './hello-world-skills-display.component';
+import { HelloWorldEventReportingComponent } from './hello-world-event-reporting.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HelloWorldGlobalEventHandlerComponent,
+    HelloWorldSkillsDisplayComponent,
+    HelloWorldEventReportingComponent
+  ],
+  imports: [
+    BrowserModule,
+    SkillsLevelModule,
+    SkilltreeModule,
+    SkillsDisplayModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+
+...and use the components in ``app.component.ts``:
+```js
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+  <div>
+    <div>
+      <h1>Current User's Skills Display</h1>
+        <app-hello-world-skills-display></app-hello-world-skills-display>
+      <h1>Report Skill Events</h1>
+        <app-hello-world-event-reporting></app-hello-world-event-reporting>
+      <h3>Result:</h3>
+        <app-hello-world-global-event-handler></app-hello-world-global-event-handler>
+    </div>
+  </div>
+  `,
+  styles: [`
+    pre {
+      margin: auto;
+      padding: 1rem;
+      border: 1px solid #dddddd !important;
+      overflow: auto;
+      border-radius: 6px;
+      background-color: #f6f8fa;
+      min-height: 3rem;
+      max-width: 80rem;
+    
+    }
+    
+    .res {
+      text-align: left;
+    }
+  `]
+})
+export class AppComponent {
+  title = 'ng-example';
+}
+
+```
+For further details regarding integrating SkillTree into your application, please visit our [Integration Guide](/skills-client/).
 
 ### Option 4 - Pure JS Integration Example
 
