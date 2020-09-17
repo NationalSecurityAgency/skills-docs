@@ -532,6 +532,13 @@ for example, if you are working on skills-client-vue, you would run ``cy:open:de
 :::
 - run the test that corresponds to the integration app you are working on (in this case that would be ``js.specs.js```).
 - write new [cypress.io](https://www.cypress.io/) tests
+:::tip
+The SkillTree development process focuses on providing full and comprehensive tests. As such, we encourage users to start any modifications by creating
+a Cypress test. Starting via a test-first approach is also necessary to ensure that the required user configured for the ```skills-int-service``` application is created.
+
+If you attempt to access the examples application outside of a cypress test, you will notice that the Client Display and Level components will not properly render, and the network requests
+for each component will receive a 500 error.  
+:::
 
 The [Cypress.io](https://www.cypress.io/) dev console command depends on which integration app you are using/testing:
 
