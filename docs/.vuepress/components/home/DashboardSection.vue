@@ -11,10 +11,10 @@
                     <div class="p-xlg-5 mt-1">
                         <h1 class="border-bottom text-uppercase">Dashboard</h1>
                         <p class="text-secondary">A web-based user interface that enables creation and management of an applications'
-                            training profile</p>
+                            training profile.</p>
                         <div class="mb-1"><i class="fas fa-check-double"></i> Effective and visual skill definition management
                         </div>
-                        <div class="mb-1"><i class="fas fa-check-double"></i> Comprehensive Visualization</div>
+                        <div class="mb-1"><i class="fas fa-check-double"></i> Comprehensive visualization</div>
                         <div class="mb-1"><i class="fas fa-check-double"></i> Visibility of application expertise</div>
                         <div class="mb-1"><i class="fas fa-check-double"></i> SkillTree configuration management</div>
                         <a href="dashboard/user-guide/" class="btn btn-lg btn-info mt-4">Read our Dashboard Guide</a>

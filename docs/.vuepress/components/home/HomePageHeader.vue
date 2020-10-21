@@ -3,7 +3,7 @@
         <div class="masthead-content">
             <div class="container">
                 <h1 class="masthead-heading mb-0"><i class="fab fa-pagelines"></i> SkillTree</h1>
-                <h2 class="masthead-subheading mb-0">Innovative approach to implementing application training</h2>
+                <h2 class="masthead-subheading mb-0">Micro-Learning Gamification Platform</h2>
                 <a href="overview/" class="btn btn-lg btn-primary mt-5"><i class="fas fa-book"></i> Read Docs</a>
             </div>
         </div>
@@ -49,6 +49,7 @@
     header.masthead .masthead-content .masthead-subheading {
         font-size: 1rem;
         color: rgba(255, 255, 255, 0.80) !important;
+        /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;*/
     }
 
     header.masthead .bg-circle {
