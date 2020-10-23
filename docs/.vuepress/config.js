@@ -4,7 +4,7 @@ module.exports = {
     description: 'Innovative approach to application training!',
     base: '/skills-docs/',
     head: [
-        ['link', { rel: 'icon', href: '/img/skills.ico' }]
+        ['link', { rel: 'icon', href: '/img/skilltree.ico' }]
     ],
     markdown: {
         toc: {
