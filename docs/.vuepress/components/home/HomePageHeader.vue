@@ -2,8 +2,8 @@
     <header class="masthead text-center text-white">
         <div class="masthead-content">
             <div class="container">
-                <h1 class="masthead-heading mb-0"><i class="fab fa-pagelines"></i> SkillTree</h1>
-                <h2 class="masthead-subheading mb-0">Micro-Learning Gamification Platform</h2>
+                <h1 class="masthead-heading mb-0"><img :src="$withBase('/img/skilltree_logo_white.png')"/> </h1>
+                <h2 class="masthead-subheading mb-0 mt-3">micro-learning gamification platform</h2>
                 <a href="overview/" class="btn btn-lg btn-primary mt-5"><i class="fas fa-book"></i> Read Docs</a>
             </div>
         </div>
@@ -24,13 +24,16 @@
     /*.container a {*/
     /*    font-size: 1.5rem;*/
     /*}*/
+    header.masthead img {
+      height: 16rem;
+    }
 
     header.masthead {
         position: relative;
         overflow: hidden;
-        padding-top: 9rem;
+        padding-top: 5rem;
         padding-bottom: 7rem;
-        background: linear-gradient(0deg, #42b983 0%, #ee0979 100%);
+        background: linear-gradient(0deg, #2a9d8fff 0%, #f4a261ff 100%);
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: scroll;
@@ -49,14 +52,15 @@
     header.masthead .masthead-content .masthead-subheading {
         font-size: 1rem;
         color: rgba(255, 255, 255, 0.80) !important;
-        /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;*/
+        font-weight: lighter;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     }
 
     header.masthead .bg-circle {
         z-index: 0;
         position: absolute;
         border-radius: 100%;
-        background: linear-gradient(0deg, #ee0979 0%, #42b983 100%);
+        background: linear-gradient(0deg, #e76f51ff 0%, #2a9d8fff 100%);
     }
 
     header.masthead .bg-circle-1 {

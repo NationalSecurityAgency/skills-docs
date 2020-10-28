@@ -99,13 +99,13 @@
     }
 
     .card.card-border-top1 {
-        border-top: 5px solid #ee0979;
+        border-top: 5px solid #e76f51ff;
         border-top-leftradius: 50%;
         border-top-right-r-adius: 50%;
     }
 
     .card .icon-background1 {
-        color: #ee0979;
+        color: #e76f51ff;
     }
 
     .card.card-border-top2 {
@@ -117,11 +117,11 @@
     }
 
     .card.card-border-top3 {
-        border-top: 5px solid #42b983;
+        border-top: 5px solid #2a9d8fff;
     }
 
     .card .icon-background3 {
-        color: #42b983;
+        color: #2a9d8fff;
     }
 
 </style>
