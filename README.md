@@ -1,5 +1,5 @@
 ![SkillTree](logos/skilltree_logo.png)
-
+# SkillTree Docs
 SkillTree is an innovative approach to implementing application training.
 
 These docs are hosted on GitHub Pages. Please visit https://code.nsa.gov/skills-docs
