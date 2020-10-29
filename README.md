@@ -1,4 +1,4 @@
-# SkillTree Docs
+![SkillTree](logos/skilltree_logo.png)
 
 SkillTree is an innovative approach to implementing application training.
 
