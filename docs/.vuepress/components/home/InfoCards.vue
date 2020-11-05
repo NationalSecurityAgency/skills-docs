@@ -1,65 +1,70 @@
 <template>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md mb-2">
-                <div class="card h-100 card-border-top1">
-                    <div class="card-body">
-                        <div class="media">
-                                <span class="fa-stack">
-                                  <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-                                  <i class="fa fa-user-graduate fa-stack-1x icon-foreground"></i>
-                                </span>
-
-                            <div class="media-body">
-                                <h5 class="mt-0">User Engagement</h5>
-                                Enable users to Quickly learn new features and effectively master advanced features.
-                                Improve training recall through continued user engagement.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md mb-2">
+        <div class="card h-100 card-border-top1">
+          <div class="card-body">
+            <div class="row no-gutters text-center text-sm-left">
+              <div class="col-sm-auto">
+                          <span class="fa-stack">
+                            <i class="fa fa-circle fa-stack-2x icon-background1"></i>
+                            <i class="fa fa-user-graduate fa-stack-1x icon-foreground"></i>
+                          </span>
+              </div>
+              <div class="col-sm media-body">
+                <h5 class="mt-0 mb-3 mb-sm-2">User Engagement</h5>
+                Enable users to Quickly learn new features and effectively master advanced features.
+                Improve training recall through continued user engagement.
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="col-md mb-2">
-                <div class="card h-100 card-border-top2">
-                    <div class="card-body">
-                        <div class="media">
+      <div class="col-md mb-2">
+        <div class="card h-100 card-border-top2">
+          <div class="card-body">
+            <div class="row no-gutters text-center text-sm-left">
+              <div class="col-sm-auto">
                                 <span class="fa-stack">
                                   <i class="fa fa-circle fa-stack-2x icon-background2"></i>
                                   <i class="fa fa-chess-king fa-stack-1x icon-foreground"></i>
                                 </span>
 
-                            <div class="media-body">
-                                <h5 class="mt-0">Gamification</h5>
-                                Consistent and innovative solution takes the guesswork and maintenance out of
-                                implementing gamified user training.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="col-sm media-body">
+                <h5 class="mt-0">Gamification</h5>
+                Consistent and innovative solution takes the guesswork and maintenance out of
+                implementing gamified user training.
+              </div>
             </div>
-            <div class="col-lg mb-2">
-                <div class="card h-100 card-border-top3">
-                    <div class="card-body">
-                        <div class="media">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg mb-2">
+        <div class="card h-100 card-border-top3">
+          <div class="card-body">
+            <div class="row no-gutters text-center text-sm-left">
+              <div class="col-sm-auto">
                                 <span class="fa-stack">
                                   <i class="fa fa-circle fa-stack-2x icon-background3"></i>
                                   <i class="fa fa-money-bill-wave fa-stack-1x icon-foreground"></i>
                                 </span>
 
-                            <div class="media-body">
-                                <h5 class="mt-0">Reduced Cost</h5>
-                                Fewer training sessions - less support costs. Continued user engagement in
-                                application
-                                training promotes local experts.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="col-sm media-body">
+                <h5 class="mt-0">Reduced Cost</h5>
+                Fewer training sessions - less support costs. Continued user engagement in
+                application
+                training promotes local experts.
+              </div>
             </div>
+          </div>
         </div>
-
+      </div>
     </div>
+  </div>
+
 </template>
 
 <script>

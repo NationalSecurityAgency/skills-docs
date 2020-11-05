@@ -1,14 +1,14 @@
 <template>
     <section>
         <div class="container">
-            <div class="row">
+            <div class="row text-center text-sm-left">
                 <div class="col-lg-6">
                     <div class="p-xlg-5">
                         <img :src="$withBase('/img/home/Screenshot_2020-07-15_SkillTree_Dashboard.png')" class="image-border"/>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="p-xlg-5 mt-1">
+                    <div class="py-4 p-sm-5 mt-1">
                         <h1 class="border-bottom text-uppercase">Dashboard</h1>
                         <p class="text-secondary">A web-based user interface that enables creation and management of an applications'
                             training profile.</p>
