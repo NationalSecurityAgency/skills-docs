@@ -1,7 +1,7 @@
 <template>
     <section id="section-view-docs" class="py-5 p-md-5">
         <div class="container">
-            <div class="row text-white">
+            <div class="row text-white text-center text-sm-left">
                 <div class="col-lg-9">
                     <h3 class="border-bottom">Did we mention it's FREE & Open Source??</h3>
                     <p class="text-white-50">Read our extensive documentation to learn more about the SkillTree platform.</p>
