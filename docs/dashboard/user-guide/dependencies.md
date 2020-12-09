@@ -3,7 +3,7 @@
 Dependencies add another facet to the overall gamification profile, which forces users to complete skills in a specified order.
 If you set up ``Skill A`` to depend on the completion of ``Skill B`` then no points will be awarded toward ``Skill A`` until ``Skill B`` is fully accomplished.   
 
-![Select Icon Image](./screenshots/Screenshot_2019-08-20_Simple_Dependency.png)
+![Select Icon Image](./screenshots/simple_dependency_20201209.png)
 
 Keep in mind that ``Skill B`` must be *fully* completed first before *any* points will be awarded toward ``Skill A``.  
 
