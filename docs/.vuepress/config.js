@@ -80,6 +80,15 @@ module.exports = {
                     '/contribution/devEnv.md',
                 ]
             },
+            {
+                title: 'Release Notes',
+                collapsable: true,
+                children: [
+                    '/release-notes/',
+                    '/release-notes/skills-client.md',
+                    '/release-notes/skills-service.md',
+                ]
+            },
         ],
         lastUpdated: 'Last Updated',
         home: true,

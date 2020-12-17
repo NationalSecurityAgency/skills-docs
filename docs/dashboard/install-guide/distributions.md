@@ -5,6 +5,8 @@ There are two categories of SkillTree artifacts:
 1. SkillTree Centralized Service (``skills-service``) - SkillTree dashboard and API
 1. Client libraries - Vue.js, React, Angular, and Native JS libraries used by the SkillTree integrated applications
 
+You can find release notes [here](/release-notes/).
+
 ## SkillTree Centralized Service
 
 There are two official types of distributions: 
