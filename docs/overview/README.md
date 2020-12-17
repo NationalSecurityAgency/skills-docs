@@ -1,18 +1,18 @@
 # Overview
 
 SkillTree is a micro-learning gamification platform. 
-It is an innovative approach for adding *self-directed* gamified training to **an existing web-based application** (or a new application if you are building one now)!
+It is an innovative approach to adding *self-directed* gamified training to **an existing web-based application** (or a new application if you are building one now)!
 
 ::: tip Fun Fact
-We here at SkillTree believe that a Gamification based approach significantly simplifies the training process while making the process more enjoyable for the user community.
+We here at SkillTree believe that a Gamification based training significantly simplifies the training process while making the process more enjoyable for the user community.
 :::
 
 Gamification training empower users to master features in a fun a way.
-- Gamification strategy setups friendly competition which provides strong motivation to continue learning; the motivation comes from points being awarded to users for performing desired actions within an application; other examples of motivators are ability to achieve the next level or earn a badge while competing against your peers.
+- A Gamification based strategy sets up friendly competition which provides strong motivation to continue learning; the motivation comes from points being awarded to users for performing desired actions within an application; other examples of motivators are the ability to achieve the next level or earn a badge while competing against your peers.
 - Applications that implement Gamificaton for training see their users start using a wider range of available features in a more sophisticated fashion.
-- The strategy empower continued user engagement and it promotes local experts. Which at the end leads to fewer training sessions which then equates to significantly less support costs.
+- This strategy encourages continued user engagement. Local Experts lead to a reduction in support costs by reducing the need for formal training sessions.
 
-All of that is great, but adding gamification training to an application is extremely expensive and quite time consuming. :drum: roll... here come SkillTree Micro-Learning Gamification Platform!!
+All of that is great, but adding gamification training to an application is extremely expensive and quite time consuming. :drum: roll... here comes the SkillTree Micro-Learning Gamification Platform!!
 
 SkillTree Platform enables system owners and developers to:
 - Implement gamification training with minimal time and effort (we are talking days!)
@@ -152,19 +152,19 @@ Screenshots below demonstrates dashboard's page to create and manage badges:
 Levels are users' achievement path - the overall goal of the gameified training profile is to encourage users to achieve
 the highest level. Levels are tracked for the entire project as well as for each subject which provides users many ways
 to progress forward.
-Screenshots below demonstrates dashboard's page to manage levels:
+Screenshots below demonstrate the management of levels in the dashboard:
 ![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(2).png)
 
-Dependencies add another facet to the overall gamification profile, which forces users to complete skills in a specified
+Dependencies add another facet to the overall gamification profile and force users to complete skills in a specified
 order. If you set up Skill A to depend on the completion of Skill B then no points will be awarded toward Skill A until
 Skill B is fully accomplished.
-Screenshot below demonstrates dashboard's page to manage dependencies:
+The screenshot below demonstrates management of skill dependencies in the dashboard:
 ![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(10).png)
 
-Screenshot below demonstrates dashboard's page to view dependencies graph for an entire project:
+Screenshot below demonstrates visualization of all the skill dependencies within a project:
 ![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(9).png)
 
-Almost every page on the skill's dashboard exposes metrics and statistics about that particular entity/concept. These
+Almost every page in the SkillTree dashboard exposes metrics and statistics about that particular entity/concept. These
 metrics are very much context aware so as an example, graphs and charts you see on a subject page will be for that
 specific subject and metrics on the project page will be for the entire project.
 
