@@ -21,9 +21,12 @@ The theme object supports the following properties:
 | charts.axisLabelColor | color of scales/axis text on charts | 
 | tiles.backgroundColor | tile background color, such as subject tiles | 
 | tiles.watermarkIconColor | My Rank, Rank overview, My Badges watermark icon color | 
+| buttons.backgroundColor <since project="skills-service" version="1.4.0" /> | background for buttons | 
+| buttons.foregroundColor <since project="skills-service" version="1.4.0" /> | foregroundColor for buttons including text and border |
 | graphLegendBorderColor | border color of dependency graph legend | 
 | subjectTileIconColor | color of subject tile icons |
 | trophyIconColor | color of the My Level trophy |
+
 
 Example of a 'Dark Blue' theme object
 
@@ -49,6 +52,10 @@ Example of a 'Dark Blue' theme object
       tiles: {
         backgroundColor:'#152E4d',
         watermarkIconColor: '#a6c5f7',
+      },
+      buttons: {
+        backgroundColor: '#152E4d',
+        foregroundColor: '#59ad52',
       },
       graphLegendBorderColor: '1px solid grey',
     }
