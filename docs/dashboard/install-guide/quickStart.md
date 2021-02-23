@@ -21,8 +21,12 @@ You have 2 options:
 The ``skills-service`` docker image is hosted on [DockerHub](https://hub.docker.com/r/skilltree/skills-service) and can be started like this: 
 
 ```bash
-docker run --name skills-service -d -p 8080:8080 skilltree/skills-service:<version>
+docker run --name skills-service -d -p 8080:8080 skilltree/skills-service:<tag_version>
 ```
+::: tip IMPORTANT
+Please note that the ``latest`` tag is **not** published to DockerHub and ``:<tag_version>`` must be specified explicitly.
+Available tags can be found on [DockerHub tags page](https://hub.docker.com/r/skilltree/skills-service/tags).
+:::
 
 You can tail the application logs via:
 ```bash
