@@ -105,6 +105,12 @@ SkillTree is supported on all major browsers since the following versions:
 
 <browser-support />
 
+## Accessibility
+SkillTree is committed to ensuring that Accessibility concerns are addressed. To that end we employ both manual and automated Accessibility testing. Automated accessibility testing occurs for every commit and the resulting [Lighthouse](https://developers.google.com/web/tools/lighthouse) accessibility score is published to the [SkillTree Skills-Service Github page](https://github.com/NationalSecurityAgency/skills-service). 
+
+In the event that any of the libraries we depend on for User Interface components fail to meet accessibility standards, we evaluate whether accessibility
+fixes are on the near-term development roadmap for those plugins or replace them with equivalents that address accessibility concerns.
+
 ## License
 
 SkillTree platform is released under Apache 2 license.  
