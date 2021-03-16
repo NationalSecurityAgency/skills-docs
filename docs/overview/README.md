@@ -99,6 +99,12 @@ Please support SkillTree by adding a :star: [skills-service](https://github.com/
 
 Please visit [Contribution Guide](/contribution/#contribution-guidelines) if you are interested to contribute to the SkillTree platform. 
 
+## Accessibility
+SkillTree is committed to ensuring that Accessibility concerns are addressed. To that end we employ both manual and automated Accessibility testing. Automated accessibility testing occurs for every commit and the resulting [Lighthouse](https://developers.google.com/web/tools/lighthouse) accessibility score is published to the [SkillTree Skills-Service Github page](https://github.com/NationalSecurityAgency/skills-service).
+
+In the event that any of the libraries we depend on for User Interface components fail to meet accessibility standards, we evaluate whether accessibility
+fixes are on the near-term development roadmap for those plugins or replace them with equivalents that address accessibility concerns.
+
 ## Browser Support
 
 SkillTree is supported on all major browsers since the following versions:
