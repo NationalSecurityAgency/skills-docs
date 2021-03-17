@@ -7,7 +7,10 @@ The theme object supports the following properties:
 
 | Prop          | Explanation  |
 | ------------- | -----------  |
-| backgroundColor | page background color | 
+| backgroundColor | page background color |
+| maxWidth <since project="skills-service" version="1.4.0" /> | maximum width of the component, can use any units supported by [max-width CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) such as ``%``, ``em`` and ``px`` (ex. ``100%``); default is ``1140px``  |
+| landingPageTitle <since project="skills-service" version="1.4.0" /> | title of the landing page, default is ``User Skills`` |
+| pageTitleFontSize <since project="skills-service" version="1.4.0" /> | font size of the title, can use any units supported by [font-size CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) such as ``%``, ``em`` and ``px`` (ex. ``1.2em``) |
 | pageTitleTextColor | page header title text color | 
 | circleProgressInteriorTextColor | 'x out of yyyy' text color inside circle progress widgets |
 | progressIndicators.beforeTodayColor | progress bar color for points earned before today | 
@@ -32,7 +35,10 @@ Example of a 'Dark Blue' theme object
 
 ``` json
     {
+      maxWidth: '100%',
       backgroundColor: '#626d7d',
+      landingPageTitle: 'Themed User Skills',
+      pageTitleFontSize: '1.5rem',
       pageTitleTextColor: 'white',
       textSecondaryColor: 'white',
       textPrimaryColor: 'white',
