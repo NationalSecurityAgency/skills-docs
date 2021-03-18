@@ -183,3 +183,11 @@ To get the user's current level you can perform a GET request on:
 where
 - **Service URL**: Fully qualified URL of the skills service/dashboard, if you are running it locally then something like ``http://localhost:8082`` 
 - **Project Id**: Project id for the reported skill
+
+## Java Examples
+
+<form-and-pki
+pki-path="/skills-client/auth/reportSkillJavaExamplePKI.html"
+form-path="/skills-client/auth/reportSkillJavaExampleForm.html"/>
+
+

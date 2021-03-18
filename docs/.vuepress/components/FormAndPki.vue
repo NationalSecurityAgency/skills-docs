@@ -8,7 +8,7 @@
                 <template v-slot:title>
                     <i :class="tabItem.icon" class="mr-1"></i> <span v-html="tabItem.name"></span>
                 </template>
-                <import-content :path="tabItem.path"/>
+                <import-content :path="tabItem.path" class="mt-3"/>
             </b-tab>
         </b-tabs>
     </div>
