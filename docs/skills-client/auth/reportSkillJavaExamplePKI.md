@@ -40,7 +40,7 @@ This example **requires** the following JVM parameters:
 -Djavax.net.ssl.trustStoreType=JKS
 ```
 
-This example is using [Apache HttpClient library](https://hc.apache.org/httpcomponents-client-5.0.x/index.html) sou you will need to add it to your classpath. 
+This example is using [Apache HttpClient library](https://hc.apache.org/httpcomponents-client-5.0.x/index.html) so you will need to add it to your classpath. 
 For example, in Maven it would look something like this:
 
 ```xml
