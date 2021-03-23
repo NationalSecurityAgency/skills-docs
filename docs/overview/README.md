@@ -99,6 +99,13 @@ Please support SkillTree by adding a :star: [skills-service](https://github.com/
 
 Please visit [Contribution Guide](/contribution/#contribution-guidelines) if you are interested to contribute to the SkillTree platform. 
 
+## Accessibility
+<accessibility-score/>
+SkillTree is committed to ensuring that Accessibility concerns are addressed. To that end we employ both manual and automated Accessibility testing. Automated accessibility testing occurs for every commit, assessing the Dashboard and client-display, and the resulting [Lighthouse](https://developers.google.com/web/tools/lighthouse) accessibility score is published to the [SkillTree Skills-Service Github page](https://github.com/NationalSecurityAgency/skills-service).
+
+In the event that any of the libraries we depend on for User Interface components fail to meet accessibility standards, we evaluate whether accessibility
+fixes are on the near-term development roadmap for those plugins or replace them with equivalents that address accessibility concerns.
+
 ## Browser Support
 
 SkillTree is supported on all major browsers since the following versions:
@@ -213,3 +220,10 @@ Same display as before but with expanded Skill Details:
 ------------------------
 Single skill with dependencies:
 ![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16ClientDisplay4.png)
+
+<script>
+  import AccessibilityScore from "../.vuepress/components/AccessibilityScore";
+  export default {
+    components: { AccessibilityScore }
+  }
+</script>
