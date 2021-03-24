@@ -8,16 +8,16 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 <release-date date="Apr. 2021" />
 - implemented ``Progress and Ranking``page  - *new default* landing page
   - visualize user's progress and ranking across all of the integrated projects
-  - provides capability to drill down to each project and view its ``Skills Display`` 
-  - added the ability to customize landing page between ``Progress and Ranking`` and the original ``Project Admin`` view
-  - project admin can place the project into the production mode via the ``Settings`` page which will then display that project on the ``Progress and Ranking`` page  
+  - provide capability to drill down to each project and view its ``Skills Display`` 
+  - added the ability to customize landing page per user between ``Progress and Ranking`` and the original ``Project Admin`` view
+  - project admin can place the project into production mode via the ``Settings`` page which will then display that project on the ``Progress and Ranking`` page  
 - added ``Self Reporting`` capability
-  - ``Skills Display`` presents "I did it" button for the self-reporting enabled skills
+  - ``Skills Display`` presents an "I did it" button for skills with self-reporting enabled
   - project admins can configure self reported skills as either ``Honor System`` or ``Requires Approval``
-  - implemented new ``Self Report`` project page to manage requests
-  - sent email notifications when points are requested, approved and rejected
+  - implemented new ``Self Report`` project page to manage approval requests
+  - email notifications are sent when points are requested, approved, and rejected
 - implemented accessibility testing and drastically improved accessibility compliance
-  - automated accessibility score generation and prominently displayed on the GitHub
+  - automated accessibility score generated on every push to master and prominently displayed on GitHub
 - added storage of ALL user events related to a skill id, whether applied or not
   - updated metrics to utilize ALL events
   - added ``Post Achievement`` metrics to depict whether a skill is utilized after achievement
