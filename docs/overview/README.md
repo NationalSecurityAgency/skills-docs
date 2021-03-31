@@ -132,16 +132,34 @@ limitations under the License.
 
 ## Screenshots
 Below are the screenshots that highlight some of the features of the SkillTree platform. 
-These screenshots broken down into 2 sections:
+These screenshots are broken down into 2 sections:
 - [Dashboard](/overview/#screenshots): a web-based user-friendly interface that allows to create and manage gamified training profile.
-- [Ranking and Progress Display](/overview/#ranking-and-progress-display): JS libraries are integrated into your existing web-based application which provide your users a fully interactive user ranking and progress display.
+- [Ranking and Progress Display](/overview/#ranking-and-progress-display): JS libraries that are integrated into your existing web-based application which provide your users a fully interactive user ranking and progress display.
 
 ### Dashboard
+The Dashboard provides the capability to create and administer Projects, Subjects, and Skills, as well as the ability to view
+a user's progress for any projects. As of version 1.4.0, the default view in the Dashboard has changed. Now, when a user accesses the Dashboard, a Progress and Rankings view
+for all projects with Production Mode enabled will be displayed for the current user. This allows the current user to access their Progress and Ranking for
+all projects available on that instance of SkillTree in one place. Both the ```Progress and Ranking``` and the ```Project Admin```
+views can be accessed from the drop down menu at the top right.
 
+![SkillTree Dashboard Menu](./screenshots/Screenshot_2021-03-31SkillTreeDashboard-ViewMenu.png)
+
+The default view can also be configured per user via the ```Settings``` menu item, under ```Preferences```
+![SkillTree Dashboard Menu](./screenshots/Screenshot_2021-03-31SkillTreeDashboard-Settings-Preferences.png)
+
+#### Progress and Ranking
+The Progress and Ranking view gives a user access to the client-display for _all_ projects which have Production Mode enabled 
+on that instance of the SkillTree platform. It provides a single point of access for training profiles available to the
+user as well as a mechanism for Projects that consiste entirely of self-reported Skills to provide access to the client-display
+for their users.
+![SkillTree Dashboard Progress And Ranking](./screenshots/Screenshot_2021-03-31SkillTreeDashboard-Progress.png)
+
+#### Project Administration 
 A Project is composed of Subjects which are made of Skills and a single skill defines a training unit within the
 gamification framework. Subjects are a way to group and organize skill definitions within a gameified training profile.
-Screenshots below demonstrates dashboard's page to create and manage subjects: 
-![SkillTree Dashboard Subjects](./screenshots/Screenshot_2020-12-16SkillTreeDashboard.png)
+Screenshots below demonstrates the dashboard's page to create and manage subjects: 
+![SkillTree Dashboard Subjects](./screenshots/Screenshot_2021-03-31SkillTreeDashboard.png)
 
 Projects are composed of Subjects which are made of Skills and a single skill defines a training unit within the
 gamification framework. To complete a skill, users may need to perform the same action multiple times - repetition is
@@ -154,42 +172,42 @@ Badges add another facet to the overall gamification profile and allows you to f
 these prestigious symbols. Badges are a collection of skills and when all of the skills are accomplished that badge is
 earned.
 Screenshots below demonstrates dashboard's page to create and manage badges:
-![SkillsTree Dashboard Badges](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(1).png)
+![SkillsTree Dashboard Badges](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(1).png)
 
 Levels are users' achievement path - the overall goal of the gameified training profile is to encourage users to achieve
 the highest level. Levels are tracked for the entire project as well as for each subject which provides users many ways
 to progress forward.
 Screenshots below demonstrate the management of levels in the dashboard:
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(2).png)
+![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(2).png)
 
 Dependencies add another facet to the overall gamification profile and force users to complete skills in a specified
 order. If you set up Skill A to depend on the completion of Skill B then no points will be awarded toward Skill A until
 Skill B is fully accomplished.
 The screenshot below demonstrates management of skill dependencies in the dashboard:
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(10).png)
+![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(10).png)
 
 Screenshot below demonstrates visualization of all the skill dependencies within a project:
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(9).png)
+![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(9).png)
 
 Almost every page in the SkillTree dashboard exposes metrics and statistics about that particular entity/concept. These
 metrics are very much context aware so as an example, graphs and charts you see on a subject page will be for that
 specific subject and metrics on the project page will be for the entire project.
 
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(5).png)
+![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(5).png)
 
 ----
 ----
 
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(6).png)
+![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(6).png)
 
 ----
 ----
 
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(7).png)
+![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(7).png)
 
 ----
 ----
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(8).png)
+![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(8).png)
 
 
 ### Ranking and Progress Display
