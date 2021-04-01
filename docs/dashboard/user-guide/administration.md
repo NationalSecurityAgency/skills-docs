@@ -16,14 +16,23 @@ The ```Security``` menu item supports the administration of [Root](/dashboard/us
 To grant [Root](/dashboard/user-guide/users.html#root) or [Supervisor](/dashboard/user-guide/users.html#supervisor) privileges to a user, that user must have an existing account for the SkillTree Dashboard. User management will also prevent the removal of any permissions from the currently authenticated user.  
 
 ## Email Settings
-The primary scenario in which the SkillTree dashboard will send emails is in support of password reset requests for Dashboard users. If Email Server settings are not configured, the password reset feature will be disabled.
+The SkillTree dashboard will send emails in support of password reset requests for Dashboard users, as well as self-reported Skill approval requests. If Email Server settings are not configured, the password reset feature will be disabled.
 
-![Email Settings](./screenshots/email_settings1_20201209.png)
+![Email Settings](./screenshots/Screenshot_2021-04-01 SkillTree Dashboard.png)
 
 Email server configuration supports TLS enabled smtp servers, as well as username/password authentication. Changing the ```Authentication``` switch to ```Authentication Enabled``` will reveal the ```Username``` and ```Password``` configuration fields.
 
 ::: tip
 The email settings form provides a ```Test``` button that can be used to confirm that the dashboard will be able to communicate with the configured mail server. The configured settings will not be applied if the dashboard is unable to successfully communicate with the configured mail server.
+:::
+
+An optional Header and Footer can be configured to be included on emails that emanate from the Skilltree platform. 
+::: tip
+both html and plaintext are required if configuring a header or footer
+:::
+
+::: warning
+&lt;script&gt; tags are not permitted in the html configured for email header or footer
 :::
 
 ## System Settings
