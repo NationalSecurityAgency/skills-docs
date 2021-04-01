@@ -18,7 +18,7 @@ To grant [Root](/dashboard/user-guide/users.html#root) or [Supervisor](/dashboar
 ## Email Settings
 The SkillTree dashboard will send emails in support of password reset requests for Dashboard users, as well as self-reported Skill approval requests. If Email Server settings are not configured, the password reset feature will be disabled.
 
-![Email Settings](./screenshots/Screenshot_2021-04-01 SkillTree Dashboard.png)
+![Email Settings](./screenshots/email_settings_20210401.png)
 
 Email server configuration supports TLS enabled smtp servers, as well as username/password authentication. Changing the ```Authentication``` switch to ```Authentication Enabled``` will reveal the ```Username``` and ```Password``` configuration fields.
 
