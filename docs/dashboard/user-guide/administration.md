@@ -4,7 +4,7 @@ The SkillTree Dashboard requires very little administration, however there are s
 
 Administration settings can be accessed by the [Root](/dashboard/user-guide/users.html#root) user via the ```Settings``` menu entry in the drop down menu available by clicking on the Root user's username.
 
-![Settings Menu](./screenshots/settings_menu_20201209.png)
+![Settings Menu](./screenshots/settings_menu_20210401.png)
 
 ## Security Settings
 The ```Security``` menu item supports the administration of [Root](/dashboard/user-guide/users.html#root) users and [Supervisor](/dashboard/user-guide/users.html#supervisor) users.
