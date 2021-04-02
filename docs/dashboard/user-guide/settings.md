@@ -1,10 +1,21 @@
-# Administration Settings
+# Settings
 
 The SkillTree Dashboard requires very little administration, however there are several settings that may need attention depending on your configuration.
 
-Administration settings can be accessed by the [Root](/dashboard/user-guide/users.html#root) user via the ```Settings``` menu entry in the drop down menu available by clicking on the Root user's username.
+Administration settings can be accessed by users via the ```Settings``` menu entry in the drop-down menu located on the top-right of the application.
+Please note that number of settings' section are only visible to users with the [Root](/dashboard/user-guide/users.html#root) role. 
 
-![Settings Menu](./screenshots/settings_menu_20210401.png)
+![SkillTree Dashboard Menu](../../overview/screenshots/Screenshot_2021-03-31SkillTreeDashboard-ViewMenu.png)
+
+As of version 1.4.0, the default view in the Dashboard has changed. Now, when a user accesses the Dashboard, a Progress and Rankings view
+for all projects with ```Production Mode``` enabled will be displayed for the current user. This allows the current user to access their Progress and Ranking for
+all projects available on that instance of SkillTree in one place. Both the ```Progress and Ranking``` and the ```Project Admin```
+views can be accessed from the drop down menu at the top right.
+
+
+## Preferences
+The default view can be configured per user via the ```Settings``` menu item, under ```Preferences```
+![SkillTree Dashboard Menu](../../overview/screenshots/Screenshot_2021-03-31SkillTreeDashboard-Settings-Preferences.png)
 
 ## Security Settings
 The ```Security``` menu item supports the administration of [Root](/dashboard/user-guide/users.html#root) users and [Supervisor](/dashboard/user-guide/users.html#supervisor) users.
