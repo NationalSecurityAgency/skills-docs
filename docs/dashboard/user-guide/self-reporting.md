@@ -1,0 +1,69 @@
+# Self Report <since project="skills-service" version="1.4.0" />
+
+Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. 
+A project administrator can enable ``Self Reporting`` for a skill, set of skills or even all the skills. 
+Skills that have been configured with Self Reporting display ``I did it`` button allowing users to self report completion of those skills. 
+
+There are two ``Self report`` types available:  
+1. ``Honor System`` - points are awarded immediately 
+1. ``Approval Queue`` - request goes into the project's approval queue; project administrators can approve or deny requests
+
+::: tip 
+Project administrators can craft training profiles consisting of:
+  - only self-reported skills *OR*
+  - a mix of self-reported skills and skills that are reported programmatically *OR* 
+  - a project could have no self-reported skills at all
+:::  
+    
+## Configuring
+
+Self reporting is enabled and configured for each skill individually. 
+When creating or editing a skill 
+1. select ``Self Reporting`` checkbox
+1. then select ``Self Reporting`` type (``Approval Queue`` or ``Honor System``)
+
+::: tip
+By default, Self Reporting is disabled when creating or modifying a skill. 
+If your project primarily consists of Self Reported skills then you can easily change the default by 
+navigation to the ``Project -> Settings`` tab. Then you can enable Self Reporting and select its default type for all the skills that will be created after that point. 
+:::
+
+Please see [Setting: Self Report Default](/dashboard/user-guide/projects.html#setting-self-report-default)
+
+## Skills Display
+
+Once the skill is labeled with Self Reporting users will see ``I did it`` button on the Skills Display that will allow them to report the completion of that skill 
+
+![img.png](./screenshots/Screenshot_SkillsDisplay_SelfReport_20210403.png)
+
+Skills and Self Reporting can either be accessed
+1. in the Skills Display component embedded within your application (via [Client Libraries](/skills-client/#client-display-integration)) *OR*
+1. in the ``Progress And Rankings`` display of the Dashboard
+    - Navigate to ``Project and Rankings`` then click on your project's card
+    - Please note that the ``Production Mode`` must be enabled for your project to be visible in the ``Progress And Ranking`` view, please see [Setting: Production Mode](/dashboard/user-guide/projects.html#settings)
+    
+## Approval Queue
+
+If a skill is configured with Self Reporting type of the ``Approval Queue`` then points will not be awarded right away but rather go
+through the simple approval workflow:
+1. User click ``I did it`` button and requests points
+1. Request appears on the project's Self Report page (see the Screenshot below)
+1. Project administrator approves or reject requests
+
+### Notifications
+
+SkillTree will send email base notifications to project's administrators when points are requested, approved or rejected. 
+
+Please note, depending on the installation mode, an email sometimes is not available for the non-admin users, 
+in that case an email notification will not be emitted. This is not an issue in the PKI or Oauth modes. 
+To learn more please visit [Installation Modes](/dashboard/install-guide/installModes.html) section.
+If your organization is already running a centralized service then your POC would be able to answer that question. 
+
+::: warning
+SkillTree [Root Admin](/dashboard/user-guide/users.html#root) must configure email notification settings before this feature can work. 
+Please visit [Email Notifications Settings](/dashboard/user-guide/settings.html#email-notifications) to learn more.
+:::
+
+
+
+

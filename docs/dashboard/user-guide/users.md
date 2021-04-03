@@ -13,8 +13,12 @@ The Project admin role enables management of the training profile for that proje
 The Root role is meant for administering the dashboard itself and not any specific project. Users with the Root role can view the Inception project. 
 Users with the Root role can also assign Supervisor and Root roles to other dashboard users. 
 
+Please visit [Security Setting Section](/dashboard/user-guide/settings.html#security-settings) to learn how to assign this role.
+
 ### Supervisor
 The Supervisor role allows users to manage Global Badges. Only users with the Root role can assign the Supervisor role.     
+
+Please visit [Security Setting Section](/dashboard/user-guide/settings.html#security-settings) to learn how to assign this role.
 
 ## Skills Display / Client Display
 
