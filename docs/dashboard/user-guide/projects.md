@@ -67,7 +67,7 @@ In other words ``Root Help Url`` only works in conjunction with a Skill's ``Help
 #### Setting: Self Report Default <since project="skills-service" version="1.4.0" />
 
 By default, Self Reporting is disabled when creating or modifying a skill.
-If your project primarily consists of the Self Reported skills then you can easily change the default here. 
-If so, enable Self Reporting and select its type. Any skill which is created after this point will default to the selected setting.  
+If your project primarily consists of Self Reported skills, enabling Self Report Default will result in 
+the selected Self Report Approval type being the default for any skills created after this point
 
 Please visit [Self Report](/dashboard/user-guide/self-reporting.html) section to learn further.

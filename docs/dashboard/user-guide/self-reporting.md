@@ -1,8 +1,8 @@
 # Self Report <since project="skills-service" version="1.4.0" />
 
 Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. 
-A project administrator can enable ``Self Reporting`` for a skill, set of skills or even all the skills. 
-Skills that have been configured with Self Reporting display ``I did it`` button allowing users to self report completion of those skills. 
+A project administrator can enable ``Self Reporting`` for a skill, set of skills or even all the skills in a project. 
+Skills that have been configured with Self Reporting expose an ``I did it`` button, allowing users to self report completion of those skills. 
 
 There are two ``Self report`` types available:  
 1. ``Honor System`` - points are awarded immediately 
@@ -24,15 +24,15 @@ When creating or editing a skill
 
 ::: tip
 By default, Self Reporting is disabled when creating or modifying a skill. 
-If your project primarily consists of Self Reported skills then you can easily change the default by 
-navigation to the ``Project -> Settings`` tab. Then you can enable Self Reporting and select its default type for all the skills that will be created after that point. 
+If your project primarily consists of Self Reported skills then you can easily change the default by navigating to the ``Project -> Settings`` tab.
+There you can enable Self Reporting and select its default type for all the skills that will be created after that point. 
 :::
 
 Please see [Setting: Self Report Default](/dashboard/user-guide/projects.html#setting-self-report-default)
 
 ## Skills Display
 
-Once the skill is labeled with Self Reporting users will see ``I did it`` button on the Skills Display that will allow them to report the completion of that skill 
+Once Self Reporting is enabled for a skill, users will see an ``I did it`` button on the Skills Display that will allow them to report the completion of that skill 
 
 ![img.png](./screenshots/Screenshot_SkillsDisplay_SelfReport_20210403.png)
 
@@ -54,14 +54,14 @@ through the simple approval workflow:
 
 SkillTree will send email base notifications to project's administrators when points are requested, approved or rejected. 
 
-Please note, depending on the installation mode, an email sometimes is not available for the non-admin users, 
-in that case an email notification will not be emitted. This is not an issue in the PKI or Oauth modes. 
+Please note, depending on the installation mode, an email sometimes is not available for non-admin users, 
+in that case an email notification will not be emitted. This is not an issue in the PKI or Oauth installation modes. 
 To learn more please visit [Installation Modes](/dashboard/install-guide/installModes.html) section.
 If your organization is already running a centralized service then your POC would be able to answer that question. 
 
 ::: warning
 SkillTree [Root Admin](/dashboard/user-guide/users.html#root) must configure email notification settings before this feature can work. 
-Please visit [Email Notifications Settings](/dashboard/user-guide/settings.html#email-notifications) to learn more.
+Please visit the [Email Notifications Settings](/dashboard/user-guide/settings.html#email-notifications) to learn more.
 :::
 
 
