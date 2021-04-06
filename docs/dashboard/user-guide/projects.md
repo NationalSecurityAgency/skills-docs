@@ -27,6 +27,15 @@ The Dashboard user that creates a project is automatically granted the role of a
 
 To manage and view project-wide settings navigate to ``Project -> Settings``. The following project-level settings are available: 
 
+#### Setting: Production Mode <since project="skills-service" version="1.4.0" />
+
+Enabling ``Production Mode`` signals to the SkillTree platform that the project is fully operational. 
+
+Switching the mode to ``true`` will:
+- Make this project visible in the ``Progress and Ranking`` page for all SkillTree users
+
+
+
 #### Setting: Use Points For Levels
 
 ``Use Points For Levels`` - switch between two level management strategies: 
@@ -54,3 +63,11 @@ If a Skill's ``Help Url`` starts with ``http`` or ``https`` then ``Root Help Url
 
 If a Skill's ``Help Url`` is blank then no url will be displayed even if ``Root Help Url`` is configured. 
 In other words ``Root Help Url`` only works in conjunction with a Skill's ``Help Url``.
+
+#### Setting: Self Report Default <since project="skills-service" version="1.4.0" />
+
+By default, Self Reporting is disabled when creating or modifying a skill.
+If your project primarily consists of Self Reported skills, enabling Self Report Default will result in 
+the selected Self Report Approval type being the default for any skills created after this point
+
+Please visit [Self Report](/dashboard/user-guide/self-reporting.html) section to learn further.

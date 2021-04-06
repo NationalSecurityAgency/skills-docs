@@ -1,13 +1,15 @@
 <template>
-  <div>
-    <h6><b-badge>since <b-badge variant="info">{{ project }}:{{ version }}</b-badge></b-badge></h6>
-  </div>
+    <span class="h6 pl-2" :class="{ 'd-block' : isBlock }">
+      <a :href="$withBase('/release-notes/')" target="_blank">
+        <i class="fas fa-history"></i> Since <b-badge variant="info">{{ project }}:{{ version }}</b-badge>
+      </a>
+    </span>
 </template>
 
 <script>
 export default {
   name: "Since",
-  props: ['version', 'project']
+  props: ['version', 'project', 'isBlock']
 }
 </script>
 

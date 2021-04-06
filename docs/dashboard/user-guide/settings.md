@@ -17,7 +17,8 @@ views can be accessed from the drop down menu at the top right.
 The default view can be configured per user via the ```Settings``` menu item, under ```Preferences```
 ![SkillTree Dashboard Menu](../../overview/screenshots/Screenshot_2021-03-31SkillTreeDashboard-Settings-Preferences.png)
 
-## Security Settings
+## Security Settings <requires-role role="Root" />
+
 The ```Security``` menu item supports the administration of [Root](/dashboard/user-guide/users.html#root) users and [Supervisor](/dashboard/user-guide/users.html#supervisor) users.
 
 ![Root User Management](./screenshots/root_users_management_20201209.png)
@@ -26,7 +27,8 @@ The ```Security``` menu item supports the administration of [Root](/dashboard/us
 
 To grant [Root](/dashboard/user-guide/users.html#root) or [Supervisor](/dashboard/user-guide/users.html#supervisor) privileges to a user, that user must have an existing account for the SkillTree Dashboard. User management will also prevent the removal of any permissions from the currently authenticated user.  
 
-## Email Settings
+## Email Settings <requires-role role="Root" />
+
 The SkillTree dashboard will send emails in support of password reset requests for Dashboard users, as well as self-reported Skill approval requests. If Email Server settings are not configured, the password reset feature will be disabled.
 
 ![Email Settings](./screenshots/email_settings_20210401.png)
@@ -46,7 +48,16 @@ both html and plaintext are required if configuring a header or footer
 &lt;script&gt; tags are not permitted in the html configured for email header or footer
 :::
 
-## System Settings
+## Email Notifications
+SkillTree sends email notifications (ex. when [Self Reported](/dashboard/user-guide/self-reporting.htm) skills are requested). 
+
+In order for the notifications to work the following must be configured: 
+- [Email Server Settings](/dashboard/user-guide/settings.html#email-settings)
+- Set ``Public URL`` in the [System Settings](/dashboard/user-guide/settings.html#system-settings)
+- Set ``From Email`` in the [System Settings](/dashboard/user-guide/settings.html#system-settings)
+
+## System Settings <requires-role role="Root" />
+
 ![System Settings](./screenshots/system_settings_20201209.png)
 
 Both the ```Public URL``` and ```Password Reset Token Expiration``` settings are specific to supporting the dashboard password reset feature.

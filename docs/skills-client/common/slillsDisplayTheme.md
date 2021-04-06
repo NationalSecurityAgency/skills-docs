@@ -8,9 +8,9 @@ The theme object supports the following properties:
 | Prop          | Explanation  |
 | ------------- | -----------  |
 | backgroundColor | page background color |
-| maxWidth <since project="skills-service" version="1.4.0" /> | maximum width of the component, can use any units supported by [max-width CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) such as ``%``, ``em`` and ``px`` (ex. ``100%``); default is ``1140px``  |
-| landingPageTitle <since project="skills-service" version="1.4.0" /> | title of the landing page, default is ``User Skills`` |
-| pageTitleFontSize <since project="skills-service" version="1.4.0" /> | font size of the title, can use any units supported by [font-size CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) such as ``%``, ``em`` and ``px`` (ex. ``1.2em``) |
+| maxWidth <since project="skills-service" version="1.4.0" :is-block="true"/> | maximum width of the component, can use any units supported by [max-width CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) such as ``%``, ``em`` and ``px`` (ex. ``100%``); default is ``1140px``  |
+| landingPageTitle <since project="skills-service" version="1.4.0" :is-block="true"/> | title of the landing page, default is ``User Skills`` |
+| pageTitleFontSize <since project="skills-service" version="1.4.0" :is-block="true"/> | font size of the title, can use any units supported by [font-size CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) such as ``%``, ``em`` and ``px`` (ex. ``1.2em``) |
 | pageTitleTextColor | page header title text color | 
 | circleProgressInteriorTextColor | 'x out of yyyy' text color inside circle progress widgets |
 | progressIndicators.beforeTodayColor | progress bar color for points earned before today | 
@@ -24,8 +24,8 @@ The theme object supports the following properties:
 | charts.axisLabelColor | color of scales/axis text on charts | 
 | tiles.backgroundColor | tile background color, such as subject tiles | 
 | tiles.watermarkIconColor | My Rank, Rank overview, My Badges watermark icon color | 
-| buttons.backgroundColor <since project="skills-service" version="1.4.0" /> | background for buttons | 
-| buttons.foregroundColor <since project="skills-service" version="1.4.0" /> | foregroundColor for buttons including text and border |
+| buttons.backgroundColor <since project="skills-service" version="1.4.0" :is-block="true"/> | background for buttons | 
+| buttons.foregroundColor <since project="skills-service" version="1.4.0" :is-block="true"/> | foregroundColor for buttons including text and border |
 | graphLegendBorderColor | border color of dependency graph legend | 
 | subjectTileIconColor | color of subject tile icons |
 | trophyIconColor | color of the My Level trophy |
