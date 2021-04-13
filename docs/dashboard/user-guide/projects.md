@@ -15,13 +15,13 @@ The Dashboard user that creates a project is automatically granted the role of a
 |:------- |:----------- | 
 | [Subjects](/dashboard/user-guide/subjects.html) | Add, edit or remove Subjects | 
 | [Skills](/dashboard/user-guide/skills.html)  | Add, edit or remove Skill definitions | 
-| [Access Management](/dashboard/user-guide/access-management.html) | Assign or remove Project's administrators | 
+| [Access Management](/dashboard/user-guide/access.html) | Assign or remove Project's administrators | 
 | [Badges](/dashboard/user-guide/badges.html) | Add, edit or remove Project's Badges |
 | [Levels](/dashboard/user-guide/levels.html) | Customize number of Levels and their attributes |
 | [Dependencies](/dashboard/user-guide/dependencies.html) | Specify the order of Skills completion. For example Skill A must be completed before Skill B can be attempted | 
-| [Cross-project Dependencies](/dashboard/user-guide/cross-project-deps.htm) | Create and manage Skill dependencies across multiple Projects which practically equates to cross-application Skills |
+| [Cross-project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) | Create and manage Skill dependencies across multiple Projects which practically equates to cross-application Skills |
 | [Metrics](/dashboard/user-guide/metrics.html) | Charts and graph. These are page specific - Project, Subject, Badge, and User will have stats specifically for those pages |
-| [Issues](/dashboard/user-guide/issues.html) | Errors related to the Project such as non-existant Skills that have been reported | 
+| [Issues](/dashboard/user-guide/issues.html) | Errors related to the Project such as non-existant Skills that have been reported |       
 | [Settings](/dashboard/user-guide/projects.html#settings) | Project level settings |   
 
 ## Settings
