@@ -81,6 +81,7 @@ module.exports = {
                     '/dashboard/user-guide/dependencies',
                     '/dashboard/user-guide/users',
                     '/dashboard/user-guide/metrics',
+                    '/dashboard/user-guide/issues',
                     '/dashboard/user-guide/inception',
                     '/dashboard/user-guide/administration',
                 ]
