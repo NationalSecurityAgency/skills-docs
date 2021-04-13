@@ -1,12 +1,24 @@
-# Administration Settings
+# Settings
 
 The SkillTree Dashboard requires very little administration, however there are several settings that may need attention depending on your configuration.
 
-Administration settings can be accessed by the [Root](/dashboard/user-guide/users.html#root) user via the ```Settings``` menu entry in the drop down menu available by clicking on the Root user's username.
+Administration settings can be accessed by users via the ```Settings``` menu entry in the drop-down menu located on the top-right of the application.
+Please note that number of settings' section are only visible to users with the [Root](/dashboard/user-guide/users.html#root) role. 
 
-![Settings Menu](./screenshots/settings_menu_20201209.png)
+![SkillTree Dashboard Menu](../../overview/screenshots/Screenshot_2021-03-31SkillTreeDashboard-ViewMenu.png)
 
-## Security Settings
+As of version 1.4.0, the default view in the Dashboard has changed. Now, when a user accesses the Dashboard, a Progress and Rankings view
+for all projects with ```Production Mode``` enabled will be displayed for the current user. This allows the current user to access their Progress and Ranking for
+all projects available on that instance of SkillTree in one place. Both the ```Progress and Ranking``` and the ```Project Admin```
+views can be accessed from the drop down menu at the top right.
+
+
+## Preferences
+The default view can be configured per user via the ```Settings``` menu item, under ```Preferences```
+![SkillTree Dashboard Menu](../../overview/screenshots/Screenshot_2021-03-31SkillTreeDashboard-Settings-Preferences.png)
+
+## Security Settings <requires-role role="Root" />
+
 The ```Security``` menu item supports the administration of [Root](/dashboard/user-guide/users.html#root) users and [Supervisor](/dashboard/user-guide/users.html#supervisor) users.
 
 ![Root User Management](./screenshots/root_users_management_20201209.png)
@@ -15,10 +27,11 @@ The ```Security``` menu item supports the administration of [Root](/dashboard/us
 
 To grant [Root](/dashboard/user-guide/users.html#root) or [Supervisor](/dashboard/user-guide/users.html#supervisor) privileges to a user, that user must have an existing account for the SkillTree Dashboard. User management will also prevent the removal of any permissions from the currently authenticated user.  
 
-## Email Settings
-The primary scenario in which the SkillTree dashboard will send emails is in support of password reset requests for Dashboard users. If Email Server settings are not configured, the password reset feature will be disabled.
+## Email Settings <requires-role role="Root" />
 
-![Email Settings](./screenshots/email_settings1_20201209.png)
+The SkillTree dashboard will send emails in support of password reset requests for Dashboard users, as well as self-reported Skill approval requests. If Email Server settings are not configured, the password reset feature will be disabled.
+
+![Email Settings](./screenshots/email_settings_20210401.png)
 
 Email server configuration supports TLS enabled smtp servers, as well as username/password authentication. Changing the ```Authentication``` switch to ```Authentication Enabled``` will reveal the ```Username``` and ```Password``` configuration fields.
 
@@ -26,7 +39,25 @@ Email server configuration supports TLS enabled smtp servers, as well as usernam
 The email settings form provides a ```Test``` button that can be used to confirm that the dashboard will be able to communicate with the configured mail server. The configured settings will not be applied if the dashboard is unable to successfully communicate with the configured mail server.
 :::
 
-## System Settings
+An optional Header and Footer can be configured to be included on emails that emanate from the Skilltree platform. 
+::: tip
+both html and plaintext are required if configuring a header or footer
+:::
+
+::: warning
+&lt;script&gt; tags are not permitted in the html configured for email header or footer
+:::
+
+## Email Notifications
+SkillTree sends email notifications (ex. when [Self Reported](/dashboard/user-guide/self-reporting.htm) skills are requested). 
+
+In order for the notifications to work the following must be configured: 
+- [Email Server Settings](/dashboard/user-guide/settings.html#email-settings)
+- Set ``Public URL`` in the [System Settings](/dashboard/user-guide/settings.html#system-settings)
+- Set ``From Email`` in the [System Settings](/dashboard/user-guide/settings.html#system-settings)
+
+## System Settings <requires-role role="Root" />
+
 ![System Settings](./screenshots/system_settings_20201209.png)
 
 Both the ```Public URL``` and ```Password Reset Token Expiration``` settings are specific to supporting the dashboard password reset feature.

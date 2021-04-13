@@ -4,6 +4,33 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.4.0  
+<release-date date="Apr. 2021" />
+- implemented ``Progress and Ranking``page  - *new default* landing page
+  - visualize user's progress and ranking across all of the integrated projects
+  - provide capability to drill down to each project and view its ``Skills Display`` 
+  - added the ability to customize landing page per user between ``Progress and Ranking`` and the original ``Project Admin`` view
+  - project admin can place the project into production mode via the ``Settings`` page which will then display that project on the ``Progress and Ranking`` page  
+- added ``Self Reporting`` capability
+  - ``Skills Display`` presents an "I did it" button for skills with self-reporting enabled
+  - project admins can configure self reported skills as either ``Honor System`` or ``Requires Approval``
+  - implemented new ``Self Report`` project page to manage approval requests
+  - email notifications are sent when points are requested, approved, and rejected
+- implemented accessibility testing and drastically improved accessibility compliance
+  - automated accessibility score generated on every push to master and prominently displayed on GitHub
+- added storage of ALL user events related to a skill id, whether applied or not
+  - updated metrics to utilize ALL events
+  - added ``Post Achievement`` metrics to depict whether a skill is utilized after achievement
+- created new ``Issues`` project page; exposed errors when a *skill id* is reported that does not exist in the project's definition
+- added ability to configure custom email html header and footer in the dashboard's settings
+- added ``Admin`` stamp in the header to clearly indicate when using Administrative portion of the dashboard
+- implemented additional ``Skills Display`` component theme options
+- replaced vue-table-2 with the vue-bootstrap Table Component
+
+#### 1.3.1
+<release-date date="Jan. 2021" />
+- Enabled cross-origin resource sharing (CORS) on the ``/app/userInfo`` endpoint.
+
 #### 1.3.0
 <release-date date="Dec. 2020" />
 - Revamped project-level and cross-project visualizations and metrics

@@ -1,3 +1,31 @@
+const fs = require('fs');
+const fetch = require('node-fetch');
+
+const accessibility_score = 'https://raw.githubusercontent.com/NationalSecurityAgency/skills-service/badges/master/average_accessibility_score.svg';
+function dli() {
+    return new Promise(resolve => {
+        fetch(accessibility_score,
+          { mode: 'no-cors' })
+          .then(response => response.blob())
+          .then(blob => {
+              blob.arrayBuffer().then((arrayBuf) => {
+                  const buffer = Buffer.from(arrayBuf);
+                  fs.writeFile('docs/.vuepress/public/img/average_accessibility_score.svg', buffer, () => {
+                      console.log('accessibility score saved!');
+                      resolve();
+                  });
+              });
+          });
+    });
+}
+
+async function downloadIcon(){
+    console.log('downloading latest average_accessibility_score.svg from github');
+    await dli();
+}
+
+downloadIcon();
+
 module.exports = {
     port: 9999,
     title: 'SkillTree Docs',
@@ -44,9 +72,11 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/dashboard/user-guide/',
+                    '/dashboard/user-guide/progress-and-ranking',
                     '/dashboard/user-guide/projects',
                     '/dashboard/user-guide/subjects',
                     '/dashboard/user-guide/skills',
+                    '/dashboard/user-guide/self-reporting',
                     '/dashboard/user-guide/levels',
                     '/dashboard/user-guide/badges',
                     '/dashboard/user-guide/icons',
@@ -54,7 +84,7 @@ module.exports = {
                     '/dashboard/user-guide/users',
                     '/dashboard/user-guide/metrics',
                     '/dashboard/user-guide/inception',
-                    '/dashboard/user-guide/administration',
+                    '/dashboard/user-guide/settings',
                 ]
             },
             {

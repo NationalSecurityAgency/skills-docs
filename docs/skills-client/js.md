@@ -110,12 +110,10 @@ Usage is trivial:
 Here is an example of initializing SkillsDisplayJS (assuming you already configured via ``` SkillsConfiguration.configure```, see the [SkillsConfiguration Documentation](/skills-client/js.html#skills-configuration) )
 * Note: This assumes there is a DIV in your DOM with id ```skills-client-container``` for SkillsDisplayJS to attach to
 
-``` js{3-4}
+``` js{2-3}
 SkillsConfiguration.afterConfigure().then(() => {
-  const initializeSkillsDisplay = () => {
     const clientDisplay = new SkillsDisplayJS();
     clientDisplay.attachTo(document.querySelector('#skills-client-container'));
-  };
 });
 ```
 

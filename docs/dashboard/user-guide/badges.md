@@ -51,7 +51,8 @@ When all of the configured skills and levels are accomplished, that badge is ach
 Global Badges are specifically used to reward users for achieving skills that involve multiple projects, 
 and can only be created by Dashboard users that have the [Supervisor](/dashboard/user-guide/users.html#user-roles) role.  
 
-Creating Global Badges is simple: 
+Creating Global Badges is simple (<requires-role role="Supervisor" />):
+
 1. Navigate to ``Home -> Badges`` and click ``Badge +``
     - You can (and should) assign an [Icon](/dashboard/user-guide/icons.html) to your badge.
 1. Once a badge is created you can assign existing skills and/or project levels to that badge.  
