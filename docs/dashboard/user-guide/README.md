@@ -22,7 +22,7 @@ By default, the [Progress and Ranking](/dashboard/user-guide/progress-and-rankin
 
 ## Building Training Profile
 
-When integrating gamification a training into your application, you will first need to build a training profile. 
+When integrating gamification training into your application, you will first need to build a training profile. 
 The first step is to create a brand-new project. 
 Projects are composed of Subjects which are made of Skills, and a single skill defines a training unit within the gamification framework. 
 
