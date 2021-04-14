@@ -14,7 +14,8 @@ The Dashboard user that creates a project is automatically granted the role of a
 | Function | Explanation | 
 |:------- |:----------- | 
 | [Subjects](/dashboard/user-guide/subjects.html) | Add, edit or remove Subjects | 
-| [Skills](/dashboard/user-guide/skills.html)  | Add, edit or remove Skill definitions | 
+| [Skills](/dashboard/user-guide/skills.html)  | Add, edit or remove Skill definitions |
+| [Self Reporting](/dashboard/user-guide/self-reporting.html) | Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. |
 | [Access Management](/dashboard/user-guide/access.html) | Assign or remove Project's administrators | 
 | [Badges](/dashboard/user-guide/badges.html) | Add, edit or remove Project's Badges |
 | [Levels](/dashboard/user-guide/levels.html) | Customize number of Levels and their attributes |

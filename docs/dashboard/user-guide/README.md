@@ -1,14 +1,25 @@
 # Overview
 
-The dashboard is a web-based user interface that enables creation and management of an applications' training profile. 
-It also provides corporate visibility of application expertise and offers metrics and various visualizations.  
-The dashboard is used by application administrators/integrators as well as supervisors. 
- 
-![Dashboard with Integrated Application Image](./diagrams/DashboardWithIntegratedApp.jpg)
+At the heart of the SkillTree platform is the SkillTree dashboard - a web-based user interface. 
+SkillTree Dashboard provides these main functions: 
+1. Enables creation and management of an applications' [training profile](/dashboard/user-guide/#building-training-profile)
+1. Visualizes user's [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html)
+1. Provides corporate visibility of application expertise and offers metrics and various visualizations.  
 
-If your organization is running the SkillTree platform, then you will be provided with its URL to get started. 
-If you are installing the the SkillTree platform from scratch (see [Install Guide](/dashboard/install-guide/)) then... well you just know where it's running. 
-   
+![Skills Platform Overview Image](../../overview/diagrams/SkillTreePlatformOverview.png)
+
+::: tip
+- If your organization is running the SkillTree platform, then you will be provided with its URL to get started. 
+- If you are installing the the SkillTree platform from scratch (see [Install Guide](/dashboard/install-guide/)) then... well you just know where it's running. 
+:::
+
+Dashboard encompasses two views: 
+
+- [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html): A single point of access for training profiles available to the user as well as user's current progress and ranking
+- [Admin View](/dashboard/user-guide/admin-view.html): Create and manage training profiles for one or more projects
+
+By default [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) is the landing page but can be changed to the [Admin View](/dashboard/user-guide/admin-view.html) via [Preferences Page](/dashboard/user-guide/settings.html#preferences)
+
 ## Building Training Profile
 
 If you are integrating gamification training into your application you will first need to build a training profile. 
@@ -23,7 +34,11 @@ Consider the following items when designing your training profile:
 1. [Skills](/dashboard/user-guide/skills.html): A Skill defines a single training unit within the gamification framework.
    - To complete a skill, users may need to perform the same action multiple times - repetition is important for retention after all. Each occurrence is called a Skill Event.
    - Description is optional and can be used to document training steps or additional references or information related to the skill. 
-   - Help URL can be used to point to additional resources.  
+   - Help URL can be used to point to additional resources.
+1. [Self Reporting](/dashboard/user-guide/self-reporting.html): Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component.
+   - can craft training profiles consisting of: only self-reported skills OR
+   - a mix of self-reported skills and skills that are reported programmatically OR
+   - a project could have no self-reported skills at all
 1. [Levels](/dashboard/user-guide/levels.html): Levels are users' achievement path - the overall goal of the training profile is to encourage users to achieve the highest level. 
    - Levels are tracked for the entire project as well as for each subject which provides users many ways to progress forward, as well as frequent positive reinforcement opportunities.
    - The Skills dashboard supports two ways to manage levels: Percentage Based (default) and Point based. If you are not sure which to go with stick with the default.    
@@ -39,7 +54,6 @@ Consider creating skills that won't be reported automatically but rather will re
 [Manually add the Skill](/dashboard/user-guide/skills.html#manually-add-skill-event). Why would you do that? If you want to encourage
 customer interaction such as collecting success stories. In fact ``Report A Success Story`` can be a skill of its own!
 :::
-
 
 ## Browser Support
 
