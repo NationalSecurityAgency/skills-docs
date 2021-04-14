@@ -41,13 +41,14 @@ To facilitate rapid application incorporation, the platform provides the followi
 - **Dashboard and Service:** Simple management through a centralized Web-Based User Interface and data API service. 
   - *Effective and visual skill definition management* - create and manage things like subjects, skills, levels, badges, and dependencies
   - *Comprehensive Visualization* - through sophisticated analytics, enables unmatched corporate visibility of application expertise; provides an additional facet of application usage visibility (ex. identifying expert users)
+  - *Progress and Ranking* - extensive views to show user's current Progress and Ranking across all the projects   
 - **Display Libraries:** Pluggable and fully interactive user skill and ranking visualization
   - Customize and use the display component in your application within minutes. 
   - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
 - **Skill Event Reporting Libraries:** Easily integrate your application by reporting skill events to the centralized service.
   - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
 
-![Skills Platform Overview Image](./diagrams/SkillsPlatformOverview.jpg)
+![Skills Platform Overview Image](./diagrams/SkillTreePlatformOverview.png)
   
 ## Who is it for?
 

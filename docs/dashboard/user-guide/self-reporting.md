@@ -1,4 +1,4 @@
-# Self Report <since project="skills-service" version="1.4.0" />
+# Self Reporting <since project="skills-service" version="1.4.0" />
 
 Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. 
 A project administrator can enable ``Self Reporting`` for a skill, set of skills or even all the skills in a project. 
@@ -38,10 +38,16 @@ Once Self Reporting is enabled for a skill, users will see an ``I did it`` butto
 
 Skills and Self Reporting can either be accessed
 1. in the Skills Display component embedded within your application (via [Client Libraries](/skills-client/#client-display-integration)) *OR*
-1. in the ``Progress And Rankings`` display of the Dashboard
+1. in the [Progress And Rankings](/dashboard/user-guide/progress-and-ranking.html) display of the Dashboard
     - Navigate to ``Project and Rankings`` then click on your project's card
     - Please note that the ``Production Mode`` must be enabled for your project to be visible in the ``Progress And Ranking`` view, please see [Setting: Production Mode](/dashboard/user-guide/projects.html#settings)
     
+::: tip
+You can create a project that consists purely of Self Reported skills! Users will then report completion using [Progress And Rankings](/dashboard/user-guide/progress-and-ranking.html) display of the Dashboard.
+Alternatively you can have only some skills configured with Self Reporting or no skills at all. In this case [Skill Client Libraries](skills-client/) are used to report skill events. 
+
+:::
+
 ## Approval Queue
 
 If a skill is configured with Self Reporting type of the ``Approval Queue`` then points will not be awarded right away but rather go

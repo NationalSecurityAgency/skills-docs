@@ -73,6 +73,7 @@ module.exports = {
                 children: [
                     '/dashboard/user-guide/',
                     '/dashboard/user-guide/progress-and-ranking',
+                    '/dashboard/user-guide/admin-view',
                     '/dashboard/user-guide/projects',
                     '/dashboard/user-guide/subjects',
                     '/dashboard/user-guide/skills',
