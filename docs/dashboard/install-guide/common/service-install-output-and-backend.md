@@ -15,7 +15,7 @@ Your output will look something like this (the majority of the output was omitte
 2020-07-16 19:43:01.192  INFO 9103 --- [           main] skills.SpringBootApp                     : Started SpringBootApp in 20.159 seconds (JVM running for 21.368)
 ```
 
-The dashboard is now running on [http://localhost:8080](http://localhost:8080). It will prompt you to create a [Dashboard root account](/dashboard/user-guide/users.html#root).  
+The dashboard is now running on [http://localhost:8080](http://localhost:8080). Visit the [dashboard](http://localhost:8080) in a web browser and fill out the form to create the initial [Dashboard root account](/dashboard/user-guide/users.html#root).  
 
 Well... that's it! 
 
