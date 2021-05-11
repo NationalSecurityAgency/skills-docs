@@ -2,7 +2,7 @@
 
 Generally integration follows the proceeding steps:
 
-1. Create and customize your training profile in the skill's dashboard
+1. Create and customize your training profile in the SkillTree dashboard
 1. Integrate client [Skill Display](/skills-client/#client-display-integration) libraries
 1. Integrate skill [event reporting](/skills-client/#report-events-integration) either using client libraries and/or REST endpoints
 
@@ -11,7 +11,7 @@ Generally integration follows the proceeding steps:
 Please visit the [Dashboard Guide](/dashboard/user-guide/) to learn about the best practices and options for customizing your gamification training profile.
 This Integration Guide focuses on step 2 and 3: integration of the Client Display and the reporting libraries. 
 
-## Client Display Integration 
+## Skills Display Integration 
 
 We generally recommend the following integration pattern:
 
