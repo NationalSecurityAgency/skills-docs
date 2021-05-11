@@ -2,7 +2,7 @@
 
 Generally integration follows the proceeding steps:
 
-1. Create and customize your training profile in the skill's dashboard
+1. Create and customize your training profile in the SkillTree dashboard
 1. Integrate client [Skill Display](/skills-client/#client-display-integration) libraries
 1. Integrate skill [event reporting](/skills-client/#report-events-integration) either using client libraries and/or REST endpoints
 
