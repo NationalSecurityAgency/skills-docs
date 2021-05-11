@@ -7,8 +7,8 @@ Some examples include:
 - You may need to report skill events from server side components
 
 ::: warning Please Note
-If you are looking for the endpoints to retrieve progress and ranking data that is not supported 
-by the SkillTree platform. In lue of those endpoints and in order to support rapid integration 
+If you are looking for endpoints to retrieve progress and ranking data, that is not supported 
+by the SkillTree platform. In liu of those endpoints and in order to support rapid integration 
 SkillTree has taken an innovative approach of supplying fully navigable **Ranking and Visualization** views.
 Please take a look at the [Integration Guide Overview](/skills-client/#overview) to learn more.
 :::
@@ -19,8 +19,8 @@ Public Endpoints (only 1 so far):
   - *Purpose:* Report Skill Events
   - *Detailed Description:* [Click Here](#report-skill-event-endpoint)
 
-This endpoint requires authentication and a user id in order to perform their functions. 
-Please select your installation type below for the instructions:
+This endpoint requires authentication and a user id in order to perform its functions. 
+Please select your installation type below for specific instructions:
 
 <form-and-pki 
     pki-path="/skills-client/auth/endpointsAuthPKI.html"
