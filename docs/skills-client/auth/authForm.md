@@ -3,6 +3,39 @@
 Production based installation will require you to implement an authentication endpoint. 
 The goal of the endpoint is to authorize a specific user so that the skills display and skills reporting can be properly secured.    
 
+**Why the need for this endpoint?**  
+Rather than using API to build displays SkillTree platform provides fully navigable **Ranking and Visualization views** 
+that are directly embeddable into a web-based application. These **Ranking and Visualization views** need a way
+to authorize a user so only data for that user is loaded and shared in those UI components. To address this issue
+SkillTree utilizes [OAuth2](https://auth0.com/docs/protocols/oauth2) protocol to retrieve a temporary client token 
+which is then used to identify that user. This backend *Authentication Endpoint* completes [OAuth2](https://auth0.com/docs/protocols/oauth2) integration for your project. 
+
+
+::: tip Please Note
+**Without** implementing this endpoint authentication parameters would be exposed  
+in the browser and anyone could then make requests on the behalf of any user. 
+:::
+
+To properly secure authentication parameters the following flow is utilized:
+
+![Auth Endpoint Flow](../diagrams/AuthEndpointFlow.jpg)
+
+1. SkillTree [Client Library](/skills-client/) is loaded in a browser
+1. SkillTree [Client Library](/skills-client/) requests a user token from *Your App Backend Server*.
+1. *Your App Backend Server* uses the project's ```Client ID``` and ```Client Secret``` to obtain the user's token (on behalf of this user) from the SkillTree backend server, which is sent back to the SkillTree client library (running in the browser).
+   - Your project's ```Client ID``` and ```Client Secret``` are **not** exposed to the browser. To ensure the safety of these credentials, they must only to be securely available to your back-end application server
+   - ```Client ID``` and ```Client Secret``` come from the SkillTree dashboard under ``Project -> Access -> 'Trusted Client Properties'``
+1. Your JS code then uses SkillTree [Client Library](/skills-client/) to load Ranking and Visualizations ([Skills Display](/skills-client/#skills-display-integration) Component) and to [report skill events](/skills-client/#report-events-integration) to the SkillTree backend server. 
+   - To identify user securely and accurately SkillTree [Client Library](/skills-client/) sends the token obtained in steps 2-3 as an HTTP Header with each request.
+
+::: tip
+Please note that SkillTree platform simply requires you to implement this authentication endpoint and then configure it when JS client library is initialized. 
+The rest is taken care by the library (ex. display of the fully navigable visualizations and skill event reporting JS methods).
+
+We provide an example of the authentication endpoint implementation below. A full working example can also be found by following the [Quick Start](https://code.nsa.gov/skills-docs/dashboard/install-guide/quickStart.html) section. 
+:::
+
+## Implementing Authentication Endpoint
 The authentication endpoint produces a user specific temporary client token by utilizing a project's ```Client ID``` and ```Client Secret``` 
 (found in the dashboard under ```Project -> Access -> 'Trusted Client Properties'``` ) 
 

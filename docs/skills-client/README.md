@@ -11,7 +11,7 @@ Generally integration follows the proceeding steps:
 Please visit the [Dashboard Guide](/dashboard/user-guide/) to learn about the best practices and options for customizing your gamification training profile.
 This Integration Guide focuses on step 2 and 3: integration of the Client Display and the reporting libraries. 
 
-## Client Display Integration 
+## Skills Display Integration 
 
 We generally recommend the following integration pattern:
 
