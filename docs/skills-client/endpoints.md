@@ -5,20 +5,22 @@ Client side libraries take care of reporting skills and visualizing display resu
 Some examples include:
 - You may not be able to use one of the supported frameworks to reports skills
 - You may need to report skill events from server side components
-- You are using plain old Javascript support and you want to preview a user's level
 
-Public Endpoints:
+::: warning Please Note
+If you are looking for endpoints to retrieve progress and ranking data, that is not supported 
+by the SkillTree platform. In liu of those endpoints and in order to support rapid integration 
+SkillTree has taken an innovative approach of supplying fully navigable **Ranking and Visualization** views.
+Please take a look at the [Integration Guide Overview](/skills-client/#overview) to learn more.
+:::
+
+Public Endpoints (only 1 so far):
 - [``[Service URL]``/api/projects/``[Project Id]``/skills/``[Skill Id]``](#report-skill-event-endpoint)
   - *HTTP Methods:* POST, PUT
   - *Purpose:* Report Skill Events
   - *Detailed Description:* [Click Here](#report-skill-event-endpoint)
-- [``[Service URL]``/api/projects/``[Project Id]``/level](#retrieve-current-level-endpoint)
-  - *HTTP Method:* GET
-  - *Purpose:* Retrieve user's current overall level
-  - *Detailed Description:* [Click Here](#retrieve-current-level-endpoint)
 
-Both of these endpoints require authentication and authorization and a user id in order to perform their functions. 
-Please select your installation type below for the instructions:
+This endpoint requires authentication and a user id in order to perform its functions. 
+Please select your installation type below for specific instructions:
 
 <form-and-pki 
     pki-path="/skills-client/auth/endpointsAuthPKI.html"
@@ -166,23 +168,6 @@ Once all of the required occurrences are reported then the skill completion will
 ::: tip
 You can use this result object to implement a messaging center - to report messages of encouragement to your users as they complete skills, level-up and earn badges. 
 :::
-
-## Retrieve Current Level Endpoint
-
-/level is an endpoint that supports retrieving the user's overall level. You may want to use this endpoint to show the user's level in the header of your application. 
-Keep in mind that it will be the user's current level and you will need to check the result of the [Report Skills Events Endpoint](#report-skill-events-endpoint) in order to discover when that user levels-up. 
-
-::: warning
-If you are using one of the supported frameworks (Vue.js, React, Angular) there is no reason to ever call this endpoint directly. 
-You should be utilizing the provided reactive component that will retrieve the user's current level and automatically update the level if/when that user levels-up.  
-::: 
-
-To get the user's current level you can perform a GET request on:
-``[Service URL]``/api/projects/``[Project Id]``/level
-
-where
-- **Service URL**: Fully qualified URL of the skills service/dashboard, if you are running it locally then something like ``http://localhost:8082`` 
-- **Project Id**: Project id for the reported skill
 
 ## Java Examples
 
