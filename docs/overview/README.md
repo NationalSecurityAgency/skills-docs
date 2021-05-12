@@ -25,10 +25,12 @@ Want to know what SkillTree Looks like? Take a look at the [Screenshots](/overvi
 
 ## What is it?
 
-SkillTree platform consists of 2 major components: the dashboard and JS client libraries. 
-Using SkillTree Dashboard, a web-based user-friendly interface, integrators create and manage gamified training profile.
-Then JS display libraries are integrated into your existing web-based application which provide your users a fully interactive user ranking and progress display. 
-The last step is to instrument your web-based application to report learning events to the SkillTree centralized service - provided JS libraries make this process very seamless.  
+The SkillTree platform consists of 2 major components: the dashboard and the JS client libraries.
+Using the SkillTree Dashboard, a web-based user-friendly interface, integrators create and manage a gamified training profile.
+Then the JS display libraries are integrated into your existing web-based application which provides your users a fully interactive user ranking and progress display.
+The last step is to instrument your web-based application to report learning events to the SkillTree centralized service - the provided JS libraries make this process very simple.
+
+![Integrated Application Image](./diagrams/SkillTree-MajorComponents.jpg)
 
 Want to know what these User Interfaces look like? Take a look at the [Screenshots](/overview/#screenshots) section. 
 
@@ -49,7 +51,17 @@ To facilitate rapid application incorporation, the platform provides the followi
   - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
 
 ![Skills Platform Overview Image](./diagrams/SkillTreePlatformOverview.png)
-  
+
+::: tip Progress and Ranking Display  
+Please note that SkillTree has taken an innovative approach of providing pluggable and fully interactive user progress and ranking visualization
+and therefore does **not** support a public API to build your own progress and ranking displays.
+::: 
+
+This approach delivers a number of benefits to a SkillTree integrator:
+- Resources and cost savings because there is no need for you to implement, test and maintain your own gamified progress and ranking views
+- Ability to rapidly integrate SkillTree into an existing web application
+- SkillTree continuously improves the ranking/progress views and adds new features to these display. Integrators can take advantage of these improvements by simply upgrading.
+
 ## Who is it for?
 
 Any application with numerous features could benefit from in-context training using this gamfication strategy. 
@@ -208,11 +220,18 @@ specific subject and metrics on the project page will be for the entire project.
 SkillTree JS display libraries are integrated into your existing web-based application which provide your users a fully
 interactive user ranking and progress display. The screenshots below highlight some of the features of this display. 
 
-This is a landing page for the display components that shows user's progress and ranking: 
+This is a landing page for the display components that shows user's progress and ranking:
 ![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16ClientDisplay0.png)
 
 ------------------------
 ------------------------
+
+SkillTree integrated displays can be themed. For example, you can easily style it to look something like this:
+![SkillTree Screenshot](./screenshots/Screenshot_2021-05-12SkillsExamplesVuejs.png)
+
+------------------------
+------------------------
+
 User's rank overview: 
 ![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16ClientDisplay1.png)
 
