@@ -130,6 +130,19 @@ const clientDisplay = new SkillsDisplayJS({
 
 <import-content path="/skills-client/common/skillsDisplayArguments.html"/>
 
+#### Route changed event <since project="skills-client" version="3.3.0" />
+
+Each time a user navigates within the Skills Client Display, if configured, the `handleRouteChanged` callback function will be invoked and passed the new path that was navigated to.  This can be useful if the hosting application displays a breadcumb and would like to update the current location within the Skills Client Display component.
+
+``` js
+const handleRouteChanged = (newPath) => {
+    console.log(`New Skills Display path: [${newPath}]`);
+};
+
+const clientDisplay = new SkillsDisplayJS({
+    handleRouteChanged: handleRouteChanged,
+});
+```
 
 ### Skills Display Options Object
 
