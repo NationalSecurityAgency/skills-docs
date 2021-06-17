@@ -4,6 +4,24 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+
+#### 1.5.0  
+<release-date date="Jun. 2021" />
+- Implemented Leaderboard in the SkillsDisplay views
+  - Displays ``Top 10`` users OR ``10 Around Me`` users
+  - Users can Opt-Out in the Dashboard Settings from the Leaderboard participation
+  - Administrators can Opt-out all of the project administrators from the Leaderboard participation 
+- Added SkillTree brand on the SkillsDisplay views
+- Implemented ability to configure User Agreement for the dashboard users; when configured User Agreement is presented at account registration time
+- Implemented workflow to remove unused projects
+  - (1) discover unused, (2) notify administrators (3) remove if action is not taken
+- Improved look-and-feel for projects, subjects and badges navigation and metrics cards
+- Improve admin's projects page display and latency to better handle many projects per user
+- Improve usability of initiating an edit of an item (project, subject, skill or badge)
+- Ability to copy an existing skill
+- Bug fixes and CI improvements
+ 
+
 #### 1.4.0  
 <release-date date="Apr. 2021" />
 - implemented ``Progress and Ranking``page  - *new default* landing page

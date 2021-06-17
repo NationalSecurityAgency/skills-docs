@@ -4,6 +4,13 @@ This page documents high-level release notes for [SkillTree Client](https://gith
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 3.3.0
+<release-date date="Jun. 2021" />
+- Improved resilience of skill event reporting. Failed attempts are stored in browser's local cache and are retried
+- Enhanced ``SkillsDisplay`` component to support browsers native back button as well as deep linking; this feature was added in all of the libraries
+- Implemented route changed event (``handleRouteChanged``) to the ``SkillsDisplay`` component 
+- Bug Fixes
+
 #### 3.2.0
 <release-date date="Apr. 2021" />
 - Allow ``SkillsConfiguration.configure`` to be called multiple times
