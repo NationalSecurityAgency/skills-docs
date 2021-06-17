@@ -29,6 +29,9 @@ The theme object supports the following properties:
 | graphLegendBorderColor | border color of dependency graph legend | 
 | subjectTileIconColor | color of subject tile icons |
 | trophyIconColor | color of the My Level trophy |
+| backButton.padding <since project="skills-service" version="1.4.0" :is-block="true"/> | optionally customize back button's padding (only applicable if the ``internalBackButton`` is enabled via the ``options`` object) |
+| backButton.fontSize <since project="skills-service" version="1.4.0" :is-block="true"/> | optionally customize back button's icon size (only applicable if the ``internalBackButton`` is enabled via the ``options`` object) |
+| backButton.lineHeight <since project="skills-service" version="1.4.0" :is-block="true"/> | optionally customize back button's height (only applicable if the ``internalBackButton`` is enabled via the ``options`` object) | 
 
 
 Example of a 'Dark Blue' theme object
