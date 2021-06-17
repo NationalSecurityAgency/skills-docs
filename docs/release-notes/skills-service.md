@@ -9,13 +9,13 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 <release-date date="Jun. 2021" />
 - Implemented Leaderboard in the SkillsDisplay views
   - Displays ``Top 10`` users OR ``10 Around Me`` users
-  - Users can Opt-Out in the Dashboard Settings from the Leaderboard participation
-  - Administrators can Opt-out all of the project administrators from the Leaderboard participation 
+  - Users can Opt-Out in the Dashboard Settings from Leaderboard participation
+  - Administrators can Opt-out all of the project administrators from Leaderboard participation 
 - Added SkillTree brand on the SkillsDisplay views
-- Implemented ability to configure User Agreement for the dashboard users; when configured User Agreement is presented at account registration time
+- Implemented ability to configure User Agreement for dashboard users; when configured, User Agreement is presented at first login. Changes to User Agreement will cause it to be re-displayed to any users who accepted the previous version.
 - Implemented workflow to remove unused projects
   - (1) discover unused, (2) notify administrators (3) remove if action is not taken
-- Improved look-and-feel for projects, subjects and badges navigation and metrics cards
+- Improved look-and-feel for projects, subjects and badges, navigation, and metrics cards
 - Improve admin's projects page display and latency to better handle many projects per user
 - Improve usability of initiating an edit of an item (project, subject, skill or badge)
 - Ability to copy an existing skill
