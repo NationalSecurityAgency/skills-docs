@@ -25,6 +25,10 @@ To calculate the total points that completion of a particular skill will give a 
 Total Points = Point Increment * Occurrences to Completion
 :::
 
+# Copy Skill
+
+A copy skill 
+
 ##### Best Practices
 
 - "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition (for example, prevent users from spamming an action in one sitting to max out a Skill by setting a Time Window of 1-8 hours)
