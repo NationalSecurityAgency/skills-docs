@@ -20,15 +20,6 @@ The Supervisor role allows users to manage Global Badges. Only users with the Ro
 
 Please visit the [Security Setting Section](/dashboard/user-guide/settings.html#security-settings) to learn how to assign this role.
 
-### User Agreement <since project="skills-service" version="1.5.0" :is-block="true"/>
-Users with the Root user role can configure a User Agreement that all dashboard users must acknowledge before being permitted to use any features of the Dashboard application.
-User Agreement configuration can be accessed by clicking on the user settings icon on the top right of the screen and selecting ```Settings -> System```. The User Agreement setting configuration supports Markdown.
-Once a User Agreement has been configured, all Dashboard users will be required to acknowledge the User Agreement after logging in. 
-
-::: tip
-Note that if the content of the User Agreement is changed, Dashboard users who acknowledged a previous version will be required to acknowledge the updated version.
-::: 
-
 ## Skills Display / Client Display
 
 You can see what the skills profile and progress display would like for a particular user by navigating to a specific user page in the dashboard - ``Project -> Users -> Select a User -> Client Display``. 
