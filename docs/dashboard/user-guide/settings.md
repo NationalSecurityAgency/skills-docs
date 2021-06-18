@@ -70,6 +70,14 @@ The ```From Email``` settings allows the ```Root``` user to configure what from 
 
 ``Custom Header`` and ```Custom Footer``` allow the ```Root``` user to specify HTML to be used as a custom header and footer that will be applied to the SkillTree dashboard.
 
+The ```User Agreement``` setting <since project="skills-service" version="1.5.0" :is-block="true"/>  allows the ```Root``` user to configure a User Agreement that all dashboard users must acknowledge before being permitted to use any features of the Dashboard application. The User Agreement setting configuration supports Markdown.
+Once a User Agreement has been configured, all Dashboard users will be required to acknowledge the User Agreement after logging in. 
+
+::: tip
+Note that if the content of the User Agreement is changed, dashboard users who acknowledged a previous version will be required to acknowledge the updated version.
+::: 
+
+
 ::: warning
 &lt;script&gt; tags are not permitted in the html configured for the header or footer
 :::
