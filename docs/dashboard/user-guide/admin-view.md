@@ -11,3 +11,7 @@ Please visit [Building Training Profile](/dashboard/user-guide/#building-trainin
 ::: tip
 By default [Progress and Ranking view](/dashboard/user-guide/progress-and-ranking.html) is the landing page but can be changed to the Admin View via [Preferences Page](/dashboard/user-guide/settings.html#preferences)
 :::
+
+::: tip NOTE
+Please note that in a rare case where a user creates more than 10 projects, they will be displayed in tabular format instead of the default cards. 
+:::
