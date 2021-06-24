@@ -25,16 +25,16 @@ context('Generate Admin Screenshots', () => {
         cy.visit('/administrator/projects/movies')
         cy.get('[data-cy="subjectCard-Action"]');
         cy.snap('page-subjects');
+
+        // badges page
+        cy.clickNav('Badges');
+        cy.get('[data-cy="manageBtn_DespicableMeCollection"]');
+        cy.snap('page-badges');
     });
 
 
     it('Gen Project pages', () => {
-        // badges page
         cy.visit('/administrator/projects/movies/badges')
-        cy.clickNav('Badges');
-        cy.get('[data-cy="manageBtn_DespicableMeCollection"]');
-        cy.snap('page-badges');
-
         // deps page
         cy.clickNav('Dependencies');
         cy.contains('Skill Dependencies')
@@ -55,6 +55,10 @@ context('Generate Admin Screenshots', () => {
         cy.get('[data-cy="Subjects-metrics-link"]').click();
         cy.contains('Number of users for each level for each subject');
         cy.contains('Number of users for each level over time')
+        cy.get('[data-cy="subjectNumUsersPerLevelOverTime-subjectSelector"]').select('Action');
+        cy.get('[data-cy="subjectNumUsersPerLevelOverTime"]').contains('Generate').click();
+        // wait for chart to generate
+        cy.wait(2222);
         cy.snap('page-project-metrics-subjects');
 
         // metrics subjects page

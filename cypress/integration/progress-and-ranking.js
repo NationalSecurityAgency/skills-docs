@@ -47,5 +47,12 @@ context('Generate Progress and Ranking Screenshots', () => {
     cy.snap('client-display-skills-selfReport', 'iframe');
   })
 
+  it('Gen Themed pages', () => {
+    cy.visit('/progress-and-rankings/projects/movies?enableTheme=true');
+    cy.clientDisplay(true).contains('My Level');
+    cy.snap('client-display-themed-proj', 'iframe');
+  })
+
+
 
 })

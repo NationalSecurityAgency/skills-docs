@@ -227,7 +227,7 @@ This is a landing page for the display components that shows user's progress and
 ------------------------
 
 SkillTree integrated displays can be themed. For example, you can easily style it to look something like this:
-![SkillTree Screenshot](./screenshots/Screenshot_2021-05-12SkillsExamplesVuejs.png)
+![SkillTree Screenshot](/img/screenshots/progress-and-ranking/client-display-themed-proj.png)
 
 ------------------------
 ------------------------
