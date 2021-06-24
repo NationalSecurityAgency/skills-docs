@@ -53,8 +53,7 @@ This UI component is integrated into your web-based application by utilizing Ski
 
 Below is a screenshot of the component's landing view: 
 
-![Skills Platform Skills Display Image](../overview/screenshots/Screenshot_2020-12-16ClientDisplay0.png)
-
+![Skills Platform Skills Display Image](/img/screenshots/progress-and-ranking/client-display-proj.png)
 Rank, Badges and Subject cards are clickable and allow users to drill down to those views.
 Please visit the [Screenshots](/overview/#ranking-and-progress-display) section to see more examples of the Skills Display component.
 
