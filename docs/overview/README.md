@@ -9,7 +9,7 @@ We here at SkillTree believe that a Gamification based training significantly si
 
 Gamification training empower users to master features in a fun a way.
 - A Gamification based strategy sets up friendly competition which provides strong motivation to continue learning; the motivation comes from points being awarded to users for performing desired actions within an application; other examples of motivators are the ability to achieve the next level or earn a badge while competing against your peers.
-- Applications that implement Gamificaton for training see their users start using a wider range of available features in a more sophisticated fashion.
+- Applications that implement Gamification for training see their users start using a wider range of available features in a more sophisticated fashion.
 - This strategy encourages continued user engagement. Local Experts lead to a reduction in support costs by reducing the need for formal training sessions.
 
 All of that is great, but adding gamification training to an application is extremely expensive and quite time consuming. :drum: roll... here comes the SkillTree Micro-Learning Gamification Platform!!
@@ -162,7 +162,7 @@ for their users. Each Project Summary information card is clickable and will dis
 
 #### Project Administration 
 A Project is composed of Subjects which are made of Skills and a single skill defines a training unit within the
-gamification framework. Subjects are a way to group and organize skill definitions within a gameified training profile.
+gamification framework. Subjects are a way to group and organize skill definitions within a gamified training profile.
 Screenshots below demonstrates the dashboard's page to create and manage subjects: 
 ![SkillTree Dashboard Subjects](./screenshots/Screenshot_2021-03-31SkillTreeDashboard.png)
 
@@ -179,7 +179,7 @@ earned.
 Screenshots below demonstrates dashboard's page to create and manage badges:
 ![SkillsTree Dashboard Badges](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(1).png)
 
-Levels are users' achievement path - the overall goal of the gameified training profile is to encourage users to achieve
+Levels are users' achievement path - the overall goal of the gamified training profile is to encourage users to achieve
 the highest level. Levels are tracked for the entire project as well as for each subject which provides users many ways
 to progress forward.
 Screenshots below demonstrate the management of levels in the dashboard:

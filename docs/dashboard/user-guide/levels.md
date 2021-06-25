@@ -1,6 +1,6 @@
 # Levels
 
-Levels are users' achievement path - the overall goal of the gameified training profile is to encourage users to achieve the highest level. 
+Levels are users' achievement path - the overall goal of the gamified training profile is to encourage users to achieve the highest level. 
 Levels are tracked for the entire [project](/dashboard/user-guide/projects.html) as well as for each [subject](/dashboard/user-guide/subjects.html) which provides users many ways to progress forward.    
 
 The Skills dashboard supports two flexible ways to manage levels: 
