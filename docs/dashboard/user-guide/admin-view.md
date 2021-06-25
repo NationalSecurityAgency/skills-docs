@@ -13,5 +13,5 @@ By default [Progress and Ranking view](/dashboard/user-guide/progress-and-rankin
 :::
 
 ::: tip NOTE
-Please note that in a rare case where a user creates more than 10 projects, they will be displayed in tabular format instead of the default cards. 
+Please note that in the rare case that a single user creates more than 10 projects, they will be displayed in tabular format instead of the default card display. 
 :::
