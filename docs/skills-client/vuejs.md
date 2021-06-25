@@ -247,6 +247,11 @@ methods: {
 ```
 Please note that the displayToast implementation is omitted as that will be specific to your application. 
 
+### SkillsReporter Configuration
+
+<import-content path="/skills-client/common/skillsReporter/reporterConfiguration.html"/>
+
+
 ### Report Event By Listening to Routes
 
 While the skills client library doesn't provide an automatic way to report skills based on route changes it is quite 
