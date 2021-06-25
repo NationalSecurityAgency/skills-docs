@@ -12,6 +12,7 @@ The theme object supports the following properties:
 | breadcrumb.linkColor <since project="skills-service" version="1.5.0" :is-block="true"/> | breadcrumbs's parent/ancestor link color  |
 | breadcrumb.linkHoverColor <since project="skills-service" version="1.5.0" :is-block="true"/> | breadcrumbs's parent/ancestor link hover color  |
 | breadcrumb.currentPageColor <since project="skills-service" version="1.5.0" :is-block="true"/> | breadcrumbs's current page color  |
+| disableSkillTreeBrand <since project="skills-service" version="1.5.0" :is-block="true"/> | when set to ``true``, the SkillTree brand logo in the title section will not be displayed.  default is ``false`` |
 | maxWidth <since project="skills-service" version="1.4.0" :is-block="true"/> | maximum width of the component, can use any units supported by [max-width CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) such as ``%``, ``em`` and ``px`` (ex. ``100%``); default is ``1140px``  |
 | landingPageTitle <since project="skills-service" version="1.4.0" :is-block="true"/> | title of the landing page, default is ``User Skills`` |
 | pageTitleFontSize <since project="skills-service" version="1.4.0" :is-block="true"/> | font size of the title, can use any units supported by [font-size CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) such as ``%``, ``em`` and ``px`` (ex. ``1.2em``) |
