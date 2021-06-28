@@ -8,7 +8,7 @@ The skills platform offers customization of icons for the following items:
 
 When creating or editing these items you can click on the default icon to bring up the icon selector: 
 
-![Select Icon Image](/img/screenshots/admin/modal-edit-subjectIcon.png)
+![Select Icon Image](../../screenshots/admin/modal-edit-subjectIcon.png)
 
 The icon selector supports 2 icon packs: 
 

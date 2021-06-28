@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IN_DIR="cypress/snapshots/"
-OUT_DIR="docs/.vuepress/public/img/screenshots"
+OUT_DIR="docs/screenshots"
 
 rm -rf ${OUT_DIR}
 mkdir -p ${OUT_DIR}

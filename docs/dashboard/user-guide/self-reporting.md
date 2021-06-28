@@ -34,7 +34,7 @@ Please see [Setting: Self Report Default](/dashboard/user-guide/projects.html#se
 
 Once Self Reporting is enabled for a skill, users will see an ``I did it`` button on the Skills Display that will allow them to report the completion of that skill 
 
-![Skills with Self Reporting](/img/screenshots/progress-and-ranking/client-display-skills-selfReport.png)
+![Skills with Self Reporting](../../screenshots/progress-and-ranking/client-display-skills-selfReport.png)
 
 Skills and Self Reporting can either be accessed
 1. in the Skills Display component embedded within your application (via [Client Libraries](/skills-client/#client-display-integration)) *OR*

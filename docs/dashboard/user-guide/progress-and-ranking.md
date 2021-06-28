@@ -1,7 +1,7 @@
 # Progress and Ranking <since project="skills-service" version="1.4.0" />
 
 The Progress and Ranking page visualizes the user's current Progress and Ranking across **all** projects.  
-![SkillTree Dashboard Progress And Ranking](/img/screenshots/progress-and-ranking/page-progress-and-rankings.png)
+![SkillTree Dashboard Progress And Ranking](../../screenshots/progress-and-ranking/page-progress-and-rankings.png)
 
 On the bottom of the page each Project Summary information card is clickable and will display the current user's full Skills Display for that project when clicked.
 
