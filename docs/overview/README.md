@@ -158,61 +158,61 @@ The Progress and Ranking view gives a user access to the Skills Display for _all
 on that instance of the SkillTree platform. It provides a single point of access for training profiles available to the
 user as well as a mechanism for Projects that consist entirely of self-reported Skills to provide access to the [Ranking and Progress](#ranking-and-progress-display) display
 for their users. Each Project Summary information card is clickable and will display the current user's full [Ranking and Progress](#ranking-and-progress-display) display for that project when clicked.
-![SkillTree Dashboard Progress And Ranking](./screenshots/Screenshot_2021-03-31SkillTreeDashboard-Progress.png)
+![SkillTree Dashboard Progress And Ranking](/img/screenshots/progress-and-ranking/page-progress-and-rankings.png)
 
 #### Project Administration 
 A Project is composed of Subjects which are made of Skills and a single skill defines a training unit within the
 gamification framework. Subjects are a way to group and organize skill definitions within a gameified training profile.
 Screenshots below demonstrates the dashboard's page to create and manage subjects: 
-![SkillTree Dashboard Subjects](./screenshots/Screenshot_2021-03-31SkillTreeDashboard.png)
+![SkillTree Dashboard Subjects](/img/screenshots/admin/page-subjects.png)
 
 Projects are composed of Subjects which are made of Skills and a single skill defines a training unit within the
 gamification framework. To complete a skill, users may need to perform the same action multiple times - repetition is
 important for retention after all. A Skill definition specifies how many times a skill has to be performed. Each
 occurrence is called a Skill Event.
 Screenshots below demonstrates dashboard's management of skill's attribues:
-![SkillsTree Dashboard Edit Skill](./screenshots/Screenshot_2020-12-16SkillTreeDashboard(3).png)
+![SkillsTree Dashboard Edit Skill](/img/screenshots/admin/modal-edit-skill.png)
 
 Badges add another facet to the overall gamification profile and allows you to further reward your users by providing
 these prestigious symbols. Badges are a collection of skills and when all of the skills are accomplished that badge is
 earned.
 Screenshots below demonstrates dashboard's page to create and manage badges:
-![SkillsTree Dashboard Badges](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(1).png)
+![SkillsTree Dashboard Badges](/img/screenshots/admin/page-badges.png)
 
 Levels are users' achievement path - the overall goal of the gameified training profile is to encourage users to achieve
 the highest level. Levels are tracked for the entire project as well as for each subject which provides users many ways
 to progress forward.
 Screenshots below demonstrate the management of levels in the dashboard:
-![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(2).png)
+![Skills Platform Overview Image](/img/screenshots/admin/page-levels.png)
 
 Dependencies add another facet to the overall gamification profile and force users to complete skills in a specified
 order. If you set up Skill A to depend on the completion of Skill B then no points will be awarded toward Skill A until
 Skill B is fully accomplished.
 The screenshot below demonstrates management of skill dependencies in the dashboard:
-![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(10).png)
+![Skills Platform Overview Image](/img/screenshots/admin/page-skill-deps.png)
 
 Screenshot below demonstrates visualization of all the skill dependencies within a project:
-![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(9).png)
+![Skills Platform Overview Image](/img/screenshots/admin/page-project-deps.png)
 
 Almost every page in the SkillTree dashboard exposes metrics and statistics about that particular entity/concept. These
 metrics are very much context aware so as an example, graphs and charts you see on a subject page will be for that
 specific subject and metrics on the project page will be for the entire project.
 
-![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(5).png)
+![Skills Platform Overview Image](/img/screenshots/admin/page-project-metrics-skills.png)
 
 ----
 ----
 
-![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(6).png)
+![Skills Platform Overview Image](/img/screenshots/admin/page-project-metrics-subjects.png)
 
 ----
 ----
 
-![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(7).png)
+![Skills Platform Overview Image](/img/screenshots/admin/page-project-metrics-achievements.png)
 
 ----
 ----
-![Skills Platform Overview Image](./screenshots/Screenshot_2021-03-31SkillTreeDashboard(8).png)
+![Skills Platform Overview Image](/img/screenshots/admin/page-topSkill-metrics.png)
 
 
 ### Ranking and Progress Display
@@ -221,35 +221,35 @@ SkillTree JS display libraries are integrated into your existing web-based appli
 interactive user ranking and progress display. The screenshots below highlight some of the features of this display. 
 
 This is a landing page for the display components that shows user's progress and ranking:
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16ClientDisplay0.png)
+![Skills Platform Overview Image](/img/screenshots/progress-and-ranking/client-display-proj.png)
 
 ------------------------
 ------------------------
 
 SkillTree integrated displays can be themed. For example, you can easily style it to look something like this:
-![SkillTree Screenshot](./screenshots/Screenshot_2021-05-12SkillsExamplesVuejs.png)
+![SkillTree Screenshot](/img/screenshots/progress-and-ranking/client-display-themed-proj.png)
 
 ------------------------
 ------------------------
 
 User's rank overview: 
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16ClientDisplay1.png)
+![Skills Platform Overview Image](/img/screenshots/progress-and-ranking/client-display-rank.png)
 
 ------------------------
 ------------------------
 User's progress within a subject, list of all of the skills that fall under that subject where
 green indicates completion and blue progress:
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16ClientDisplay2.png)
+![Skills Platform Overview Image](/img/screenshots/progress-and-ranking/client-display-subject.png)
 
 ------------------------
 ------------------------
 Same display as before but with expanded Skill Details:
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16ClientDisplay3.png)
+![Skills Platform Overview Image](/img/screenshots/progress-and-ranking/client-display-subject-expandedSkills.png)
 
 ------------------------
 ------------------------
 Single skill with dependencies:
-![Skills Platform Overview Image](./screenshots/Screenshot_2020-12-16ClientDisplay4.png)
+![Skills Platform Overview Image](/img/screenshots/progress-and-ranking/client-display-skillWithDeps.png)
 
 <script>
   import AccessibilityScore from "../.vuepress/components/AccessibilityScore";

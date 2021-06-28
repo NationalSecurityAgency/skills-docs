@@ -25,6 +25,11 @@ To calculate the total points that completion of a particular skill will give a 
 Total Points = Point Increment * Occurrences to Completion
 :::
 
+# Copy Skill <since project="skills-service" version="1.5.0" :is-block="true"/>
+To use an existing Skill as a template for a new Skill, you can use the [copy skill button](./screenshots/copy_skill_20210618.png) button available on a Skill row displayed on the Subject page. 
+This will open a new Skill dialog populated with the details of the selected copy-from Skill. The name and id will be prepended with ``Copy of`` which can be changed
+before the new Skill is saved. Saving this dialog will create a new Skill that falls within the same Subject as the copy-from Skill.
+
 ##### Best Practices
 
 - "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition (for example, prevent users from spamming an action in one sitting to max out a Skill by setting a Time Window of 1-8 hours)

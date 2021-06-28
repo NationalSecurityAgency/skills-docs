@@ -68,6 +68,30 @@ the SkillsDisplay component:
 
 <import-content path="/skills-client/common/skillsDisplayArguments.html"/>
 
+#### Route changed event <since project="skills-client" version="3.3.0" />
+
+Each time a user navigates within the Skills Client Display, the `handleRouteChanged` event is emitted containing the new path that was navigated to.  This can be useful if the hosting application displays a breadcumb and would like to update the current location within the Skills Client Display component.
+
+``` js{7,14-16}
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="container">
+        <skills-display [handleRouteChanged]="skillsDisplayRouteChanged">
+    </div>
+  `,
+})
+export class ShowSkillsComponent {
+  constructor() { }
+  
+  skillsDisplayRouteChanged = (newPath: string) => {
+     console.log(`New Skills Display path: [${newPath}]`);
+  }
+}
+```
+
 ### Skills Display Options Object
 
 <import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>
@@ -243,6 +267,10 @@ export class ToastExampleComponent
 }
 ```
 Please note that the displayToast implementation is omitted as that will be specific to your application. 
+
+### SkillsReporter Configuration
+
+<import-content path="/skills-client/common/skillsReporter/reporterConfiguration.html"/>
 
 ### Report Event By Listening to Routes
 

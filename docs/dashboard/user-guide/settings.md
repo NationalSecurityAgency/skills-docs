@@ -5,7 +5,7 @@ The SkillTree Dashboard requires very little administration, however there are s
 Administration settings can be accessed by users via the ```Settings``` menu entry in the drop-down menu located on the top-right of the application.
 Please note that number of settings' section are only visible to users with the [Root](/dashboard/user-guide/users.html#root) role. 
 
-![SkillTree Dashboard Menu](../../overview/screenshots/Screenshot_2021-03-31SkillTreeDashboard-ViewMenu.png)
+![SkillTree Dashboard Menu](/img/screenshots/admin/component-settings-menu.png)
 
 As of version 1.4.0, the default view in the Dashboard has changed. Now, when a user accesses the Dashboard, a Progress and Rankings view
 for all projects with ```Production Mode``` enabled will be displayed for the current user. This allows the current user to access their Progress and Ranking for
@@ -15,15 +15,14 @@ views can be accessed from the drop down menu at the top right.
 
 ## Preferences
 The default view can be configured per user via the ```Settings``` menu item, under ```Preferences```
-![SkillTree Dashboard Menu](../../overview/screenshots/Screenshot_2021-03-31SkillTreeDashboard-Settings-Preferences.png)
+![Preferences Page](/img/screenshots/admin/page-settings-preference.png)
 
 ## Security Settings <requires-role role="Root" />
 
 The ```Security``` menu item supports the administration of [Root](/dashboard/user-guide/users.html#root) users and [Supervisor](/dashboard/user-guide/users.html#supervisor) users.
 
-![Root User Management](./screenshots/root_users_management_20201209.png)
+![Security Settings](/img/screenshots/admin/page-settings-security.png)
 
-![Supervisor User Management](./screenshots/supervisor_user_management_20201209.png)
 
 To grant [Root](/dashboard/user-guide/users.html#root) or [Supervisor](/dashboard/user-guide/users.html#supervisor) privileges to a user, that user must have an existing account for the SkillTree Dashboard. User management will also prevent the removal of any permissions from the currently authenticated user.  
 
@@ -31,7 +30,7 @@ To grant [Root](/dashboard/user-guide/users.html#root) or [Supervisor](/dashboar
 
 The SkillTree dashboard will send emails in support of password reset requests for Dashboard users, as well as self-reported Skill approval requests. If Email Server settings are not configured, the password reset feature will be disabled.
 
-![Email Settings](./screenshots/email_settings_20210401.png)
+![Email Settings](/img/screenshots/admin/page-settings-email.png)
 
 Email server configuration supports TLS enabled smtp servers, as well as username/password authentication. Changing the ```Authentication``` switch to ```Authentication Enabled``` will reveal the ```Username``` and ```Password``` configuration fields.
 
@@ -58,7 +57,7 @@ In order for the notifications to work the following must be configured:
 
 ## System Settings <requires-role role="Root" />
 
-![System Settings](./screenshots/system_settings_20201209.png)
+![System Settings](/img/screenshots/admin/page-settings-system.png)
 
 Both the ```Public URL``` and ```Password Reset Token Expiration``` settings are specific to supporting the dashboard password reset feature.
 
@@ -70,24 +69,20 @@ The ```From Email``` settings allows the ```Root``` user to configure what from 
 
 ``Custom Header`` and ```Custom Footer``` allow the ```Root``` user to specify HTML to be used as a custom header and footer that will be applied to the SkillTree dashboard.
 
+The ```User Agreement``` setting <since project="skills-service" version="1.5.0" :is-block="true"/>  allows the ```Root``` user to configure a User Agreement that all dashboard users must acknowledge before being permitted to use any features of the Dashboard application. The User Agreement setting configuration supports Markdown.
+Once a User Agreement has been configured, all Dashboard users will be required to acknowledge the User Agreement after logging in. 
+
+::: tip
+Note that if the content of the User Agreement is changed, dashboard users who acknowledged a previous version will be required to acknowledge the updated version.
+::: 
+
+
 ::: warning
 &lt;script&gt; tags are not permitted in the html configured for the header or footer
 :::
 
-for example:
+The example below configures custom header and footer: 
 
-![Custom Header Input](./screenshots/custom_header_input_20201209.png)
+![Custom Header Input](/img/screenshots/admin/page-custom-headerAndFooter.png)
 
-will result in
-
-![Custom Header Example](./screenshots/custom_header_20201209.png)
-
-Likewise, for the ```Custom Footer```:
-
-![Custom Footer Input](./screenshots/custom_footer_input_20201209.png)
-
-will result in
-
-![Custom Footer Example](./screenshots/custom_footer_20201209.png) 
-  
 
