@@ -202,3 +202,9 @@ For a full description of the response object please see [Endpoint Result Object
 ### Global Event Handling
 
 <import-content path="/skills-client/common/skillsReporter/globalEventHandling.html"/>
+
+### SkillsReporter Configuration
+
+<import-content path="/skills-client/common/skillsReporter/reporterConfiguration.html"/>
+
+
