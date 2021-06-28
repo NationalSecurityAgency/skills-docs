@@ -4,7 +4,7 @@
             <div class="row align-items-center text-center text-sm-left">
                 <div class="col-lg-6 order-lg-2" style="margin-top: -6rem;">
                     <div class="p-md-5">
-                        <img :src="$withBase('/img/screenshots/progress-and-ranking/client-display-proj.png')"
+                        <img src="../../../screenshots/progress-and-ranking/client-display-proj.png"
                              class="image-border-dark"/>
                     </div>
                 </div>
