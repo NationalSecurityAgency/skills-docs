@@ -11,7 +11,8 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
   - Displays ``Top 10`` users OR ``10 Around Me`` users
   - Users can Opt-Out in the Dashboard Settings from Leaderboard participation
   - Administrators can Opt-out all of the project administrators from Leaderboard participation 
-- Added SkillTree brand on the SkillsDisplay views
+- Added SkillTree brand to the title section of the SkillsDisplay component
+- Added breadcrumb to the title section of the SkillsDisplay component
 - Implemented ability to configure User Agreement for dashboard users; when configured, User Agreement is presented at first login. Changes to User Agreement will cause it to be re-displayed to any users who accepted the previous version.
 - Implemented workflow to remove unused projects
   - (1) discover unused, (2) notify administrators (3) remove if action is not taken
