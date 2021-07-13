@@ -67,6 +67,19 @@ const handleRouteChanged = (newPath) => {
 <SkillsDisplay handleRouteChanged={handleRouteChanged}/>
 ```
 
+#### Programmatic navigation <since project="skills-client" version="3.3.1" />
+
+The internal route of the Skills Client Display component can be changed by passing the desired path to the `navigate()` method.  This can be useful if the hosting application displays a breadcumb and would like to navigate to different locations within the Skills Client Display component by clicking a breadcrumb link for example.
+
+``` js
+  const skillsDisplayRef = React.createRef()
+  const navigate = () => {
+      skillsDisplayRef.current.navigate('/subjects/subj0');
+  };
+
+  <SkillsDisplay ref={skillsDisplayRef}/>
+```
+
 ### Skills Display Options Object
 
 <import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>

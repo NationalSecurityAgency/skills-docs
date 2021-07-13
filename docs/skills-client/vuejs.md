@@ -82,6 +82,33 @@ Each time a user navigates within the Skills Client Display, the `route-changed`
         
 ```
 
+#### Programmatic navigation <since project="skills-client" version="3.3.1" />
+
+The internal route of the Skills Client Display component can be changed by passing the desired path to the `navigate()` method.  This can be useful if the hosting application displays a breadcumb and would like to navigate to different locations within the Skills Client Display component by clicking a breadcrumb link for example.
+
+``` js{3-4,15-17}
+<template>
+    <div class="container">
+        <b-button @click="navigate">Navigate</b-button>
+        <skills-display ref="skillsDisplayRef"/>
+    </div>
+</template>
+        
+...
+<script>
+    import { SkillsDisplay } from '@skilltree/skills-client-vue';
+    export default {
+        name: "ShowSkills",
+        components: {SkillsDisplay},
+        methods: {
+          navigate() {
+            this.$refs.skillsDisplayRef.navigate('/subjects/subj0');
+          },
+        },
+    }
+</script>
+```
+
 ### Skills Display Options Object
 
 <import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>

@@ -4,6 +4,10 @@ This page documents high-level release notes for [SkillTree Client](https://gith
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 3.3.1
+<release-date date="Jul. 2021" />
+- Implemented (``navigate``) mehthod for programmatic navigation in the ``SkillsDisplay`` component 
+
 #### 3.3.0
 <release-date date="Jun. 2021" />
 - Improved resilience of skill event reporting. Failed attempts are stored in browser's local cache and are retried
