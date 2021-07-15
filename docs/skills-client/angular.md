@@ -92,6 +92,35 @@ export class ShowSkillsComponent {
 }
 ```
 
+#### Programmatic navigation <since project="skills-client" version="3.3.1" />
+
+The internal route of the Skills Client Display component can be changed by passing the desired path to the `navigate()` method.  This can be useful if the hosting application displays a breadcumb and would like to navigate to different locations within the Skills Client Display component by clicking a breadcrumb link for example.
+
+``` js{7,14-15,19-21}
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="container">
+        <button (click)="navigate()">Navigate</button>
+        <skills-display/>
+    </div>
+  `,
+})
+export class ShowSkillsComponentExample {
+
+  @ViewChild('skillsDisplay')
+  skillsDisplay: ShowSkillsComponent;
+
+  constructor() { }
+  
+  navigate() {
+    this.skillsDisplay.navigate('/subjects/subj0')
+  }
+}
+```
+
 ### Skills Display Options Object
 
 <import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>
