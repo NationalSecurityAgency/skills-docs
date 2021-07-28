@@ -3,7 +3,6 @@
 At the heart of the SkillTree platform is the SkillTree dashboard - a web-based user interface. 
 The SkillTree Dashboard provides these main functions: 
 1. Enables creation and management of an applications' [training profile](/dashboard/user-guide/#building-training-profile)
-1. Visualizes user's [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html)
 1. Provides corporate visibility of application expertise and offers metrics and various visualizations.  
 
 ![Skills Platform Overview Image](../../overview/diagrams/SkillTreePlatformOverview.png)
@@ -12,13 +11,6 @@ The SkillTree Dashboard provides these main functions:
 - If your organization is running the SkillTree platform, then you will be provided with its URL to get started. 
 - If you are installing the SkillTree platform from scratch (see [Install Guide](/dashboard/install-guide/)) then... well you just know where it's running. 
 :::
-
-Dashboard encompasses two main views: 
-
-- [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html): A single point of access for training profiles available to the user as well as user's current progress and ranking
-- [Admin View](/dashboard/user-guide/admin-view.html): Create and manage training profiles for one or more projects
-
-By default, the [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) view is the landing page but can be changed to the [Admin View](/dashboard/user-guide/admin-view.html) via [Preferences Page](/dashboard/user-guide/settings.html#preferences)
 
 ## Building Training Profile
 

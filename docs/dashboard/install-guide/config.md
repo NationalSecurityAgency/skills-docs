@@ -275,6 +275,25 @@ skills.disableHostnameVerifier=false
 ### OAuth Support (Pass Auth Mode Only)
 <import-content path="/dashboard/install-guide/common/oath2-support.html"/>
 
+
+### Progress and Ranking Views
+
+A single point of access for training profiles available to the user as well as user's current progress and ranking.
+The Progress and Ranking views gives a user access to the Skills Display for _all_ projects which have Production Mode enabled 
+on that instance of the SkillTree platform. It provides a single point of access for training profiles available to the
+user as well as a mechanism for Projects that consist entirely of self-reported Skills to provide access to the [Ranking and Progress](/dashboard/user-guide/progress-and-ranking.html) display
+for their users. 
+
+Progress and Ranking Views are disabled by default, but can be easily enabled: 
+
+```properties
+# enable Progress and Ranking Views
+skills.config.ui.rankingAndProgressViewsEnabled=true
+
+# optionally change default for the landing page (admin is the default)
+skills.config.ui.defaultLandingPage=progress
+```
+
 ### Spring Boot Properties
 
 ``skills-service`` is a Spring Boot application and will respect the majority (if not all) of Spring Boot configuration properties.  

@@ -29,15 +29,6 @@ The Dashboard user that creates a project is automatically granted the role of a
 
 To manage and view project-wide settings navigate to ``Project -> Settings``. The following project-level settings are available: 
 
-#### Setting: Production Mode <since project="skills-service" version="1.4.0" />
-
-Enabling ``Production Mode`` signals to the SkillTree platform that the project is fully operational. 
-
-Switching the mode to ``true`` will:
-- Make this project visible in the ``Progress and Ranking`` page for all SkillTree users
-
-
-
 #### Setting: Use Points For Levels
 
 ``Use Points For Levels`` - switch between two level management strategies: 
