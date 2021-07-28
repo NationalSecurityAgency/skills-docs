@@ -12,19 +12,19 @@ The theme object supports the following properties:
 | breadcrumb.linkColor <since project="skills-service" version="1.5.0" :is-block="true"/> | breadcrumbs's parent/ancestor link color  |
 | breadcrumb.linkHoverColor <since project="skills-service" version="1.5.0" :is-block="true"/> | breadcrumbs's parent/ancestor link hover color  |
 | breadcrumb.currentPageColor <since project="skills-service" version="1.5.0" :is-block="true"/> | breadcrumbs's current page color  |
-| breadcrumb.align <since project="skills-service" version="1.6.0" :is-block="true"/> | breadcrumbs's alignment in the title card; valid values are ``start``, ``center``, ``end`` (uses css [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)) |
+| breadcrumb.align <since project="skills-service" version="1.6.0" :is-block="true"/> | breadcrumbs's alignment for the title card; valid values are ``start``, ``center``, ``end`` (uses css [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)) |
 | disableSkillTreeBrand <since project="skills-service" version="1.5.0" :is-block="true"/> | when set to ``true``, the SkillTree brand logo in the title section will not be displayed.  default is ``false`` |
-| skillTreeBrandColor <since project="skills-service" version="1.6.0" :is-block="true"/> | change the color of SkillTree brand logo's text; otherwise defaults to the ``pageTitle.textColor`` property |  
+| skillTreeBrandColor <since project="skills-service" version="1.6.0" :is-block="true"/> | text color for the SkillTree brand logo; if not supplied the default is ``pageTitle.textColor`` |  
 | maxWidth  | maximum width of the component, can use any units supported by [max-width CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) such as ``%``, ``em`` and ``px`` (ex. ``100%``); default is ``1140px``  |
 | landingPageTitle  | title of the landing page, default is ``User Skills`` |
-| pageTitle.fontSize <since project="skills-service" version="1.6.0" :is-block="true"/> | font size of the title, can use any units supported by [font-size CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) such as ``%``, ``em`` and ``px`` (ex. ``1.2em``) |
-| pageTitle.textColor <since project="skills-service" version="1.6.0" :is-block="true"/> | page header title text color |
-| pageTitle.borderColor <since project="skills-service" version="1.6.0" :is-block="true"/> | override border color of the title card |
-| pageTitle.borderStyle <since project="skills-service" version="1.6.0" :is-block="true"/> | override border style of the title card, for example: ``borderStyle: 'none none solid none'`` |
-| pageTitle.backgroundColor <since project="skills-service" version="1.6.0" :is-block="true"/> | override background color of the title card |
-| pageTitle.textAlign <since project="skills-service" version="1.6.0" :is-block="true"/> | align the title, supported values are ``left``, ``right`` and ``center`` |
-| pageTitle.padding <since project="skills-service" version="1.6.0" :is-block="true"/> | override padding of the title card, for example: ``padding: '1.6rem 1rem 1.1rem 1rem'`` |  
-| pageTitle.margin <since project="skills-service" version="1.6.0" :is-block="true"/> | override margin of the title card, for example: ``margin: '-10px -15px 1.6rem -15px'`` |    
+| pageTitle.fontSize <since project="skills-service" version="1.6.0" :is-block="true"/> | font size for the title, can use any units supported by [font-size CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) such as ``%``, ``em`` and ``px`` (ex. ``1.2em``) |
+| pageTitle.textColor <since project="skills-service" version="1.6.0" :is-block="true"/> | text color for the title  |
+| pageTitle.borderColor <since project="skills-service" version="1.6.0" :is-block="true"/> | border color for the title card |
+| pageTitle.borderStyle <since project="skills-service" version="1.6.0" :is-block="true"/> | border style for the title card, for example: ``borderStyle: 'none none solid none'`` |
+| pageTitle.backgroundColor <since project="skills-service" version="1.6.0" :is-block="true"/> | background color for the title card |
+| pageTitle.textAlign <since project="skills-service" version="1.6.0" :is-block="true"/> | title alignment, supported values are ``left``, ``right`` and ``center`` |
+| pageTitle.padding <since project="skills-service" version="1.6.0" :is-block="true"/> | padding for the title card, for example: ``padding: '1.6rem 1rem 1.1rem 1rem'`` |  
+| pageTitle.margin <since project="skills-service" version="1.6.0" :is-block="true"/> | margin for the title card, for example: ``margin: '-10px -15px 1.6rem -15px'`` |    
 | circleProgressInteriorTextColor | 'x out of yyyy' text color inside circle progress widgets |
 | progressIndicators.beforeTodayColor | progress bar color for points earned before today | 
 | progressIndicators.earnedTodayColor | progress bar color for points earned today | 
