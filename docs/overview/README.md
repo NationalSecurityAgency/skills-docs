@@ -43,7 +43,6 @@ To facilitate rapid application incorporation, the platform provides the followi
 - **Dashboard and Service:** Simple management through a centralized Web-Based User Interface and data API service. 
   - *Effective and visual skill definition management* - create and manage things like subjects, skills, levels, badges, and dependencies
   - *Comprehensive Visualization* - through sophisticated analytics, enables unmatched corporate visibility of application expertise; provides an additional facet of application usage visibility (ex. identifying expert users)
-  - *Progress and Ranking* - extensive views to show user's current Progress and Ranking across all the projects   
 - **Display Libraries:** Pluggable and fully interactive user skill and ranking visualization
   - Customize and use the display component in your application within minutes. 
   - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
@@ -52,8 +51,8 @@ To facilitate rapid application incorporation, the platform provides the followi
 
 ![Skills Platform Overview Image](./diagrams/SkillTreePlatformOverview.png)
 
-::: tip Progress and Ranking Display  
-Please note that SkillTree has taken an innovative approach of providing pluggable and fully interactive user progress and ranking visualization
+::: tip Skills Display  
+Please note that SkillTree has taken an innovative approach by providing a pluggable and fully interactive user progress and ranking visualization (named Skills Display)
 and therefore does **not** support a public API to build your own progress and ranking displays.
 ::: 
 
@@ -147,20 +146,12 @@ limitations under the License.
 Below are the screenshots that highlight some of the features of the SkillTree platform. 
 These screenshots are broken down into 2 sections:
 - [Dashboard](/overview/#screenshots): a web-based user-friendly interface that allows to create and manage gamified training profile.
-- [Ranking and Progress Display](/overview/#ranking-and-progress-display): JS libraries that are integrated into your existing web-based application which provide your users a fully interactive user ranking and progress display.
+- [Skills Display](/overview/#ranking-and-progress-display): JS libraries that are integrated into your existing web-based application which provide your users a fully interactive user ranking and progress display.
 
 ### Dashboard
 The Dashboard provides the capability to create and administer Projects, Subjects, and Skills, as well as the ability to view
 a user's progress for any projects. 
 
-#### Progress and Ranking
-The Progress and Ranking view gives a user access to the Skills Display for _all_ projects which have Production Mode enabled 
-on that instance of the SkillTree platform. It provides a single point of access for training profiles available to the
-user as well as a mechanism for Projects that consist entirely of self-reported Skills to provide access to the [Ranking and Progress](#ranking-and-progress-display) display
-for their users. Each Project Summary information card is clickable and will display the current user's full [Ranking and Progress](#ranking-and-progress-display) display for that project when clicked.
-![SkillTree Dashboard Progress And Ranking](../screenshots/progress-and-ranking/page-progress-and-rankings.png)
-
-#### Project Administration 
 A Project is composed of Subjects which are made of Skills and a single skill defines a training unit within the
 gamification framework. Subjects are a way to group and organize skill definitions within a gameified training profile.
 Screenshots below demonstrates the dashboard's page to create and manage subjects: 
@@ -215,7 +206,7 @@ specific subject and metrics on the project page will be for the entire project.
 ![Skills Platform Overview Image](../screenshots/admin/page-topSkill-metrics.png)
 
 
-### Ranking and Progress Display
+### Skills Display
 
 SkillTree JS display libraries are integrated into your existing web-based application which provide your users a fully
 interactive user ranking and progress display. The screenshots below highlight some of the features of this display. 

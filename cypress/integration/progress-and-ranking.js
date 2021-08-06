@@ -6,16 +6,33 @@ context('Generate Progress and Ranking Screenshots', () => {
   beforeEach(() => {
     cy.viewport(displayWidth, 400);
     cy.login();
+
+    cy.addToMyProjects('movies');
+    cy.addToMyProjects('shows');
   });
 
+  it('Gen Select My Projects', () => {
+    cy.visit('/progress-and-rankings/manage-my-projects')
+    const tableSelector = '[data-cy="discoverProjectsTable"]';
+    const rowSelector = `${tableSelector} tbody tr`;
+    cy.get(rowSelector).should('have.length', 2).as('cyRows');
+    cy.get('@cyRows').eq(0).find('td').as('row2');
+    cy.get('@row2').eq(1).find('[data-cy="removeBtn"]').click();
+    cy.snap('page-progress-and-rankings-manage-my-projects');
+  })
 
-  it('Gen Progress and Ranking pages', () => {
+  it('Gen Progress and Ranking page', () => {
     cy.visit('/progress-and-rankings')
     cy.snap('page-progress-and-rankings');
   })
 
+  it('Gen View Usage page', () => {
+    cy.visit('/progress-and-rankings/my-usage')
+    cy.snap('page-progress-and-rankings-view-my-usage');
+  });
+
   it('Gen Skills Display pages', () => {
-    cy.visit('/progress-and-rankings/projects/movies');
+    cy.visit('/progress-and-rankings/projects/movies?classicSkillsDisplay=true');
     cy.clientDisplay(true).contains('My Level');
     cy.snap('client-display-proj', 'iframe');
 
@@ -25,7 +42,7 @@ context('Generate Progress and Ranking Screenshots', () => {
 
     const clipScreenshot = { x: 0, y: 0, width: displayWidth, height: 1800 };
 
-    cy.visit('/progress-and-rankings/projects/movies');
+    cy.visit('/progress-and-rankings/projects/movies?classicSkillsDisplay=true');
     cy.clientDisplay(true).contains('My Level');
     cy.cdClickSubj(3, 'Family');
     cy.snap('client-display-subject', 'iframe', { clip: clipScreenshot });
@@ -39,7 +56,7 @@ context('Generate Progress and Ranking Screenshots', () => {
   });
 
   it('Gen Self Report Skill', () => {
-    cy.visit('/progress-and-rankings/projects/movies');
+    cy.visit('/progress-and-rankings/projects/movies?classicSkillsDisplay=true');
     cy.clientDisplay(true).contains('My Level');
     cy.cdClickSubj(3, 'Family');
     cy.clientDisplay().contains('Finding Nemo').click();

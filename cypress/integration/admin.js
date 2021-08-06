@@ -66,6 +66,11 @@ context('Generate Admin Screenshots', () => {
         cy.contains('Overall Levels');
         cy.get('[data-cy="achievementsNavigator-table"]')
         cy.snap('page-project-metrics-achievements');
+
+        // settings
+        cy.clickNav('Settings');
+        cy.contains('Production Mode');
+        cy.snap('page-project-settings');
     })
 
 
