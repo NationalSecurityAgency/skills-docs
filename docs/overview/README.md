@@ -52,7 +52,7 @@ To facilitate rapid application incorporation, the platform provides the followi
 ![Skills Platform Overview Image](./diagrams/SkillTreePlatformOverview.png)
 
 ::: tip Skills Display  
-Please note that SkillTree has taken an innovative approach of providing pluggable and fully interactive user progress and ranking visualization (named Skills Display)
+Please note that SkillTree has taken an innovative approach by providing a pluggable and fully interactive user progress and ranking visualization (named Skills Display)
 and therefore does **not** support a public API to build your own progress and ranking displays.
 ::: 
 
