@@ -10,7 +10,7 @@ Ability to customize your personal user preference:
 
 ### Setting: Rank and Leader Opt-Out
 
-Changing this setting to true and you will not be shown on the Leaderboard or assigned a rank for all projects. 
+Change this setting to true and you will not be shown on the Leaderboard or assigned a rank for all projects. 
 
 
 ## Security Settings <requires-role role="Root" />
