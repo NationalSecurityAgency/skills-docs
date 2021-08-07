@@ -3,7 +3,16 @@
 A Project is an overall container that represents the skills ruleset for a single application with gamified training. 
 Project's administrator(s) manage skill definitions, subjects, levels, dependencies and other attributes that make up an application's training profile.
 
+
+![SkillTree Projects Admin](../../screenshots/admin/page-projects.png)
+
 Creating a project is simple, all you need is a name. While the project id is required, it will be automatically generated (you can optionally override the generated id).
+
+
+To create a project click the ``Project +`` button.
+
+![SkillTree Projects Admin](../../screenshots/admin/modal-projects-new_project.png)
+
 
 A Project is composed of Subjects which are made up of Skills and a single skill defines a training unit within the gamification framework. 
 Once the project is created you have an empty canvas on which to compose and manage your application's training profile. 
@@ -27,7 +36,14 @@ The Dashboard user that creates a project is automatically granted the role of a
 
 ## Settings
 
-To manage and view project-wide settings navigate to ``Project -> Settings``. The following project-level settings are available: 
+To manage and view project-wide settings navigate to ``Project -> Settings``. 
+
+![Project Settings](../../screenshots/admin/page-project-settings.png)
+
+The following project-level settings are available: 
+
+#### Setting: Production Mode
+This setting is only exist when Progress and Ranking views are enabled. Please visit [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) section to learn more.   
 
 #### Setting: Use Points For Levels
 

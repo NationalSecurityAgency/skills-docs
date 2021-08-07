@@ -54,7 +54,7 @@ Cypress.Commands.add('login', () => {
 });
 
 Cypress.Commands.add('clickNav', (navName) => {
-    cy.get(`[data-cy=nav-${navName}]`).click();
+    cy.get(`[data-cy="nav-${navName}"]`).click();
     // click away to remove focus from the nav
     cy.get('.page-footer').click();
 });

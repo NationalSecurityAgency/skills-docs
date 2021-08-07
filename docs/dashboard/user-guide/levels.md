@@ -13,6 +13,8 @@ There can be only one level strategy selected and it will apply to the **entire*
 
 Please visit ``Project -> Settings`` to configure a level management strategy. 
 
+![SkillTree Levels Page](../../screenshots/admin/page-project-levels.png)
+
 #### Best practices   
 - Consider starting with the [Percentage Based](#percentage-based-levels) strategy as each level's points are generated from a percentage so it's quick to get started. Once the majority of skills are created and the overall points are stable then the switch to the [Point based](#point-based-levels) strategy may be considered. 
 - Initially, play around with both strategies but then select one strategy and stick with it. Both strategies work very well so it's a matter of preference.
