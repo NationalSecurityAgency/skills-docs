@@ -7,7 +7,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 #### 1.6.0  
 <release-date date="Aug. 2021" />
 - Added ability to drag-and-drop projects, subjects and badges in order to arrange their display order
-- New project ``Contact Users`` page that enables project administrators to send emails to a sub-set of the project's user base
+- New project ``Contact Users`` page that enables project administrators to send emails to all or a sub-set of the project's user base
   - Ability to contact users based on project/subject level achievement or specific skill/badge achievements
   - Supports markdown for the body of the email
 - New ``Contact Admins`` page 
