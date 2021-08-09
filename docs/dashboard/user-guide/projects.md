@@ -43,7 +43,7 @@ To manage and view project-wide settings navigate to ``Project -> Settings``.
 The following project-level settings are available: 
 
 #### Setting: Production Mode
-This setting is only exist when Progress and Ranking views are enabled. Please visit [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) section to learn more.   
+This setting is only available when Progress and Ranking views are enabled. Please visit [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) section to learn more.   
 
 #### Setting: Use Points For Levels
 
