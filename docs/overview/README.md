@@ -174,7 +174,7 @@ Levels are users' achievement path - the overall goal of the gameified training 
 the highest level. Levels are tracked for the entire project as well as for each subject which provides users many ways
 to progress forward.
 Screenshots below demonstrate the management of levels in the dashboard:
-![Skills Platform Overview Image](../screenshots/admin/page-levels.png)
+![Skills Platform Overview Image](../screenshots/admin/page-project-levels.png)
 
 Dependencies add another facet to the overall gamification profile and force users to complete skills in a specified
 order. If you set up Skill A to depend on the completion of Skill B then no points will be awarded toward Skill A until

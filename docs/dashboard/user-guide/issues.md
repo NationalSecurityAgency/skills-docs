@@ -1,6 +1,8 @@
-# Issues <since project="skills-service" version="1.4.0" />
+# Issues
 
 Displays any errors that have been recorded for a Project, how many times they have occurred, and when the most recent occurrence was.
+
+![SkillTree Issues](../../screenshots/admin/page-project-issues.png)
 
 Currently, this only captures attempts to report a Skill that doesn't exist in a Project. This commonly occurs when a typo has been made
 during the integration of skill reporting into an application, or when switching an application from using a staging project to a production project where 

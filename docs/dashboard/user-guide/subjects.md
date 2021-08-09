@@ -1,7 +1,11 @@
 # Subjects
 
 A Project is composed of Subjects which are made of Skills and a single skill defines a training unit within the gamification framework. 
-Subjects are a way to group and organize skill definitions within a gameified training profile. Subjects offer the following features: 
+Subjects are a way to group and organize skill definitions within a gameified training profile. 
+
+![SkillTree Dashboard Subjects](../../screenshots/admin/page-subjects.png)
+
+Subjects offer the following features: 
 
 - [Skills](/dashboard/user-guide/skills.html) - create and manage Skill definitions.
 - [Levels Model](/dashboard/user-guide/levels.html) - Subject specific level model definition so users are awarded subject level achievements.
@@ -9,6 +13,8 @@ Subjects are a way to group and organize skill definitions within a gameified tr
 - Stats - Subject specific charts and graph and user stats. 
  
 To create a Subject navigate to ``Project -> Subjects`` and then click the ``Subject +`` button.
+
+![SkillTree New Subject](../../screenshots/admin/modal-subjects-new_subject.png)
 
 | Property | Explanation | 
 |:------- |:----------- | 

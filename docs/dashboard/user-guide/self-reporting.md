@@ -51,6 +51,8 @@ through the simple approval workflow:
 1. Request appears on the project's Self Report page (see the Screenshot below)
 1. Project administrator approves or reject requests
 
+![SkillTree Skills Page](../../screenshots/admin/page-project-self_report.png)
+
 ### Notifications
 
 SkillTree will send email base notifications to project's administrators when points are requested, approved or rejected. 

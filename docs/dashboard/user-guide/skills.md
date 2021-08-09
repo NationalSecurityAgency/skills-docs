@@ -4,7 +4,11 @@ Projects are composed of Subjects which are made of Skills and a single skill de
 To complete a skill, users may need to perform the same action multiple times - repetition is important for retention after all. A Skill definition specifies
 how many times a skill has to be performed. Each occurrence is called a Skill Event.   
 
+![SkillTree Skills Page](../../screenshots/admin/page-skills.png)
+
 To create a skill, navigate to ``Project -> Subject`` then click on ``Skill +``, the following skill properties can be specified:
+
+![SkillTree Skills Page](../../screenshots/admin/modal-skills-new_skill.png)
 
 | Property | Explanation | 
 |:------- |:----------- | 
