@@ -85,6 +85,7 @@ module.exports = {
                     '/dashboard/user-guide/issues',
                     '/dashboard/user-guide/progress-and-ranking',
                     '/dashboard/user-guide/inception',
+                    '/dashboard/user-guide/contact-admins',
                     '/dashboard/user-guide/settings',
                 ]
             },
