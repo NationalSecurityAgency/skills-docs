@@ -30,6 +30,7 @@ The Dashboard user that creates a project is automatically granted the role of a
 | [Levels](/dashboard/user-guide/levels.html) | Customize number of Levels and their attributes |
 | [Dependencies](/dashboard/user-guide/dependencies.html) | Specify the order of Skills completion. For example Skill A must be completed before Skill B can be attempted | 
 | [Cross-project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) | Create and manage Skill dependencies across multiple Projects which practically equates to cross-application Skills |
+| [Contact Users](/dashboard/user-guide/contact-project-users.html) | Communicate with users of your Project |
 | [Metrics](/dashboard/user-guide/metrics.html) | Charts and graph. These are page specific - Project, Subject, Badge, and User will have stats specifically for those pages |
 | [Issues](/dashboard/user-guide/issues.html) | Errors related to the Project such as non-existant Skills that have been reported |       
 | [Settings](/dashboard/user-guide/projects.html#settings) | Project level settings |   
