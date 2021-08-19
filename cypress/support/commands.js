@@ -27,7 +27,16 @@ import {addMatchImageSnapshotCommand} from 'cypress-image-snapshot/command';
 
 addMatchImageSnapshotCommand();
 
+Cypress.Commands.add('closeToasts', () => {
+    cy.get('body').then((body) => {
+        if (body.find('header.toast-header').length > 0) {
+            cy.get('button.close').click({ multiple: true, force: true });
+        }
+    });
+});
+
 Cypress.Commands.add('snap', (name, selector = null, options = {}) => {
+    cy.closeToasts();
     cy.wait(1500);
     if (selector) {
         cy.get(selector).matchImageSnapshot(name, options);
@@ -45,7 +54,7 @@ Cypress.Commands.add('login', () => {
 });
 
 Cypress.Commands.add('clickNav', (navName) => {
-    cy.get(`[data-cy=nav-${navName}]`).click();
+    cy.get(`[data-cy="nav-${navName}"]`).click();
     // click away to remove focus from the nav
     cy.get('.page-footer').click();
 });
@@ -73,5 +82,7 @@ Cypress.Commands.add("cdClickSubj", (subjIndex, expectedTitle) => {
     }
 });
 
-
+Cypress.Commands.add("addToMyProjects", (projId) => {
+    cy.request('POST', `/api/myprojects/${projId}`, {});
+});
 

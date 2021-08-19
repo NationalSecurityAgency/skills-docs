@@ -4,6 +4,35 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.6.0  
+<release-date date="Aug. 2021" />
+- Added ability to drag-and-drop projects, subjects and badges in order to arrange their display order
+- New project ``Contact Users`` page that enables project administrators to send emails to all or a sub-set of the project's user base
+  - Ability to contact users based on project/subject level achievement or specific skill/badge achievements
+  - Supports markdown for the body of the email
+- New ``Contact Admins`` page 
+  - Only available to users with the ``ROOT`` access role
+  - Email all project administrators 
+  - Supports markdown for the body of the email
+- Redesigned ``Progress and Ranking`` views
+  - Empowered users to customize the projects displayed to only those of interest to the user
+  - Added drag-and-drop ability to arrange project cards
+  - Navigation within Skills Display component is now reflected in the dashboard's breadcrumb navigation bar
+- Added ability to theme Skill Display's title card
+- Added ability to assign tags to users and to generate metrics/charts based on those tags
+- Bug fixes
+
+#### 1.5.3  
+<release-date date="Ju,. 2021" />
+- Bug Fix: Added locking for project expiration/deletion/notification
+
+#### 1.5.2  
+<release-date date="Jul. 2021" />
+- Bug Fixes
+
+#### 1.5.1  
+<release-date date="Jul. 2021" />
+- Bug Fixes
 
 #### 1.5.0  
 <release-date date="Jun. 2021" />

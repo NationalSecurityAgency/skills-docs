@@ -3,7 +3,16 @@
 A Project is an overall container that represents the skills ruleset for a single application with gamified training. 
 Project's administrator(s) manage skill definitions, subjects, levels, dependencies and other attributes that make up an application's training profile.
 
+
+![SkillTree Projects Admin](../../screenshots/admin/page-projects.png)
+
 Creating a project is simple, all you need is a name. While the project id is required, it will be automatically generated (you can optionally override the generated id).
+
+
+To create a project click the ``Project +`` button.
+
+![SkillTree Projects Admin](../../screenshots/admin/modal-projects-new_project.png)
+
 
 A Project is composed of Subjects which are made up of Skills and a single skill defines a training unit within the gamification framework. 
 Once the project is created you have an empty canvas on which to compose and manage your application's training profile. 
@@ -21,22 +30,21 @@ The Dashboard user that creates a project is automatically granted the role of a
 | [Levels](/dashboard/user-guide/levels.html) | Customize number of Levels and their attributes |
 | [Dependencies](/dashboard/user-guide/dependencies.html) | Specify the order of Skills completion. For example Skill A must be completed before Skill B can be attempted | 
 | [Cross-project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) | Create and manage Skill dependencies across multiple Projects which practically equates to cross-application Skills |
+| [Contact Users](/dashboard/user-guide/contact-project-users.html) | Communicate with users of your Project |
 | [Metrics](/dashboard/user-guide/metrics.html) | Charts and graph. These are page specific - Project, Subject, Badge, and User will have stats specifically for those pages |
 | [Issues](/dashboard/user-guide/issues.html) | Errors related to the Project such as non-existant Skills that have been reported |       
 | [Settings](/dashboard/user-guide/projects.html#settings) | Project level settings |   
 
 ## Settings
 
-To manage and view project-wide settings navigate to ``Project -> Settings``. The following project-level settings are available: 
+To manage and view project-wide settings navigate to ``Project -> Settings``. 
 
-#### Setting: Production Mode <since project="skills-service" version="1.4.0" />
+![Project Settings](../../screenshots/admin/page-project-settings.png)
 
-Enabling ``Production Mode`` signals to the SkillTree platform that the project is fully operational. 
+The following project-level settings are available: 
 
-Switching the mode to ``true`` will:
-- Make this project visible in the ``Progress and Ranking`` page for all SkillTree users
-
-
+#### Setting: Production Mode
+This setting is only available when Progress and Ranking views are enabled. Please visit [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) section to learn more.   
 
 #### Setting: Use Points For Levels
 

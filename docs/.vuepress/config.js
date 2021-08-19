@@ -72,8 +72,6 @@ module.exports = {
                 collapsable: true,
                 children: [
                     '/dashboard/user-guide/',
-                    '/dashboard/user-guide/progress-and-ranking',
-                    '/dashboard/user-guide/admin-view',
                     '/dashboard/user-guide/projects',
                     '/dashboard/user-guide/subjects',
                     '/dashboard/user-guide/skills',
@@ -85,7 +83,9 @@ module.exports = {
                     '/dashboard/user-guide/users',
                     '/dashboard/user-guide/metrics',
                     '/dashboard/user-guide/issues',
+                    '/dashboard/user-guide/progress-and-ranking',
                     '/dashboard/user-guide/inception',
+                    '/dashboard/user-guide/contact-admins',
                     '/dashboard/user-guide/settings',
                 ]
             },

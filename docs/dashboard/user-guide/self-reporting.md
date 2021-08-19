@@ -36,16 +36,11 @@ Once Self Reporting is enabled for a skill, users will see an ``I did it`` butto
 
 ![Skills with Self Reporting](../../screenshots/progress-and-ranking/client-display-skills-selfReport.png)
 
-Skills and Self Reporting can either be accessed
-1. in the Skills Display component embedded within your application (via [Client Libraries](/skills-client/#client-display-integration)) *OR*
-1. in the [Progress And Rankings](/dashboard/user-guide/progress-and-ranking.html) display of the Dashboard
-    - Navigate to ``Project and Rankings`` then click on your project's card
-    - Please note that the ``Production Mode`` must be enabled for your project to be visible in the ``Progress And Ranking`` view, please see [Setting: Production Mode](/dashboard/user-guide/projects.html#settings)
-    
-::: tip
-You can create a project that consists purely of Self Reported skills! Users will then report completion using [Progress And Rankings](/dashboard/user-guide/progress-and-ranking.html) display of the Dashboard.
-Alternatively you can have only some skills configured with Self Reporting or no skills at all. In this case [Skill Client Libraries](skills-client/) are used to report skill events. 
+Skills with Self Reporting can be accessed in the Skills Display component embedded within your application (via [Client Libraries](/skills-client/#client-display-integration)) 
 
+::: tip IDEA
+You could create a project that consists purely of Self Reported skills! 
+Alternatively you can have only some skills configured with Self Reporting or no skills at all.  
 :::
 
 ## Approval Queue
@@ -55,6 +50,8 @@ through the simple approval workflow:
 1. User click ``I did it`` button and requests points
 1. Request appears on the project's Self Report page (see the Screenshot below)
 1. Project administrator approves or reject requests
+
+![SkillTree Skills Page](../../screenshots/admin/page-project-self_report.png)
 
 ### Notifications
 

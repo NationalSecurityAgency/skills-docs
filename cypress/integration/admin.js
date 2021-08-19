@@ -15,6 +15,10 @@ context('Generate Admin Screenshots', () => {
         cy.get('[data-cy="projectCard_shows"]');
         cy.snap('page-projects');
 
+        // new project modal
+        cy.get('[data-cy="newProjectButton"]').click();
+        cy.get('[data-cy="projectName"]');
+        cy.snap('modal-projects-new_project', '.modal-content')
     })
 
     it('Gen Subject page with custom viewport', () => {
@@ -32,18 +36,53 @@ context('Generate Admin Screenshots', () => {
         cy.snap('page-badges');
     });
 
+    it('New Subject, Badge and Skill modals', () => {
+        cy.viewport(1350, 1200);
+
+        // new subject modal
+        cy.visit('/administrator/projects/movies')
+        cy.get('[data-cy="subjectCard-Action"]');
+        cy.get('[data-cy="btn_Subjects"]').click()
+        cy.get('[data-cy="subjectNameInput"]')
+        cy.wait(2000)
+        cy.snap('modal-subjects-new_subject', '.modal-content')
+
+        // new badge modal
+        cy.visit('/administrator/projects/movies/badges')
+        cy.get('[data-cy="btn_Badges"]').click();
+        cy.get('[data-cy="badgeName"]')
+        cy.snap('modal-badges-new_badge', '.modal-content')
+
+        // new skill modal
+        cy.visit('/administrator/projects/movies/subjects/Action/');
+        cy.get('[data-cy="btn_Skills"]').click();
+        cy.get('[data-cy="skillName"]');
+        cy.snap('modal-skills-new_skill', '.modal-content')
+
+    });
+
 
     it('Gen Project pages', () => {
+        cy.viewport(1350, 1200);
+
         cy.visit('/administrator/projects/movies/badges')
         // deps page
         cy.clickNav('Dependencies');
         cy.contains('Skill Dependencies')
+        cy.wait(5000);
         cy.snap('page-project-deps');
 
+        // selt report page
+        cy.clickNav('Self Report');
+        cy.get('[data-cy="skillsReportApprovalTable"]').contains('Note:')
+        cy.snap('page-project-self_report');
+
         // levels page
+        cy.viewport(1350, 800);
         cy.clickNav('Levels');
         cy.contains('White Belt');
-        cy.snap('page-levels');
+        cy.snap('page-project-levels');
+        cy.viewport(1350, 1200);
 
         // metrics skills page
         cy.clickNav('Metrics');
@@ -66,8 +105,42 @@ context('Generate Admin Screenshots', () => {
         cy.contains('Overall Levels');
         cy.get('[data-cy="achievementsNavigator-table"]')
         cy.snap('page-project-metrics-achievements');
+
+        // issues page
+        cy.clickNav('Issues');
+        cy.get('[data-cy="projectErrorsTable"]');
+        cy.snap('page-project-issues');
+
+        // settings
+        cy.clickNav('Settings');
+        cy.contains('Production Mode');
+        cy.snap('page-project-settings');
     })
 
+
+    it('Email notification pages', () => {
+        // first set email settings to enable email
+        cy.visit('/settings/email')
+        cy.get('[data-cy="hostInput"]').clear().type('localhost');
+        cy.get('[data-cy="portInput"]').clear().type(155);
+        cy.get('[data-cy="emailSettingsSave"]').click();
+        cy.get('[data-cy="connectionError"]');
+
+        cy.clickNav('System');
+        cy.get('[data-cy="publicUrl"]').clear().type('http://localhost:8080')
+        cy.get('[data-cy="fromEmail"]').clear().type('skills@skills.org')
+        cy.get('[data-cy="saveSystemSettings"]').click();
+
+        // project admins page
+        cy.visit('/administrator/contactAdmins');
+        cy.contains('Email Content');
+        cy.snap('page-contact_proj_admins');
+
+        // notify proj users page
+        cy.visit('/administrator/projects/movies/contact-users');
+        cy.contains('Email Content');
+        cy.snap('page-project-notify_users');
+    });
 
     it('Gen Subject pages', () => {
         // skills page
@@ -100,6 +173,7 @@ context('Generate Admin Screenshots', () => {
 
 
     it('Gen Skill pages', () => {
+        cy.viewport(1300, 1200);
         // skills page
         cy.visit('/administrator/projects/movies/subjects/Family/skills/HarryPotterandtheGobletofFire');
         cy.clickNav('Dependencies');
@@ -163,7 +237,13 @@ context('Generate Admin Screenshots', () => {
         cy.get('[data-cy="saveSystemSettings"]').click();
         // close toast
         cy.get('button.close').click({multiple: true, force: true});
+    });
 
+    it('Gen Inception page', () => {
+        cy.visit('/administrator/skills ');
+        cy.contains('Dashboard Skills');
+        cy.wait(4000);
+        cy.snap('page-inception');
     });
 
 })
