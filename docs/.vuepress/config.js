@@ -178,6 +178,8 @@ if (removeAuthPageFromIntegrationGuide) {
     dashboardGuide.children = dashboardGuide.children.filter((item) => !item.endsWith('auth'))
 }
 
+console.log(JSON.stringify(sidebar, null, 2));
+
 
 module.exports = {
     port: 9999,
