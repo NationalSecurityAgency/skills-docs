@@ -42,17 +42,20 @@ if (docsConf && docsConf.length > 0) {
             }
 
             // remove install guide
+            console.log('removing Install Guide');
             rimraf.sync("docs/dashboard/install-guide");
         }
     }
 
     if (docsConf.includes('pkiAuthInstallOnly=true')) {
         // remove auth page
+        console.log('removing Auth page');
         rimraf.sync("docs/skills-client/auth.md");
     }
 
     if (docsConf.includes('removeProgressAndRankingPageFromDashboardUserGuide=true')) {
         // remove project and ranking page
+        console.log('removing Progress and Ranking Page');
         rimraf.sync("docs/dashboard/user-guide/progress-and-ranking.md");
     }
 
