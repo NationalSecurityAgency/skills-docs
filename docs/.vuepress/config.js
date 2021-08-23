@@ -181,9 +181,8 @@ if (removeAuthPageFromIntegrationGuide) {
     dashboardGuide.children = dashboardGuide.children.filter((item) => !item.endsWith('auth'))
 }
 if (removeContributionsGuide) {
-    const toFilter = 'Open Source Contributions';
-    nav = nav.filter((item) => item.text !== toFilter);
-    sidebar = sidebar.filter((item) => item.title !== toFilter);
+    nav = nav.filter((item) => item.text !== 'Contribute');
+    sidebar = sidebar.filter((item) => item.title !== 'Open Source Contributions');
 }
 
 console.log(`Sidebar object:\n${JSON.stringify(sidebar, null, 2)}`);
