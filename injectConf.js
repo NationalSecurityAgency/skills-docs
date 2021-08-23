@@ -8,8 +8,8 @@ if (docsConf && docsConf.length > 0) {
 
     const options = {
         files: 'docs/.vuepress/config.js',
-        from: 'injectedConf',
-        to: docsConf,
+        from: /confValue[\s]=[\s]+'injectedConf'/,
+        to: `confValue = '${docsConf}'`,
     };
 
     try {
@@ -51,7 +51,9 @@ if (docsConf && docsConf.length > 0) {
         // remove auth page
         console.log('removing Auth page');
         rimraf.sync("docs/skills-client/auth.md");
-        rimraf.sync("docs/skills-client/auth");
+        rimraf.sync("docs/skills-client/auth/authForm.md");
+        rimraf.sync("docs/skills-client/auth/endpointsFormPKI.md");
+        rimraf.sync("docs/skills-client/auth/reportSkillJavaExampleForm.md");
     }
 
     if (docsConf.includes('removeProgressAndRankingPageFromDashboardUserGuide=true')) {
