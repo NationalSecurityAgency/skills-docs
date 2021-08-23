@@ -62,5 +62,11 @@ if (docsConf && docsConf.length > 0) {
         rimraf.sync("docs/dashboard/user-guide/progress-and-ranking.md");
     }
 
+    if (docsConf.includes('removeContributionsGuide=true')) {
+        // remove project and ranking page
+        console.log('removing Contribution Guide Pages');
+        rimraf.sync("docs/contribution");
+    }
+
 
 }

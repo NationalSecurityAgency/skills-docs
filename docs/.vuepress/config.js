@@ -45,6 +45,7 @@ downloadIcon();
 let removeInstallGuide = false;
 let removeProgressAndRankingPageFromDashboardUserGuide = false;
 let removeProgressAndRankingInstallNote = false;
+let removeContributionsGuide = true;
 
 let removeAuthPageFromIntegrationGuide = false;
 let pkiAuthInstallOnly = false;
@@ -80,6 +81,8 @@ if (confValue && confValue !== 'injectedConf') {
             removeInstallGuide = true;
         } else if (key === 'docsTitle') {
             docsTitle = val;
+        } else if (key === 'removeContributionsGuide' && val === 'true') {
+            removeContributionsGuide = true;
         }
     })
 }
@@ -177,9 +180,13 @@ if (removeAuthPageFromIntegrationGuide) {
     const dashboardGuide = sidebar.find((item) => item.title === 'Integration Guide');
     dashboardGuide.children = dashboardGuide.children.filter((item) => !item.endsWith('auth'))
 }
+if (removeContributionsGuide) {
+    const toFilter = 'Open Source Contributions';
+    nav = nav.filter((item) => item.text !== toFilter);
+    sidebar = sidebar.filter((item) => item.title !== toFilter);
+}
 
-console.log(JSON.stringify(sidebar, null, 2));
-
+console.log(`Sidebar object:\n${JSON.stringify(sidebar, null, 2)}`);
 
 module.exports = {
     port: 9999,
