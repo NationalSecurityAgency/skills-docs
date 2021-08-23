@@ -14,7 +14,7 @@ provides fully navigable and themeable **Ranking and Visualization views** that 
 
 To integrate with the SkillTree service/dashboard please execute the following steps:
 
-1. Create and customize your training profile in the [SkillTree dashboard](/dashboard/user-guide/)
+1. Create and customize your training profile in the [SkillTree Dashboard](/dashboard/user-guide/)<conditional visibilityFlag="skillTreeServiceUrl"> ( <service-url /> )</conditional>
 1. Embed **Ranking and Visualization** views using the [Skill Display](/skills-client/#skills-display-integration) component
 1. Instrument your application to report [skill events](/skills-client/#report-events-integration) 
    - Use the SkillTree [Reporting JS Utility](/skills-client/#report-events-integration) and/or [REST endpoints](/skills-client/endpoints.html)

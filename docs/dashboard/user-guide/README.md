@@ -1,16 +1,30 @@
 # Overview
 
-At the heart of the SkillTree platform is the SkillTree dashboard - a web-based user interface. 
+At the heart of the SkillTree platform is the SkillTree dashboard - a web-based user interface<conditional visibilityFlag="skillTreeServiceUrl"> ( <service-url /> )</conditional>. 
 The SkillTree Dashboard provides these main functions: 
 1. Enables creation and management of an applications' [training profile](/dashboard/user-guide/#building-training-profile)
 1. Provides corporate visibility of application expertise and offers metrics and various visualizations.  
 
+
 ![Skills Platform Overview Image](../../overview/diagrams/SkillTreePlatformOverview.png)
+
+<conditional visibilityFlag="skillTreeServiceUrl" :visibility-value="false">
 
 ::: tip
 - If your organization is running the SkillTree platform, then you will be provided with its URL to get started. 
 - If you are installing the SkillTree platform from scratch (see [Install Guide](/dashboard/install-guide/)) then... well you just know where it's running. 
 :::
+
+</conditional>
+
+<conditional visibilityFlag="skillTreeServiceUrl"> 
+
+::: tip Good to Know!
+- You can visit dashboard at <service-url /> 
+- Feel free to create a project while working through this guide! You can always remove the project if you are done exploring SkillTree features.  
+:::
+
+</conditional>
 
 ## Building Training Profile
 

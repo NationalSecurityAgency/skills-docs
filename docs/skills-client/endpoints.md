@@ -34,14 +34,14 @@ then you can [POST](https://en.wikipedia.org/wiki/POST_(HTTP) / [PUT](https://en
 ``[Service URL]``/api/projects/``[Project Id]``/skills/``[Skill Id]``
 
 where
-- **Service URL**: Fully qualified URL of the skills service/dashboard, if you are running it locally then something like ``http://localhost:8082`` 
+- **Service URL**: Fully qualified URL of the skills service/dashboard, <conditional visibilityFlag="skillTreeServiceUrl"> ( <service-url /> )</conditional><conditional visibilityFlag="skillTreeServiceUrl" :visibility-value="false">if you are running it locally then something like ``http://localhost:8082``</conditional> 
 - **Project Id**: Project id for the reported skill
 - **Skill Id**: For the reported skill
 
 For example, to report a skill with id ``SkillA`` for a project with id ``ProjectA``, for a locally hosted service, POST to the following URL: 
 
 ```
-http://localhost:8082/api/projects/ProjectA/skills/SkillA
+http://localhost:8080/api/projects/ProjectA/skills/SkillA
 ```
 
 The Report Skill Endpoint also accepts **optional** JSON payload parameters. 

@@ -3,6 +3,6 @@
  
  SkillsConfiguration.configure({
    serviceUrl: 'http://localhost:8080',
-   projectId: 'movies',
+   projectId: 'your-project-id',
    authenticator: 'pki',
  });
