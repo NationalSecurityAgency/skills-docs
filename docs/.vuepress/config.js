@@ -54,9 +54,8 @@ let skillTreeServiceUrl = skillTreeServiceUrlDefaultValue;
 let skillTreeServiceUrlProvided = false;
 let docsTitle = 'SkillTree Docs';
 
-const injectedConfKey = 'injectedConf';
-const confValue = injectedConfKey;
-if (confValue && confValue !== injectedConfKey) {
+const confValue = 'injectedConf';
+if (confValue && confValue !== 'injectedConf') {
     const confVals = confValue.split(',');
     confVals.forEach((conf) => {
         const keyVal = conf.split('=');
