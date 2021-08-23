@@ -51,6 +51,7 @@ if (docsConf && docsConf.length > 0) {
         // remove auth page
         console.log('removing Auth page');
         rimraf.sync("docs/skills-client/auth.md");
+        rimraf.sync("docs/skills-client/auth");
     }
 
     if (docsConf.includes('removeProgressAndRankingPageFromDashboardUserGuide=true')) {
