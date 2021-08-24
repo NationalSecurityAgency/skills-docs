@@ -3,6 +3,8 @@
 The Progress and Ranking pages visualize the user's current Progress and Ranking across **multiple** projects. 
 There is also a way to drill-down into a specific project to view its progress and ranking.    
 
+<conditional visibilityFlag="progressAndRankingInstallNote">
+
 ::: warning Please Note
 Progress and Ranking views are optional pages and not all of the SkillTree installations will have them enabled. 
 These views are enabled through start-up configuration [Progress and Ranking views properties](/dashboard/install-guide/config.html#progress-and-ranking-views).
@@ -11,6 +13,9 @@ Progress and Ranking pages are generally only applicable when
 - the same users utilize multiple integrated applications
 - the SkillTree dashboard is used to allow users access to [Self-Reported skills](/dashboard/user-guide/self-reporting.html).
 :::
+
+</conditional>
+
 
 The Progress and Ranking views support:
 1. Customization of [My Projects](#manage-my-projects-page) - only view progress and ranking for the selected projects
