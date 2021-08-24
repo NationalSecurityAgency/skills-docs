@@ -8,7 +8,7 @@ if (docsConf && docsConf.length > 0) {
 
     const options = {
         files: 'docs/.vuepress/config.js',
-        from: /confValue[\s]=[\s]+'injectedConf'/,
+        from: /confValue[\s]*=[\s]*'injectedConf'/,
         to: `confValue = '${docsConf}'`,
     };
 
