@@ -38,7 +38,7 @@ downloadIcon();
  *  pkiAuthInstallOnly=true : docs for pki-based SkillTree install (passAuthInstallOnly must be false)
  *  passAuthInstallOnly=true : docs for pass-auth-based SkillTree install (pkiAuthInstallOnly must be false)
  *  skillTreeServiceUrl=https://myverycoolsite.com : remove Install Guide; replaces all occurences of http://localhost:8080 with the provided url
- *  removeProgressAndRankingInstallNote=true : removes installation note in Progress and Ranking section; set this to true of the install enables Progress and Ranking views
+ *  removeProgressAndRankingInstallNote=true : removes installation note in Progress and Ranking section; set this to true if the install enables Progress and Ranking views
  *  removeProgressAndRankingPageFromDashboardUserGuide=true: remove Progress and Ranking section if Progress and Ranking views are disabled
  *  removeContributionsGuide=true: remove Contribution Guide form docs
  */
