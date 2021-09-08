@@ -46,7 +46,7 @@ downloadIcon();
 let removeInstallGuide = false;
 let removeProgressAndRankingPageFromDashboardUserGuide = false;
 let removeProgressAndRankingInstallNote = false;
-let removeContributionsGuide = true;
+let removeContributionsGuide = false;
 
 let removeAuthPageFromIntegrationGuide = false;
 let pkiAuthInstallOnly = false;
