@@ -185,6 +185,11 @@ if (removeContributionsGuide) {
     nav = nav.filter((item) => item.text !== 'Contribute');
     sidebar = sidebar.filter((item) => item.title !== 'Open Source Contributions');
 }
+if (pkiAuthInstallOnly) {
+    // remove Auth section all together, it's not adding any value to pki-only install
+    const integrationGuide = sidebar.find((item) => item.title === 'Integration Guide');
+    integrationGuide.children = integrationGuide.children.filter((item) => !item.endsWith('auth'))
+}
 
 console.log(`Sidebar object:\n${JSON.stringify(sidebar, null, 2)}`);
 
