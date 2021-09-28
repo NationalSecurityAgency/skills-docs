@@ -31,6 +31,16 @@ context('Generate Progress and Ranking Screenshots', () => {
     cy.snap('page-progress-and-rankings-view-my-usage');
   });
 
+  it('Gen View Badges page', () => {
+    cy.visit('/progress-and-rankings/my-badges')
+    cy.snap('page-progress-and-rankings-badges');
+    cy.get('[data-cy="filterBtn"]').click();
+
+    cy.get('[data-cy="filterMenu"]').should('be.visible');
+    cy.snap('component-progress-and-rankings-badge-filter', '[data-cy="filterMenu"] .dropdown');
+
+  });
+
   it('Gen Skills Display pages', () => {
     cy.visit('/progress-and-rankings/projects/movies?classicSkillsDisplay=true');
     cy.clientDisplay(true).contains('My Level');

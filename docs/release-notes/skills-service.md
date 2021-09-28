@@ -4,6 +4,14 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.7.0  
+<release-date date="Sep. 2021" />
+- Implemented store and display of aporoval history for self-report skills
+- Added ``Badges`` display for ``Progress and Ranking`` views
+  - shows all global badges and project badges within the customized ``My Projects`` 
+  - displays earned and available badges as well as current badge progress
+- Bug fixes      
+
 #### 1.6.0  
 <release-date date="Aug. 2021" />
 - Added ability to drag-and-drop projects, subjects and badges in order to arrange their display order
