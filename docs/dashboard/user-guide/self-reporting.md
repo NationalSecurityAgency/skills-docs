@@ -56,16 +56,16 @@ through the simple approval workflow:
 ### Approval History <since project="skills-service" version="1.7.0" /> 
 
 Project administrators can can either approve or reject points/skill requests. 
-Approvals and rejections are then moved into the ``Approval History`` section. 
+Approvals and rejections are documented in the ``Approval History`` section. 
 
 Approval History tracks: 
-- Skills name and skill id
-- Whether requested was approved or rejected
+- Skill name and skill id
+- Whether request was approved or rejected
 - Requester's and approver's user ids
-- requested an action dates 
+- requested and approved/rejected dates 
 
 ::: tip
-``Approval History`` table can be sorted by all of its columns or filtered by the ``Skill Name``, ``User Id`` or/and ``Approver Id``. 
+The ``Approval History`` table can be sorted by all of its columns or filtered by ``Skill Name``, ``User Id`` and/or ``Approver Id``. 
 ::: 
 
 ### Notifications
