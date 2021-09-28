@@ -66,6 +66,24 @@ You can customize the landing page by visiting ``Settings -> Preferences``:
 
 ![Preferences Page](../../screenshots/admin/page-settings-preference.png)
 
+## Badges Page
+
+You can view your earned and available badges by visiting the ``My Badges`` page from the ``My Projects`` page.
+
+![My Badges Page](../../screenshots/progress-and-ranking/page-progress-and-rankings-badges.png)
+
+``My Badges`` page is broken down into the badges you earned followed by the available badges. 
+You can click on each earned badges to see skills and points that took to earn this prestigious award.  
+
+The next section depicts all of the available badges that have not been fully achieved and 
+- are from one of the ``My Projects`` OR
+- are one of the Global Badges that at least one of ``My Projects`` is a part of
+
+::: tip
+You can search badges by name as well as filter down ![Filter Component](../../screenshots/progress-and-ranking/component-progress-and-rankings-badge-filter.png) to only ``Project Badges``, ``Gems`` or ``Global Badges``
+:::
+
+
 ## Daily Usage Page
 
 You can view your daily usage for the selected projects by visiting the ``My Usage`` page from the ``My Projects`` page

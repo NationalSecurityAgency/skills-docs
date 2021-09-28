@@ -1,4 +1,4 @@
-# Self Reporting <since project="skills-service" version="1.4.0" />
+# Self Reporting
 
 Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. 
 A project administrator can enable ``Self Reporting`` for a skill, set of skills or even all the skills in a project. 
@@ -52,6 +52,21 @@ through the simple approval workflow:
 1. Project administrator approves or reject requests
 
 ![SkillTree Skills Page](../../screenshots/admin/page-project-self_report.png)
+
+### Approval History <since project="skills-service" version="1.7.0" /> 
+
+Project administrators can can either approve or reject points/skill requests. 
+Approvals and rejections are then moved into the ``Approval History`` section. 
+
+Approval History tracks: 
+- Skills name and skill id
+- Whether requested was approved or rejected
+- Requester's and approver's user ids
+- requested an action dates 
+
+::: tip
+``Approval History`` table can be sorted by all of its columns or filtered by the ``Skill Name``, ``User Id`` or/and ``Approver Id``. 
+::: 
 
 ### Notifications
 

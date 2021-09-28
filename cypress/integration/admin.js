@@ -61,6 +61,20 @@ context('Generate Admin Screenshots', () => {
 
     });
 
+    it('Gen Self Report page', () => {
+        cy.viewport(1350, 1200);
+
+        cy.visit('/administrator/projects/movies/badges')
+
+        cy.clickNav('Self Report');
+        cy.get('[data-cy="selectPageOfApprovalsBtn"]').click();
+        cy.get('[data-cy="approveBtn"]').click();
+
+        cy.get('[data-cy="skillsReportApprovalTable"]').contains('Note:')
+
+        cy.snap('page-project-self_report');
+    });
+
 
     it('Gen Project pages', () => {
         cy.viewport(1350, 1200);
@@ -71,11 +85,6 @@ context('Generate Admin Screenshots', () => {
         cy.contains('Skill Dependencies')
         cy.wait(5000);
         cy.snap('page-project-deps');
-
-        // selt report page
-        cy.clickNav('Self Report');
-        cy.get('[data-cy="skillsReportApprovalTable"]').contains('Note:')
-        cy.snap('page-project-self_report');
 
         // levels page
         cy.viewport(1350, 800);
