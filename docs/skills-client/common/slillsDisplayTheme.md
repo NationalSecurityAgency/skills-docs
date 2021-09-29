@@ -8,12 +8,12 @@ The theme object supports the following properties:
 | Prop          | Explanation  |
 | ------------- | -----------  |
 | backgroundColor | page background color |
-| disableBreadcrumb <since project="skills-service" version="1.5.0" :is-block="true"/> | when set to ``true``, the breadcrumb bar in the title section will not be displayed.  default is ``false`` |
-| breadcrumb.linkColor <since project="skills-service" version="1.5.0" :is-block="true"/> | breadcrumbs's parent/ancestor link color  |
-| breadcrumb.linkHoverColor <since project="skills-service" version="1.5.0" :is-block="true"/> | breadcrumbs's parent/ancestor link hover color  |
-| breadcrumb.currentPageColor <since project="skills-service" version="1.5.0" :is-block="true"/> | breadcrumbs's current page color  |
+| disableBreadcrumb | when set to ``true``, the breadcrumb bar in the title section will not be displayed.  default is ``false`` |
+| breadcrumb.linkColor | breadcrumbs's parent/ancestor link color  |
+| breadcrumb.linkHoverColor | breadcrumbs's parent/ancestor link hover color  |
+| breadcrumb.currentPageColor  | breadcrumbs's current page color  |
 | breadcrumb.align <since project="skills-service" version="1.6.0" :is-block="true"/> | breadcrumbs's alignment for the title card; valid values are ``start``, ``center``, ``end`` (uses css [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)) |
-| disableSkillTreeBrand <since project="skills-service" version="1.5.0" :is-block="true"/> | when set to ``true``, the SkillTree brand logo in the title section will not be displayed.  default is ``false`` |
+| disableSkillTreeBrand  | when set to ``true``, the SkillTree brand logo in the title section will not be displayed.  default is ``false`` |
 | skillTreeBrandColor <since project="skills-service" version="1.6.0" :is-block="true"/> | text color for the SkillTree brand logo; if not supplied the default is ``pageTitle.textColor`` |  
 | maxWidth  | maximum width of the component, can use any units supported by [max-width CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) such as ``%``, ``em`` and ``px`` (ex. ``100%``); default is ``1140px``  |
 | landingPageTitle  | title of the landing page, default is ``User Skills`` |
@@ -34,12 +34,26 @@ The theme object supports the following properties:
 | textPrimaryColor | chart titles, progress titles, tile titles, descriptions, rank tile text | 
 | stars.unearnedColor | color of unearned level stars | 
 | stars.earnedColor | color of earned level stars | 
-| charts.axisLabelColor | color of scales/axis text on charts | 
-| tiles.backgroundColor | tile background color, such as subject tiles | 
-| tiles.watermarkIconColor | My Rank, Rank overview, My Badges watermark icon color | 
-| buttons.backgroundColor  | background for buttons | 
-| buttons.foregroundColor  | foreground color for buttons including text and border |
-| buttons.disabledColor  | disabled color for buttons including text and border |
+| charts.axisLabelColor | color of scales/axis text on charts |
+| charts.labelBackgroundColor  <since project="skills-service" version="1.7.0" :is-block="true"/>| chart label background color; applies to charts like ``Point History`` and ``Level Breakdown``; please note that labels visibility depends on the presence of points and achievements  | 
+| charts.labelBorderColor  <since project="skills-service" version="1.7.0" :is-block="true"/>| chart label border color; applies to charts like ``Point History`` and ``Level Breakdown``; please note that labels visibility depends on the presence of points and achievements |
+| charts.labelForegroundColor  <since project="skills-service" version="1.7.0" :is-block="true"/>| chart label text/foreground color; applies to charts like ``Point History`` and ``Level Breakdown``; please note that labels visibility depends on the presence of points and achievements |
+| charts.pointHistory.lineColor  <since project="skills-service" version="1.7.0" :is-block="true"/>| ``Point History`` chart line color |
+| charts.pointHistory.gradientStartColor  <since project="skills-service" version="1.7.0" :is-block="true"/>| ``Point History`` chart start gradient color (on the top) |
+| charts.pointHistory.gradientStopColor  <since project="skills-service" version="1.7.0" :is-block="true"/>| ``Point History`` chart start stop/end color (on the bottom) |
+| tiles.backgroundColor | tile background color, such as subject tiles |
+| tiles.borderColor <since project="skills-service" version="1.7.0" :is-block="true"/> | tile border color | 
+| tiles.watermarkIconColor | My Rank, Rank overview, My Badges watermark icon color |
+| infoCards.backgroundColor <since project="skills-service" version="1.7.0" :is-block="true"/> | info card background color; info cards only appear within tiles for example on the skill overview page |
+| infoCards.foregroundColor <since project="skills-service" version="1.7.0" :is-block="true"/> | info card foreground/text color; info cards only appear within tiles for example on the skill overview page |
+| infoCards.borderColor <since project="skills-service" version="1.7.0" :is-block="true"/> | info card border color; info cards only appear within tiles for example on the skill overview page |
+| infoCards.iconColors <since project="skills-service" version="1.7.0" :is-block="true"/> | info card icon colors; must provide a list of colors (up to 4), for example ``iconColors: ['blue', 'green']`` |
+| buttons.backgroundColor  | button background color | 
+| buttons.foregroundColor  | botton foreground/text color |
+| buttons.disabledColor  | button disabled color including text and border |
+| buttons.borderColor <since project="skills-service" version="1.7.0" :is-block="true"/>  | button border color |
+| badges.backgroundColor <since project="skills-service" version="1.6.0" :is-block="true"/>  | badge background color; badges include ``Self Reportable`` tag and counts on the skill and badge filters |
+| badges.foregroundColor <since project="skills-service" version="1.6.0" :is-block="true"/>  | badge foreground/text color; badges include ``Self Reportable`` tag and counts on the skill and badge filters |
 | graphLegendBorderColor | border color of dependency graph legend | 
 | subjectTileIconColor | color of subject tile icons |
 | trophyIconColor | color of the My Level trophy |

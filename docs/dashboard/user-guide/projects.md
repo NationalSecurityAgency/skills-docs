@@ -74,7 +74,7 @@ If a Skill's ``Help Url`` starts with ``http`` or ``https`` then ``Root Help Url
 If a Skill's ``Help Url`` is blank then no url will be displayed even if ``Root Help Url`` is configured. 
 In other words ``Root Help Url`` only works in conjunction with a Skill's ``Help Url``.
 
-#### Setting: Self Report Default <since project="skills-service" version="1.4.0" />
+#### Setting: Self Report Default
 
 By default, Self Reporting is disabled when creating or modifying a skill.
 If your project primarily consists of Self Reported skills, enabling Self Report Default will result in 
