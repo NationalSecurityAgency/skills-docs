@@ -197,7 +197,6 @@ module.exports = {
     port: 9999,
     title: docsTitle,
     description: 'Innovative approach to application training!',
-    base: '/skills-docs/',
     head: [
         ['link', { rel: 'icon', href: '/img/skilltree.ico' }]
     ],
