@@ -20,7 +20,6 @@ on:
       - master
 
 jobs:
-
   build-and-deploy:
     runs-on: ubuntu-latest
 
