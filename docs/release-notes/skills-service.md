@@ -4,6 +4,10 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.7.1
+<release-date date="Nov. 2021" />
+- Bug fix: Project and/or subject level-based achievements may not be awarded when a skill is edited or removed   
+
 #### 1.7.0  
 <release-date date="Sep. 2021" />
 - Implemented store and display of aporoval history for self-report skills
