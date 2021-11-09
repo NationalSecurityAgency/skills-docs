@@ -4,9 +4,13 @@ This page documents high-level release notes for [SkillTree Client](https://gith
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 3.4.0
+<release-date="Nov. 2021" />
+- Add support for React 17 to skills-client-react
+
 #### 3.3.1
 <release-date date="Jul. 2021" />
-- Implemented (``navigate``) mehthod for programmatic navigation in the ``SkillsDisplay`` component 
+- Implemented (``navigate``) method for programmatic navigation in the ``SkillsDisplay`` component 
 
 #### 3.3.0
 <release-date date="Jun. 2021" />
