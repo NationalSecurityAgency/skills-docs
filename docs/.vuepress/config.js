@@ -124,6 +124,7 @@ let sidebar = [
             '/dashboard/user-guide/projects',
             '/dashboard/user-guide/subjects',
             '/dashboard/user-guide/skills',
+            '/dashboard/user-guide/skills-groups',
             '/dashboard/user-guide/self-reporting',
             '/dashboard/user-guide/levels',
             '/dashboard/user-guide/badges',

@@ -4,6 +4,20 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.8.0
+<release-date date="Nov. 2021" />
+- Implemented Skills Groups - brand new way to define and manage skills
+  - Ability to group 2 or more skills under a group
+  - Group has a name and a description and its own progress
+  - A group can be configured with partial skill requirements (ex. 2 out of 5 skills are required to achieve this group)
+  - Groups are managed via Dashboard and visualized in the Skills Display embeddable component and Progress and Ranking views. 
+- Added project-level customization for the term ``Level`` in the Skills Display embeddable component and Progress and Ranking views
+- For a project, added ability to search and navigate directly to a skill across all the subjects
+- Made the email body expandable for Contact Users and Contact Admins pages
+- Improved usability of self-report skill request and rejection messages
+- Added ability to modify project's level requirement for a Global Badge 
+- Bug fixes
+ 
 #### 1.7.1
 <release-date date="Nov. 2021" />
 - Bug fix: Project and/or subject level-based achievements may not be awarded when a skill is edited or removed   

@@ -43,7 +43,7 @@ To manage and view project-wide settings navigate to ``Project -> Settings``.
 
 The following project-level settings are available: 
 
-#### Setting: Production Mode
+#### Setting: Discoverable
 This setting is only available when Progress and Ranking views are enabled. Please visit [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) section to learn more.   
 
 #### Setting: Use Points For Levels
@@ -57,6 +57,10 @@ By default the Percentage based strategy is configured, changing the ``Use Point
 ::: warning
 You must define at least 100 points for a project before switching to point-based levels management
 :::
+
+#### Setting: Level Display Text
+
+The word ``Level`` may be overloaded to some organizations (for example you can call it ``Stage``). You can change the value displayed to users in Skills Display here.
 
 #### Setting: Root Help Url
 
