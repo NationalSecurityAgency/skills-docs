@@ -1,6 +1,6 @@
 # Skills
 
-Projects are composed of Subjects which are made of Skills and a single skill defines a training unit within the gamification framework. 
+Projects are composed of Subjects which are made of Skills (or [Skill Groups](/dashboard/user-guide/skills-groups.html)) and a single skill defines a training unit within the gamification framework. 
 To complete a skill, users may need to perform the same action multiple times - repetition is important for retention after all. A Skill definition specifies
 how many times a skill has to be performed. Each occurrence is called a Skill Event.   
 

@@ -55,7 +55,7 @@ context('Generate Admin Screenshots', () => {
 
         // new skill modal
         cy.visit('/administrator/projects/movies/subjects/Action/');
-        cy.get('[data-cy="btn_Skills"]').click();
+        cy.get('[data-cy="newSkillButton"]').click();
         cy.get('[data-cy="skillName"]');
         cy.snap('modal-skills-new_skill', '.modal-content')
 
@@ -122,7 +122,7 @@ context('Generate Admin Screenshots', () => {
 
         // settings
         cy.clickNav('Settings');
-        cy.contains('Production Mode');
+        cy.contains('Discoverable');
         cy.snap('page-project-settings');
     })
 
@@ -254,5 +254,22 @@ context('Generate Admin Screenshots', () => {
         cy.wait(4000);
         cy.snap('page-inception');
     });
+
+    it('Gen Skills Groups', () => {
+        cy.visit('/administrator/projects/movies/subjects/Family/')
+        cy.get('[data-cy="skillsTable-skillFilter"]').type('Harry')
+        cy.get('[data-cy="users-filterBtn"]').click();
+        cy.get('[data-cy="expandDetailsBtn_HarryPotterGroupId"]').click();
+        cy.contains('Harry Potter and the Half-Blood Prince');
+        cy.snap('page-skills-group')
+    })
+
+    it('New Skill Group Modal', () => {
+        cy.visit('/administrator/projects/movies/subjects/Family/')
+        cy.get('[data-cy="newGroupButton"]').click();
+        cy.contains('New Skills Group');
+
+        cy.snap('modal-new-group', '.modal-content');
+    })
 
 })
