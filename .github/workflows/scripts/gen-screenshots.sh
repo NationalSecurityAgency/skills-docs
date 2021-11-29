@@ -23,14 +23,20 @@ SKILLS_SERVICE_CONTAINER_ID=$(docker run -d -p 8080:8080 -e SPRING_PROPS="skills
 npm run wait:skills-service
 echo "Started ${SKILLTREE_IMAGE}:${LATEST_SKILLTREE_CI_VERSION} on port [8080] with container id [${SKILLS_SERVICE_CONTAINER_ID}]"
 
-# latest backend examples
-curl -s https://api.github.com/repos/NationalSecurityAgency/skills-client-examples/releases/latest | grep browser_download_url | cut -d '"' -f 4 | wget -qi -
+# build latest backend examples
+mkdir tmp-work-dir
+cd tmp-work-dir
+git clone git@github.com:NationalSecurityAgency/skills-client-examples.git
+cd skills-client-examples/java-backend-example
+mvn package -DskipTests
+cd target
 
 # populate with sample data
 echo "Populating skills-service with data..."
 java -Dskills.service.numEvents=${NUM_SKILL_EVENTS} -Dskills.service.additionalRootUsers= -Dspring.main.web-application-type=NONE -jar java-backend-example-*.jar
 echo "Completed populating data!"
-rm java-backend-example-*.jar
+cd ../../../../
+rm -rf tmp-work-dir
 
 if [ "${skipShutdown}" = "true" ]; then
     echo "Dev mode: (1) started service (2) populated data"

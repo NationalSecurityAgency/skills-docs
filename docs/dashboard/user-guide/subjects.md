@@ -23,6 +23,11 @@ To create a Subject navigate to ``Project -> Subjects`` and then click the ``Sub
 | Description | *(Optional)* Description, can be used to describe the topic of the subject. The Description property supports markdown.
 | Help URL/Path | *(Optional)* URL pointing to a help article further documenting information about this subject. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting|
 
+::: tip
+To navigate to a specific skill you can drill down into a subject card or use the ``Search and Navigate directly to a skill`` component
+:::
+
+
 #### Best practices   
 - Do your best to create subjects in multiples of 3. On a larger screen, the [Skills Display](/skills-client/#skills-display) renders up-to 3 subjects per row so 3, 6, 9, 12, etc., will look the best.
 - Use the same icon style/set for all subjects. We support font awesome, material and custom [icons](/dashboard/user-guide/icons.html) 

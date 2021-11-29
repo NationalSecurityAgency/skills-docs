@@ -38,8 +38,8 @@ Progress and Ranking views and then clicking on the "Manage My Projects" button 
 ![Manage My Projects Page](../../screenshots/progress-and-ranking/page-progress-and-rankings-manage-my-projects.png)
 
 ::: tip
-Please note that **only** projects with ``Production Mode`` enabled are presented in the available project catalog. 
-Project owners can easily enable ``Production Mode`` on the project's Settings page. 
+Please note that **only** projects with ``Discoverable`` enabled are presented in the available project catalog. 
+Project owners can easily enable ``Discoverable`` on the project's Settings page. 
 :::
 
 ![Project Settings](../../screenshots/admin/page-project-settings.png)
