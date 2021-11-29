@@ -24,7 +24,7 @@ To create a Subject navigate to ``Project -> Subjects`` and then click the ``Sub
 | Help URL/Path | *(Optional)* URL pointing to a help article further documenting information about this subject. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting|
 
 ::: tip
-To navigate to a specific skill you can drill down a subject card or use ``Search and Navigate directly to a skill`` component
+To navigate to a specific skill you can drill down into a subject card or use the ``Search and Navigate directly to a skill`` component
 :::
 
 
