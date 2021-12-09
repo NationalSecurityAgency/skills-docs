@@ -4,6 +4,13 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.8.1
+<release-date date="Dec. 2021" />
+- Removed username/password login features when `skills.authorization.oAuthOnly=true`
+- Improved how external links display within markdown
+- Upgraded skills-client libraries to v3.4.1 in dashboard
+- Bug fixes and general usability improvements
+
 #### 1.8.0
 <release-date date="Nov. 2021" />
 - Implemented Skills Groups - brand new way to define and manage skills

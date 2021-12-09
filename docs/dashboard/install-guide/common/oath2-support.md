@@ -15,3 +15,8 @@ spring.security.oauth2.client.registration.github.redirectUriTemplate='http://<S
 spring.security.oauth2.client.registration.github.iconClass=fab fa-github
 ```
 Excluding either one of the Google or GitHub configuration sections will prevent the respective OAuth login button from being added to the Login page. 
+
+Note: To disable username/password authentication entirely and *only* supprt OAuth based authentication, set the following configuration property:
+```properties
+skills.authorization.oAuthOnly=true
+```
