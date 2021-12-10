@@ -149,6 +149,37 @@ Root URL of SkillTree documentation:
 skills.config.ui.docsHost=https://code.nsa.gov/skills-docs
 ```
 
+### SkillTree Support
+<since project="skills-service" version="1.8.2" />
+
+You can display options for your users to reach out to the support team (ex. email, chat, ticketing center, etc).
+
+Support options are displayed in the SkillTree Dashboard:
+- in the header under the ``Question Icon`` dropdown, 
+- in the footer of the application.
+
+More than one support option can be configured, here is a general template for configuring a support option: 
+
+```properties
+skills.config.ui.supportLink<N>=<url>
+skills.config.ui.supportLink<N>Label=<label>
+skills.config.ui.supportLink<N>Icon=<font awesome free icon>
+```
+
+For example: 
+
+```properties
+skills.config.ui.supportLink1=mailto:skilltreecoolsupport@someemailserver.com
+skills.config.ui.supportLink1Label=Email Us
+skills.config.ui.supportLink1Icon=fas fa-envelope-open-text
+
+skills.config.ui.supportLink2=https://skilltreecoolestsupportcenter.com
+skills.config.ui.supportLink2Label=Support Center
+skills.config.ui.supportLink2Icon=fas fa-ambulance
+```
+
+Any [Free Font Awesome Icons](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free) can be specified for the ``skills.config.ui.supportLink<N>Icon`` property. 
+
 ### Dashboard: Input Validation
 
 Here are some basic thresholds that are applied at the Dashboard UI and the backend:

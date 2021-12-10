@@ -5,7 +5,7 @@ This page documents high-level release notes for [SkillTree Client](https://gith
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
 #### 3.4.0
-<release-date="Nov. 2021" />
+<release-date "Nov. 2021" />
 - Add support for React 17 to skills-client-react
 
 #### 3.3.1
