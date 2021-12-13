@@ -4,6 +4,11 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.8.2
+<release-date date="Dec. 2021" />
+- Added ability to display support options; configurable support options are displayed in the header and footer of the dashboard
+- Bug Fix: Editing a skill decrements # of skills in the subject's stats
+
 #### 1.8.1
 <release-date date="Dec. 2021" />
 - Removed username/password login features when `skills.authorization.oAuthOnly=true`
