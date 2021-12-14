@@ -4,6 +4,12 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+
+#### 1.8.3
+<release-date date="Dec. 2021" />
+- Upgraded log4j to address [CVE-2021-44228](https://www.cisa.gov/uscert/ncas/current-activity/2021/12/13/cisa-creates-webpage-apache-log4j-vulnerability-cve-2021-44228)
+- Added support for storing HTTP Session via JDBC
+
 #### 1.8.2
 <release-date date="Dec. 2021" />
 - Added ability to display support options; configurable support options are displayed in the header and footer of the dashboard
