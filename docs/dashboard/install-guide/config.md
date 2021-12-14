@@ -266,23 +266,32 @@ These are System Properties.
 Generally gc logging is only enabled in development deployments. 
 :::
 
-### Redis HttpStore
-Required for clustered skills-service deployment to persist HttpSession:
+### HttpStore
+When deploying more than 1 instance of ``skills-service`` HttpSession must be persisted centrally. 
+SkillTree supports storing HttpSession in Redis or in Postgres via JDBC. 
+
+**Option 1:** HttpStore persisted in Redis
 ```properties
 spring.session.store-type=redis
 spring.redis.host=localhost
 spring.redis.password=
 spring.redis.port=6379 
+
+# Optional: Flush mode
+spring.session.redis.flush-mode=on_save 
+# Optional: Stores session namespace to use for the keys
+spring.session.redis.namespace=spring:session 
+# Optional: can specify duration suffix but if omitted then it defaults to seconds
+server.servlet.session.timeout= 
 ```
 
-Further customization: 
+**Option 2:** HttpStore persisted in Postgres
 ```properties
-# can specify duration suffix but if omitted then it defaults to seconds
+spring.session.store-type=jdbc
+spring.session.jdbc.initialize-schema=always
+
+# Optional: can specify duration suffix but if omitted then it defaults to seconds
 server.servlet.session.timeout= 
-# Flush mode.
-spring.session.redis.flush-mode=on_save 
-# Stores session namespace to use for the keys
-spring.session.redis.namespace=spring:session 
 ```
 
 ### https SSL (Pass Auth Mode Only)
