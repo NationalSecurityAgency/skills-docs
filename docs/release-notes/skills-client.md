@@ -4,9 +4,13 @@ This page documents high-level release notes for [SkillTree Client](https://gith
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 3.4.1
+<release-date date="Dec. 2021" />
+- Detect when the web-socket connection errors, and if the message indicates an invalid_token, then obtain a new token and reconnect
+
 #### 3.4.0
-<release-date "Nov. 2021" />
-- Add support for React 17 to skills-client-react
+<release-date date="Nov. 2021" />
+- Ensure that skills-client react libraries work with React 17
 
 #### 3.3.1
 <release-date date="Jul. 2021" />
