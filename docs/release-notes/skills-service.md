@@ -4,6 +4,10 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.8.4
+<release-date date="Dec. 2021" />
+- Upgraded log4j to address [CVE-2021-45105](https://nvd.nist.gov/vuln/detail/CVE-2021-45105)
+- Option to verify email ownership when dashboard accounts are created
 
 #### 1.8.3
 <release-date date="Dec. 2021" />

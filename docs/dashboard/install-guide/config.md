@@ -297,6 +297,18 @@ server.servlet.session.timeout=
 ### https SSL (Pass Auth Mode Only)
 <import-content path="/dashboard/install-guide/common/ssl-props.html"/>
 
+### Email Verification (Pass Auth Mode Only)
+
+You can enable verification of the email ownership when dashboard accounts are created by setting the following property:
+
+```properties
+skills.authorization.verifyEmailAddresses=true
+```
+
+When a new account is created that user will be sent a verification email. 
+The user will have to click on the verification link in the email prior their login credentials can be used. 
+
+
 ### 2-way SSL (PKI Mode Only)
 <import-content path="/dashboard/install-guide/common/two-way-ssl-props.html"/>
 
