@@ -7,7 +7,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 #### 1.8.6
 <release-date date="Jan. 2022" />
 - Support enabling actuator metrics
-- Using CProf metrics optionally expose overall endpoint execution time via Server Timing API
+- Using CProf metrics to optionally expose overall endpoint execution time via the Server Timing API
 
 #### 1.8.5
 <release-date date="Jan. 2022" />
