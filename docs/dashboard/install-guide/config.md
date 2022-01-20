@@ -227,8 +227,47 @@ skills.prof.enabled=true
 # Profiling is only generated if endpoint's performance exceeds this number of milliseconds
 skills.prof.minMillisToPrint=500
 ```
+When enabled and an overall endpoint execution time exceeds ``skills.prof.minMillisToPrint`` then the detailed call stack profiling is printed to the log.
+
+Profiling statement will look something like this: 
+
+```
+Profiling Endpoint: /admin/projects/Project1/users
+|-> getProjectUsers(projectId=Project1,query=,limit=5,page=1,orderBy=lastUpdated,ascending=false) (1) : 815ms [017ms]
+|     |-> AdminUsersService.findDistinctUsers (1) : 672ms
+|     |-> AdminUsersService.countTotalProjUsers (3) : 126ms
+```
+The output provides method call hierarchy as well as the following information:
+- Total method execution time: number in ms, seconds and/or minutes
+- (N): number of times method was called, findDistinctUsers() was called once and countTotalProjUsers() called 3 times
+- [N ms]: execution time which was not accounted for by child methods/logic; this happens when either not all of the child methods/logic is profiled OR there is  GC or JVM overhead
+
 SkillTree profiling uses the [Call Stack Profiler](https://github.com/NationalSecurityAgency/call-stack-profiler) library
 
+``skills-service`` also supports the [Server Timing API](https://web.dev/custom-metrics/?utm_source=devtools#server-timing-api) and when enabled will set 
+server timing data in the response header. Most browsers visualize this timing data in their respective development tools. To enable, please set the following property: 
+
+```properties
+skills.prof.serverTimingAPI.enabled=true
+```
+In Chrome for example, open the development tools and navigate to the Network tab. Click on the skills-service endpoint and then click on the Timing Tab. 
+On the bottom you will see ``Server Timing`` section which will contain overall endpoint execution time (from the server's point of view) and associated 
+profiling id that will allow you to locate the associated profiling statement in the logs. 
+
+For example, the name in the Chrome development tools will look something like this ``profId1642707755421`` (``profId<id>``).
+To locate the associated profiling statement you can search for the ``profId=1642707755421`` (``profId=<id>``):
+
+```
+Profiling Endpoint: /admin/projects/Project1/users
+|-> getProjectUsers(projectId=Project1,query=,limit=5,page=1,orderBy=lastUpdated,ascending=false) profId=1642707755421 (1) : 815ms [017ms]
+|     |-> AdminUsersService.findDistinctUsers (1) : 672ms
+|     |-> AdminUsersService.countTotalProjUsers (1) : 126ms
+```
+
+::: tip Please note
+- In order for the Server Timing API to work ``skills.prof.enabled`` must be set to true
+- Profiling statements are only printed to the log if an overall endpoint execution time exceeds ``skills.prof.minMillisToPrint``
+:::
 
 ### Database
 
