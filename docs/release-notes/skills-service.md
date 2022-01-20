@@ -4,6 +4,15 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.8.6
+<release-date date="Jan. 2022" />
+- Support enabling actuator metrics
+- Using CProf metrics optionally expose overall endpoint execution time via Server Timing API
+
+#### 1.8.5
+<release-date date="Jan. 2022" />
+- Bug Fix: Changing the display order of skills in a Skill Group results in a 400 error
+
 #### 1.8.4
 <release-date date="Dec. 2021" />
 - Upgraded log4j to address [CVE-2021-45105](https://nvd.nist.gov/vuln/detail/CVE-2021-45105)
