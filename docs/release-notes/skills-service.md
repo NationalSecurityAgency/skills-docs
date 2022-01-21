@@ -55,7 +55,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 #### 1.7.0  
 <release-date date="Sep. 2021" />
-- Implemented store and display of aporoval history for self-report skills
+- Implemented store and display of approval history for self-report skills
 - Added ``Badges`` display for ``Progress and Ranking`` views
   - shows all global badges and project badges within the customized ``My Projects`` 
   - displays earned and available badges as well as current badge progress

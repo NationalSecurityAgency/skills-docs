@@ -53,7 +53,7 @@ In this case, when any ``3`` skills under that group are completed then the grou
 
 Please note that in order to modify the number of required skills in a group, the ``Point Increment`` and ``Point Occurrences`` attributes must match for all the skills under that group. 
 If ``Point Increment`` and ``Point Occurrences`` are not aligned then the SkillTree dashboard will present a sync dialog to seamlessly align these attributes. 
-The reason for this requirement is that the group's skills points contribute to the subject's and project's points and when partial completio nis configured
+The reason for this requirement is that the group's skills points contribute to the subject's and project's points and when partial completion is configured
 there would be no consistent way to calculate points if they didn't align between the skills in that group.   
 
 ::: tip Partial Requirement Example

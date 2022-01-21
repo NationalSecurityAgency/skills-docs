@@ -10,7 +10,7 @@ of SkillTree
 ![SkillTree Issues](../../screenshots/admin/page-contact_proj_admins.png) 
 
 Once a Root user has crafted an email, the content of the email can be be previewed using the ````Preview```` button which
-will send the specied email to the currently authenticated user to preview the content/formatting/display. Once satifisfied,
+will send the specified email to the currently authenticated user to preview the content/formatting/display. Once satisfied,
 pressing the ```Email``` button will send the specified email to all users of this instance of SkillTree who have the Project Administrator
 role.
 

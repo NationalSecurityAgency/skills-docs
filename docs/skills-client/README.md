@@ -94,7 +94,7 @@ When reporting skill events you have 2 options:
 ![Skills Platform Report Skill Events Image](./diagrams/Integration-Reporter.jpg)
 
 ::: tip
-Generally option 1 is the most common use-case but sometimes it's easier to derive skill events on the backned server.  
+Generally option 1 is the most common use-case but sometimes it's easier to derive skill events on the backend server.  
 :::
 
 Please visit the following sections to learn more:

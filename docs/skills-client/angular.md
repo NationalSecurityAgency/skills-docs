@@ -70,7 +70,7 @@ the SkillsDisplay component:
 
 #### Route changed event <since project="skills-client" version="3.3.0" />
 
-Each time a user navigates within the Skills Client Display, the `handleRouteChanged` event is emitted containing the new path that was navigated to.  This can be useful if the hosting application displays a breadcumb and would like to update the current location within the Skills Client Display component.
+Each time a user navigates within the Skills Client Display, the `handleRouteChanged` event is emitted containing the new path that was navigated to.  This can be useful if the hosting application displays a breadcrumb and would like to update the current location within the Skills Client Display component.
 
 ``` js{7,14-16}
 import { Component } from '@angular/core';
@@ -94,7 +94,7 @@ export class ShowSkillsComponent {
 
 #### Programmatic navigation <since project="skills-client" version="3.3.1" />
 
-The internal route of the Skills Client Display component can be changed by passing the desired path to the `navigate()` method.  This can be useful if the hosting application displays a breadcumb and would like to navigate to different locations within the Skills Client Display component by clicking a breadcrumb link for example.
+The internal route of the Skills Client Display component can be changed by passing the desired path to the `navigate()` method.  This can be useful if the hosting application displays a breadcrumb and would like to navigate to different locations within the Skills Client Display component by clicking a breadcrumb link for example.
 
 ``` js{7,14-15,19-21}
 import { Component } from '@angular/core';
