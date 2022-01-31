@@ -3,6 +3,9 @@
 This page documents high-level release notes for [SkillTree Centralized Service](https://github.com/NationalSecurityAgency/skills-service) which encompasses the dashboard and API. 
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
+#### 1.8.7
+<release-date date="Jan. 2022" />
+- Added OAuth2 support for Azure Active Directory
 
 #### 1.8.6
 <release-date date="Jan. 2022" />
