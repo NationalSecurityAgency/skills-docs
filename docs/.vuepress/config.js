@@ -129,6 +129,7 @@ let sidebar = [
             '/dashboard/user-guide/levels',
             '/dashboard/user-guide/badges',
             '/dashboard/user-guide/icons',
+            '/dashboard/user-guide/skills-catalog',
             '/dashboard/user-guide/dependencies',
             '/dashboard/user-guide/users',
             '/dashboard/user-guide/metrics',
