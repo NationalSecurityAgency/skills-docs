@@ -89,7 +89,7 @@ context('Generate Admin Screenshots', () => {
         // levels page
         cy.viewport(1350, 800);
         cy.clickNav('Levels');
-        cy.contains('White Belt');
+        cy.contains('Percent %');
         cy.snap('page-project-levels');
         cy.viewport(1350, 1200);
 
@@ -270,6 +270,43 @@ context('Generate Admin Screenshots', () => {
         cy.contains('New Skills Group');
 
         cy.snap('modal-new-group', '.modal-content');
+    })
+
+    it('Skill Catalog', () => {
+        cy.viewport(1800, 1200); // some modals require a lot more vertical real estate
+        cy.visit('/administrator/projects/movies/subjects/Family/');
+        cy.get('[data-cy="selectAllSkillsBtn"]').click();
+        cy.get('[data-cy="skillActionsBtn"]').click();
+        cy.get('[data-cy="skillExportToCatalogBtn"]');
+
+        cy.snap('page-export-to-catalog');
+        cy.get('[data-cy="skillExportToCatalogBtn"]').click();
+        cy.get('[data-cy="exportToCatalogButton"]').click();
+        cy.get('[data-cy="okButton"]').click();
+
+        cy.visit('/administrator/projects/movies/skills-catalog');
+        cy.contains('Exported to Catalog')
+        cy.snap('page-skills-exported-to-catalog');
+
+        cy.visit('/administrator/projects/shows');
+        cy.get('[data-cy="btn_Subjects"]').click();
+        cy.get('[data-cy="subjectNameInput"]').type('Imported Skills');
+        cy.get('[data-cy="saveSubjectButton"]').click();
+
+        cy.visit('/administrator/projects/shows/subjects/ImportedSkillsSubject');
+        cy.get('[data-cy="importFromCatalogBtn"]').click();
+        cy.get('[data-cy="importSkillsFromCatalogTable"] [type="checkbox"]').first().click({ force: true });
+        cy.get('[data-cy="importSkillsFromCatalogTable"] [type="checkbox"]').eq(2).click({ force: true });
+
+        cy.snap('modal-import_catalog_skills', '.modal-content');
+
+        cy.get('[data-cy="importBtn"]').click();
+        cy.snap('component-table_with_disabled_skills', '[data-cy="skillsTable"]');
+        cy.snap('component-catalog_finalize_alert', '[data-cy="importFinalizeAlert"]');
+        // edit button
+        cy.snap('component-edit_skill_button', '[data-cy="skillsTable"] tr:nth-child(1) [title="Edit Skill"]');
+        cy.get('[data-cy="skillsTable"] tr:nth-child(1) [title="Edit Skill"]').click();
+        cy.snap('modal-edit_imported_skill', '.modal-content');
     })
 
 })

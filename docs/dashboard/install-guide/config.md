@@ -269,6 +269,24 @@ Profiling Endpoint: /admin/projects/Project1/users
 - Profiling statements are only printed to the log if an overall endpoint execution time exceeds ``skills.prof.minMillisToPrint``
 :::
 
+Endpoint profiling printing threshold can be further customized / overridden per endpoint: 
+
+```properties
+# You will need to know the name of the method to customize 
+skills.prof.endpoints.<endpoint-method-name>=1000
+```
+
+There are also configuration options to tweak profiling of the asynchronous jobs. Please note that the profiling of asynchronous jobs is always enabled.
+``` properties
+# Async Job: Changes to the original skill (ex. description, occurrences) are automatically 
+# synchronized to all the imported skills as well. Default is 2000
+skills.async.syncCatalogSkillDefinition.prof.minMillisToPrint=2000
+
+# Async Job: As skill occurrences are reported to the original project they are 
+#also automatically propagated to the imported skills within other projects. Default is 500
+skills.async.reportSkill.prof.minMillisToPrint=500
+```
+
 ### Database
 
 Configure DB:
