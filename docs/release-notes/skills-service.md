@@ -3,6 +3,30 @@
 This page documents high-level release notes for [SkillTree Centralized Service](https://github.com/NationalSecurityAgency/skills-service) which encompasses the dashboard and API. 
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
+
+#### 1.9.0
+<release-date date="Apr. 2022" />
+- Implemented [Skills Catalog](/dashboard/user-guide/skills-catalog.html), a feature that facilitates the re-use of skills across projects:
+  - Skills can be exported to the Catalog which makes those skills available for re-use in other projects. 
+  - Once exported to the catalog, those skills can be easily imported into other projects as a read-only skill. 
+  - As skill occurrences are reported to the original project they are also automatically propagated to the imported skills within other projects.
+  - Changes to the original skill (ex. description, occurrences) are automatically synchronized to all the imported skills as well. 
+- Added resilient and distributed asynchronous job execution framework
+- Enhanced profiling printing thresholds to be configurable per-endpoint
+
+#### 1.8.10
+<release-date date="Feb. 2022" />
+- Ensured that db connections and transaction aren't opened until after a user is retrieved
+
+#### 1.8.9
+<release-date date="Feb. 2022" />
+- Bug Fix: After changing Skill Group's ID child skills fail to expand
+- Bug Fix: Adding more than 10 skills to a skill group causes the > 10 skills to not be visible/accessi
+
+#### 1.8.8
+<release-date date="Feb. 2022" />
+- Added support for actuator metrics and prometheus metrics
+
 #### 1.8.7
 <release-date date="Jan. 2022" />
 - Added OAuth2 support for Azure Active Directory
