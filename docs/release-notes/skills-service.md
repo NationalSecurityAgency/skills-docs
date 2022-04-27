@@ -4,6 +4,13 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.9.1
+<release-date date="Apr. 2022" />
+- Upgraded Spring Boot address a variety of different CVEs
+- Added a tag to indicate that a skill event came from an imported skill on the Performed Skills page
+- Improved usability when bulk importing Catalog Skills
+- Bug Fixes
+
 #### 1.9.0
 <release-date date="Apr. 2022" />
 - Implemented [Skills Catalog](/dashboard/user-guide/skills-catalog.html), a feature that facilitates the re-use of skills across projects:
