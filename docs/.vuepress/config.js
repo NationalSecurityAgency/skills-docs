@@ -1,5 +1,6 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
+const videosJson = require('./components/videos/skilltree-training-videos.json');
 
 const accessibility_score = 'https://raw.githubusercontent.com/NationalSecurityAgency/skills-service/badges/master/average_accessibility_score.svg';
 function dli() {
@@ -102,8 +103,8 @@ let nav = [
 ];
 
 let sidebar = ['/overview/'];
-if (fs.existsSync("docs/.vuepress/components/videos/skilltree-training-videos.json")) {
-    console.log('Adding video sections because meta file was found');
+if (videosJson.length > 0) {
+    console.log('Adding video sections because video meta file contains data');
     sidebar.push('/videos/');
 }
 
