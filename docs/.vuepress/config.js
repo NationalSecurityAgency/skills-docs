@@ -101,9 +101,13 @@ let nav = [
     { text: 'Contribute', link: '/contribution/' },
 ];
 
-let sidebar = [
-    '/overview/',
-    {
+let sidebar = ['/overview/'];
+if (fs.existsSync("docs/.vuepress/components/videos/skilltree-training-videos.json")) {
+    console.log('Adding video sections because meta file was found');
+    sidebar.push('/videos/');
+}
+
+sidebar = sidebar.concat([{
         title: 'Install Guide',
         collapsable: true,
         children: [
@@ -168,7 +172,7 @@ let sidebar = [
             '/release-notes/skills-service.md',
         ]
     }
-];
+]);
 
 if (removeInstallGuide) {
     const toFilter = 'Install Guide';
