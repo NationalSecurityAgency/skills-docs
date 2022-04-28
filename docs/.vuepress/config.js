@@ -1,5 +1,6 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
+const videosJson = require('./components/videos/skilltree-training-videos.json');
 
 const accessibility_score = 'https://raw.githubusercontent.com/NationalSecurityAgency/skills-service/badges/master/average_accessibility_score.svg';
 function dli() {
@@ -101,9 +102,13 @@ let nav = [
     { text: 'Contribute', link: '/contribution/' },
 ];
 
-let sidebar = [
-    '/overview/',
-    {
+let sidebar = ['/overview/'];
+if (videosJson.length > 0) {
+    console.log('Adding video sections because video meta file contains data');
+    sidebar.push('/videos/');
+}
+
+sidebar = sidebar.concat([{
         title: 'Install Guide',
         collapsable: true,
         children: [
@@ -168,7 +173,7 @@ let sidebar = [
             '/release-notes/skills-service.md',
         ]
     }
-];
+]);
 
 if (removeInstallGuide) {
     const toFilter = 'Install Guide';
