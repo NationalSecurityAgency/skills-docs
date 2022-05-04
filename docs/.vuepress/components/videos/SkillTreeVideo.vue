@@ -5,11 +5,7 @@
       {{ videoMeta.description }}
     </p>
     <div style="margin-left: 2rem; margin-right: 2rem;">
-      <video width="100%" controls>
-        <source v-if="videoMeta.urlMp4Src" :src="videoMeta.urlMp4Src" type="video/mp4">
-        <source v-if="videoMeta.urlOggSrc" :src="videoMeta.urlOggSrc" type="video/ogg">
-        Your browser does not support the video tag.
-      </video>
+      <a :href="videoMeta.url" target="_blank"> <i class="fas fa-camera-retro border p-2 text-secondary border-secondary rounded" style="font-size: 1.5rem"></i> Watch the Video <i class="fas fa-external-link-alt"></i></a>
     </div>
   </div>
 </template>
