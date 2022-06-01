@@ -4,6 +4,26 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.9.5
+<release-date date="May. 2022" />
+- Implemented Upgrade-In-Progress feature that puts the SkillTree Dashboard into a read-only state while retaining skill requests in a Write-Ahead-Log to be replayed after the upgrade is done
+- Improved performance of loading user table for a given project
+- Bug Fixes
+
+#### 1.9.4
+<release-date date="May. 2022" />
+- additional performance profiling
+
+#### 1.9.3
+<release-date date="May. 2022" />
+- Bug Fixes
+
+#### 1.9.2
+<release-date date="May. 2022" />
+- For Skills exported to the Catalog, show how many and which projects those skills were imported into
+- Check the point system of an importing project and warn users when finalizing catalog skills if imported points are outside of the existing point scheme
+- Bug Fixes
+
 #### 1.9.1
 <release-date date="Apr. 2022" />
 - Upgraded Spring Boot address a variety of different CVEs

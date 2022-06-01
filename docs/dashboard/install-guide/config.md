@@ -403,6 +403,34 @@ skills.config.ui.rankingAndProgressViewsEnabled=true
 skills.config.ui.defaultLandingPage=progress
 ```
 
+### Upgrade-In-Progress State
+
+In order to safely upgrade the database engine, SkillTree can be easily transitioned to a Upgrade-In-Progress state. 
+When that happens:
+- the SkillTree Dashboard is placed into a read-only state: dashboard can be viewed and navigated but mutations will not be allowed 
+- skill requests are retained in a Write-Ahead-Log (WAL) to be replayed after the upgrade is done
+
+Please configure the following properties in order to place ``skills-service`` in the Upgrade-In-Progress state:
+```properties
+# place the SkillTree platform in the Upgrade-In-Progress state 
+skills.config.db-upgrade-in-progress=true
+# specify the location of the directory where the Write-Ahead-Logs will be stored   
+skills.queued-event-path=/queued_events
+```
+
+When the SkillTree Dashboard is started with the ``skills.config.db-upgrade-in-progress`` property set to ``true`` it will:
+- display a prominent banner on the top of the SkillTree Dashboard and any embedded Skills Display informing users that an upgrade is in progress
+- any mutation (ex. creating/editing skills/projects/badges, etc...) will redirect users to an informational page indicating that an upgrade is in progress
+- skill requests are accepted and stored in the WAL in the directory specified by the ``skills.queued-event-path`` property
+
+General steps to upgrade the database engine:
+1. start the new database on a different instance/node
+2. transition SkillTree production instance to the Upgrade-In-Progress state
+3. export data from the current production database instance
+4. import data into the new database instance
+5. reconfigure SkillTree production instance to point to the new database and turn off the Upgrade-In-Progress state  
+   - when the ``skills-service`` is restarted it will replay the events stored in the WAL; the WAL files will then be removed 
+
 ### Spring Boot Properties
 
 ``skills-service`` is a Spring Boot application and will respect the majority (if not all) of Spring Boot configuration properties.  
