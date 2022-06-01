@@ -405,9 +405,9 @@ skills.config.ui.defaultLandingPage=progress
 
 ### Upgrade-In-Progress State
 
-In order to safely upgrade the database engine, SkillTree can be easily transitioned to the Upgrade-In-Progress state, 
-when that happens:
-- SkillTree Dashboard is placed into a read-only state: dashboard can be viewed and navigated but mutations will not be allowed 
+In order to safely upgrade the database engine, SkillTree can be easily transitioned to a Upgrade-In-Progress state. 
+When that happens:
+- the SkillTree Dashboard is placed into a read-only state: dashboard can be viewed and navigated but mutations will not be allowed 
 - skill requests are retained in a Write-Ahead-Log (WAL) to be replayed after the upgrade is done
 
 Please configure the following properties in order to place ``skills-service`` in the Upgrade-In-Progress state:
@@ -418,9 +418,9 @@ skills.config.db-upgrade-in-progress=true
 skills.queued-event-path=/queued_events
 ```
 
-When SkillTree Dashboard is started with the ``skills.config.db-upgrade-in-progress`` property set to ``true`` it will:
-- display a prominent banner on the top of the SkillTree Dashboard and any embedded Skills Display informing users that the upgrade is in progress
-- any mutation (ex. creating/editing skills/projects/badges, etc...) will redirect users to a page information that the upgrade is in progress
+When the SkillTree Dashboard is started with the ``skills.config.db-upgrade-in-progress`` property set to ``true`` it will:
+- display a prominent banner on the top of the SkillTree Dashboard and any embedded Skills Display informing users that an upgrade is in progress
+- any mutation (ex. creating/editing skills/projects/badges, etc...) will redirect users to an informational page indicating that an upgrade is in progress
 - skill requests are accepted and stored in the WAL in the directory specified by the ``skills.queued-event-path`` property
 
 General steps to upgrade the database engine:
