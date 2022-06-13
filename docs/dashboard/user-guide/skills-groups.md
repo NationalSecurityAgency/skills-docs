@@ -28,35 +28,12 @@ After a group is created then skills can be added to the group. To add Skills to
 This will bring up a new skill dialog, to learn more about skills and their attributes please visit the [Skills Section](/dashboard/user-guide/skills.html). 
 
 ::: tip 
-When first created, a Group is not visible on the Skills Display and will be labeled with the ``Disabled`` tag in the Project Administration dashboard. To make the group visible click on the ``Go Live`` button.
-To learn more, please visit the [Group's Lifecycle Section](/dashboard/user-guide/skills-groups.html#groups-visibility-lifecycle) below.
+When first created, a Group is not visible on the Skills Display because it has 0 skills. 
+Once at least 1 skill is added the group will be rendered in the Skills Display.
 :::
-
-## Groups Visibility Lifecycle
-
-When a group is initially created it will have ``0`` skills and will be tagged as ``Disabled``. 
-Skills can then be added to the group but it will continue to be disabled until the ``Go Live`` button is clicked and the action is confirmed. 
-
-Disabled groups have the following behavior and attributes:
-- Group is NOT visible in the ``Skills Display``
-- Skill events cannot be reported for any skill under the group
-
-The disabled state allows project administrators to fully customize groups before exposing them for user consumption. 
-There is only 1 requirement in order to ``Go Live`` - that the group must have at least 2 skills. 
-Once a group is switched to a ``Live`` state it can never return to the ``Disabled`` state.  
 
 ## Partial Skill Requirement
 
 Groups have an option to only require ``N`` skills out of the total available number of skills added to the group.
 For example, if a group has ``5`` skills, you can configure it to only require the completion of ``3`` skills.
 In this case, when any ``3`` skills under that group are completed then the group achievement is awarded!
-
-Please note that in order to modify the number of required skills in a group, the ``Point Increment`` and ``Point Occurrences`` attributes must match for all the skills under that group. 
-If ``Point Increment`` and ``Point Occurrences`` are not aligned then the SkillTree dashboard will present a sync dialog to seamlessly align these attributes. 
-The reason for this requirement is that the group's skills points contribute to the subject's and project's points and when partial completion is configured
-there would be no consistent way to calculate points if they didn't align between the skills in that group.   
-
-::: tip Partial Requirement Example
-Let's say a group has ``5`` skills with the partial skill requirement of ``3``. If each skill is ``10`` points then the group has ``30`` total points. 
-The same ``30`` points will contribute to the subject's and project's points as well. Although a user can complete all ``5`` skills in the group, only ``30`` points will be awarded. 
-:::

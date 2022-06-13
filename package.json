@@ -7,11 +7,11 @@
   "scripts": {
     "licenseDepCheck": "license-checker --production --onlyAllow='MIT;Apache-2.0' --summary",
     "injectConf": "node injectConf.js",
-    "serve": "vue-cli-service serve",
     "build": "npm run licenseDepCheck && vue-cli-service build",
     "lint": "vue-cli-service lint",
     "docs:dev": "npm run injectConf && vuepress dev docs",
     "docs:build": "npm run injectConf && vuepress build docs",
+    "serve": "npm run docs:dev",
     "wait:skills-service": "npx wait-on -t 160000 http://localhost:8080/public/isAlive",
     "cy:open": "cypress open --env updateSnapshots=true",
     "cy:run": "cypress run --env updateSnapshots=true"

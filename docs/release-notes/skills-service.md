@@ -4,6 +4,16 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+
+#### 1.10.0
+<release-date date="June. 2022" />
+- Ability to export Skills to the Catalog that are defined under a Skill Group
+- Ability to import Catalog Skills under a Skill Group
+- Added Removal Safety Check dialog to the projects, subjects and badges
+- Simplified how Skill Groups are stored and managed
+- Accessibility improvements
+- Bug Fixes
+
 #### 1.9.5
 <release-date date="May. 2022" />
 - Implemented Upgrade-In-Progress feature that puts the SkillTree Dashboard into a read-only state while retaining skill requests in a Write-Ahead-Log to be replayed after the upgrade is done
