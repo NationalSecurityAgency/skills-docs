@@ -8,8 +8,8 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 #### 1.10.0
 <release-date date="June. 2022" />
 - Ability to export Skills to the Catalog that are defined under a Skill Group
-- Ability to import Catalog Skills under a Skill Group
-- Added Removal Safety Check dialog to the projects, subjects and badges
+- Ability to import Catalog Skills into a Skill Group
+- Added Removal Safety Check dialog to projects, subjects and badges
 - Simplified how Skill Groups are stored and managed
 - Accessibility improvements
 - Bug Fixes
