@@ -1,4 +1,4 @@
-# Skills Catalog
+# Skills Catalog <since project="skills-service" version="1.9.0" />
 
 Skills Catalog is a feature that facilitates the re-use of skills across projects. 
 Skills can be exported to the Catalog which makes those skills available for re-use in other projects. 
@@ -23,14 +23,10 @@ You can also review and manage currently exported skills on the ``Skills Catalog
 
 ![Skills exported to Catalog](../../screenshots/admin/page-skills-exported-to-catalog.png)
 
-::: warning
-Please note that skills defined under a Skills Group cannot be exported to the Catalog as of now. 
-Support for skills under a Group will be added in the future.
-:::
-
 Please note that:
 - all the skills under a subject can be easily selected for export via the ``Select All`` button
 - skill name and ID duplicates are not allowed in the Skill Catalog
+- to export skills under a group - expand that group then select at least one skill and click ``Action -> Export To Catalog`` under that group 
 
 ## Importing Skills
 
@@ -54,9 +50,8 @@ After skills are initially imported they are in a disabled state. Disabled state
 
 ![Table with the disbled skills](../../screenshots/admin/component-table_with_disabled_skills.png)
 
-::: warning
-Please note that skills cannot be imported under a Skills Group as of now.
-Support for importing skills into a Group will be added in the future.
+::: tip
+To import skills into a [Skill Group](/dashboard/user-guide/skills-groups.html) expand the group and click the ``Import`` button under that group.
 :::
 
 The next step is optional - change the ``Point Increment`` for each imported skill. 
