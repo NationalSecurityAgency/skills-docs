@@ -51,7 +51,7 @@ After skills are initially imported they are in a disabled state. Disabled state
 ![Table with the disbled skills](../../screenshots/admin/component-table_with_disabled_skills.png)
 
 ::: tip
-To import skills under a [Skill Group](/dashboard/user-guide/skills-groups.html) expand a group and click the ``Import`` button under that group.
+To import skills into a [Skill Group](/dashboard/user-guide/skills-groups.html) expand the group and click the ``Import`` button under that group.
 :::
 
 The next step is optional - change the ``Point Increment`` for each imported skill. 
