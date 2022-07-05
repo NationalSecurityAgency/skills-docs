@@ -4,6 +4,18 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.11.1
+<release-date date="July. 2022" />
+- Bug Fixes
+
+#### 1.11.0
+<release-date date="June. 2022" />
+- Accessibility improvements
+- Bug Fixes
+
+#### 1.10.1
+<release-date date="June. 2022" />
+- Bug Fixes
 
 #### 1.10.0
 <release-date date="June. 2022" />
