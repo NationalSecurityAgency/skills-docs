@@ -32,8 +32,8 @@ jobs:
       with:
         node-version: '14'
 
-    - name: update packages
-      run : npm update
+    - name: try to fix the issue
+      run : npm remove vue -g
 
     - name: npm install
       run : npm install
