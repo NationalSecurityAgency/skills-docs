@@ -32,6 +32,9 @@ jobs:
       with:
         node-version: '14'
 
+    - name: remove cached resources
+      run : rm -rf node_modules && rm rf package-lock.json
+
     - name: npm install
       run : npm install
 
