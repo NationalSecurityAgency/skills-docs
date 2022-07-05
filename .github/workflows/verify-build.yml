@@ -32,8 +32,8 @@ jobs:
       with:
         node-version: '14'
 
-    - name: remove cached resources
-      run : rm -rf node_modules || true
+    - name: update packages
+      run : npm update
 
     - name: npm install
       run : npm install
