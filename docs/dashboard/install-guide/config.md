@@ -128,7 +128,7 @@ skills.config.ui.maxNumPointIncrementMaxOccurrences=999
 skills.config.ui.maxFirstNameLength=30
 # Maximum number of characters for the last name
 skills.config.ui.maxLastNameLength=30
-# Maximum number of characters for the nick name
+# Maximum number of characters for the primary name (aka nickname)
 skills.config.ui.maxNicknameLength=70
 # Minimum number of characters for the user name
 skills.config.ui.minUsernameLength=5
