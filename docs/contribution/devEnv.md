@@ -83,7 +83,8 @@ we ran ``mvn install`` to generate this artifact and the following sequence of s
 - Build dashboard web application: ``npm run build`` in dashboard project
 - Build client display web application: ``npm run build`` in client-display project
 - Compile Java and Groovy classes in the ``service`` project: ``mvn compile``
-- Copy dashboard and client-display built apps to ``service/src/main/resources/public`` so the spring boot app can host the dashboard and the client-display web-applications
+- Copy the built dashboard app to ``service/src/main/resources/public`` so the spring boot app can host the dashboard web-application
+- Copy the built client-display app to ``service/src/main/resources/public/static/clientPortal`` so the spring boot app can host the client-display web-application
 - Generate runtime artifact: ``mvn package`` in the service project
 
 Of course this doesn't cover the entire build cycle so please familiarize yourself with all of the pom.xml and package.json files. 
