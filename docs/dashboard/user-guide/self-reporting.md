@@ -70,10 +70,10 @@ The ``Approval History`` table can be sorted by all of its columns or filtered b
 
 ### Notifications
 
-SkillTree will send email base notifications to project's administrators when points are requested, approved or rejected. 
+SkillTree will send email notifications to project administrators when points are requested, approved or rejected. 
 
-Project administrators can unsubscribe from notifications by navigation to the ``Self Report`` page within their project. 
-``Self Reported Skills Requiring Approval`` section contains Subscribed/Unsubscribed toggle on the top-right of the component. 
+Project administrators can unsubscribe from notifications by navigating to the ``Self Report`` page within their project. 
+The ``Self Reported Skills Requiring Approval`` section contains a Subscribed/Unsubscribed toggle on the top-right of the component. 
 
 ![Self Report Unsubscribe Example](./screenshots/Self_Report_Unsubscribe_20220720.png)
 
