@@ -49,7 +49,8 @@ Cypress.Commands.add('login', () => {
     cy.visit('/')
     cy.get('[id="username"]').type('bill@email.org');
     cy.get('[id="inputPassword"]').type('password');
-    cy.contains('Login').click();
+    cy.get('[data-cy="login"]').should('be.enabled')
+    cy.get('[data-cy="login"]').click({force: true});
     cy.contains('Progress and Ranking');
 });
 

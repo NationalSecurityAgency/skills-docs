@@ -4,6 +4,13 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 1.12.0
+<release-date date="July. 2022" />
+- [Same Project Skill Reuse](/dashboard/user-guide/skills.html#same-project-skill-reuse) - a feature that facilitates the re-use of skills in the same projects 
+- Ability to unsubscribe to self-report approval requests emails
+- Accessibility improvements
+- Bug Fixes
+
 #### 1.11.1
 <release-date date="July. 2022" />
 - Bug Fixes

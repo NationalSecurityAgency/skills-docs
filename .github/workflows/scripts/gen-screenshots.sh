@@ -4,8 +4,11 @@
 # ./.github/workflows/scripts/gen-screenshots.sh -d true
 
 SKILLTREE_IMAGE="skilltree/skills-service-ci"
-LATEST_SKILLTREE_CI_VERSION=$(curl -s https://registry.hub.docker.com/v1/repositories/skilltree/skills-service-ci/tags | jq -r '.[] | .name' | grep -v "latest" | sort | tail -n1)
+LATEST_SKILLTREE_CI_VERSION=latest
 NUM_SKILL_EVENTS=10000
+
+# if image already exist remove - this is to support use of latest
+docker image rm -f ${SKILLTREE_IMAGE}:${LATEST_SKILLTREE_CI_VERSION}
 
 while getopts d:r flag
 do
