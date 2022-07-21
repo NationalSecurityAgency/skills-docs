@@ -181,13 +181,13 @@ Reused skills are read-only copies and cannot be mutated.
 As skill occurrences are reported to the original skill they are also automatically propagated to the reused skills.
 Changes to the original skill (ex. description, occurrences) are automatically synchronized to all the reused skills as well.
 
-To reuse a skill navigate to the Skills page (``Project -> Subject``), then select skills to export
+To reuse a skill navigate to the Skills page (``Project -> Subject``), then select skills to reuse
 and click on the ``Action`` button located on the top-right above the skills' table. 
-Select ``Reuse in this Project`` button to initiate the process.
+Select the ``Reuse in this Project`` button to initiate the process.
 
 ![Reuse skills](../../screenshots/admin/page-export-to-catalog.png)
 
-Once the skills are reused you will see a ``REUSED`` next to each skill.
+Once the skills are reused you will see a ``REUSED`` tag next to each skill.
 
 ::: tip
 All the skills under a subject or group can be easily selected for reuse via the ``Select All`` button
@@ -199,7 +199,7 @@ SkillTree checks whether that skill was reused. For every reused instance the oc
 to that reused skills. The queue is handled in an asynchronous manner so there is a small delay before the skill occurrence are reflected in the reused skills.
 
 #### Modify skill in the original project
-Only original skill can be updated. After the attributes of the original skill are mutated they are queued up to be propagated to all reused versions of the edited skill. 
+Only the original skill can be updated. After the attributes of the original skill are mutated they are queued up to be propagated to all reused versions of the edited skill. 
 Please note that skill attribute propagation is performed asynchronously, it may take a few moments for changes to appear in all reused skills.
 
 #### Self Reporting and Reused Skills
@@ -213,12 +213,12 @@ When a self-reported skill occurrence is reported to the reused copy then the re
 From there on the flow is identical to any skill occurrence that is being reported to the original skill and for every reused instance the occurrence is queued up to be propagated
 to that reused skills. The queue is handled in an asynchronous manner so there is a small delay before the skill occurrence are reflected in the reused skills.
 
-The Self-reporting I did it button is visualized for each reused skill in the Skills Display and Progress and Rankings views.
+The Self-reporting "I did it" button is visualized for each reused skill in the Skills Display and Progress and Rankings views.
 
 #### Other Considerations
 - Skills with dependencies can NOT be reused. Reused skills can NOT be added as a dependency.
-- Reused skills cannot be added to a badge; use the original skill instaed
-- Removing original skill will also delete all of its reused copies
+- Reused skills cannot be added to a badge; use the original skill instead
+- Removing the original skill will also delete all of its reused copies
 
  
 #
