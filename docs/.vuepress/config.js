@@ -230,6 +230,7 @@ module.exports = {
             pkiAuthInstallOnly: pkiAuthInstallOnly,
             allAuthModes: !pkiAuthInstallOnly && !passAuthInstallOnly,
             skillTreeServiceUrl: skillTreeServiceUrl && skillTreeServiceUrl.length > 0 && skillTreeServiceUrlDefaultValue !== skillTreeServiceUrl,
+            showInstallGuide: !removeInstallGuide,
         },
         skillTreeServiceUrl,
     },

@@ -72,6 +72,13 @@ The ``Approval History`` table can be sorted by all of its columns or filtered b
 
 SkillTree will send email base notifications to project's administrators when points are requested, approved or rejected. 
 
+Project administrators can unsubscribe from notifications by navigation to the ``Self Report`` page within their project. 
+``Self Reported Skills Requiring Approval`` section contains Subscribed/Unsubscribed toggle on the top-right of the component. 
+
+![Self Report Unsubscribe Example](./screenshots/Self_Report_Unsubscribe_20220720.png)
+
+<conditional visibilityFlag="showInstallGuide">
+
 Please note, depending on the installation mode, an email sometimes is not available for non-admin users, 
 in that case an email notification will not be emitted. This is not an issue in the PKI or Oauth installation modes. 
 To learn more please visit [Installation Modes](/dashboard/install-guide/installModes.html) section.
@@ -82,6 +89,6 @@ SkillTree [Root Admin](/dashboard/user-guide/users.html#root) must configure ema
 Please visit the [Email Notifications Settings](/dashboard/user-guide/settings.html#email-notifications) to learn more.
 :::
 
-
+</conditional>
 
 
