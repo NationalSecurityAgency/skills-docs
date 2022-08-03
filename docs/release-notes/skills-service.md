@@ -4,6 +4,23 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 2.0.0
+<release-date date="August. 2022" />
+- Ability to [Move Skills](/dashboard/user-guide/skills.html#move-skills) between subjects and groups - further agility to continually improve their training profile.
+- Invite-Only / Private Project
+- Project-level ability to customize certain labels on the Skills Display components
+- Ability to make the comment/justification for a self-report skills required
+- When old client lib is being used display a record on the [Issues](/dashboard/user-guide/issues.html) page and gently suggest to upgrade
+- Send notification email when root and project admins are added
+
+#### 1.12.2
+<release-date date="July. 2022" />
+- Accessibility improvements
+
+#### 1.12.1
+<release-date date="July. 2022" />
+- Bug Fixes
+
 #### 1.12.0
 <release-date date="July. 2022" />
 - [Same Project Skill Reuse](/dashboard/user-guide/skills.html#same-project-skill-reuse) - a feature that facilitates the re-use of skills in the same projects 
