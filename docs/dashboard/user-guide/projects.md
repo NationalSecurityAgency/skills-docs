@@ -58,10 +58,6 @@ By default the Percentage based strategy is configured, changing the ``Use Point
 You must define at least 100 points for a project before switching to point-based levels management
 :::
 
-#### Setting: Level Display Text
-
-The word ``Level`` may be overloaded to some organizations (for example you can call it ``Stage``). You can change the value displayed to users in Skills Display here.
-
 #### Setting: Root Help Url
 
 Skill definition's ``Help Url/Path`` will be treated relative to this ``Root Help Url``. For example, if 
@@ -85,3 +81,16 @@ If your project primarily consists of Self Reported skills, enabling Self Report
 the selected Self Report Approval type being the default for any skills created after this point
 
 Please visit [Self Report](/dashboard/user-guide/self-reporting.html) section to learn further.
+
+#### Setting: Rank Opt-Out for ALL Admins
+
+When enabled, all project admins will be excluded from the Leaderboard and will not be assigned a rank within the embedded Skills Display component
+
+#### Setting: Custom Labels
+
+Certain terminology in SkillTree may be overloaded to some organizations and could be confusing to end users.  If this is the case, admins can customize the following labels displayed to users in the embedded Skills Display component:
+- Project
+- Subject
+- Group
+- Skill
+- Level
