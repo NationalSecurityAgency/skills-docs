@@ -6,7 +6,7 @@ Skills that have been configured with Self Reporting expose an ``I did it`` butt
 
 There are two ``Self report`` types available:  
 1. ``Honor System`` - points are awarded immediately 
-1. ``Approval Queue`` - request goes into the project's approval queue; project administrators can approve or deny requests
+1. ``Approval Queue`` - request goes into the project's approval queue; project administrators can approve or deny requests.  Note When choosing Approval Queue, you may also choose to require users to submit a justification when self-reporting this skill by selecting the 'Justification Required' check box.
 
 ::: tip 
 Project administrators can craft training profiles consisting of:
