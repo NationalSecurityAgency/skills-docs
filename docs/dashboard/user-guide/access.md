@@ -1,5 +1,5 @@
 # Access Management
-The Project Access menu supports adding or removing Project Administrators, and inviting users to join the project if the project has been configured as an Invite Only project as well as revoking a user's access.
+The Project Access menu supports adding or removing Project Administrators, and inviting users to join a project if the project has been configured as an Invite Only project as well as revoking a user's access.
 
 ## Project Admininstrator
 Project Administrator's can modify all 
