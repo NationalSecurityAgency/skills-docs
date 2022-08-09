@@ -6,11 +6,11 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 #### 2.0.0
 <release-date date="August. 2022" />
-- Ability to [Move Skills](/dashboard/user-guide/skills.html#move-skills) between subjects and groups - further agility to continually improve their training profile.
+- [Move Skills](/dashboard/user-guide/skills.html#move-skills) between subjects and groups in the same project.
 - Invite-Only / Private Project
-- Project-level ability to customize certain labels on the Skills Display components
-- Ability to make the comment/justification for a self-report skills required
-- When old client lib is being used display a record on the [Issues](/dashboard/user-guide/issues.html) page and gently suggest to upgrade
+- Project-level capability to customize certain labels on the Skills Display components
+- Optionally require the comment/justification for self-report skills
+- When old client lib is being used, display a record on the [Issues](/dashboard/user-guide/issues.html) page that suggests upgrading
 - Send notification email when root and project admins are added
 
 #### 1.12.2
