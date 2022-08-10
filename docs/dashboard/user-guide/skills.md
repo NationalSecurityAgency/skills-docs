@@ -30,7 +30,7 @@ Total Points = Point Increment * Occurrences to Completion
 :::
 
 # Copy Skill
-To use an existing Skill as a template for a new Skill, you can use the [copy skill button](./screenshots/copy_skill_20210618.png) button available on a Skill row displayed on the Subject page. 
+To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page. 
 This will open a new Skill dialog populated with the details of the selected copy-from Skill. The name and id will be prepended with ``Copy of`` which can be changed
 before the new Skill is saved. Saving this dialog will create a new Skill that falls within the same Subject as the copy-from Skill.
 

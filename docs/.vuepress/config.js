@@ -169,8 +169,8 @@ sidebar = sidebar.concat([{
         collapsable: true,
         children: [
             '/release-notes/',
-            '/release-notes/skills-client.md',
             '/release-notes/skills-service.md',
+            '/release-notes/skills-client.md',
         ]
     }
 ]);
