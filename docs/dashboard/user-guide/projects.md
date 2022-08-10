@@ -43,11 +43,32 @@ To manage and view project-wide settings navigate to ``Project -> Settings``.
 
 The following project-level settings are available: 
 
-#### Setting: Discoverable
-This setting is only available when Progress and Ranking views are enabled. Please visit [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) section to learn more.   
+#### Setting: Visibility <since project="skills-service" version="2.0.0" />
+There are three possible values for the Project Visibility setting:
+
+1. Public Not Discoverable (default value)
+2. Private Invite Only
+3. Discoverable on Progress And Ranking
+
+``Public Not Discoverable`` projects can be accessed by users who have a direct link to the project's client display or by applications that have integrated the SkillTree client libraries. The project will not be available in 
+[Manage My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) if the [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) views have been enabled.
+
+``Private Invite Only`` projects can only be accessed by users who have been invited to join the project and who have accepted the invite, any other user attempting to access the project will receive an Access Denied error. Users who have been 
+designated as Project Administrators will continue to have access to the project. Users can be invited to join the project using the [Project Access](/dashboard/user-guide/access.html#invite-only) page.
+
+``Discoverable on Progress And Ranking`` projects can be discoverd by users in the [Manage My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) view. This option will only be displayed if the instance
+of SkillTree has been configured to enable the [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) views.
+
+::: tip
+Prior to 2.0.0 this setting was called Discoverable and applied only to a project's discoverability in the Progress and Ranking view.
+::: 
+
+::: warning
+There may be a delay of up to several minutes after changing a project's visibility from or to ``Private Invite Only`` before the change is reflected for all users.
+:::
 
 #### Setting: Use Points For Levels
-
+ 
 ``Use Points For Levels`` - switch between two level management strategies: 
 1. Percentage based - levels are calculated based on configured percentages of total available points (ex. Level 1 = 10% of total points)
 1. Point based - project admins specify start and end point values for each level
