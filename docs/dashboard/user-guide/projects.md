@@ -119,22 +119,26 @@ Certain terminology in SkillTree may be overloaded to some organizations and cou
 ## Copy Project
 
 To use an existing Project as a template you can easily copy its training profile (subjects, skills, badges, etc..) into a brand-new project.  
-To copy a project please use the ![copy skill button](./screenshots/copy_btn.png) button available on a project card on the Project page. 
-The system will prompt you to enter a new project name and optionally modify its Project Id. 
+To copy a project please use the ![copy project button](./screenshots/copy_btn.png) button available on a project card on the Project page. 
+The system will prompt you to enter a new project name and optionally modify the project id. 
 
 The following training profile elements are copied into the new project: 
 - [Subjects](/dashboard/user-guide/subjects.html) and their attributes (description, help url, etc..)
 - [Skills](/dashboard/user-guide/skills.html) definitions and their attributes (description, points, self-reporting, etc...)
 - [Skill Groups](/dashboard/user-guide/skills-groups.html)
-- Subject and skill configured display order is preserved in the copied project
+- Configured display order subjects and skills  is preserved in the copied project
 - [Levels](/dashboard/user-guide/levels.html)
 - [Badges](/dashboard/user-guide/badges.html)
 - Project-Based [Dependencies](/dashboard/user-guide/dependencies.html)
 - [Re-used Skills](/dashboard/user-guide/skills.html#same-project-skill-reuse)
-- [Project's Settings](/dashboard/user-guide/projects.html#settings) are copied except the exclusions specified below
+- [Project's Settings](/dashboard/user-guide/projects.html#settings) are copied with the exception of the exclusions specified below
 
 The following training profile elements are **NOT** copied into a new project:
 - [Catalog](/dashboard/user-guide/skills-catalog.html) imported skills are **not** copied
 - [Cross-Project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) are **not** copied
 - If the original project [Visibility](/dashboard/user-guide/projects.html#setting-visibility) setting was changed to be ``Discoverable on Progress And Ranking`` the copied project will instead use the default value of ``Public Not Discoverable``
+
+::: tip
+Once a project has been copied, the new project is disconnected from the original such that changes to the original project will not be reflected in the copy
+:::
 
