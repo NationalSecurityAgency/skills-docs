@@ -123,6 +123,7 @@ context('Generate Admin Screenshots', () => {
         // settings
         cy.clickNav('Settings');
         cy.contains('Discoverable');
+        cy.get('[data-cy="customLabelsSwitch"').click({force: true});
         cy.snap('page-project-settings');
     })
 
@@ -130,15 +131,12 @@ context('Generate Admin Screenshots', () => {
     it('Email notification pages', () => {
         // first set email settings to enable email
         cy.visit('/settings/email')
+        cy.get('[data-cy="publicUrlInput"]').clear().type('http://localhost:8080')
+        cy.get('[data-cy="fromEmailInput"]').clear().type('skills@skills.org')
         cy.get('[data-cy="hostInput"]').clear().type('localhost');
         cy.get('[data-cy="portInput"]').clear().type(155);
         cy.get('[data-cy="emailSettingsSave"]').click();
         cy.get('[data-cy="connectionError"]');
-
-        cy.clickNav('System');
-        cy.get('[data-cy="publicUrl"]').clear().type('http://localhost:8080')
-        cy.get('[data-cy="fromEmail"]').clear().type('skills@skills.org')
-        cy.get('[data-cy="saveSystemSettings"]').click();
 
         // project admins page
         cy.visit('/administrator/contactAdmins');
@@ -223,14 +221,12 @@ context('Generate Admin Screenshots', () => {
         cy.snap('page-settings-email');
 
         cy.clickNav('System');
-        cy.get('[data-cy="publicUrl"]').clear().type('http://localhost:8080')
-        cy.contains('Public URL');
+        cy.contains('Token Expiration');
         cy.snap('page-settings-system');
     });
 
     it('Get Custom Header/Footer components', () => {
         cy.visit('/settings/system');
-        cy.get('[data-cy="publicUrl"]').clear().type('http://localhost:8080');
 
         cy.get('[data-cy="customHeader"]').clear().type('<div style="font-size:3rem;"><i class="fas fa-air-freshener"></i> Custom Footer</div>')
         cy.get('[data-cy="customFooter"]').clear().type('<div style="font-size:2rem;"><i class="fas fa-bath"></i> Custom Footer</div>')
@@ -280,7 +276,7 @@ context('Generate Admin Screenshots', () => {
         cy.get('[data-cy="skillExportToCatalogBtn"]');
 
         cy.snap('page-export-to-catalog');
-        cy.get('[data-cy="skillExportToCatalogBtn"]').click();
+        cy.get('[data-cy="skillExportToCatalogBtn"]').click({force:true});
         cy.get('[data-cy="exportToCatalogButton"]').click();
         cy.get('[data-cy="okButton"]').click();
 
@@ -288,13 +284,15 @@ context('Generate Admin Screenshots', () => {
         cy.contains('Exported to Catalog')
         cy.snap('page-skills-exported-to-catalog');
 
+        cy.intercept('POST', '/admin/projects/shows/subjects/ImportedSkillsSubject').as('saveSubject')
         cy.visit('/administrator/projects/shows');
         cy.get('[data-cy="btn_Subjects"]').click();
         cy.get('[data-cy="subjectNameInput"]').type('Imported Skills');
         cy.get('[data-cy="saveSubjectButton"]').click();
+        cy.wait('@saveSubject')
 
         cy.visit('/administrator/projects/shows/subjects/ImportedSkillsSubject');
-        cy.get('[data-cy="importFromCatalogBtn"]').click();
+        cy.get('[data-cy="importFromCatalogBtn"]').click({force:true});
         cy.get('[data-cy="importSkillsFromCatalogTable"] [type="checkbox"]').first().click({ force: true });
         cy.get('[data-cy="importSkillsFromCatalogTable"] [type="checkbox"]').eq(2).click({ force: true });
 

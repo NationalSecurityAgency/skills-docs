@@ -4,6 +4,24 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 2.0.0
+<release-date date="August. 2022" />
+- [Invite-Only / Private Project](/dashboard/user-guide/projects.html#setting-visibility) - Progress and Ranking pages can only be accessed by users who have been invited to join the project and who have accepted the invite, any other user attempting to access the project will receive an ``Access Denied`` error
+- [Copy Project Definition](/dashboard/user-guide/projects.html#copy-project) - use an existing Project as a template - copy its training profile (subjects, skills, badges, etc..) into a brand-new project.
+- [Move Skills](/dashboard/user-guide/skills.html#move-skills) between subjects and groups in the same project.
+- Project-level capability to [customize certain labels](/dashboard/user-guide/projects.html#setting-custom-labels) on the Skills Display components
+- Optionally require the comment/justification for self-report skills
+- When old client lib is being used, display a record on the [Issues](/dashboard/user-guide/issues.html) page that suggests upgrading
+- Send notification email when root and project admins are added
+
+#### 1.12.2
+<release-date date="July. 2022" />
+- Accessibility improvements
+
+#### 1.12.1
+<release-date date="July. 2022" />
+- Bug Fixes
+
 #### 1.12.0
 <release-date date="July. 2022" />
 - [Same Project Skill Reuse](/dashboard/user-guide/skills.html#same-project-skill-reuse) - a feature that facilitates the re-use of skills in the same projects 

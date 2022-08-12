@@ -43,11 +43,32 @@ To manage and view project-wide settings navigate to ``Project -> Settings``.
 
 The following project-level settings are available: 
 
-#### Setting: Discoverable
-This setting is only available when Progress and Ranking views are enabled. Please visit [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) section to learn more.   
+#### Setting: Visibility <since project="skills-service" version="2.0.0" />
+There are three possible values for the Project Visibility setting:
+
+1. Public Not Discoverable (default value)
+2. Private Invite Only
+3. Discoverable on Progress And Ranking
+
+``Public Not Discoverable`` projects can be accessed by users who have a direct link to the project's client display or by applications that have integrated the SkillTree client libraries. The project will not be available in 
+[Manage My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) if the [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) views have been enabled.
+
+``Private Invite Only`` projects can only be accessed by users who have been invited to join the project and who have accepted the invite, any other user attempting to access the project will receive an Access Denied error. Users who have been 
+designated as Project Administrators will continue to have access to the project. Users can be invited to join the project using the [Project Access](/dashboard/user-guide/access.html#invite-only) page.
+
+``Discoverable on Progress And Ranking`` projects can be discoverd by users in the [Manage My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) view. This option will only be displayed if the instance
+of SkillTree has been configured to enable the [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) views.
+
+::: tip
+Prior to 2.0.0 this setting was called Discoverable and applied only to a project's discoverability in the Progress and Ranking view.
+::: 
+
+::: warning
+There may be a delay of up to several minutes after changing a project's visibility from or to ``Private Invite Only`` before the change is reflected for all users.
+:::
 
 #### Setting: Use Points For Levels
-
+ 
 ``Use Points For Levels`` - switch between two level management strategies: 
 1. Percentage based - levels are calculated based on configured percentages of total available points (ex. Level 1 = 10% of total points)
 1. Point based - project admins specify start and end point values for each level
@@ -57,10 +78,6 @@ By default the Percentage based strategy is configured, changing the ``Use Point
 ::: warning
 You must define at least 100 points for a project before switching to point-based levels management
 :::
-
-#### Setting: Level Display Text
-
-The word ``Level`` may be overloaded to some organizations (for example you can call it ``Stage``). You can change the value displayed to users in Skills Display here.
 
 #### Setting: Root Help Url
 
@@ -85,3 +102,43 @@ If your project primarily consists of Self Reported skills, enabling Self Report
 the selected Self Report Approval type being the default for any skills created after this point
 
 Please visit [Self Report](/dashboard/user-guide/self-reporting.html) section to learn further.
+
+#### Setting: Rank Opt-Out for ALL Admins
+
+When enabled, all project admins will be excluded from the Leaderboard and will not be assigned a rank within the embedded Skills Display component
+
+#### Setting: Custom Labels
+
+Certain terminology in SkillTree may be overloaded to some organizations and could be confusing to end users.  If this is the case, admins can customize the following labels displayed to users in the embedded Skills Display component:
+- Project
+- Subject
+- Group
+- Skill
+- Level
+
+## Copy Project
+
+To use an existing Project as a template you can easily copy its training profile (subjects, skills, badges, etc..) into a brand-new project.  
+To copy a project please use the ![copy project button](./screenshots/copy_btn.png) button available on a project card on the Project page. 
+The system will prompt you to enter a new project name and optionally modify the project id. 
+
+The following training profile elements are copied into the new project: 
+- [Subjects](/dashboard/user-guide/subjects.html) and their attributes (description, help url, etc..)
+- [Skills](/dashboard/user-guide/skills.html) definitions and their attributes (description, points, self-reporting, etc...)
+- [Skill Groups](/dashboard/user-guide/skills-groups.html)
+- Configured display order subjects and skills  is preserved in the copied project
+- [Levels](/dashboard/user-guide/levels.html)
+- [Badges](/dashboard/user-guide/badges.html)
+- Project-Based [Dependencies](/dashboard/user-guide/dependencies.html)
+- [Re-used Skills](/dashboard/user-guide/skills.html#same-project-skill-reuse)
+- [Project's Settings](/dashboard/user-guide/projects.html#settings) are copied with the exception of the exclusions specified below
+
+The following training profile elements are **NOT** copied into a new project:
+- [Catalog](/dashboard/user-guide/skills-catalog.html) imported skills are **not** copied
+- [Cross-Project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) are **not** copied
+- If the original project [Visibility](/dashboard/user-guide/projects.html#setting-visibility) setting was changed to be ``Discoverable on Progress And Ranking`` the copied project will instead use the default value of ``Public Not Discoverable``
+
+::: tip
+Once a project has been copied, the new project is disconnected from the original such that changes to the original project will not be reflected in the copy
+:::
+

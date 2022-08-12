@@ -10,18 +10,18 @@ To create a skill, navigate to ``Project -> Subject`` then click on ``Skill +``,
 
 ![SkillTree Skills Page](../../screenshots/admin/modal-skills-new_skill.png)
 
-| Property | Explanation | 
-|:------- |:----------- | 
-| Skill Name | Display name of the skill |
-| Skill ID | Skill ID that will be used to report skill events |
-| Point Increment | Number of points added for each skill event; used in conjunction with the 'Occurrences to Completion' property | 
-| Occurrences to Completion | Number of successful occurrences to fully accomplish this skill; used in conjunction with the 'Point Increment' property |
-| [Time Window](/dashboard/user-guide/skills.html#time-window) | Used in conjunction with the 'Max Occurrences Within Window' property; once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window). When 'Time Window' is disabled skill events are applied immediately."
-| Max Occurrences Within Window | Used in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property; Once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window). |
-| [Self Reporting](/dashboard/user-guide/self-reporting.html) | (Optional) When checked Self Reporting is enabled for this skill. The type of ``Approval Queue`` or ``Honor System`` can then be selected. Please visit [Self Reporting](/dashboard/user-guide/self-reporting.html) to learn more. | 
-| Version | *(Optional)* Utilize [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) to support running multiple versions of client software |
-| Description | *(Optional)* Description of how to perform this skill. The Description property supports markdown. 
-| Help URL/Path | *(Optional)* URL pointing to a help article providing further information about this skill or capability. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting| 
+| Property | Explanation                                                                                                                                                                                                                                                                                                                                                                                                         | 
+|:------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| Skill Name | Display name of the skill                                                                                                                                                                                                                                                                                                                                                                                           |
+| Skill ID | Skill ID that will be used to report skill events                                                                                                                                                                                                                                                                                                                                                                   |
+| Point Increment | Number of points added for each skill event; used in conjunction with the 'Occurrences to Completion' property                                                                                                                                                                                                                                                                                                      | 
+| Occurrences to Completion | Number of successful occurrences to fully accomplish this skill; used in conjunction with the 'Point Increment' property                                                                                                                                                                                                                                                                                            |
+| [Time Window](/dashboard/user-guide/skills.html#time-window) | Used in conjunction with the 'Max Occurrences Within Window' property; once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window). When 'Time Window' is disabled skill events are applied immediately."                                                                                                     
+| Max Occurrences Within Window | Used in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property; Once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window).                                                                                                                                              |
+| [Self Reporting](/dashboard/user-guide/self-reporting.html) | (Optional) When checked Self Reporting is enabled for this skill. The type of ``Approval Queue`` or ``Honor System`` can then be selected. When choosing Approval Queue, you may also choose to require users to submit a justification when self-reporting this skill by selecting the 'Justification Required' check box. Please visit [Self Reporting](/dashboard/user-guide/self-reporting.html) to learn more. | 
+| Version | *(Optional)* Utilize [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) to support running multiple versions of client software                                                                                                                                                                                                                                                               |
+| Description | *(Optional)* Description of how to perform this skill. The Description property supports markdown.                                                                                                                                                                                                                                                                                                                  
+| Help URL/Path | *(Optional)* URL pointing to a help article providing further information about this skill or capability. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting                                                                                                                                                   | 
 
 ::: tip
 To calculate the total points that completion of a particular skill will give a user:
@@ -30,7 +30,7 @@ Total Points = Point Increment * Occurrences to Completion
 :::
 
 # Copy Skill
-To use an existing Skill as a template for a new Skill, you can use the [copy skill button](./screenshots/copy_skill_20210618.png) button available on a Skill row displayed on the Subject page. 
+To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page. 
 This will open a new Skill dialog populated with the details of the selected copy-from Skill. The name and id will be prepended with ``Copy of`` which can be changed
 before the new Skill is saved. Saving this dialog will create a new Skill that falls within the same Subject as the copy-from Skill.
 
@@ -220,5 +220,20 @@ The Self-reporting "I did it" button is visualized for each reused skill in the 
 - Reused skills cannot be added to a badge; use the original skill instead
 - Removing the original skill will also delete all of its reused copies
 
- 
-#
+## Move Skills <since project="skills-service" version="2.0" />
+Move Skills is a feature that allows project administrators to move skills to other subjects or skill groups within the same project.
+When skills are moved, users' points are preserved for those skills and level-based achievements are 
+properly re-calculted for both origination and destination subject/group.
+
+::: tip
+The ability to move skills between subjects gives project administrators gives project administrators the ability to refine their training profile after the initial creation of skills.
+:::
+
+To move one or more skills please navigate to the Skills page (``Project -> Subject``), then select the skills to move and click 
+on the Action button located on the top-right above the skills' table. Select the ``Move Skills`` button to initiate the process.
+
+![Move skills](../../screenshots/admin/page-export-to-catalog.png)
+
+::: tip
+All the skills under a subject or group can be easily selected via the ``Select All`` button
+:::
