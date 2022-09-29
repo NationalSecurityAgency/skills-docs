@@ -85,18 +85,18 @@ You can search badges by name as well as filter by ![Filter Component](../../scr
 
 ## Contact Project Admins
 
-Users that are consuming micro-learning training using SkillTree can easily communicate with the administrators of that 
-specific training profile. After drilling down into a specific project to view that project's progress and ranking views
+Users consuming a micro-learning training using SkillTree can easily communicate with the administrators of that 
+specific training profile. After drilling down into a specific project to view that project's progress and ranking views, a
 ![contact project button](./screenshots/concat_proj_btn.png) button is presented on the top right. 
 
-``Contact Project`` button displayed the contact form where users can enter and submit a message for that project's admins. 
+The ``Contact Project`` button displays the contact form where users can enter and submit a message for that project's admins. 
 
 ![contact project form](./screenshots/contact_admins_form.png)
 
-Once the ``Submit`` button is clicked an email with the provided message is sent to the project's admins. 
+Once the ``Submit`` button is clicked an email with the provided message is sent to all project's admins. 
 
 ::: danger IMPORTANT
-Please note that ``Contact Project`` button is only display if [Email Server Settings](/dashboard/user-guide/settings.html#email-settings)
+Please note that the ``Contact Project`` button is only display if the [Email Server Settings](/dashboard/user-guide/settings.html#email-settings)
 are configured, otherwise the button is not displayed as emails cannot be sent.
 :::
 
