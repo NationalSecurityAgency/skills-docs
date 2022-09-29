@@ -4,6 +4,28 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 2.1.0
+<release-date date="Sep. 2022" />
+- Ability to [contact project admins](/dashboard/user-guide/progress-and-ranking.html#contact-project-admins) directly through the SkillTree Dashboard
+- Ability to configure a project description which is then visualized in the Dashboard and optionally in the Skills Display
+- Ability to [share discoverable projects](/dashboard/user-guide/projects.html#share-project) via a share-able link
+  - When users visit the link they are directed to the project AND the project is automatically added to My Projects
+- Visualize users' progress on the users table (% and progress bar)
+- Ability to always show group's description on the Subject page in the Skills Display 
+- Ability to navigate to the next and the previous skill directly from the Skill page in the Skills Display 
+- On the Skills Display Subject page show  a``Last Viewed`` indicator next to the latest visited skill
+  - A button that enables users to easily jump to the last viewed skill
+  - Application auto scrolls to the latest viewed skill when navigating from the Skill to the Subject page 
+- Improved Help Urls to allow non-encoded spaces
+
+#### 2.0.2
+<release-date date="August. 2022" />
+- Bug Fixes
+
+#### 2.0.1
+<release-date date="August. 2022" />
+- Bug Fixes
+
 #### 2.0.0
 <release-date date="August. 2022" />
 - [Invite-Only / Private Project](/dashboard/user-guide/projects.html#setting-visibility) - Progress and Ranking pages can only be accessed by users who have been invited to join the project and who have accepted the invite, any other user attempting to access the project will receive an ``Access Denied`` error

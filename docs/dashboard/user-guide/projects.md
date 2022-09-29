@@ -122,12 +122,17 @@ When enabled, all project admins will be excluded from the Leaderboard and will 
 
 #### Setting: Custom Labels
 
-Certain terminology in SkillTree may be overloaded to some organizations and could be confusing to end users.  If this is the case, admins can customize the following labels displayed to users in the embedded Skills Display component:
+Certain terminology in SkillTree may be overloaded to some organizations and could be confusing to end users. 
+If this is the case, admins can customize the following labels displayed to users in the embedded Skills Display component and Progress and Ranking pages:
 - Project
 - Subject
 - Group
 - Skill
 - Level
+
+#### Setting: Always Show Group Descriptions
+
+Toggle this setting to always show the group's descriptions in this project embedded Skills Display component and Progress and Ranking pages.
 
 ## Copy Project
 
@@ -154,4 +159,27 @@ The following training profile elements are **NOT** copied into a new project:
 ::: tip
 Once a project has been copied, the new project is disconnected from the original such that changes to the original project will not be reflected in the copy
 :::
+
+## Share Project
+
+Public projects that are configured to be [discoverable](/dashboard/user-guide/projects.html#setting-visibility) can be easily shared with users so they can begin consuming the micro-learning gamified training! 
+
+To share a project click on the ``Share`` button on the project admin page:
+
+![SkillTree Project](../../screenshots/admin/page-partial-share-proj.png)
+
+Once the ``Share`` button is clicked the share information modal is displayed:
+
+![SkillTree Project Shared Modal](../../screenshots/admin/modal-share_proj.png)
+
+Copy the url and share it with your trainees. 
+When the link is visited, two things happen:
+- The Progress and Ranking page for that project is displayed *AND*
+- the project is automatically added to [My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects).
+
+::: warning Important
+The ``Share`` button is only displayed if the [Project Visibility](/dashboard/user-guide/projects.html#setting-visibility) is configured to the ``Discoverable on Progress and Ranking`` option. 
+:::
+
+
 
