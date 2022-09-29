@@ -307,4 +307,20 @@ context('Generate Admin Screenshots', () => {
         cy.snap('modal-edit_imported_skill', '.modal-content');
     })
 
+    it('Share Project Example', () => {
+        cy.visit('/administrator/projects/movies')
+        cy.get('[data-cy="manageBtn_Action"]')
+        cy.get('[data-cy="pageHeaderStat_Visibility"]').contains('PUBLIC')
+        cy.snap('page-partial-share-proj', null, {clip: { x: 0, y: 0, width: 750, height: 400 } });
+    })
+
+    it('Share Project Modal', () => {
+        cy.visit('/administrator/projects/movies')
+        cy.get('[data-cy="manageBtn_Action"]')
+        cy.get('[data-cy="pageHeaderStat_Visibility"]').contains('PUBLIC')
+        cy.get('[data-cy="shareProjBtn"]').click()
+        cy.get('[data-cy="projShareUrl"]')
+        cy.snap('modal-share_proj', '.modal-content');
+    })
+
 })
