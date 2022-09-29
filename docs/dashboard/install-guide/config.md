@@ -431,6 +431,19 @@ General steps to upgrade the database engine:
 5. reconfigure SkillTree production instance to point to the new database and turn off the Upgrade-In-Progress state  
    - when the ``skills-service`` is restarted it will replay the events stored in the WAL; the WAL files will then be removed 
 
+### Private Invite Only Projects
+
+In the case of Private Invite Only Projects, users are invited to join a project. 
+Invited recipients are emailed a one-time invite code and by default that invite code can be used by any valid user. 
+
+When ``skills.authorization.invite.validateEmail`` is set to ``true``, the invite code is compared to the user's email address
+prior giving access to that private project. 
+
+```properties
+# when enabled, only users whose email addresses matche the one assigned to the invite token will be given access 
+skills.authorization.invite.validateEmail=true
+```
+
 ### Spring Boot Properties
 
 ``skills-service`` is a Spring Boot application and will respect the majority (if not all) of Spring Boot configuration properties.  

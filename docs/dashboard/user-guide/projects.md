@@ -8,6 +8,10 @@ Project's administrator(s) manage skill definitions, subjects, levels, dependenc
 
 Creating a project is simple, all you need is a name. While the project id is required, it will be automatically generated (you can optionally override the generated id).
 
+::: tip
+As of 2.1.0 there is now a description field available for projects. Where the project description is displayed is controlled by the new [Project Description](/dashboard/user-guide/projects.html#setting-project-description) setting in Project Settings
+:::
+
 
 To create a project click the ``Project +`` button.
 
@@ -67,6 +71,15 @@ Prior to 2.0.0 this setting was called Discoverable and applied only to a projec
 There may be a delay of up to several minutes after changing a project's visibility from or to ``Private Invite Only`` before the change is reflected for all users.
 :::
 
+#### Setting: Project Description <since project="skills-service" version="2.1.0" />
+There are two possible values for the Project Description setting:
+
+1. Only show Project Description in Manager My Projects (default value)
+2. Show Project Description everywhere
+
+``Only show Project Description in Manager My Projects`` is the default value for a Project. With this setting, any project description that has been configured will only be displayed in the Manage My Projects view - in the future the description may be visible to other Project Administrators in the Import Skills From the Catalog dialog.
+``Show Project Description everywhere`` will cause any configured project description to be displayed anywhere that the training profile is displayed, including in the Manage My Proejcts view. This setting may be most applicable for SkillTree users whose training profile is viewed primarily through the Progress and Ranking view in the SkillTree dashboard.
+
 #### Setting: Use Points For Levels
  
 ``Use Points For Levels`` - switch between two level management strategies: 
@@ -109,12 +122,17 @@ When enabled, all project admins will be excluded from the Leaderboard and will 
 
 #### Setting: Custom Labels
 
-Certain terminology in SkillTree may be overloaded to some organizations and could be confusing to end users.  If this is the case, admins can customize the following labels displayed to users in the embedded Skills Display component:
+Certain terminology in SkillTree may be overloaded to some organizations and could be confusing to end users. 
+If this is the case, admins can customize the following labels displayed to users in the embedded Skills Display component and Progress and Ranking pages:
 - Project
 - Subject
 - Group
 - Skill
 - Level
+
+#### Setting: Always Show Group Descriptions
+
+Toggle this setting to always show the group's descriptions in this project embedded Skills Display component and Progress and Ranking pages.
 
 ## Copy Project
 
@@ -141,4 +159,27 @@ The following training profile elements are **NOT** copied into a new project:
 ::: tip
 Once a project has been copied, the new project is disconnected from the original such that changes to the original project will not be reflected in the copy
 :::
+
+## Share Project
+
+Public projects that are configured to be [discoverable](/dashboard/user-guide/projects.html#setting-visibility) can be easily shared with users so they can begin consuming the micro-learning gamified training! 
+
+To share a project click on the ``Share`` button on the project admin page:
+
+![SkillTree Project](../../screenshots/admin/page-partial-share-proj.png)
+
+Once the ``Share`` button is clicked the share information modal is displayed:
+
+![SkillTree Project Shared Modal](../../screenshots/admin/modal-share_proj.png)
+
+Copy the url and share it with your trainees. 
+When the link is visited, two things happen:
+- The Progress and Ranking page for that project is displayed *AND*
+- the project is automatically added to [My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects).
+
+::: warning Important
+The ``Share`` button is only displayed if the [Project Visibility](/dashboard/user-guide/projects.html#setting-visibility) is configured to the ``Discoverable on Progress and Ranking`` option. 
+:::
+
+
 

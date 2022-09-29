@@ -24,7 +24,15 @@ To grant [Root](/dashboard/user-guide/users.html#root) or [Supervisor](/dashboar
 
 ## Email Settings <requires-role role="Root" />
 
-The SkillTree dashboard will send emails in support of password reset requests for Dashboard users, as well as self-reported Skill approval requests. If Email Server settings are not configured, the password reset feature will be disabled.
+The SkillTree dashboard will send emails in support of various tasks including: 
+- password reset requests for Dashboard users,
+- self-reported Skill approval requests,
+- contacting project administrators,
+- welcoming admin users to the SkillTree Dashboard. 
+
+::: warning Please Note
+If Email Server settings are not configured, then features requiring email support will be disabled.
+:::
 
 ![Email Settings](../../screenshots/admin/page-settings-email.png)
 

@@ -4,6 +4,14 @@ This page documents high-level release notes for [SkillTree Client](https://gith
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+#### 3.5.0
+<release-date date="Sep. 2022" />
+- Ensure that skills-client react libraries work with React 18
+- Removed history package dependency
+- Addressed 3rd party library security vulnerabilities
+- Allowed options to be passed to the Skills Display component for future configuration options
+- Added ability to respond to scroll events from the Skills Display component
+
 #### 3.4.1
 <release-date date="Dec. 2021" />
 - Detect when the web-socket connection errors, and if the message indicates an invalid_token, then obtain a new token and reconnect
