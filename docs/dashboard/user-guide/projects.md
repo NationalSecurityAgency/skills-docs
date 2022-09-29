@@ -149,8 +149,7 @@ Once a project has been copied, the new project is disconnected from the origina
 
 ## Share Project
 
-Public projects that are configured to be [discoverable](/dashboard/user-guide/projects.html#setting-visibility) can be easily shared with the users, so they can begin 
-consuming micro-learning gamified training! 
+Public projects that are configured to be [discoverable](/dashboard/user-guide/projects.html#setting-visibility) can be easily shared with users so they can begin consuming the micro-learning gamified training! 
 
 To share a project click on the ``Share`` button on the project admin page:
 
@@ -161,9 +160,9 @@ Once the ``Share`` button is clicked the share information modal is displayed:
 ![SkillTree Project Shared Modal](../../screenshots/admin/modal-share_proj.png)
 
 Copy the url and share it with your trainees. 
-When the link is visited, 2 things happen:
-- Progress and Ranking page for that project is displayed *AND*
-- the project is automatically added to [My Project](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects).
+When the link is visited, two things happen:
+- The Progress and Ranking page for that project is displayed *AND*
+- the project is automatically added to [My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects).
 
 ::: warning Important
 The ``Share`` button is only displayed if the [Project Visibility](/dashboard/user-guide/projects.html#setting-visibility) is configured to the ``Discoverable on Progress and Ranking`` option. 
