@@ -433,14 +433,14 @@ General steps to upgrade the database engine:
 
 ### Private Invite Only Projects
 
-In case of Private Invite Only Projects, users are invited to join a project. 
-Invite recipients are emailed one-time invite code and by default that invite code can be used by any valid user. 
+In the case of Private Invite Only Projects, users are invited to join a project. 
+Invited recipients are emailed a one-time invite code and by default that invite code can be used by any valid user. 
 
-When ``skills.authorization.invite.validateEmail`` is set to ``true``, invite code is compared to the user's email address
+When ``skills.authorization.invite.validateEmail`` is set to ``true``, the invite code is compared to the user's email address
 prior giving access to that private project. 
 
 ```properties
-# when enabled only users whose email addresses matches the one assigned to the invite token will be given access 
+# when enabled, only users whose email addresses matche the one assigned to the invite token will be given access 
 skills.authorization.invite.validateEmail=true
 ```
 
