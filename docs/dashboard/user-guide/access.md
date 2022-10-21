@@ -31,7 +31,25 @@ Each email recipient receives a unique project invite code, therefore distributi
 To invite users to join a ``Private Invite Only`` project, the SkillTree instance MUST be configured to support email. Please see [Email Server Settings](/dashboard/user-guide/settings.html#email-settings) for more information.
 :::
 
-### Revoke Access
+##### Manage Invites Pending Acceptance <since project="skills-service" version="2.2.0" />
+Once Project Invites have been sent to users, any invites that have not yet been accepted or invites that have recently expired can be managed through the ```Invites Pending Acceptance``` table below the ```Invite Users``` form. Once an invite has been accepted by a user, it will no longer be displayed in the ```Invites Pending Acceptance``` table, in that case the user will appear in the [Revoke Access](/dashboard/user-guide/access.html#revoke-access) table.
+
+The actions that can be performed on each invite are: expiration time extension, remind user of invite, and delete invite.
+
+```Expiration Time Extension``` can be performed for any invite listed in the ```Invites Pending Acceptance``` table. For invites that are not yet expired, the selected extension time will be added to the invite's current expiration time. For invites that have expired,
+the selected extension time will be added to the time at which the extension is performed. For example, if an invite expires in 15 minutes and it is extended by 30 minutes, it will expire in 45 minutes. If an invite is currently expired and is extended by 30 minutes, it will expire in 30 minutes.
+
+```Remind User of Invite``` will send a reminder email to the user, encouraging the user to accept the project invite. It is important to note that a reminder cannot be sent for an invite that has expired. If an invite has expired, it must first be given an extension at which point
+the notification button will become enabled and a reminder may be sent to the user.
+
+```Delete invite``` will cause the selected project invite to be deleted, any future attempts to use that invite code will fail. Note that a new invite can be generated for the user whose invite was deleted if desired. Expired invites may be deleted to remove them from the view prior to removal by automated cleanup processes.
+
+::: tip
+Expired invites are, by default, visible for 30 days after they have expired; however, this is a configurable, system level, property that may be configured differently depending on the environment
+:::
+
+
+### Revoke Access <since project="skills-service" version="2.0.0" />
 Once a user has accepted an invitation to join a project configured for Invite Only visibility, that user will show up under the Revoke Access table at which point their access can be revoked and they will no longer have access to the project.
 
 ::: tip
