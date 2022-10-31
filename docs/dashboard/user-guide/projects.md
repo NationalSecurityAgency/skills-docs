@@ -24,20 +24,20 @@ Generally the next step is to create a number of Subjects and then start constru
 
 The Dashboard user that creates a project is automatically granted the role of administrator of that project. Project administrators enjoy the following benefits: 
 
-| Function | Explanation | 
-|:------- |:----------- | 
-| [Subjects](/dashboard/user-guide/subjects.html) | Add, edit or remove Subjects | 
-| [Skills](/dashboard/user-guide/skills.html)  | Add, edit or remove Skill definitions |
-| [Self Reporting](/dashboard/user-guide/self-reporting.html) | Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. |
-| [Access Management](/dashboard/user-guide/access.html) | Assign or remove Project's administrators | 
-| [Badges](/dashboard/user-guide/badges.html) | Add, edit or remove Project's Badges |
-| [Levels](/dashboard/user-guide/levels.html) | Customize number of Levels and their attributes |
-| [Dependencies](/dashboard/user-guide/dependencies.html) | Specify the order of Skills completion. For example Skill A must be completed before Skill B can be attempted | 
-| [Cross-project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) | Create and manage Skill dependencies across multiple Projects which practically equates to cross-application Skills |
-| [Contact Users](/dashboard/user-guide/contact-project-users.html) | Communicate with users of your Project |
-| [Metrics](/dashboard/user-guide/metrics.html) | Charts and graph. These are page specific - Project, Subject, Badge, and User will have stats specifically for those pages |
-| [Issues](/dashboard/user-guide/issues.html) | Errors related to the Project such as non-existant Skills that have been reported |       
-| [Settings](/dashboard/user-guide/projects.html#settings) | Project level settings |   
+| Function                                                                                         | Explanation                                                                                                                                                    | 
+|:-------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| [Subjects](/dashboard/user-guide/subjects.html)                                                  | Add, edit or remove Subjects                                                                                                                                   | 
+| [Skills](/dashboard/user-guide/skills.html)                                                      | Add, edit or remove Skill definitions                                                                                                                          |
+| [Self Reporting](/dashboard/user-guide/self-reporting.html)                                      | Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. |
+| [Access Management](/dashboard/user-guide/projects.html#access)                                           | Manage Project's Admin/Approver roles and Private Invite Only access                                                                                           |                                                                                                                                         | 
+| [Badges](/dashboard/user-guide/badges.html)                                                      | Add, edit or remove Project's Badges                                                                                                                           |
+| [Levels](/dashboard/user-guide/levels.html)                                                      | Customize number of Levels and their attributes                                                                                                                |
+| [Dependencies](/dashboard/user-guide/dependencies.html)                                          | Specify the order of Skills completion. For example Skill A must be completed before Skill B can be attempted                                                  | 
+| [Cross-project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) | Create and manage Skill dependencies across multiple Projects which practically equates to cross-application Skills                                            |
+| [Contact Users](/dashboard/user-guide/contact-project-users.html)                                | Communicate with users of your Project                                                                                                                         |
+| [Metrics](/dashboard/user-guide/metrics.html)                                                    | Charts and graph. These are page specific - Project, Subject, Badge, and User will have stats specifically for those pages                                     |
+| [Issues](/dashboard/user-guide/issues.html)                                                      | Errors related to the Project such as non-existant Skills that have been reported                                                                              |       
+| [Settings](/dashboard/user-guide/projects.html#settings)                                         | Project level settings                                                                                                                                         |   
 
 ## Settings
 
@@ -58,7 +58,7 @@ There are three possible values for the Project Visibility setting:
 [Manage My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) if the [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) views have been enabled.
 
 ``Private Invite Only`` projects can only be accessed by users who have been invited to join the project and who have accepted the invite, any other user attempting to access the project will receive an Access Denied error. Users who have been 
-designated as Project Administrators will continue to have access to the project. Users can be invited to join the project using the [Project Access](/dashboard/user-guide/access.html#invite-only) page.
+designated as Project Administrators will continue to have access to the project. Users can be invited to join the project using the [Project Access](/dashboard/user-guide/projects.html#invite-only) page.
 
 ``Discoverable on Progress And Ranking`` projects can be discoverd by users in the [Manage My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) view. This option will only be displayed if the instance
 of SkillTree has been configured to enable the [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) views.
@@ -133,6 +133,73 @@ If this is the case, admins can customize the following labels displayed to user
 #### Setting: Always Show Group Descriptions
 
 Toggle this setting to always show the group's descriptions in this project embedded Skills Display component and Progress and Ranking pages.
+
+## Access
+The Project Access page supports adding or removing Project Admin, Project Approver, and inviting users to join a project if the project has been configured as an Invite Only project as well as revoking a user's access.
+
+To add and remove project Admins and Approvers navigate to ``Project -> Access`` page.
+
+![Project Access](../../screenshots/admin/page-project-access.png)
+
+You must have an Admin role in order to manage other Admin and/or Approver users for a project. 
+There supported project roles are: 
+- **Admin**: enables management of the training profile for that project such as creating and modifying subjects, skills, badges, etc.. 
+- **Approver**: allowed to approve and deny [Self Reporting](/dashboard/user-guide/self-reporting.html#approval-queue) approval requests while only getting a read-only view of the project. 
+
+### Invite Only
+If the project has been configured with a visibility of ``Private Invite Only``, invite and access revocation are controlled here.
+
+::: tip
+The ``Project User: Invite`` and ``Project User: Revoke`` user interface controls are only displayed if the project has been configured with a [Visibility](/dashboard/user-guide/projects.html#setting-visibility) of Invite Only
+:::
+
+#### Invite Users
+Users are invited to join a project that has been configured as ``Private Invite Only`` via email. Invite recipients are added via the ``Email Addresses`` input field and can be added one at a time or by using a comma or semicolon separated list
+or by entering one email address per line in the ``Email Addresses`` input field (email addresses in the form of ``<some@email.address> Firstname Lastname`` are also supported). Once email addresses have been entered into the ``Email Addresses`` input field,
+they must be added as recipients using the ``Add Recipients`` button. These steps may be performed several times before the ``Send Invites`` button is pressed at which point all accumulated email addresses will be sent an email with a unique, one-time use invite to join the project.
+
+![Project Access](./screenshots/Component-Private-Project-Invite.png)
+
+Project invites may be configured to expire if not accepted within a certain time frame. Please note that the expiration configuration is only applicable to how long the invite code itself is valid. Once a user has accepted a valid invite code and joined the project, the invite expiration
+configuration is no longer relevant for that user.
+
+::: tip
+Each email recipient receives a unique project invite code, therefore distribution lists or group email accounts should not be added as recipients as only the first person to claim the invite will be able to use it.
+:::
+
+::: warning Important
+To invite users to join a ``Private Invite Only`` project, the SkillTree instance MUST be configured to support email. Please see [Email Server Settings](/dashboard/user-guide/settings.html#email-settings) for more information.
+:::
+
+###### Manage Invites Pending Acceptance <since project="skills-service" version="2.2.0" />
+Once Project Invites have been sent to users, any invites that have not yet been accepted or invites that have recently expired can be managed through the ```Invites Pending Acceptance``` table below the ```Invite Users``` form. 
+
+![Project Access](./screenshots/Component-Private-Project-Pending.png)
+
+Once an invite has been accepted by a user, it will no longer be displayed in the ```Invites Pending Acceptance``` table, in that case the user will appear in the [Revoke Access](/dashboard/user-guide/projects.html#revoke-access) table.
+
+The actions that can be performed on each invite are: expiration time extension, remind user of invite, and delete invite.
+
+```Expiration Time Extension``` can be performed for any invite listed in the ```Invites Pending Acceptance``` table. For invites that are not yet expired, the selected extension time will be added to the invite's current expiration time. For invites that have expired,
+the selected extension time will be added to the time at which the extension is performed. For example, if an invite expires in 15 minutes and it is extended by 30 minutes, it will expire in 45 minutes. If an invite is currently expired and is extended by 30 minutes, it will expire in 30 minutes.
+
+```Remind User of Invite``` will send a reminder email to the user, encouraging the user to accept the project invite. It is important to note that a reminder cannot be sent for an invite that has expired. If an invite has expired, it must first be given an extension at which point
+the notification button will become enabled and a reminder may be sent to the user.
+
+```Delete invite``` will cause the selected project invite to be deleted, any future attempts to use that invite code will fail. Note that a new invite can be generated for the user whose invite was deleted if desired. Expired invites may be deleted to remove them from the view prior to removal by automated cleanup processes.
+
+::: tip
+Expired invites are, by default, visible for 30 days after they have expired; however, this is a configurable, system level, property that may be configured differently depending on the environment
+:::
+
+
+#### Revoke Access
+Once a user has accepted an invitation to join a project configured for Invite Only visibility, that user will show up under the Revoke Access table at which point their access can be revoked and they will no longer have access to the project.
+
+::: tip
+When a user's access to an Invite Only project has been revoked, only that user's access is removed. Their achievement history is retained in case they are granted access in the future or the project's visibility is changed.
+:::
+
 
 ## Copy Project
 

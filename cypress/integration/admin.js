@@ -5,6 +5,7 @@ context('Generate Admin Screenshots', () => {
     const displayWidth = 1200;
     beforeEach(() => {
         cy.viewport(displayWidth, 800);
+        cy.register('bob1@email.org', 'password', 'Bob', 'Smith')
         cy.login();
     });
 
@@ -444,4 +445,24 @@ context('Generate Admin Screenshots', () => {
         cy.snap('rich-text-editor-5', markdownInput);
 
     })
+
+    it('access page', () => {
+        cy.intercept({
+            method: 'POST',
+            path: '/app/users/suggest*',
+        }).as('suggest');
+        cy.visit('/administrator/projects/movies/access')
+
+        cy.get('[data-cy="existingUserInput"]')
+            .type('bob1');
+        cy.wait('@suggest');
+        cy.wait(500);
+        cy.get('.vs__dropdown-menu').contains('bob1@email.org')
+            .click();
+        cy.get('[data-cy="userRoleSelector"]').select('Approver');
+        cy.get('[data-cy="addUserBtn"]').click();
+        cy.get('[data-cy="userCell_bob1@email.org"]')
+        cy.snap('page-project-access');
+    })
+
 })
