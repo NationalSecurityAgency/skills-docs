@@ -135,15 +135,15 @@ If this is the case, admins can customize the following labels displayed to user
 Toggle this setting to always show the group's descriptions in this project embedded Skills Display component and Progress and Ranking pages.
 
 ## Access
-The Project Access page supports adding or removing Project Admin, Project Approver, and inviting users to join a project if the project has been configured as an Invite Only project as well as revoking a user's access.
+The Project Access page supports adding or removing Project Administrators, Project Approvers, and inviting users to join a project if the project has been configured as an Invite Only project as well as revoking a user's access.
 
-To add and remove project Admins and Approvers navigate to ``Project -> Access`` page.
+To add and remove project Administrators and Approvers navigate to ``Project -> Access`` page.
 
 ![Project Access](../../screenshots/admin/page-project-access.png)
 
 You must have an Admin role in order to manage other Admin and/or Approver users for a project. 
 There supported project roles are: 
-- **Admin**: enables management of the training profile for that project such as creating and modifying subjects, skills, badges, etc.. 
+- **Admin**: enables management of the training profile for that project such as creating and modifying subjects, skills, badges, etc. 
 - **Approver**: allowed to approve and deny [Self Reporting](/dashboard/user-guide/self-reporting.html#approval-queue) approval requests while only getting a read-only view of the project. 
 
 ### Invite Only
