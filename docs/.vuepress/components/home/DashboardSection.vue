@@ -4,7 +4,7 @@
             <div class="row text-center text-sm-left">
                 <div class="col-lg-6">
                     <div class="p-xlg-5">
-                        <img src="../../../screenshots/admin/page-subjects.png" class="image-border"/>
+                        <img src="../../../screenshots/admin/page-subjects.png" class="image-border" alt="SkillTree Dashboard Screenshot"/>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -17,7 +17,7 @@
                         <div class="mb-1"><i class="fas fa-check-double"></i> Comprehensive visualization</div>
                         <div class="mb-1"><i class="fas fa-check-double"></i> Visibility of application expertise</div>
                         <div class="mb-1"><i class="fas fa-check-double"></i> SkillTree configuration management</div>
-                        <a href="dashboard/user-guide/" class="btn btn-lg btn-info mt-4">Read our Dashboard Guide</a>
+                        <a href="dashboard/user-guide/" class="btn btn-lg btn-info mt-4 font-weight-bold">Read our Dashboard Guide</a>
                     </div>
                 </div>
             </div>

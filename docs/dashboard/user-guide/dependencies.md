@@ -11,7 +11,7 @@ To add a dependency navigate to ``Project -> Subject -> Skill -> Dependencies``
 
 ![Add Dependencies](../../screenshots/admin/component-skill-deps.png)
 
-#### Best practices
+## Best practices
 - Do not create very complex dependency chains - a simple, direct and shallow dependency chain/tree is the best approach.  
 - Use dependencies sparingly, they complicate the training profile and may confuse users.
 

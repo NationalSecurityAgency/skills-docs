@@ -6,7 +6,7 @@ The SkillTree Dashboard provides these main functions:
 1. Provides corporate visibility of application expertise and offers metrics and various visualizations.  
 
 
-![Skills Platform Overview Image](../../overview/diagrams/SkillTreePlatformOverview.png)
+![Skills Platform Overview](../../overview/diagrams/SkillTreePlatformOverview.png)
 
 <conditional visibilityFlag="skillTreeServiceUrl" :visibility-value="false">
 

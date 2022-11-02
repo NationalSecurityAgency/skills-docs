@@ -47,7 +47,7 @@ To manage and view project-wide settings navigate to ``Project -> Settings``.
 
 The following project-level settings are available: 
 
-#### Setting: Visibility <since project="skills-service" version="2.0.0" />
+### Setting: Visibility <since project="skills-service" version="2.0.0" />
 There are three possible values for the Project Visibility setting:
 
 1. Public Not Discoverable (default value)
@@ -71,7 +71,7 @@ Prior to 2.0.0 this setting was called Discoverable and applied only to a projec
 There may be a delay of up to several minutes after changing a project's visibility from or to ``Private Invite Only`` before the change is reflected for all users.
 :::
 
-#### Setting: Project Description <since project="skills-service" version="2.1.0" />
+### Setting: Project Description <since project="skills-service" version="2.1.0" />
 There are two possible values for the Project Description setting:
 
 1. Only show Project Description in Manager My Projects (default value)
@@ -80,7 +80,7 @@ There are two possible values for the Project Description setting:
 ``Only show Project Description in Manager My Projects`` is the default value for a Project. With this setting, any project description that has been configured will only be displayed in the Manage My Projects view - in the future the description may be visible to other Project Administrators in the Import Skills From the Catalog dialog.
 ``Show Project Description everywhere`` will cause any configured project description to be displayed anywhere that the training profile is displayed, including in the Manage My Proejcts view. This setting may be most applicable for SkillTree users whose training profile is viewed primarily through the Progress and Ranking view in the SkillTree dashboard.
 
-#### Setting: Use Points For Levels
+### Setting: Use Points For Levels
  
 ``Use Points For Levels`` - switch between two level management strategies: 
 1. Percentage based - levels are calculated based on configured percentages of total available points (ex. Level 1 = 10% of total points)
@@ -92,7 +92,7 @@ By default the Percentage based strategy is configured, changing the ``Use Point
 You must define at least 100 points for a project before switching to point-based levels management
 :::
 
-#### Setting: Root Help Url
+### Setting: Root Help Url
 
 Skill definition's ``Help Url/Path`` will be treated relative to this ``Root Help Url``. For example, if 
 
@@ -108,7 +108,7 @@ If a Skill's ``Help Url`` starts with ``http`` or ``https`` then ``Root Help Url
 If a Skill's ``Help Url`` is blank then no url will be displayed even if ``Root Help Url`` is configured. 
 In other words ``Root Help Url`` only works in conjunction with a Skill's ``Help Url``.
 
-#### Setting: Self Report Default
+### Setting: Self Report Default
 
 By default, Self Reporting is disabled when creating or modifying a skill.
 If your project primarily consists of Self Reported skills, enabling Self Report Default will result in 
@@ -116,11 +116,11 @@ the selected Self Report Approval type being the default for any skills created 
 
 Please visit [Self Report](/dashboard/user-guide/self-reporting.html) section to learn further.
 
-#### Setting: Rank Opt-Out for ALL Admins
+### Setting: Rank Opt-Out for ALL Admins
 
 When enabled, all project admins will be excluded from the Leaderboard and will not be assigned a rank within the embedded Skills Display component
 
-#### Setting: Custom Labels
+### Setting: Custom Labels
 
 Certain terminology in SkillTree may be overloaded to some organizations and could be confusing to end users. 
 If this is the case, admins can customize the following labels displayed to users in the embedded Skills Display component and Progress and Ranking pages:
@@ -130,7 +130,7 @@ If this is the case, admins can customize the following labels displayed to user
 - Skill
 - Level
 
-#### Setting: Always Show Group Descriptions
+### Setting: Always Show Group Descriptions
 
 Toggle this setting to always show the group's descriptions in this project embedded Skills Display component and Progress and Ranking pages.
 
@@ -171,7 +171,7 @@ Each email recipient receives a unique project invite code, therefore distributi
 To invite users to join a ``Private Invite Only`` project, the SkillTree instance MUST be configured to support email. Please see [Email Server Settings](/dashboard/user-guide/settings.html#email-settings) for more information.
 :::
 
-###### Manage Invites Pending Acceptance <since project="skills-service" version="2.2.0" />
+##### Manage Invites Pending Acceptance <since project="skills-service" version="2.2.0" />
 Once Project Invites have been sent to users, any invites that have not yet been accepted or invites that have recently expired can be managed through the ```Invites Pending Acceptance``` table below the ```Invite Users``` form. 
 
 ![Project Access](./screenshots/Component-Private-Project-Pending.png)

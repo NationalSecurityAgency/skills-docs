@@ -3,11 +3,11 @@
         <div class="container">
             <div class="row text-white text-center text-sm-left">
                 <div class="col-lg-9">
-                    <h3 class="border-bottom">Did we mention it's FREE & Open Source??</h3>
+                    <div class="h3 border-bottom">Did we mention it's FREE & Open Source??</div>
                     <p class="text-white-50">Read our extensive documentation to learn more about the SkillTree platform.</p>
                 </div>
                 <div class="col-lg-3 text-lg-right">
-                    <a href="overview/" class="btn btn-lg btn-info"><i class="fas fa-book"></i> Read our Docs</a>
+                    <a href="overview/" class="btn btn-lg btn-info font-weight-bold"><i class="fas fa-book" aria-hidden="true"></i> Read our Docs</a>
                 </div>
             </div>
         </div>

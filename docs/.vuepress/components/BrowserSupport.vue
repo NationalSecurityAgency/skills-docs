@@ -7,6 +7,7 @@
       <img
         :src="$withBase(browser.icon)"
         :style="browser.iconHeightOverride ? `height: ${browser.iconHeightOverride}px` : 'height: auto;'"
+        :alt="`${browser.name} Browser Supported`"
         style="width: auto;"/>
       <div>{{ browser.name }}</div>
       <div class="browser-version">{{ browser.version }}+</div>

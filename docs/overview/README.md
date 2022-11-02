@@ -30,7 +30,7 @@ Using the SkillTree Dashboard, a web-based user-friendly interface, integrators 
 Then the JS display libraries are integrated into your existing web-based application which provides your users a fully interactive user ranking and progress display.
 The last step is to instrument your web-based application to report learning events to the SkillTree centralized service - the provided JS libraries make this process very simple.
 
-![Integrated Application Image](./diagrams/SkillTree-MajorComponents.jpg)
+![Integrated Application](./diagrams/SkillTree-MajorComponents.jpg)
 
 Want to know what these User Interfaces look like? Take a look at the [Screenshots](/overview/#screenshots) section. 
 
@@ -49,7 +49,7 @@ To facilitate rapid application incorporation, the platform provides the followi
 - **Skill Event Reporting Libraries:** Easily integrate your application by reporting skill events to the centralized service.
   - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
 
-![Skills Platform Overview Image](./diagrams/SkillTreePlatformOverview.png)
+![Skills Platform Overview](./diagrams/SkillTreePlatformOverview.png)
 
 ::: tip Skills Display  
 Please note that SkillTree has taken an innovative approach by providing a pluggable and fully interactive user progress and ranking visualization (named Skills Display)
@@ -174,36 +174,36 @@ Levels are users' achievement path - the overall goal of the gameified training 
 the highest level. Levels are tracked for the entire project as well as for each subject which provides users many ways
 to progress forward.
 Screenshots below demonstrate the management of levels in the dashboard:
-![Skills Platform Overview Image](../screenshots/admin/page-project-levels.png)
+![Project Level Page](../screenshots/admin/page-project-levels.png)
 
 Dependencies add another facet to the overall gamification profile and force users to complete skills in a specified
 order. If you set up Skill A to depend on the completion of Skill B then no points will be awarded toward Skill A until
 Skill B is fully accomplished.
 The screenshot below demonstrates management of skill dependencies in the dashboard:
-![Skills Platform Overview Image](../screenshots/admin/page-skill-deps.png)
+![Skill Dependencies Page](../screenshots/admin/page-skill-deps.png)
 
 Screenshot below demonstrates visualization of all the skill dependencies within a project:
-![Skills Platform Overview Image](../screenshots/admin/page-project-deps.png)
+![Project Dependencies Page](../screenshots/admin/page-project-deps.png)
 
 Almost every page in the SkillTree dashboard exposes metrics and statistics about that particular entity/concept. These
 metrics are very much context aware so as an example, graphs and charts you see on a subject page will be for that
 specific subject and metrics on the project page will be for the entire project.
 
-![Skills Platform Overview Image](../screenshots/admin/page-project-metrics-skills.png)
+![Project Metrics Skills Page](../screenshots/admin/page-project-metrics-skills.png)
 
 ----
 ----
 
-![Skills Platform Overview Image](../screenshots/admin/page-project-metrics-subjects.png)
+![Project Metrics Subject Page](../screenshots/admin/page-project-metrics-subjects.png)
 
 ----
 ----
 
-![Skills Platform Overview Image](../screenshots/admin/page-project-metrics-achievements.png)
+![Project Metrics Achievements Page](../screenshots/admin/page-project-metrics-achievements.png)
 
 ----
 ----
-![Skills Platform Overview Image](../screenshots/admin/page-topSkill-metrics.png)
+![Project Metrics Top Skills Page](../screenshots/admin/page-topSkill-metrics.png)
 
 
 ### Skills Display
@@ -212,35 +212,35 @@ SkillTree JS display libraries are integrated into your existing web-based appli
 interactive user ranking and progress display. The screenshots below highlight some of the features of this display. 
 
 This is a landing page for the display components that shows user's progress and ranking:
-![Skills Platform Overview Image](../screenshots/progress-and-ranking/client-display-proj.png)
+![Client Display Project Page](../screenshots/progress-and-ranking/client-display-proj.png)
 
 ------------------------
 ------------------------
 
 SkillTree integrated displays can be themed. For example, you can easily style it to look something like this:
-![SkillTree Screenshot](../screenshots/progress-and-ranking/client-display-themed-proj.png)
+![Client Display Themed Project Page](../screenshots/progress-and-ranking/client-display-themed-proj.png)
 
 ------------------------
 ------------------------
 
 User's rank overview: 
-![Skills Platform Overview Image](../screenshots/progress-and-ranking/client-display-rank.png)
+![Client Display Rank Page](../screenshots/progress-and-ranking/client-display-rank.png)
 
 ------------------------
 ------------------------
 User's progress within a subject, list of all of the skills that fall under that subject where
 green indicates completion and blue progress:
-![Skills Platform Overview Image](../screenshots/progress-and-ranking/client-display-subject.png)
+![Client Display Subject Page](../screenshots/progress-and-ranking/client-display-subject.png)
 
 ------------------------
 ------------------------
 Same display as before but with expanded Skill Details:
-![Skills Platform Overview Image](../screenshots/progress-and-ranking/client-display-subject-expandedSkills.png)
+![Client Display Subject Expanded Skills Page](../screenshots/progress-and-ranking/client-display-subject-expandedSkills.png)
 
 ------------------------
 ------------------------
 Single skill with dependencies:
-![Skills Platform Overview Image](../screenshots/progress-and-ranking/client-display-skillWithDeps.png)
+![Client Display Skills with Dependencies](../screenshots/progress-and-ranking/client-display-skillWithDeps.png)
 
 <script>
   import AccessibilityScore from "../.vuepress/components/AccessibilityScore";
