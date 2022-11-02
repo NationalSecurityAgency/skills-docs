@@ -6,8 +6,8 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 
 ## 2.2.0 <release-date date="Nov. 2022" />
-- Full-featured [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) to create and manage descriptions for skills, subjects, groups, badges and projets
-  - Supports an arraw of features including headings, copy-and-paste, blockquotes, tables, links, and much more...
+- Added a full-featured [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) to create and manage descriptions for skills, subjects, groups, badges and projets
+  - Supports an array of features including headings, copy-and-paste, blockquotes, tables, links, and much more...
   - Supports inserting, uploading and copy-and-pasting images
 - Implemented new [Project Approver Role](/dashboard/user-guide/projects.html#access)
   - approve and deny Self Reporting approval requests while only getting a read-only view of the project
