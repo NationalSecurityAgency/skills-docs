@@ -6,7 +6,7 @@ Once exported to the catalog, those skills can be easily imported into other pro
 to the imported skills within other projects. Changes to the original skill (ex. description, occurrences) are 
 automatically synchronized to all the imported skills as well. 
 
-![User Skills Image](./diagrams/skills-catalog.jpg)
+![User Skills Catalog Example](./diagrams/skills-catalog.jpg)
 
 In the diagram above two skills from ``Project A`` and two skills from ``Project B`` were exported to the Skills Catalog. 
 These skills were then imported by three different projects. 

@@ -14,7 +14,7 @@ Let's now focus on what a production deployment would look like. A production in
 
 SkillTree's skills-service is then configured to use PostgeSQL and Stomp Brokers.
 
-![Dashboard with Integrated Application Image](./diagrams/SkillsServiceArchitecture.jpg) 
+![Dashboard with Integrated Application](./diagrams/SkillsServiceArchitecture.jpg) 
 
 Integrated clients utilize skills-client libs (Vue.js, react, etc..) posted on the public NPM repositories. 
 These libraries are very thin wrappers around an iFrame tag, they simply retrieve the Skills Display app and its associated data from the skills-service.

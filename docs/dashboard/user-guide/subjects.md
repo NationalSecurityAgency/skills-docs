@@ -28,7 +28,7 @@ To navigate to a specific skill you can drill down into a subject card or use th
 :::
 
 
-#### Best practices   
+## Best practices   
 - Do your best to create subjects in multiples of 3. On a larger screen, the [Skills Display](/skills-client/#skills-display) renders up-to 3 subjects per row so 3, 6, 9, 12, etc., will look the best.
 - Use the same icon style/set for all subjects. We support font awesome, material and custom [icons](/dashboard/user-guide/icons.html) 
 - Strive for each subject to have a similar number of points. The ``Project -> Subjects`` page shows subject cards and each card exposes the ``Points %`` which reflects the subject's percentage of the total available Project points. 
