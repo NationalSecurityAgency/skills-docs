@@ -4,6 +4,33 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+
+## 2.2.0 <release-date date="Nov. 2022" />
+- Full-featured [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) to create and manage descriptions for skills, subjects, groups, badges and projets
+  - Supports an arraw of features including headings, copy-and-paste, blockquotes, tables, links, and much more...
+  - Supports inserting, uploading and copy-and-pasting images
+- Implemented new [Project Approver Role](/dashboard/user-guide/projects.html#access)
+  - approve and deny Self Reporting approval requests while only getting a read-only view of the project
+- *Skills Display:* show that a skill belongs to a badge on the Subject's and Skill's pages
+  - allow users to easily navigate to the badge
+- *Skills Display:* Added ``Belongs to a Badge`` and ``Pending Approval`` filters to the skill's filters
+- *Skills Display:* Improved look-and-feel of the skill filters
+- Remember last sort order on tables
+  - the latest sort selection is stored in browser's local storage
+- For Private Invite Only projects implemented ability to [manage invites pending acceptance](/dashboard/user-guide/projects.html#manage-invites-pending-acceptance)
+  - show invites pending acceptance
+  - allows to revoke, remind and extends invites 
+- Bug Fixes
+
+## 2.1.3 <release-date date="Oct. 2022" />
+- Bug Fixes
+
+## 2.1.2 <release-date date="Oct. 2022" />
+- Bug Fixes
+- 
+## 2.1.1 <release-date date="Oct. 2022" />
+- Bug Fixes
+
 ## 2.1.0 <release-date date="Sep. 2022" />
 - Ability to [contact project admins](/dashboard/user-guide/progress-and-ranking.html#contact-project-admins) directly through the SkillTree Dashboard
 - Ability to configure a project description which is then visualized in the Dashboard and optionally in the Skills Display
