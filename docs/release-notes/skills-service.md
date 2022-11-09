@@ -4,11 +4,14 @@ This page documents high-level release notes for [SkillTree Centralized Service]
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+## 2.2.2 <release-date date="Nov. 2022" />
+- Big Fixes
+
 ## 2.2.1 <release-date date="Nov. 2022" />
 - Upgrade Spring Boot
 
 ## 2.2.0 <release-date date="Nov. 2022" />
-- Added a full-featured [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) to create and manage descriptions for skills, subjects, groups, badges and projets
+- Added a full-featured [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) to create and manage descriptions for skills, subjects, groups, badges and projects
   - Supports an array of features including headings, copy-and-paste, blockquotes, tables, links, and much more...
   - Supports inserting, uploading and copy-and-pasting images
 - Implemented new [Project Approver Role](/dashboard/user-guide/projects.html#access)
