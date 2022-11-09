@@ -12,7 +12,7 @@
                           </span>
               </div>
               <div class="col-sm media-body">
-                <h5 class="mt-0 mb-3 mb-sm-2">User Engagement</h5>
+                <div class="h5 mt-0 mb-3 mb-sm-2">User Engagement</div>
                 Enable users to Quickly learn new features and effectively master advanced features.
                 Improve training recall through continued user engagement.
               </div>
@@ -33,7 +33,7 @@
 
               </div>
               <div class="col-sm media-body">
-                <h5 class="mt-0">Gamification</h5>
+                <div class="h5 mt-0">Gamification</div>
                 Consistent and innovative solution takes the guesswork and maintenance out of
                 implementing gamified user training.
               </div>
@@ -53,7 +53,7 @@
 
               </div>
               <div class="col-sm media-body">
-                <h5 class="mt-0">Reduced Cost</h5>
+                <div class="h5 mt-0">Reduced Cost</div>
                 Fewer training sessions - less support costs. Continued user engagement in
                 application
                 training promotes local experts.

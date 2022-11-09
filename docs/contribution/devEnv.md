@@ -435,7 +435,7 @@ Most IDEs (Intellij, Eclipse, etc...) provide first-class support for maven proj
 
 Let's first understand JS dependency chain. 
 
-![JS Dependencies Image](./diagrams/JsDeps.jpg) 
+![JS Dependencies](./diagrams/JsDeps.jpg) 
 
 The Diagram above depicts JS dependencies that can be traced using package.json files in each project.  
 Because we are authoring code across multiple projects in the dependency chain, a traditional [npm-publish](https://docs.npmjs.com/cli/publish) approach falls short. 

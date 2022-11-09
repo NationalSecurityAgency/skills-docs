@@ -87,3 +87,29 @@ Cypress.Commands.add("addToMyProjects", (projId) => {
     cy.request('POST', `/api/myprojects/${projId}`, {});
 });
 
+
+
+Cypress.Commands.add("register", (user, pass, first, last) => {
+    return cy.request(`/app/users/validExistingDashboardUserId/${user}`)
+        .then((response) => {
+            if (response.body !== true) {
+                cy.log(`Creating app user [${user}]`)
+                cy.request('PUT', '/createAccount', {
+                    firstName: first,
+                    lastName: last,
+                    email: user,
+                    password: pass,
+                });
+                cy.request('POST', '/logout');
+            } else {
+                cy.log(`User [${user}] already exist`)
+            }
+        });
+});
+
+Cypress.Commands.add("createProject", (projNum = 1, overrideProps = {}) => {
+    cy.request('POST', `/app/projects/proj${projNum}/`, Object.assign({
+        projectId: `proj${projNum}`,
+        name: `This is project ${projNum}`
+    }, overrideProps));
+});

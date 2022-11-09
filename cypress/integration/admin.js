@@ -5,6 +5,7 @@ context('Generate Admin Screenshots', () => {
     const displayWidth = 1200;
     beforeEach(() => {
         cy.viewport(displayWidth, 800);
+        cy.register('bob1@email.org', 'password', 'Bob', 'Smith')
         cy.login();
     });
 
@@ -321,6 +322,147 @@ context('Generate Admin Screenshots', () => {
         cy.get('[data-cy="shareProjBtn"]').click()
         cy.get('[data-cy="projShareUrl"]')
         cy.snap('modal-share_proj', '.modal-content');
+    })
+
+    Cypress.Commands.add('clickToolbarButton', (buttonName) => {
+        cy.get(`button.${buttonName}`).click({force: true})
+    });
+    Cypress.Commands.add('addHeading', (headingLevel, headingText) => {
+        cy.clickToolbarButton('heading')
+        cy.get(`ul > li[data-level=${headingLevel}]`).click({force: true})
+        cy.focused().type(headingText);
+    });
+    Cypress.Commands.add('selectParagraphText', () => {
+        cy.clickToolbarButton('heading')
+        cy.get('ul > li[data-type=Paragraph]').click({force: true})
+    });
+    Cypress.Commands.add('addBold', (text) => {
+        cy.clickToolbarButton('bold')
+        cy.focused().type(text);
+    });
+
+    it('Gen Rich Text Editor', () => {
+
+        // first set email settings to enable email
+        cy.visit('/settings/email')
+        cy.wait(3000)
+        cy.get('[data-cy="publicUrlInput"]').clear().type('http://localhost:8080')
+        cy.get('[data-cy="fromEmailInput"]').clear().type('skills@skills.org')
+        cy.get('[data-cy="hostInput"]').clear().type('localhost');
+        cy.get('[data-cy="portInput"]').clear().type(155);
+        cy.get('[data-cy="emailSettingsSave"]').click();
+        cy.get('[data-cy="connectionError"]');
+
+        cy.visit('/administrator/');
+
+        cy.intercept('GET', '/app/userInfo/hasRole/ROLE_SUPER_DUPER_USER')
+          .as('isRoot');
+        cy.intercept('POST', '/root/users/contactAllProjectAdmins', {
+            statusCode: 200,
+            body: {
+                success: true
+            }
+        });
+        cy.get('[data-cy="nav-Contact Admins"]')
+          .click();
+        cy.wait('@isRoot');
+        const markdownInput = '[data-cy=markdownEditorInput]';
+
+        cy.get(markdownInput).clear()
+        cy.addHeading(1, 'Title1\n')
+        cy.addHeading(2, 'Title2\n')
+        cy.addHeading(3, 'Title3\n')
+        cy.addHeading(4, 'Title4\n')
+        cy.addHeading(5, 'Title5\n')
+        cy.addHeading(6, 'Title6')
+
+        cy.snap('rich-text-editor-1', markdownInput);
+        cy.get(markdownInput).clear()
+
+        cy.selectParagraphText()
+        cy.focused().type('regular paragraph text\n\n');
+
+        cy.focused().type('bold: ');
+        cy.clickToolbarButton('bold')
+        cy.focused().type('bolded\n\n');
+
+        cy.focused().type('strikethrough: ');
+        cy.clickToolbarButton('strike')
+        cy.focused().type('struck\n');
+
+        cy.clickToolbarButton('hrline')
+        cy.focused().type('{downArrow}Separator\n');
+
+        cy.contains('Email Body').click();  // remove focus for snapshot
+        cy.snap('rich-text-editor-2', markdownInput);
+        cy.get(markdownInput).clear()
+
+        cy.focused().type('bulleted list and ordered list: \n');
+        cy.clickToolbarButton('bullet-list')
+        cy.focused().type('Item 1\nItem 1-A')
+        cy.clickToolbarButton('indent')
+        cy.focused().type('\nItem 1-B\nItem 2');
+        cy.clickToolbarButton('outdent')
+        cy.focused().type('\n\n')
+
+        cy.clickToolbarButton('ordered-list')
+        cy.focused().type('Item 1\nItem 1-A')
+        cy.clickToolbarButton('indent')
+        cy.focused().type('\nItem 1-B\nItem 2');
+        cy.clickToolbarButton('outdent')
+        // cy.focused().type('\n\n')
+        cy.contains('Email Body').click();  // remove focus for snapshot
+        cy.snap('rich-text-editor-3', markdownInput);
+        cy.get(markdownInput).clear()
+
+        cy.clickToolbarButton('image')
+        cy.get('div.toastui-editor-popup.toastui-editor-popup-add-image').contains('URL').click()
+        cy.get('#toastuiImageUrlInput').type('https://github.com/NationalSecurityAgency/skills-service/raw/master/skilltree_logo.png')
+        cy.get('.toastui-editor-ok-button').click()
+        cy.focused().type('\n\n')
+        cy.clickToolbarButton('link')
+        cy.get('#toastuiLinkUrlInput').type('https://skilltreeplatform.dev/')
+        cy.get('#toastuiLinkTextInput').type('SkillTree Documentation Link')
+        cy.get('.toastui-editor-ok-button').click()
+        cy.contains('Email Body').click();  // remove focus for snapshot
+        cy.snap('rich-text-editor-4', markdownInput);
+        cy.get(markdownInput).clear()
+
+        cy.focused().type('This is some ');
+        cy.clickToolbarButton('code')
+        cy.focused().type('inline code');
+        cy.clickToolbarButton('code')
+        cy.focused().type('surrounded by normal text\n\n');
+
+        cy.focused().type('\n{upArrow}Some text followed by a code block\n');
+        cy.clickToolbarButton('codeblock')
+        cy.focused().type('\n' +
+          'const validateMarkdown = (markdown, snapshotName) => {\n' +
+          '}\n');
+        cy.clickToolbarButton('codeblock')
+
+        cy.contains('Email Body').click();  // remove focus for snapshot
+        cy.snap('rich-text-editor-5', markdownInput);
+
+    })
+
+    it('access page', () => {
+        cy.intercept({
+            method: 'POST',
+            path: '/app/users/suggest*',
+        }).as('suggest');
+        cy.visit('/administrator/projects/movies/access')
+
+        cy.get('[data-cy="existingUserInput"]')
+            .type('bob1');
+        cy.wait('@suggest');
+        cy.wait(500);
+        cy.get('.vs__dropdown-menu').contains('bob1@email.org')
+            .click();
+        cy.get('[data-cy="userRoleSelector"]').select('Approver');
+        cy.get('[data-cy="addUserBtn"]').click();
+        cy.get('[data-cy="userCell_bob1@email.org"]')
+        cy.snap('page-project-access');
     })
 
 })

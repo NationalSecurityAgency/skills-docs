@@ -6,8 +6,20 @@ It will also touch on access management, and a way to view the Skill Display thr
 ## User Roles
 
 ### Project Admin
-Project admins are assigned to a particular project. 
-The Project admin role enables management of the training profile for that project such as creating and modifying subjects, skills, badges, etc..    
+Project Administrator's can modify all
+aspects of a Project, up to and including deleting a Project. The initial creator of a Project will automatically be assigned
+as the Project Administrator, however, any number of Project Administrators may be assigned. A Project Administrator role is necessary to approve
+self-reported Skill requests. Depending on the installation mode, a user may need to have a dashboard account before
+being added as a Project Administrator.
+
+Please visit [Project's Access Page](/dashboard/user-guide/projects.html#access) in order to learn how to add/remove project's roles.
+
+### Project Approver
+
+Project Approvers are assigned to a particular project.
+The Project Approver role is allowed to approve and deny [Self Reporting](/dashboard/user-guide/self-reporting.html#approval-queue) approval requests while only getting a read-only view of the project. For example users with an Approval Role can only view but not edit subjects, skills and badges.
+
+Please visit [Project's Access Page](/dashboard/user-guide/projects.html#access) in order to learn how to add/remove project's roles.
 
 ### Root
 The Root role is meant for administering the dashboard itself and not any specific project. Users with the Root role can view the Inception project. 

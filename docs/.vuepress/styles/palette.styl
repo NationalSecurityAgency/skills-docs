@@ -1,4 +1,64 @@
-$contentWidth = 1200px
+$contentWidth = 1400px
+
+$accentColor ?= #217a57
+//$bgSearch ?= #f8f8f8
+//$textColor ?= #101111
+//$color ?= #304455
+//$borderColor ?= #5e5e5e
 
 img
    margin 1rem 0 1rem 0
+
+.navbar .site-name
+   color: var(--color)
+
+.navbar .links
+   background var(--bg)
+
+.nav-links .repo-link:hover
+   color var(--text-color-link)
+
+a.nav-link
+   &:hover, &.router-link-active
+      color var(--text-color-link)
+      border-color: var(--text-color-link) !important
+
+div.theme-default-content
+   a
+      text-decoration: underline
+
+   &:not(.custom) a:hover
+      text-decoration: none
+
+   .figurecode
+      &__caption
+         a
+            text-decoration: underline
+
+   blockquote
+      color: var(--color-light)
+      border-left: 0.2rem solid #217a57
+
+// --------------------------------
+// custom blocks
+div.custom-block
+   .custom-block-title
+      color: inherit !important
+
+   &.warning
+      color: var(--color)
+      background-color: var(--bg-tip-warning)
+
+   &.danger
+      background-color: var(--bg-tip-danger)
+
+   &.danger, &.danger > .custom-block-title
+      color: var(--color)
+
+   &.tip
+      background-color: var(--bg-secondary)
+
+details.custom-block
+   &.details
+      color: var(--color)
+      background-color: var(--bg-secondary)

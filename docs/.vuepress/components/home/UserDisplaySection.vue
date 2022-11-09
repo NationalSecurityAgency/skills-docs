@@ -5,13 +5,14 @@
                 <div class="col-lg-6 order-lg-2" style="margin-top: -6rem;">
                     <div class="p-md-5">
                         <img src="../../../screenshots/progress-and-ranking/client-display-proj.png"
+                             alt="User Display Screenshot"
                              class="image-border-dark"/>
                     </div>
                 </div>
               <div class="col-lg-6 order-lg-1">
                 <div class="py-4 p-sm-5 text-white">
-                  <h1 class="border-bottom text-uppercase">User Display</h1>
-                  <p class="text-white-50">Pluggable user skill and ranking visualization - customize and use the
+                  <h1 class="border-bottom text-uppercase font-weight-bold">User Display</h1>
+                  <p class="text-white">Pluggable user skill and ranking visualization - customize and use the
                     display component
                     in your application within minutes.</p>
                   <div class="mb-2">Out-of-the-box support for:</div>
@@ -19,19 +20,19 @@
                     <div class="text-left" style="max-width: 10rem;">
                       <div class="row no-gutters">
                         <div class="col-auto"><i class="fab fa-vuejs fa-2x"></i></div>
-                        <div class="col"><a href="https://vuejs.org/" target="_blank">Vue.js</a></div>
+                        <div class="col"><a href="https://vuejs.org/" target="_blank" class="font-weight-bold text-white">Vue.js</a></div>
                       </div>
                       <div class="row no-gutters">
                         <div class="col-auto"><i class="fab fa-react fa-2x"></i></div>
-                        <div class="col"><a href="https://reactjs.org/" target="_blank">React</a></div>
+                        <div class="col"><a href="https://reactjs.org/" target="_blank" class="font-weight-bold text-white">React</a></div>
                       </div>
                       <div class="row no-gutters">
                         <div class="col-auto"><i class="fab fa-angular fa-2x"></i></div>
-                        <div class="col"><a href="https://angular.io/" target="_blank">Angular</a></div>
+                        <div class="col"><a href="https://angular.io/" target="_blank" class="font-weight-bold text-white">Angular</a></div>
                       </div>
                       <div class="row no-gutters">
                         <div class="col-auto"><i class="fab fa-js fa-2x"></i></div>
-                        <div class="col"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Pure
+                        <div class="col"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="font-weight-bold text-white">Pure
                           JavaScript</a></div>
                       </div>
                     </div>

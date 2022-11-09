@@ -257,7 +257,7 @@ profiling id that will allow you to locate the associated profiling statement in
 For example, the name in the Chrome development tools will look something like this ``profId1642707755421`` (``profId<id>``).
 To locate the associated profiling statement you can search for the ``profId=1642707755421`` (``profId=<id>``):
 
-```
+```text
 Profiling Endpoint: /admin/projects/Project1/users
 |-> getProjectUsers(projectId=Project1,query=,limit=5,page=1,orderBy=lastUpdated,ascending=false) profId=1642707755421 (1) : 815ms [017ms]
 |     |-> AdminUsersService.findDistinctUsers (1) : 672ms

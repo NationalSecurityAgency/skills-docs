@@ -2,9 +2,9 @@
     <header class="masthead text-center text-white">
         <div class="masthead-content">
             <div class="container">
-                <h1 class="masthead-heading mb-0"><img class="img-fluid" :src="$withBase('/img/skilltree_logo.svg')"/> </h1>
-                <h2 class="masthead-subheading mb-0 mt-sm-3">A micro-learning gamification platform</h2>
-                <a href="overview/" class="btn btn-lg btn-primary mt-5"><i class="fas fa-book"></i> Read Docs</a>
+                <div class="masthead-heading mb-0"><img class="img-fluid" :src="$withBase('/img/skilltree_logo.svg')" alt="SkillTree Logo"/> </div>
+                <h1 class="masthead-subheading mb-0 mt-sm-3">A micro-learning gamification platform</h1>
+                <a href="overview/" class="btn btn-lg btn-primary mt-5 font-weight-bold"><i class="fas fa-book" aria-hidden="true"></i> Read Docs</a>
             </div>
         </div>
         <div class="bg-circle-1 bg-circle"></div>
