@@ -1,8 +1,11 @@
 # Skills Service Release Notes
 
-This page documents high-level release notes for [SkillTree Centralized Service](https://github.com/NationalSecurityAgency/skills-service) which encompasses the dashboard and API. 
+This page documents high-level release notes for <external-url label="SkillTree Centralized Service" url="https://github.com/NationalSecurityAgency/skills-service" /> which encompasses the dashboard and API. 
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
+
+## 2.2.3 <release-date date="Nov. 2022" />
+- Big Fixes
 
 ## 2.2.2 <release-date date="Nov. 2022" />
 - Big Fixes
@@ -147,11 +150,11 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Bug Fix: Changing the display order of skills in a Skill Group results in a 400 error
 
 ## 1.8.4 <release-date date="Dec. 2021" />
-- Upgraded log4j to address [CVE-2021-45105](https://nvd.nist.gov/vuln/detail/CVE-2021-45105)
+- Upgraded log4j to address <external-url label="CVE-2021-45105" url="https://nvd.nist.gov/vuln/detail/CVE-2021-45105" />
 - Option to verify email ownership when dashboard accounts are created
 
 ## 1.8.3 <release-date date="Dec. 2021" />
-- Upgraded log4j to address [CVE-2021-44228](https://www.cisa.gov/uscert/ncas/current-activity/2021/12/13/cisa-creates-webpage-apache-log4j-vulnerability-cve-2021-44228)
+- Upgraded log4j to address <external-url label="CVE-2021-44228" url="https://www.cisa.gov/uscert/ncas/current-activity/2021/12/13/cisa-creates-webpage-apache-log4j-vulnerability-cve-2021-44228" />
 - Added support for storing HTTP Session via JDBC
 
 ## 1.8.2 <release-date date="Dec. 2021" />

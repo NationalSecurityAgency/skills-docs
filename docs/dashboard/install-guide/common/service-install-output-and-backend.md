@@ -30,7 +30,7 @@ The next step is to start the ``java-backend-example`` service which:
 1. Populates the ``skills-service`` with sample data
 1. Implements an example [Authentication Endpoint](/skills-client/auth.html) that's required to run client components
 
-Download the latest ``java-backend-example`` from [skills-client-examples/releases](https://github.com/NationalSecurityAgency/skills-client-examples/releases)
+Download the latest ``java-backend-example`` from <external-url label="skills-client-examples/releases" url="https://github.com/NationalSecurityAgency/skills-client-examples/releases" />
 
 ```bash
 curl -s https://api.github.com/repos/NationalSecurityAgency/skills-client-examples/releases/latest | grep browser_download_url | cut -d '"' -f 4 | wget -qi -

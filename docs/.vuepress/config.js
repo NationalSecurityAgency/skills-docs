@@ -42,6 +42,7 @@ downloadIcon();
  *  removeProgressAndRankingInstallNote=true : removes installation note in Progress and Ranking section; set this to true if the install enables Progress and Ranking views
  *  removeProgressAndRankingPageFromDashboardUserGuide=true: remove Progress and Ranking section if Progress and Ranking views are disabled
  *  removeContributionsGuide=true: remove Contribution Guide form docs
+ *  noExternalLinks=true: there will be no external links in the docs
  */
 
 let removeInstallGuide = false;
@@ -56,6 +57,7 @@ const skillTreeServiceUrlDefaultValue = 'http://localhost:8080';
 let skillTreeServiceUrl = skillTreeServiceUrlDefaultValue;
 let skillTreeServiceUrlProvided = false;
 let docsTitle = 'SkillTree Docs';
+let noExternalLinks = false;
 
 const confValue = 'injectedConf';
 if (confValue && confValue !== 'injectedConf') {
@@ -85,6 +87,8 @@ if (confValue && confValue !== 'injectedConf') {
             docsTitle = val;
         } else if (key === 'removeContributionsGuide' && val === 'true') {
             removeContributionsGuide = true;
+        } else if (key === 'noExternalLinks' && val === 'true') {
+            noExternalLinks = true;
         }
     })
 }
@@ -232,6 +236,8 @@ module.exports = {
             allAuthModes: !pkiAuthInstallOnly && !passAuthInstallOnly,
             skillTreeServiceUrl: skillTreeServiceUrl && skillTreeServiceUrl.length > 0 && skillTreeServiceUrlDefaultValue !== skillTreeServiceUrl,
             showInstallGuide: !removeInstallGuide,
+            showContributionGuide: !removeContributionsGuide,
+            noExternalLinks,
         },
         skillTreeServiceUrl,
     },

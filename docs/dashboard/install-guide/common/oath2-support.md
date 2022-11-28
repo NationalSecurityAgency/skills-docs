@@ -1,6 +1,10 @@
 
 When using Password Auth Mode, the dashboard can also support OAuth2 based authentication. 
-Currently, OAuth2 is only supported for Google, GitHub, GitLab and Azure Active Directory.  Login buttons get automatically added to the Login page when configured.  To configure, you will need a client ID and client Secret credentials.  These credentials can be created and managed through the providers OAuth management pages found here: [Google](https://console.developers.google.com/apis/credentials), [GitHub](https://github.com/settings/developers), [GitLab](https://gitlab.com/-/profile/applications), and [Azure AD](https://portal.azure.com/).  
+Currently, OAuth2 is only supported for Google, GitHub, GitLab and Azure Active Directory.  
+Login buttons get automatically added to the Login page when configured.  
+To configure, you will need a client ID and client Secret credentials.  
+These credentials can be created and managed through the providers OAuth 
+<external-url label="Google" url="https://console.developers.google.com/apis/credentials" />, <external-url label="GitHub" url="https://github.com/settings/developers" />, <external-url label="GitLab" url="https://gitlab.com/-/profile/applications" />, or <external-url label="Azure AD" url="https://portal.azure.com/" /> management pages.  
 
 Once the client ID and secret are set up, they are enabled by adding the following properties:
 

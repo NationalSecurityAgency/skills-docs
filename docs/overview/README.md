@@ -98,22 +98,29 @@ Gamification is a proven training strategy, using the SkillTree platform yields 
 
 ## On GitHub
 
-SkillTree Platfrom is Open Source and can be found on [GitHub](https://github.com/): 
+SkillTree Platfrom is Open Source and can be found on <external-url label="GitHub" url="https://github.com/" />: 
 
-- [skills-service](https://github.com/NationalSecurityAgency/skills-service): SkillTree Centralized Service that implements Dashboard UI and SkillTree APIs
-- [skills-client](https://github.com/NationalSecurityAgency/skills-client): Client JS libraries which allow rapid SkillTree integration. 
-- [skills-docs](https://github.com/NationalSecurityAgency/skills-docs): Documentation, you are reading this now!
-- [skills-stress-test](https://github.com/NationalSecurityAgency/skills-stress-test): Web-based application that facilitates stress tests against the SkillTree service.
-- [call-stack-profiler](https://github.com/NationalSecurityAgency/call-stack-profiler): Groovy annotation-driven in-code profiling utility used by the services.
-- [skills-client-examples](https://github.com/NationalSecurityAgency/skills-client-examples): Simple Integration examples using client libraries. 
+- <external-url label="skills-service" url="https://github.com/NationalSecurityAgency/skills-service" />: SkillTree Centralized Service that implements Dashboard UI and SkillTree APIs
+- <external-url label="skills-client" url="https://github.com/NationalSecurityAgency/skills-client" />: Client JS libraries which allow rapid SkillTree integration. 
+- <external-url label="skills-docs" url="https://github.com/NationalSecurityAgency/skills-docs" />: Documentation, you are reading this now!
+- <external-url label="skills-stress-test" url="https://github.com/NationalSecurityAgency/skills-stress-test" />: Web-based application that facilitates stress tests against the SkillTree service.
+- <external-url label="call-stack-profiler" url="https://github.com/NationalSecurityAgency/call-stack-profiler" />: Groovy annotation-driven in-code profiling utility used by the services.
+- <external-url label="skills-client-examples" url="https://github.com/NationalSecurityAgency/skills-client-examples" />: Simple Integration examples using client libraries. 
 
-Please support SkillTree by adding a :star: [skills-service](https://github.com/NationalSecurityAgency/skills-service) and [skills-client](https://github.com/NationalSecurityAgency/skills-client) projects on GitHub. 
+Please support SkillTree by adding a :star: to the <external-url label="skills-service" url="https://github.com/NationalSecurityAgency/skills-service"/> and <external-url label="skills-client" url="https://github.com/NationalSecurityAgency/skills-client" /> projects on GitHub. 
 
-Please visit [Contribution Guide](/contribution/#contribution-guidelines) if you are interested to contribute to the SkillTree platform. 
+<conditional visibilityFlag="showContributionGuide" :visibility-value="true">
+
+Please visit [Contribution Guide](/contribution/#contribution-guidelines) if you are interested to contribute to the SkillTree platform.
+
+</conditional>
 
 ## Accessibility
 <accessibility-score/>
-SkillTree is committed to ensuring that Accessibility concerns are addressed. To that end we employ both manual and automated Accessibility testing. Automated accessibility testing occurs for every commit, assessing the Dashboard and client-display, and the resulting [Lighthouse](https://developers.google.com/web/tools/lighthouse) accessibility score is published to the [SkillTree Skills-Service Github page](https://github.com/NationalSecurityAgency/skills-service).
+SkillTree is committed to ensuring that Accessibility concerns are addressed. To that end we employ both manual and automated Accessibility testing. 
+Automated accessibility testing occurs for every commit, assessing the Dashboard and client-display, 
+and the resulting <external-url label="Lighthouse" url="https://developers.google.com/web/tools/lighthouse" /> accessibility score is published to 
+the <external-url label="SkillTree Skills-Service Github page" url="https://github.com/NationalSecurityAgency/skills-service" />.
 
 In the event that any of the libraries we depend on for User Interface components fail to meet accessibility standards, we evaluate whether accessibility
 fixes are on the near-term development roadmap for those plugins or replace them with equivalents that address accessibility concerns.

@@ -12,8 +12,8 @@ When creating or editing these items you can click on the default icon to bring 
 
 The icon selector supports 2 icon packs: 
 
-- [Font Awesome Free](https://fontawesome.com/)
-- [Material](https://material.io/tools/icons) 
+- <external-url label="Font Awesome Free" url="https://fontawesome.com" />
+- <external-url label="Material" url="https://material.io/tools/icons" /> 
 
 ::: tip
 To provide consistent branding, use the same icon packs for all of your items
@@ -23,10 +23,10 @@ To provide consistent branding, use the same icon packs for all of your items
 
 The project administrator can upload their own custom images to be used as icons. Supported formats are:
 
-- [JPEG](https://en.wikipedia.org/wiki/JPEG)
-- [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [GIF](https://en.wikipedia.org/wiki/GIF)
-- [BMP](https://en.wikipedia.org/wiki/BMP_file_format)
+- <external-url label="JPEG" url="https://en.wikipedia.org/wiki/JPEG" />
+- <external-url label="PNG" url="https://en.wikipedia.org/wiki/Portable_Network_Graphics" />
+- <external-url label="GIF" url="https://en.wikipedia.org/wiki/GIF" />
+- <external-url label="BMP" url="https://en.wikipedia.org/wiki/BMP_file_format" />
 
 For the best user experience within the Client Display, custom icons are also constrained to:
 
