@@ -7,8 +7,8 @@ Once the service is installed you will have access to the management dashboard a
 
 There are two official distributions: 
 
-- Jar-based: hosted on [GitHub](https://github.com/NationalSecurityAgency/skills-service/releases/latest)
-- Docker: hosted on [DockerHub](https://hub.docker.com/r/skilltree/skills-service)
+- Jar-based: hosted on <external-url label="GitHub" url="https://github.com/NationalSecurityAgency/skills-service/releases/latest" />
+- Docker: hosted on <external-url label="DockerHub" url="https://hub.docker.com/r/skilltree/skills-service" />
 
 [Quick Start](/dashboard/install-guide/quickStart.html#_2-install-start-dashboard-and-service) shows how to install and start each distribution type. 
 

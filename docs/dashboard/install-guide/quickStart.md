@@ -6,10 +6,10 @@ The steps to getting started with SkillTree are:
 1. [Integrate Client Libraries](/dashboard/install-guide/quickStart.html#_3-integrate-client-libraries) into your application (examples will be provided)
 
 ## 1. Prerequisites
-- JDK 11+, we suggest [Open JDK](https://openjdk.java.net/)
+- JDK 11+, we suggest <external-url label="Open JDK" url="https://openjdk.java.net/" />
   - Please note that this is not relevant if you elect to go with the Docker based install.
-- [Git](https://git-scm.com/) version 2.23+
-- [Node.js](https://nodejs.org/en/) v12+ and [npm](https://www.npmjs.com/) 6+
+- <external-url label="Git" url="https://git-scm.com/" /> version 2.23+
+- <external-url label="Node.js" url="https://nodejs.org/en/" /> v12+ and <external-url label="npm" url="https://www.npmjs.com/" /> 6+
 
 ## 2. Install & Start Dashboard and Service
 You have 2 options:
@@ -18,14 +18,14 @@ You have 2 options:
 
 ### Option 1 - Docker-based install
 
-The ``skills-service`` docker image is hosted on [DockerHub](https://hub.docker.com/r/skilltree/skills-service) and can be started like this: 
+The ``skills-service`` docker image is hosted on <external-url label="DockerHub" url="https://hub.docker.com/r/skilltree/skills-service" /> and can be started like this: 
 
 ```bash
 docker run --name skills-service -d -p 8080:8080 skilltree/skills-service:<tag_version>
 ```
 ::: tip IMPORTANT
 Please note that the ``latest`` tag is **not** published to DockerHub and ``:<tag_version>`` must be specified explicitly.
-Available tags can be found on [DockerHub tags page](https://hub.docker.com/r/skilltree/skills-service/tags).
+Available tags can be found on <external-url label="DockerHub tags page" url="https://hub.docker.com/r/skilltree/skills-service/tags".
 :::
 
 You can tail the application logs via:
@@ -37,7 +37,7 @@ docker logs -f <container_id>
 
 ### Option 2 - Jar-based install
 
-Download the latest ``.jar`` release from [GitHub skills-service/releases/](https://github.com/NationalSecurityAgency/skills-service/releases/) (under the Assets section).
+Download the latest ``.jar`` release from <external-url label="GitHub skills-service/releases/" url="https://github.com/NationalSecurityAgency/skills-service/releases/" /> (under the Assets section).
 
 ```bash
 curl -s https://api.github.com/repos/NationalSecurityAgency/skills-service/releases/latest | grep browser_download_url | cut -d '"' -f 4 | wget -qi -
@@ -79,7 +79,7 @@ Vue CLI displays the development server url at startup, it will likely be this:
 If you want to build the Hello World Vue.js application yourself, here are the steps: 
 
 ::: tip
-This example uses [Vue CLI](https://cli.vuejs.org/) to quickly scaffold a Single Page Application.
+This example uses <external-url label="Vue CLI" url="https://cli.vuejs.org/" /> to quickly scaffold a Single Page Application.
 :::
 
 ```bash
@@ -183,7 +183,7 @@ React CLI displays the development server url at startup, it will likely be this
 If you want to build the Hello World React application yourself, here are the steps:
 
 ::: tip
-This example uses [Create React App](https://reactjs.org/docs/create-a-new-react-app.html/) to quickly scaffold a Single Page Application.
+This example uses <external-url label="Create React App" url="https://reactjs.org/docs/create-a-new-react-app.html/" /> to quickly scaffold a Single Page Application.
 :::
 
 ```bash
@@ -276,7 +276,7 @@ Angular CLI displays the development server url at startup, it will likely be th
 If you want to build the Hello World Angular application yourself, here are the steps: 
 
 ::: tip
-This example uses [Angular CLI](https://angular.io/cli/) to quickly scaffold a Single Page Application.
+This example uses <external-url label="Angular CLI" url="https://angular.io/cli/" /> to quickly scaffold a Single Page Application.
 :::
 
 ```bash
@@ -405,7 +405,7 @@ For further details regarding integrating SkillTree into your application, pleas
 
 ### Option 4 - Pure JS Integration Example
 
-To run the Hello World Pure JS example, clone the ``skills-client-examples`` project and start the [live-server](https://www.npmjs.com/package/live-server) development server:
+To run the Hello World Pure JS example, clone the ``skills-client-examples`` project and start the <external-url label="live-server" url="https://www.npmjs.com/package/live-server" /> development server:
 
 ```bash
 git clone git@github.com:NationalSecurityAgency/skills-client-examples.git
@@ -413,7 +413,7 @@ cd skills-client-examples/js-example
 npm install
 npm run serve
 ```
-[live-server](https://www.npmjs.com/package/live-server) displays the development server url at startup, it will likely be this: 
+<external-url label="live-server" url="https://www.npmjs.com/package/live-server" /> displays the development server url at startup, it will likely be this: 
 [http://127.0.0.1:8092](http://127.0.0.1:8092) 
 
 
@@ -477,13 +477,13 @@ SkillsReporter.addSuccessHandler((result) => {
 });
 ```
 
-The full example can be found @ [skills-client-examples/js-example/index.html](https://github.com/NationalSecurityAgency/skills-client-examples/blob/master/js-example/index.html)
+The full example can be found @ <external-url label="skills-client-examples/js-example/index.html" url="https://github.com/NationalSecurityAgency/skills-client-examples/blob/master/js-example/index.html" />
 
 Now start the server:
 ```bash
 npx live-server --no-browser --port=8092 --open=app --cors --proxy=/api:http://localhost:8090/api --proxy=/native:http://localhost:8092/
 ```
-[live-server](https://www.npmjs.com/package/live-server) displays development server url on startup, it will likely be this: 
+<external-url label="live-server" url="https://www.npmjs.com/package/live-server" /> displays development server url on startup, it will likely be this: 
 [http://127.0.0.1:8092](http://127.0.0.1:8092). 
 
 For further details regarding integrating SkillTree into your application, please visit our [Integration Guide](/skills-client/).  

@@ -24,7 +24,7 @@ Definitely use Password Auth Mode if you are not sure which mode is applicable t
 
 <import-content path="/dashboard/install-guide/common/services-explanations.html"/>
 **4: Redis:** Required for clustered skills-service deployment to persist HttpSession  
-   - [Redis](https://redis.io/)'s installation, setup and management is outside of the scope of this section, please visit [https://redis.io/](https://redis.io/)        
+   - <external-url label="Redis" url="https://redis.io/"/>'s installation, setup and management is outside of the scope of this section, please visit <external-url label="https://redis.io/" url="https://redis.io/" />        
  
 ### Auth Mode skills-service Configuration
 

@@ -11,13 +11,18 @@ You can find release notes [here](/release-notes/).
 
 There are two official types of distributions: 
 
-- Jar-based: hosted on [GitHub](https://github.com/NationalSecurityAgency/skills-service/releases/latest)
-- Docker: hosted on [DockerHub](https://hub.docker.com/r/skilltree/skills-service)
+- Jar-based: hosted on <external-url label="GitHub" url="https://github.com/NationalSecurityAgency/skills-service/releases/latest" />
+- Docker: hosted on <external-url label="DockerHub" url="https://hub.docker.com/r/skilltree/skills-service" />
 
 ## Client Libraries Distributions 
 
-Client libraries hosted on [npmJS.com](https://www.npmjs.com/):
+Client libraries hosted on <external-url label="npmJS.com" url="https://www.npmjs.com/" />:
+
+<conditional visibilityFlag="noExternalLinks" :visibility-value="false">
+
 - [Vue.js Client Library](https://www.npmjs.com/package/@skilltree/skills-client-vue)
 - [React Client Library](https://www.npmjs.com/package/@skilltree/skills-client-react)
 - [Angular Client Library](https://www.npmjs.com/package/@skilltree/skills-client-ng)
 - [Native JS Client Library](https://www.npmjs.com/package/@skilltree/skills-client-js)
+
+</conditional>

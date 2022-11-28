@@ -5,8 +5,8 @@ development and prototyping. In this section we'll discuss how to configure each
 
 There are two official types of distributions: 
 
-- Jar-based: hosted on [GitHub](https://github.com/NationalSecurityAgency/skills-service/releases/latest)
-- Docker: hosted on [DockerHub](https://hub.docker.com/r/skilltree/skills-service)
+- Jar-based: hosted on <external-url label="GitHub" url="https://github.com/NationalSecurityAgency/skills-service/releases/latest" />
+- Docker: hosted on <external-url label="DockerHub" url="https://hub.docker.com/r/skilltree/skills-service" />
 
 There are generally two types of configuration properties: 
 
@@ -150,7 +150,6 @@ skills.config.ui.docsHost=https://code.nsa.gov/skills-docs
 ```
 
 ### SkillTree Support
-<since project="skills-service" version="1.8.2" />
 
 You can display options for your users to reach out to the support team (ex. email, chat, ticketing center, etc).
 
@@ -178,7 +177,7 @@ skills.config.ui.supportLink2Label=Support Center
 skills.config.ui.supportLink2Icon=fas fa-ambulance
 ```
 
-Any [Free Font Awesome Icons](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free) can be specified for the ``skills.config.ui.supportLink<N>Icon`` property. 
+Any <external-url label="Free Font Awesome Icons" url="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free" /> can be specified for the ``skills.config.ui.supportLink<N>Icon`` property. 
 
 ### Dashboard: Input Validation
 
@@ -242,9 +241,9 @@ The output provides method call hierarchy as well as the following information:
 - (N): number of times method was called, findDistinctUsers() was called once and countTotalProjUsers() called 3 times
 - [N ms]: execution time which was not accounted for by child methods/logic; this happens when either not all of the child methods/logic is profiled OR there is  GC or JVM overhead
 
-SkillTree profiling uses the [Call Stack Profiler](https://github.com/NationalSecurityAgency/call-stack-profiler) library
+SkillTree profiling uses the <external-url label="Call Stack Profiler" url="https://github.com/NationalSecurityAgency/call-stack-profiler" /> library
 
-``skills-service`` also supports the [Server Timing API](https://web.dev/custom-metrics/?utm_source=devtools#server-timing-api) and when enabled will set 
+``skills-service`` also supports the <external-url label="Server Timing API" url="https://web.dev/custom-metrics/?utm_source=devtools#server-timing-api" /> and when enabled will set 
 server timing data in the response header. Most browsers visualize this timing data in their respective development tools. To enable, please set the following property: 
 
 ```properties
@@ -447,4 +446,4 @@ skills.authorization.invite.validateEmail=true
 ### Spring Boot Properties
 
 ``skills-service`` is a Spring Boot application and will respect the majority (if not all) of Spring Boot configuration properties.  
-Here is the complete list of available [Spring Boot Properties](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data-properties) 
+Here is the complete list of available <external-url label="Spring Boot Properties" url="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data-properties" /> 

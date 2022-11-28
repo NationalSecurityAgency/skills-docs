@@ -7,10 +7,10 @@ a H2 database in a production install.
  
 Here is an overview of supported options followed by sections describing each choice: 
 
-| Database | Supported Version | Use Case | 
-| ------------- |:-------------:| ----- |
-| [H2](http://www.h2database.com) | 1.4 + | Dev Only |
-| [PostgresQL](https://www.postgresql.org/) | 10 + | Production + Dev |
+| Database                                                              | Supported Version | Use Case | 
+|-----------------------------------------------------------------------|:-------------:| ----- |
+| <external-url label="H2" url="http://www.h2database.com" />           | 1.4 + | Dev Only |
+| <external-url label="PostgresQL" url="https://www.postgresql.org/" /> | 10 + | Production + Dev |
 
 
 ## H2 Database
