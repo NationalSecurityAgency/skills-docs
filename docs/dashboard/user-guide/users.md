@@ -50,7 +50,7 @@ what the [Skills Display](/skills-client/#skills-display) would look like for a 
 
 To see a history of a user's performed skill events please visit ``Project -> Users -> Select a User -> Performed Skills``. 
 
-Project administrators have an ability to remove individual skill events or all of the skill events at once.
+Project administrators have the ability to remove individual skill events or all of the skill events at once.
 
 * *To delete a single skill event:* click the delete button on the specific skill event row
 * <em>To delete **ALL** skill events</em>: click the `Delete All` button on the top right of the table.
