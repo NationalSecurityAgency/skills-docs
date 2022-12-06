@@ -27,13 +27,13 @@ Creating badges is simple:
 1. After assigning skill dependencies to the badge, locate the badge in the ``Badges`` view and click the ``Go Live`` link on the bottom right of the Badge overview.
     - When the badge is published, any users with existing achievements that meet the badge requirements will be awarded the badge at that time.
  
-| Property | Explanation | 
-|:------- |:----------- | 
-| Badge Name | Display name of the badge |
-| Badge ID | The badge ID |
-| Description | *(Optional)* Description, can be used to describe how to achieve the badge or what it's significance is. The Description property supports markdown.
-| Help URL/Path | *(Optional)* URL pointing to a help article further documenting information about this badge. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting|
-| Enable Gem Feature | *(Optional)* Enables the [Gem](#Gem) feature, allowing badges to be only available within a specific time window
+| Property | Explanation                                                                                                                                                                                                                                             | 
+|:------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| Badge Name | Display name of the badge                                                                                                                                                                                                                               |
+| Badge ID | The badge ID                                                                                                                                                                                                                                            |
+| [Description](/dashboard/user-guide/rich-text-editor.html) | *(Optional)* Description, can be used to describe how to achieve the badge or what it's significance is.                                                                                                                                                |
+| Help URL/Path | *(Optional)* URL pointing to a help article further documenting information about this badge. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting. You can also author external links into the description itself if more than one external resource needs to be linked to. |
+| Enable Gem Feature | *(Optional)* Enables the [Gem](#Gem) feature, allowing badges to be only available within a specific time window                                                                                                                                        
 
 ## Gem
 

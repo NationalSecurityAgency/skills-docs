@@ -25,13 +25,14 @@ Please visit ``Project -> Settings`` to configure a level management strategy.
 Each level is defined as a percentage of **overall** points and the actual level's point range is calculated based on that percentage.
 By default, projects and subjects are created with **5** levels:
  
-| Level | Name | Percentage |  
-|:------- |:----------- |:----------- |
-| 1 | White Belt | 10% |
-| 2 | Blue Belt | 25% | 
-| 3 | Purple Belt | 45% | 
-| 4 | Brown Belt | 67% | 
-| 5 | Black Belt | 92% | 
+| Level | Percentage |  
+|:------- |:----------- |
+| 1 | 10% |
+| 2 | 25% |
+| 3 | 45% |
+| 4 | 67% |
+| 5 | 92% |
+
 
 This allows levels to be fluid as Skills are defined and **overall** points change. 
 
@@ -45,7 +46,7 @@ Using ``Project -> Settings``, levels can be changed to a points based strategy,
  
 ::: warning Empty Project and Subject
 In the event that a project is switched to points based levels, any **empty** subjects (subjects with no skills) will have levels defined
-based on a theoretical points maximum of 1000 e.g., "White Belt" at 100-250 points, "Blue Belt" at 250-450 points, "Purple Belt" at 450-670, etc. These values can 
+based on a theoretical points maximum of 1000 e.g., "Level 1" at 100-250 points, "Level 2" at 250-450 points, "Level 3" at 450-670, etc. These values can 
 be easily edited after the configuration change if desired.
 :::
 

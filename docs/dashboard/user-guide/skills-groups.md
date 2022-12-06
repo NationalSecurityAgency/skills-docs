@@ -22,7 +22,7 @@ To create a group, navigate to ``Project -> Subject`` then click on ``Group +``,
 |:------- |:----------- | 
 | Group Name | Display name of the skill |
 | Group ID | Group ID that will be used to identify this group |
-| Description | *(Optional)* Description of how to perform this skill. The Description property supports markdown.
+| [Description](/dashboard/user-guide/rich-text-editor.html) | *(Optional)* Description of how to perform this skill.  |
 
 After a group is created then skills can be added to the group. To add Skills to the group expand the group and click on the ``Add Skill To Group`` button. 
 This will bring up a new skill dialog, to learn more about skills and their attributes please visit the [Skills Section](/dashboard/user-guide/skills.html). 
