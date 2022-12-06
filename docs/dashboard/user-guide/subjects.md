@@ -16,12 +16,12 @@ To create a Subject navigate to ``Project -> Subjects`` and then click the ``Sub
 
 ![SkillTree New Subject](../../screenshots/admin/modal-subjects-new_subject.png)
 
-| Property | Explanation | 
-|:------- |:----------- | 
-| Subject Name | Display name of the subject |
-| Subject ID | The subject ID |
-| Description | *(Optional)* Description, can be used to describe the topic of the subject. The Description property supports markdown.
-| Help URL/Path | *(Optional)* URL pointing to a help article further documenting information about this subject. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting|
+| Property | Explanation                                                                                                                                                                                                                                               | 
+|:------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| Subject Name | Display name of the subject                                                                                                                                                                                                                               |
+| Subject ID | The subject ID                                                                                                                                                                                                                                            |
+| [Description](/dashboard/user-guide/rich-text-editor.html) | *(Optional)* Description, can be used to describe the topic of the subject. You can also author external links into the description itself if more than one external resource needs to be linked to.                                                      |
+| Help URL/Path | *(Optional)* URL pointing to a help article further documenting information about this subject. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting. You can also author external links into the description itself if more than one external resource needs to be linked to. |
 
 ::: tip
 To navigate to a specific skill you can drill down into a subject card or use the ``Search and Navigate directly to a skill`` component
