@@ -4,6 +4,22 @@ This page documents high-level release notes for <external-url label="SkillTree 
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+## 2.3.0 <release-date date="Dec. 2022" />
+- Ability to **split self-approval workload** between multiple Approvers or Admins
+  - An approver can be assigned to handle requests from specific users
+  - An approver can be assigned to approve specific skills
+  - An approver can be assigned to approve users that have a certain user tag and/or that tag starts with a certain value
+  - Ability to designate a fallback catch-all approver
+- **Custom skill tags** - a new lightweight facet to categorize and group skills 
+  - Project admins can create custom tags and attach them to skills
+  - Skill tags are visualized in the Skills Display to give users consuming the training another way to comprehend, categorize and filter skills
+- Enhanced skill's ``Post Achievement Metrics`` to show a table for the users that continued to utilize the feature after achieving the skill
+  - Ability to toggle between users that ``Continued Using`` vs. ``Stopped Using`` 
+- Enhanced Dashboard's gamified training - updated descriptions, added new skills and created 6 new badges!
+- Added ability to clear all the skill events for a user
+  - The action practically removes the user from that project and all of its views
+
+
 ## 2.2.3 <release-date date="Nov. 2022" />
 - Big Fixes
 
@@ -30,16 +46,20 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
   - allows to revoke, remind and extends invites 
 - Bug Fixes
 
-## 2.1.3 <release-date date="Oct. 2022" />
+## Release History
+
+### 2.1.X Releases
+
+#### 2.1.3 <release-date date="Oct. 2022" />
 - Bug Fixes
 
-## 2.1.2 <release-date date="Oct. 2022" />
-- Bug Fixes
-- 
-## 2.1.1 <release-date date="Oct. 2022" />
+#### 2.1.2 <release-date date="Oct. 2022" />
 - Bug Fixes
 
-## 2.1.0 <release-date date="Sep. 2022" />
+#### 2.1.1 <release-date date="Oct. 2022" />
+- Bug Fixes
+
+#### 2.1.0 <release-date date="Sep. 2022" />
 - Ability to [contact project admins](/dashboard/user-guide/progress-and-ranking.html#contact-project-admins) directly through the SkillTree Dashboard
 - Ability to configure a project description which is then visualized in the Dashboard and optionally in the Skills Display
 - Ability to [share discoverable projects](/dashboard/user-guide/projects.html#share-project) via a share-able link
@@ -52,13 +72,15 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
   - Application auto scrolls to the latest viewed skill when navigating from the Skill to the Subject page 
 - Improved Help Urls to allow non-encoded spaces
 
-## 2.0.2 <release-date date="August. 2022" />
+### 2.0.X Releases
+
+#### 2.0.2 <release-date date="August. 2022" />
 - Bug Fixes
 
-## 2.0.1 <release-date date="August. 2022" />
+#### 2.0.1 <release-date date="August. 2022" />
 - Bug Fixes
 
-## 2.0.0 <release-date date="August. 2022" />
+#### 2.0.0 <release-date date="August. 2022" />
 - [Invite-Only / Private Project](/dashboard/user-guide/projects.html#setting-visibility) - Progress and Ranking pages can only be accessed by users who have been invited to join the project and who have accepted the invite, any other user attempting to access the project will receive an ``Access Denied`` error
 - [Copy Project Definition](/dashboard/user-guide/projects.html#copy-project) - use an existing Project as a template - copy its training profile (subjects, skills, badges, etc..) into a brand-new project.
 - [Move Skills](/dashboard/user-guide/skills.html#move-skills) between subjects and groups in the same project.
@@ -67,30 +89,33 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - When old client lib is being used, display a record on the [Issues](/dashboard/user-guide/issues.html) page that suggests upgrading
 - Send notification email when root and project admins are added
 
-## 1.12.2 <release-date date="July. 2022" />
+
+### 1.X Releases
+
+#### 1.12.2 <release-date date="July. 2022" />
 - Accessibility improvements
 
-## 1.12.1 <release-date date="July. 2022" />
+#### 1.12.1 <release-date date="July. 2022" />
 - Bug Fixes
 
-## 1.12.0 <release-date date="July. 2022" />
+#### 1.12.0 <release-date date="July. 2022" />
 - [Same Project Skill Reuse](/dashboard/user-guide/skills.html#same-project-skill-reuse) - a feature that facilitates the re-use of skills in the same projects 
 - Ability to unsubscribe to self-report approval requests emails
 - Accessibility improvements
 - Bug Fixes
 
-## 1.11.1 <release-date date="July. 2022" />
+#### 1.11.1 <release-date date="July. 2022" />
 - Bug Fixes
 
-## 1.11.0
+#### 1.11.0
 <release-date date="June. 2022" />
 - Accessibility improvements
 - Bug Fixes
 
-## 1.10.1 <release-date date="June. 2022" />
+#### 1.10.1 <release-date date="June. 2022" />
 - Bug Fixes
 
-## 1.10.0 <release-date date="June. 2022" />
+#### 1.10.0 <release-date date="June. 2022" />
 - Ability to export Skills to the Catalog that are defined under a Skill Group
 - Ability to import Catalog Skills into a Skill Group
 - Added Removal Safety Check dialog to projects, subjects and badges
@@ -98,29 +123,29 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Accessibility improvements
 - Bug Fixes
 
-## 1.9.5 <release-date date="May. 2022" />
+#### 1.9.5 <release-date date="May. 2022" />
 - Implemented Upgrade-In-Progress feature that puts the SkillTree Dashboard into a read-only state while retaining skill requests in a Write-Ahead-Log to be replayed after the upgrade is done
 - Improved performance of loading user table for a given project
 - Bug Fixes
 
-## 1.9.4 <release-date date="May. 2022" />
+#### 1.9.4 <release-date date="May. 2022" />
 - additional performance profiling
 
-## 1.9.3 <release-date date="May. 2022" />
+#### 1.9.3 <release-date date="May. 2022" />
 - Bug Fixes
 
-## 1.9.2 <release-date date="May. 2022" />
+#### 1.9.2 <release-date date="May. 2022" />
 - For Skills exported to the Catalog, show how many and which projects those skills were imported into
 - Check the point system of an importing project and warn users when finalizing catalog skills if imported points are outside of the existing point scheme
 - Bug Fixes
 
-## 1.9.1 <release-date date="Apr. 2022" />
+#### 1.9.1 <release-date date="Apr. 2022" />
 - Upgraded Spring Boot address a variety of different CVEs
 - Added a tag to indicate that a skill event came from an imported skill on the Performed Skills page
 - Improved usability when bulk importing Catalog Skills
 - Bug Fixes
 
-## 1.9.0 <release-date date="Apr. 2022" />
+#### 1.9.0 <release-date date="Apr. 2022" />
 - Implemented [Skills Catalog](/dashboard/user-guide/skills-catalog.html), a feature that facilitates the re-use of skills across projects:
   - Skills can be exported to the Catalog which makes those skills available for re-use in other projects. 
   - Once exported to the catalog, those skills can be easily imported into other projects as a read-only skill. 
@@ -129,45 +154,45 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Added resilient and distributed asynchronous job execution framework
 - Enhanced profiling printing thresholds to be configurable per-endpoint
 
-## 1.8.10 <release-date date="Feb. 2022" />
+#### 1.8.10 <release-date date="Feb. 2022" />
 - Ensured that db connections and transaction aren't opened until after a user is retrieved
 
-## 1.8.9 <release-date date="Feb. 2022" />
+#### 1.8.9 <release-date date="Feb. 2022" />
 - Bug Fix: After changing Skill Group's ID child skills fail to expand
 - Bug Fix: Adding more than 10 skills to a skill group causes the > 10 skills to not be visible/accessi
 
-## 1.8.8 <release-date date="Feb. 2022" />
+#### 1.8.8 <release-date date="Feb. 2022" />
 - Added support for actuator metrics and prometheus metrics
 
-## 1.8.7 <release-date date="Jan. 2022" />
+#### 1.8.7 <release-date date="Jan. 2022" />
 - Added OAuth2 support for Azure Active Directory
 
-## 1.8.6 <release-date date="Jan. 2022" />
+#### 1.8.6 <release-date date="Jan. 2022" />
 - Support enabling actuator metrics
 - Using CProf metrics to optionally expose overall endpoint execution time via the Server Timing API
 
-## 1.8.5 <release-date date="Jan. 2022" />
+#### 1.8.5 <release-date date="Jan. 2022" />
 - Bug Fix: Changing the display order of skills in a Skill Group results in a 400 error
 
-## 1.8.4 <release-date date="Dec. 2021" />
+#### 1.8.4 <release-date date="Dec. 2021" />
 - Upgraded log4j to address <external-url label="CVE-2021-45105" url="https://nvd.nist.gov/vuln/detail/CVE-2021-45105" />
 - Option to verify email ownership when dashboard accounts are created
 
-## 1.8.3 <release-date date="Dec. 2021" />
+#### 1.8.3 <release-date date="Dec. 2021" />
 - Upgraded log4j to address <external-url label="CVE-2021-44228" url="https://www.cisa.gov/uscert/ncas/current-activity/2021/12/13/cisa-creates-webpage-apache-log4j-vulnerability-cve-2021-44228" />
 - Added support for storing HTTP Session via JDBC
 
-## 1.8.2 <release-date date="Dec. 2021" />
+#### 1.8.2 <release-date date="Dec. 2021" />
 - Added ability to display support options; configurable support options are displayed in the header and footer of the dashboard
 - Bug Fix: Editing a skill decrements # of skills in the subject's stats
 
-## 1.8.1 <release-date date="Dec. 2021" />
+#### 1.8.1 <release-date date="Dec. 2021" />
 - Removed username/password login features when `skills.authorization.oAuthOnly=true`
 - Improved how external links display within markdown
 - Upgraded skills-client libraries to v3.4.1 in dashboard
 - Bug fixes and general usability improvements
 
-## 1.8.0 <release-date date="Nov. 2021" />
+#### 1.8.0 <release-date date="Nov. 2021" />
 - Implemented Skills Groups - brand new way to define and manage skills
   - Ability to group 2 or more skills under a group
   - Group has a name and a description and its own progress
@@ -180,17 +205,17 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Added ability to modify project's level requirement for a Global Badge 
 - Bug fixes
  
-## 1.7.1 <release-date date="Nov. 2021" />
+#### 1.7.1 <release-date date="Nov. 2021" />
 - Bug fix: Project and/or subject level-based achievements may not be awarded when a skill is edited or removed   
 
-## 1.7.0 <release-date date="Sep. 2021" />
+#### 1.7.0 <release-date date="Sep. 2021" />
 - Implemented store and display of approval history for self-report skills
 - Added ``Badges`` display for ``Progress and Ranking`` views
   - shows all global badges and project badges within the customized ``My Projects`` 
   - displays earned and available badges as well as current badge progress
 - Bug fixes      
 
-## 1.6.0 <release-date date="Aug. 2021" />
+#### 1.6.0 <release-date date="Aug. 2021" />
 - Added ability to drag-and-drop projects, subjects and badges in order to arrange their display order
 - New project ``Contact Users`` page that enables project administrators to send emails to all or a sub-set of the project's user base
   - Ability to contact users based on project/subject level achievement or specific skill/badge achievements
@@ -207,16 +232,16 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Added ability to assign tags to users and to generate metrics/charts based on those tags
 - Bug fixes
 
-## 1.5.3 <release-date date="Ju,. 2021" />
+#### 1.5.3 <release-date date="Ju,. 2021" />
 - Bug Fix: Added locking for project expiration/deletion/notification
 
-## 1.5.2 <release-date date="Jul. 2021" />
+#### 1.5.2 <release-date date="Jul. 2021" />
 - Bug Fixes
 
-## 1.5.1 <release-date date="Jul. 2021" />
+#### 1.5.1 <release-date date="Jul. 2021" />
 - Bug Fixes
 
-## 1.5.0 <release-date date="Jun. 2021" />
+#### 1.5.0 <release-date date="Jun. 2021" />
 - Implemented Leaderboard in the SkillsDisplay views
   - Displays ``Top 10`` users OR ``10 Around Me`` users
   - Users can Opt-Out in the Dashboard Settings from Leaderboard participation
@@ -233,7 +258,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Bug fixes and CI improvements
  
 
-## 1.4.0 <release-date date="Apr. 2021" />
+#### 1.4.0 <release-date date="Apr. 2021" />
 - implemented ``Progress and Ranking``page  - *new default* landing page
   - visualize user's progress and ranking across all of the integrated projects
   - provide capability to drill down to each project and view its ``Skills Display`` 
@@ -255,10 +280,10 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - implemented additional ``Skills Display`` component theme options
 - replaced vue-table-2 with the vue-bootstrap Table Component
 
-## 1.3.1 <release-date date="Jan. 2021" />
+#### 1.3.1 <release-date date="Jan. 2021" />
 - Enabled cross-origin resource sharing (CORS) on the ``/app/userInfo`` endpoint.
 
-## 1.3.0 <release-date date="Dec. 2020" />
+#### 1.3.0 <release-date date="Dec. 2020" />
 - Revamped project-level and cross-project visualizations and metrics
 - Updated Logo
 - Enhanced look-and-feel of the dashboard application
@@ -272,14 +297,14 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Added CI workflow that runs skills-service tests against RabbitMQ stomp broker 
 - Added CI workflow that runs skills-service tests with OAuth setup
 
-## 1.2.2 <release-date date="Sep. 2020" />
+#### 1.2.2 <release-date date="Sep. 2020" />
 - Changed base image from alpine to slim-buster
 - Updated dependency version from 3.0.0 to 3.0.1 for skills-client-vue to fix bug related to previewing user's display in the dashboard
 
-## 1.2.1 <release-date date="Sep. 2020" />
+#### 1.2.1 <release-date date="Sep. 2020" />
 Added the ability to enable and receive logging from the skills-client libraries
 
-## 1.2.0 <release-date date="Sep. 2020" />
+#### 1.2.0 <release-date date="Sep. 2020" />
 - Implemented extensive GitHub Actions Continuous Integration (CI)
 - Enhanced websocket based notifications - alert users of previously non-notified achievements when user starts a session for an application that utilizes skill-client libraries (ex. event listeners)
 - Improved back button behavior when users drill down within display component then navigate away from the page hosting the display component and finally returns to the component and uses the back button.
@@ -294,12 +319,12 @@ Added the ability to enable and receive logging from the skills-client libraries
 - Added numerous new tests, fixed multitude of bugs and and improved overall stability
 
 
-## 1.1.4 <release-date date="Jul. 2020" />
+#### 1.1.4 <release-date date="Jul. 2020" />
 - Generated skills-service docker image and published to DockerHub
 - Upgraded dashboard to use the latest published release of @skilltree/skills-client-vue
 
 
-## 1.1.3 <release-date date="Jul. 2020" />
+#### 1.1.3 <release-date date="Jul. 2020" />
 
 **Bug Fixes:**
 - Users table 'Last Updated' column actually shows creation date
