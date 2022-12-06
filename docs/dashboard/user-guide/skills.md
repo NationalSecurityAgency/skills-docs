@@ -111,7 +111,7 @@ Limitations:
   
      
 ## Manually Add Skill Event
-There maybe a special situation when you want to give user a credit explicitly. Project admins can add Skill Events manually through the Dashboard:
+There maybe a special situation when you want to give a user credit explicitly. Project admins can add Skill Events manually through the Dashboard:
 1. Locate the Subject that contains the Skill for which you would like to add an event
 1. Select ```Manage``` for the located Subject
 1. Locate the Skill and select ```Manage```
