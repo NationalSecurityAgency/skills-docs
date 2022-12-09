@@ -93,20 +93,20 @@ Please visit the [Email Notifications Settings](/dashboard/user-guide/settings.h
 
 ## Split Approval Workload
 
-By default, all Self Approval request are routed to the project's approvers and administrator
-and all of those users will see the requests and will be able to approve them. 
-All the approvers and administrators will also get notifications, unless disabled of course 
+By default, all Self Approval requests are routed to the project's approvers and administrators
+and they all will see the requests and will be able to approve them. 
+All approvers and administrators will also get notifications, unless disabled of course 
 (please see the [Notification](/dashboard/user-guide/self-reporting.html#notifications) section).
 
 If your SkillTree project has a large number of users submitting Self Report Approval requests it may overwhelm your
 project's Approvers. SkillTree offers a flexible way to split the Self Approval workload between multiple Approvers
 and/or Administrators.
 - An approver can be assigned to approve requests from specific users
-- An approver can be assigned to approve specific skills
-- An approver can be assigned to approve users that have a certain user tag and/or that tag starts with a certain value (example: user's assigned org)
+- An approver can be assigned to approve requests for specific skills
+- An approver can be assigned to approve requests from users that have a certain user tag and/or that tag starts with a certain value (example: user's assigned org)
 - Ability to designate a fallback (i.e catch-all) approver
 
-To configure Self Approval workload please navigate to the ``Project -> Self Report`` and then click the ``Configure`` button on the top right.
+To configure the Self Approval workload please navigate to the ``Project -> Self Report`` and then click the ``Configure`` button on the top right.
 
 ![Self Report Configure Approval](../../screenshots/admin/component-conf-approval-workload-withSkillsAdded.png)
 
@@ -150,10 +150,10 @@ Users with an *Approver* role will **only** see the history of the requests that
 an *Admin* role will see the history of all the requests *(it's an Admin role after all)*.
 :::
 
-Even when Split Approval Workload is configured an Approver or an Admin can still turn off the email notifications  (please see the [Notification](/dashboard/user-guide/self-reporting.html#notifications) section).
+Even when Split Approval Workload is configured an Approver or an Admin can still turn off email notifications  (please see the [Notification](/dashboard/user-guide/self-reporting.html#notifications) section).
 Users that turn off notifications simply won't get an email but will still be able to see and approve pending requests.
 
-Any unmatched request is forwarded to all the fallback Approvers or Admins. Fallback can be implicit or explicit. 
+Any unmatched requests are forwarded to all the fallback Approvers or Admins. Fallback can be implicit or explicit. 
 Implicit means that specific Approvers/Admins were not specified as handlers of the unmatched request.
 To configure an explicit fallback user change its switch to "on":
 
