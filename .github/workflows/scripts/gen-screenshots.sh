@@ -3,28 +3,35 @@
 # dev mode:
 # ./.github/workflows/scripts/gen-screenshots.sh -d true
 
-SKILLTREE_IMAGE="skilltree/skills-service-ci"
-LATEST_SKILLTREE_CI_VERSION=latest
 NUM_SKILL_EVENTS=10000
 
-# if image already exist remove - this is to support use of latest
-docker image rm -f ${SKILLTREE_IMAGE}:${LATEST_SKILLTREE_CI_VERSION}
+usage() { echo "Usage gen-screenshots.sh -i skilltree/skills-service -v 2.0.3" 1>&2; exit 1; }
 
-while getopts d:r flag
+while getopts :d:r:i:v: flag
 do
     case "${flag}" in
         d) skipShutdown=${OPTARG};;
         r) shutdownAndMoveSnaps=${OPTARG};;
+        i) imageName=${OPTARG};;
+        v) imageVersion=${OPTARG};;
+        *) usage;;
     esac
 done
+if [ -z "${imageName}" ] || [ -z "${imageVersion}" ]; then
+    usage
+fi
+echo "Will use: ${imageName}:${imageVersion}";
 echo "Skip Shutdown: $skipShutdown";
 echo "Shutdown and remove snaps: $shutdownAndMoveSnaps";
 
+# if image already exist remove - this is to support use of latest
+docker image rm -f ${imageName}:${imageVersion}
+
 # start skills-service
-echo "Will use [${SKILLTREE_IMAGE}:${LATEST_SKILLTREE_CI_VERSION}]"
-SKILLS_SERVICE_CONTAINER_ID=$(docker run -d -p 8080:8080 -e SPRING_PROPS="skills.config.ui.rankingAndProgressViewsEnabled=true" ${SKILLTREE_IMAGE}:${LATEST_SKILLTREE_CI_VERSION})
+echo "Will use [${imageName}:${imageVersion}]"
+SKILLS_SERVICE_CONTAINER_ID=$(docker run -d -p 8080:8080 -e SPRING_PROPS="skills.config.ui.rankingAndProgressViewsEnabled=true" ${imageName}:${imageVersion})
 npm run wait:skills-service
-echo "Started ${SKILLTREE_IMAGE}:${LATEST_SKILLTREE_CI_VERSION} on port [8080] with container id [${SKILLS_SERVICE_CONTAINER_ID}]"
+echo "Started ${imageName}:${imageVersion} on port [8080] with container id [${SKILLS_SERVICE_CONTAINER_ID}]"
 
 # build latest backend examples
 mkdir tmp-work-dir
