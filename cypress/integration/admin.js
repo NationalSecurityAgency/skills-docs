@@ -76,6 +76,39 @@ context('Generate Admin Screenshots', () => {
         cy.snap('page-project-self_report');
     });
 
+    it('Gen Skill Tags page', () => {
+        cy.viewport(1350, 1200);
+
+        cy.visit('/administrator/projects/movies/subjects/Action')
+
+        cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]') .click({ force: true });
+        cy.get('[data-cy="skillSelect-JurassicWorld"]') .click({ force: true });
+        cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]') .click({ force: true });
+        cy.get('[data-cy="skillActionsBtn"]') .click();
+        cy.get('[data-cy="tagSkillBtn"]').click();
+
+        cy.get('[data-cy="newTagInput"]').type('Two Thumbs Up!')
+        cy.get('[data-cy="addTagsButton"]').click()
+
+        cy.get('[data-cy="skillActionsBtn"]').click();
+
+        cy.snap('skill-tags-page')
+        // cy.snap('skills-actions-menu', '#tableActionsBtn_skillsTable > ul');
+
+        cy.get('[data-cy="skillActionsBtn"]').click();
+        cy.get('[data-cy="tagSkillBtn"]').click({ force: true });
+        cy.get('[data-cy="existingTagDropdown"]').click();
+        cy.snap('existing-tag-dropdown', '.modal-content');
+        cy.get('[data-cy="cancelAddTagsButton"]').click()
+
+        cy.get('[data-cy="skillActionsBtn"]').click();
+        cy.get('[data-cy="untagSkillBtn"]').click();
+        cy.get('[data-cy="existingTagDropdown"]').click();
+        cy.get('[data-cy="existingTagDropdown"] .vs__dropdown-option')
+          .eq(0)
+          .click()
+        cy.get('[data-cy="deleteTagsButton"]').click()
+    });
 
     it('Gen Project pages', () => {
         cy.viewport(1350, 1200);
