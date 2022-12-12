@@ -84,7 +84,7 @@ context('Generate Admin Screenshots', () => {
         cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]') .click({ force: true });
         cy.get('[data-cy="skillSelect-JurassicWorld"]') .click({ force: true });
         cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]') .click({ force: true });
-        cy.get('[data-cy="skillActionsBtn"]') .click();
+        cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="tagSkillBtn"]').click();
 
         cy.get('[data-cy="newTagInput"]').type('Two Thumbs Up!')
@@ -101,6 +101,9 @@ context('Generate Admin Screenshots', () => {
         cy.snap('existing-tag-dropdown', '.modal-content');
         cy.get('[data-cy="cancelAddTagsButton"]').click()
 
+        cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]') .click({ force: true });
+        cy.get('[data-cy="skillSelect-JurassicWorld"]') .click({ force: true });
+        cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]') .click({ force: true });
         cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="untagSkillBtn"]').click();
         cy.get('[data-cy="existingTagDropdown"]').click();
