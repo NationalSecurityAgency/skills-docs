@@ -81,29 +81,29 @@ context('Generate Admin Screenshots', () => {
 
         cy.visit('/administrator/projects/movies/subjects/Action')
 
-        cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]') .click({ force: true });
-        cy.get('[data-cy="skillSelect-JurassicWorld"]') .click({ force: true });
-        cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]') .click({ force: true });
+        cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]').click({ force: true });
+        cy.get('[data-cy="skillSelect-JurassicWorld"]').click({ force: true });
+        cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]').click({ force: true });
         cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="tagSkillBtn"]').click();
 
         cy.get('[data-cy="newTagInput"]').type('Two Thumbs Up!')
         cy.get('[data-cy="addTagsButton"]').click()
 
+        cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]').click({ force: true });
+        cy.get('[data-cy="skillSelect-JurassicWorld"]').click({ force: true });
+        cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]').click({ force: true });
         cy.get('[data-cy="skillActionsBtn"]').click();
+        cy.get('[data-cy="tagSkillBtn"]')
 
         cy.snap('skill-tags-page')
         // cy.snap('skills-actions-menu', '#tableActionsBtn_skillsTable > ul');
 
-        cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="tagSkillBtn"]').click({ force: true });
         cy.get('[data-cy="existingTagDropdown"]').click();
         cy.snap('existing-tag-dropdown', '.modal-content');
         cy.get('[data-cy="cancelAddTagsButton"]').click()
 
-        cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]') .click({ force: true });
-        cy.get('[data-cy="skillSelect-JurassicWorld"]') .click({ force: true });
-        cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]') .click({ force: true });
         cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="untagSkillBtn"]').click();
         cy.get('[data-cy="existingTagDropdown"]').click();
