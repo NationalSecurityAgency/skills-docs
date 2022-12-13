@@ -4,6 +4,21 @@ This page documents high-level release notes for <external-url label="SkillTree 
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+## 2.3.0 <release-date date="Dec. 2022" />
+- Ability to **split self-approval workload** between multiple Approvers or Admins
+  - An approver can be assigned to handle requests from specific users
+  - An approver can be assigned to approve specific skills
+  - An approver can be assigned to approve users that have a certain user tag and/or that tag starts with a certain value
+  - Ability to designate a fallback catch-all approver
+- **Custom skill tags** - a new lightweight facet to categorize and group skills
+  - Project admins can create custom tags and attach them to skills
+  - Skill tags are visualized in the Skills Display to give users consuming the training another way to comprehend, categorize and filter skills
+- Enhanced skill's ``Post Achievement Metrics`` to show a table for the users that continued to utilize the feature after achieving the skill
+  - Ability to toggle between users that ``Continued Using`` vs. ``Stopped Using``
+- Enhanced Dashboard's gamified training - updated descriptions, added new skills and created 6 new badges!
+- Added ability to clear all the skill events for a user
+  - The action effectively removes the user from that project and all of its views
+
 ## 2.2.3 <release-date date="Nov. 2022" />
 - Big Fixes
 
