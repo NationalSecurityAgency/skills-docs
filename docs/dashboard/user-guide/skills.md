@@ -29,17 +29,6 @@ To calculate the total points that completion of a particular skill will give a 
 Total Points = Point Increment * Occurrences to Completion
 :::
 
-## Copy Skill
-To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page. 
-This will open a new Skill dialog populated with the details of the selected copy-from Skill. The name and id will be prepended with ``Copy of`` which can be changed
-before the new Skill is saved. Saving this dialog will create a new Skill that falls within the same Subject as the copy-from Skill.
-
-::: tip
-Follow a 2-step process if you want to "copy" a skill into a different subject or group
-1. copy the skill
-2. Move the skill into another subject or group.
-:::
-
 ## Time Window
 
 Time Window is a powerful feature that limits awarding of points to a maximum number of occurrences within the configured time span. 
@@ -58,6 +47,22 @@ This means that it will take a user at a minimum, 6 days to complete this skill.
 This is just a fictitious example and values will depend on your gamification needs.  
 
 You can also disable the Time Window property of a Skill, which will force each event to be applied immediately (up to ``Occurrences to Completion``). To disable, uncheck the checkbox next to the Time Window property.   
+
+## Best Practices
+
+- "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition (for example, prevent users from spamming an action in one sitting to max out a Skill by setting a Time Window of 1-8 hours)
+- Help Url - configure the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) for the project and then enter a path relative to that root. It will then be an easy change if the location of help articles changes. You can also author external links into the description itself if more than one external resource needs to be linked to.
+
+## Copy Skill
+To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page.
+This will open a new Skill dialog populated with the details of the selected copy-from Skill. The name and id will be prepended with ``Copy of`` which can be changed
+before the new Skill is saved. Saving this dialog will create a new Skill that falls within the same Subject as the copy-from Skill.
+
+::: tip
+Follow a 2-step process if you want to "copy" a skill into a different subject or group
+1. copy the skill
+2. Move the skill into another subject or group.
+   :::
 
 ## Skills Versioning
 
@@ -239,8 +244,20 @@ on the Action button located on the top-right above the skills' table. Select th
 All the skills under a subject or group can be easily selected via the ``Select All`` button
 :::
 
-## Best Practices
+## Skill Tags  <since project="skills-service" version="2.3" />
 
-- "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition (for example, prevent users from spamming an action in one sitting to max out a Skill by setting a Time Window of 1-8 hours)
-- Help Url - configure the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) for the project and then enter a path relative to that root. It will then be an easy change if the location of help articles changes. You can also author external links into the description itself if more than one external resource needs to be linked to.   
+Skill tagging is a feature that allows administrators to add one or more custom "tags" to skills.
+Adding tags to skills can help to categorize and group skills, giving users another way to search or filter a particular set of skills.
+Skill tags are visualized in the Skills Display to give users consuming the training another way to comprehend, categorize and filter skills.
 
+To tag skills, navigate to the Skills page (``Project -> Subject``), then select skills to tag
+and click on the ``Action`` button located on the top-right above the skills' table.
+Select the ``Tag Skill`` button to initiate the process.  After a tag has been added, it can be
+removed by selecting the skills you would like to remove the tag from, then click on the ``Action`` button, and then ``Remove Tags``.
+
+::: tip
+Once a skill tag is created, you can easily reuse it to tag other skills by selecting it from the ``Existing Tag`` drop down menu.
+![Existing tag menu](../../screenshots/admin/existing-tag-dropdown.png)
+:::
+
+![Tag skills](../../screenshots/admin/skill-tags-page.png)

@@ -76,6 +76,42 @@ context('Generate Admin Screenshots', () => {
         cy.snap('page-project-self_report');
     });
 
+    it('Gen Skill Tags page', () => {
+        cy.viewport(1350, 1200);
+
+        cy.visit('/administrator/projects/movies/subjects/Action')
+
+        cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]') .click({ force: true });
+        cy.get('[data-cy="skillSelect-JurassicWorld"]') .click({ force: true });
+        cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]') .click({ force: true });
+        cy.get('[data-cy="skillActionsBtn"]').click();
+        cy.get('[data-cy="tagSkillBtn"]').click();
+
+        cy.get('[data-cy="newTagInput"]').type('Two Thumbs Up!')
+        cy.get('[data-cy="addTagsButton"]').click()
+
+        cy.get('[data-cy="skillActionsBtn"]').click();
+
+        cy.snap('skill-tags-page')
+        // cy.snap('skills-actions-menu', '#tableActionsBtn_skillsTable > ul');
+
+        cy.get('[data-cy="skillActionsBtn"]').click();
+        cy.get('[data-cy="tagSkillBtn"]').click({ force: true });
+        cy.get('[data-cy="existingTagDropdown"]').click();
+        cy.snap('existing-tag-dropdown', '.modal-content');
+        cy.get('[data-cy="cancelAddTagsButton"]').click()
+
+        cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]') .click({ force: true });
+        cy.get('[data-cy="skillSelect-JurassicWorld"]') .click({ force: true });
+        cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]') .click({ force: true });
+        cy.get('[data-cy="skillActionsBtn"]').click();
+        cy.get('[data-cy="untagSkillBtn"]').click();
+        cy.get('[data-cy="existingTagDropdown"]').click();
+        cy.get('[data-cy="existingTagDropdown"] .vs__dropdown-option')
+          .eq(0)
+          .click()
+        cy.get('[data-cy="deleteTagsButton"]').click()
+    });
 
     it('Gen Project pages', () => {
         cy.viewport(1350, 1200);
@@ -464,5 +500,54 @@ context('Generate Admin Screenshots', () => {
         cy.get('[data-cy="userCell_bob1@email.org"]')
         cy.snap('page-project-access');
     })
+
+    it('self-report split workload conf - fallback', () => {
+        cy.visit('/administrator/projects/movies/access')
+        cy.get('[data-cy="existingUserInput"]').type('b')
+        cy.contains('bob1@email.org').click()
+
+        cy.get('[data-cy="userRoleSelector"]').select('Approver');
+        cy.wait(2000)
+        cy.get('[data-cy="addUserBtn"]').click({force: true});
+        cy.get('[data-cy="userCell_bob1@email.org"]')
+
+        cy.visit('/administrator/projects/movies/self-report/configure')
+
+        const user1 = 'bob1@email.org'
+        // assign single fallback amd snap
+        cy.get(`[data-cy="workloadCell_${user1}"] [data-cy="fallbackSwitch"]`).click({force: true})
+        cy.snap('component-conf-approval-workload-fallback', '#mainContent2')
+
+        cy.get(`[data-cy="workloadCell_${user1}"] [data-cy="fallbackSwitch"]`).click({force: true})
+    })
+
+    it('self-report split workload conf - skills', () => {
+        cy.visit('/administrator/projects/movies/access')
+        cy.get('[data-cy="existingUserInput"]').type('b')
+        cy.contains('bob1@email.org').click()
+
+        cy.get('[data-cy="userRoleSelector"]').select('Approver');
+        cy.wait(2000)
+        cy.get('[data-cy="addUserBtn"]').click({force: true});
+        cy.get('[data-cy="userCell_bob1@email.org"]')
+
+        cy.visit('/administrator/projects/movies/self-report/configure')
+
+        const user2 = 'bill@email.org'
+        cy.get(`[data-cy="workloadCell_${user2}"] [data-cy="editApprovalBtn"]`).click()
+
+        cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="subjectSelector"]`).type('Hi');
+        cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="subjectSelectionItem-movies-History"]`).click()
+        cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="addSkillConfBtn"]`).should('be.enabled')
+        cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="addSkillConfBtn"]`).click()
+        cy.get('[data-cy="closeSkillsAddedAlertBtn"]').click()
+        cy.get('[data-cy="closeSkillsAddedAlertBtn"]').should('not.exist')
+
+        cy.snap('component-conf-approval-workload-skills', `[data-cy="expandedChild_${user2}"] .card:first`)
+
+        cy.get(`[data-cy="workloadCell_${user2}"] [data-cy="editApprovalBtn"]`).click()
+        cy.snap('component-conf-approval-workload-withSkillsAdded', '#mainContent2')
+    })
+
 
 })
