@@ -521,7 +521,7 @@ context('Generate Admin Screenshots', () => {
         cy.get(`[data-cy="workloadCell_${user1}"] [data-cy="fallbackSwitch"]`).click({force: true})
     })
 
-    it.only('Create self report skills', () => {
+    it('Create self report skills', () => {
         cy.viewport(1350, 1200);
 
         cy.visit('/administrator/projects/movies/subjects/Action/')

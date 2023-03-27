@@ -4,7 +4,7 @@ context('Generate Progress and Ranking Screenshots', () => {
 
   const displayWidth = 1200;
   beforeEach(() => {
-    cy.viewport(displayWidth, 400);
+    cy.viewport(displayWidth, 900);
     cy.login();
 
     cy.addToMyProjects('movies');
@@ -15,7 +15,7 @@ context('Generate Progress and Ranking Screenshots', () => {
     cy.visit('/progress-and-rankings/manage-my-projects')
     const tableSelector = '[data-cy="discoverProjectsTable"]';
     const rowSelector = `${tableSelector} tbody tr`;
-    cy.get(rowSelector).should('have.length', 2).as('cyRows');
+    cy.get(rowSelector).should('have.length', 3).as('cyRows');
     cy.get('@cyRows').eq(0).find('td').as('row2');
     cy.get('@row2').eq(1).find('[data-cy="removeBtn"]').click();
     cy.snap('page-progress-and-rankings-manage-my-projects');
@@ -28,6 +28,7 @@ context('Generate Progress and Ranking Screenshots', () => {
 
   it('Gen View Usage page', () => {
     cy.visit('/progress-and-rankings/my-usage')
+    cy.wait(5000)
     cy.snap('page-progress-and-rankings-view-my-usage');
   });
 
