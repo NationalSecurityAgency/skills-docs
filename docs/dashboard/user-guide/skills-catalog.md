@@ -1,4 +1,4 @@
-# Skills Catalog <since project="skills-service" version="1.9.0" />
+# Skills Catalog
 
 Skills Catalog is a feature that facilitates the re-use of skills across projects. 
 Skills can be exported to the Catalog which makes those skills available for re-use in other projects. 

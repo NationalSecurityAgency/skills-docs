@@ -47,7 +47,7 @@ To manage and view project-wide settings navigate to ``Project -> Settings``.
 
 The following project-level settings are available: 
 
-### Setting: Visibility <since project="skills-service" version="2.0.0" />
+### Setting: Visibility
 There are three possible values for the Project Visibility setting:
 
 1. Public Not Discoverable (default value)
@@ -71,7 +71,7 @@ Prior to 2.0.0 this setting was called Discoverable and applied only to a projec
 There may be a delay of up to several minutes after changing a project's visibility from or to ``Private Invite Only`` before the change is reflected for all users.
 :::
 
-### Setting: Project Description <since project="skills-service" version="2.1.0" />
+### Setting: Project Description <since project="skills-service" version="2.1" />
 There are two possible values for the Project Description setting:
 
 1. Only show Project Description in Manager My Projects (default value)
@@ -171,7 +171,7 @@ Each email recipient receives a unique project invite code, therefore distributi
 To invite users to join a ``Private Invite Only`` project, the SkillTree instance MUST be configured to support email. Please see [Email Server Settings](/dashboard/user-guide/settings.html#email-settings) for more information.
 :::
 
-##### Manage Invites Pending Acceptance <since project="skills-service" version="2.2.0" />
+##### Manage Invites Pending Acceptance <since project="skills-service" version="2.2" />
 Once Project Invites have been sent to users, any invites that have not yet been accepted or invites that have recently expired can be managed through the ```Invites Pending Acceptance``` table below the ```Invite Users``` form. 
 
 ![Project Access](./screenshots/Component-Private-Project-Pending.png)

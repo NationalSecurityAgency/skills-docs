@@ -66,7 +66,7 @@ You can customize the landing page by visiting ``Settings -> Preferences``:
 
 ![Preferences Page](../../screenshots/admin/page-settings-preference.png)
 
-## Badges Page <since project="skills-service" version="1.7.0" />
+## Badges Page
 
 You can view your earned and available badges by visiting the ``My Badges`` page from the ``My Projects`` page.
 

@@ -1,0 +1,154 @@
+# Quizzes and Surveys <since project="skills-service" version="2.4" />
+
+Quizzes and Surveys can be created and managed on the administrative side of the SkillTree Dashboard
+and seamlessly administered by associating them to [Skills](/dashboard/user-guide/self-reporting.html) or running them independently.
+
+- [Quiz](/dashboard/user-guide/quizzes-and-surveys.html#quiz) - a knowledge check composed of multiple questions with a passing requirement
+- [Survey](/dashboard/user-guide/quizzes-and-surveys.html#survey) - data collection technique utilizing one or more questions
+
+A Quiz/Survey association to an existing skill requires successful completion of that Quiz/Survey
+in order to earn the skill and its points. In the case of a quiz that serves as skill's knowledge check.
+On the other hand associating a survey is method to get feedback about that skill or collect some pieces of important
+data related to the skill.
+
+To view existing quizzes or surveys or to create a new Quiz or a Survey please navigate to `Quizzes and Surveys` page
+featured under the main Navigation on the administrative part of the Dashboard. 
+
+![Quizzes and Surveys Page Screenshot](../../screenshots/admin/page-quizzes.png)
+
+To create a new Quiz or a Survey please click on `Quiz/Survey+` button and the `New Quiz/Survey` form will be displayed. 
+
+![New Quiz Modal Screenshot](../../screenshots/admin/modal-new-quiz.png)
+
+``New Quiz/Survey`` form fields are: 
+
+| Field       | Explanation                                                                                                                                                                                                                              | 
+|:------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| Name        | The name of the quiz or the survey                                                                                                                                                                                                       |
+| Type        | Can either be `Quiz` or `Survey`; the type is *immutable* and can only be changed at the initial creation time.                                                                                                                          |
+| Description | A description will be visualized on a splash screen when a user starts a quiz or a survey. You can build a visually pleasing comprehensive description using SkillTree's [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) |
+
+::: warning Friendly Reminder
+The `Type` for a `Quiz` or a `Survey` must be selected at creation time and cannot be modified at a later time.
+:::
+
+::: tip
+Although the description is optional it is generally recommended to create one.
+Using [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) we encourage authoring visually pleasing
+descriptions.
+:::
+
+## Quiz
+
+A quiz is a knowledge check composed of multiple questions with a passing requirement. Quizzes can be associated to a skill 
+or can be executed independently. Associating a Quiz to an existing skill will require successful completion of that Quiz
+in order to earn the skill and its points. In this case this quiz serves as skill's knowledge check.
+
+Quizzes currently support two types of questions:
+- ``Single Choice`` - question will only have 1 correct answer 
+- ``Mulitple Choice`` - question has 2 or more correct choices; all correct choices must be selected to get credit for the question
+
+To administer a quiz click `Manage` button for that quiz on the `Quizzes and Surveys` page. 
+
+![Quiz Page Screenshot](../../screenshots/admin/page-quiz.png)
+
+To add a new question please click `Question +` button.
+
+![New Questions Modal Screenshot](../../screenshots/admin/modal-new-question.png)
+
+Question's text supports all the same features that [Description Editor](/dashboard/user-guide/rich-text-editor.html) currently affords which 
+includes a generous feature set including attaching or copy-and-pasting screenshots. 
+The two supported question's types and ``Single Choice`` and ``Mulitple Choice`` and are implicitly derived from the number of the selected correct answers.
+A single selected correct answer implies ``Single Choice`` question type and when more than one corrected answers selected then ``Mulitple Choice`` is used.
+::: tip
+When multiple correct answer are selected users will be required to properly identify all of those correct answers in
+order to receive the credit for the question
+:::
+
+::: tip
+Use the `Preview` button on the top left below the Quiz name in order to see what the quiz will look like to your users.
+:::
+
+### Quiz Settings
+
+A Quiz has number of customization parameters, to customize a quiz please navigate to ``Quizzes and Surveys -> Quiz -> Settings`` page.
+
+![Quiz Single Result Page Screenshot](../../screenshots/admin/page-quiz-settings.png)
+
+#### Setting: Passing Requirement
+
+This setting adjusts the minimum number of questions required to pass this quiz. By default, all questions have to be
+answered correctly in order to get the credit.  
+
+#### Setting: Maximum Number of Attempts
+
+By default, users have unlimited number of attempts to pass a quiz. You set maximum number of attempts to 1 or more. 
+
+## Survey
+
+A Survey is a data collection technique utilizing one or more questions. Surveys can be associated to a skill or can be
+executed independently. Associating a Survey to an existing skill will require completion of that Survey in order to
+earn the skill and its points. 
+When associated to a skill a survey is method to get feedback about that skill or collect some
+pieces of important data related to the skill. 
+
+Survey currently support three types of questions:
+- ``Single Choice`` - question will only allow a single choice to be selected
+- ``Mulitple Choice`` - one or more choices are required to be selected  
+- ``Text Input`` - a freeform answer text is required
+
+To administer a survey click `Manage` button for that survey on the `Quizzes and Surveys` page.
+
+![Quiz Page Screenshot](../../screenshots/admin/page-survey.png)
+
+To add a new question please click `Question +` button.
+
+![New Questions Modal Screenshot](../../screenshots/admin/modal-new-survey-question.png)
+
+Question's text supports all the same features that [Description Editor](/dashboard/user-guide/rich-text-editor.html) currently affords which
+includes a generous feature set including attaching or copy-and-pasting screenshots.
+Please use Answer's dropdown to select the type, currently available options are  ``Single Choice``, ``Mulitple Choice`` and ``Text Input``.
+
+::: tip
+Use the `Preview` button on the top left below the Survey name in order to see what the survey will look like to your users.
+:::
+
+## Results
+The results of users completing quizzes and surveys came be located on the Results page (``Quizzes and Surveys -> Quiz/Survey -> Results ```)
+
+![Quiz Results Page Screenshot](../../screenshots/admin/page-quiz-results.png)
+
+Each row is a single Quiz/Survey for a single user. Select run details button to the right of the user to view details of that particular Quiz/Survey run.
+
+![Quiz Single Result Page Screenshot](../../screenshots/admin/page-quiz-single-result.png)
+
+Quiz results will depict selected answer(s) and its correctness status. Survey result will simply display which results were selected. 
+
+## Skill Association
+
+A Quiz/Survey association to an existing skill requires successful completion of that Quiz/Survey
+in order to earn the skill and its points. In the case of a quiz that serves as skill's knowledge check.
+On the other hand associating a survey is method to get feedback about that skill or collect some pieces of important
+data related to the skill.
+
+To make a quiz-to-skill association when creating or editing a skill
+1. select ``Self Reporting`` checkbox
+1. then select ``Quiz/Survey``
+
+![New Skill Modal Screenshot](../../screenshots/admin/modal-new-skill_self-report-checked.png)
+
+To configure a Quiz-based or a Survey-based skill please select `Quiz/Survey` option and then use the drop-down to locate one of
+the available Quizzes or Surveys.
+
+![Quiz Skill Configuration Screenshot](../../screenshots/admin/component-quiz-skill.png)
+
+::: tip Useful Tips
+A Quiz or a Survey can be associated to more than one skill in one or more project(s). 
+:::
+
+## Access
+
+The Quiz/Survey Access page supports adding or removing Quiz Administrators. To add and remove project Administrators
+please navigate to ``Quiz/Survey -> Access`` page.
+
+![Quiz Access Page Screenshot](../../screenshots/admin/page-quiz-access.png)

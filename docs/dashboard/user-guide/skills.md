@@ -179,7 +179,7 @@ For a given user, if this was the last skill to be completed before a badge is a
 New skill will equate to extra points which in turn may shift points profile which then may technically place certain users outside of their currently earned level. 
 If so, those users will *NOT* lose their current level (per our overall strategy) but rather it will take them a bit longer to achieve the next level.  
 
-## Same Project Skill Reuse <since project="skills-service" version="1.12" />
+## Same Project Skill Reuse
 
 In-Project Skill Reuse is a feature that facilitates the reuse of skills within the same project. 
 A skill can be easily reused within another Subject or Skill Group. 
@@ -226,7 +226,7 @@ The Self-reporting "I did it" button is visualized for each reused skill in the 
 - Reused skills cannot be added to a badge; use the original skill instead
 - Removing the original skill will also delete all of its reused copies
 
-## Move Skills <since project="skills-service" version="2.0" />
+## Move Skills
 Move Skills is a feature that allows project administrators to move skills to other subjects or skill groups within the same project.
 When skills are moved, users' points are preserved for those skills and level-based achievements are 
 properly re-calculted for both origination and destination subject/group.
