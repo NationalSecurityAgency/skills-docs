@@ -7,11 +7,11 @@ and seamlessly administered by associating them to [Skills](/dashboard/user-guid
 - [Survey](/dashboard/user-guide/quizzes-and-surveys.html#survey) - data collection technique utilizing one or more questions
 
 A Quiz/Survey association to an existing skill requires successful completion of that Quiz/Survey
-in order to earn the skill and its points. In the case of a quiz that serves as skill's knowledge check.
+in order to earn the skill and its points. In the case of a quiz, then the quiz serves as the skill's knowledge check.
 On the other hand associating a survey is method to get feedback about that skill or collect some pieces of important
 data related to the skill.
 
-To view existing quizzes or surveys or to create a new Quiz or a Survey please navigate to `Quizzes and Surveys` page
+To view existing quizzes or surveys or to create a new Quiz or Survey please navigate to `Quizzes and Surveys` page
 featured under the main Navigation on the administrative part of the Dashboard. 
 
 ![Quizzes and Surveys Page Screenshot](../../screenshots/admin/page-quizzes.png)
@@ -34,7 +34,7 @@ The `Type` for a `Quiz` or a `Survey` must be selected at creation time and cann
 
 ::: tip
 Although the description is optional it is generally recommended to create one.
-Using [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) we encourage authoring visually pleasing
+Using the [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) we encourage authoring visually pleasing
 descriptions.
 :::
 
@@ -42,7 +42,7 @@ descriptions.
 
 A quiz is a knowledge check composed of multiple questions with a passing requirement. Quizzes can be associated to a skill 
 or can be executed independently. Associating a Quiz to an existing skill will require successful completion of that Quiz
-in order to earn the skill and its points. In this case this quiz serves as skill's knowledge check.
+in order to earn the skill and its points. In the case of a quiz, then the quiz serves as the skill's knowledge check.
 
 Quizzes currently support two types of questions:
 - ``Single Choice`` - question will only have 1 correct answer 
@@ -56,12 +56,12 @@ To add a new question please click `Question +` button.
 
 ![New Questions Modal Screenshot](../../screenshots/admin/modal-new-question.png)
 
-Question's text supports all the same features that [Description Editor](/dashboard/user-guide/rich-text-editor.html) currently affords which 
+The Question's text supports all the same features that the [Description Editor](/dashboard/user-guide/rich-text-editor.html) currently affords which 
 includes a generous feature set including attaching or copy-and-pasting screenshots. 
 The two supported question's types and ``Single Choice`` and ``Mulitple Choice`` and are implicitly derived from the number of the selected correct answers.
 A single selected correct answer implies ``Single Choice`` question type and when more than one corrected answers selected then ``Mulitple Choice`` is used.
 ::: tip
-When multiple correct answer are selected users will be required to properly identify all of those correct answers in
+When multiple correct answers are selected users will be required to properly identify all of those correct answers in
 order to receive the credit for the question
 :::
 
@@ -71,7 +71,7 @@ Use the `Preview` button on the top left below the Quiz name in order to see wha
 
 ### Quiz Settings
 
-A Quiz has number of customization parameters, to customize a quiz please navigate to ``Quizzes and Surveys -> Quiz -> Settings`` page.
+A Quiz has a number of customization parameters, to customize a quiz please navigate to ``Quizzes and Surveys -> Quiz -> Settings`` page.
 
 ![Quiz Single Result Page Screenshot](../../screenshots/admin/page-quiz-settings.png)
 
@@ -82,32 +82,32 @@ answered correctly in order to get the credit.
 
 #### Setting: Maximum Number of Attempts
 
-By default, users have unlimited number of attempts to pass a quiz. You set maximum number of attempts to 1 or more. 
+By default, users have an unlimited number of attempts to pass a quiz. You can set the maximum number of attempts to 1 or more. 
 
 ## Survey
 
 A Survey is a data collection technique utilizing one or more questions. Surveys can be associated to a skill or can be
 executed independently. Associating a Survey to an existing skill will require completion of that Survey in order to
 earn the skill and its points. 
-When associated to a skill a survey is method to get feedback about that skill or collect some
+When associated to a skill, the survey is a method to gather feedback about that skill or collect some
 pieces of important data related to the skill. 
 
-Survey currently support three types of questions:
+A Survey currently supports three types of questions:
 - ``Single Choice`` - question will only allow a single choice to be selected
 - ``Mulitple Choice`` - one or more choices are required to be selected  
 - ``Text Input`` - a freeform answer text is required
 
-To administer a survey click `Manage` button for that survey on the `Quizzes and Surveys` page.
+To administer a survey click the `Manage` button for that survey on the `Quizzes and Surveys` page.
 
 ![Quiz Page Screenshot](../../screenshots/admin/page-survey.png)
 
-To add a new question please click `Question +` button.
+To add a new question please click the `Question +` button.
 
 ![New Questions Modal Screenshot](../../screenshots/admin/modal-new-survey-question.png)
 
-Question's text supports all the same features that [Description Editor](/dashboard/user-guide/rich-text-editor.html) currently affords which
+The Question's text supports all the same features that the [Description Editor](/dashboard/user-guide/rich-text-editor.html) currently affords which
 includes a generous feature set including attaching or copy-and-pasting screenshots.
-Please use Answer's dropdown to select the type, currently available options are  ``Single Choice``, ``Mulitple Choice`` and ``Text Input``.
+Please use the Answer's dropdown to select the type, currently available options are  ``Single Choice``, ``Mulitple Choice`` and ``Text Input``.
 
 ::: tip
 Use the `Preview` button on the top left below the Survey name in order to see what the survey will look like to your users.
@@ -118,16 +118,16 @@ The results of users completing quizzes and surveys came be located on the Resul
 
 ![Quiz Results Page Screenshot](../../screenshots/admin/page-quiz-results.png)
 
-Each row is a single Quiz/Survey for a single user. Select run details button to the right of the user to view details of that particular Quiz/Survey run.
+Each row represents a single Quiz/Survey for a single user. Select the run details button to the right of the user to view details of that particular Quiz/Survey run.
 
 ![Quiz Single Result Page Screenshot](../../screenshots/admin/page-quiz-single-result.png)
 
-Quiz results will depict selected answer(s) and its correctness status. Survey result will simply display which results were selected. 
+Quiz results will depict selected answer(s) and its correctness status. Survey results will simply display which results were selected. 
 
 ## Skill Association
 
 A Quiz/Survey association to an existing skill requires successful completion of that Quiz/Survey
-in order to earn the skill and its points. In the case of a quiz that serves as skill's knowledge check.
+in order to earn the skill and its points. In the case of a quiz, then the quiz serves as the skill's knowledge check.
 On the other hand associating a survey is method to get feedback about that skill or collect some pieces of important
 data related to the skill.
 
@@ -148,7 +148,7 @@ A Quiz or a Survey can be associated to more than one skill in one or more proje
 
 ## Access
 
-The Quiz/Survey Access page supports adding or removing Quiz Administrators. To add and remove project Administrators
+The Quiz/Survey Access page supports adding or removing Quiz Administrators. To add and remove Administrators
 please navigate to ``Quiz/Survey -> Access`` page.
 
 ![Quiz Access Page Screenshot](../../screenshots/admin/page-quiz-access.png)

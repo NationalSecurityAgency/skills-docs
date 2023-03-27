@@ -7,8 +7,8 @@ Skills that have been configured with Self Reporting expose a button allowing us
 There are four ``Self report`` types available:  
 1. Honor System - points are awarded immediately 
 1. [Approval Queue](/dashboard/user-guide/self-reporting.html#approval-queue) - request goes into the project's approval queue; project administrators can approve or deny requests.  Note When choosing Approval Queue, you may also choose to require users to submit a justification when self-reporting this skill by selecting the 'Justification Required' check box.
-1. [Quiz](/dashboard/user-guide/quizzes-and-surveys.html) - a knowledge check composed of multiple questions with a passing requirement; association a Quiz requires successful passage of that Quiz in order to earn the skill and its points
-1. [Survey](/dashboard/user-guide/quizzes-and-surveys.html) - a method to get feedback about that skill or collect information related to the skill; association a Survey requires completion of that Survey before skill and its points are awarded
+1. [Quiz](/dashboard/user-guide/quizzes-and-surveys.html) - a knowledge check composed of multiple questions with a passing requirement; association of a Quiz requires successful passage of that Quiz in order to earn the skill and its points
+1. [Survey](/dashboard/user-guide/quizzes-and-surveys.html) - a method to get feedback about that skill or collect information related to the skill; association of a Survey requires completion of that Survey before skill and its points are awarded
 
 ::: tip 
 Project administrators can craft training profiles consisting of:
@@ -48,7 +48,7 @@ earn the skill and its points
 ## Skills Display
 
 Once Self Reporting is enabled for a skill, users will see a button on the Skills Display that will allow them to report the completion of that skill.
-Button's label will depend on the Self Reporting type, below is an example when the ``Approval Queue`` type was configured.
+The button's label will depend on the Self Reporting type, below is an example when the ``Approval Queue`` type was configured.
 
 ![Skills with Self Reporting](../../screenshots/progress-and-ranking/client-display-skills-selfReport.png)
 
