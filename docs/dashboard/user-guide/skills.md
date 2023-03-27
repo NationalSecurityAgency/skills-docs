@@ -179,7 +179,7 @@ For a given user, if this was the last skill to be completed before a badge is a
 New skill will equate to extra points which in turn may shift points profile which then may technically place certain users outside of their currently earned level. 
 If so, those users will *NOT* lose their current level (per our overall strategy) but rather it will take them a bit longer to achieve the next level.  
 
-## Same Project Skill Reuse <since project="skills-service" version="1.12" />
+## Same Project Skill Reuse
 
 In-Project Skill Reuse is a feature that facilitates the reuse of skills within the same project. 
 A skill can be easily reused within another Subject or Skill Group. 
@@ -219,14 +219,16 @@ When a self-reported skill occurrence is reported to the reused copy then the re
 From there on the flow is identical to any skill occurrence that is being reported to the original skill and for every reused instance the occurrence is queued up to be propagated
 to that reused skills. The queue is handled in an asynchronous manner so there is a small delay before the skill occurrence are reflected in the reused skills.
 
-The Self-reporting "I did it" button is visualized for each reused skill in the Skills Display and Progress and Rankings views.
+The Self-reporting `request points` button is visualized for each reused skill in the ``Skills Display`` and Progress and Rankings views.
+Reused skills support all the self-reporting types (`Honor System`, `Approval Queue`, `Quiz`, and `Survey`),
+to learn more please visit the [Self Reporting](/dashboard/user-guide/self-reporting.html) section.
 
 ### Other Considerations
 - Skills with dependencies can NOT be reused. Reused skills can NOT be added as a dependency.
 - Reused skills cannot be added to a badge; use the original skill instead
 - Removing the original skill will also delete all of its reused copies
 
-## Move Skills <since project="skills-service" version="2.0" />
+## Move Skills
 Move Skills is a feature that allows project administrators to move skills to other subjects or skill groups within the same project.
 When skills are moved, users' points are preserved for those skills and level-based achievements are 
 properly re-calculted for both origination and destination subject/group.

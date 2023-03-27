@@ -1,4 +1,4 @@
-# Skill Groups <since project="skills-service" version="1.8.0" />
+# Skill Groups
 
 
 Skill Groups is a way to group/organize skills under a subject. 

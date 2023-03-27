@@ -4,6 +4,26 @@ This page documents high-level release notes for <external-url label="SkillTree 
 
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
 
+## 2.4.0 <release-date date="March. 2022" />
+- Added ability to create and manage [Quizzes and Surveys](/dashboard/user-guide/quizzes-and-surveys.html) and seamlessly administer by associating to the Skills or by running independently
+  - Association of a `Quiz` or a `Survey` to an existing skill requires successful completion of that Quiz/Survey in order to earn the skill and its points
+  - `Quiz` supports _Single Choice_ and _Multiple Choice_ questions
+  - `Survey` supports _Single Choice_, _Multiple Choice_ and _Text Input_ questions
+  - A `Quiz` supports the following configurations
+    - Number of questions required to pass a quiz
+    - Maximum number of attempts
+  - Quizzes and Surveys seamlessly integrate with the majority of SkillTree's existing features including Skills Catalog and Badges
+- Using the [Description Editor](/dashboard/user-guide/rich-text-editor.html) added ability to attach files to descriptions including Subjects, Skills and Badges
+  - Upload is only allowed for the supported file types which by default includes `.pdf`, `.xlsx`, `.docx`, and `.pptx` extensions
+- Added ability to change the font size in the [Description Editor](/dashboard/user-guide/rich-text-editor.html)
+- Added ability to attach documents and screenshots with a self-report approval request
+- Enhanced Project's Skills Metrics to display Skills Tags and to allow filtering by Skill Tags
+- Added ability to display user-tag-based metrics on subject and skill pages
+- Implemented extra level of resiliency to preserve skill/badge/project/subject attributes (ex. description) by utilizing Browser's IndexedDB storage
+- Added `Navigate to the top` button that allows users to easily scroll to the top of a lengthy page
+- On the badge page, added `Live` status and, if applicable, a `Go Live` button
+
+
 ## 2.3.0 <release-date date="Dec. 2022" />
 - Ability to **split self-approval workload** between multiple Approvers or Admins
   - An approver can be assigned to handle requests from specific users

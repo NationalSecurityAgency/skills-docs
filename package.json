@@ -14,7 +14,8 @@
     "serve": "npm run docs:dev",
     "wait:skills-service": "npx wait-on -t 160000 http://localhost:8080/public/isAlive",
     "cy:open": "cypress open --env updateSnapshots=true",
-    "cy:run": "cypress run --env updateSnapshots=true"
+    "cy:run": "cypress run --env updateSnapshots=true",
+    "cy:run:single": "cypress run --env updateSnapshots=true --spec \"cypress/integration/admin.js\""
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.3",
