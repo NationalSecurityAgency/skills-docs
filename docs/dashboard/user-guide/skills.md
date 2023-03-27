@@ -219,7 +219,9 @@ When a self-reported skill occurrence is reported to the reused copy then the re
 From there on the flow is identical to any skill occurrence that is being reported to the original skill and for every reused instance the occurrence is queued up to be propagated
 to that reused skills. The queue is handled in an asynchronous manner so there is a small delay before the skill occurrence are reflected in the reused skills.
 
-The Self-reporting "I did it" button is visualized for each reused skill in the Skills Display and Progress and Rankings views.
+The Self-reporting `request points` button is visualized for each reused skill in the ``Skills Display`` and Progress and Rankings views.
+Reused skills support all the self-reporting types (`Honor System`, `Approval Queue`, `Quiz`, and `Survey`),
+to learn more please visit the [Self Reporting](/dashboard/user-guide/self-reporting.html) section.
 
 ### Other Considerations
 - Skills with dependencies can NOT be reused. Reused skills can NOT be added as a dependency.

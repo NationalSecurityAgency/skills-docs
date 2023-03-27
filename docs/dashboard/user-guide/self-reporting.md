@@ -47,7 +47,8 @@ earn the skill and its points
 
 ## Skills Display
 
-Once Self Reporting is enabled for a skill, users will see an ``I did it`` button on the Skills Display that will allow them to report the completion of that skill 
+Once Self Reporting is enabled for a skill, users will see a button on the Skills Display that will allow them to report the completion of that skill.
+Button's label will depend on the Self Reporting type, below is an example when the ``Approval Queue`` type was configured.
 
 ![Skills with Self Reporting](../../screenshots/progress-and-ranking/client-display-skills-selfReport.png)
 
@@ -62,7 +63,7 @@ Alternatively you can have only some skills configured with Self Reporting or no
 
 If a skill is configured with Self Reporting type of the ``Approval Queue`` then points will not be awarded right away but rather go
 through the simple approval workflow:
-1. User click ``I did it`` button and requests points
+1. User clicks ``Begin Request`` button and requests points
 1. Request appears on the project's Self Report page (see the Screenshot below)
 1. Project administrator approves or reject requests
 

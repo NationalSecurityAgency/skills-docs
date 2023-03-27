@@ -66,11 +66,12 @@ context('Generate Progress and Ranking Screenshots', () => {
   });
 
   it('Gen Self Report Skill', () => {
+    cy.viewport(1100, 1000);
     cy.visit('/progress-and-rankings/projects/movies?classicSkillsDisplay=true');
     cy.clientDisplay(true).contains('My Level');
     cy.cdClickSubj(3, 'Family');
     cy.clientDisplay().contains('Finding Nemo').click();
-    cy.clientDisplay().find('[data-cy="selfReportBtn"]');
+    cy.clientDisplay().find('[data-cy="requestApprovalBtn"]');
     cy.snap('client-display-skills-selfReport', 'iframe');
   })
 

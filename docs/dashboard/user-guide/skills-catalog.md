@@ -123,7 +123,9 @@ The one exception to this restriction is self-reported skills. Self-reported ski
 When a self-reported skill occurrence is reported to the imported copy then the request is simply routed to the originally-declared skill.
 From there on the flow is identical to any skill occurrence that is being reported to the original skill.
 
-The Self-reporting ``I did it`` button is visualized for each imported skill in the ``Skills Display`` and Progress and Rankings views. 
+The Self-reporting `request points` button is visualized for each imported skill in the ``Skills Display`` and Progress and Rankings views.
+Skills Catalog supports all the self-reporting types (`Honor System`, `Approval Queue`, `Quiz`, and `Survey`), 
+to learn more please visit the [Self Reporting](/dashboard/user-guide/self-reporting.html) section.
 
 ### Catalog and Skills Dependencies
 
