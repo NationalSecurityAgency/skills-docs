@@ -1,6 +1,6 @@
 # Overview
 
-SkillTree's produces two types of artifacts, here are the release notes for each: 
+SkillTree produces two types of artifacts, here are the release notes for each: 
 
 - [Dashboard and API](/release-notes/skills-service.html)
 - [Client Libraries](/release-notes/skills-client.html)

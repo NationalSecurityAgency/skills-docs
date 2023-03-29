@@ -26,8 +26,8 @@ The SkillTree Dashboard provides these main functions:
 
 ## Building Training Profile
 
-Whether you are using SkillTree in a Learning Management System (LMS) type of fashion or integrating gamification
-training direction into a web application,
+Whether you are using SkillTree in a Learning Management System (LMS) fashion or integrating gamification
+training directly into a web application,
 you will first need to build a training profile. The initial step is to create a brand-new project. Projects are
 composed of Subjects which are made of Skills, and a single skill defines a training unit within the gamification
 framework. 

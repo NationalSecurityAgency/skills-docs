@@ -3,7 +3,7 @@
 SkillTree is a micro-learning gamification platform that supports multiple training and integration options which
 enables organizations to use SkillTree as an `All in one training platform.` It is an innovative approach to implementing self-directed gamified training that can be
 
-- all driven from SkillTree's dashboard in a Learning Management System (LMS) type of fashion, **AND/OR**
+- all driven from SkillTree's dashboard in a Learning Management System (LMS) fashion, **AND/OR**
 - added to an **existing/new web-based application** by directly embedding SkillTree's Skills Display using its client libraries!
 
 ::: tip Fun Fact
@@ -55,7 +55,7 @@ natively consumed within those applications.
 
 Want to know what these User Interfaces look like? Take a look at the [Screenshots](/overview/#screenshots) section. 
 
-To learn about SkillTree Dashboard please visit the [Dashboard User Guide](/dashboard/user-guide/) and to learn about
+To learn about the SkillTree Dashboard please visit the [Dashboard User Guide](/dashboard/user-guide/) and to learn about
 SkillTree's client libraries that enable rapid training integration into your own web application please visit
 the [Integration Guide](/skills-client/) 
 
@@ -64,7 +64,7 @@ the [Integration Guide](/skills-client/)
 SkillTree Platform enables a number of gamified features when building out a training profile but here is a quick sample
 to give you a taste: 
 
-- **Ability to create 100s if training profiles** - a training profile is called a Project
+- **Ability to create 100s of training profiles** - a training profile is called a Project
 - **Level up!** - users progress and earn levels in a Project
 - **Arrange skills under Subjects** - a way to group and organize skill definitions within a gameified training profile.
 - **Badges** - further reward your users by providing these prestigious symbols
@@ -79,8 +79,8 @@ We hope this sparked your interest so please visit [Dashboard User Guide](/dashb
 
 ## Native Integration
 
-Although there is a number of other Learning Management Systems, not many (if any) offer
-an ability to integrate a gamified training into an existing/new web-application.
+Although there are a number of other Learning Management Systems, few (if any) offer
+the ability to integrate a gamified training into an existing/new web-application.
 
 To facilitate rapid application incorporation, the platform provides the following services, components, and libraries:
 - **Display Libraries:** Pluggable and fully interactive user skill and ranking visualization
