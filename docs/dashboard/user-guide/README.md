@@ -3,10 +3,8 @@
 At the heart of the SkillTree platform is the SkillTree dashboard - a web-based user interface<conditional visibilityFlag="skillTreeServiceUrl"> ( <service-url /> )</conditional>. 
 The SkillTree Dashboard provides these main functions: 
 1. Enables creation and management of an applications' [training profile](/dashboard/user-guide/#building-training-profile)
-1. Provides corporate visibility of application expertise and offers metrics and various visualizations.  
-
-
-![Skills Platform Overview](../../overview/diagrams/SkillTreePlatformOverview.png)
+1. Provides corporate visibility of application expertise and offers metrics and various visualizations.
+1. Enables trainees to take the training by completing skills, gaining points, achieving badges, passing quizzes, completing surveys and much, much more... 
 
 <conditional visibilityFlag="skillTreeServiceUrl" :visibility-value="false">
 
@@ -28,9 +26,11 @@ The SkillTree Dashboard provides these main functions:
 
 ## Building Training Profile
 
-When integrating gamification training into your application, you will first need to build a training profile. 
-The first step is to create a brand-new project. 
-Projects are composed of Subjects which are made of Skills, and a single skill defines a training unit within the gamification framework. 
+Whether you are using SkillTree in a Learning Management System (LMS) type of fashion or integrating gamification
+training direction into a web application,
+you will first need to build a training profile. The initial step is to create a brand-new project. Projects are
+composed of Subjects which are made of Skills, and a single skill defines a training unit within the gamification
+framework. 
 
 Consider the following items when designing your training profile:
 
@@ -45,6 +45,11 @@ Consider the following items when designing your training profile:
    - only self-reported skills OR
    - a mix of self-reported skills and skills that are reported programmatically OR
    - a project could have no self-reported skills at all
+1. [Quiz-Based Knowledge Checks](/dashboard/user-guide/quizzes-and-surveys.html): A quiz is a knowledge check composed of multiple questions with a passing requirement
+   - Associating a Quiz to a skill will require successful completion of that Quiz in order to earn the skill and its points.
+1. [Surveys](/dashboard/user-guide/quizzes-and-surveys.html): A Survey is a data collection technique utilizing one or more questions. 
+   - Associating a Survey to an existing skill will require completion of that Survey in order to earn the skill and its points.
+   - When associated to a skill, the survey is a method to gather feedback about that skill or collect some pieces of important data related to the skill.
 1. [Levels](/dashboard/user-guide/levels.html): Levels are users' achievement path - the overall goal of the training profile is to encourage users to achieve the highest level. 
    - Levels are tracked for the entire project as well as for each subject which provides users many ways to progress forward, as well as frequent positive reinforcement opportunities.
    - The Skills dashboard supports two ways to manage levels: Percentage Based (default) and Point based. If you are not sure which to go with stick with the default.    
@@ -54,12 +59,6 @@ Consider the following items when designing your training profile:
 1. [Dependencies](/dashboard/user-guide/dependencies.html): Dependencies add another facet to the overall gamification training profile, which forces users to complete skills in a specified order.
 1. [Cross-Project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies): Cross-Project Dependencies facilitate cross-application training and enable users to become domain experts across several applications. 
    - These dependencies are critical when actions are required to be performed in more than one tool in order to complete a task.
-
-::: tip
-Consider creating skills that won't be reported automatically but rather will require users to contact the application owner who will then 
-[Manually add the Skill](/dashboard/user-guide/skills.html#manually-add-skill-event). Why would you do that? If you want to encourage
-customer interaction such as collecting success stories. In fact ``Report A Success Story`` can be a skill of its own!
-:::
 
 ## Browser Support
 

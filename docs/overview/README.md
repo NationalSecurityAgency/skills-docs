@@ -1,7 +1,10 @@
 # Overview
 
-SkillTree is a micro-learning gamification platform. 
-It is an innovative approach to adding *self-directed* gamified training to **an existing web-based application** (or a new application if you are building one now)!
+SkillTree is a micro-learning gamification platform that supports multiple training and integration options which
+enables organizations to use SkillTree as an `All in one training platform.` It is an innovative approach to implementing self-directed gamified training that can be
+
+- all driven from SkillTree's dashboard in a Learning Management System (LMS) type of fashion, **AND/OR**
+- added to an **existing/new web-based application** by directly embedding SkillTree's Skills Display using its client libraries!
 
 ::: tip Fun Fact
 We here at SkillTree believe that a Gamification based training significantly simplifies the training process while making the process more enjoyable for the user community.
@@ -14,7 +17,7 @@ Gamification training empower users to master features in a fun a way.
 
 All of that is great, but adding gamification training to an application is extremely expensive and quite time consuming. :drum: roll... here comes the SkillTree Micro-Learning Gamification Platform!!
 
-SkillTree Platform enables system owners and developers to:
+SkillTree Platform enables trainers, system owners and developers to:
 - Implement gamification training with minimal time and effort (we are talking days!)
 - It provides consistent and innovative solution and it takes the guesswork and maintenance out of implementing gamified user training.
 - SkillTree is Free and Open Source and is released under [Apache 2 License](/overview/#license)
@@ -25,58 +28,80 @@ Want to know what SkillTree Looks like? Take a look at the [Screenshots](/overvi
 
 ## What is it?
 
-The SkillTree platform consists of 2 major components: the dashboard and the JS client libraries.
-Using the SkillTree Dashboard, a web-based user-friendly interface, integrators create and manage a gamified training profile.
-Then the JS display libraries are integrated into your existing web-based application which provides your users a fully interactive user ranking and progress display.
-The last step is to instrument your web-based application to report learning events to the SkillTree centralized service - the provided JS libraries make this process very simple.
+At the heart of the platform is the SkillTree Dashboard that acts as a Learning Management System (LMS) and enables 
+to directly embedding SkillTree's Skills Display into one more existing/new web applications.
+SkillTree Platform supports both of these use-cases under a single installation of a SkillTree Dashboard - 
+an organization can author multiple training profiles where some of these trainings are taken directly in the SkillTree's 
+Dashboard and some are embedded into home-grown applications and taken/followed within those applications. 
 
-![Integrated Application](./diagrams/SkillTree-MajorComponents.jpg)
+![Integrated Application](./diagrams/SkillTree-PlatformOverview.jpg)
+
+A *single* installation of the SkillTree Dashboard supports both use-cases where multiple training profiles are created
+and updated using a web-based user-friendly interface: 
+- Learning Management System (LMS) using SkillTree
+  - Create and manage multiple gamified training profile using the SkillTree Dashboard
+  - Trainees utilize SkillTree's Progress & Ranking displays to consume the training by completing skills, gaining points, achieving badges, passing quizzes, completing surveys and much, much more...
+- Directly embedding SkillTree's Skills Display into one or more existing/new web applications
+  - Using the SkillTree Dashboard, integrators create and manage a gamified training profile.
+  - Then the JS display libraries are integrated into your existing web-based application which provides your users a fully interactive user ranking and progress display.
+  - The last step is to instrument your web-based application to report learning events to the SkillTree centralized service - the provided JS libraries make this process very simple.
+
+::: tip All in one training platform
+With SkillTree's centralized platform you don't have to compromise by utilizing just one strategy.
+An organization can easily run a single SkillTree platform instance that supports many training profiles where some
+will fall under the Learning Management System (LMS) training and others are embededed into home-grown applications and
+natively consumed within those applications.  
+:::
 
 Want to know what these User Interfaces look like? Take a look at the [Screenshots](/overview/#screenshots) section. 
 
-::: tip
-SkillTree offer very low barrier to entry for adding Gamified training to a web-based application
-:::
+To learn about SkillTree Dashboard please visit the [Dashboard User Guide](/dashboard/user-guide/) and to learn about
+SkillTree's client libraries that enable rapid training integration into your own web application please visit
+the [Integration Guide](/skills-client/) 
 
-To facilitate rapid application incorporation, the platform provides the following services, components, and libraries: 
+## Features
 
-- **Dashboard and Service:** Simple management through a centralized Web-Based User Interface and data API service. 
-  - *Effective and visual skill definition management* - create and manage things like subjects, skills, levels, badges, and dependencies
-  - *Comprehensive Visualization* - through sophisticated analytics, enables unmatched corporate visibility of application expertise; provides an additional facet of application usage visibility (ex. identifying expert users)
+SkillTree Platform enables a number of gamified features when building out a training profile but here is a quick sample
+to give you a taste: 
+
+- **Ability to create 100s if training profiles** - a training profile is called a Project
+- **Level up!** - users progress and earn levels in a Project
+- **Arrange skills under Subjects** - a way to group and organize skill definitions within a gameified training profile.
+- **Badges** - further reward your users by providing these prestigious symbols
+- **Self Reporting** - users can self report completion with mutliple handling strategies including Approval Queues and an Honor System
+- **Skills Catalog** - skills can be exported to the Catalog which makes those skills available for re-use in other projects
+- **Knowledge Checks** - requires successful passage of a quiz in order to earn the skill and its points
+- **Surveys** - method to get feedback about that skill or collect some pieces of important data related to the skill
+- **Learning Path** - lay out a learning path for users to complete skills in a specified order
+- **Metrics** - corporate visibility of expertise and knowledge gaps
+
+We hope this sparked your interest so please visit [Dashboard User Guide](/dashboard/user-guide/) to learn more. 
+
+## Native Integration
+
+Although there is a number of other Learning Management Systems, not many (if any) offer
+an ability to integrate a gamified training into an existing/new web-application.
+
+To facilitate rapid application incorporation, the platform provides the following services, components, and libraries:
 - **Display Libraries:** Pluggable and fully interactive user skill and ranking visualization
-  - Customize and use the display component in your application within minutes. 
-  - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
+    - Customize and use the display component in your application within minutes.
+    - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
 - **Skill Event Reporting Libraries:** Easily integrate your application by reporting skill events to the centralized service.
-  - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
-
-![Skills Platform Overview](./diagrams/SkillTreePlatformOverview.png)
+    - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
 
 ::: tip Skills Display  
 Please note that SkillTree has taken an innovative approach by providing a pluggable and fully interactive user progress and ranking visualization (named Skills Display)
 and therefore does **not** support a public API to build your own progress and ranking displays.
-::: 
+:::
 
 This approach delivers a number of benefits to a SkillTree integrator:
 - Resources and cost savings because there is no need for you to implement, test and maintain your own gamified progress and ranking views
 - Ability to rapidly integrate SkillTree into an existing web application
 - SkillTree continuously improves the ranking/progress views and adds new features to these display. Integrators can take advantage of these improvements by simply upgrading.
 
-## Who is it for?
+Please visit the [Integration Guide](/skills-client/) to learn more.
 
-Any application with numerous features could benefit from in-context training using this gamfication strategy. 
-
-With that said, the SkillTree platform provides substantial benefits in these scenarios:
-
-1. Application with many complex and sophisticated features. Training is time consuming, complicated and expensive. You can utilize SkillTree to:
-   - Enable users to Quickly learn new features and effectively master advanced features. 
-   - Improve training recall through continued user engagement and required repetition.  
-   - Reduce training sessions - less support costs. Continued user engagement in application training promotes local experts.
-1. Workforce utilizes multiple home-grown tools to accomplish their jobs. You can use SkillTree to:
-   - Provide cross-application and cross-org training - strongly encourages user engagement to become domain and application experts.
-   - [Cross-application dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) teach users cross-domain workflow skills
-   - [Global Badges](/dashboard/user-guide/badges.html#global-badges) expand training across project boundaries     
-
-## Benefits
+### Integration Benefits
 
 Gamification is a proven training strategy, using the SkillTree platform yields numerous benefits: 
 
@@ -125,12 +150,6 @@ the <external-url label="SkillTree Skills-Service Github page" url="https://gith
 In the event that any of the libraries we depend on for User Interface components fail to meet accessibility standards, we evaluate whether accessibility
 fixes are on the near-term development roadmap for those plugins or replace them with equivalents that address accessibility concerns.
 
-## Browser Support
-
-SkillTree is supported on all major browsers since the following versions:
-
-<browser-support />
-
 ## License
 
 SkillTree platform is released under Apache 2 license.  
@@ -176,6 +195,11 @@ these prestigious symbols. Badges are a collection of skills and when all of the
 earned.
 Screenshots below demonstrates dashboard's page to create and manage badges:
 ![SkillsTree Dashboard Badges](../screenshots/admin/page-badges.png)
+
+A quiz is a knowledge check composed of multiple questions with a passing requirement. Quizzes can be associated to a
+skill or can be executed independently. Associating a Quiz to an existing skill will require successful completion of
+that Quiz in order to earn the skill and its points. The screenshot below shows the management of a quiz in the dashboard:
+![SkillsTree Quiz Screenshot](../screenshots/admin/page-quiz.png)
 
 Levels are users' achievement path - the overall goal of the gameified training profile is to encourage users to achieve
 the highest level. Levels are tracked for the entire project as well as for each subject which provides users many ways
@@ -243,6 +267,13 @@ green indicates completion and blue progress:
 ------------------------
 Same display as before but with expanded Skill Details:
 ![Client Display Subject Expanded Skills Page](../screenshots/progress-and-ranking/client-display-subject-expandedSkills.png)
+
+------------------------
+------------------------
+A quiz is a knowledge check composed of multiple questions with a passing requirement. Quizzes can be associated to a
+skill. Associating a Quiz to an existing skill will require successful completion of
+that Quiz in order to earn the skill and its points. The screenshot below shows user taking a simple 2-question quiz:
+![Client Display Quiz Run Screenshot](../screenshots/progress-and-ranking/client-display-quiz-run.png)
 
 ------------------------
 ------------------------

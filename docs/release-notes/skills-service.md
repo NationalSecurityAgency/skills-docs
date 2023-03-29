@@ -1,8 +1,12 @@
-# Skills Service Release Notes
+# Dashboard and API Release Notes
 
 This page documents high-level release notes for <external-url label="SkillTree Centralized Service" url="https://github.com/NationalSecurityAgency/skills-service" /> which encompasses the dashboard and API. 
 
+<conditional visibilityFlag="showInstallGuide">
+
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
+
+</conditional>
 
 ## 2.4.0 <release-date date="March. 2022" />
 - Added ability to create and manage [Quizzes and Surveys](/dashboard/user-guide/quizzes-and-surveys.html) and seamlessly administer by associating to the Skills or by running independently

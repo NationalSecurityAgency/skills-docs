@@ -10,13 +10,12 @@
                 <div class="col-lg-6">
                     <div class="py-4 p-sm-5 mt-1">
                         <h1 class="border-bottom text-uppercase">Dashboard</h1>
-                        <p class="text-secondary">A web-based user interface that enables creation and management of an applications'
-                            training profile.</p>
-                        <div class="mb-1"><i class="fas fa-check-double"></i> Effective and visual skill definition management
+                        <p class="text-secondary">A web-based user interface that enables creation and management of multiple
+                            training profiles and acts as a Learning Management System (LMS).</p>
+                        <div class="mb-1"><i class="fas fa-check-double"></i> Effective and visual creation and management of the training profiles
                         </div>
-                        <div class="mb-1"><i class="fas fa-check-double"></i> Comprehensive visualization</div>
-                        <div class="mb-1"><i class="fas fa-check-double"></i> Visibility of application expertise</div>
-                        <div class="mb-1"><i class="fas fa-check-double"></i> SkillTree configuration management</div>
+                        <div class="mb-1"><i class="fas fa-check-double"></i> Visibility of corporate expertise and knowledge gaps</div>
+                        <div class="mb-1"><i class="fas fa-check-double"></i> Take training by completing skills, gaining points, achieving badges, passing quizzes, completing surveys and much, much more...</div>
                         <a href="dashboard/user-guide/" class="btn btn-lg btn-info mt-4 font-weight-bold">Read our Dashboard Guide</a>
                     </div>
                 </div>

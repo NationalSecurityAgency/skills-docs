@@ -13,7 +13,7 @@
               </div>
               <div class="col-sm media-body">
                 <div class="h5 mt-0 mb-3 mb-sm-2">User Engagement</div>
-                Enable users to Quickly learn new features and effectively master advanced features.
+                Enable users to Quickly learn new skills and effectively master advanced knowledge.
                 Improve training recall through continued user engagement.
               </div>
             </div>
@@ -35,7 +35,7 @@
               <div class="col-sm media-body">
                 <div class="h5 mt-0">Gamification</div>
                 Consistent and innovative solution takes the guesswork and maintenance out of
-                implementing gamified user training.
+                implementing gamified training.
               </div>
             </div>
           </div>
