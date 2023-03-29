@@ -82,6 +82,30 @@ context('Generate Progress and Ranking Screenshots', () => {
     cy.snap('client-display-themed-proj', 'iframe');
   })
 
+  it('Take quiz', () => {
+    cy.visit('/progress-and-rankings/projects/quizzesAndSurveys?skillsClientDisplayPath=%2Fsubjects%2FscienceQuizzes%2Fskills%2FShortScienceQuizSkill%2Fquizzes%2FShortScienceQuiz');
+    cy.wait(3000)
+    cy.clientDisplay(false)
+        .then((param) => {
+          if(param.find('[data-cy="startQuizAttempt"]').length) {
+            cy.clientDisplay(false).find('[data-cy="startQuizAttempt"]').click()
+          }
+        });
+    cy.clientDisplay(false).find('[data-cy="question_1"]')
+        .then((param) => {
+          if(!param.find('[data-cy="selected_true"]').length) {
+            cy.clientDisplay(false).find('[data-cy="question_1"] [data-cy="answer_1"]').click()
+          }
+        })
+    cy.clientDisplay(false).find('[data-cy="question_2"]')
+        .then((param) => {
+          if(!param.find('[data-cy="selected_true"]').length) {
+            cy.clientDisplay(false).find('[data-cy="question_2"] [data-cy="answer_2"]').click()
+          }
+        })
+
+    cy.snap('client-display-quiz-run', 'iframe');
+  })
 
 
 })

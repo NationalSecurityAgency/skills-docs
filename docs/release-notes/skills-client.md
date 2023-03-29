@@ -1,8 +1,12 @@
-# Skills Client Release Notes
+# Client Libraries Release Notes
 
 This page documents high-level release notes for <external-url label="SkillTree Client" url="https://github.com/NationalSecurityAgency/skills-client" /> libraries - Vue.js, React, Angular, and Native JS libraries used by the SkillTree integrated applications
 
+<conditional visibilityFlag="showInstallGuide">
+
 To obtain deployable artifacts please visit [Distributions](/dashboard/install-guide/distributions.html) page.
+
+</conditional>
 
 ## 3.5.0 <release-date date="Sep. 2022" />
 - Ensure that skills-client react libraries work with React 18
