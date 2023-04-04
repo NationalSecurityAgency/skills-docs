@@ -3,13 +3,26 @@
 The steps to getting started with SkillTree are:
 1. [Prerequisites](/dashboard/install-guide/quickStart.html#_1-prerequisites) - don't worry there isn't much here
 1. [Install and Start the Dashboard](/dashboard/install-guide/quickStart.html#_2-install-start-dashboard-and-service) and create your project
-1. [Integrate Client Libraries](/dashboard/install-guide/quickStart.html#_3-integrate-client-libraries) into your application (examples will be provided)
+1. *(Optional)* [Integrate Client Libraries](/dashboard/install-guide/quickStart.html#_3-integrate-client-libraries) into your application (examples will be provided)
+
+::: tip Please Note
+Please note that the integrating the SkillTree Client Libraries is **optional** and is only applicable when integrating gamification training directly into an existing or new web application.
+:::
 
 ## 1. Prerequisites
-- JDK 11+, we suggest <external-url label="Open JDK" url="https://openjdk.java.net/" />
+- JDK 17+, we suggest <external-url label="Open JDK" url="https://openjdk.java.net/" />
   - Please note that this is not relevant if you elect to go with the Docker based install.
 - <external-url label="Git" url="https://git-scm.com/" /> version 2.23+
 - <external-url label="Node.js" url="https://nodejs.org/en/" /> v12+ and <external-url label="npm" url="https://www.npmjs.com/" /> 6+
+- <external-url label="PostgreSQL" url="https://nodejs.org/en/" /> 12+
+
+::: tip 
+If a PosgtgreSQL database is not already available, one can easily be started using a docker container (see example below), or visit the official please documentation <external-url label="https://www.postgresql.org" url="https://www.postgresql.org" /> for other installation options.
+
+```bash
+docker run --network=host -e POSTGRES_USER=skills -e POSTGRES_PASSWORD=skillsPassword -d postgres
+```
+:::
 
 ## 2. Install & Start Dashboard and Service
 You have 2 options:
@@ -21,11 +34,15 @@ You have 2 options:
 The ``skills-service`` docker image is hosted on <external-url label="DockerHub" url="https://hub.docker.com/r/skilltree/skills-service" /> and can be started like this: 
 
 ```bash
-docker run --name skills-service -d -p 8080:8080 skilltree/skills-service:<tag_version>
+docker run --name skills-service -d -p 8080:8080 -e SPRING_PROPS="\
+spring.datasource.url=jdbc:postgresql://localhost:5432/skills,\
+spring.datasource.username=skills,\
+spring.datasource.password=skillsPassword" skilltree/skills-service:<tag_version>
 ```
+
 ::: tip IMPORTANT
 Please note that the ``latest`` tag is **not** published to DockerHub and ``:<tag_version>`` must be specified explicitly.
-Available tags can be found on <external-url label="DockerHub tags page" url="https://hub.docker.com/r/skilltree/skills-service/tags".
+Available tags can be found on <external-url label="DockerHub tags page" url="https://hub.docker.com/r/skilltree/skills-service/tags" />.
 :::
 
 You can tail the application logs via:
@@ -46,12 +63,19 @@ curl -s https://api.github.com/repos/NationalSecurityAgency/skills-service/relea
 Using the downloaded jar you can run the SkillTree dashboard and service (make sure to substitute ``X.X.X`` for an actual version):
 
 ```bash
-$ java -jar ~/Downloads/skills-service-X.X.X.jar
+$ java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/skills \
+-Dspring.datasource.username=skills \
+-Dspring.datasource.password=skillsPassword \
+-jar ~/Downloads/skills-service-X.X.X.jar
 ```
 
 <import-content path="/dashboard/install-guide/common/service-install-output-and-backend.html"/>
 
 ## 3. Integrate Client Libraries
+
+::: tip Please Note
+Please note that the integrating the SkillTree Client Libraries is **optional** and is only applicable when integrating gamification training directly into an existing or new web application.
+:::
 
 This section assumes that you already have running 
 - ``skills-service`` on port ``8080`` 

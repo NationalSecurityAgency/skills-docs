@@ -2,9 +2,8 @@
    - Route requests through a load balancer
 
 **2: Database** - We currently only support <external-url label="PostgreSQL" url="https://www.postgresql.org/" /> for a production-grade install
-   - Visit the [Database](/skills-docs/dashboard/install-guide/database.html) section to configure skills-service
    - Make sure to install <external-url label="PostgreSQL" url="https://www.postgresql.org/" /> in high-availability mode
-   - <external-url label="PostgreSQL" url="https://www.postgresql.org/" />'s installation, setup and management is beyond the scope of this section, please visit [https://www.postgresql.org](https://www.postgresql.org/).
+   - <external-url label="PostgreSQL" url="https://www.postgresql.org/" />'s installation, setup and management is beyond the scope of this section, please visit <external-url label="https://www.postgresql.org" url="https://www.postgresql.org" />.
 
 **3: WebSocket Stomp Brokers**
    - Some options include <external-url label="Amazon MQ" url="https://aws.amazon.com/amazon-mq" /> or <external-url label="RabbitMQ" url="https://www.rabbitmq.com/stomp.html" />

@@ -19,13 +19,6 @@ The dashboard is now running on [http://localhost:8080](http://localhost:8080).
 
 Well... that's it! 
 
-:::tip Good to Know!
-Please note that the ``skills-service``, by default, stores its data into an embedded in-memory H2 database. 
-That data is ephemeral and will not persist between application restarts. While this is a great way to get started quickly, 
-it is obviously not appropriate for a test or production installation. 
-Please visit the [Database Section](/dashboard/install-guide/database.html) to learn more.  
-:::
-
 The next step is to start the ``java-backend-example`` service which:
 1. Populates the ``skills-service`` with sample data
 1. Implements an example [Authentication Endpoint](/skills-client/auth.html) that's required to run client components

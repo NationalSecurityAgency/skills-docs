@@ -5,7 +5,7 @@ Before you read this section please make sure that you are familiar with the [In
 [Dashboard User Guide](/dashboard/user-guide/) and the [Integration Guide](/skills-client/#client-display-integration).
 
 SkillTree's skills-service is designed with minimal runtime requirements. 
-You can start the SkillTree skills-service with zero configuration and it will use an in-memory [H2 database](https://www.h2database.com). 
+You can start the SkillTree skills-service with zero configuration other than datasource properties for connecting to an available <external-url label="PostgreSQL" url="https://www.postgresql.org/" /> database. 
 Please visit the [Install Guide](/dashboard/install-guide/) to better understand your installation options. 
 
 Let's now focus on what a production deployment would look like. A production installation of the skills-service will require the following infrastructure: 

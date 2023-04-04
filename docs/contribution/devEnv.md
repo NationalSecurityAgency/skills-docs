@@ -5,11 +5,11 @@ We recommend developing SkillTree in a *nix environment.
 ## Prerequisites 
 
 - modern *nix environment
-- JDK 11+, we suggest [Open JDK](https://openjdk.java.net/)
+- JDK 17+, we suggest [Open JDK](https://openjdk.java.net/)
 - [Git](https://git-scm.com/) version 2.23+
 - [Node.js](https://nodejs.org/en/) v12+ and [npm](https://www.npmjs.com/) 6+
 - [Maven](https://maven.apache.org/) 3.6.2+
-- [PostgreSQL](https://www.postgresql.org/) 10+
+- [PostgreSQL](https://www.postgresql.org/) 12+
 
 ## Development Overview
 
@@ -98,7 +98,12 @@ The app will run on [http://localhost:8080](http://localhost:8080), visit it to 
 To learn more about the features of the SkillTree dashboard, please visit the [Dashboard Guide](/dashboard/user-guide/).
   
 The SkillTree application will be started using default properties. Some things to note:
-- By default an in-memory H2 database is used - data will be ephemeral and will not persist between application restarts.
+- Spring datasource properties will need to be configured for connecting to an available <external-url label="PostgreSQL" url="https://www.postgresql.org/" /> database using the following properties:
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/skills
+spring.datasource.username=<username>
+spring.datasource.password=<password>
+```
 - By default the app runs in [Password Auth Mode](/dashboard/install-guide/installModes.html#password-auth-mode) which is the common use-case. 
 
 ### Cypress.io end-to-end tests
@@ -184,7 +189,6 @@ A few things to note:
   - ``SkillsService`` class represents an authenticated dashboard user
 - Runtime port can be retrieved via ``skills.intTests.utils.DefaultIntSpec#localPort`` but should rarely be used directly; instead please use ``skills.intTests.utils.DefaultIntSpec#skillsService`` instead
 - ``DefaultIntSpec`` setup and cleanup methods purge data from DB between each test case
-- By default, tests are executed against an in-memory H2 DB
 - Use the ``skills.intTests.utils.DefaultIntSpec#createService`` method if you need a new ``SkillsService`` instance
   - For example to represent another dashboard user       
 
@@ -236,7 +240,7 @@ SkillTree's overall testing strategy is to implement black-box integration tests
 
 We like tests (especially integration tests), so please make sure you thoroughly test your code.  
 Prior to making a Pull Request make sure that ALL tests pass:
-1. Run services tests against PostgreSQL in addition to the default in-memory H2 database
+1. Run all services tests
 1. Run all Cypress tests 
 
 Provide the following properties to run the service tests against PostgreSQL:
