@@ -74,7 +74,7 @@ $ java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/skills \
 ## 3. Integrate Client Libraries
 
 ::: tip Please Note
-Please note that the integrating the SkillTree Client Libraries is **optional** and is only applicable when integrating gamification training directly into an existing or new web application.
+Please note that integrating the SkillTree Client Libraries is **optional** and is only applicable when integrating gamification training directly into an existing or new web application.
 :::
 
 This section assumes that you already have running 

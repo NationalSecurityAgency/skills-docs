@@ -240,7 +240,7 @@ SkillTree's overall testing strategy is to implement black-box integration tests
 
 We like tests (especially integration tests), so please make sure you thoroughly test your code.  
 Prior to making a Pull Request make sure that ALL tests pass:
-1. Run all services tests
+1. Run all service tests
 1. Run all Cypress tests 
 
 Provide the following properties to run the service tests against PostgreSQL:
