@@ -8,7 +8,6 @@ spring.datasource.url=jdbc:postgresql://<server>:5432/skills
 spring.datasource.username=
 spring.datasource.password=
 ```
-Please visit the [Database](/skills-docs/dashboard/install-guide/database.html) section for further information
             
 WebSocket Stomp:
 ```properties

@@ -295,8 +295,6 @@ spring.datasource.username=
 spring.datasource.password=
 ```
 
-Please visit the [Database Section](/dashboard/install-guide/database.html) for more information.
-
 ### WebSocket Stomp Broker
 
 Configure external WebSocket Stomp Broker:

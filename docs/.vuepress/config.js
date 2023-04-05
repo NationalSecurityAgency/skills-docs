@@ -122,7 +122,6 @@ sidebar = sidebar.concat([{
             '/dashboard/install-guide/devInstall',
             '/dashboard/install-guide/prodInstall',
             '/dashboard/install-guide/config',
-            '/dashboard/install-guide/database',
             '/dashboard/install-guide/installModes',
         ]
     }, {
