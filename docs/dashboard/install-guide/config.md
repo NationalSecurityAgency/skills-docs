@@ -336,9 +336,9 @@ server.servlet.session.timeout=
 **Option 2:** HttpStore persisted in Redis
 ```properties
 spring.session.store-type=redis
-spring.redis.host=localhost
-spring.redis.password=
-spring.redis.port=6379 
+spring.data.redis.host=localhost
+spring.data.redis.password=
+spring.data.redis.port=6379 
 
 # Optional: Flush mode
 spring.session.redis.flush-mode=on_save 
