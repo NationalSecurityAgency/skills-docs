@@ -16,10 +16,13 @@ skills.websocket.relayHost=
 skills.websocket.relayPort=
 ```
 
-Store HttpSession in Redis:
+Store HttpSession in JDBC:
 ```properties
-spring.session.store-type=redis
-spring.redis.host=
-spring.redis.password=
-spring.redis.port=6379
+spring.session.store-type=jdbc
+spring.session.jdbc.initialize-schema=always
+```
+
+Keystore for JWT:
+```properties
+security.oauth2.jwt.useKeystore=true
 ```

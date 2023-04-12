@@ -23,9 +23,21 @@ Definitely use Password Auth Mode if you are not sure which mode is applicable t
 ![Production Installation for Pass Auth Mode](./diagrams/ProdInstall-Pass.jpg) 
 
 <import-content path="/dashboard/install-guide/common/services-explanations.html"/>
-**4: Redis:** Required for clustered skills-service deployment to persist HttpSession  
-   - <external-url label="Redis" url="https://redis.io/"/>'s installation, setup and management is outside of the scope of this section, please visit <external-url label="https://redis.io/" url="https://redis.io/" />        
- 
+**4: Spring Session for HTTP Session Management:** Required for a clustered skills-service deployment to persist HttpSession
+   - SkillTree uses <external-url label="Spring Session" url="https://docs.spring.io/spring-boot/docs/2.7.0/reference/htmlsingle/#web.spring-session"/> for managing a user’s session information in a clustered environment without being tied to an application container-specific solution.        
+:::tip
+SkillTree recommends using JDBC to store the HTTP session in a clustered environment due to its simplicity, and since a shared PostgreSQL instance is already required there is no need to run a separate product. 
+For example, adding the following two properties is all that is required to utilize the existing SkillTree PostgreSQL database for session management:
+```properties
+spring.session.store-type=jdbc
+spring.session.jdbc.initialize-schema=always
+```
+:::
+
+**5: Shared keystore for JSON Web Token (JWT) Generation:** Required for a clustered skills-service deployment for JWT generation.  If running your SkillTree server in [https SSL](/dashboard/install-guide/config.html#https-ssl-pass-auth-mode-only) mode, you can use the same keystore file for JWT by adding the following property:
+```properties
+security.oauth2.jwt.useKeystore=true
+```
 ### Auth Mode skills-service Configuration
 
 <import-content path="/dashboard/install-guide/common/prod-install-basic-config.html"/>
