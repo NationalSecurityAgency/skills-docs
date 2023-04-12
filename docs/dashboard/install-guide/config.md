@@ -322,9 +322,18 @@ Generally gc logging is only enabled in development deployments.
 
 ### HttpStore
 When deploying more than 1 instance of ``skills-service`` HttpSession must be persisted centrally. 
-SkillTree supports storing HttpSession in Redis or in Postgres via JDBC. 
+SkillTree supports storing HttpSession in Postgres via JDBC or in Redis. 
 
-**Option 1:** HttpStore persisted in Redis
+**Option 1:** HttpStore persisted in PostgreSQL (Recommended)
+```properties
+spring.session.store-type=jdbc
+spring.session.jdbc.initialize-schema=always
+
+# Optional: can specify duration suffix but if omitted then it defaults to seconds
+server.servlet.session.timeout= 
+```
+
+**Option 2:** HttpStore persisted in Redis
 ```properties
 spring.session.store-type=redis
 spring.redis.host=localhost
@@ -335,15 +344,6 @@ spring.redis.port=6379
 spring.session.redis.flush-mode=on_save 
 # Optional: Stores session namespace to use for the keys
 spring.session.redis.namespace=spring:session 
-# Optional: can specify duration suffix but if omitted then it defaults to seconds
-server.servlet.session.timeout= 
-```
-
-**Option 2:** HttpStore persisted in Postgres
-```properties
-spring.session.store-type=jdbc
-spring.session.jdbc.initialize-schema=always
-
 # Optional: can specify duration suffix but if omitted then it defaults to seconds
 server.servlet.session.timeout= 
 ```
