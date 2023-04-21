@@ -8,6 +8,13 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 2.5.0 <release-date date="April. 2022" />
+- Implemented Quiz and Survey result displays with the metrics for questions and answers
+- Enhanced Quiz/Survey runs with user metrics
+- Improved skill filter on Skills Display to include all self report types (Approval, Honor System, Quiz and Survey)
+- Added ability to contact project's administrators from `Manage My Projects` page (aka. projects catalog)
+- Implemented extra level of resiliency to preserve quiz and question attributes (ex. description) by utilizing Browser's IndexedDB storage
+
 ## 2.4.0 <release-date date="March. 2022" />
 - Added ability to create and manage [Quizzes and Surveys](/dashboard/user-guide/quizzes-and-surveys.html) and seamlessly administer by associating to the Skills or by running independently
   - Association of a `Quiz` or a `Survey` to an existing skill requires successful completion of that Quiz/Survey in order to earn the skill and its points
