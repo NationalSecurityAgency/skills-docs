@@ -133,7 +133,7 @@ runs please visit [Runs](/dashboard/user-guide/quizzes-and-surveys.html#runs) pa
 
 
 ## Runs
-To track individual quiz/survey runs please visit Runs page (``Quizzes and Surveys -> Quiz/Survey -> Results ``). Each row represents a single Quiz/Survey for a single user.
+To track individual quiz/survey runs please visit the Runs page (``Quizzes and Surveys -> Quiz/Survey -> Results ``). Each row represents a single Quiz/Survey for a single user.
 
 ![Quiz Runs Page Screenshot](../../screenshots/admin/page-quiz-runs.png)
 
