@@ -29,7 +29,7 @@ docker image rm -f ${imageName}:${imageVersion}
 
 # start skills-service
 echo "Will use [${imageName}:${imageVersion}]"
-SKILLS_SERVICE_CONTAINER_ID=$(docker run -d -p 8080:8080 -e SPRING_PROPS="skills.config.ui.rankingAndProgressViewsEnabled=true" ${imageName}:${imageVersion})
+SKILLS_SERVICE_CONTAINER_ID=$(docker run -d -p 8080:8080 -e SPRING_PROPS="skills.config.ui.disableScrollToTop=true" ${imageName}:${imageVersion})
 npm run wait:skills-service
 echo "Started ${imageName}:${imageVersion} on port [8080] with container id [${SKILLS_SERVICE_CONTAINER_ID}]"
 

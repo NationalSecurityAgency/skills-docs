@@ -71,7 +71,8 @@ context('Generate Admin Screenshots', () => {
         cy.get('[data-cy="selectPageOfApprovalsBtn"]').click();
         cy.get('[data-cy="approveBtn"]').click();
 
-        cy.get('[data-cy="skillsReportApprovalTable"]').contains('Note:')
+        // has at least 1 row
+        cy.get('[data-cy="skillsReportApprovalTable"] [aria-colindex="1"]')
 
         cy.snap('page-project-self_report');
     });

@@ -56,19 +56,33 @@ context('Generate Quiz and Surveys Screenshots', () => {
 
     it('quiz results page', () => {
         cy.visit('/administrator/quizzes/ShortScienceQuiz/results')
-        cy.get('[data-cy="userFilterBtn"]')
-        cy.get('[data-cy="row0-userCell"]')
+        cy.get('[data-cy="metricsCardTotal"] [data-cy="statCardValue"]')
+        cy.get('[data-cy="metrics-q1"]')
 
         cy.snap('page-quiz-results');
     })
 
-    it('quiz results page', () => {
-        cy.visit('/administrator/quizzes/ShortScienceQuiz/results')
+    it('quiz runs page', () => {
+        cy.visit('/administrator/quizzes/ShortScienceQuiz/runs')
+        cy.get('[data-cy="userFilterBtn"]')
+        cy.get('[data-cy="row0-userCell"]')
+
+        cy.snap('page-quiz-runs');
+    })
+
+    it('quiz single run page', () => {
+        cy.visit('/administrator/quizzes/ShortScienceQuiz/runs')
         cy.get('[data-cy="userFilterBtn"]')
         cy.get('[data-cy="row1-viewRun"]').click()
         cy.get('[data-cy="questionDisplayCard-1"]')
 
         cy.snap('page-quiz-single-result');
+    })
+
+    it('quiz results page', () => {
+        cy.visit('/administrator/quizzes/ShortScienceQuiz/skills')
+        cy.get('[data-cy="quizSkills"] [data-cy="skillsBTableTotalRows"]')
+        cy.snap('page-quiz-skills');
     })
 
     it('quiz settings page', () => {

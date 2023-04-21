@@ -114,13 +114,32 @@ Use the `Preview` button on the top left below the Survey name in order to see w
 :::
 
 ## Results
-The results of users completing quizzes and surveys came be located on the Results page (``Quizzes and Surveys -> Quiz/Survey -> Results ```)
+Summarized quiz/survey results can be located on the Results page (``Quizzes and Surveys -> Quiz/Survey -> Results ``). 
+
+The page features 
+- total number of users' attempts
+- number of passed and failed attempts
+- average quiz/survey runtime
+- in the case of quizzes, a bar chart breakdown for each question depicting the difference between the correct and the wrong question attempts
+- number of times each answer was selected and its associated selection percentage
+- for each answer, an ability to drill down to its history
+
+::: tip
+Please note that only the completed quizzes/surveys are shown on this page, if you are looking for `In Progress`
+runs please visit [Runs](/dashboard/user-guide/quizzes-and-surveys.html#runs) page.
+:::
 
 ![Quiz Results Page Screenshot](../../screenshots/admin/page-quiz-results.png)
 
-Each row represents a single Quiz/Survey for a single user. Select the run details button to the right of the user to view details of that particular Quiz/Survey run.
 
-![Quiz Single Result Page Screenshot](../../screenshots/admin/page-quiz-single-result.png)
+## Runs
+To track individual quiz/survey runs please visit the Runs page (``Quizzes and Surveys -> Quiz/Survey -> Results ``). Each row represents a single Quiz/Survey for a single user.
+
+![Quiz Runs Page Screenshot](../../screenshots/admin/page-quiz-runs.png)
+
+Select the run details button to the right of the user to view details of that particular Quiz/Survey run.
+
+![Quiz Single Run Page Screenshot](../../screenshots/admin/page-quiz-single-result.png)
 
 Quiz results will depict selected answer(s) and its correctness status. Survey results will simply display which results were selected. 
 
@@ -145,6 +164,10 @@ the available Quizzes or Surveys.
 ::: tip Useful Tips
 A Quiz or a Survey can be associated to more than one skill in one or more project(s). 
 :::
+
+A quiz/survey administrator can easily view which skills the quiz/survey is associated with by navigating 
+to the Skills page in that particular quiz/survey (``Quizzes and Surveys -> Quiz/Survey -> Skills ``)
+![Quiz Skills Page Screenshot](../../screenshots/admin/page-quiz-skills.png):
 
 ## Access
 
