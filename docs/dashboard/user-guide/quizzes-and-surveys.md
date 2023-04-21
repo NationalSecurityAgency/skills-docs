@@ -120,7 +120,7 @@ The page features
 - total number of users' attempts
 - number of passed and failed attempts
 - average quiz/survey runtime
-- in case of quizzes, a bar chart breakdown for each question depicting the difference between the correct and the wrong question attempts
+- in the case of quizzes, a bar chart breakdown for each question depicting the difference between the correct and the wrong question attempts
 - number of times each answer was selected and its associated selection percentage
 - for each answer, an ability to drill down to its history
 
