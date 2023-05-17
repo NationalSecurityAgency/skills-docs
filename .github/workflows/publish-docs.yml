@@ -46,19 +46,6 @@ jobs:
         with:
           path: ./docs/.vuepress/dist
 
-  #    - name: Upload artifacts to be deployed
-  #      uses: actions/upload-artifact@v2
-  #      with:
-  #        name: github-pages
-  #        path: ./docs/.vuepress/dist
-
-  #    - name: publish docs
-  #      uses: peaceiris/actions-gh-pages@v3
-  #      with:
-  #        github_token: ${{ secrets.GITHUB_TOKEN }}
-  #        publish_dir: ./docs/.vuepress/dist
-  #        cname: skilltreeplatform.dev
-
   deploy:
     needs: build
 
