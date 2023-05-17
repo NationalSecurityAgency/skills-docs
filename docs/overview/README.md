@@ -141,11 +141,8 @@ Please visit [Contribution Guide](/contribution/#contribution-guidelines) if you
 </conditional>
 
 ## Accessibility
-<accessibility-score/>
 SkillTree is committed to ensuring that Accessibility concerns are addressed. To that end we employ both manual and automated Accessibility testing. 
-Automated accessibility testing occurs for every commit, assessing the Dashboard and client-display, 
-and the resulting <external-url label="Lighthouse" url="https://developers.google.com/web/tools/lighthouse" /> accessibility score is published to 
-the <external-url label="SkillTree Skills-Service Github page" url="https://github.com/NationalSecurityAgency/skills-service" />.
+Automated accessibility testing occurs for every commit, assessing the Dashboard and client-display.
 
 In the event that any of the libraries we depend on for User Interface components fail to meet accessibility standards, we evaluate whether accessibility
 fixes are on the near-term development roadmap for those plugins or replace them with equivalents that address accessibility concerns.
@@ -281,8 +278,5 @@ Single skill with dependencies:
 ![Client Display Skills with Dependencies](../screenshots/progress-and-ranking/client-display-skillWithDeps.png)
 
 <script>
-  import AccessibilityScore from "../.vuepress/components/AccessibilityScore";
-  export default {
-    components: { AccessibilityScore }
-  }
+
 </script>
