@@ -2,31 +2,6 @@ const fs = require('fs');
 const fetch = require('node-fetch');
 const videosJson = require('./components/videos/skilltree-training-videos.json');
 
-const accessibility_score = 'https://raw.githubusercontent.com/NationalSecurityAgency/skills-service/badges/master/average_accessibility_score.svg';
-function dli() {
-    return new Promise(resolve => {
-        fetch(accessibility_score,
-          { mode: 'no-cors' })
-          .then(response => response.blob())
-          .then(blob => {
-              blob.arrayBuffer().then((arrayBuf) => {
-                  const buffer = Buffer.from(arrayBuf);
-                  fs.writeFile('docs/.vuepress/public/img/average_accessibility_score.svg', buffer, () => {
-                      console.log('accessibility score saved!');
-                      resolve();
-                  });
-              });
-          });
-    });
-}
-
-async function downloadIcon(){
-    console.log('downloading latest average_accessibility_score.svg from github');
-    await dli();
-}
-
-downloadIcon();
-
 /**
  * Customize docs at build time
  *   export SKILLS_DOCS_CONFIG="<props>" && npm run docs:build
