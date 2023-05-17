@@ -20,26 +20,63 @@ on:
       - master
 
 jobs:
-
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-    - uses: actions/setup-node@v2-beta
-      with:
-        node-version: '12'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
 
-    - name: npm install
-      run : npm install
+      - name: Print Versions
+        run: |
+          npm -version
+          node -v
 
-    - name: build docs
-      run: npm run docs:build
+      - name: npm install
+        run : npm install
 
-    - name: publish docs
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/.vuepress/dist
-        cname: skilltreeplatform.dev
+      - name: build docs
+        run: npm run docs:build
+
+      - name: Upload artifacts to be deployed
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./docs/.vuepress/dist
+
+  #    - name: Upload artifacts to be deployed
+  #      uses: actions/upload-artifact@v2
+  #      with:
+  #        name: github-pages
+  #        path: ./docs/.vuepress/dist
+
+  #    - name: publish docs
+  #      uses: peaceiris/actions-gh-pages@v3
+  #      with:
+  #        github_token: ${{ secrets.GITHUB_TOKEN }}
+  #        publish_dir: ./docs/.vuepress/dist
+  #        cname: skilltreeplatform.dev
+
+  deploy:
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
