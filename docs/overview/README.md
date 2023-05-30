@@ -204,14 +204,13 @@ to progress forward.
 Screenshots below demonstrate the management of levels in the dashboard:
 ![Project Level Page](../screenshots/admin/page-project-levels.png)
 
-Dependencies add another facet to the overall gamification profile and force users to complete skills in a specified
-order. If you set up Skill A to depend on the completion of Skill B then no points will be awarded toward Skill A until
-Skill B is fully accomplished.
-The screenshot below demonstrates management of skill dependencies in the dashboard:
-![Skill Dependencies Page](../screenshots/admin/page-skill-deps.png)
+Learning Path feature adds another facet to the overall gamification profile, which forces users to complete skills in a
+specified order. Project administrators can configure learning path using project's Badges or Skills. For example, if
+you set up a simple Learnign Path of Skill A -> Skill B then Skill A will serve as a prerequisite to Skill B and no
+points will be awarded toward Skill B until Skill A is fully accomplished.
 
-Screenshot below demonstrates visualization of all the skill dependencies within a project:
-![Project Dependencies Page](../screenshots/admin/page-project-deps.png)
+Screenshot below demonstrates visualization and management of project's learning path:
+![Project Learning Page](../screenshots/admin/page-project-learning-path.png)
 
 Almost every page in the SkillTree dashboard exposes metrics and statistics about that particular entity/concept. These
 metrics are very much context aware so as an example, graphs and charts you see on a subject page will be for that
@@ -274,8 +273,8 @@ that Quiz in order to earn the skill and its points. The screenshot below shows 
 
 ------------------------
 ------------------------
-Single skill with dependencies:
-![Client Display Skills with Dependencies](../screenshots/progress-and-ranking/client-display-skillWithDeps.png)
+Single skill with prerequisites:
+![Client Display Skills with Prerequisites](../screenshots/progress-and-ranking/client-display-skillWithDeps.png)
 
 <script>
 

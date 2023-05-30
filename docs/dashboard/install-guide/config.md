@@ -385,7 +385,7 @@ skills.disableHostnameVerifier=false
 ### Progress and Ranking Views
 
 A single point of access for training profiles available to the user as well as user's current progress and ranking.
-The Progress and Ranking views give a user access to the Skills Display for _all_ projects which have ``Discoverable`` enabled 
+The Progress and Ranking views give a user access to the Skills Display for _all_ projects which have elected to set its [Project Discoverability setting](/dashboard/user-guide/projects.html#setting-project-discoverability) to the ``Add to Project Catalog`` 
 on that instance of the SkillTree platform. It provides a single point of access for training profiles available to the
 user as well as a mechanism for Projects that consist entirely of self-reported Skills to provide access to the [Ranking and Progress](/dashboard/user-guide/progress-and-ranking.html) display
 for their users. 

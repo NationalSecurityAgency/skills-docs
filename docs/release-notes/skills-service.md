@@ -8,6 +8,12 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 2.6.0 <release-date date="May. 2022" />
+- Implemented ability for admins to configure Learning Path using skills and badges as prerequisites for other skills and/or badges
+- Added ability to filter users tables by user's completion percentage
+- Implemented new look-and-feel for Progress & Ranking landing page
+- Removed "Discoverable" and "Manage My Projects" to consistent usage of "Projects Catalog"
+
 ## 2.5.0 <release-date date="April. 2022" />
 - Implemented Quiz and Survey result displays with the metrics for questions and answers
 - Enhanced Quiz/Survey runs with user metrics
