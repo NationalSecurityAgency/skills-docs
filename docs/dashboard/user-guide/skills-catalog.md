@@ -132,7 +132,7 @@ to learn more please visit the [Self Reporting](/dashboard/user-guide/self-repor
 Skills with prerequisites can NOT be exported to the Skills Catalog. 
 Since those skills require completion of its prerequisites first they make poor candidates for re-use in other projects. 
 
-On the other hand imported skills can be added aspPrerequisites to an importing project's native skills. 
+On the other hand imported skills can be added as prerequisites to an importing project's native skills. 
 
 ### Imported skills and badges
 
