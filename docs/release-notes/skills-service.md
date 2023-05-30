@@ -8,20 +8,20 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
-## 2.6.0 <release-date date="May. 2022" />
-- Implemented ability for admins to configure Learning Path using skills and badges as prerequisites for other skills and/or badges
-- Added ability to filter users tables by user's completion percentage
-- Implemented new look-and-feel for Progress & Ranking landing page
+## 2.6.0 <release-date date="May 2023" />
+- Implemented ability for admins to configure a Learning Path using skills and badges as prerequisites for other skills and/or badges
+- Added ability to filter the users tables by a user's completion percentage
+- Implemented a new look-and-feel for Progress & Ranking landing page
 - Removed "Discoverable" and "Manage My Projects" to consistent usage of "Projects Catalog"
 
-## 2.5.0 <release-date date="April. 2022" />
+## 2.5.0 <release-date date="April 2023" />
 - Implemented Quiz and Survey result displays with the metrics for questions and answers
 - Enhanced Quiz/Survey runs with user metrics
 - Improved skill filter on Skills Display to include all self report types (Approval, Honor System, Quiz and Survey)
 - Added ability to contact project's administrators from `Manage My Projects` page (aka. projects catalog)
 - Implemented extra level of resiliency to preserve quiz and question attributes (ex. description) by utilizing Browser's IndexedDB storage
 
-## 2.4.0 <release-date date="March. 2022" />
+## 2.4.0 <release-date date="March 2023" />
 - Added ability to create and manage [Quizzes and Surveys](/dashboard/user-guide/quizzes-and-surveys.html) and seamlessly administer by associating to the Skills or by running independently
   - Association of a `Quiz` or a `Survey` to an existing skill requires successful completion of that Quiz/Survey in order to earn the skill and its points
   - `Quiz` supports _Single Choice_ and _Multiple Choice_ questions
@@ -110,13 +110,13 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 ### 2.0.X Releases
 
-#### 2.0.2 <release-date date="August. 2022" />
+#### 2.0.2 <release-date date="August 2022" />
 - Bug Fixes
 
-#### 2.0.1 <release-date date="August. 2022" />
+#### 2.0.1 <release-date date="August 2022" />
 - Bug Fixes
 
-#### 2.0.0 <release-date date="August. 2022" />
+#### 2.0.0 <release-date date="August 2022" />
 - [Invite-Only / Private Project](/dashboard/user-guide/projects.html#setting-visibility) - Progress and Ranking pages can only be accessed by users who have been invited to join the project and who have accepted the invite, any other user attempting to access the project will receive an ``Access Denied`` error
 - [Copy Project Definition](/dashboard/user-guide/projects.html#copy-project) - use an existing Project as a template - copy its training profile (subjects, skills, badges, etc..) into a brand-new project.
 - [Move Skills](/dashboard/user-guide/skills.html#move-skills) between subjects and groups in the same project.
@@ -128,30 +128,30 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 ### 1.X Releases
 
-#### 1.12.2 <release-date date="July. 2022" />
+#### 1.12.2 <release-date date="July 2022" />
 - Accessibility improvements
 
-#### 1.12.1 <release-date date="July. 2022" />
+#### 1.12.1 <release-date date="July 2022" />
 - Bug Fixes
 
-#### 1.12.0 <release-date date="July. 2022" />
+#### 1.12.0 <release-date date="July 2022" />
 - [Same Project Skill Reuse](/dashboard/user-guide/skills.html#same-project-skill-reuse) - a feature that facilitates the re-use of skills in the same projects 
 - Ability to unsubscribe to self-report approval requests emails
 - Accessibility improvements
 - Bug Fixes
 
-#### 1.11.1 <release-date date="July. 2022" />
+#### 1.11.1 <release-date date="July 2022" />
 - Bug Fixes
 
 #### 1.11.0
-<release-date date="June. 2022" />
+<release-date date="June 2022" />
 - Accessibility improvements
 - Bug Fixes
 
-#### 1.10.1 <release-date date="June. 2022" />
+#### 1.10.1 <release-date date="June 2022" />
 - Bug Fixes
 
-#### 1.10.0 <release-date date="June. 2022" />
+#### 1.10.0 <release-date date="June 2022" />
 - Ability to export Skills to the Catalog that are defined under a Skill Group
 - Ability to import Catalog Skills into a Skill Group
 - Added Removal Safety Check dialog to projects, subjects and badges
@@ -159,18 +159,18 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Accessibility improvements
 - Bug Fixes
 
-#### 1.9.5 <release-date date="May. 2022" />
+#### 1.9.5 <release-date date="May 2022" />
 - Implemented Upgrade-In-Progress feature that puts the SkillTree Dashboard into a read-only state while retaining skill requests in a Write-Ahead-Log to be replayed after the upgrade is done
 - Improved performance of loading user table for a given project
 - Bug Fixes
 
-#### 1.9.4 <release-date date="May. 2022" />
+#### 1.9.4 <release-date date="May 2022" />
 - additional performance profiling
 
-#### 1.9.3 <release-date date="May. 2022" />
+#### 1.9.3 <release-date date="May 2022" />
 - Bug Fixes
 
-#### 1.9.2 <release-date date="May. 2022" />
+#### 1.9.2 <release-date date="May 2022" />
 - For Skills exported to the Catalog, show how many and which projects those skills were imported into
 - Check the point system of an importing project and warn users when finalizing catalog skills if imported points are outside of the existing point scheme
 - Bug Fixes
@@ -268,7 +268,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Added ability to assign tags to users and to generate metrics/charts based on those tags
 - Bug fixes
 
-#### 1.5.3 <release-date date="Ju,. 2021" />
+#### 1.5.3 <release-date date="Jul. 2021" />
 - Bug Fix: Added locking for project expiration/deletion/notification
 
 #### 1.5.2 <release-date date="Jul. 2021" />
