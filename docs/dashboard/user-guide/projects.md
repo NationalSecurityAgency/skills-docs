@@ -55,12 +55,12 @@ There are three possible values for the Project Discoverability setting:
 3. Private Invite Only
 
 
-``Not in the Project Catalog`` projects can be accessed by users who have a direct link (Preview button) to the project's Skills Display or by applications that have integrated the SkillTree client libraries. The project will not be available in 
-[Projects Catalog](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects)
+``Not in the Project Catalog`` projects can be accessed by users who have a direct link (Preview button) to the project's Skills Display or by applications that have integrated the SkillTree client libraries. The project will not be available in the
+[Projects Catalog](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) view.
 
 ``Add to Project Catalog`` projects can be discoverd by users in the [Projects Catalog](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) view.
 
-``Private Invite Only`` projects can only be accessed by users who have been invited to join the project and who have accepted the invite, any other user attempting to access the project will receive an Access Denied error. Users who have been 
+``Private Invite Only`` projects can only be accessed by users who have been invited to join the project and who have accepted the invite. Any other user attempting to access the project will receive an Access Denied error. Users who have been 
 designated as Project Administrators will continue to have access to the project. Users can be invited to join the project using the [Project Access](/dashboard/user-guide/projects.html#invite-only) page.
 
 ::: warning
