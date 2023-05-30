@@ -32,13 +32,13 @@ will feature extra navigation options of ```Progress and Ranking``` and ```Proje
 
 ## Projects Catalog
 
-The ``Projects Catalog`` page presents a listing of available projects that can be added to your [Progress and Ranking: My Projects](#progress-and-ranking-my-projects) view. You can find ``Project Catalog`` by navigating to the
+The ``Projects Catalog`` page presents a listing of available projects that can be added to your [Progress and Ranking: My Projects](#progress-and-ranking-my-projects) view. You can find the ``Project Catalog`` by navigating to the
 Progress and Ranking views and then clicking on the `Project Catalog` button. Once there you can easily add and remove projects.  
 
 ![Manage My Projects Page](../../screenshots/progress-and-ranking/page-progress-and-rankings-manage-my-projects.png)
 
 ::: tip
-Please note that **only** projects with [Project Discoverability setting](/dashboard/user-guide/projects.html#setting-project-discoverability) of ``Add to Project Catalog`` value are presented in the available project. 
+Please note that **only** projects with [Project Discoverability setting](/dashboard/user-guide/projects.html#setting-project-discoverability) of ``Add to Project Catalog`` selected are presented in the available project. 
 Project owners can easily enable ``discoverability`` on the project's Settings page. 
 :::
 
