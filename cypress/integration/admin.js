@@ -114,15 +114,20 @@ context('Generate Admin Screenshots', () => {
         cy.get('[data-cy="deleteTagsButton"]').click()
     });
 
+    it('Gen Learning Path', () => {
+        cy.viewport(1350, 1200);
+        cy.visit('/administrator/projects/movies/learning-path')
+        cy.get('[data-cy="graphLegend"]')
+        cy.get('[data-cy="learningPathTable"] [data-cy="skillsBTableTotalRows"]')
+        cy.wait(5000);
+        cy.snap('page-project-learning-path');
+        cy.snap('component-manage-learning-path', '[data-cy="addPrerequisiteToLearningPath"]')
+    })
+
     it('Gen Project pages', () => {
         cy.viewport(1350, 1200);
 
         cy.visit('/administrator/projects/movies/badges')
-        // deps page
-        cy.clickNav('Dependencies');
-        cy.contains('Skill Dependencies')
-        cy.wait(5000);
-        cy.snap('page-project-deps');
 
         // levels page
         cy.viewport(1350, 800);
@@ -214,17 +219,6 @@ context('Generate Admin Screenshots', () => {
                 cy.contains('Achievements over time');
                 cy.snap('page-topSkill-metrics');
             })
-    })
-
-
-    it('Gen Skill pages', () => {
-        cy.viewport(1300, 1200);
-        // skills page
-        cy.visit('/administrator/projects/movies/subjects/Family/skills/HarryPotterandtheGobletofFire');
-        cy.clickNav('Dependencies');
-        cy.contains('ID: HarryPotterandtheGobletofFire')
-        cy.snap('page-skill-deps');
-        cy.snap('component-skill-deps', '.card.dependencies-container');
     })
 
     it('Gen Modals', () => {
@@ -348,14 +342,14 @@ context('Generate Admin Screenshots', () => {
     it('Share Project Example', () => {
         cy.visit('/administrator/projects/movies')
         cy.get('[data-cy="manageBtn_Action"]')
-        cy.get('[data-cy="pageHeaderStat_Visibility"]').contains('PUBLIC')
+        cy.get('[data-cy="pageHeaderStat_Project Catalog"]').contains('Discoverable')
         cy.snap('page-partial-share-proj', null, {clip: { x: 0, y: 0, width: 750, height: 400 } });
     })
 
     it('Share Project Modal', () => {
         cy.visit('/administrator/projects/movies')
         cy.get('[data-cy="manageBtn_Action"]')
-        cy.get('[data-cy="pageHeaderStat_Visibility"]').contains('PUBLIC')
+        cy.get('[data-cy="pageHeaderStat_Project Catalog"]').contains('Discoverable')
         cy.get('[data-cy="shareProjBtn"]').click()
         cy.get('[data-cy="projShareUrl"]')
         cy.snap('modal-share_proj', '.modal-content');

@@ -4,7 +4,6 @@ The skills platform offers customization of icons for the following items:
 
 - [Subjects](/dashboard/user-guide/subjects.html)
 - [Badges](/dashboard/user-guide/badges.html)
-- [Levels](/dashboard/user-guide/levels.html)
 
 When creating or editing these items you can click on the default icon to bring up the icon selector: 
 

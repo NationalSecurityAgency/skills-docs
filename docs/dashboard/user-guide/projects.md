@@ -24,20 +24,20 @@ Generally the next step is to create a number of Subjects and then start constru
 
 The Dashboard user that creates a project is automatically granted the role of administrator of that project. Project administrators enjoy the following benefits: 
 
-| Function                                                                                         | Explanation                                                                                                                                                    | 
-|:-------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| [Subjects](/dashboard/user-guide/subjects.html)                                                  | Add, edit or remove Subjects                                                                                                                                   | 
-| [Skills](/dashboard/user-guide/skills.html)                                                      | Add, edit or remove Skill definitions                                                                                                                          |
-| [Self Reporting](/dashboard/user-guide/self-reporting.html)                                      | Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. |
-| [Access Management](/dashboard/user-guide/projects.html#access)                                           | Manage Project's Admin/Approver roles and Private Invite Only access                                                                                           |                                                                                                                                         | 
-| [Badges](/dashboard/user-guide/badges.html)                                                      | Add, edit or remove Project's Badges                                                                                                                           |
-| [Levels](/dashboard/user-guide/levels.html)                                                      | Customize number of Levels and their attributes                                                                                                                |
-| [Dependencies](/dashboard/user-guide/dependencies.html)                                          | Specify the order of Skills completion. For example Skill A must be completed before Skill B can be attempted                                                  | 
-| [Cross-project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) | Create and manage Skill dependencies across multiple Projects which practically equates to cross-application Skills                                            |
-| [Contact Users](/dashboard/user-guide/contact-project-users.html)                                | Communicate with users of your Project                                                                                                                         |
-| [Metrics](/dashboard/user-guide/metrics.html)                                                    | Charts and graph. These are page specific - Project, Subject, Badge, and User will have stats specifically for those pages                                     |
-| [Issues](/dashboard/user-guide/issues.html)                                                      | Errors related to the Project such as non-existant Skills that have been reported                                                                              |       
-| [Settings](/dashboard/user-guide/projects.html#settings)                                         | Project level settings                                                                                                                                         |   
+| Function                                                                                | Explanation                                                                                                                                                    | 
+|:----------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| [Subjects](/dashboard/user-guide/subjects.html)                                         | Add, edit or remove Subjects                                                                                                                                   | 
+| [Skills](/dashboard/user-guide/skills.html)                                             | Add, edit or remove Skill definitions                                                                                                                          |
+| [Self Reporting](/dashboard/user-guide/self-reporting.html)                             | Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. |
+| [Access Management](/dashboard/user-guide/projects.html#access)                         | Manage Project's Admin/Approver roles and Private Invite Only access                                                                                           |                                                                                                                                         | 
+| [Badges](/dashboard/user-guide/badges.html)                                             | Add, edit or remove Project's Badges                                                                                                                           |
+| [Levels](/dashboard/user-guide/levels.html)                                             | Customize number of Levels and their attributes                                                                                                                |
+| [Learning Path](/dashboard/user-guide/learning-path.html)                               | Specify the order of Skills completion. For example Skill A must be completed before Skill B can be attempted                                                  | 
+| [Cross-project Prerequisites](/dashboard/user-guide/learning-path.html#cross-project-prerequisites) | Create and manage Skill prerequisites across multiple Projects which practically equates to cross-application Skills                                           |
+| [Contact Users](/dashboard/user-guide/contact-project-users.html)                       | Communicate with users of your Project                                                                                                                         |
+| [Metrics](/dashboard/user-guide/metrics.html)                                           | Charts and graph. These are page specific - Project, Subject, Badge, and User will have stats specifically for those pages                                     |
+| [Issues](/dashboard/user-guide/issues.html)                                             | Errors related to the Project such as non-existant Skills that have been reported                                                                              |       
+| [Settings](/dashboard/user-guide/projects.html#settings)                                | Project level settings                                                                                                                                         |   
 
 ## Settings
 
@@ -47,28 +47,24 @@ To manage and view project-wide settings navigate to ``Project -> Settings``.
 
 The following project-level settings are available: 
 
-### Setting: Visibility
-There are three possible values for the Project Visibility setting:
+### Setting: Project Discoverability
+There are three possible values for the Project Discoverability setting:
 
-1. Public Not Discoverable (default value)
-2. Private Invite Only
-3. Discoverable on Progress And Ranking
+1. Not in the Project Catalog (default value)
+2. Add to Project Catalog
+3. Private Invite Only
 
-``Public Not Discoverable`` projects can be accessed by users who have a direct link to the project's client display or by applications that have integrated the SkillTree client libraries. The project will not be available in 
-[Manage My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) if the [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) views have been enabled.
 
-``Private Invite Only`` projects can only be accessed by users who have been invited to join the project and who have accepted the invite, any other user attempting to access the project will receive an Access Denied error. Users who have been 
+``Not in the Project Catalog`` projects can be accessed by users who have a direct link (Preview button) to the project's Skills Display or by applications that have integrated the SkillTree client libraries. The project will not be available in the
+[Projects Catalog](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) view.
+
+``Add to Project Catalog`` projects can be discoverd by users in the [Projects Catalog](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) view.
+
+``Private Invite Only`` projects can only be accessed by users who have been invited to join the project and who have accepted the invite. Any other user attempting to access the project will receive an Access Denied error. Users who have been 
 designated as Project Administrators will continue to have access to the project. Users can be invited to join the project using the [Project Access](/dashboard/user-guide/projects.html#invite-only) page.
 
-``Discoverable on Progress And Ranking`` projects can be discoverd by users in the [Manage My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects) view. This option will only be displayed if the instance
-of SkillTree has been configured to enable the [Progress and Ranking](/dashboard/user-guide/progress-and-ranking.html) views.
-
-::: tip
-Prior to 2.0.0 this setting was called Discoverable and applied only to a project's discoverability in the Progress and Ranking view.
-::: 
-
 ::: warning
-There may be a delay of up to several minutes after changing a project's visibility from or to ``Private Invite Only`` before the change is reflected for all users.
+There may be a delay of up to several minutes after changing a [Project Discoverability](/dashboard/user-guide/projects.html#setting-project-discoverability) from or to ``Private Invite Only`` before the change is reflected for all users.
 :::
 
 ### Setting: Project Description <since project="skills-service" version="2.1" />
@@ -150,7 +146,7 @@ There supported project roles are:
 If the project has been configured with a visibility of ``Private Invite Only``, invite and access revocation are controlled here.
 
 ::: tip
-The ``Project User: Invite`` and ``Project User: Revoke`` user interface controls are only displayed if the project has been configured with a [Visibility](/dashboard/user-guide/projects.html#setting-visibility) of Invite Only
+The ``Project User: Invite`` and ``Project User: Revoke`` user interface controls are only displayed if the project has been configured with a [Project Discoverability](/dashboard/user-guide/projects.html#setting-visibility) of Invite Only
 :::
 
 #### Invite Users
@@ -214,14 +210,14 @@ The following training profile elements are copied into the new project:
 - Configured display order subjects and skills  is preserved in the copied project
 - [Levels](/dashboard/user-guide/levels.html)
 - [Badges](/dashboard/user-guide/badges.html)
-- Project-Based [Dependencies](/dashboard/user-guide/dependencies.html)
+- Project-Based [Learning Path](/dashboard/user-guide/learning-path.html)
 - [Re-used Skills](/dashboard/user-guide/skills.html#same-project-skill-reuse)
 - [Project's Settings](/dashboard/user-guide/projects.html#settings) are copied with the exception of the exclusions specified below
 
 The following training profile elements are **NOT** copied into a new project:
 - [Catalog](/dashboard/user-guide/skills-catalog.html) imported skills are **not** copied
-- [Cross-Project Dependencies](/dashboard/user-guide/dependencies.html#cross-project-dependencies) are **not** copied
-- If the original project [Visibility](/dashboard/user-guide/projects.html#setting-visibility) setting was changed to be ``Discoverable on Progress And Ranking`` the copied project will instead use the default value of ``Public Not Discoverable``
+- [Cross-Project Prerequisites](/dashboard/user-guide/learning-path.html#cross-project-prerequisites) are **not** copied
+- If the original [Project Discoverability](/dashboard/user-guide/projects.html#setting-visibility) setting was changed to be ``Add to Project Catalog`` the copied project will instead use the default value of ``Not in the Project Catalog``
 
 ::: tip
 Once a project has been copied, the new project is disconnected from the original such that changes to the original project will not be reflected in the copy
@@ -245,7 +241,7 @@ When the link is visited, two things happen:
 - the project is automatically added to [My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects).
 
 ::: warning Important
-The ``Share`` button is only displayed if the [Project Visibility](/dashboard/user-guide/projects.html#setting-visibility) is configured to the ``Discoverable on Progress and Ranking`` option. 
+The ``Share`` button is only displayed if the [Project Discoverability](/dashboard/user-guide/projects.html#setting-visibility) is configured to the ``Add to Project Catalog`` option. 
 :::
 
 

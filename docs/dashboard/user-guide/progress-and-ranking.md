@@ -30,23 +30,23 @@ will feature extra navigation options of ```Progress and Ranking``` and ```Proje
 ![SkillTree Dashboard Menu](../../screenshots/admin/component-settings-menu.png)
 
 
-## Manage My Projects Page
+## Projects Catalog
 
-The ``Manage My Project`` page presents a catalog of available projects that can be added to your [Progress and Ranking: My Projects](#progress-and-ranking-my-projects) view. You can find ``Manage My Project`` by navigating to the
-Progress and Ranking views and then clicking on the "Manage My Projects" button on the top-right. Once there you can easily add and remove projects.  
+The ``Projects Catalog`` page presents a listing of available projects that can be added to your [Progress and Ranking: My Projects](#progress-and-ranking-my-projects) view. You can find the ``Project Catalog`` by navigating to the
+Progress and Ranking views and then clicking on the `Project Catalog` button. Once there you can easily add and remove projects.  
 
 ![Manage My Projects Page](../../screenshots/progress-and-ranking/page-progress-and-rankings-manage-my-projects.png)
 
 ::: tip
-Please note that **only** projects with ``Discoverable`` enabled are presented in the available project catalog. 
-Project owners can easily enable ``Discoverable`` on the project's Settings page. 
+Please note that **only** projects with [Project Discoverability setting](/dashboard/user-guide/projects.html#setting-project-discoverability) of ``Add to Project Catalog`` selected are presented in the available project. 
+Project owners can easily enable ``discoverability`` on the project's Settings page. 
 :::
 
 ![Project Settings](../../screenshots/admin/page-project-settings.png)
 
 ## Progress and Ranking: My Projects
 
-The Progress and Ranking view, otherwise known as the My Projects page, visualizes the currently authenticated user's current Progress and Ranking across all selected projects. 
+The Progress and Ranking view, otherwise known as the `My Projects` page, visualizes the currently authenticated user's current Progress and Ranking across all selected projects. 
 
 ![SkillTree Dashboard Progress And Ranking](../../screenshots/progress-and-ranking/page-progress-and-rankings.png)
 

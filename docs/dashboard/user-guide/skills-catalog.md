@@ -127,12 +127,12 @@ The Self-reporting `request points` button is visualized for each imported skill
 Skills Catalog supports all the self-reporting types (`Honor System`, `Approval Queue`, `Quiz`, and `Survey`), 
 to learn more please visit the [Self Reporting](/dashboard/user-guide/self-reporting.html) section.
 
-### Catalog and Skills Dependencies
+### Catalog and Skills Prerequisites
 
-Skills with dependencies can NOT be exported to the Skills Catalog. 
-Since those skills require completion of its dependencies first they make poor candidates for re-use in other projects. 
+Skills with prerequisites can NOT be exported to the Skills Catalog. 
+Since those skills require completion of its prerequisites first they make poor candidates for re-use in other projects. 
 
-On the other hand imported skills can be added as dependencies to an importing project's native skills. 
+On the other hand imported skills can be added as prerequisites to an importing project's native skills. 
 
 ### Imported skills and badges
 
