@@ -177,20 +177,20 @@ a user's progress for any projects.
 
 A Project is composed of Subjects which are made of Skills and a single skill defines a training unit within the
 gamification framework. Subjects are a way to group and organize skill definitions within a gameified training profile.
-Screenshots below demonstrates the dashboard's page to create and manage subjects: 
+The screenshot below demonstrates the dashboard's page to create and manage subjects: 
 ![SkillTree Dashboard Subjects](../screenshots/admin/page-subjects.png)
 
 Projects are composed of Subjects which are made of Skills and a single skill defines a training unit within the
 gamification framework. To complete a skill, users may need to perform the same action multiple times - repetition is
 important for retention after all. A Skill definition specifies how many times a skill has to be performed. Each
 occurrence is called a Skill Event.
-Screenshots below demonstrates dashboard's management of skill's attribues:
+The screenshot below demonstrates the dashboard's management of skill's attribues:
 ![SkillsTree Dashboard Edit Skill](../screenshots/admin/modal-edit-skill.png)
 
 Badges add another facet to the overall gamification profile and allows you to further reward your users by providing
 these prestigious symbols. Badges are a collection of skills and when all of the skills are accomplished that badge is
 earned.
-Screenshots below demonstrates dashboard's page to create and manage badges:
+The screenshot below demonstrates the dashboard's page to create and manage badges:
 ![SkillsTree Dashboard Badges](../screenshots/admin/page-badges.png)
 
 A quiz is a knowledge check composed of multiple questions with a passing requirement. Quizzes can be associated to a
@@ -201,15 +201,15 @@ that Quiz in order to earn the skill and its points. The screenshot below shows 
 Levels are users' achievement path - the overall goal of the gameified training profile is to encourage users to achieve
 the highest level. Levels are tracked for the entire project as well as for each subject which provides users many ways
 to progress forward.
-Screenshots below demonstrate the management of levels in the dashboard:
+The screenshot below demonstrates the management of levels in the dashboard:
 ![Project Level Page](../screenshots/admin/page-project-levels.png)
 
-Learning Path feature adds another facet to the overall gamification profile, which forces users to complete skills in a
+The Learning Path feature adds another facet to the overall gamification profile, which forces users to complete skills in a
 specified order. Project administrators can configure learning path using project's Badges or Skills. For example, if
 you set up a simple Learnign Path of Skill A -> Skill B then Skill A will serve as a prerequisite to Skill B and no
 points will be awarded toward Skill B until Skill A is fully accomplished.
 
-Screenshot below demonstrates visualization and management of project's learning path:
+The screenshot below demonstrates visualization and management of a project's learning path:
 ![Project Learning Page](../screenshots/admin/page-project-learning-path.png)
 
 Almost every page in the SkillTree dashboard exposes metrics and statistics about that particular entity/concept. These
