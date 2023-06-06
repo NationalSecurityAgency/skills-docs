@@ -1,4 +1,4 @@
-# Description Editor <since project="skills-service" version="2.2" />
+# Description Editor
 
 The SkillTree description editor is a full-featured Rich Text Editor.  The editor is used in the dashboard to provide descriptions 
 for Projects, Subjects, Skills, Badges, and also for sending emails to users and project administrators.  
@@ -18,8 +18,8 @@ The description editor has the following features:
 | Blockquote     | Alt+Q        | Apply quote formatting to line(s) of text                                                                                                                           |
 | Unordered List | Ctrl+U       | A bulleted list                                                                                                                                                     |
 | Ordered List   | Ctrl+O       | A numbered list                                                                                                                                                     |  
-| Indent         |              | When creating a list, this indent the list one level                                                                                                                |
-| Outdent        |              | When creating a list, this outdent the list one level                                                                                                               |
+| Indent         | Fn+Tab       | When creating a list, this indent the list one level                                                                                                                |
+| Outdent        | Fn+Shift+Tab | When creating a list, this outdent the list one level                                                                                                               |
 | Table          |              | Insert a table of varying size.  Through the context menu of the table, you can add or delete columns or rows of the table, and you can also arrange text in cells. |
 | Image          |              | Insert an image.  Images may be chosen from a local file, a URL, or copy and pasted.                                                                                |
 | Link           |              | A hyperlink to an external resource                                                                                                                                 |
