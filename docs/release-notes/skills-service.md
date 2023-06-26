@@ -8,6 +8,11 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 2.7.0 <release-date date="June 2023" />
+- Ability to [add multiple skills to a Badge](/dashboard/user-guide/badges.html#adding-multiple-skill-to-a-badge) 
+- Implemented shortcuts for all the [Description Editor's](/dashboard/user-guide/rich-text-editor.html) features
+- Bug Fixes
+
 ## 2.6.0 <release-date date="May 2023" />
 - Implemented ability for admins to configure a Learning Path using skills and badges as prerequisites for other skills and/or badges
 - Added ability to filter the users tables by a user's completion percentage

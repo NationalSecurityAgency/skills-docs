@@ -42,6 +42,13 @@ Users must complete all of the gem's skills within that window in order to earn 
 
 You can enable and configure a gem within the badge edit dialog by selecting ``Enable Gem Feature``. 
 
+## Adding Multiple Skill to a Badge
+
+Multiple skills can be easily added to an existing badge via the following steps:
+- Navigate to the `Subject` administrative page page `Project -> Subject`
+- Use checkmark to select multiple skills OR click `Select All` to select all the skills defined under this subject.
+- Use the `Action` button on the top-right above the skills' table to select `Add To Badge` action 
+- Follow `Add To Badge` workflow to choose which badge selected skills are added to 
 
 ## Global Badges
 
