@@ -34,12 +34,12 @@ Creating badges is simple:
 | [Description](/dashboard/user-guide/rich-text-editor.html) | *(Optional)* Description, can be used to describe how to achieve the badge or what it's significance is.                                                                                                                                                                                                                                                                        |
 | Help URL/Path                                              | *(Optional)* URL pointing to a help article further documenting information about this badge. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting. You can also author external links into the description itself if more than one external resource needs to be linked to. |
 | Enable Gem Feature                                         | *(Optional)* Enables the [Gem](#Gem) feature, allowing badges to be only available within a specific time window                                                                                                                                                                                                                                                                |
-| Bonus Award                                                | *(Optional)* Add a competitive edge by awarding special [Bonus Award](/dashboard/user-guide/badges.html#bonus-award) when trainees complete the badge within the configured time frame                                                                                                                                                                                          |  
+| Bonus Award                                                | *(Optional)* Add a competitive edge by awarding a special [Bonus Award](/dashboard/user-guide/badges.html#bonus-award) when trainees complete the badge within the configured time frame                                                                                                                                                                                        |  
 
 ## Bonus Award
 
 Bonus Award adds a competitive edge by awarding a special badge token when trainees complete the badge within the configured time frame. 
-After enabling Bonus Award its name, icon and required time frame can be configured.  
+After enabling Bonus Award, its name, icon and required time frame can be configured.  
 
 ![Bonus Award Config](../../screenshots/admin/modal-new-badge-component-bonus-award.png)
 

@@ -55,15 +55,15 @@ You can also disable the Time Window property of a Skill, which will force each 
 
 ## Videos <since project="skills-service" version="2.8" />
 
-Externally hosted videos can be embedded into skill description and optionally configured to achieve that skill once the
-video is fully watched. To configure a video please navigate to `Project -> Subject -> Skill -> Video`   
+Externally hosted videos can be embedded into the skill description and optionally configured to achieve that skill once the
+video is fully watched. To configure a video, please navigate to `Project -> Subject -> Skill -> Video`   
 
 ![Video Config Page](../../screenshots/admin/page-video-config.png)
 
-The only required field is `Video URL` that points to an externally hosted video (ex. `<url>.mp4`). 
-Once video is configured it will be presented on the training above the skill's description. 
+The only required field is `Video URL`, which points to an externally hosted video (ex. `<url>.mp4`). 
+Once the video is configured it will be presented on the training above the skill's description. 
 
-To make the video accessible the configuration offers ability to specify `Captions` and `Transcript` values.
+To make the video accessible, the configuration offers the ability to specify `Captions` and `Transcript` values.
 When captions are configured the video player will present an option to turn captions on or off.  
 Captions utilize [Web Video Text Tracks Format (WebVTT)](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API) format 
 and its input form offers an ability to prefill an example in WebVTT format by clicking `Add Example` button above the `Captions` input field.  
@@ -75,8 +75,8 @@ Video-based achievements are done using [Self Reporting](/dashboard/user-guide/s
 selected by editing that skill and selecting `Video` Self Reporting type. 
 
 ::: tip
-Please note that self reporting by watching the video completes the skill therefore when `Video` type is
-selected `Occurrences to Completion` are set to `1` and cannot be mutated.
+Please note that self reporting by watching the video completes the skill, so when the `Video` type is
+selected, `Occurrences to Completion` are set to `1` and cannot be changed.
 :::
 
 ## Copy Skill
@@ -97,7 +97,7 @@ Versioning is mostly pertinent to the Display Libraries that visualize the skill
 
 Here are simple steps to enable Skills Versioning in your application:
 1. When creating a skill, specify a target version (always last deployed version + 1)
-   - Version selection can be found on the top-right in the create/edit skills dialogued
+   - Version selection can be found on the top-right in the create/edit skills dialogue
 1. When initializing the display component, provide the latest target version for that instance. 
    - [Vue.Js](/skills-client/#vue-js)  
    - [React](/skills-client/#react)

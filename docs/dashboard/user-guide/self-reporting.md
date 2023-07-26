@@ -9,7 +9,7 @@ There are four ``Self report`` types available:
 1. [Approval Queue](/dashboard/user-guide/self-reporting.html#approval-queue) - request goes into the project's approval queue; project administrators can approve or deny requests.  Note When choosing Approval Queue, you may also choose to require users to submit a justification when self-reporting this skill by selecting the 'Justification Required' check box.
 1. [Quiz](/dashboard/user-guide/quizzes-and-surveys.html) - a knowledge check composed of multiple questions with a passing requirement; association of a Quiz requires successful passage of that Quiz in order to earn the skill and its points
 1. [Survey](/dashboard/user-guide/quizzes-and-surveys.html) - a method to get feedback about that skill or collect information related to the skill; association of a Survey requires completion of that Survey before skill and its points are awarded
-1. [Video](/dashboard/user-guide/skills.html#videos) - points are awarded after the configured video was fully watched 
+1. [Video](/dashboard/user-guide/skills.html#videos) - points are awarded after the configured video is fully watched 
 
 ::: tip 
 Project administrators can craft training profiles consisting of:
@@ -47,7 +47,7 @@ earn the skill and its points
 :::
 
 ::: tip Video
-Please note that in order to select the `Video` type skill's [video settings](/dashboard/user-guide/skills.html#videos) must be configured.
+Please note that in order to select the `Video` type, the skill's [video settings](/dashboard/user-guide/skills.html#videos) must be configured.
 :::
 
 ## Skills Display
