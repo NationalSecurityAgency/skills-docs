@@ -8,6 +8,18 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 2.8.0 <release-date date="July 2023" />
+- added ability to embed [training videos](/dashboard/user-guide/skills.html#videos) into skill's description
+- added ability to [achieve skill](/dashboard/user-guide/skills.html#achieve-skill-by-watching-the-video) based on watching embedded video
+- added [bonus award](/dashboard/user-guide/badges.html#bonus-award) feature to create more competitive aspect to badges
+
+## 2.7.2 <release-date date="July 2023" />
+- Spring Boot upgrade
+- Bug Fixes
+
+## 2.7.1 <release-date date="June 2023" />
+- Bug Fixes
+
 ## 2.7.0 <release-date date="June 2023" />
 - Ability to [add multiple skills to a Badge](/dashboard/user-guide/badges.html#adding-multiple-skill-to-a-badge) 
 - Implemented shortcuts for all the [Description Editor's](/dashboard/user-guide/rich-text-editor.html) features
@@ -61,16 +73,21 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Added ability to clear all the skill events for a user
   - The action effectively removes the user from that project and all of its views
 
-## 2.2.3 <release-date date="Nov. 2022" />
+
+## Release History
+
+### 2.2.X Releases
+
+#### 2.2.3 <release-date date="Nov. 2022" />
 - Big Fixes
 
-## 2.2.2 <release-date date="Nov. 2022" />
+#### 2.2.2 <release-date date="Nov. 2022" />
 - Big Fixes
 
-## 2.2.1 <release-date date="Nov. 2022" />
+#### 2.2.1 <release-date date="Nov. 2022" />
 - Upgrade Spring Boot
 
-## 2.2.0 <release-date date="Nov. 2022" />
+#### 2.2.0 <release-date date="Nov. 2022" />
 - Added a full-featured [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html) to create and manage descriptions for skills, subjects, groups, badges and projects
   - Supports an array of features including headings, copy-and-paste, blockquotes, tables, links, and much more...
   - Supports inserting, uploading and copy-and-pasting images
@@ -86,8 +103,6 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
   - show invites pending acceptance
   - allows to revoke, remind and extends invites 
 - Bug Fixes
-
-## Release History
 
 ### 2.1.X Releases
 

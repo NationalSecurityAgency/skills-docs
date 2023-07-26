@@ -67,7 +67,7 @@ designated as Project Administrators will continue to have access to the project
 There may be a delay of up to several minutes after changing a [Project Discoverability](/dashboard/user-guide/projects.html#setting-project-discoverability) from or to ``Private Invite Only`` before the change is reflected for all users.
 :::
 
-### Setting: Project Description <since project="skills-service" version="2.1" />
+### Setting: Project Description
 There are two possible values for the Project Description setting:
 
 1. Only show Project Description in Manager My Projects (default value)
@@ -167,7 +167,7 @@ Each email recipient receives a unique project invite code, therefore distributi
 To invite users to join a ``Private Invite Only`` project, the SkillTree instance MUST be configured to support email. Please see [Email Server Settings](/dashboard/user-guide/settings.html#email-settings) for more information.
 :::
 
-##### Manage Invites Pending Acceptance <since project="skills-service" version="2.2" />
+##### Manage Invites Pending Acceptance
 Once Project Invites have been sent to users, any invites that have not yet been accepted or invites that have recently expired can be managed through the ```Invites Pending Acceptance``` table below the ```Invite Users``` form. 
 
 ![Project Access](./screenshots/Component-Private-Project-Pending.png)

@@ -9,6 +9,7 @@ There are four ``Self report`` types available:
 1. [Approval Queue](/dashboard/user-guide/self-reporting.html#approval-queue) - request goes into the project's approval queue; project administrators can approve or deny requests.  Note When choosing Approval Queue, you may also choose to require users to submit a justification when self-reporting this skill by selecting the 'Justification Required' check box.
 1. [Quiz](/dashboard/user-guide/quizzes-and-surveys.html) - a knowledge check composed of multiple questions with a passing requirement; association of a Quiz requires successful passage of that Quiz in order to earn the skill and its points
 1. [Survey](/dashboard/user-guide/quizzes-and-surveys.html) - a method to get feedback about that skill or collect information related to the skill; association of a Survey requires completion of that Survey before skill and its points are awarded
+1. [Video](/dashboard/user-guide/skills.html#videos) - points are awarded after the configured video is fully watched 
 
 ::: tip 
 Project administrators can craft training profiles consisting of:
@@ -22,7 +23,7 @@ Project administrators can craft training profiles consisting of:
 Self reporting is enabled and configured for each skill individually. 
 When creating or editing a skill 
 1. select ``Self Reporting`` checkbox
-1. then select ``Self Reporting`` type (``Approval Queue``, ``Honor System`` or ``Quiz/Survey``)
+1. then select ``Self Reporting`` type (``Approval Queue``, ``Honor System``, ``Quiz/Survey`` or ``Video``)
 
 ![New Skill Modal Screenshot](../../screenshots/admin/modal-new-skill_self-report-checked.png)
 
@@ -45,6 +46,10 @@ earn the skill and its points
 - Please learn more in the [Quizzes and Surveys](/dashboard/user-guide/quizzes-and-surveys.html) section
 :::
 
+::: tip Video
+Please note that in order to select the `Video` type, the skill's [video settings](/dashboard/user-guide/skills.html#videos) must be configured.
+:::
+
 ## Skills Display
 
 Once Self Reporting is enabled for a skill, users will see a button on the Skills Display that will allow them to report the completion of that skill.
@@ -53,6 +58,9 @@ The button's label will depend on the Self Reporting type, below is an example w
 ![Skills with Self Reporting](../../screenshots/progress-and-ranking/client-display-skills-selfReport.png)
 
 Skills with Self Reporting can be accessed in the Skills Display component embedded within your application (via [Client Libraries](/skills-client/#client-display-integration)) 
+
+In case of Self Reporting type of `Video` the configured video is displayed above the description and once fully
+watched (>96%) then the skill and its points are awarded!  
 
 ::: tip IDEA
 You could create a project that consists purely of Self Reported skills! 
