@@ -292,6 +292,20 @@ context('Generate Admin Screenshots', () => {
         cy.snap('page-skills-group')
     })
 
+    it('Gen Video Settings page', () => {
+        cy.visit('/administrator/projects/movies/subjects/Action/skills/WonderWoman/configVideo')
+        cy.get('[data-cy="videoUrl"]')
+        cy.snap('page-video-config', '[data-cy="nav"]')
+    })
+
+    it('Badge Bonus Award Config', () => {
+        cy.viewport(1800, 1200); // some modals require a lot more vertical real estate
+        cy.visit('/administrator/projects/movies/badges')
+        cy.get('[data-cy="btn_Badges"]').click()
+        cy.get('[data-cy="timeLimitCheckbox"]').click( { force: true })
+        cy.snap('modal-new-badge-component-bonus-award', '[data-cy="bonusAwardCard"]')
+    })
+
     it('New Skill Group Modal', () => {
         cy.visit('/administrator/projects/movies/subjects/Family/')
         cy.get('[data-cy="newGroupButton"]').click();
