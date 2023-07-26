@@ -1,4 +1,4 @@
-# Quizzes and Surveys <since project="skills-service" version="2.4" />
+# Quizzes and Surveys
 
 Quizzes and Surveys can be created and managed on the administrative side of the SkillTree Dashboard
 and seamlessly administered by associating them to [Skills](/dashboard/user-guide/self-reporting.html) or running them independently.

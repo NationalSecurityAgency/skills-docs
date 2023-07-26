@@ -53,6 +53,32 @@ You can also disable the Time Window property of a Skill, which will force each 
 - "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition (for example, prevent users from spamming an action in one sitting to max out a Skill by setting a Time Window of 1-8 hours)
 - Help Url - configure the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) for the project and then enter a path relative to that root. It will then be an easy change if the location of help articles changes. You can also author external links into the description itself if more than one external resource needs to be linked to.
 
+## Videos <since project="skills-service" version="2.8" />
+
+Externally hosted videos can be embedded into skill description and optionally configured to achieve that skill once the
+video is fully watched. To configure a video please navigate to `Project -> Subject -> Skill -> Video`   
+
+![Video Config Page](../../screenshots/admin/page-video-config.png)
+
+The only required field is `Video URL` that points to an externally hosted video (ex. `<url>.mp4`). 
+Once video is configured it will be presented on the training above the skill's description. 
+
+To make the video accessible the configuration offers ability to specify `Captions` and `Transcript` values.
+When captions are configured the video player will present an option to turn captions on or off.  
+Captions utilize [Web Video Text Tracks Format (WebVTT)](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API) format 
+and its input form offers an ability to prefill an example in WebVTT format by clicking `Add Example` button above the `Captions` input field.  
+
+### Achieve Skill By Watching the Video 
+
+Once the video's settings are specified the skill can also be configured to be achieved after the trainee watched the entire video (>96%). 
+Video-based achievements are done using [Self Reporting](/dashboard/user-guide/self-reporting.html) mechanism and can be easily 
+selected by editing that skill and selecting `Video` Self Reporting type. 
+
+::: tip
+Please note that self reporting by watching the video completes the skill therefore when `Video` type is
+selected `Occurrences to Completion` are set to `1` and cannot be mutated.
+:::
+
 ## Copy Skill
 To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page.
 This will open a new Skill dialog populated with the details of the selected copy-from Skill. The name and id will be prepended with ``Copy of`` which can be changed
@@ -246,7 +272,7 @@ on the Action button located on the top-right above the skills' table. Select th
 All the skills under a subject or group can be easily selected via the ``Select All`` button
 :::
 
-## Skill Tags  <since project="skills-service" version="2.3" />
+## Skill Tags
 
 Skill tagging is a feature that allows administrators to add one or more custom "tags" to skills.
 Adding tags to skills can help to categorize and group skills, giving users another way to search or filter a particular set of skills.
