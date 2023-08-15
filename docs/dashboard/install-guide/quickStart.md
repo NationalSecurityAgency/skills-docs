@@ -14,7 +14,7 @@ Please note that the integrating the SkillTree Client Libraries is **optional** 
   - Please note that this is not relevant if you elect to go with the Docker based install.
 - <external-url label="Git" url="https://git-scm.com/" /> version 2.23+
 - <external-url label="Node.js" url="https://nodejs.org/en/" /> v12+ and <external-url label="npm" url="https://www.npmjs.com/" /> 6+
-- <external-url label="PostgreSQL" url="https://nodejs.org/en/" /> 12+
+- <external-url label="PostgreSQL" url="https://www.postgresql.org/" /> 12+
 
 ::: tip 
 If a PosgtgreSQL database is not already available, one can easily be started using a docker container (see example below), or visit the official please documentation <external-url label="https://www.postgresql.org" url="https://www.postgresql.org" /> for other installation options.
