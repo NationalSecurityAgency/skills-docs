@@ -8,10 +8,25 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+
+## 2.9.0 <release-date date="August 2023" />
+- Videos in SkillTree
+  - Added support for uploading and hosting videos and integrated with skill's display and video-based skill achievements
+  - During configuration of a video added a clear indicator whether this skill is achievable via watching the video (`self-report=video`)
+  - In addition to watching a video to earn skill's points users are now also allowed to earn the skill's achievement by reading its transcript
+- Quiz and Survey Improvements
+  - Ability to present quiz questions and/or answers in a random order
+  - Ability to have random quiz questions chosen for each quiz attempt
+  - Added new survey star-based rating question type
+- Implemented ability to expire a skill on a specific date based on the configured re-occurring time period
+
+## 2.8.1 <release-date date="July 2023" />
+- Bug Fixes
+
 ## 2.8.0 <release-date date="July 2023" />
-- added ability to embed [training videos](/dashboard/user-guide/skills.html#videos) into skill's description
-- added ability to [achieve skill](/dashboard/user-guide/skills.html#achieve-skill-by-watching-the-video) based on watching embedded video
-- added [bonus award](/dashboard/user-guide/badges.html#bonus-award) feature to create more competitive aspect to badges
+- Added ability to embed [training videos](/dashboard/user-guide/skills.html#videos) into skill's description
+- Added ability to [achieve skill](/dashboard/user-guide/skills.html#achieve-skill-by-watching-the-video) based on watching embedded video
+- Added [bonus award](/dashboard/user-guide/badges.html#bonus-award) feature to create more competitive aspect to badges
 
 ## 2.7.2 <release-date date="July 2023" />
 - Spring Boot upgrade
