@@ -298,6 +298,11 @@ context('Generate Admin Screenshots', () => {
         cy.snap('page-video-config', '[data-cy="nav"]')
     })
 
+    it('Gen Recurring Expiration Settings page', () => {
+        cy.visit('/administrator/projects/movies/subjects/Action/skills/TheMatrix/configExpiration')
+        cy.snap('page-expiration-config', '[data-cy="nav"]')
+    })
+
     it('Badge Bonus Award Config', () => {
         cy.viewport(1800, 1200); // some modals require a lot more vertical real estate
         cy.visit('/administrator/projects/movies/badges')

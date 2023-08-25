@@ -95,6 +95,16 @@ selected, `Occurrences to Completion` are set to `1` and cannot be changed.
 If a video has a transcript configured then users will also be allowed to earn the skill by reading its transcript
 and then self-certifying to receive the credit for the skill. 
 
+## Expire Points and Achievements <since project="skills-service" version="2.9" />
+
+Skills can be configured to expire all user's points and achievements, on a scheduled and recurring basis.  For example, you can configure a skill so that *all* user's points and achievements will be removed annually on December 31st. 
+
+To configure a skill for recurring expiration, please navigate to `Project -> Subject -> Skill -> Expiration`
+
+![Expiration Config Page](../../screenshots/admin/page-expiration-config.png)
+
+By default, skills are not configured to expire any point or achievements.
+
 ## Copy Skill
 To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page.
 This will open a new Skill dialog populated with the details of the selected copy-from Skill. The name and id will be prepended with ``Copy of`` which can be changed
