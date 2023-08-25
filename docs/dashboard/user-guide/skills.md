@@ -55,13 +55,26 @@ You can also disable the Time Window property of a Skill, which will force each 
 
 ## Videos <since project="skills-service" version="2.8" />
 
-Externally hosted videos can be embedded into the skill description and optionally configured to achieve that skill once the
-video is fully watched. To configure a video, please navigate to `Project -> Subject -> Skill -> Video`   
+SkillTree supports embedding videos into the skill description and optionally configured to achieve that skill once the
+video is fully watched. You can either embed externally hosted videos OR upload a video directly into SkillTree.  
+
+- **SkillTree Hosted** <since project="skills-service" version="2.9" />: upload a video using file-upload form (Browse button) or by drag-n-dropping video files 
+  - SkillTree supported video formats are:
+    - [Webm](https://www.webmproject.org/about/) - free video format specifically created for the web 
+    - [MP4](https://en.wikipedia.org/wiki/MP4_file_format) - common video format often used in web applications
+- **Externally Hosted**: enter URL that points to a video hosted on another web server (ex. `https://someloca/.../../video.mp4`)
+
+
+To configure a video, please navigate to `Project -> Subject -> Skill -> Video`   
 
 ![Video Config Page](../../screenshots/admin/page-video-config.png)
 
-The only required field is `Video URL`, which points to an externally hosted video (ex. `<url>.mp4`). 
-Once the video is configured it will be presented on the training above the skill's description. 
+The only required field is `Video` and once the video is configured it will be presented on the training above the skill's description. 
+
+To upload a video from you computer you can click on the `Browse` button or `drag-n-drop` a video file into the video input box.
+To configure externally hosted video click on the `Switch to External Link` button then enter the URL that points to an externally hosted video. 
+Please do not forget to click `Save and Preview` button to persist the changes. 
+
 
 To make the video accessible, the configuration offers the ability to specify `Captions` and `Transcript` values.
 When captions are configured the video player will present an option to turn captions on or off.  
@@ -74,10 +87,23 @@ Once the video's settings are specified the skill can also be configured to be a
 Video-based achievements are done using [Self Reporting](/dashboard/user-guide/self-reporting.html) mechanism and can be easily 
 selected by editing that skill and selecting `Video` Self Reporting type. 
 
-::: tip
+::: tips
 Please note that self reporting by watching the video completes the skill, so when the `Video` type is
 selected, `Occurrences to Completion` are set to `1` and cannot be changed.
 :::
+
+If a video has a transcript configured then users will also be allowed to earn the skill by reading its transcript
+and then self-certifying to receive the credit for the skill. 
+
+## Expire Points and Achievements <since project="skills-service" version="2.9" />
+
+Skills can be configured to expire all user's points and achievements, on a scheduled and recurring basis.  For example, you can configure a skill so that *all* user's points and achievements will be removed annually on December 31st. 
+
+To configure a skill for recurring expiration, please navigate to `Project -> Subject -> Skill -> Expiration`
+
+![Expiration Config Page](../../screenshots/admin/page-expiration-config.png)
+
+By default, skills are not configured to expire any point or achievements.
 
 ## Copy Skill
 To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page.

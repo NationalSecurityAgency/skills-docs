@@ -84,6 +84,14 @@ answered correctly in order to get the credit.
 
 By default, users have an unlimited number of attempts to pass a quiz. You can set the maximum number of attempts to 1 or more. 
 
+#### Setting: Randomize Question Order <since project="skills-service" version="2.9" />
+
+If enabled, questions are presented in a random order each time the quiz is taken. 
+
+#### Setting: Randomize Answers Order <since project="skills-service" version="2.9" />
+
+If enabled, each question's answers are presented in a random order each time the quiz is taken.
+
 ## Survey
 
 A Survey is a data collection technique utilizing one or more questions. Surveys can be associated to a skill or can be
@@ -92,10 +100,11 @@ earn the skill and its points.
 When associated to a skill, the survey is a method to gather feedback about that skill or collect some
 pieces of important data related to the skill. 
 
-A Survey currently supports three types of questions:
+A Survey currently supports four types of questions:
 - ``Single Choice`` - question will only allow a single choice to be selected
 - ``Mulitple Choice`` - one or more choices are required to be selected  
 - ``Text Input`` - a freeform answer text is required
+- ``Rating`` - a star-based rating question with an ability configure between 3 and 10 stars  
 
 To administer a survey click the `Manage` button for that survey on the `Quizzes and Surveys` page.
 
