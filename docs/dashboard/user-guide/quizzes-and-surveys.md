@@ -75,6 +75,13 @@ A Quiz has a number of customization parameters, to customize a quiz please navi
 
 ![Quiz Single Result Page Screenshot](../../screenshots/admin/page-quiz-settings.png)
 
+#### Setting: # of Questions per Quiz Attempt <since project="skills-service" version="2.9" />
+
+When enabled, a sub-set of random questions will be presented to the user taking this quiz. 
+For example, if there are 10 questions and this setting is set to 5, then each time a user takes this quiz
+only 5 random questions will be presented for that quiz attempt. If a user fails a quiz attempt the following attempt
+will present another 5 random questions from the available question pool.
+
 #### Setting: Passing Requirement
 
 This setting adjusts the minimum number of questions required to pass this quiz. By default, all questions have to be
