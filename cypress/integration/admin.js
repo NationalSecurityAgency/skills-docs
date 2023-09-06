@@ -298,7 +298,7 @@ context('Generate Admin Screenshots', () => {
         cy.snap('page-video-config', '[data-cy="nav"]')
     })
 
-    it('Gen Recurring Expiration Settings page', () => {
+    it('Gen Expiration Settings page', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/skills/TheMatrix/configExpiration')
         cy.snap('page-expiration-config', '[data-cy="nav"]')
     })
