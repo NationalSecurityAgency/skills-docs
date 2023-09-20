@@ -99,6 +99,11 @@ If enabled, questions are presented in a random order each time the quiz is take
 
 If enabled, each question's answers are presented in a random order each time the quiz is taken.
 
+#### Setting: Quiz Time Limit <since project="skills-service" version="2.10" />
+
+If a time limit is set, users will have a specific duration to complete the quiz. 
+If they exceed the time limit, their attempt will be marked as 'Failed'.
+
 ## Survey
 
 A Survey is a data collection technique utilizing one or more questions. Surveys can be associated to a skill or can be
@@ -191,3 +196,9 @@ The Quiz/Survey Access page supports adding or removing Quiz Administrators. To 
 please navigate to ``Quiz/Survey -> Access`` page.
 
 ![Quiz Access Page Screenshot](../../screenshots/admin/page-quiz-access.png)
+
+## Activity History <since project="skills-service" version="2.10" />
+
+The Activity History feature provides a comprehensive record of all administrative changes made to this quiz/survey.
+
+<import-content path="/dashboard/user-guide/common/activity-history.html"/>

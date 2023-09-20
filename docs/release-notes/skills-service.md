@@ -9,6 +9,17 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 </conditional>
 
 
+## 2.10.0 <release-date date="Sep 2023" />
+- Added the capability to set a time limit for quizzes.
+  - If a time limit is set, users will have a specific duration to complete the quiz. If they exceed the time limit, their attempt will be marked as 'Failed'.
+- Introduced the option to motivate users by expiring skill achievements.
+  - Project administrators can configure the number of days after which a skill achievement expires.
+  - Trainees are given ample opportunity to retain their achievements.
+- Enhanced the loading indicator for uploading large videos.
+- SkillTree Dashboard now tracks and visualizes all administrative changes made to projects and quizzes.
+  - Administrators' activities are displayed on project and quiz pages, showing any modifications made to them.
+  - Admin activity can be filtered by user, action, and the item that was modified.
+
 ## 2.9.0 <release-date date="August 2023" />
 - Videos in SkillTree
   - Added support for uploading and hosting videos and integrated with skill's display and video-based skill achievements

@@ -244,5 +244,11 @@ When the link is visited, two things happen:
 The ``Share`` button is only displayed if the [Project Discoverability](/dashboard/user-guide/projects.html#setting-visibility) is configured to the ``Add to Project Catalog`` option. 
 :::
 
+## Activity History <since project="skills-service" version="2.10" />
+
+The Activity History feature provides a comprehensive record of all administrative changes made to this project.
+
+<import-content path="/dashboard/user-guide/common/activity-history.html"/>
+
 
 
