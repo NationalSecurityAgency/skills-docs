@@ -25,9 +25,9 @@ When using module bundler such as [webpack](https://webpack.js.org/) or [rollup.
 you can take advantage of module imports, for example: 
 
 ```  js
-import { SkillsConfiguration, SkillsDisplay, SkillsReporter } from '@skilltree/skills-client-js';
+import { SkillsConfiguration, SkillsDisplayJS, SkillsReporter } from '@skilltree/skills-client-js';
  
-// code using SkillsConfiguration, SkillsDisplay and SkillsReporter
+// code using SkillsConfiguration, SkillsDisplayJS and SkillsReporter
 // examples in the following sections
  ```
 
