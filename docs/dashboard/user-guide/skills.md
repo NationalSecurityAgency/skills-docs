@@ -103,11 +103,11 @@ To configure a skill for expiration, please navigate to `Project -> Subject -> S
 
 ![Expiration Config Page](../../screenshots/admin/page-expiration-config.png)
 
-The default option for all skills is set to `Never`, so that the skill never expire any points or achievements.
+The default option for all skills is set to `Never`, so that the skill will never expire any points or achievements.
 
 The `Yearly` and `Monthly` options allow for the skill to be configured to expire on a recurring basis.  For example, you can configure a skill so that *all* user's points and achievements earned for this skill will be removed annually on December 31st.  
 
-The `Daily with the ability to retain` option allows for the skill to be configured based on usage. This option requires the user to continue to exercise the skill after achieving it in order to avoid losing their points. Once a user achieves the skill, 
+The `Daily with the ability to retain` option allows for the skill to be configured to expire based on usage. This option requires the user to continue to exercise the skill after achieving it in order to avoid losing their points. Once a user achieves the skill, 
 the user must perform the skill at least once within the number of days configured.  After performing the skill, the "timer" will be reset and the user will once again be required to perform the skill within the configured number of days to avoid losing the points they have earned since achieving this skill.
 
 Skills that are configured to expire will have warnings visualized in the Skills Display, letting the user know when the skill will is set to expire.
