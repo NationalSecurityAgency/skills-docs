@@ -97,13 +97,20 @@ and then self-certifying to receive the credit for the skill.
 
 ## Expire Points and Achievements <since project="skills-service" version="2.9" />
 
-Skills can be configured to expire all user's points and achievements, on a scheduled and recurring basis.  For example, you can configure a skill so that *all* user's points and achievements will be removed annually on December 31st. 
+Skills can be configured to expire points and achievements on either a scheduled and recurring basis for all users, or based on usage *after* a user achieves the skill.  
 
-To configure a skill for recurring expiration, please navigate to `Project -> Subject -> Skill -> Expiration`
+To configure a skill for expiration, please navigate to `Project -> Subject -> Skill -> Expiration`
 
 ![Expiration Config Page](../../screenshots/admin/page-expiration-config.png)
 
-By default, skills are not configured to expire any point or achievements.
+The default option for all skills is set to `Never`, so that the skill will never expire any points or achievements.
+
+The `Yearly` and `Monthly` options allow for the skill to be configured to expire on a recurring basis.  For example, you can configure a skill so that *all* user's points and achievements earned for this skill will be removed annually on December 31st.  
+
+The `Daily with the ability to retain` option allows for the skill to be configured to expire based on usage. This option requires the user to continue to exercise the skill after achieving it in order to avoid losing their points. Once a user achieves the skill, 
+the user must perform the skill at least once within the number of days configured.  After performing the skill, the "timer" will be reset and the user will once again be required to perform the skill within the configured number of days to avoid losing the points they have earned since achieving this skill.
+
+Skills that are configured to expire will have warnings visualized in the Skills Display, letting the user know when the skill will is set to expire.
 
 ## Copy Skill
 To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page.
