@@ -82,7 +82,7 @@ There are two possible values for the Project Description setting:
 1. Percentage based - levels are calculated based on configured percentages of total available points (ex. Level 1 = 10% of total points)
 1. Point based - project admins specify start and end point values for each level
 
-By default the Percentage based strategy is configured, changing the ``Use Points For Levels`` setting to ``true`` enables Point Based explicit level point management. To learn more please see the [Levels](/dashboard/user-guide/levels.html) section.
+By default, the Percentage based strategy is configured, changing the ``Use Points For Levels`` setting to ``true`` enables Point Based explicit level point management. To learn more please see the [Levels](/dashboard/user-guide/levels.html) section.
 
 ::: warning
 You must define at least 100 points for a project before switching to point-based levels management

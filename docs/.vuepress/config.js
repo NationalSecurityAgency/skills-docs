@@ -129,12 +129,10 @@ sidebar = sidebar.concat([{
         collapsable: true,
         children: [
             '/skills-client/',
-            '/skills-client/vuejs',
-            '/skills-client/react',
-            '/skills-client/angular',
             '/skills-client/js',
             '/skills-client/auth',
             '/skills-client/endpoints',
+            '/skills-client/legacy',
         ]
     }, {
         title: 'Open Source Contributions',

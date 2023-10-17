@@ -85,9 +85,7 @@ the ability to integrate a gamified training into an existing/new web-applicatio
 To facilitate rapid application incorporation, the platform provides the following services, components, and libraries:
 - **Display Libraries:** Pluggable and fully interactive user skill and ranking visualization
     - Customize and use the display component in your application within minutes.
-    - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
 - **Skill Event Reporting Libraries:** Easily integrate your application by reporting skill events to the centralized service.
-    - Out-of-the-box support for Vue.js, React, Angular and pure JavaScript
 
 ::: tip Skills Display  
 Please note that SkillTree has taken an innovative approach by providing a pluggable and fully interactive user progress and ranking visualization (named Skills Display)

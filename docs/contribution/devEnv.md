@@ -293,12 +293,9 @@ cd skills-client
 
 skills-client is an assembly of projects that build JS client libraries AND integration tests that enable comprehensive testing of these libraries:
 
-- **skills-client-js:** pure JS implementation, please see [Pure JS Integration Guide](/skills-client/js.html#pure-js-integration) to understand how these artifacts are utilized by a SkillTree integrator
-  - Majority of client code resides here, framework specific libraries are minimal wrappers around this pure JS implementation
-  - Provides support for [Skill Event Reporting](/skills-client/js.html#skills-event-reporting), [Skills Display](/skills-client/js.html#skills-display) as well as [Skills Configuration](/skills-client/js.html#skills-configuration)
-- **skills-client-vue:** provides native support for Vue.js applications. This is a thin wrapper around skills-client-js; please see [Vue.js Integration Guide](/skills-client/vuejs.html) to understand how this library is utilized by a SkillTree integrator
-- **skills-client-react:** provides native support for React applications. This is a thin wrapper around skills-client-js; please see [React Integration Guide](/skills-client/react.html) to understand how this library is utilized by a SkillTree integrator
-- **skills-client-angular:** provides native support for Angular applications. This is a thin wrapper around skills-client-js; please see [Angular Integration Guide](/skills-client/angular.html) to understand how this library is utilized by a SkillTree integrator    
+- **skills-client-js:** client app implementation, please see [Pure JS Integration Guide](/skills-client/js.html#pure-js-integration) to understand how these artifacts are utilized by a SkillTree integrator
+  - Majority of client code resides here, framework specific libraries are minimal wrappers around this client implementation
+  - Provides support for [Skill Event Reporting](/skills-client/js.html#skills-event-reporting), [Skills Display](/skills-client/js.html#skills-display) as well as [Skills Configuration](/skills-client/js.html#skills-configuration) 
 - **skills-client-integration:** integration tests that enable comprehensive testing of skills-client-js and all of the framework specific libraries.
   - A set of web-applications that integrate and exercise these skills client libraries
   - Cypress tests that utilize these applications to end-to-end test functionality of the skills client libraries
@@ -392,8 +389,6 @@ skills-client
 
 Here is an explanation for each project:
 - **skills-int-client-js**: Web application that depends on the skills-client-js artifact and mimics its real world usage
-- **skills-int-client-react**: Web application that depends on the skills-client-react artifact and mimics its real world usage
-- **skills-int-client-vue**: Web application that depends on the skills-client-vue artifact and mimics its real world usage
 - **skills-int-service**: Pulls together all the web applications (skills-int-client-js, skills-int-client-vue, etc.) and exposes a web server to serve these applications. [Cypress.io](https://www.cypress.io/) tests execute tests against this service.  
 - **skills-int-e2e-test**: [Cypress.io](https://www.cypress.io/) tests that utilize skills-int-service to perform thorough end-to-end tests of the integrated libraries.  
 
@@ -493,9 +488,7 @@ Here is the summary of each client lib and its corresponding integration app.
 
 | client lib | corresponding integration app | 
 | ------------- | -----------  | 
-| skills-client-js | skills-int-client-js | 
-| skills-client-vue | skills-int-client-vue | 
-| skills-client-react | skills-int-client-vue | 
+| skills-client-js | skills-int-client-js |
 
 ::: tip
 Please note that you can start the development server from an integration app by executing ``npm run serve``.
@@ -550,8 +543,6 @@ The [Cypress.io](https://www.cypress.io/) dev console command depends on which i
 | integration app | command | 
 | ------------- | -----------  |    
 | skills-int-client-js | npm run cy:open:dev:js | 
-| skills-int-client-vue | npm run cy:open:dev:vue | 
-| skills-int-client-react | npm run cy:open:dev:react | 
 
 ### Test Checklist
 Once you are done developing and writing tests then please follow these steps to run all the tests:

@@ -1,4 +1,4 @@
-# Pure JS Integration
+# Client App Integration
 
 To install client libraries using npm:
 

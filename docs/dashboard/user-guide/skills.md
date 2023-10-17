@@ -132,10 +132,7 @@ Here are simple steps to enable Skills Versioning in your application:
 1. When creating a skill, specify a target version (always last deployed version + 1)
    - Version selection can be found on the top-right in the create/edit skills dialogue
 1. When initializing the display component, provide the latest target version for that instance. 
-   - [Vue.Js](/skills-client/#vue-js)  
-   - [React](/skills-client/#react)
-   - [Angular](/skills-client/#angular)
-   - [Pure JavaScript](/skills-client/#pure-javascript)
+   - [Client Integration](/skills-client/#pure-javascript)
 
 
 Let's walk through a simple scenario to get a better understanding of how Skill Versioning operates. 
