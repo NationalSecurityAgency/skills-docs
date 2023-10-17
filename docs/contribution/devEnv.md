@@ -306,13 +306,6 @@ skills-client
 └───skills-client-js
 |   │   package.json
 |   |   ....
-└───skills-client-react
-|   │   pom.xml
-|   │   package.json
-|   |   ....
-└───skills-client-vue
-|   │   package.json
-|   |   ....
 └───skills-client-integration
 │   │   pom.xml
 ```
@@ -321,14 +314,6 @@ To build client libraries and run their unit tests:
 
 ```bash
 cd skills-client-js
-npm install
-npm run build
-
-cd ../skills-client-react
-npm install
-npm run build
-
-cd ../skills-client-vue
 npm install
 npm run build
 ```
@@ -353,7 +338,7 @@ The next section will break this process down in detail.
 There are a number of challenges when integration testing client libraries. 
 These JS libraries themselves don't present an executable artifact since the purposes of them is to be utilized by the external web applications.
 
-To enable end-to-end testing of skills-client-js and all of the framework specific libraries, we developed a set of web-applications that integrate and exercise these libraries. 
+To enable end-to-end testing of skills-client-js, we developed a set of web-applications that integrate and exercise these libraries. 
 These applications mimic real world integration and usage scenarios. 
 [cypress.io](https://www.cypress.io/) is then used to execute numerous end-to-end tests against these web applications, ensuring that these libraries properly work in an integrated environment.  
    
@@ -365,14 +350,6 @@ skills-client
 └───skills-client-integration
 │   │   pom.xml
 |   └───skills-int-client-js
-|   │   │   package.json
-|   │   │   pom.xml
-|   |   └───target
-|   └───skills-int-client-react
-|   │   │   package.json
-|   │   │   pom.xml
-|   |   └───target
-|   └───skills-int-client-vue
 |   │   │   package.json
 |   │   │   pom.xml
 |   |   └───target
@@ -389,7 +366,7 @@ skills-client
 
 Here is an explanation for each project:
 - **skills-int-client-js**: Web application that depends on the skills-client-js artifact and mimics its real world usage
-- **skills-int-service**: Pulls together all the web applications (skills-int-client-js, skills-int-client-vue, etc.) and exposes a web server to serve these applications. [Cypress.io](https://www.cypress.io/) tests execute tests against this service.  
+- **skills-int-service**: Pulls together the web application (skills-int-client-js) and exposes a web server to serve these applications. [Cypress.io](https://www.cypress.io/) tests execute tests against this service.  
 - **skills-int-e2e-test**: [Cypress.io](https://www.cypress.io/) tests that utilize skills-int-service to perform thorough end-to-end tests of the integrated libraries.  
 
 To run [cypress.io](https://www.cypress.io/) tests you will need to 
@@ -455,36 +432,28 @@ npm run dev:setupNpmLinks
 ```     
 
 Now that links are  established you will be able to make changes to multiple JS projects then build them and see those changes persist. 
-For example ``skills-int-client-vue`` depends on ``skills-client-vue``, we can make a code change and see it right away:
+For example ``skills-int-client-js`` depends on ``skills-client-js``, we can make a code change and see it right away:
 
 Terminal 1:
 ```bash
-cd skills-client/skills-client-integration/skills-int-client-vue
+cd skills-client/skills-client-integration/skills-int-client-js
 npm run serve
-# view dev server on http://localhost:8091/vuejs/
+# view dev server on http://localhost:8091/
 ```
-Then make a code change in ``skills-client/skills-client-vue``, followed by in 
+Then make a code change in ``skills-client/skills-client-js``, followed by in 
 
 Terminal 2:  
 ```bash 
-cd skills-client/skills-client-vue
+cd skills-client/skills-client-js
 npm run build
 ```
 
-The change is automatically reflected in the dev server hosted on ``http://localhost:8091/vuejs/`` 
+The change is automatically reflected in the dev server hosted on ``http://localhost:8091/`` 
 
-What happened is that ``npm run build`` in  ``skills-client-vue``  created js artifacts in its ``dist`` directory and
-``skills-int-client-vue`` points to that directory using the ``npm-link`` mechanism. 
+What happened is that ``npm run build`` in  ``skills-client-js``  created js artifacts in its ``dist`` directory and
+``skills-int-client-js`` points to that directory using the ``npm-link`` mechanism. 
 
-::: tip Dependency Chain
-Keep in mind that some of the projects have 2 levels of dependencies, for example 
-``skills-int-client-vue`` depends on ``skills-client-vue`` which depends on ``skills-client-js``.
-If you made a change in ``skills-client-js`` and want to propagate it up to ``skills-int-client-vue`` you will need to
-1. execute ``npm run build`` in ``skills-client-js`` 
-1. execute ``npm run build`` in ``skills-client-vue``.
-:::
-
-Here is the summary of each client lib and its corresponding integration app. 
+Here is the summary of the client lib and its corresponding integration app. 
 
 | client lib | corresponding integration app | 
 | ------------- | -----------  | 
@@ -524,10 +493,7 @@ npm run serve
 cd skills-client/skills-client-integration/skills-int-e2e-test
 npm run cy:open:dev:js
 ```
-:::tip
-If you are working on a different client library, the ``cy:open:dev:`` command will be different,
-for example, if you are working on skills-client-vue, you would run ``cy:open:dev:vue``
-:::
+
 - run the test that corresponds to the integration app you are working on (in this case that would be ``js.specs.js```).
 - write new [cypress.io](https://www.cypress.io/) tests
 :::tip
