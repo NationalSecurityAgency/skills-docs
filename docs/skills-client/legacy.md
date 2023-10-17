@@ -1,6 +1,8 @@
 # Legacy Frameworks
 
-While now deprecated, here is the documentation for legacy integration frameworks.
+::: danger Deprecated
+Legacy frameworks are deprecated as of 10/2023 and will no longer receive updates.  You may continue to use them but they are not guaranteed to work with future versions of your chosen library.
+:::
 
 ## Angular Integration
 
