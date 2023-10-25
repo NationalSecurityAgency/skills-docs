@@ -21,8 +21,5 @@ Client libraries hosted on <external-url label="npmJS.com" url="https://www.npmj
 <conditional visibilityFlag="noExternalLinks" :visibility-value="false">
 
 - [Native JS Client Library](https://www.npmjs.com/package/@skilltree/skills-client-js)
-- [Vue.js Client Library](https://www.npmjs.com/package/@skilltree/skills-client-vue)
-- [React Client Library](https://www.npmjs.com/package/@skilltree/skills-client-react)
-- [Angular Client Library](https://www.npmjs.com/package/@skilltree/skills-client-ng)
 
 </conditional>

@@ -1,7 +1,11 @@
 # Legacy Frameworks
 
 ::: danger Deprecated
-Legacy frameworks are deprecated as of 10/2023 and will no longer receive updates.  You may continue to use them but they are not guaranteed to work with future versions of your chosen library.
+Legacy frameworks are deprecated as of 10/2023 and will no longer receive updates.  The wrappers did not
+add significant functionality and were becoming increasingly tim consuming to maintain and upkeep as newer
+versions were released.  You may continue to use them, but they are not guaranteed to work with future versions of your chosen library.
+
+We suggest using the [Native JS library](/skills-client/js.md) instead.
 :::
 
 ## Angular Integration
@@ -14,8 +18,8 @@ npm install @skilltree/skills-client-ng --save
 
 This JS library contains:
 1. Skills Configuration - Global configuration used by Skills utilities.
-1. Skills Display - Visualize your website users' skill profile
-1. Skill Event Reporting - Report skill events using JS utility
+2. Skills Display - Visualize your website users' skill profile
+3. Skill Event Reporting - Report skill events using JS utility
 
 ### Skills Configuration
 
