@@ -8,6 +8,12 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 2.11.0 <release-date date="Oct 2023" />
+- Added new project admin view to visualize history of expired skill achievements
+- Removed tracking of "Skill Events" from Admin Activity
+- Migrated dashboard to use skills-client-js
+- Upgraded spring boot to v3.1.4
+- Bug Fixes
 
 ## 2.10.0 <release-date date="Sep 2023" />
 - Added the capability to set a time limit for quizzes.
