@@ -112,6 +112,11 @@ the user must perform the skill at least once within the number of days configur
 
 Skills that are configured to expire will have warnings visualized in the Skills Display, letting the user know when the skill will is set to expire.
 
+### Expiration History <since project="skills-service" version="2.11" />
+
+A history of skills that have been expired can be viewed from the `Skill Expiration History` table on the `Project` page.
+This table will allow you to view the skill, the user associated and the date it expired.
+
 ## Copy Skill
 To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page.
 This will open a new Skill dialog populated with the details of the selected copy-from Skill. The name and id will be prepended with ``Copy of`` which can be changed
