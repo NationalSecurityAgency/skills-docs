@@ -10,6 +10,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 ## 2.11.0 <release-date date="Oct 2023" />
 - Added new project admin view to visualize history of expired skill achievements
+- Display when a skill expired on the Skills Display
 - Removed tracking of "Skill Events" from Admin Activity
 - Migrated dashboard to use skills-client-js
 - Upgraded spring boot to v3.1.4
