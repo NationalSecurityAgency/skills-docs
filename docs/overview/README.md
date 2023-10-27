@@ -10,7 +10,7 @@ enables organizations to use SkillTree as an `All in one training platform.` It 
 We here at SkillTree believe that a Gamification based training significantly simplifies the training process while making the process more enjoyable for the user community.
 :::
 
-Gamification training empower users to master features in a fun a way.
+Gamification training empowers users to master features in a fun a way.
 - A Gamification based strategy sets up friendly competition which provides strong motivation to continue learning; the motivation comes from points being awarded to users for performing desired actions within an application; other examples of motivators are the ability to achieve the next level or earn a badge while competing against your peers.
 - Applications that implement Gamificaton for training see their users start using a wider range of available features in a more sophisticated fashion.
 - This strategy encourages continued user engagement. Local Experts lead to a reduction in support costs by reducing the need for formal training sessions.
@@ -61,12 +61,12 @@ the [Integration Guide](/skills-client/)
 
 ## Features
 
-SkillTree Platform enables a number of gamified features when building out a training profile but here is a quick sample
-to give you a taste: 
+SkillTree Platform enables a number of gamified features when building out a training profile. 
+For example: 
 
 - **Ability to create 100s of training profiles** - a training profile is called a Project
 - **Level up!** - users progress and earn levels in a Project
-- **Arrange skills under Subjects** - a way to group and organize skill definitions within a gameified training profile.
+- **Arrange skills under Subjects** - a way to group and organize skill definitions within a gamified training profile.
 - **Badges** - further reward your users by providing these prestigious symbols
 - **Self Reporting** - users can self report completion with mutliple handling strategies including Approval Queues and an Honor System
 - **Skills Catalog** - skills can be exported to the Catalog which makes those skills available for re-use in other projects
@@ -176,7 +176,7 @@ The Dashboard provides the capability to create and administer Projects, Subject
 a user's progress for any projects. 
 
 A Project is composed of Subjects which are made of Skills and a single skill defines a training unit within the
-gamification framework. Subjects are a way to group and organize skill definitions within a gameified training profile.
+gamification framework. Subjects are a way to group and organize skill definitions within a gamified training profile.
 The screenshot below demonstrates the dashboard's page to create and manage subjects: 
 ![SkillTree Dashboard Subjects](../screenshots/admin/page-subjects.png)
 
@@ -198,7 +198,7 @@ skill or can be executed independently. Associating a Quiz to an existing skill 
 that Quiz in order to earn the skill and its points. The screenshot below shows the management of a quiz in the dashboard:
 ![SkillsTree Quiz Screenshot](../screenshots/admin/page-quiz.png)
 
-Levels are users' achievement path - the overall goal of the gameified training profile is to encourage users to achieve
+Levels are users' achievement path - the overall goal of the gamified training profile is to encourage users to achieve
 the highest level. Levels are tracked for the entire project as well as for each subject which provides users many ways
 to progress forward.
 The screenshot below demonstrates the management of levels in the dashboard:
