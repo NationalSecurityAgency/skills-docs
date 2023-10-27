@@ -15,25 +15,11 @@
                   <p class="text-white">Pluggable user skill and ranking visualization - customize and use the
                     display component
                     in your application within minutes.</p>
-                  <div class="mb-2">Out-of-the-box support for:</div>
                   <div class="d-flex d-sm-block ml-sm-2 justify-content-center">
-                    <div class="text-left" style="max-width: 10rem;">
-                      <div class="row no-gutters">
-                        <div class="col-auto"><i class="fab fa-vuejs fa-2x"></i></div>
-                        <div class="col"><a href="https://vuejs.org/" target="_blank" class="font-weight-bold text-white">Vue.js</a></div>
-                      </div>
-                      <div class="row no-gutters">
-                        <div class="col-auto"><i class="fab fa-react fa-2x"></i></div>
-                        <div class="col"><a href="https://reactjs.org/" target="_blank" class="font-weight-bold text-white">React</a></div>
-                      </div>
-                      <div class="row no-gutters">
-                        <div class="col-auto"><i class="fab fa-angular fa-2x"></i></div>
-                        <div class="col"><a href="https://angular.io/" target="_blank" class="font-weight-bold text-white">Angular</a></div>
-                      </div>
+                    <div class="text-left" style="max-width: 16rem;">
                       <div class="row no-gutters">
                         <div class="col-auto"><i class="fab fa-js fa-2x"></i></div>
-                        <div class="col"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="font-weight-bold text-white">Pure
-                          JavaScript</a></div>
+                        <div class="col">Implemented in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="font-weight-bold text-white">JavaScript</a></div>
                       </div>
                     </div>
                   </div>

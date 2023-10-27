@@ -16,7 +16,7 @@ SkillTree's skills-service is then configured to use PostgeSQL and Stomp Brokers
 
 ![Dashboard with Integrated Application](./diagrams/SkillsServiceArchitecture.jpg) 
 
-Integrated clients utilize skills-client libs (Vue.js, react, etc..) posted on the public NPM repositories. 
+Integrated clients utilize skills-client libs posted on the public NPM repositories. 
 These libraries are very thin wrappers around an iFrame tag, they simply retrieve the Skills Display app and its associated data from the skills-service.
 What that means is that the Skills Display is served as its own web-based application from the skills-service and then inserted into an iFrame tag on the client's browser. 
 Of course all of these details are 100% hidden from the skills-client library users. 

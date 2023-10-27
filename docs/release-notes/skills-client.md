@@ -1,6 +1,6 @@
 # Client Libraries Release Notes
 
-This page documents high-level release notes for <external-url label="SkillTree Client" url="https://github.com/NationalSecurityAgency/skills-client" /> libraries - Vue.js, React, Angular, and Native JS libraries used by the SkillTree integrated applications
+This page documents high-level release notes for <external-url label="SkillTree Client" url="https://github.com/NationalSecurityAgency/skills-client" /> libraries - JS libraries used by the SkillTree integrated applications
 
 <conditional visibilityFlag="showInstallGuide">
 
