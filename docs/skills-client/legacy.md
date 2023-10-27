@@ -2,7 +2,7 @@
 
 ::: danger Deprecated
 Legacy frameworks are deprecated as of 10/2023 and will no longer receive updates.  The wrappers did not
-add significant functionality and were becoming increasingly tim consuming to maintain and upkeep as newer
+add significant functionality and were becoming increasingly time consuming to maintain and upkeep as newer
 versions were released.  You may continue to use them, but they are not guaranteed to work with future versions of your chosen library.
 
 We suggest using the [Native JS library](/skills-client/js.md) instead.
