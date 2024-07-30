@@ -27,3 +27,4 @@ package-lock.json
 /docs/.vuepress/public/img/average_accessibility_score.svg
 
 cypress/videos/**
+cypress/screenshots/**

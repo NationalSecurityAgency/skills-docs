@@ -23,25 +23,25 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import {addMatchImageSnapshotCommand} from 'cypress-image-snapshot/command';
-
-addMatchImageSnapshotCommand();
-
-Cypress.Commands.add('closeToasts', () => {
-    cy.get('body').then((body) => {
-        if (body.find('header.toast-header').length > 0) {
-            cy.get('button.close').click({ multiple: true, force: true });
-        }
-    });
-});
 
 Cypress.Commands.add('snap', (name, selector = null, options = {}) => {
-    cy.closeToasts();
     cy.wait(1500);
+    let snapLoc = name;
+    if (Cypress.currentTest.titlePath[0].includes('Admin:')) {
+        snapLoc = `admin/${snapLoc}`
+    } else if (Cypress.currentTest.titlePath[0].includes('Progress and Ranking:')) {
+        snapLoc = `progress-and-ranking/${snapLoc}`
+    }
+    cy.log(`Screenshot: ${snapLoc} checked [${Cypress.currentTest.titlePath[0]}]`)
+    const updatedOptions = {
+        overwrite: true,
+        disableTimersAndAnimations: false,
+        ...options
+    }
     if (selector) {
-        cy.get(selector).matchImageSnapshot(name, options);
+        cy.get(selector).screenshot(snapLoc, updatedOptions)
     } else {
-        cy.matchImageSnapshot(name, options);
+        cy.screenshot(snapLoc, updatedOptions)
     }
 });
 
@@ -51,13 +51,11 @@ Cypress.Commands.add('login', () => {
     cy.get('[id="inputPassword"]').type('password');
     cy.get('[data-cy="login"]').should('be.enabled')
     cy.get('[data-cy="login"]').click({force: true});
-    cy.contains('Progress and Ranking');
+    cy.contains('Progress And Rankings');
 });
 
 Cypress.Commands.add('clickNav', (navName) => {
     cy.get(`[data-cy="nav-${navName}"]`).click();
-    // click away to remove focus from the nav
-    cy.get('.page-footer').click();
 });
 
 Cypress.Commands.add("clientDisplay", (firstVisit = false, project = 'movies') => {
@@ -113,3 +111,12 @@ Cypress.Commands.add("createProject", (projNum = 1, overrideProps = {}) => {
         name: `This is project ${projNum}`
     }, overrideProps));
 });
+
+Cypress.Commands.add('selectItem', (selector, item, openPicker = true, autoCompleteDropdown = false) => {
+    if (openPicker) {
+        const trigger = autoCompleteDropdown ? '[data-pc-name="dropdownbutton"]' : '[data-pc-section="trigger"]';
+        const itemToSelect = `${selector} ${trigger}`;
+        cy.get(itemToSelect).click();
+    }
+    cy.get('[data-pc-section="item"]').contains(item).click();
+})
