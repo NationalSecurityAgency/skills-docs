@@ -23,7 +23,9 @@ Change this setting to true and you will not be shown on the Leaderboard or assi
 
 ### Setting: Dark Mode <since project="skills-service" version="3.0" />
 
-Enabling Dark Mode will switch UI into light-on-dark color scheme. 
+Enabling Dark Mode will switch UI into light-on-dark color scheme. For example:
+
+![page-projects-dark-mode.png](../../screenshots/admin/page-projects-dark-mode.png)
 
 ## Security Settings <requires-role role="Root" />
 

@@ -22,6 +22,29 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('modal-projects-new_project', '.p-dialog')
     })
 
+    it('Gen Projects pages - dark mode', () => {
+        cy.request('POST', '/app/userInfo/settings', [{
+            'settingGroup': 'user.prefs',
+            'value': true,
+            'setting': 'enable_dark_mode',
+            'lastLoadedValue': 'true',
+            'dirty': true
+        }]);
+        // projects page
+        cy.visit('/administrator')
+        cy.get('[data-cy="projectCard_movies"]');
+        cy.get('[data-cy="projectCard_shows"]');
+        cy.snap('page-projects-dark-mode');
+
+        cy.request('POST', '/app/userInfo/settings', [{
+            'settingGroup': 'user.prefs',
+            'value': false,
+            'setting': 'enable_dark_mode',
+            'lastLoadedValue': 'true',
+            'dirty': true
+        }]);
+    })
+
     it('Gen Subject page with custom viewport', () => {
         // use custom ratio
         cy.viewport(1350, 800);
