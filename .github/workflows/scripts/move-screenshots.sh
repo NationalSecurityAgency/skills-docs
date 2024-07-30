@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IN_DIR="cypress/snapshots/"
+IN_DIR="cypress/screenshots/"
 OUT_DIR="docs/screenshots"
 
 rm -rf ${OUT_DIR}
