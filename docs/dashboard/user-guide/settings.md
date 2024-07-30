@@ -6,12 +6,26 @@ Administration settings can be accessed by users via the ```Settings``` menu ent
 Please note that number of settings' section are only visible to users with the [Root](/dashboard/user-guide/users.html#root) role. 
 
 ## Preferences
-Ability to customize your personal user preference:
+Ability to customize your personal user preference, including: 
+- Default Home/Landing Page
+- Ability to opt-out from Ranking and Leaderboards
+- Enabling and/or disabling UI Dark Mode
+
+![User Preferences](../../screenshots/admin/page-settings-preference.png)
+
+### Setting: Default Home Page
+
+Users have a choice of a default landing page. If the majority of time is spent administrating SkillTree projects then it makes sense to change the default to the `Project Admin`. 
 
 ### Setting: Rank and Leader Opt-Out
 
 Change this setting to true and you will not be shown on the Leaderboard or assigned a rank for all projects. 
 
+### Setting: Dark Mode <since project="skills-service" version="3.0" />
+
+Enabling Dark Mode will switch UI into light-on-dark color scheme. For example:
+
+![page-projects-dark-mode.png](../../screenshots/admin/page-projects-dark-mode.png)
 
 ## Security Settings <requires-role role="Root" />
 
