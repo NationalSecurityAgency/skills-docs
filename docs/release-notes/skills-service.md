@@ -8,7 +8,46 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
-## 2.11.0 <release-date date="Oct 2023" />
+## 3.0.0 <release-date date="July 2024" />
+- Upgrade to dashboard and skills-display UI to Vue 3
+- Added [Dark Mode](/dashboard/user-guide/settings.html#setting-dark-mode)
+- Bug fixes
+
+## Release History
+
+### 2.X Releases
+
+#### 2.12.6 <release-date date="June 2024" />
+- Bug Fixes
+
+#### 2.12.5 <release-date date="June 2024" />
+- Bug Fixes
+
+#### 2.12.4 <release-date date="June 2024" />
+- Bug Fixes
+
+#### 2.12.3 <release-date date="Apr 2024" />
+- Bug Fixes
+
+#### 2.12.2 <release-date date="Apr 2024" />
+- Bug Fixes
+
+#### 2.12.1 <release-date date="Apr 2024" />
+- Upgraded spring boot
+- Bug Fixes
+
+#### 2.12.0 <release-date date="Dec 2023" />
+- Added First Name and Last Name columns to users table and Invites Pending Acceptance table
+- Upgraded spring boot to v3.1.6
+- Bug Fixes and Improvements
+
+#### 2.11.2 <release-date date="Nov 2023" />
+- bug fixes
+
+#### 2.11.1 <release-date date="Nov 2023" />
+- bug fixes
+
+#### 2.11.0 <release-date date="Oct 2023" />
 - Added new project admin view to visualize history of expired skill achievements
 - Display when a skill expired on the Skills Display
 - Removed tracking of "Skill Events" from Admin Activity
@@ -16,7 +55,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Upgraded spring boot to v3.1.4
 - Bug Fixes
 
-## 2.10.0 <release-date date="Sep 2023" />
+#### 2.10.0 <release-date date="Sep 2023" />
 - Added the capability to set a time limit for quizzes.
   - If a time limit is set, users will have a specific duration to complete the quiz. If they exceed the time limit, their attempt will be marked as 'Failed'.
 - Introduced the option to motivate users by expiring skill achievements.
@@ -27,7 +66,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
   - Administrators' activities are displayed on project and quiz pages, showing any modifications made to them.
   - Admin activity can be filtered by user, action, and the item that was modified.
 
-## 2.9.0 <release-date date="August 2023" />
+#### 2.9.0 <release-date date="August 2023" />
 - Videos in SkillTree
   - Added support for uploading and hosting videos and integrated with skill's display and video-based skill achievements
   - During configuration of a video added a clear indicator whether this skill is achievable via watching the video (`self-report=video`)
@@ -38,40 +77,40 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
   - Added new survey star-based rating question type
 - Implemented ability to expire a skill on a specific date based on the configured re-occurring time period
 
-## 2.8.1 <release-date date="July 2023" />
+#### 2.8.1 <release-date date="July 2023" />
 - Bug Fixes
 
-## 2.8.0 <release-date date="July 2023" />
+#### 2.8.0 <release-date date="July 2023" />
 - Added ability to embed [training videos](/dashboard/user-guide/skills.html#videos) into skill's description
 - Added ability to [achieve skill](/dashboard/user-guide/skills.html#achieve-skill-by-watching-the-video) based on watching embedded video
 - Added [bonus award](/dashboard/user-guide/badges.html#bonus-award) feature to create more competitive aspect to badges
 
-## 2.7.2 <release-date date="July 2023" />
+#### 2.7.2 <release-date date="July 2023" />
 - Spring Boot upgrade
 - Bug Fixes
 
-## 2.7.1 <release-date date="June 2023" />
+#### 2.7.1 <release-date date="June 2023" />
 - Bug Fixes
 
-## 2.7.0 <release-date date="June 2023" />
+#### 2.7.0 <release-date date="June 2023" />
 - Ability to [add multiple skills to a Badge](/dashboard/user-guide/badges.html#adding-multiple-skill-to-a-badge) 
 - Implemented shortcuts for all the [Description Editor's](/dashboard/user-guide/rich-text-editor.html) features
 - Bug Fixes
 
-## 2.6.0 <release-date date="May 2023" />
+#### 2.6.0 <release-date date="May 2023" />
 - Implemented ability for admins to configure a Learning Path using skills and badges as prerequisites for other skills and/or badges
 - Added ability to filter the users tables by a user's completion percentage
 - Implemented a new look-and-feel for Progress & Ranking landing page
 - Removed "Discoverable" and "Manage My Projects" to consistent usage of "Projects Catalog"
 
-## 2.5.0 <release-date date="April 2023" />
+#### 2.5.0 <release-date date="April 2023" />
 - Implemented Quiz and Survey result displays with the metrics for questions and answers
 - Enhanced Quiz/Survey runs with user metrics
 - Improved skill filter on Skills Display to include all self report types (Approval, Honor System, Quiz and Survey)
 - Added ability to contact project's administrators from `Manage My Projects` page (aka. projects catalog)
 - Implemented extra level of resiliency to preserve quiz and question attributes (ex. description) by utilizing Browser's IndexedDB storage
 
-## 2.4.0 <release-date date="March 2023" />
+#### 2.4.0 <release-date date="March 2023" />
 - Added ability to create and manage [Quizzes and Surveys](/dashboard/user-guide/quizzes-and-surveys.html) and seamlessly administer by associating to the Skills or by running independently
   - Association of a `Quiz` or a `Survey` to an existing skill requires successful completion of that Quiz/Survey in order to earn the skill and its points
   - `Quiz` supports _Single Choice_ and _Multiple Choice_ questions
@@ -91,7 +130,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - On the badge page, added `Live` status and, if applicable, a `Go Live` button
 
 
-## 2.3.0 <release-date date="Dec. 2022" />
+#### 2.3.0 <release-date date="Dec. 2022" />
 - Ability to **split self-approval workload** between multiple Approvers or Admins
   - An approver can be assigned to handle requests from specific users
   - An approver can be assigned to approve specific skills
@@ -105,11 +144,6 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Enhanced Dashboard's gamified training - updated descriptions, added new skills and created 6 new badges!
 - Added ability to clear all the skill events for a user
   - The action effectively removes the user from that project and all of its views
-
-
-## Release History
-
-### 2.2.X Releases
 
 #### 2.2.3 <release-date date="Nov. 2022" />
 - Big Fixes
@@ -137,8 +171,6 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
   - allows to revoke, remind and extends invites 
 - Bug Fixes
 
-### 2.1.X Releases
-
 #### 2.1.3 <release-date date="Oct. 2022" />
 - Bug Fixes
 
@@ -160,8 +192,6 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
   - A button that enables users to easily jump to the last viewed skill
   - Application auto scrolls to the latest viewed skill when navigating from the Skill to the Subject page 
 - Improved Help Urls to allow non-encoded spaces
-
-### 2.0.X Releases
 
 #### 2.0.2 <release-date date="August 2022" />
 - Bug Fixes
