@@ -17,10 +17,9 @@ SkillTree's skills-service is then configured to use PostgeSQL and Stomp Brokers
 ![Dashboard with Integrated Application](./diagrams/SkillsServiceArchitecture.jpg) 
 
 Integrated clients utilize skills-client libs posted on the public NPM repositories. 
-These libraries are very thin wrappers around an iFrame tag, they simply retrieve the Skills Display app and its associated data from the skills-service.
-What that means is that the Skills Display is served as its own web-based application from the skills-service and then inserted into an iFrame tag on the client's browser. 
+These libraries are very thin wrappers around an iFrame tag, they simply retrieve the Skills Display views and its associated data from the skills-service application.
+What that means is that the Skills Display is served as its own dedicated url from the Dashboard application of the skills-service and then inserted into an iFrame tag on the client's browser. 
 Of course all of these details are 100% hidden from the skills-client library users. 
-The skills-service also serves the dashboard as a separate application and that is what is returned by default when users arrive at the "/" url.
 
 The skills-client libraries also enable integrators to report skill events. 
 Skill reporting utilities will call the [Report Skill Event Endpoint](/skills-client/endpoints.html#report-skill-event-endpoint) which is exposed via the skills-service.     
@@ -32,8 +31,8 @@ External clients may report skill events directly via the [Report Skill Event En
 
 ## SkillTree Repositories
 
-1. [skills-service](https://github.com/NationalSecurityAgency/skills-service): has code for the skills service, dashboard and client display. This is where the majority of code changes occur. 
-1. [skills-client](https://github.com/NationalSecurityAgency/skills-client): client JS libraries that provide skill event reporting utilities and a thin iFrame-based wrapper for the client display. 
+1. [skills-service](https://github.com/NationalSecurityAgency/skills-service): has code for the skills service and dashboard. This is where the majority of code changes occur. 
+1. [skills-client](https://github.com/NationalSecurityAgency/skills-client): client JS libraries that provide skill event reporting utilities and a thin iFrame-based wrapper for the Skills Display. 
 1. [skills-docs](https://github.com/NationalSecurityAgency/skills-docs): Documentation, you are reading this now!
 1. [skills-stress-test](https://github.com/NationalSecurityAgency/skills-stress-test): Web-based application that facilitates stress tests against the SkillTree service.
 1. [call-stack-profiler](https://github.com/NationalSecurityAgency/call-stack-profiler): Groovy annotation-driven in-code profiling utility used by the services.
