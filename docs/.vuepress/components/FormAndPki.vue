@@ -9,20 +9,41 @@
             <import-content :path="this.pkiPath" class="mt-3"/>
         </div>
 
-        <b-tabs v-if="passwordAuthInstallVisible && pkiAuthInstallVisible" content-class="mt-3">
-            <b-tab v-for="(tabItem) of tabItems" :key="tabItem.name">
-                <div class="text-right text-secondary" style="font-size: 0.8rem;">Visit to learn about this mode:
-                    <a :href="$withBase(tabItem.helpUrl)" target="_blank"><span v-html="tabItem.name"></span> <i class="fas fa-external-link-alt"/></a></div>
-                <template v-slot:title>
-                    <i :class="tabItem.icon" class="mr-1"></i> <span v-html="tabItem.name"></span>
-                </template>
-                <import-content :path="tabItem.path" class="mt-3"/>
-            </b-tab>
-        </b-tabs>
+      <div v-if="passwordAuthInstallVisible && pkiAuthInstallVisible">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation" v-for="(tabItem, index) of tabItems" :key="tabItem.name">
+            <button class="nav-link"
+                    :class="{'active': tabItem.isVisible }"
+                    :id="`${tabItem.name}-tab`"
+                    data-bs-toggle="tab"
+                    :data-bs-target="`#${index}-content`"
+                    @click="updateNavItems(tabItem.name)"
+                    type="button"
+                    role="tab"
+                    aria-controls="home"
+                    aria-selected="true">
+              <i :class="tabItem.icon" class="mr-1"></i> <span v-html="tabItem.name"/>
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+        <div v-for="(tabItem, index) of tabItems" :key="tabItem.name"
+            class="tab-pane fade"
+             :class="{'show active': tabItem.isVisible }"
+             :id="`${index}-content`"
+             role="tabpanel"
+             :aria-labelledby="`${tabItem.name}-tab`">
+          <div class="text-end text-secondary" style="font-size: 0.8rem;">Visit to learn about this mode:
+                                <a :href="$withBase(tabItem.helpUrl)" target="_blank"><span v-html="tabItem.name"></span> <i class="fas fa-external-link-alt"/></a></div>
+          <import-content :path="tabItem.path" class="mt-3"/>
+        </div>
+      </div>
+      </div>
     </div>
 </template>
 
 <script>
+
     export default {
         name: "FormAndPki",
         props: {
@@ -52,6 +73,12 @@
             },
         },
         methods: {
+          updateNavItems(visibleName) {
+            this.tabItems = this.tabItems.map((item) => {
+              item.isVisible = item.name === visibleName
+              return item
+            })
+          },
             getNavItems() {
                let res = [
                    {
@@ -59,12 +86,14 @@
                        path: this.pkiPath,
                        icon: 'fas fa-key',
                        helpUrl: '/dashboard/install-guide/installModes.html#pki-auth-mode',
+                       isVisible: false,
                    },
                    {
                        name: '<b>Password Auth</b> Install',
                        path: this.formPath,
                        icon: 'fab fa-wpforms',
                        helpUrl: '/dashboard/install-guide/installModes.html#password-auth-mode',
+                       isVisible: false,
                    },
                ];
 
@@ -72,6 +101,7 @@
                    res = res.reverse();
                }
 
+               res[0].isVisible = true
                return res;
             },
         }

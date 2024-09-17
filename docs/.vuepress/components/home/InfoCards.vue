@@ -11,7 +11,7 @@
                             <i class="fa fa-user-graduate fa-stack-1x icon-foreground"></i>
                           </span>
               </div>
-              <div class="col-sm media-body">
+              <div class="col-sm media-body text-start">
                 <div class="h5 mt-0 mb-3 mb-sm-2">User Engagement</div>
                 Enable users to Quickly learn new skills and effectively master advanced knowledge.
                 Improve training recall through continued user engagement.
@@ -32,7 +32,7 @@
                                 </span>
 
               </div>
-              <div class="col-sm media-body">
+              <div class="col-sm media-body text-start">
                 <div class="h5 mt-0">Gamification</div>
                 Consistent and innovative solution takes the guesswork and maintenance out of
                 implementing gamified training.
@@ -52,7 +52,7 @@
                                 </span>
 
               </div>
-              <div class="col-sm media-body">
+              <div class="col-sm media-body text-start">
                 <div class="h5 mt-0">Reduced Cost</div>
                 Fewer training sessions - less support costs. Continued user engagement in
                 application

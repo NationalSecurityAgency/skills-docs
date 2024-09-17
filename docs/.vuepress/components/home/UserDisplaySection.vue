@@ -10,18 +10,12 @@
                     </div>
                 </div>
               <div class="col-lg-6 order-lg-1">
-                <div class="py-4 p-sm-5 text-white">
+                <div class="py-4 p-sm-5 text-white text-start">
                   <h1 class="border-bottom text-uppercase font-weight-bold">User Display</h1>
                   <p class="text-white">Pluggable user skill and ranking visualization - customize and use the
                     display component
                     in your application within minutes.</p>
                   <div class="d-flex d-sm-block ml-sm-2 justify-content-center">
-                    <div class="text-left" style="max-width: 16rem;">
-                      <div class="row no-gutters">
-                        <div class="col-auto"><i class="fab fa-js fa-2x"></i></div>
-                        <div class="col">Implemented in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="font-weight-bold text-white">JavaScript</a></div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>

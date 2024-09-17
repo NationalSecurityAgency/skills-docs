@@ -1,6 +1,6 @@
 <template>
     <span class="h6 pl-2" :class="{ 'd-block' : isBlock }">
-      <i class="fas fa-history" aria-hidden="true"></i> Since <b-badge variant="warning"><span class="since-value">{{ project }}:{{ version }}</span></b-badge>
+      <i class="fas fa-history" aria-hidden="true"></i> Since <span class="badge bg-warning text-dark"><span class="since-value">{{ project }}:{{ version }}</span></span>
     </span>
 </template>
 

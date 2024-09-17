@@ -8,7 +8,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="py-4 p-sm-5 mt-1">
+                    <div class="py-4 p-sm-5 mt-1 text-start">
                         <h1 class="border-bottom text-uppercase">Dashboard</h1>
                         <p class="text-secondary">A web-based user interface that enables creation and management of multiple
                             training profiles and acts as a Learning Management System (LMS).</p>
