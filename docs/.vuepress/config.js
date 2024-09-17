@@ -1,5 +1,3 @@
-const fs = require('fs');
-const fetch = require('node-fetch');
 const videosJson = require('./components/videos/skilltree-training-videos.json');
 
 /**

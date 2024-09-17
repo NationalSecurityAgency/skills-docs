@@ -1,6 +1,6 @@
 <template>
 <div class="d-inline-block py-1">
-  <b-badge variant="secondary" class="release-date"><i class="fas fa-calendar mr-2"/>{{ date }}</b-badge>
+   <span class="badge bg-secondary release-date"><i class="fas fa-calendar mr-2" aria-hidden="true"/> {{ date }}</span>
 </div>
 </template>
 
