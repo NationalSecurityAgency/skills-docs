@@ -8,6 +8,39 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 3.1.0 <release-date date="September 2024" />
+- Introducing Data Export Capability for Project Admins: Easily export key data into Excel format, including:
+  - Users' Progress Table: Track current progress in a tabular format
+  - Project Metrics Achievements: View achievements in a clear and organized table
+  - Project Metrics Skills: Analyze skills data in a concise table format
+  - Skills Definitions: Access detailed skills definitions in a downloadable table on the subject page
+- User Training Transcript Export: Now, users can easily export their current training transcript to PDF format. 
+  - Additionally, project admins have the ability to export transcripts for any user who has made progress in the project, providing greater flexibility and convenience for managing training records.
+- Number of Quiz and Survey improvements:
+  - New property that allows users to take a survey or successfully passed quiz multiple times; will accurately track and present metrics
+  - New quiz option to show wrong/correct questions and answers on a failed attempt
+- Quiz and Survey Enhancements:
+  - Multi-Attempt Capability: A new property allows users to take surveys or quizzes multiple times, with accurate tracking and presentation of metrics.
+  - Detailed Feedback: A new quiz option provides users with detailed feedback on failed attempts, showing correct and incorrect questions and answers to help them learn and improve.
+- Visual Learning Path Representation: Enhanced the Learning Path graph to showcase the skills associated with each badge, providing a more intuitive visual representation of the Learning Path.  
+- Bulk Skill Event Deletion: Now, you can easily select and delete multiple performed skill events in bulk.
+- Project Preview: You can now preview projects directly from the Projects Catalog without having to add them to your My Projects list first.
+- Direct Project Removal: You can now remove projects directly from your My Progress view without having to navigate to other screens.
+- Improved Admin Activity Tracking: We now record a new Admin Activity event when an expiring project is canceled from expiring, providing better visibility into administrative actions.
+- Enhanced Upgrade-In-Progress: Our Upgrade-In-Progress feature now supports S3 for storing and replaying Write Ahead Log (WAL), ensuring a more seamless upgrade experience.
+- Customizable Dashboard Access: You can now optionally enable dashboard access limitations, restricting access to the admin portion of the dashboard.
+- Dependency Upgrades: Upgraded to the latest versions of Spring Boot and ApexCharts, ensuring our platform remains secure and up-to-date.
+- Bug Fixes: Addressed several bugs to improve overall performance and stability
+
+## 3.0.3 <release-date date="Aug 2024" />
+- Bug fixes
+
+## 3.0.2 <release-date date="Aug 2024" />
+- Bug fixes
+
+## 3.0.1 <release-date date="Aug 2024" />
+- Bug fixes
+
 ## 3.0.0 <release-date date="July 2024" />
 - Upgrade to dashboard and skills-display UI to Vue 3
 - Added [Dark Mode](/dashboard/user-guide/settings.html#setting-dark-mode)
