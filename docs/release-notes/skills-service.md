@@ -10,20 +10,18 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 ## 3.1.0 <release-date date="September 2024" />
 - Introducing Data Export Capability for Project Admins: Easily export key data into Excel format, including:
-  - Users' Progress Table: Track current progress in a tabular format
-  - Project Metrics Achievements: View achievements in a clear and organized table
-  - Project Metrics Skills: Analyze skills data in a concise table format
-  - Skills Definitions: Access detailed skills definitions in a downloadable table on the subject page
+  - [Users' Progress Table](/dashboard/user-guide/users.html): Track current progress in a tabular format
+  - [Project Metrics Achievements](/dashboard/user-guide/metrics.html#project-achievements-metrics): View achievements in a clear and organized table
+  - [Project Metrics Skills](/dashboard/user-guide/metrics.html#project-skills-metrics): Analyze skills data in a concise table format
+  - [Skill Definitions](/dashboard/user-guide/skills.html#skills-definition-export): Access detailed skill definitions in a downloadable table on the subject page
 - User Training Transcript Export: Now, users can easily export their current training transcript to PDF format. 
-  - Additionally, project admins have the ability to export transcripts for any user who has made progress in the project, providing greater flexibility and convenience for managing training records.
-- Number of Quiz and Survey improvements:
-  - New property that allows users to take a survey or successfully passed quiz multiple times; will accurately track and present metrics
-  - New quiz option to show wrong/correct questions and answers on a failed attempt
+  - Additionally, project admins have the ability to [export transcripts for any user](/dashboard/user-guide/users.html#skills-display-client-display) who has made progress in the project, providing greater flexibility and convenience for managing training records.
 - Quiz and Survey Enhancements:
-  - Multi-Attempt Capability: A new property allows users to take surveys or quizzes multiple times, with accurate tracking and presentation of metrics.
-  - Detailed Feedback: A new quiz option provides users with detailed feedback on failed attempts, showing correct and incorrect questions and answers to help them learn and improve.
-- Visual Learning Path Representation: Enhanced the Learning Path graph to showcase the skills associated with each badge, providing a more intuitive visual representation of the Learning Path.  
-- Bulk Skill Event Deletion: Now, you can easily select and delete multiple performed skill events in bulk.
+  - Multi-Attempt Capability: A new property allows users to take [surveys](/dashboard/user-guide/quizzes-and-surveys.html#setting-allow-retakes-after-completion-2) or [quizzes](/dashboard/user-guide/quizzes-and-surveys.html#setting-allow-retakes-after-completion) multiple times, with accurate tracking and presentation of metrics.
+  - [Detailed Feedback](/dashboard/user-guide/quizzes-and-surveys.html#quiz-settings): A new quiz option provides users with detailed feedback on failed attempts, showing correct and incorrect questions and answers to help them learn and improve.
+- [Visual Learning Path Representation](/dashboard/user-guide/learning-path.html#learning-path): Enhanced the Learning Path graph to showcase the skills associated with each badge, providing a more intuitive visual representation of the Learning Path.
+- Skills Progress: Skills Display now has a new progress bar on project and subject pages which visualizes the number of completed skills, providing a clear and concise snapshot of user progress. 
+- [Bulk Skill Event Deletion](/dashboard/user-guide/users.html#performed-skills): Now, you can easily select and delete multiple performed skill events in bulk.
 - Project Preview: You can now preview projects directly from the Projects Catalog without having to add them to your My Projects list first.
 - Direct Project Removal: You can now remove projects directly from your My Progress view without having to navigate to other screens.
 - Improved Admin Activity Tracking: We now record a new Admin Activity event when an expiring project is canceled from expiring, providing better visibility into administrative actions.
@@ -238,7 +236,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - [Move Skills](/dashboard/user-guide/skills.html#move-skills) between subjects and groups in the same project.
 - Project-level capability to [customize certain labels](/dashboard/user-guide/projects.html#setting-custom-labels) on the Skills Display components
 - Optionally require the comment/justification for self-report skills
-- When old client lib is being used, display a record on the [Issues](/dashboard/user-guide/issues.html) page that suggests upgrading
+- When old client lib is being used, display a record on the [Issues](/dashboard/user-guide/projects.html#issues) page that suggests upgrading
 - Send notification email when root and project admins are added
 
 

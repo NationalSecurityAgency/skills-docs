@@ -31,7 +31,7 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.snap('page-progress-and-rankings-view-my-usage');
   });
 
-  it.only('Gen View Badges page', () => {
+  it('Gen View Badges page', () => {
     cy.visit('/progress-and-rankings/my-badges')
     cy.snap('page-progress-and-rankings-badges');
     cy.get('[data-cy="filterBtn"]').click();

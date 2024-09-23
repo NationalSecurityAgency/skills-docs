@@ -3,7 +3,48 @@
 This section describes different types of dashboard users and their corresponding roles and permissions. 
 It will also touch on access management, and a way to view the Skill Display through your users' eyes.  
 
+## User Progress Table
+
+Easily track user progress in a specific project by visiting the User Progress Table, accessible via the 
+`Project -> Users` Page. This table provides a comprehensive overview of user performance, including:
+
+- User: Display user ID, first name, and last name (if available)
+- Progress: View total points earned, overall percent complete, and current level achieved
+- Recent Activity: See the date and time when points were last earned by each user
+
+![User Progress Table](../../screenshots/admin/component-user_progress_table.png)
+
+::: tip
+Please note that a user has to earn at least 1 point in order to show up in on the Users table.
+:::
+
+### Filters, Sorting And Export
+The User Progress Table offers filtering and sorting capabilities to help you analyze user performance. You can:
+
+- Filter by user ID, first name, and last name using the User Filter.
+- Filter by the minimum user progress using the Minimum User Progress filter.
+
+You can also sort the table by any of the columns by clicking on the column header.
+
+Additionally, you can export the table data into an Excel file by clicking the Export button located on the top right of the table.
+
+::: tip
+Note that the export will respect any currently applied filters.
+:::
+
 ## User Roles
+
+### Default User
+
+All SkillTree Dashboard users are assigned a default user role, which provides the following permissions:
+
+- Take self-paced training hosted in the SkillTree Dashboard
+- Access [Progress & Ranking](/dashboard/user-guide/progress-and-ranking.html) pages, Project Catalog, and personal Preferences pages
+- Create new [Projects](/dashboard/user-guide/projects.html) (training profiles)
+
+Furthermore, when a user creates a new project, they are automatically granted the [Project Admin](/dashboard/user-guide/users.html#project-admin) role for that project. This role
+allows them to manage project access via the [Access page](/dashboard/user-guide/projects.html#access), providing control over who can view and interact with the
+project.
 
 ### Project Admin
 Project Administrator's can modify all
@@ -34,7 +75,7 @@ Please visit the [Security Setting Section](/dashboard/user-guide/settings.html#
 
 ## Skills Display / Client Display
 
-You can see what the skills profile and progress display would like for a particular user by navigating to a specific user page in the dashboard - ``Project -> Users -> Select a User -> Client Display``. 
+You can see what the skills profile and progress display would like for a particular user by navigating to a specific user page in the dashboard - ``Project -> Users -> Select a User -> User's Display``. 
 This is the same exact pluggable [Skills Display](/skills-client/#skills-display) that you would be embedding into your application so it can provide the ability to view the [Skills Display](/skills-client/#skills-display) through that user's point of view.  
 The client display will depict the project skills profile and user's points at that exact moment. 
 
@@ -46,14 +87,28 @@ Optionally you can also [Add Events Manually](/dashboard/user-guide/skills.html#
 If your gamification profile is utilizing [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) then you can view 
 what the [Skills Display](/skills-client/#skills-display) would look like for a specific version by selecting a different version in the drop-down located on the top-right of the page. 
 
+::: tip
+Project administrators can now easily export transcripts for users who have made progress in the project, providing a convenient way to manage training records. To download a user's transcript, follow these steps:
+
+- Navigate to Project > Users
+- Select the desired user (User's Display page)
+- Click the `Download Transcript` button at the bottom of the page
+
+This feature offers greater flexibility and convenience for managing training records, making it easier for project
+administrators to track user progress and stay organized.
+:::
+
 ## Performed Skills
 
 To see a history of a user's performed skill events please visit ``Project -> Users -> Select a User -> Performed Skills``. 
 
-Project administrators have the ability to remove individual skill events or all of the skill events at once.
+![page-user-performed-skills.png](../../screenshots/admin/page-user-performed-skills.png)
+
+Project administrators have the ability to remove individual, selected or all skill events.
 
 * *To delete a single skill event:* click the delete button on the specific skill event row
 * <em>To delete **ALL** skill events</em>: click the `Delete All` button on the top right of the table.
+* To delete multiple skill events, select them and click the `Delete Selected` button
 
 ::: tip
 If you remove **all** of the skill events then it will practically remove this user from this project

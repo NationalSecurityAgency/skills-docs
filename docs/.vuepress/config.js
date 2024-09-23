@@ -117,7 +117,6 @@ sidebar = sidebar.concat([{
             '/dashboard/user-guide/levels',
             '/dashboard/user-guide/users',
             '/dashboard/user-guide/metrics',
-            '/dashboard/user-guide/issues',
             '/dashboard/user-guide/inception',
             '/dashboard/user-guide/contact-admins',
             '/dashboard/user-guide/settings',
