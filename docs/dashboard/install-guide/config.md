@@ -407,6 +407,12 @@ When that happens:
 - the SkillTree Dashboard is placed into a read-only state: dashboard can be viewed and navigated but mutations will not be allowed 
 - skill requests are retained in a Write-Ahead-Log (WAL) to be replayed after the upgrade is done
 
+There are two choices of where the WAL can be stored:
+1. Local file system
+2. Amazon Simple Storage Service ([Amazon S3](https://aws.amazon.com/s3/)) - Recommended in case of a multi-node AWS deployment
+
+### Storing the Write-Ahead-Log on Local File System
+
 Please configure the following properties in order to place ``skills-service`` in the Upgrade-In-Progress state:
 ```properties
 # place the SkillTree platform in the Upgrade-In-Progress state 
@@ -414,6 +420,23 @@ skills.config.db-upgrade-in-progress=true
 # specify the location of the directory where the Write-Ahead-Logs will be stored   
 skills.queued-event-path=/queued_events
 ```
+
+### Storing the Write-Ahead-Log on Amazon S3
+
+Please configure the following properties in order to place ``skills-service`` in the Upgrade-In-Progress state:
+```properties
+# place the SkillTree platform in the Upgrade-In-Progress state 
+skills.config.db-upgrade-in-progress=true
+# enable S3 support and specify the location of the directory where the Write-Ahead-Logs will be stored   
+spring.cloud.aws.s3.enabled=true
+skills.queued-event-path=s3://bucketname/optional-dir
+
+# S3 files are immutable therefore the requests are cached locally and flushed to a new S3 file based on this configuration
+skills.queued-event-path.commit-every-n-records=250
+```
+
+
+# Upgrade-In-Progress Life Cycle 
 
 When the SkillTree Dashboard is started with the ``skills.config.db-upgrade-in-progress`` property set to ``true`` it will:
 - display a prominent banner on the top of the SkillTree Dashboard and any embedded Skills Display informing users that an upgrade is in progress
@@ -427,6 +450,22 @@ General steps to upgrade the database engine:
 4. import data into the new database instance
 5. reconfigure SkillTree production instance to point to the new database and turn off the Upgrade-In-Progress state  
    - when the ``skills-service`` is restarted it will replay the events stored in the WAL; the WAL files will then be removed 
+
+### Admin Dashboard Access 
+
+Optionally, you can enable dashboard access limitations to restrict access to the admin portion of the dashboard,
+controlling who can create projects, view and manage project administrative settings and features.
+
+```properties
+skills.config.ui.limitAdminAccess=true
+```
+
+When the `skills.config.ui.limitAdminAccess` property is set to `true`, a new section called `Training Creators Management`
+appears on the Security page, accessible only to users with the `root` role. This section allows root administrators to add and
+remove users with the Training Creator role.
+
+With `skills.config.ui.limitAdminAccess` enabled, only users assigned the `Training Creator` role will have access to the
+administrative portion of the SkillTree Dashboard.
 
 ### Private Invite Only Projects
 

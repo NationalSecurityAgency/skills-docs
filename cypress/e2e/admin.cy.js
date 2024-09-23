@@ -22,6 +22,13 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('modal-projects-new_project', '.p-dialog')
     })
 
+    it('Gen User Progress Table', () => {
+        // projects page
+        cy.visit('/administrator/projects/movies/users')
+        cy.get('[data-cy="usersTable"]').contains('Current Level:')
+        cy.snap('component-user_progress_table', '#mainContent2');
+    })
+
     it('Gen Projects pages - dark mode', () => {
         cy.request('POST', '/app/userInfo/settings', [{
             'settingGroup': 'user.prefs',
@@ -149,13 +156,19 @@ context('Admin: Generate Screenshots', () => {
     });
 
     it('Gen Learning Path', () => {
-        cy.viewport(1350, 1200);
         cy.visit('/administrator/projects/movies/learning-path')
         cy.get('[data-cy="graphLegend"]')
         cy.get('[data-cy="learningPathTable"] [data-cy="skillsBTableTotalRows"]')
         cy.wait(5000);
         cy.snap('page-project-learning-path');
         cy.snap('component-manage-learning-path', '[data-cy="addPrerequisiteToLearningPath"]')
+    })
+
+    it('user performed skills', () => {
+        cy.visit('/administrator/projects/movies/users/bill@email.org/skillEvents')
+        cy.get('[data-cy="performedSkillsTable"] [data-cy="addSkillFilter"]').should('have.length', 10)
+        cy.get('[data-cy="skillsBTableTotalRows"]')
+        cy.snap('page-user-performed-skills');
     })
 
     it('Gen Project pages - levels', () => {
@@ -167,14 +180,14 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Project pages - skill metrics', () => {
-        cy.viewport(1350, 1200);
+        // cy.viewport(1350, 1200);
         cy.visit('/administrator/projects/movies/metrics/skills')
         cy.get('[data-cy="skillsNavigator-table"]');
         cy.snap('page-project-metrics-skills');
     })
 
     it('Gen Project pages - subjects metrics', () => {
-        cy.viewport(1350, 1200);
+        // cy.viewport(1350, 1200);
         cy.visit('/administrator/projects/movies/metrics/subjects')
 
         cy.contains('Number of users for each level for each subject');
@@ -186,7 +199,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Project pages - achievements metrics', () => {
-        cy.viewport(1350, 1200);
+        // cy.viewport(1350, 1200);
         cy.visit('/administrator/projects/movies/metrics/achievements')
         cy.contains('Overall Levels');
         cy.get('[data-cy="achievementsNavigator-table"]')
@@ -221,7 +234,6 @@ context('Admin: Generate Screenshots', () => {
     });
 
     it('Gen Subject pages', () => {
-        cy.viewport(1350, 1200);
         // skills page
         cy.visit('/administrator/projects/movies/subjects/Action');
         cy.get('[data-cy="editSkillButton_EdgeofTomorrow"]');

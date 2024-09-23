@@ -8,6 +8,37 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 3.1.0 <release-date date="September 2024" />
+- Introducing Data Export Capability for Project Admins: Easily export key data into Excel format, including:
+  - [Users' Progress Table](/dashboard/user-guide/users.html): Track current progress in a tabular format
+  - [Project Metrics Achievements](/dashboard/user-guide/metrics.html#project-achievements-metrics): View achievements in a clear and organized table
+  - [Project Metrics Skills](/dashboard/user-guide/metrics.html#project-skills-metrics): Analyze skills data in a concise table format
+  - [Skill Definitions](/dashboard/user-guide/skills.html#skills-definition-export): Access detailed skill definitions in a downloadable table on the subject page
+- User Training Transcript Export: Now, users can easily export their current training transcript to PDF format. 
+  - Additionally, project admins have the ability to [export transcripts for any user](/dashboard/user-guide/users.html#skills-display-client-display) who has made progress in the project, providing greater flexibility and convenience for managing training records.
+- Quiz and Survey Enhancements:
+  - Multi-Attempt Capability: A new property allows users to take [surveys](/dashboard/user-guide/quizzes-and-surveys.html#setting-allow-retakes-after-completion-2) or [quizzes](/dashboard/user-guide/quizzes-and-surveys.html#setting-allow-retakes-after-completion) multiple times, with accurate tracking and presentation of metrics.
+  - [Detailed Feedback](/dashboard/user-guide/quizzes-and-surveys.html#quiz-settings): A new quiz option provides users with detailed feedback on failed attempts, showing correct and incorrect questions and answers to help them learn and improve.
+- [Visual Learning Path Representation](/dashboard/user-guide/learning-path.html#learning-path): Enhanced the Learning Path graph to showcase the skills associated with each badge, providing a more intuitive visual representation of the Learning Path.
+- Skills Progress: Skills Display now has a new progress bar on project and subject pages which visualizes the number of completed skills, providing a clear and concise snapshot of user progress. 
+- [Bulk Skill Event Deletion](/dashboard/user-guide/users.html#performed-skills): Now, you can easily select and delete multiple performed skill events in bulk.
+- Project Preview: You can now preview projects directly from the Projects Catalog without having to add them to your My Projects list first.
+- Direct Project Removal: You can now remove projects directly from your My Progress view without having to navigate to other screens.
+- Improved Admin Activity Tracking: We now record a new Admin Activity event when an expiring project is canceled from expiring, providing better visibility into administrative actions.
+- Enhanced Upgrade-In-Progress: Our Upgrade-In-Progress feature now supports S3 for storing and replaying Write Ahead Log (WAL), ensuring a more seamless upgrade experience.
+- Customizable Dashboard Access: You can now optionally enable dashboard access limitations, restricting access to the admin portion of the dashboard.
+- Dependency Upgrades: Upgraded to the latest versions of Spring Boot and ApexCharts, ensuring our platform remains secure and up-to-date.
+- Bug Fixes: Addressed several bugs to improve overall performance and stability
+
+## 3.0.3 <release-date date="Aug 2024" />
+- Bug fixes
+
+## 3.0.2 <release-date date="Aug 2024" />
+- Bug fixes
+
+## 3.0.1 <release-date date="Aug 2024" />
+- Bug fixes
+
 ## 3.0.0 <release-date date="July 2024" />
 - Upgrade to dashboard and skills-display UI to Vue 3
 - Added [Dark Mode](/dashboard/user-guide/settings.html#setting-dark-mode)
@@ -205,7 +236,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - [Move Skills](/dashboard/user-guide/skills.html#move-skills) between subjects and groups in the same project.
 - Project-level capability to [customize certain labels](/dashboard/user-guide/projects.html#setting-custom-labels) on the Skills Display components
 - Optionally require the comment/justification for self-report skills
-- When old client lib is being used, display a record on the [Issues](/dashboard/user-guide/issues.html) page that suggests upgrading
+- When old client lib is being used, display a record on the [Issues](/dashboard/user-guide/projects.html#issues) page that suggests upgrading
 - Send notification email when root and project admins are added
 
 

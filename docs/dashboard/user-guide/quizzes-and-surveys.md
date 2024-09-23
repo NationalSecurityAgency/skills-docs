@@ -91,11 +91,11 @@ answered correctly in order to get the credit.
 
 By default, users have an unlimited number of attempts to pass a quiz. You can set the maximum number of attempts to 1 or more. 
 
-#### Setting: Randomize Question Order <since project="skills-service" version="2.9" />
+#### Setting: Randomize Question Order
 
 If enabled, questions are presented in a random order each time the quiz is taken. 
 
-#### Setting: Randomize Answers Order <since project="skills-service" version="2.9" />
+#### Setting: Randomize Answers Order
 
 If enabled, each question's answers are presented in a random order each time the quiz is taken.
 
@@ -103,6 +103,16 @@ If enabled, each question's answers are presented in a random order each time th
 
 If a time limit is set, users will have a specific duration to complete the quiz. 
 If they exceed the time limit, their attempt will be marked as 'Failed'.
+
+#### Setting: Allow Retakes After Completion <since project="skills-service" version="3.1" />
+
+With this feature enabled, users can retake quizzes even after achieving a passing score. The system
+accurately tracks each successful attempt, providing a comprehensive view of user progress and performance. 
+
+#### Setting: Show Correct Answers On Failure: <since project="skills-service" version="3.1" />
+
+Enabling this feature will provide the correct answers on failed quiz attempts, allowing users to review and understand
+the correct answers, improving their learning and understanding of the material.
 
 ## Survey
 
@@ -133,6 +143,16 @@ Please use the Answer's dropdown to select the type, currently available options
 ::: tip
 Use the `Preview` button on the top left below the Survey name in order to see what the survey will look like to your users.
 :::
+
+### Survey Settings
+
+A Survey has customization parameters, to customize a survey please navigate to ``Quizzes and Surveys -> Survey -> Settings`` page.
+
+#### Setting: Allow Retakes After Completion <since project="skills-service" version="3.1" />
+
+With this feature enabled, users can retake surveys unlimited number of times. The system
+accurately tracks each completion, providing a comprehensive view of user progress and performance.
+
 
 ## Results
 Summarized quiz/survey results can be located on the Results page (``Quizzes and Surveys -> Quiz/Survey -> Results ``). 

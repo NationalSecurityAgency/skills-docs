@@ -117,6 +117,17 @@ Skills that are configured to expire will have warnings visualized in the Skills
 A history of skills that have been expired can be viewed from the `Skill Expiration History` table on the `Project` page.
 This table will allow you to view the skill, the user associated and the date it expired.
 
+## Skills Definition Export
+
+To export the skills table to Excel, click the `Export All Skills` button located at the top right of the table. This will
+generate an Excel file containing all skills for the current subject.
+
+Important Export Details:
+
+- All skills under a subject are included in the export, including those within Skill Groups.
+- Skill Groups are not exported as separate rows, but their associated skills will include the group name in each row.
+- Descriptions are not included in the export due to their complex formatting, which includes rich text, HTML, and embedded images that are not compatible with Excel cells.
+
 ## Copy Skill
 To use an existing Skill as a template for a new Skill, you can use the ![copy skill button](./screenshots/copy_btn.png) button available on a Skill row displayed on the Subject page.
 This will open a new Skill dialog populated with the details of the selected copy-from Skill. The name and id will be prepended with ``Copy of`` which can be changed

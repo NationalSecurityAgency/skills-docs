@@ -36,7 +36,7 @@ The Dashboard user that creates a project is automatically granted the role of a
 | [Cross-project Prerequisites](/dashboard/user-guide/learning-path.html#cross-project-prerequisites) | Create and manage Skill prerequisites across multiple Projects which practically equates to cross-application Skills                                           |
 | [Contact Users](/dashboard/user-guide/contact-project-users.html)                       | Communicate with users of your Project                                                                                                                         |
 | [Metrics](/dashboard/user-guide/metrics.html)                                           | Charts and graph. These are page specific - Project, Subject, Badge, and User will have stats specifically for those pages                                     |
-| [Issues](/dashboard/user-guide/issues.html)                                             | Errors related to the Project such as non-existant Skills that have been reported                                                                              |       
+| [Issues](/dashboard/user-guide/projects.html#issues)                                             | Errors related to the Project such as non-existant Skills that have been reported                                                                              |       
 | [Settings](/dashboard/user-guide/projects.html#settings)                                | Project level settings                                                                                                                                         |   
 
 ## Settings
@@ -249,6 +249,16 @@ The ``Share`` button is only displayed if the [Project Discoverability](/dashboa
 The Activity History feature provides a comprehensive record of all administrative changes made to this project.
 
 <import-content path="/dashboard/user-guide/common/activity-history.html"/>
+
+## Issues
+
+Displays any errors that have been recorded for a Project, how many times they have occurred, and when the most recent occurrence was.
+
+![SkillTree Issues](../../screenshots/admin/page-project-issues.png)
+
+There are a number of different issues that are captured here. One example includes attempts to report a Skill that doesn't exist in a Project. This commonly occurs when a typo has been made
+during the integration of skill reporting into an application, or when switching an application from using a staging project to a production project where
+the staging skills do not exist or have been created with different Skill IDs.
 
 
 
