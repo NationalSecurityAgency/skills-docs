@@ -119,7 +119,7 @@ This table will allow you to view the skill, the user associated and the date it
 
 ## Skills Definition Export
 
-To export the skills table to Excel, click the `Export All Rows` button located at the top right of the table. This will
+To export the skills table to Excel, click the `Export All Skills` button located at the top right of the table. This will
 generate an Excel file containing all skills for the current subject.
 
 Important Export Details:
