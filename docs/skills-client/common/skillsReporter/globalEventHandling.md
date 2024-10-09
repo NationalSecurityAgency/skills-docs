@@ -16,9 +16,14 @@ const myGlobalErrorHandler = (result) => {
     toastr.error('There was an error recording your skill');
 };
 
-SkillsReporter.addSuccessHandler(myGlobalSuccessHandler);
-SkillsReporter.addErrorHandler(myGlobalErrorHandler);
+SkillsConfiguration.afterConfigure().then(() => {
+    SkillsReporter.addSuccessHandler(myGlobalSuccessHandler);
+    SkillsReporter.addErrorHandler(myGlobalErrorHandler);
+});
 ```
+
+To avoid race conditions, please ensure that the configuration is loaded by adding global handlers within the
+`SkillsConfiguration.afterConfigure()` callback.
 
 Note: By default, a global success handler will only by invoked for results where a skill has been applied (``skillApplied=true``).
 To change the default behavior and enable notifications even when a reported skill has not been applied, set the ``notifyIfSkillNotApplied``
