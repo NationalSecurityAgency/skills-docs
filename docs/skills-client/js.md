@@ -116,13 +116,17 @@ SkillsConfiguration.afterConfigure().then(() => {
     clientDisplay.attachTo(document.querySelector('#skills-client-container'));
 });
 ```
+To avoid race conditions, please ensure that the configuration is loaded by adding `SkillsDisplayJS` creation within the
+`SkillsConfiguration.afterConfigure()` callback.
 
 If you are taking advantage of [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) then you need to provide the version property to 
 the SkillsDisplayJS constructor:
 
 ``` js
-const clientDisplay = new SkillsDisplayJS({
-    version: 1,
+SkillsConfiguration.afterConfigure().then(() => {
+    const clientDisplay = new SkillsDisplayJS({
+        version: 1,
+    });
 });
 ```
 
@@ -138,9 +142,11 @@ Each time a user navigates within the Skills Client Display, if configured, the 
 const handleRouteChanged = (newPath) => {
     console.log(`New Skills Display path: [${newPath}]`);
 };
-
-const clientDisplay = new SkillsDisplayJS({
-    handleRouteChanged: handleRouteChanged,
+    
+SkillsConfiguration.afterConfigure().then(() => {
+    const clientDisplay = new SkillsDisplayJS({
+        handleRouteChanged: handleRouteChanged,
+    });
 });
 ```
 
