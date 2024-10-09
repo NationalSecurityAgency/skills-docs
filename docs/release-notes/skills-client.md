@@ -8,6 +8,27 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+::: tip Important Note:
+To enable seamless integration with Skills Display, this library utilizes an iFrame wrapper to retrieve
+the necessary views and data from the skills-service application. This deliberate architectural design choice is a key
+aspect of the SkillTree Platform, as it minimizes the need for frequent upgrades to the skills-client library.
+
+By decoupling the Skills Display functionality from the skills-client library, we've achieved a significant advantage:
+most updates and improvements to Skills Display will be automatically reflected in the skills-client library whenever
+the skills-service application is upgraded. This means that skills-client integrators can enjoy the benefits of new
+features and enhancements without the need for manual library updates.
+
+As a result, **the skills-client libraries are intentionally designed to be relatively static, with infrequent releases**.
+This approach ensures that integrators can rely on a stable and consistent library, while still benefiting from the
+ongoing evolution of the SkillTree Platform.
+:::
+
+## 3.6.0 <release-date date="Oct. 2024" />
+- Added the ability to place the skills-client library in a dormant state. When the library is in a dormant state, it
+  becomes inactive and does not perform authentication, network communication, skill reporting, or any other activities.
+- Upgraded JS libraries
+- Bug Fixes
+
 ## 3.5.0 <release-date date="Sep. 2022" />
 - Ensure that skills-client react libraries work with React 18
 - Removed history package dependency
