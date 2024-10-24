@@ -21,7 +21,7 @@
     "@fortawesome/fontawesome-free": "5.15.3",
     "bootstrap": "5.3.3",
     "core-js": "3.14.0",
-    "vue": "2.6.14"
+    "vue": "3.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "4.5.13",
