@@ -1,10 +1,10 @@
 # Admin Groups
 
 Admin Groups streamline the ability to manage a list of administrators for one or more projects and/or quizzes.
-Once an Admin Group is created you can easily add/remove members to/from it. A group can then be assigned to one or more projects and/or quizzes 
+Once an Admin Group is created you can easily add and remove members to and from the group. A group can then be assigned to one or more projects and/or quizzes 
 which then allows the members of the group to have administrative privileges to the assigned projects and/or quizzes. 
  
-To create an admin group please navigate to ``Admin Groups`` page and click ``Admin Group +`` button.
+To create an admin group please navigate to the ``Admin Groups`` page and then click the ``Admin Group +`` button.
 
 ![page-admin-groups.png](../../screenshots/admin/page-admin-groups.png)
 
