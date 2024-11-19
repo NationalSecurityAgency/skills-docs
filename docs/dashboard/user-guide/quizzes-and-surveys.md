@@ -73,7 +73,7 @@ Use the `Preview` button on the top left below the Quiz name in order to see wha
 ### Answer Grading <since project="skills-service" version="3.2" />
 
 
-If a quiz has at least 1 ``Input Text`` question then after a quiz taker submits an attempt quiz administrator will be able to grade the answers for the ``Input Text`` questions.
+If a quiz has at least 1 ``Input Text`` question then after a quiz taker submits an attempt a quiz administrator will be able to grade the answers for the ``Input Text`` questions.
 
 To do so please navigate to ``Quizzes and Surveys -> Quiz -> Grading`` page.
 
@@ -82,12 +82,12 @@ To do so please navigate to ``Quizzes and Surveys -> Quiz -> Grading`` page.
 
 A table of quiz attempts that contain ``Input Text`` questions will be displayed. Click on the ``Grade`` button to the right of the user to open the grading request. 
 Once expanded answers can be marked as either "Correct" or "Wrong", in addition a justification can be provided. 
-Once all the answer are marked as either correct or wrong, SkillTree system will grade the quiz attempt in its entirety considering all the question in this quiz.
+Once all the answers are marked as either correct or wrong, the system will grade the quiz attempt in its entirety considering all the questions in this quiz.
 
 #### Grading Notifications
-SkillTree will send email notifications to quiz administrators when grading is requested and send email notifications to quiz takes when answers are graded.
+SkillTree will send email notifications to quiz administrators when grading is requested, and also send email notifications to quiz takers when answers are graded.
 
-Quiz administrators can unsubscribe from notifications by navigating to ``Quizzes and Surveys -> Quiz -> Grading`` page.
+Quiz administrators can unsubscribe from notifications by navigating to the ``Quizzes and Surveys -> Quiz -> Grading`` page.
 
 ![component-quiz-grading-email-subscriptions.png](../../screenshots/admin/component-quiz-grading-email-subscriptions.png)
 
