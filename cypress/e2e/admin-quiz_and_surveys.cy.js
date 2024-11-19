@@ -94,6 +94,17 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.snap('page-quiz-settings');
     })
 
+    it('quiz grading page', () => {
+        // going to expect email server is already configured
+        cy.viewport(1100, 500);
+        cy.visit('/administrator/quizzes/ChessInsight/grading')
+        cy.get('[data-cy="gradeBtn_user4@email.com"]').click()
+        cy.get('[data-cy="question_1"] [data-cy="questionDisplayText"]')
+        cy.snap('page-quiz-grading');
+        cy.snap('component-quiz-grading-email-subscriptions', '[data-cy="quizRunsToGradeTable"] [data-pc-section="header"]');
+    })
+
+
     it('quiz survey page', () => {
         // cy.viewport(1100, 500);
         cy.visit('/administrator/quizzes/CodingLanguageandFrameworksPreferences/')

@@ -45,15 +45,29 @@ Cypress.Commands.add('snap', (name, selector = null, options = {}) => {
     }
 });
 
-Cypress.Commands.add('login', () => {
+Cypress.Commands.add('login', (username = 'bill@email.org') => {
     cy.visit('/')
-    cy.get('[id="username"]').type('bill@email.org');
+    cy.get('[id="username"]').type(username);
     cy.get('[id="inputPassword"]').type('password');
     cy.get('[data-cy="login"]').should('be.enabled')
     cy.get('[data-cy="login"]').click({force: true});
     cy.contains('Progress And Rankings');
 });
 
+Cypress.Commands.add('saveEmailServer', () => {
+    cy.log('configuring email');
+    cy.request({
+        method: 'POST',
+        url: '/root/saveEmailSettings',
+        body: {
+            publicUrl: 'http://localhost:8082/',
+            fromEmail: 'noreploy@skilltreeemail.org',
+            host: 'localhost',
+            port: 1025,
+            'protocol': 'smtp'
+        },
+    });
+})
 Cypress.Commands.add('clickNav', (navName) => {
     cy.get(`[data-cy="nav-${navName}"]`).click();
 });

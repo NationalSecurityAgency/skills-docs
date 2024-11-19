@@ -624,4 +624,19 @@ context('Admin: Generate Screenshots', () => {
 
     })
 
+    it('page - admin groups', () => {
+        cy.visit('/administrator/adminGroups/FancyGroup')
+        cy.get('[data-cy="roleManagerTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '3')
+        cy.snap('page-admin-groups')
+
+        cy.visit('/administrator/adminGroups/FancyGroup/group-projects')
+        cy.get('[data-cy="adminGroupProjectsTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '3')
+        cy.snap('page-admin-groups-projects')
+
+        cy.visit('/administrator/adminGroups/FancyGroup/group-quizzes')
+        cy.get('[data-cy="adminGroupQuizzesTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '2')
+        cy.snap('page-admin-groups-quizzes')
+
+    })
+
 })
