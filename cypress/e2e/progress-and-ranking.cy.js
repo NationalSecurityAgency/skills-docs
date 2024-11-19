@@ -119,5 +119,16 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.snap('client-display-quiz-run', '[data-cy="skillsDisplayHome"]');
   })
 
+  it('quiz grading attempts page', () => {
+    cy.request('POST', '/logout');
+    cy.login('user1@email.com');
+    cy.visit('/progress-and-rankings/my-quiz-attempts')
+    cy.get('[data-cy="myQuizAttemptsTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '9')
+    cy.snap('page-my-quiz-attempts');
+
+    cy.get('[data-cy="myQuizAttemptsTable"] [data-p-index="0"] a').click()
+    cy.snap('page-my-quiz-single-attempt');
+  })
+
 
 })

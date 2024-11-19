@@ -47,6 +47,7 @@ in order to earn the skill and its points. In the case of a quiz, then the quiz 
 Quizzes currently support two types of questions:
 - ``Single Choice`` - question will only have 1 correct answer 
 - ``Mulitple Choice`` - question has 2 or more correct choices; all correct choices must be selected to get credit for the question
+- ``Input Text`` - question for test-takers to provide a free-form text answer that will later be graded by a quiz administrator
 
 To administer a quiz click `Manage` button for that quiz on the `Quizzes and Surveys` page. 
 
@@ -69,13 +70,37 @@ order to receive the credit for the question
 Use the `Preview` button on the top left below the Quiz name in order to see what the quiz will look like to your users.
 :::
 
+### Answer Grading <since project="skills-service" version="3.2" />
+
+
+If a quiz has at least 1 ``Input Text`` question then after a quiz taker submits an attempt a quiz administrator will be able to grade the answers for the ``Input Text`` questions.
+
+To do so please navigate to ``Quizzes and Surveys -> Quiz -> Grading`` page.
+
+
+![page-quiz-grading.png](../../screenshots/admin/page-quiz-grading.png)
+
+A table of quiz attempts that contain ``Input Text`` questions will be displayed. Click on the ``Grade`` button to the right of the user to open the grading request. 
+Once expanded answers can be marked as either "Correct" or "Wrong", in addition a justification can be provided. 
+Once all the answers are marked as either correct or wrong, the system will grade the quiz attempt in its entirety considering all the questions in this quiz.
+
+#### Grading Notifications
+SkillTree will send email notifications to quiz administrators when grading is requested, and also send email notifications to quiz takers when answers are graded.
+
+Quiz administrators can unsubscribe from notifications by navigating to the ``Quizzes and Surveys -> Quiz -> Grading`` page.
+
+![component-quiz-grading-email-subscriptions.png](../../screenshots/admin/component-quiz-grading-email-subscriptions.png)
+
+The Grading section contains a Subscribed/Unsubscribed toggle on the top-right of the component.
+
+
 ### Quiz Settings
 
 A Quiz has a number of customization parameters, to customize a quiz please navigate to ``Quizzes and Surveys -> Quiz -> Settings`` page.
 
-![Quiz Single Result Page Screenshot](../../screenshots/admin/page-quiz-settings.png)
+![Quiz Screenshot](../../screenshots/admin/page-quiz-settings.png)
 
-#### Setting: # of Questions per Quiz Attempt <since project="skills-service" version="2.9" />
+#### Setting: # of Questions per Quiz Attempt
 
 When enabled, a sub-set of random questions will be presented to the user taking this quiz. 
 For example, if there are 10 questions and this setting is set to 5, then each time a user takes this quiz
@@ -99,7 +124,7 @@ If enabled, questions are presented in a random order each time the quiz is take
 
 If enabled, each question's answers are presented in a random order each time the quiz is taken.
 
-#### Setting: Quiz Time Limit <since project="skills-service" version="2.10" />
+#### Setting: Quiz Time Limit
 
 If a time limit is set, users will have a specific duration to complete the quiz. 
 If they exceed the time limit, their attempt will be marked as 'Failed'.
@@ -152,6 +177,16 @@ A Survey has customization parameters, to customize a survey please navigate to 
 
 With this feature enabled, users can retake surveys unlimited number of times. The system
 accurately tracks each completion, providing a comprehensive view of user progress and performance.
+
+## Copy
+
+Quizzes, surveys and questions can easily be copied. 
+
+To use an existing Quiz/Survey as a template you can easily copy its declarations (questions, settings, etc..) into a brand-new Quiz/Survey.  
+To copy a Quiz/Survey please use the ![copy button](./screenshots/copy_btn.png) button available on a quizzes/surveys administration page.
+The system will prompt you to enter a new Quiz/Survey name and optionally modify the Quiz/Survey id.
+
+Similarly, to copy a question please use the ![copy button](./screenshots/copy_btn.png) button available on a questions page within a single Quiz/Survey administration.
 
 
 ## Results

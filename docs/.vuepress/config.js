@@ -110,6 +110,7 @@ sidebar = sidebar.concat([{
             '/dashboard/user-guide/skills-groups',
             '/dashboard/user-guide/rich-text-editor',
             '/dashboard/user-guide/quizzes-and-surveys',
+            '/dashboard/user-guide/admin-groups',
             '/dashboard/user-guide/badges',
             '/dashboard/user-guide/learning-path',
             '/dashboard/user-guide/progress-and-ranking',

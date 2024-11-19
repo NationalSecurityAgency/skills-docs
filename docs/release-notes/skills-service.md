@@ -8,6 +8,26 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+
+## 3.2.0 <release-date date="November 2024" />
+- Introduced the ability to manage project and quiz administrators in [groups](/dashboard/user-guide/admin-groups.html.
+  - The new approach allows for simple creation and management of Admin Groups.
+  - Admin groups can easily be assigned to multiple projects and/or quizzes.
+- Introduced a brand-new quiz question type: `Input Text` with a comprehensive grading mechanism.
+  - Quiz administrators can now add `Input Text` type of questions that require test-takers to compose text answers.
+  - `Input Text` questions are then graded by quiz administrators to either make the answer correct or wrong.
+  - SkillTree emails grading requests and grading results; administrators have an option to unsubscribe.
+- Added visualization of completed surveys and passed/failed quizzes.
+  - Displayed the history of current users' taken quizzes and completed surveys on the Progress and Ranking pages with the ability to drill down into a specific attempt.
+  - Implemented a new card providing a simple quizzes and surveys count on the home page.
+  - When a quiz or a survey is associated with a skill, added the display of the answer for passed quizzes and completed surveys directly on the skill page.
+- Added the ability to copy a quiz or a survey.
+- Added the ability to copy quiz or survey questions.
+- Further enhanced the User Transcript export to show when a skill was achieved and, in the case of approval-based skills, who the approver was.
+- Bug Fixes
+- Upgraded libraries
+
+
 ## 3.1.0 <release-date date="September 2024" />
 - Introducing Data Export Capability for Project Admins: Easily export key data into Excel format, including:
   - [Users' Progress Table](/dashboard/user-guide/users.html): Track current progress in a tabular format
