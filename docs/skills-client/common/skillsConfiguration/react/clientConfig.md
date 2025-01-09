@@ -1,10 +1,10 @@
-<import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationHeader.html"/>
+<Content path="/skills-client/common/skillsConfiguration/skillsConfigurationHeader.md"/>
 
 <form-and-pki 
-    pki-path="/skills-client/common/skillsConfiguration/react/configExamplePki.html"
-    form-path="/skills-client/common/skillsConfiguration/react/configExampleForm.html"/>
+    pki-path="/skills-client/common/skillsConfiguration/react/configExamplePki.md"
+    form-path="/skills-client/common/skillsConfiguration/react/configExampleForm.md"/>
 
-<import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.html"/>
+<Content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.md"/>
 
  ``` js{3-6}
  import { SkillsConfiguration } from '@skilltree/skills-client-react';

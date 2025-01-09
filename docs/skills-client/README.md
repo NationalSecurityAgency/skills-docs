@@ -93,9 +93,3 @@ Generally option 1 is the most common use-case but sometimes it's easier to deri
 
 Please visit the following link to learn more about integrating with SkillTree:
 - [Client App Integration](/skills-client/js.html)
-
-## Browser Support
-
-SkillTree is supported on all major browsers since the following versions:
-
-<browser-support />

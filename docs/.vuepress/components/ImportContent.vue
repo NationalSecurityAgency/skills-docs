@@ -1,26 +1,20 @@
+<script setup>
+const props = defineProps({
+  path: {
+    type: String,
+    required: true,
+  },
+})
+</script>
+
 <template>
-    <Content :page-key="getPageKey($site.pages)"/>
+ <div>hi: [{{ props.path }}]</div>
 </template>
 
-<script>
-    import {findPageForPath} from '@app/util';
+<style scoped>
 
-    export default {
-        name: "ImportContent",
-        props: {
-            path: {
-                type: String,
-                required: true,
-            },
-        },
-        methods: {
-            getPageKey(pages) {
-                const result = findPageForPath(pages, this.path)
-                return result.key
-            }
-        }
-    }
-</script>
+</style>
+
 
 <style scoped>
 

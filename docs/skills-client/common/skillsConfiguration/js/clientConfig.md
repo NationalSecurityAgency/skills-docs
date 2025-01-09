@@ -1,10 +1,10 @@
-<import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationHeader.html"/>
+<Content path="/skills-client/common/skillsConfiguration/skillsConfigurationHeader.md"/>
 
 <form-and-pki 
-    pki-path="/skills-client/common/skillsConfiguration/js/configExamplePki.html"
-    form-path="/skills-client/common/skillsConfiguration/js/configExampleForm.html"/>
+    pki-path="/skills-client/common/skillsConfiguration/js/configExamplePki.md"
+    form-path="/skills-client/common/skillsConfiguration/js/configExampleForm.md"/>
 
-<import-content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.html"/>
+<Content path="/skills-client/common/skillsConfiguration/skillsConfigurationParameters.md"/>
 
  ``` js
  SkillsConfiguration.afterConfigure()

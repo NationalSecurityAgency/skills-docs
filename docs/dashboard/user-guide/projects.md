@@ -248,7 +248,7 @@ The ``Share`` button is only displayed if the [Project Discoverability](/dashboa
 
 The Activity History feature provides a comprehensive record of all administrative changes made to this project.
 
-<import-content path="/dashboard/user-guide/common/activity-history.html"/>
+<Content path="/dashboard/user-guide/common/activity-history.md"/>
 
 ## Issues
 

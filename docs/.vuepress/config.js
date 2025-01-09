@@ -1,3 +1,11 @@
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { getDirname, path } from 'vuepress/utils'
+import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
+const __dirname = import.meta.dirname || getDirname(import.meta.url)
+
 const videosJson = require('./components/videos/skilltree-training-videos.json');
 
 /**
@@ -79,15 +87,15 @@ let nav = [
     { text: 'Contribute', link: '/contribution/' },
 ];
 
-let sidebar = ['/overview/'];
+let sidebar = [ { text: 'Overview', link: '/overview/', collapsible: true }];
 if (videosJson.length > 0) {
     console.log('Adding video sections because video meta file contains data');
     sidebar.push('/videos/');
 }
 
 sidebar = sidebar.concat([{
-        title: 'Install Guide',
-        collapsable: true,
+        text: 'Install Guide',
+        collapsible: true,
         children: [
             '/dashboard/install-guide/',
             '/dashboard/install-guide/quickStart',
@@ -98,8 +106,8 @@ sidebar = sidebar.concat([{
             '/dashboard/install-guide/installModes',
         ]
     }, {
-        title: 'Dashboard User Guide',
-        collapsable: true,
+        text: 'Dashboard User Guide',
+        collapsible: true,
         children: [
             '/dashboard/user-guide/',
             '/dashboard/user-guide/projects',
@@ -123,8 +131,8 @@ sidebar = sidebar.concat([{
             '/dashboard/user-guide/settings',
         ]
     }, {
-        title: 'Integration Guide',
-        collapsable: true,
+        text: 'Integration Guide',
+        collapsible: true,
         children: [
             '/skills-client/',
             '/skills-client/js',
@@ -133,16 +141,16 @@ sidebar = sidebar.concat([{
             '/skills-client/legacy',
         ]
     }, {
-        title: 'Open Source Contributions',
-        collapsable: true,
+        text: 'Open Source Contributions',
+        collapsible: true,
         children: [
             '/contribution/',
             '/contribution/architecture.md',
             '/contribution/devEnv.md',
         ]
     }, {
-        title: 'Release Notes',
-        collapsable: true,
+        text: 'Release Notes',
+        collapsible: true,
         children: [
             '/release-notes/',
             '/release-notes/skills-service.md',
@@ -176,9 +184,9 @@ if (pkiAuthInstallOnly) {
 
 console.log(`Sidebar object:\n${JSON.stringify(sidebar, null, 2)}`);
 
-module.exports = {
-    port: 9999,
-    title: docsTitle,
+export default defineUserConfig({
+    bundler: viteBundler(),
+    lang: 'en-US',
     description: 'Innovative approach to application training!',
     head: [
         ['link', { rel: 'icon', href: '/img/skilltree.ico' }]
@@ -188,16 +196,21 @@ module.exports = {
             includeLevel: [2, 3, 4, 5],
         },
     },
-    themeConfig: {
-        nextLinks: false,
-        prevLinks: false,
-        nav,
-        // displayAllHeaders: true,
-        sidebarDepth: 2,
+    plugins: [
+        registerComponentsPlugin({
+            componentsDir: path.resolve(__dirname, './components'),
+        }),
+        backToTopPlugin({ progress: false})
+    ],
+    theme: defaultTheme({
+        contributors: false,
+        navbar: nav,
         sidebar,
-        lastUpdated: 'Last Updated',
-        home: true,
-        installType: 'form',
+        sidebarDepth: 4,
+        container: 'fluid',
+        logo: '/img/skilltree_logo_v1.svg',
+        logoAlt: 'SkillTree Home',
+        lastUpdated: true,
         visibility: {
             progressAndRankingInstallNote: !removeProgressAndRankingInstallNote,
             passwordAuthInstall: !pkiAuthInstallOnly,
@@ -210,6 +223,10 @@ module.exports = {
             showContributionGuide: !removeContributionsGuide,
             noExternalLinks,
         },
+        installType: 'form',
         skillTreeServiceUrl,
-    },
-}
+        themePlugins: {
+            git: false,
+        }
+    }),
+})

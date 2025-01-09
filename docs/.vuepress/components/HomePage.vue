@@ -1,42 +1,32 @@
+<script setup>
+
+import HomePageHeader from "./home/HomePageHeader.vue";
+import DashboardSection from "./home/DashboardSection.vue";
+import InfoCards from "./home/InfoCards.vue";
+import UserDisplaySection from "./home/UserDisplaySection.vue";
+import RapidIntegrationSection from "./home/RapidIntegrationSection.vue";
+import VueDocsSection from "./home/VueDocsSection.vue";
+</script>
+
 <template>
-  <div>
-    <home-page-header/>
+  <div class="">
+    <home-page-header />
 
-    <div role="main">
-      <info-cards style="margin-top: -3rem;"/>
+    <info-cards />
 
-      <dashboard-section class="mt-5 mb-5"/>
+    <dashboard-section />
 
-      <user-display-section style="margin-top: 8rem;"/>
+    <user-display-section />
 
-      <rapid-integration-section class="mt-5 mb-5"/>
+    <rapid-integration-section />
 
-      <vue-docs-section class="mt-4 mb-0"/>
-    </div>
+    <vue-docs-section />
 
-    <home-page-footer/>
   </div>
 </template>
 
-<script>
-    import InfoCards from "./home/InfoCards";
-    import DashboardSection from "./home/DashboardSection";
-    import UserDisplaySection from "./home/UserDisplaySection";
-    import RapidIntegrationSection from "./home/RapidIntegrationSection";
-    import VueDocsSection from "./home/VueDocsSection";
-    import HomePageFooter from "./home/HomePageFooter";
-    import HomePageHeader from "./home/HomePageHeader";
-    export default {
-        name: "HomePage.vue",
-        components: {
-            HomePageHeader,
-            HomePageFooter,
-            VueDocsSection, RapidIntegrationSection, UserDisplaySection, DashboardSection, InfoCards}
-    }
-</script>
-
 <style scoped>
-    section {
-        padding-top: 1rem;
-    }
+.page {
+  width: 100%;
+}
 </style>

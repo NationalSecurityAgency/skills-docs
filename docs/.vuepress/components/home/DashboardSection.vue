@@ -1,49 +1,44 @@
-<template>
-    <section>
-        <div class="container">
-            <div class="row text-center text-sm-left">
-                <div class="col-lg-6">
-                    <div class="p-xlg-5">
-                        <img src="../../../screenshots/admin/page-subjects.png" class="image-border" alt="SkillTree Dashboard Screenshot"/>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="py-4 p-sm-5 mt-1 text-start">
-                        <h1 class="border-bottom text-uppercase">Dashboard</h1>
-                        <p class="text-secondary">A web-based user interface that enables creation and management of multiple
-                            training profiles and acts as a Learning Management System (LMS).</p>
-                        <div class="mb-1"><i class="fas fa-check-double"></i> Effective and visual creation and management of the training profiles
-                        </div>
-                        <div class="mb-1"><i class="fas fa-check-double"></i> Visibility of corporate expertise and knowledge gaps</div>
-                        <div class="mb-1"><i class="fas fa-check-double"></i> Take training by completing skills, gaining points, achieving badges, passing quizzes, completing surveys and much, much more...</div>
-                        <a href="dashboard/user-guide/" class="btn btn-lg btn-info mt-4 font-weight-bold">Read our Dashboard Guide</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</template>
+<script setup>
 
-<script>
-    export default {
-        name: "DashboardSection"
-    }
 </script>
 
+<template>
+  <section style="padding: 2rem" class="hint-container tip st-mt-2rem">
+    <div class="st-flex-row">
+      <div>
+        <img src="../../../screenshots/admin/page-subjects.png"
+             class="image-border"
+             style=""
+             alt="SkillTree Dashboard Screenshot"/>
+      </div>
+      <div class="">
+        <h2 class="st-text-uppercase">Dashboard</h2>
+        <p>A web-based user interface that enables creation and management of multiple
+          training profiles and acts as a Learning Management System (LMS).</p>
+        <ul>
+          <li>Effective and visual creation and management of the
+            training profiles
+          </li>
+          <li>Visibility of corporate expertise and knowledge gaps</li>
+          <li> Take training by completing skills, gaining points,
+            achieving badges, passing quizzes, completing surveys and much, much more...
+          </li>
+        </ul>
+
+        <p class="">
+          <a href="dashboard/user-guide/" class="st-home-button">Dashboard
+            Guide</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</template>
+
 <style scoped>
-    .container img {
-        width: 30rem;
-        border-style: solid;
-        border-image: linear-gradient(#17a2b8, transparent) 1;
-    }
 
-    @media (max-width: 1200px) {
-        .container img {
-            width: 100%;
-        }
-    }
+.st-flex-row img {
+  border-style: solid;
+  border-image: linear-gradient(#3eaf7c, transparent) 1;
+}
 
-    section i {
-        width: 1.2rem;
-    }
 </style>

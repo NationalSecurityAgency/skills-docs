@@ -5,7 +5,7 @@ To achieve both of these goals, multiple instances of skills-service must be ins
 Each skills-service node will have the same configuration and is designed to scale-up or scale down horizontally. 
 You can add or remove instances any time. 
 
-<import-content path="/dashboard/install-guide/common/install-tip.html"/>
+<Content path="/dashboard/install-guide/common/install-tip.md"/>
 
 There are two installation modes: 
 
@@ -18,11 +18,11 @@ Definitely use Password Auth Mode if you are not sure which mode is applicable t
 
 ## Password Auth Mode Install
 
-<import-content path="/dashboard/install-guide/common/install-type-intro.html"/> 
+<Content path="/dashboard/install-guide/common/install-type-intro.md"/> 
 
 ![Production Installation for Pass Auth Mode](./diagrams/ProdInstall-Pass.jpg) 
 
-<import-content path="/dashboard/install-guide/common/services-explanations.html"/>
+<Content path="/dashboard/install-guide/common/services-explanations.md"/>
 **4: Spring Session for HTTP Session Management:** Required for a clustered skills-service deployment to persist HttpSession
    - SkillTree uses <external-url label="Spring Session" url="https://docs.spring.io/spring-boot/docs/2.7.0/reference/htmlsingle/#web.spring-session"/> for managing a user’s session information in a clustered environment without being tied to an application container-specific solution.        
 :::tip
@@ -40,38 +40,38 @@ security.oauth2.jwt.useKeystore=true
 ```
 ### Auth Mode skills-service Configuration
 
-<import-content path="/dashboard/install-guide/common/prod-install-basic-config.html"/>
+<Content path="/dashboard/install-guide/common/prod-install-basic-config.md"/>
              
 
-<import-content path="/dashboard/install-guide/common/ssl-props.html"/>
+<Content path="/dashboard/install-guide/common/ssl-props.md"/>
 
-<import-content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.html"/>
+<Content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.md"/>
 
 ## PKI Auth Mode Install
-<import-content path="/dashboard/install-guide/common/install-type-intro.html"/>
+<Content path="/dashboard/install-guide/common/install-type-intro.md"/>
 
 ![Production Installation for Pass PKI Mode](./diagrams/ProdInstall-Pki.jpg)
 
-<import-content path="/dashboard/install-guide/common/services-explanations.html"/>
+<Content path="/dashboard/install-guide/common/services-explanations.md"/>
 **4: User Info Service** - Provides user information based on PKI's Distinguished Name (DN)
    - You are responsible for implementing this service, please visit the [User Info Service](/dashboard/install-guide/installModes.html#user-info-service) section to learn more.
    - Make sure to run it in High Availibility mode 
 
 ### PKI Mode skills-service configuration
 
-<import-content path="/dashboard/install-guide/common/prod-install-basic-config.html"/>
+<Content path="/dashboard/install-guide/common/prod-install-basic-config.md"/>
 
 Enable PKI mode install:
 ```properties
 skills.authorization.authMode=PKI
 ```
 
-<import-content path="/dashboard/install-guide/common/two-way-ssl-props.html"/>
+<Content path="/dashboard/install-guide/common/two-way-ssl-props.md"/>
 
 ``User Info Service`` client properties:
-<import-content path="/dashboard/install-guide/common/user-info-service-props-endpoints.html"/>
+<Content path="/dashboard/install-guide/common/user-info-service-props-endpoints.md"/>
 
 If ``User Info Service`` utilizes 2-way SSL then add the following client authentication properties (Java System Properties):
-<import-content path="/dashboard/install-guide/common/user-info-service-props-ssl.html"/>
+<Content path="/dashboard/install-guide/common/user-info-service-props-ssl.md"/>
 
-<import-content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.html"/>
+<Content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.md"/>

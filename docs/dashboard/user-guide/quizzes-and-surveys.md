@@ -256,4 +256,4 @@ please navigate to ``Quiz/Survey -> Access`` page.
 
 The Activity History feature provides a comprehensive record of all administrative changes made to this quiz/survey.
 
-<import-content path="/dashboard/user-guide/common/activity-history.html"/>
+<Content path="/dashboard/user-guide/common/activity-history.md"/>
