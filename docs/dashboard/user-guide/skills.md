@@ -53,12 +53,12 @@ You can also disable the Time Window property of a Skill, which will force each 
 - "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition (for example, prevent users from spamming an action in one sitting to max out a Skill by setting a Time Window of 1-8 hours)
 - Help Url - configure the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) for the project and then enter a path relative to that root. It will then be an easy change if the location of help articles changes. You can also author external links into the description itself if more than one external resource needs to be linked to.
 
-## Videos <since project="skills-service" version="2.8" />
+## Videos
 
 SkillTree supports embedding videos into the skill description and optionally configured to achieve that skill once the
 video is fully watched. You can either embed externally hosted videos OR upload a video directly into SkillTree.  
 
-- **SkillTree Hosted** <since project="skills-service" version="2.9" />: upload a video using file-upload form (Browse button) or by drag-n-dropping video files 
+- **SkillTree Hosted**: upload a video using file-upload form (Browse button) or by drag-n-dropping video files 
   - SkillTree supported video formats are:
     - [Webm](https://www.webmproject.org/about/) - free video format specifically created for the web 
     - [MP4](https://en.wikipedia.org/wiki/MP4_file_format) - common video format often used in web applications
@@ -95,7 +95,7 @@ selected, `Occurrences to Completion` are set to `1` and cannot be changed.
 If a video has a transcript configured then users will also be allowed to earn the skill by reading its transcript
 and then self-certifying to receive the credit for the skill. 
 
-## Expire Points and Achievements <since project="skills-service" version="2.9" />
+## Expire Points and Achievements
 
 Skills can be configured to expire points and achievements on either a scheduled and recurring basis for all users, or based on usage *after* a user achieves the skill.  
 
@@ -112,7 +112,7 @@ the user must perform the skill at least once within the number of days configur
 
 Skills that are configured to expire will have warnings visualized in the Skills Display, letting the user know when the skill will is set to expire.
 
-### Expiration History <since project="skills-service" version="2.11" />
+### Expiration History
 
 A history of skills that have been expired can be viewed from the `Skill Expiration History` table on the `Project` page.
 This table will allow you to view the skill, the user associated and the date it expired.

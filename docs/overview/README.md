@@ -167,7 +167,7 @@ limitations under the License.
 Below are the screenshots that highlight some of the features of the SkillTree platform. 
 These screenshots are broken down into 2 sections:
 - [Dashboard](/overview/#screenshots): a web-based user-friendly interface that allows to create and manage gamified training profile.
-- [Skills Display](/overview/#ranking-and-progress-display): JS libraries that are integrated into your existing web-based application which provide your users a fully interactive user ranking and progress display.
+- [Skills Display](/overview/#skills-display): JS libraries that are integrated into your existing web-based application which provide your users a fully interactive user ranking and progress display.
 
 ### Dashboard
 The Dashboard provides the capability to create and administer Projects, Subjects, and Skills, as well as the ability to view

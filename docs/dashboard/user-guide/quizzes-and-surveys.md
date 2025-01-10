@@ -252,7 +252,7 @@ please navigate to ``Quiz/Survey -> Access`` page.
 
 ![Quiz Access Page Screenshot](../../screenshots/admin/page-quiz-access.png)
 
-## Activity History <since project="skills-service" version="2.10" />
+## Activity History
 
 The Activity History feature provides a comprehensive record of all administrative changes made to this quiz/survey.
 

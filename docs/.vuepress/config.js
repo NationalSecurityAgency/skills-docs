@@ -204,6 +204,7 @@ export default defineUserConfig({
         backToTopPlugin({ progress: false}),
         slimsearchPlugin({
             indexContent: true,
+            suggestion: false,
         }),
     ],
     theme: defaultTheme({
