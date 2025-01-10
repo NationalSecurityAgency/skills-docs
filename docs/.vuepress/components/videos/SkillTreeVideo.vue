@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
   <div>
-    <div class="h2">{{ videoMeta.title }}</div>
+    <h2>{{ videoMeta.title }}</h2>
     <p class="text-secondary" style="font-size: 1.1rem">
       {{ videoMeta.description }}
     </p>

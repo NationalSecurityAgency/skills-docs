@@ -209,6 +209,7 @@ export default defineUserConfig({
         sidebarDepth: 4,
         container: 'fluid',
         logo: '/img/skilltree_logo_v1.svg',
+        logoDark: '/img/skilltree_logo_v1_dark_mode.svg',
         logoAlt: 'SkillTree Home',
         lastUpdated: true,
         visibility: {
