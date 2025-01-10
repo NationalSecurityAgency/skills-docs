@@ -5,6 +5,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { getDirname, path } from 'vuepress/utils'
 import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 const __dirname = import.meta.dirname || getDirname(import.meta.url)
+import { slimsearchPlugin } from '@vuepress/plugin-slimsearch'
 
 const videosJson = require('./components/videos/skilltree-training-videos.json');
 
@@ -200,7 +201,10 @@ export default defineUserConfig({
         registerComponentsPlugin({
             componentsDir: path.resolve(__dirname, './components'),
         }),
-        backToTopPlugin({ progress: false})
+        backToTopPlugin({ progress: false}),
+        slimsearchPlugin({
+            indexContent: true,
+        }),
     ],
     theme: defaultTheme({
         contributors: false,

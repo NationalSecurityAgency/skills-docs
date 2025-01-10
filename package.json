@@ -5,11 +5,11 @@
   "description": "SkillTree Docs",
   "author": "SkillTree Team",
   "scripts": {
-    "licenseDepCheck": "license-checker --production --onlyAllow='MIT;Apache-2.0' --summary",
+    "licenseDepCheck": "license-checker --production --onlyAllow='MIT;Apache-2.0;BSD-2-Clause;BSD-3-Clause;ISC' --summary",
     "injectConf": "node injectConf.js",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "build": "npm run licenseDepCheck && npm run docs:build",
+    "docs:build": "npm run licenseDepCheck  && vuepress build docs",
+    "build": "npm run docs:build",
     "serve": "npm run docs:dev",
     "wait:skills-service": "npx wait-on -t 160000 http://localhost:8080/public/isAlive",
     "cy:open": "cypress open --env updateSnapshots=true",
@@ -20,10 +20,14 @@
     "vue": "3.5.13"
   },
   "devDependencies": {
-    "sass-embedded": "1.83.1",
-    "vuepress": "2.0.0-rc.19",
     "@vuepress/bundler-vite": "2.0.0-rc.19",
     "@vuepress/plugin-register-components": "2.0.0-rc.66",
-    "@vuepress/theme-default": "2.0.0-rc.69"
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.69",
+    "@vuepress/theme-default": "2.0.0-rc.69",
+    "license-checker": "25.0.1",
+    "replace-in-file": "8.3.0",
+    "rimraf": "6.0.1",
+    "sass-embedded": "1.83.1",
+    "vuepress": "2.0.0-rc.19"
   }
 }
