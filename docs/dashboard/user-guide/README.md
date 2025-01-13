@@ -15,7 +15,7 @@ The SkillTree Dashboard provides these main functions:
 
 </conditional>
 
-<conditional visibilityFlag="skillTreeServiceUrl"> 
+<conditional visibilityFlag="skillTreeServiceUrl" > 
 
 ::: tip Good to Know!
 - You can visit dashboard at <service-url /> 
@@ -60,8 +60,3 @@ Consider the following items when designing your training profile:
 1. [Cross-Project Prerequisites](/dashboard/user-guide/learning-path.html#cross-project-prerequisites): Cross-Project Prerequisites facilitate cross-application training and enable users to become domain experts across several applications. 
    - These dependencies are critical when actions are required to be performed in more than one tool in order to complete a task.
 
-## Browser Support
-
-SkillTree is supported on all major browsers since the following versions:
-
-<browser-support />

@@ -1,17 +1,14 @@
-<template>
-    <a :href="serviceUrl" target="_blank">{{ serviceUrl }} <i class="fas fa-external-link-alt"></i></a>
-</template>
+<script setup>
+import { computed } from 'vue'
+import {useThemeData} from "@vuepress/theme-default/client";
 
-<script>
-    export default {
-        name: "ServiceUrl",
-        computed: {
-            serviceUrl() {
-                return this.$themeConfig.skillTreeServiceUrl;
-            },
-        }
-    }
+const themeData = useThemeData()
+const serviceUrl = computed(() => themeData.value.skillTreeServiceUrl)
 </script>
+
+<template>
+    <a :href="serviceUrl" target="_blank">{{ serviceUrl }}</a>
+</template>
 
 <style scoped>
 

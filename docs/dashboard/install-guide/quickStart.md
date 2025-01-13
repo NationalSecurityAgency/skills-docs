@@ -50,7 +50,7 @@ You can tail the application logs via:
 docker logs -f <container_id>
 ```
 
-<import-content path="/dashboard/install-guide/common/service-install-output-and-backend.html"/>
+<Content path="/dashboard/install-guide/common/service-install-output-and-backend.md" />
 
 ### Option 2 - Jar-based install
 
@@ -69,7 +69,7 @@ $ java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/skills \
 -jar ~/Downloads/skills-service-X.X.X.jar
 ```
 
-<import-content path="/dashboard/install-guide/common/service-install-output-and-backend.html"/>
+<Content path="/dashboard/install-guide/common/service-install-output-and-backend.md" />
 
 ## 3. Integrate Client Libraries
 
@@ -132,7 +132,8 @@ SkillsConfiguration.configure({
     authenticator: 'http://localhost:8090/api/users/user4@email.com/token',
 });
 ```
-<import-content path="/dashboard/install-guide/common/prod-env-tip.html"/>
+
+<Content path="/dashboard/install-guide/common/prod-env-tip.md" />
 
 Pluggable user skill and ranking visualization:
 ```js

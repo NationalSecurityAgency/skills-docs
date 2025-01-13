@@ -25,6 +25,8 @@ yarn-error.log*
 
 package-lock.json
 /docs/.vuepress/public/img/average_accessibility_score.svg
+/docs/.vuepress/.cache
+/docs/.vuepress/.temp
 
 cypress/videos/**
 cypress/screenshots/**

@@ -23,11 +23,11 @@ This JS library contains:
 
 ### Skills Configuration
 
-<import-content path="/skills-client/common/skillsConfiguration/ng/clientConfig.html"/>
+<Content path="/skills-client/common/skillsConfiguration/ng/clientConfig.md"/>
 
 ### Skills Display
 
-<import-content path="/skills-client/common/skillsDisplayIntro.html"/>
+<Content path="/skills-client/common/skillsDisplayIntro.md"/>
 
 The previously installed ```skills-client-ng``` library is packaged with the Skills Display component.
 
@@ -76,7 +76,7 @@ the SkillsDisplay component:
 
 SkillsDisplay component properties:
 
-<import-content path="/skills-client/common/skillsDisplayArguments.html"/>
+<Content path="/skills-client/common/skillsDisplayArguments.md"/>
 
 #### Route changed event <since project="skills-client" version="3.3.0" />
 
@@ -133,11 +133,11 @@ export class ShowSkillsComponentExample {
 
 #### Skills Display Options Object
 
-<import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>
+<Content path="/skills-client/common/skillsDisplayOptionsObject.md"/>
 
 #### Skills Display Theme Object
 
-<import-content path="/skills-client/common/slillsDisplayTheme.html"/>
+<Content path="/skills-client/common/slillsDisplayTheme.md"/>
 
 ### Skills Level Display
 
@@ -227,7 +227,7 @@ onReporterResponse(response) {
 ```
 
 a response object may look something like this:
-<import-content path="/skills-client/common/skillsReporter/responseObject.html"/>
+<Content path="/skills-client/common/skillsReporter/responseObject.md"/>
 
 For a full description of the response object please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
 
@@ -259,7 +259,7 @@ SkillsReporter.reportSkill(skillId)
 
 #### Global Event Handling
 
-<import-content path="/skills-client/common/skillsReporter/globalEventHandling.html"/>
+<Content path="/skills-client/common/skillsReporter/globalEventHandling.md"/>
 
 Here is a full example that registers and handles an event by displaying a toast message:
 
@@ -309,7 +309,7 @@ Please note that the displayToast implementation is omitted as that will be spec
 
 #### SkillsReporter Configuration
 
-<import-content path="/skills-client/common/skillsReporter/reporterConfiguration.html"/>
+<Content path="/skills-client/common/skillsReporter/reporterConfiguration.md"/>
 
 #### Report Event By Listening to Routes
 
@@ -354,11 +354,11 @@ This JS library contains:
 Before using the SkillsDisplay, you must make sure to initialize SkillsConfiguration
 with your system settings.
 :::
-<import-content path="/skills-client/common/skillsConfiguration/react/clientConfig.html"/>
+<Content path="/skills-client/common/skillsConfiguration/react/clientConfig.md"/>
 
 ### Skills Display
 
-<import-content path="/skills-client/common/skillsDisplayIntro.html"/>
+<Content path="/skills-client/common/skillsDisplayIntro.md"/>
 
 The previously installed ```skills-client-react``` library is packaged with the Skills Display component.
 
@@ -391,7 +391,7 @@ the SkillsDisplay component:
 
 SkillsDisplay component properties:
 
-<import-content path="/skills-client/common/skillsDisplayArguments.html"/>
+<Content path="/skills-client/common/skillsDisplayArguments.md"/>
 
 #### Route changed event <since project="skills-client" version="3.3.0" />
 
@@ -420,11 +420,11 @@ The internal route of the Skills Client Display component can be changed by pass
 
 #### Skills Display Options Object
 
-<import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>
+<Content path="/skills-client/common/skillsDisplayOptionsObject.md"/>
 
 #### Skills Display Theme Object
 
-<import-content path="/skills-client/common/slillsDisplayTheme.html"/>
+<Content path="/skills-client/common/slillsDisplayTheme.md"/>
 
 ### Skills Level Display
 The ```skills-client-react``` library also includes a convenient component to display the users's current overall level in the application. This can be
@@ -484,18 +484,18 @@ export default MyComponent;
 ```
 
 SkillsReporter.reportSkill returns a metadata response object describing how that skill action influenced the user's skills posture.  A response object may look something like this:
-<import-content path="/skills-client/common/skillsReporter/responseObject.html"/>
+<Content path="/skills-client/common/skillsReporter/responseObject.md"/>
 
 For a full description of the response object please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
 
 #### Global Event Handling
 
-<import-content path="/skills-client/common/skillsReporter/globalEventHandling.html"/>
+<Content path="/skills-client/common/skillsReporter/globalEventHandling.md"/>
 
 
 #### SkillsReporter Configuration
 
-<import-content path="/skills-client/common/skillsReporter/reporterConfiguration.html"/>
+<Content path="/skills-client/common/skillsReporter/reporterConfiguration.md"/>
 
 ## Vue.js Integration
 
@@ -512,11 +512,11 @@ This JS library contains:
 
 ### Skills Configuration
 
-<import-content path="/skills-client/common/skillsConfiguration/vuejs/clientConfig.html"/>
+<Content path="/skills-client/common/skillsConfiguration/vuejs/clientConfig.md"/>
 
 ### Skills Display
 
-<import-content path="/skills-client/common/skillsDisplayIntro.html"/>
+<Content path="/skills-client/common/skillsDisplayIntro.md"/>
 
 The previously installed ```skills-client-vue``` library is packaged with the Skills Display component.
 
@@ -551,7 +551,7 @@ the SkillsDisplay component:
 
 SkillsDisplay component properties:
 
-<import-content path="/skills-client/common/skillsDisplayArguments.html"/>
+<Content path="/skills-client/common/skillsDisplayArguments.md"/>
 
 
 #### Route changed event <since project="skills-client" version="3.3.0" />
@@ -610,11 +610,11 @@ The internal route of the Skills Client Display component can be changed by pass
 
 #### Skills Display Options Object
 
-<import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>
+<Content path="/skills-client/common/skillsDisplayOptionsObject.md"/>
 
 #### Skills Display Theme Object
 
-<import-content path="/skills-client/common/slillsDisplayTheme.html"/>
+<Content path="/skills-client/common/slillsDisplayTheme.md"/>
 
 ### Skills Level Display
 
@@ -694,7 +694,7 @@ onReporterResponse(response) {
 ```
 
 a response object may look something like this:
-<import-content path="/skills-client/common/skillsReporter/responseObject.html"/>
+<Content path="/skills-client/common/skillsReporter/responseObject.md"/>
 
 For a full description of the response object please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
 
@@ -726,7 +726,7 @@ SkillsReporter.reportSkill(skillId)
 
 #### Global Event Handling
 
-<import-content path="/skills-client/common/skillsReporter/globalEventHandling.html"/>
+<Content path="/skills-client/common/skillsReporter/globalEventHandling.md"/>
 
 Here is a full example that registers and handles an event by displaying a toast message:
 
@@ -775,7 +775,7 @@ Please note that the displayToast implementation is omitted as that will be spec
 
 #### SkillsReporter Configuration
 
-<import-content path="/skills-client/common/skillsReporter/reporterConfiguration.html"/>
+<Content path="/skills-client/common/skillsReporter/reporterConfiguration.md"/>
 
 
 #### Report Event By Listening to Routes

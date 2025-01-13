@@ -22,6 +22,15 @@ SkillTree Platform enables trainers, system owners and developers to:
 - It provides consistent and innovative solution and it takes the guesswork and maintenance out of implementing gamified user training.
 - SkillTree is Free and Open Source and is released under [Apache 2 License](/overview/#license)
 
+<conditional visibilityFlag="skillTreeServiceUrl" > 
+
+::: tip Good to Know!
+- You can visit dashboard at <service-url />
+- Feel free to create a project while working through this guide! You can always remove the project if you are done exploring SkillTree features.  
+  :::
+
+</conditional>
+
 ::: tip Check it out!
 Want to know what SkillTree Looks like? Take a look at the [Screenshots](/overview/#screenshots) section.
 :::
@@ -167,7 +176,7 @@ limitations under the License.
 Below are the screenshots that highlight some of the features of the SkillTree platform. 
 These screenshots are broken down into 2 sections:
 - [Dashboard](/overview/#screenshots): a web-based user-friendly interface that allows to create and manage gamified training profile.
-- [Skills Display](/overview/#ranking-and-progress-display): JS libraries that are integrated into your existing web-based application which provide your users a fully interactive user ranking and progress display.
+- [Skills Display](/overview/#skills-display): JS libraries that are integrated into your existing web-based application which provide your users a fully interactive user ranking and progress display.
 
 ### Dashboard
 The Dashboard provides the capability to create and administer Projects, Subjects, and Skills, as well as the ability to view

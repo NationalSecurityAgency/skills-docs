@@ -349,7 +349,7 @@ server.servlet.session.timeout=
 ```
 
 ### https SSL (Pass Auth Mode Only)
-<import-content path="/dashboard/install-guide/common/ssl-props.html"/>
+<Content path="/dashboard/install-guide/common/ssl-props.md"/>
 
 ### Email Verification (Pass Auth Mode Only)
 
@@ -364,14 +364,14 @@ The user will have to click on the verification link in the email prior their lo
 
 
 ### 2-way SSL (PKI Mode Only)
-<import-content path="/dashboard/install-guide/common/two-way-ssl-props.html"/>
+<Content path="/dashboard/install-guide/common/two-way-ssl-props.md"/>
 
 ### User Info Service (PKI Mode Only)
 ``User Info Service`` client properties:
-<import-content path="/dashboard/install-guide/common/user-info-service-props-endpoints.html"/>
+<Content path="/dashboard/install-guide/common/user-info-service-props-endpoints.md"/>
 
 If ``User Info Service`` utilizes 2-way SSL then add the following client authentication properties (Java System Properties):
-<import-content path="/dashboard/install-guide/common/user-info-service-props-ssl.html"/>
+<Content path="/dashboard/install-guide/common/user-info-service-props-ssl.md"/>
 
 If you are running with self-signed certs you can optionally disable host verification (development only):
 ```properties
@@ -379,7 +379,7 @@ skills.disableHostnameVerifier=false
 ```
 
 ### OAuth Support (Pass Auth Mode Only)
-<import-content path="/dashboard/install-guide/common/oath2-support.html"/>
+<Content path="/dashboard/install-guide/common/oath2-support.md"/>
 
 
 ### Progress and Ranking Views

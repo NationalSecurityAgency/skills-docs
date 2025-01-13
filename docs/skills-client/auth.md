@@ -10,6 +10,6 @@ the tab below based on your specific installation mode.
 </conditional>
 
 <form-and-pki 
-    pki-path="/skills-client/auth/authPKI.html"
-    form-path="/skills-client/auth/authForm.html"/>
+    pki-path="/skills-client/auth/authPKI.md"
+    form-path="/skills-client/auth/authForm.md"/>
 

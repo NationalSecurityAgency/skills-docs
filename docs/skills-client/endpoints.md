@@ -23,8 +23,8 @@ This endpoint requires authentication and a user id in order to perform its func
 Please select your installation type below for specific instructions:
 
 <form-and-pki 
-    pki-path="/skills-client/auth/endpointsAuthPKI.html"
-    form-path="/skills-client/auth/endpointsFormPKI.html"/>
+    pki-path="/skills-client/auth/endpointsAuthPKI.md"
+    form-path="/skills-client/auth/endpointsFormPKI.md"/>
 
 ## Report Skill Event Endpoint
 
@@ -47,8 +47,8 @@ http://localhost:8080/api/projects/ProjectA/skills/SkillA
 The Report Skill Endpoint also accepts **optional** JSON payload parameters. 
 
 <form-and-pki
-pki-path="/skills-client/auth/endpointParamsPKI.html"
-form-path="/skills-client/auth/endpointParamsForm.html"/>
+pki-path="/skills-client/auth/endpointParamsPKI.md"
+form-path="/skills-client/auth/endpointParamsForm.md"/>
 
 ::: warning Keep In Mind
 Only a project admin is allowed to supply ``userId`` and ``timestamp``.   
@@ -160,7 +160,7 @@ You can use this result object to implement a messaging center - to report messa
 ## Java Examples
 
 <form-and-pki
-pki-path="/skills-client/auth/reportSkillJavaExamplePKI.html"
-form-path="/skills-client/auth/reportSkillJavaExampleForm.html"/>
+pki-path="/skills-client/auth/reportSkillJavaExamplePKI.md"
+form-path="/skills-client/auth/reportSkillJavaExampleForm.md"/>
 
 

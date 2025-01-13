@@ -1,3 +1,12 @@
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { getDirname, path } from 'vuepress/utils'
+import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
+const __dirname = import.meta.dirname || getDirname(import.meta.url)
+import { searchPlugin } from '@vuepress/plugin-search'
+
 const videosJson = require('./components/videos/skilltree-training-videos.json');
 
 /**
@@ -31,9 +40,11 @@ let skillTreeServiceUrl = skillTreeServiceUrlDefaultValue;
 let skillTreeServiceUrlProvided = false;
 let docsTitle = 'SkillTree Docs';
 let noExternalLinks = false;
+let installTypeProp = 'form';
 
-const confValue = 'injectedConf';
-if (confValue && confValue !== 'injectedConf') {
+const confValue = process.env.SKILLS_DOCS_CONFIG;
+console.log(`SKILLS_DOCS_CONFIG: ${JSON.stringify(confValue, null, 2)}`);
+if (confValue) {
     const confVals = confValue.split(',');
     confVals.forEach((conf) => {
         const keyVal = conf.split('=');
@@ -58,6 +69,8 @@ if (confValue && confValue !== 'injectedConf') {
             removeInstallGuide = true;
         } else if (key === 'docsTitle') {
             docsTitle = val;
+        } else if (key === 'installType') {
+            installTypeProp = val;
         } else if (key === 'removeContributionsGuide' && val === 'true') {
             removeContributionsGuide = true;
         } else if (key === 'noExternalLinks' && val === 'true') {
@@ -79,15 +92,15 @@ let nav = [
     { text: 'Contribute', link: '/contribution/' },
 ];
 
-let sidebar = ['/overview/'];
+let sidebar = [ { text: 'Overview', link: '/overview/', collapsible: true }];
 if (videosJson.length > 0) {
     console.log('Adding video sections because video meta file contains data');
     sidebar.push('/videos/');
 }
 
 sidebar = sidebar.concat([{
-        title: 'Install Guide',
-        collapsable: true,
+        text: 'Install Guide',
+        collapsible: true,
         children: [
             '/dashboard/install-guide/',
             '/dashboard/install-guide/quickStart',
@@ -98,8 +111,8 @@ sidebar = sidebar.concat([{
             '/dashboard/install-guide/installModes',
         ]
     }, {
-        title: 'Dashboard User Guide',
-        collapsable: true,
+        text: 'Dashboard User Guide',
+        collapsible: true,
         children: [
             '/dashboard/user-guide/',
             '/dashboard/user-guide/projects',
@@ -123,8 +136,8 @@ sidebar = sidebar.concat([{
             '/dashboard/user-guide/settings',
         ]
     }, {
-        title: 'Integration Guide',
-        collapsable: true,
+        text: 'Integration Guide',
+        collapsible: true,
         children: [
             '/skills-client/',
             '/skills-client/js',
@@ -133,16 +146,16 @@ sidebar = sidebar.concat([{
             '/skills-client/legacy',
         ]
     }, {
-        title: 'Open Source Contributions',
-        collapsable: true,
+        text: 'Open Source Contributions',
+        collapsible: true,
         children: [
             '/contribution/',
             '/contribution/architecture.md',
             '/contribution/devEnv.md',
         ]
     }, {
-        title: 'Release Notes',
-        collapsable: true,
+        text: 'Release Notes',
+        collapsible: true,
         children: [
             '/release-notes/',
             '/release-notes/skills-service.md',
@@ -154,31 +167,31 @@ sidebar = sidebar.concat([{
 if (removeInstallGuide) {
     const toFilter = 'Install Guide';
     nav = nav.filter((item) => item.text !== toFilter);
-    sidebar = sidebar.filter((item) => item.title !== toFilter);
+    sidebar = sidebar.filter((item) => item.text !== toFilter);
 }
 if (removeProgressAndRankingPageFromDashboardUserGuide) {
-    const dashboardGuide = sidebar.find((item) => item.title === 'Dashboard User Guide');
+    const dashboardGuide = sidebar.find((item) => item.text === 'Dashboard User Guide');
     dashboardGuide.children = dashboardGuide.children.filter((item) => !item.endsWith('progress-and-ranking'))
 }
 if (removeAuthPageFromIntegrationGuide) {
-    const dashboardGuide = sidebar.find((item) => item.title === 'Integration Guide');
+    const dashboardGuide = sidebar.find((item) => item.text === 'Integration Guide');
     dashboardGuide.children = dashboardGuide.children.filter((item) => !item.endsWith('auth'))
 }
 if (removeContributionsGuide) {
     nav = nav.filter((item) => item.text !== 'Contribute');
-    sidebar = sidebar.filter((item) => item.title !== 'Open Source Contributions');
+    sidebar = sidebar.filter((item) => item.text !== 'Open Source Contributions');
 }
 if (pkiAuthInstallOnly) {
     // remove Auth section all together, it's not adding any value to pki-only install
-    const integrationGuide = sidebar.find((item) => item.title === 'Integration Guide');
+    const integrationGuide = sidebar.find((item) => item.text === 'Integration Guide');
     integrationGuide.children = integrationGuide.children.filter((item) => !item.endsWith('auth'))
 }
 
 console.log(`Sidebar object:\n${JSON.stringify(sidebar, null, 2)}`);
 
-module.exports = {
-    port: 9999,
-    title: docsTitle,
+export default defineUserConfig({
+    bundler: viteBundler(),
+    lang: 'en-US',
     description: 'Innovative approach to application training!',
     head: [
         ['link', { rel: 'icon', href: '/img/skilltree.ico' }]
@@ -188,16 +201,38 @@ module.exports = {
             includeLevel: [2, 3, 4, 5],
         },
     },
-    themeConfig: {
-        nextLinks: false,
-        prevLinks: false,
-        nav,
-        // displayAllHeaders: true,
-        sidebarDepth: 2,
+    plugins: [
+        registerComponentsPlugin({
+            componentsDir: path.resolve(__dirname, './components'),
+        }),
+        backToTopPlugin({ progress: false}),
+        searchPlugin({
+            isSearchable: (page) => {
+                if (removeContributionsGuide && page.path.startsWith('/contribution')) {
+                    return false;
+                }
+                if (removeInstallGuide && page.path.startsWith('/dashboard/install-guide')) {
+                    return false;
+                }
+
+                if (page.path.startsWith('/skills-client/legacy.html')) {
+                    return false
+                }
+                return true
+            },
+            getExtraFields: (page) => page.frontmatter.tags ?? [],
+        }),
+    ],
+    theme: defaultTheme({
+        contributors: false,
+        navbar: nav,
         sidebar,
-        lastUpdated: 'Last Updated',
-        home: true,
-        installType: 'form',
+        sidebarDepth: 4,
+        container: 'fluid',
+        logo: '/img/skilltree_logo_v1.svg',
+        logoDark: '/img/skilltree_logo_v1_dark_mode.svg',
+        logoAlt: 'SkillTree Home',
+        lastUpdated: true,
         visibility: {
             progressAndRankingInstallNote: !removeProgressAndRankingInstallNote,
             passwordAuthInstall: !pkiAuthInstallOnly,
@@ -210,6 +245,10 @@ module.exports = {
             showContributionGuide: !removeContributionsGuide,
             noExternalLinks,
         },
+        installType: installTypeProp,
         skillTreeServiceUrl,
-    },
-}
+        themePlugins: {
+            git: false,
+        }
+    }),
+})

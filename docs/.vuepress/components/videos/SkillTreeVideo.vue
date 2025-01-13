@@ -1,6 +1,15 @@
+<script setup>
+const props = defineProps({
+  videoMeta: {
+    type: Object,
+    required: true,
+  },
+})
+</script>
+
 <template>
   <div>
-    <div class="h2">{{ videoMeta.title }}</div>
+    <h2>{{ videoMeta.title }}</h2>
     <p class="text-secondary" style="font-size: 1.1rem">
       {{ videoMeta.description }}
     </p>
@@ -9,18 +18,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: "SkillTreeVideo",
-  props: {
-    videoMeta: {
-      type: Object,
-      required: true,
-    },
-  },
-}
-</script>
 
 <style scoped>
 

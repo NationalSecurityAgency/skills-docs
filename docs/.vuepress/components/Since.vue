@@ -1,19 +1,31 @@
+<script setup>
+defineProps(['version', 'project', 'isBlock'])
+
+</script>
+
 <template>
-    <span class="h6 pl-2" :class="{ 'd-block' : isBlock }">
-      <i class="fas fa-history" aria-hidden="true"></i> Since <span class="badge bg-warning text-dark"><span class="since-value">{{ project }}:{{ version }}</span></span>
+    <span class="since" :class="{ 'd-block' : isBlock }">
+      🕓 Since <span class="badge bg-warning text-dark"><span class="since-value">{{ project }}:{{ version }}</span></span>
     </span>
 </template>
 
-<script>
-export default {
-  name: "Since",
-  props: ['version', 'project', 'isBlock']
-}
-</script>
-
 <style scoped>
-.since-value {
+.d-block {
+  display: block
+}
+.since {
   font-size: 1rem;
+  color: #915930;
+  background-color: #faf2da;
+  padding: 0.2rem 0.8rem;
+  border-radius: 10px;
+}
+.since-value {
   font-weight: bold
 }
+[data-theme='dark'] .since {
+  color: #87bece;
+  background-color: #2e343f;
+}
+
 </style>

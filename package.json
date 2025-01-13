@@ -5,12 +5,10 @@
   "description": "SkillTree Docs",
   "author": "SkillTree Team",
   "scripts": {
-    "licenseDepCheck": "license-checker --production --onlyAllow='MIT;Apache-2.0' --summary",
-    "injectConf": "node injectConf.js",
-    "build": "npm run licenseDepCheck && vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "docs:dev": "npm run injectConf && vuepress dev docs",
-    "docs:build": "npm run injectConf && vuepress build docs",
+    "licenseDepCheck": "license-checker --production --onlyAllow='MIT;Apache-2.0;BSD-2-Clause;BSD-3-Clause;ISC' --summary",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "npm run licenseDepCheck && vuepress build docs",
+    "build": "npm run docs:build",
     "serve": "npm run docs:dev",
     "wait:skills-service": "npx wait-on -t 160000 http://localhost:8080/public/isAlive",
     "cy:open": "cypress open --env updateSnapshots=true",
@@ -18,49 +16,15 @@
     "cy:run:single": "cypress run --env updateSnapshots=true --spec \"cypress/integration/admin.js\""
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.15.3",
-    "bootstrap": "5.3.3",
-    "core-js": "3.14.0",
-    "vue": "2.6.14"
+    "vue": "3.5.13"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.5.13",
-    "@vue/cli-plugin-eslint": "4.5.13",
-    "@vue/cli-service": "4.5.13",
-    "babel-eslint": "10.1.0",
-    "cypress": "13.14.2",
-    "cypress-real-events": "1.13.0",
-    "eslint": "6.8.0",
-    "eslint-plugin-vue": "7.7.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.19",
+    "@vuepress/plugin-register-components": "2.0.0-rc.66",
+    "@vuepress/plugin-search": "2.0.0-rc.70",
+    "@vuepress/theme-default": "2.0.0-rc.69",
     "license-checker": "25.0.1",
-    "replace-in-file": "6.2.0",
-    "rimraf": "3.0.2",
-    "vue-server-renderer": "2.6.14",
-    "vue-template-compiler": "2.6.14",
-    "vuepress": "1.8.2",
-    "wait-on": "5.3.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "sass-embedded": "1.83.1",
+    "vuepress": "2.0.0-rc.19"
+  }
 }

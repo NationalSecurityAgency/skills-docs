@@ -20,7 +20,7 @@ skills.authorization.authMode=FORM
 ```
 
 ### OAuth Support
-<import-content path="/dashboard/install-guide/common/oath2-support.html"/> 
+<Content path="/dashboard/install-guide/common/oath2-support.md"/> 
 
 ## PKI Auth Mode
 PKI Mode is for intranets where organizations utilize PKI with 2-way SSL certificates to implement authentication and authorization.
@@ -43,7 +43,7 @@ It is your responsibility to implement and run an instance of User Info Service 
 
 The User Info Service is configured in the skills-service by adding the following configuration properties:
 
-<import-content path="/dashboard/install-guide/common/user-info-service-props-endpoints.html"/> 
+<Content path="/dashboard/install-guide/common/user-info-service-props-endpoints.md"/> 
 
 The User Info Service will need to implement the following REST endpoints that can return user information for the client certificate's Distinguished Name (DN):
 - skills.authorization.userInfoUri
@@ -106,4 +106,4 @@ The endpoint is configured via the ``skills.authorization.userInfoHealthCheckUri
 
 #### optional 2-way SSL
 If your ``User Info Service`` is configured to use 2-way SSL then ``skills-service`` must add the following client authentication properties (Java System Properties):
-<import-content path="/dashboard/install-guide/common/user-info-service-props-ssl.html"/>
+<Content path="/dashboard/install-guide/common/user-info-service-props-ssl.md"/>

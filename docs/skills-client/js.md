@@ -99,11 +99,11 @@ Then your code will look something like this
 
 ## Skills Configuration
 
-<import-content path="/skills-client/common/skillsConfiguration/js/clientConfig.html"/>
+<Content path="/skills-client/common/skillsConfiguration/js/clientConfig.md"/>
 
 ## Skills Display
 
-<import-content path="/skills-client/common/skillsDisplayIntro.html"/>
+<Content path="/skills-client/common/skillsDisplayIntro.md"/>
 
 Usage is trivial:
 
@@ -132,7 +132,7 @@ SkillsConfiguration.afterConfigure().then(() => {
 
  SkillsDisplayJS constructor object:
 
-<import-content path="/skills-client/common/skillsDisplayArguments.html"/>
+<Content path="/skills-client/common/skillsDisplayArguments.md"/>
 
 ### Route changed event <since project="skills-client" version="3.3.0" />
 
@@ -165,11 +165,11 @@ The internal route of the Skills Client Display component can be changed by pass
 
 ### Skills Display Options Object
 
-<import-content path="/skills-client/common/skillsDisplayOptionsObject.html"/>
+<Content path="/skills-client/common/skillsDisplayOptionsObject.md"/>
 
 ### Skills Display Theme Object
 
-<import-content path="/skills-client/common/slillsDisplayTheme.html"/>
+<Content path="/skills-client/common/slillsDisplayTheme.md"/>
 
 ## Skills Level Display
 
@@ -214,16 +214,16 @@ SkillsReporter.reportSkill(skillId)
 ```
 
 a response object may look something like this:
-<import-content path="/skills-client/common/skillsReporter/responseObject.html"/>
+<Content path="/skills-client/common/skillsReporter/responseObject.md"/>
 
 For a full description of the response object please see [Endpoint Result Object](/skills-client/endpoints.html#endpoint-result-object).
 
 ### Global Event Handling
 
-<import-content path="/skills-client/common/skillsReporter/globalEventHandling.html"/>
+<Content path="/skills-client/common/skillsReporter/globalEventHandling.md"/>
 
 ### SkillsReporter Configuration
 
-<import-content path="/skills-client/common/skillsReporter/reporterConfiguration.html"/>
+<Content path="/skills-client/common/skillsReporter/reporterConfiguration.md"/>
 
 

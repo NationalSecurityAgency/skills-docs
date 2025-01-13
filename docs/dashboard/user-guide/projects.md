@@ -217,7 +217,7 @@ The following training profile elements are copied into the new project:
 The following training profile elements are **NOT** copied into a new project:
 - [Catalog](/dashboard/user-guide/skills-catalog.html) imported skills are **not** copied
 - [Cross-Project Prerequisites](/dashboard/user-guide/learning-path.html#cross-project-prerequisites) are **not** copied
-- If the original [Project Discoverability](/dashboard/user-guide/projects.html#setting-visibility) setting was changed to be ``Add to Project Catalog`` the copied project will instead use the default value of ``Not in the Project Catalog``
+- If the original [Project Discoverability](/dashboard/user-guide/projects.html#setting-project-discoverability) setting was changed to be ``Add to Project Catalog`` the copied project will instead use the default value of ``Not in the Project Catalog``
 
 ::: tip
 Once a project has been copied, the new project is disconnected from the original such that changes to the original project will not be reflected in the copy
@@ -241,14 +241,14 @@ When the link is visited, two things happen:
 - the project is automatically added to [My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects).
 
 ::: warning Important
-The ``Share`` button is only displayed if the [Project Discoverability](/dashboard/user-guide/projects.html#setting-visibility) is configured to the ``Add to Project Catalog`` option. 
+The ``Share`` button is only displayed if the [Project Discoverability](/dashboard/user-guide/projects.html#setting-project-discoverability) is configured to the ``Add to Project Catalog`` option. 
 :::
 
-## Activity History <since project="skills-service" version="2.10" />
+## Activity History
 
 The Activity History feature provides a comprehensive record of all administrative changes made to this project.
 
-<import-content path="/dashboard/user-guide/common/activity-history.html"/>
+<Content path="/dashboard/user-guide/common/activity-history.md"/>
 
 ## Issues
 

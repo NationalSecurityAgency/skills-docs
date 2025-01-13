@@ -3,7 +3,7 @@
 This section focuses on installing the SkillTree platform. 
 Once the service is installed you will have access to the management dashboard and API. 
 
-<import-content path="/dashboard/install-guide/common/install-tip.html"/>
+<Content path="/dashboard/install-guide/common/install-tip.md"/>
 
 There are two official distributions: 
 
