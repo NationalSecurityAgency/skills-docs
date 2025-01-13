@@ -40,9 +40,11 @@ let skillTreeServiceUrl = skillTreeServiceUrlDefaultValue;
 let skillTreeServiceUrlProvided = false;
 let docsTitle = 'SkillTree Docs';
 let noExternalLinks = false;
+let installTypeProp = 'form';
 
-const confValue = 'injectedConf';
-if (confValue && confValue !== 'injectedConf') {
+const confValue = process.env.SKILLS_DOCS_CONFIG;
+console.log(`SKILLS_DOCS_CONFIG: ${JSON.stringify(confValue, null, 2)}`);
+if (confValue) {
     const confVals = confValue.split(',');
     confVals.forEach((conf) => {
         const keyVal = conf.split('=');
@@ -67,6 +69,8 @@ if (confValue && confValue !== 'injectedConf') {
             removeInstallGuide = true;
         } else if (key === 'docsTitle') {
             docsTitle = val;
+        } else if (key === 'installType') {
+            installTypeProp = val;
         } else if (key === 'removeContributionsGuide' && val === 'true') {
             removeContributionsGuide = true;
         } else if (key === 'noExternalLinks' && val === 'true') {
@@ -163,23 +167,23 @@ sidebar = sidebar.concat([{
 if (removeInstallGuide) {
     const toFilter = 'Install Guide';
     nav = nav.filter((item) => item.text !== toFilter);
-    sidebar = sidebar.filter((item) => item.title !== toFilter);
+    sidebar = sidebar.filter((item) => item.text !== toFilter);
 }
 if (removeProgressAndRankingPageFromDashboardUserGuide) {
-    const dashboardGuide = sidebar.find((item) => item.title === 'Dashboard User Guide');
+    const dashboardGuide = sidebar.find((item) => item.text === 'Dashboard User Guide');
     dashboardGuide.children = dashboardGuide.children.filter((item) => !item.endsWith('progress-and-ranking'))
 }
 if (removeAuthPageFromIntegrationGuide) {
-    const dashboardGuide = sidebar.find((item) => item.title === 'Integration Guide');
+    const dashboardGuide = sidebar.find((item) => item.text === 'Integration Guide');
     dashboardGuide.children = dashboardGuide.children.filter((item) => !item.endsWith('auth'))
 }
 if (removeContributionsGuide) {
     nav = nav.filter((item) => item.text !== 'Contribute');
-    sidebar = sidebar.filter((item) => item.title !== 'Open Source Contributions');
+    sidebar = sidebar.filter((item) => item.text !== 'Open Source Contributions');
 }
 if (pkiAuthInstallOnly) {
     // remove Auth section all together, it's not adding any value to pki-only install
-    const integrationGuide = sidebar.find((item) => item.title === 'Integration Guide');
+    const integrationGuide = sidebar.find((item) => item.text === 'Integration Guide');
     integrationGuide.children = integrationGuide.children.filter((item) => !item.endsWith('auth'))
 }
 
@@ -229,7 +233,7 @@ export default defineUserConfig({
             showContributionGuide: !removeContributionsGuide,
             noExternalLinks,
         },
-        installType: 'form',
+        installType: installTypeProp,
         skillTreeServiceUrl,
         themePlugins: {
             git: false,
