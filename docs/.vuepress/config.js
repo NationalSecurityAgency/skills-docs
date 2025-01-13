@@ -5,7 +5,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { getDirname, path } from 'vuepress/utils'
 import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 const __dirname = import.meta.dirname || getDirname(import.meta.url)
-import { slimsearchPlugin } from '@vuepress/plugin-slimsearch'
+import { searchPlugin } from '@vuepress/plugin-search'
 
 const videosJson = require('./components/videos/skilltree-training-videos.json');
 
@@ -206,9 +206,21 @@ export default defineUserConfig({
             componentsDir: path.resolve(__dirname, './components'),
         }),
         backToTopPlugin({ progress: false}),
-        slimsearchPlugin({
-            indexContent: true,
-            suggestion: false,
+        searchPlugin({
+            isSearchable: (page) => {
+                if (removeContributionsGuide && page.path.startsWith('/contribution')) {
+                    return false;
+                }
+                if (removeInstallGuide && page.path.startsWith('/dashboard/install-guide')) {
+                    return false;
+                }
+
+                if (page.path.startsWith('/skills-client/legacy.html')) {
+                    return false
+                }
+                return true
+            },
+            getExtraFields: (page) => page.frontmatter.tags ?? [],
         }),
     ],
     theme: defaultTheme({

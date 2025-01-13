@@ -1,3 +1,6 @@
+---
+tags: [Approval, Honor, Survey, Quiz]
+---
 # Self Reporting
 
 Self Report is a feature that empowers users to mark skills as completed directly in the SkillTree dashboard OR through the embedded Skills Display component. 
