@@ -248,7 +248,6 @@ The following subject's training profile elements are copied:
 - Skills definitions and their attributes (description, points, self-reporting, etc.)
 - Skill Groups
 - Configured display order of subject's skills
-- Subject's levels
 
 ::: tip
 After copying a subject, the new subject becomes independent of the original, and any changes made to the original
@@ -258,6 +257,7 @@ subject will not affect the copied subject
 The following elements are excluded from the subject copying process:
 - Reused skills
 - Imported catalog skills
+- Levels: destination project's subject will be created with default level configuration
 - Cross-project prerequisites
 
 ::: warning
