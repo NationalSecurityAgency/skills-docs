@@ -81,6 +81,14 @@ When captions are configured the video player will present an option to turn cap
 Captions utilize [Web Video Text Tracks Format (WebVTT)](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API) format 
 and its input form offers an ability to prefill an example in WebVTT format by clicking `Add Example` button above the `Captions` input field.  
 
+::: tip
+Configure the video size by dragging the button on the bottom-right corner of the video. After resizing, click the 
+**Save Changes** button to persist the new dimensions.
+
+Trainees can also resize videos, and their personalized configurations will be automatically saved in the browser's
+local storage and will take priority over the default.
+:::
+
 ### Achieve Skill By Watching the Video 
 
 Once the video's settings are specified the skill can also be configured to be achieved after the trainee watched the entire video (>96%). 

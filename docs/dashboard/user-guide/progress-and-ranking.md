@@ -81,7 +81,7 @@ A single quiz or survey attempt will display the results of that attempt. In the
 
 In the case of a quiz, there are a number of possible conditions based on the status of the attempt:
 - `Passed` Quiz: all the questions and answers are shown
-- `Failed` Quiz: by default only manually graded (`Text Input`) answers are shown, `Single Choice` and `Multiple Choice` answers are not displayed; however if [Show Correct Answers On Failure](/dashboard/user-guide/quizzes-and-surveys.html#quiz-settings) setting is enabled then all the answers are displayed
+- `Failed` Quiz: by default only manually graded (`Text Input`) answers are shown, `Multiple Answers` and `Multiple Choice` questions are not displayed; however if [Show Correct Answers On Failure](/dashboard/user-guide/quizzes-and-surveys.html#quiz-settings) setting is enabled then all the answers are displayed
 - `Needs Grading` Quiz: answers are not displayed
 
 ## Badges Page

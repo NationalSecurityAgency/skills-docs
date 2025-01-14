@@ -45,8 +45,8 @@ or can be executed independently. Associating a Quiz to an existing skill will r
 in order to earn the skill and its points. In the case of a quiz, then the quiz serves as the skill's knowledge check.
 
 Quizzes currently support two types of questions:
-- ``Single Choice`` - question will only have 1 correct answer 
-- ``Mulitple Choice`` - question has 2 or more correct choices; all correct choices must be selected to get credit for the question
+- ``Multiple Choice`` - question will only have 1 correct answer 
+- ``Multiple Answers`` - question has 2 or more correct choices; all correct choices must be selected to get credit for the question
 - ``Input Text`` - question for test-takers to provide a free-form text answer that will later be graded by a quiz administrator
 
 To administer a quiz click `Manage` button for that quiz on the `Quizzes and Surveys` page. 
@@ -59,12 +59,6 @@ To add a new question please click `Question +` button.
 
 The Question's text supports all the same features that the [Description Editor](/dashboard/user-guide/rich-text-editor.html) currently affords which 
 includes a generous feature set including attaching or copy-and-pasting screenshots. 
-The two supported question's types and ``Single Choice`` and ``Mulitple Choice`` and are implicitly derived from the number of the selected correct answers.
-A single selected correct answer implies ``Single Choice`` question type and when more than one corrected answers selected then ``Mulitple Choice`` is used.
-::: tip
-When multiple correct answers are selected users will be required to properly identify all of those correct answers in
-order to receive the credit for the question
-:::
 
 ::: tip
 Use the `Preview` button on the top left below the Quiz name in order to see what the quiz will look like to your users.
@@ -148,8 +142,8 @@ When associated to a skill, the survey is a method to gather feedback about that
 pieces of important data related to the skill. 
 
 A Survey currently supports four types of questions:
-- ``Single Choice`` - question will only allow a single choice to be selected
-- ``Mulitple Choice`` - one or more choices are required to be selected  
+- ``Multiple Choice`` - question will only allow a single choice to be selected
+- ``Multiple Answers`` - one or more choices are required to be selected  
 - ``Text Input`` - a freeform answer text is required
 - ``Rating`` - a star-based rating question with an ability configure between 3 and 10 stars  
 
@@ -163,7 +157,7 @@ To add a new question please click the `Question +` button.
 
 The Question's text supports all the same features that the [Description Editor](/dashboard/user-guide/rich-text-editor.html) currently affords which
 includes a generous feature set including attaching or copy-and-pasting screenshots.
-Please use the Answer's dropdown to select the type, currently available options are  ``Single Choice``, ``Mulitple Choice`` and ``Text Input``.
+Please use the Answer's dropdown to select the type.
 
 ::: tip
 Use the `Preview` button on the top left below the Survey name in order to see what the survey will look like to your users.

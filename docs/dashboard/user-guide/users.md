@@ -32,6 +32,25 @@ Additionally, you can export the table data into an Excel file by clicking the E
 Note that the export will respect any currently applied filters.
 :::
 
+## Users Archive <since project="skills-service" version="3.3" />
+
+Users can be archived and restored in batches or individually. Archived users are excluded from project visualizations, metrics, and tables.
+
+To archive a user, follow these steps:
+
+- Navigate to the Users page under a project.
+- Select one or more users in the users table.
+- Click the Archive button.
+
+![component-users_table_ready_to_archive.png](../../screenshots/admin/component-users_table_ready_to_archive.png)
+
+The archive can be viewed by clicking the `User Archive` button, located on the top-right, above the users table's components.
+
+![component-users_archive.png](../../screenshots/admin/component-users_archive.png)
+
+To restore an archived user, simply click the `Restore` button for that user.
+
+
 ## User Roles
 
 ### Default User

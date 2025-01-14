@@ -29,6 +29,19 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('component-user_progress_table', '#mainContent2');
     })
 
+    it('Users Archive component', () => {
+        // projects page
+        cy.visit('/administrator/projects/movies/users')
+        cy.get('[data-cy="usersTable"] [data-p-index="0"] [data-pc-name="rowcheckbox"]').click()
+        cy.get('[data-cy="usersTable"] [data-p-index="1"] [data-pc-name="rowcheckbox"]').click()
+        cy.snap('component-users_table_ready_to_archive', '#mainContent2');
+        cy.get('[data-cy="archiveUsersTableBtn"]').click()
+
+        cy.get('[data-cy="userArchiveBtn"]').click()
+        cy.get('[data-cy="userArchiveTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '2')
+        cy.snap('component-users_archive', '#mainContent2');
+    })
+
     it('Gen Projects pages - dark mode', () => {
         cy.request('POST', '/app/userInfo/settings', [{
             'settingGroup': 'user.prefs',
@@ -215,8 +228,8 @@ context('Admin: Generate Screenshots', () => {
     it('Settings Page', () => {
         cy.visit('/administrator/projects/movies/settings')
         cy.contains('Discoverable');
-        cy.get('[data-cy="customLabelsSwitch"]').click();
         cy.snap('page-project-settings');
+        cy.snap('component-project-settings', '#mainContent2');
     })
 
     it('Email notification pages', () => {
