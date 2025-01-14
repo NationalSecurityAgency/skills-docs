@@ -191,6 +191,7 @@ console.log(`Sidebar object:\n${JSON.stringify(sidebar, null, 2)}`);
 
 export default defineUserConfig({
     bundler: viteBundler(),
+    port: 9999,
     lang: 'en-US',
     description: 'Innovative approach to application training!',
     head: [

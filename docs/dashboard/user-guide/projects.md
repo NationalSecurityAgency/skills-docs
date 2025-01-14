@@ -43,7 +43,7 @@ The Dashboard user that creates a project is automatically granted the role of a
 
 To manage and view project-wide settings navigate to ``Project -> Settings``. 
 
-![Project Settings](../../screenshots/admin/page-project-settings.png)
+![component-project-settings.png](../../screenshots/admin/component-project-settings.png)
 
 The following project-level settings are available: 
 
@@ -129,6 +129,20 @@ If this is the case, admins can customize the following labels displayed to user
 ### Setting: Always Show Group Descriptions
 
 Toggle this setting to always show the group's descriptions in this project embedded Skills Display component and Progress and Ranking pages.
+
+### Setting: Hide Group Info On Skill Pages <since project="skills-service" version="3.3" />
+
+By default, the skill page displays the group name and description when a skill is part of a Skill Group. Enabling this
+setting will hide the group's information from the skill page.
+
+### Setting: Hide Achievement Celebration <since project="skills-service" version="3.3" />
+
+Trainee achievement celebrations are displayed throughout training displays when levels, badges, and skills are
+achieved. These congratulatory messages can be hidden by enabling the `Hide Achievement Celebration` setting.
+
+### Setting: Project Deletion Protection <since project="skills-service" version="3.3" />
+
+When this setting is enabled, project deletion will be prevented, and the Delete button will be hidden. 
 
 ## Access
 The Project Access page supports adding or removing Project Administrators, Project Approvers, and inviting users to join a project if the project has been configured as an Invite Only project as well as revoking a user's access.
@@ -222,6 +236,56 @@ The following training profile elements are **NOT** copied into a new project:
 ::: tip
 Once a project has been copied, the new project is disconnected from the original such that changes to the original project will not be reflected in the copy
 :::
+
+## Copy Subject to Another Project <since project="skills-service" version="3.3" />
+
+A subject in its entirety can be easily copied from one project to another. To do this, navigate to the Subject page and
+click the `Copy` button located on the top-left of the screen, right below the subject's name. Once the copy operation
+is initiated, you will be guided through the destination project selection.
+
+The following subject's training profile elements are copied:
+- Subject's attributes (icon, description, help URL)
+- Skills definitions and their attributes (description, points, self-reporting, etc.)
+- Skill Groups
+- Configured display order of subject's skills
+- Subject's levels
+
+::: tip
+After copying a subject, the new subject becomes independent of the original, and any changes made to the original
+subject will not affect the copied subject
+:::
+
+The following elements are excluded from the subject copying process:
+- Reused skills
+- Imported catalog skills
+- Cross-project prerequisites
+
+::: warning
+When copying a subject to another project, the destination project must meet the following requirements:
+
+* It must not have an existing subject with the same name or ID.
+* It must not have any skills with IDs or names that match the copied subject's skills.
+:::
+
+## Copy Skills to Another Project <since project="skills-service" version="3.3" />
+
+Skills can be copied individually or in batches from one project to another. To do so:
+
+* Navigate to the Subject page
+* Select one or more skills
+* Click the Actions drop-down button at the top-right of the skills' table
+* Select "Copy to another Project"
+
+Once the copy operation is initiated, you will be guided through the process of selecting a destination project and subject or skill group.
+
+::: tip
+After copying skills, the new skills become independent of the originals, and any changes made to the originals will not affect the copied skills.
+:::
+
+::: warning
+Note that the destination project must not have any subjects, badges, or skills with IDs or names that match the copied skills.
+:::
+
 
 ## Share Project
 

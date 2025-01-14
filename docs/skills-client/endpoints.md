@@ -76,6 +76,9 @@ Here is an example of an event that (1) was successfully applied, (2) completed/
    "skillId":"ImportantSkill",
    "name":"Important Skill",
    "pointsEarned": 15,
+   "totalPointsEarned": 30,
+   "totalPoints": 30,
+   "numOccurrencesToCompletion": 2,
    "skillApplied":true,
    "explanation":"Skill event was applied",
    "completed":[{
@@ -94,20 +97,23 @@ Here is an example of an event that (1) was successfully applied, (2) completed/
 
 Here is a reference table for result fields and their meaning:
 
-| Field | Type | Explanation | 
-| :------- | :----------- | :----------- | 
-| success | *boolean* | ``true`` if there were no issues reporting the skill, ``false`` if there was a server side failure - this could happen if the service is down or you stumbled on a bug |
-| projectId | *string* | the projectId that the report skill belongs to |
-| skillId | *string* | the skillId of the report skill |
-| name | *string* | the display name of the report skill |
-| pointsEarned | *number* | number of points earned by this request |
-| skillApplied | *boolean* | ``true`` if this event contributed points to the skill; ``false`` if the event didn't contribute points - ``explanation`` field will tell you why (see examples below) |
-| explanation | *string* | human readable explanation about how this skill event was handled; this field will explain why an event wasn't able to contribute points (see examples below) |
-| completed | *list* | metadata of a completed item if this event caused user to level-up, complete a skill or earn a badge/gem (just to mention a few) | 
-| completed.type | *string* | type of the completed item, will be one of these well-known values: ``Overall``, ``Subject``, ``Skill``, ``Badge``. ``Overall`` indicates that the user leveled-up for the entire project, ``Subject`` indicates that the user leveled-up for a specific subject, ``Skill`` indicates that this skill is fully accomplished, ``Badge`` indicates that a badge/gem was earned. |
-| completed.level | *int* | indicates which level the user achieved via this skill event; only applicable to ``Overall`` and ``Subject`` types |
-| completed.id | *string* | id of the completed item, in the case of ``Skill`` type this will be skill id, in the case of ``Subject`` type it will be subject id and so on... |
-| completed.name | *string* | human friendly name of the event and can be used to display to the end user | 
+| Field                                                                                       | Type      | Explanation                                                                                                                                                                                                                                                                                                                                                                   | 
+|:--------------------------------------------------------------------------------------------|:----------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| success                                                                                     | *boolean* | ``true`` if there were no issues reporting the skill, ``false`` if there was a server side failure - this could happen if the service is down or you stumbled on a bug                                                                                                                                                                                                        |
+| projectId                                                                                   | *string*  | the projectId that the report skill belongs to                                                                                                                                                                                                                                                                                                                                |
+| skillId                                                                                     | *string*  | the skillId of the report skill                                                                                                                                                                                                                                                                                                                                               |
+| name                                                                                        | *string*  | the display name of the report skill                                                                                                                                                                                                                                                                                                                                          |
+| pointsEarned                                                                                | *number*  | number of points earned by this request                                                                                                                                                                                                                                                                                                                                       |
+| totalPointsEarned <since project="skills-service" version="3.3" is-block="true" />          | *number*  | total points earned by this user for this skill                                                                                                                                                                                                                                                                                                                               |
+| totalPoints <since project="skills-service" version="3.3" is-block="true" />                | *number*  | total points defined by an administrator for this skill                                                                                                                                                                                                                                                                                                                       |
+| numOccurrencesToCompletion <since project="skills-service" version="3.3" is-block="true" /> | *number*  | number of times skill needs to be performed to earn all its points                                                                                                                                                                                                                                                                                                            |
+| skillApplied                                                                                | *boolean* | ``true`` if this event contributed points to the skill; ``false`` if the event didn't contribute points - ``explanation`` field will tell you why (see examples below)                                                                                                                                                                                                        |
+| explanation                                                                                 | *string*  | human readable explanation about how this skill event was handled; this field will explain why an event wasn't able to contribute points (see examples below)                                                                                                                                                                                                                 |
+| completed                                                                                   | *list*    | metadata of a completed item if this event caused user to level-up, complete a skill or earn a badge/gem (just to mention a few)                                                                                                                                                                                                                                              | 
+| completed.type                                                                              | *string*  | type of the completed item, will be one of these well-known values: ``Overall``, ``Subject``, ``Skill``, ``Badge``. ``Overall`` indicates that the user leveled-up for the entire project, ``Subject`` indicates that the user leveled-up for a specific subject, ``Skill`` indicates that this skill is fully accomplished, ``Badge`` indicates that a badge/gem was earned. |
+| completed.level                                                                             | *int*     | indicates which level the user achieved via this skill event; only applicable to ``Overall`` and ``Subject`` types                                                                                                                                                                                                                                                            |
+| completed.id                                                                                | *string*  | id of the completed item, in the case of ``Skill`` type this will be skill id, in the case of ``Subject`` type it will be subject id and so on...                                                                                                                                                                                                                             |
+| completed.name                                                                              | *string*  | human friendly name of the event and can be used to display to the end user                                                                                                                                                                                                                                                                                                   | 
  
 Here is an example where the skill event did not contribute any points because it's already fully accomplished: 
 ```json
@@ -117,6 +123,9 @@ Here is an example where the skill event did not contribute any points because i
    "skillId":"ImportantSkill",
    "name":"Important Skill",
    "pointsEarned": 0,
+   "totalPointsEarned": 200,
+   "totalPoints": 200,
+   "numOccurrencesToCompletion": 2,
    "skillApplied":false,
    "explanation":"This skill reached its maximum points",
    "completed":[]
@@ -131,6 +140,9 @@ Here is an example where the skill event did not contribute any points because i
    "skillId":"ImportantSkill",
    "name":"Important Skill",
    "pointsEarned": 0,
+   "totalPointsEarned": 0,
+   "totalPoints": 200,
+   "numOccurrencesToCompletion": 2,
    "skillApplied":false,
    "explanation":"Not all dependent skills have been achieved. Missing achievements for 1 out of 1. Waiting on completion of [FirstProject:skill1Skill].",
    "completed":[]
@@ -145,6 +157,9 @@ Below is an example where the skill contributed points but did not complete anyt
    "skillId":"ImportantSkill",
    "name":"Important Skill",
    "pointsEarned": 15,
+   "totalPointsEarned": 30,
+   "totalPoints": 45,
+   "numOccurrencesToCompletion": 3,
    "skillApplied":true,
    "explanation":"Skill event was applied",
    "completed":[]
