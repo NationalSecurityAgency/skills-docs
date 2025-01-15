@@ -8,9 +8,50 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 3.3.0 <release-date date="January 2025" />
+- Ability to [archive and restore users](/dashboard/user-guide/users.html#users-archive) in batch or individually, with archived users excluded from project visualizations, metrics, and tables
+- Ability to copy training profile components between projects
+  - [Batch skill definition copying](/dashboard/user-guide/projects.html#copy-skills-to-another-project) from one project to another
+  - [Copying subject definitions](/dashboard/user-guide/projects.html#copy-subject-to-another-project), including all skills, from one project to another
+- Trainee achievement celebrations with congratulatory messages displayed throughout training displays when levels, badges, and skills are achieved
+  - Added [project configuration option](/dashboard/user-guide/projects.html#setting-hide-achievement-celebration) to disable achievement celebrations
+- Enhanced Project Deletion Protection
+  - Clear warning of permanent removal of users and definitions  
+  - Requirement for multiple administrator acknowledgments before removal
+  - New project setting: [Project Deletion Protection](/dashboard/user-guide/projects.html#setting-project-deletion-protection) to prevent deletion when enabled
+- Introduced "Points First Earned" column on users table for project, subject, skill, and badge administrative pages
+- Self Reported skills enhancements
+  - Feedback provision to users when approving self-reported skills
+  - Historical display of self-reporting requests and responses
+  - Trainee access to submitted justification for self-reported skills
+- Skills Group usage improvements
+  - Enhanced skill page display with group name and description
+    - Group name/description display can be [disabled/enabled by project administrators](/dashboard/user-guide/projects.html#setting-hide-group-info-on-skill-pages)
+  - Ability to collapse and expand all Skills Groups, with expansion state persisted in browser local storage
+- Embedded video resizing
+  - Administrator configuration of default [video](/dashboard/user-guide/skills.html#videos) size
+  - Trainees can resize videos, and their personalized configurations are automatically persisted in the browser's local storage
+- Enhanced the [result object](/skills-client/endpoints.html#endpoint-result-object) returned by the [Report Skill Endpoint](/skills-client/endpoints.html#report-skill-event-endpoint) to include information about the earned and available points for the skill.
+- Improved terminology for Quiz and Survey Choice questions
 
+
+## 3.2.5 <release-date date="December 2024" />
+- Spring Boot Upgrade
+
+## 3.2.4 <release-date date="December 2024" />
+- Bug Fixes
+
+## 3.2.3 <release-date date="December 2024" />
+- Bug Fixes
+
+## 3.2.2 <release-date date="November 2024" />
+- Spring Boot Upgrade
+
+## 3.2.1 <release-date date="November 2024" />
+- Bug Fixes 
+ 
 ## 3.2.0 <release-date date="November 2024" />
-- Introduced the ability to manage project and quiz administrators in [groups](/dashboard/user-guide/admin-groups.html.
+- Introduced the ability to manage project and quiz administrators in [groups](/dashboard/user-guide/admin-groups.html).
   - The new approach allows for simple creation and management of Admin Groups.
   - Admin groups can easily be assigned to multiple projects and/or quizzes.
 - Introduced a brand-new quiz question type: `Input Text` with a comprehensive grading mechanism.
