@@ -8,6 +8,15 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 3.4.0 <release-date date="February 2025" />
+- Enhanced display of Learning Path when Badges have a lot of skills, therefore enabling users to better understand skills with configured prerequisites.
+- Implemented an optional quiz setting to [only include incorrect questions on retake attempts](/dashboard/user-guide/quizzes-and-surveys.html#setting-limit-retake-to-incorrect-questions)
+- Improved badge display card to indicate how many badges are available
+- Bug Fixes
+
+## 3.3.1 <release-date date="January 2025" />
+- Bug Fixes
+
 ## 3.3.0 <release-date date="January 2025" />
 - Ability to [archive and restore users](/dashboard/user-guide/users.html#users-archive) in batch or individually, with archived users excluded from project visualizations, metrics, and tables
 - Ability to copy training profile components between projects

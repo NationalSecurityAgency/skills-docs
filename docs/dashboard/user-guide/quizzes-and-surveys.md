@@ -133,6 +133,11 @@ accurately tracks each successful attempt, providing a comprehensive view of use
 Enabling this feature will provide the correct answers on failed quiz attempts, allowing users to review and understand
 the correct answers, improving their learning and understanding of the material.
 
+#### Setting : Limit Retake to Incorrect Questions <since project="skills-service" version="3.4" />
+
+Enabling this feature limits the questions presented to users when retaking a quiz to those that were answered
+incorrectly on the previous attempt.
+
 ## Survey
 
 A Survey is a data collection technique utilizing one or more questions. Surveys can be associated to a skill or can be
