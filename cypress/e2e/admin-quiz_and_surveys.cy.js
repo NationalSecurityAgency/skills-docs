@@ -41,6 +41,12 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.get('[data-cy="questionText"] [data-cy="markdownEditorInput"]')
 
         cy.snap('modal-new-question', '.p-dialog')
+
+        cy.get('[data-cy="answerHintEnableCheckbox"]').click()
+        cy.get('[data-cy="answerHint"]').clear()
+        cy.get('[data-cy="answerHint"]').type('A clever hint that will assist trainees')
+
+        cy.snap('modal-new-question-hint-component', '.p-dialog [data-cy="answerHintSection"]')
     })
 
     it('configure quiz', () => {
