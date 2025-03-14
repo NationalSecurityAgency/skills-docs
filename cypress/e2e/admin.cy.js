@@ -32,8 +32,8 @@ context('Admin: Generate Screenshots', () => {
     it('Users Archive component', () => {
         // projects page
         cy.visit('/administrator/projects/movies/users')
-        cy.get('[data-cy="usersTable"] [data-p-index="0"] [data-pc-name="rowcheckbox"]').click()
-        cy.get('[data-cy="usersTable"] [data-p-index="1"] [data-pc-name="rowcheckbox"]').click()
+        cy.get('[data-cy="usersTable"] [data-p-index="0"] [data-pc-name="pcrowcheckbox"]').click()
+        cy.get('[data-cy="usersTable"] [data-p-index="1"] [data-pc-name="pcrowcheckbox"]').click()
         cy.snap('component-users_table_ready_to_archive', '#mainContent2');
         cy.get('[data-cy="archiveUsersTableBtn"]').click()
 
@@ -87,7 +87,7 @@ context('Admin: Generate Screenshots', () => {
         cy.visit('/administrator/projects/movies')
         cy.get('[data-cy="subjectCard-Action"]');
         cy.get('[data-cy="btn_Subjects"]').click()
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[data-cy="subjectName"]')
         cy.wait(2000)
         cy.snap('modal-subjects-new_subject', '.p-dialog')
@@ -95,7 +95,7 @@ context('Admin: Generate Screenshots', () => {
         // new badge modal
         cy.visit('/administrator/projects/movies/badges')
         cy.get('[data-cy="btn_Badges"]').click();
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[data-cy="name"]')
         cy.snap('modal-badges-new_badge', '.p-dialog')
     });
@@ -105,7 +105,7 @@ context('Admin: Generate Screenshots', () => {
         // new skill modal
         cy.visit('/administrator/projects/movies/subjects/Action/');
         cy.get('[data-cy="newSkillButton"]').click();
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[data-cy="skillName"]');
 
         cy.snap('modal-skills-new_skill', '.p-dialog')
@@ -118,7 +118,7 @@ context('Admin: Generate Screenshots', () => {
 
         cy.clickNav('Self Report');
         for (let i = 0; i < 5; i++) {
-            cy.get(`[data-cy="skillsReportApprovalTable"] [data-p-index="${i}"] [data-pc-name="rowcheckbox"]`).click()
+            cy.get(`[data-cy="skillsReportApprovalTable"] [data-p-index="${i}"] [data-pc-name="pcrowcheckbox"]`).click()
         }
         cy.get('[data-cy="approveBtn"]').click();
 
@@ -133,36 +133,34 @@ context('Admin: Generate Screenshots', () => {
 
         cy.visit('/administrator/projects/movies/subjects/Action')
 
-        // cy.get('[data-cy="skillSelect-TheLordoftheRingsTheFellowshipoftheRing"]').click({ force: true });
-        // cy.get('[data-cy="skillSelect-JurassicWorld"]').click({ force: true });
-        // cy.get('[data-cy="skillSelect-RogueOneAStarWarsStory"]').click({ force: true });
         for (let i = 0; i < 3; i++) {
-            cy.get(`[data-cy="skillsTable"] [data-p-index="${i}"] [data-pc-name="rowcheckbox"]`).click()
+            cy.get(`[data-cy="skillsTable"] [data-p-index="${i}"] [data-pc-name="pcrowcheckbox"]`).click()
         }
         cy.get('[data-cy="skillActionsBtn"]').click();
-        cy.get('[data-pc-section="menu"] [aria-label="Add Tag"]').click();
+        cy.get('[data-cy="skillsActionsMenu"] [aria-label="Add Tag"]').click()
 
         const tagName = 'Two Thumbs Up!'
         cy.get('[data-cy="newTag"]').clear().type(tagName)
         cy.get('[data-cy="saveDialogBtn"]').click()
 
         for (let i = 0; i < 3; i++) {
-            cy.get(`[data-cy="skillsTable"] [data-p-index="${i}"] [data-pc-name="rowcheckbox"]`).click()
+            cy.get(`[data-cy="skillsTable"] [data-p-index="${i}"] [data-pc-name="pcrowcheckbox"]`).click()
         }
         cy.get('[data-cy="skillActionsBtn"]').click();
-        cy.get('[data-pc-section="menu"] [aria-label="Add Tag"]')
+        cy.get('[data-cy="skillsActionsMenu"] [aria-label="Add Tag"]')
 
         cy.snap('skill-tags-page')
 
         cy.get('[data-cy="skillActionsBtn"]').click();
-        cy.get('[data-pc-section="menu"] [aria-label="Add Tag"]').click();
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-cy="skillsActionsMenu"] [aria-label="Add Tag"]').click();
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.wait(1000)
         cy.get('[data-cy="existingTag"]').click();
         cy.snap('existing-tag-dropdown', '.p-dialog')
+        cy.get('[data-cy="closeDialogBtn"]').click()
 
         cy.get('[data-cy="skillActionsBtn"]').click();
-        cy.get('[data-pc-section="menu"] [aria-label="Remove Tag"]').click()
+        cy.get('[data-cy="skillsActionsMenu"] [aria-label="Remove Tag"]').click()
         cy.get('[data-cy="existingTag"]').click();
         cy.get('[data-pc-section="list"]').contains(tagName).click()
         cy.get('[data-cy="saveDialogBtn"]').click()
@@ -253,7 +251,7 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-skills');
 
         cy.get('[data-cy="btn_edit-subject"]').click();
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[aria-label="icon selector"]').click();
         cy.contains('address-book');
         cy.snap('modal-edit-subjectIcon', '.p-dialog')
@@ -262,8 +260,8 @@ context('Admin: Generate Screenshots', () => {
     it('Gen Top Skill pages', () => {
         // // skills page
         cy.visit('/administrator/projects/movies/metrics/skills');
-        cy.get('[data-pc-section="headertitle"]').contains('# Users Achieved').click()
-        cy.get('[data-pc-section="headertitle"]').contains('# Users Achieved').click()
+        cy.get('[data-pc-section="columntitle"]').contains('# Users Achieved').click()
+        cy.get('[data-pc-section="columntitle"]').contains('# Users Achieved').click()
         cy.get('[data-cy="skillsNavigator-filters"] [data-cy="topSkillFilterButton"]').click();
         cy.get('[data-cy="skillsNavigator-filterBtn"]').click();
         cy.get('[data-cy="skillsNavigator-table"] a').eq(1).should('have.attr', 'href').and('include', 'skills')
@@ -283,7 +281,7 @@ context('Admin: Generate Screenshots', () => {
 
         // edit skill modal
         cy.get('[data-cy="editSkillButton_EdgeofTomorrow"]').click();
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[data-cy="skillName"]').should('have.value', 'Edge of Tomorrow');
 
         cy.snap('modal-edit-skill', '.p-dialog');
@@ -339,7 +337,7 @@ context('Admin: Generate Screenshots', () => {
     it('Gen Skills Groups', () => {
         cy.visit('/administrator/projects/movies/subjects/Family/')
         cy.get('[data-cy="skillsTable-skillFilter"]').type('Harry')
-        cy.get(`[data-cy="skillsTable"] [data-p-index="0"] [data-pc-section="rowtoggler"]`).click()
+        cy.get(`[data-cy="skillsTable"] [data-p-index="0"] [data-pc-section="rowtogglebutton"]`).click()
         cy.contains('Harry Potter and the Half-Blood Prince');
         cy.snap('page-skills-group')
     })
@@ -359,7 +357,7 @@ context('Admin: Generate Screenshots', () => {
         // cy.viewport(1800, 1200); // some modals require a lot more vertical real estate
         cy.visit('/administrator/projects/movies/badges')
         cy.get('[data-cy="btn_Badges"]').click()
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[data-cy="timeLimitCheckbox"]').click()
         cy.snap('modal-new-badge-component-bonus-award', '[data-cy="bonusAwardCard"]')
     })
@@ -376,7 +374,7 @@ context('Admin: Generate Screenshots', () => {
         cy.visit('/administrator/projects/movies/subjects/Family/');
         // cy.get('[data-cy="selectAllSkillsBtn"]').click();
         for (let i = 0; i < 5; i++) {
-            cy.get(`[data-cy="skillsTable"] [data-p-index="${i}"] [data-pc-name="rowcheckbox"]`).click()
+            cy.get(`[data-cy="skillsTable"] [data-p-index="${i}"] [data-pc-name="pcrowcheckbox"]`).click()
         }
         cy.get('[data-cy="skillActionsBtn"]').click();
         // cy.get('[data-cy="skillExportToCatalogBtn"]');
@@ -609,7 +607,7 @@ context('Admin: Generate Screenshots', () => {
 
         cy.visit('/administrator/projects/movies/subjects/Action/')
         cy.get('[data-cy="newSkillButton"]').click()
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[data-cy="selfReportEnableCheckbox"]').click();
 
         cy.snap('modal-new-skill_self-report-checked', '.p-dialog')
