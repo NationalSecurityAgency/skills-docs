@@ -35,7 +35,7 @@ Cypress.Commands.add('snap', (name, selector = null, options = {}) => {
     cy.log(`Screenshot: ${snapLoc} checked [${Cypress.currentTest.titlePath[0]}]`)
     const updatedOptions = {
         overwrite: true,
-        disableTimersAndAnimations: false,
+        disableTimersAndAnimations: true,
         ...options
     }
     if (selector) {
