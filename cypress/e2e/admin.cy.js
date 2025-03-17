@@ -377,11 +377,9 @@ context('Admin: Generate Screenshots', () => {
             cy.get(`[data-cy="skillsTable"] [data-p-index="${i}"] [data-pc-name="pcrowcheckbox"]`).click()
         }
         cy.get('[data-cy="skillActionsBtn"]').click();
-        // cy.get('[data-cy="skillExportToCatalogBtn"]');
-        cy.get('[data-cy="skillsActionsMenu"] [aria-label="Export To Catalog"] a').focus()
+        cy.get('[data-cy="skillsActionsMenu"] [aria-label="Export To Catalog"]').click()
 
         cy.snap('page-export-to-catalog');
-        cy.get('[data-cy="skillsActionsMenu"] [aria-label="Export To Catalog"]').click()
         cy.get('[data-cy="exportToCatalogButton"]').click();
 
         cy.visit('/administrator/projects/movies/skills-catalog');
@@ -541,27 +539,24 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('access page', () => {
-        cy.intercept({
-            method: 'POST',
-            path: '/app/users/suggest*',
-        }).as('suggest');
         cy.visit('/administrator/projects/movies/access')
 
-        cy.get('[data-cy="existingUserInput"]')
-            .type('bob1');
-        cy.wait('@suggest');
+        cy.get('[data-cy="existingUserInput"]').type('bob1');
         cy.wait(500);
         cy.get('#existingUserInput_0').contains('bob1').click();
         cy.get('[data-cy="userRoleSelector"]').click()
-        cy.get('[data-pc-section="panel"] [aria-label="Administrator"]').click();
+        cy.get('[data-pc-section="overlay"] [aria-label="Administrator"]').click();
         cy.get('[data-cy="addUserBtn"]').click();
 
         cy.get('[data-cy="userCell_bob1@email.org"]')
         cy.snap('page-project-access');
 
-        cy.get('[data-p-index="1"] [data-cy="removeUserBtn"]').click();
-        cy.get('[data-pc-name="acceptbutton"]').click();
-        cy.get('[data-cy="userCell_bob1@email.org"]').should('not.exist')
+        cy.get('[data-cy="controlsCell_bob1@email.org"] [data-cy="removeUserBtn"]').click();
+        cy.get('[data-pc-name="pcclosebutton"]').should('have.focus')
+        cy.get('[data-cy="removalSafetyCheckMsg"]').contains('This will remove bob1@email.org from having admin privileges.')
+        cy.get('[data-cy="currentValidationText"]').type('Delete Me')
+        cy.get('[data-cy="saveDialogBtn"]').click()
+        cy.get('[data-cy="controlsCell_bob1@email.org"]').should('not.exist')
     })
 
     Cypress.Commands.add('addApprover', (text) => {
@@ -573,7 +568,7 @@ context('Admin: Generate Screenshots', () => {
         cy.wait(500);
         cy.get('#existingUserInput_0').contains('bob1').click();
         cy.get('[data-cy="userRoleSelector"]').click()
-        cy.get('[data-pc-section="panel"] [aria-label="Approver"]').click();
+        cy.get('[data-pc-section="overlay"] [aria-label="Approver"]').click();
         cy.get('[data-cy="addUserBtn"]').click();
         cy.get('[data-cy="userCell_bob1@email.org"]')
 
@@ -583,9 +578,11 @@ context('Admin: Generate Screenshots', () => {
     Cypress.Commands.add('removeApprover', (text) => {
         cy.wait(3000)
         cy.visit('/administrator/projects/movies/access')
-        cy.get('[data-p-index="1"] [data-cy="removeUserBtn"]').click();
-        cy.get('[data-pc-name="acceptbutton"]').click();
-        cy.get('[data-cy="userCell_bob1@email.org"]').should('not.exist')
+        cy.get('[data-cy="controlsCell_bob1@email.org"] [data-cy="removeUserBtn"]').click();
+        cy.get('[data-pc-name="pcclosebutton"]').should('have.focus')
+        cy.get('[data-cy="currentValidationText"]').type('Delete Me')
+        cy.get('[data-cy="saveDialogBtn"]').click()
+        cy.get('[data-cy="controlsCell_bob1@email.org"]').should('not.exist')
     });
 
     it('self-report split workload conf - fallback', () => {
@@ -621,10 +618,11 @@ context('Admin: Generate Screenshots', () => {
         cy.get(`[data-cy="workloadCell_${user2}"] [data-cy="editApprovalBtn"]`).click()
 
         cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="subjectSelector"]`).click()
-        cy.get('[data-pc-section="filterinput"]').type('Hi');
+        cy.get('[data-pc-section="overlay"] [data-pc-name="pcfilter"]').type('Hi');
         cy.get(`[data-cy="subjSelector-name"]`).contains('History').click()
         cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="addSkillConfBtn"]`).should('be.enabled')
         cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="addSkillConfBtn"]`).click()
+        cy.get('[data-cy="skillApprovalSkillConfTable"] [data-cy="skillsBTableTotalRows"]').should('be.visible')
 
         cy.snap('component-conf-approval-workload-skills', `[data-cy="expandedChild_${user2}"] [data-cy="splitWorkloadBySkillCard"]`)
 
