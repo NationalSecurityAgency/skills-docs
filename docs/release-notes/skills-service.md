@@ -10,10 +10,10 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 ## 3.5.0 <release-date date="March 2025" />
 - [Quiz Answer Hints](/dashboard/user-guide/quizzes-and-surveys.html#answer-hints)
-  - Implemented ability to configure helpful answer hints for quizzes, which are displayed next to the question during the quiz.
-  - Added option to only show answer hints on subsequent quiz retakes.
+  - Implemented the ability to configure helpful answer hints for quizzes, which are displayed next to the question during the quiz.
+  - Added an option to only show answer hints on subsequent quiz retakes.
 - [Audio Skills](/dashboard/user-guide/skills.html#audio-video) 
-  - Introduced ability to upload and configure audio for skills
+  - Introduced the ability to upload and configure audio for skills
   - Skills can be configured to require audio completion for achievement
 - Added a new quiz setting, [Display Quiz Description During Quiz](/dashboard/user-guide/quizzes-and-surveys.html#setting-display-quiz-description-during-quiz), which, when enabled, displays the quiz description while the quiz is being taken.
 - Added validation for Video Captions WebVTT format
