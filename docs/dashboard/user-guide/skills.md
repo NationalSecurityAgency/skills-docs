@@ -55,7 +55,7 @@ You can also disable the Time Window property of a Skill, which will force each 
 
 ## Audio/Video
 
-SkillTree allows embedding videos or audios into skill descriptions, with optional configuration to achieve the skill upon full playback.
+SkillTree allows embedding videos or audios clips into skill descriptions, with optional configuration settings to achieve the skill upon full playback.
 
 ### Videos
 You can either embed externally hosted videos OR upload a video directly into SkillTree.  
@@ -78,7 +78,7 @@ To configure externally hosted video click on the `Switch to External Link` butt
 Please do not forget to click `Save and Preview` button to persist the changes. 
 
 
-To make the video accessible, the configuration offers the ability to specify `Captions` and `Transcript` values.
+To make the video accessible, the settings offer the ability to specify `Captions` and `Transcript` values.
 When captions are configured the video player will present an option to turn captions on or off.  
 Captions utilize [Web Video Text Tracks Format (WebVTT)](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API) format 
 and its input form offers an ability to prefill an example in WebVTT format by clicking `Add Example` button above the `Captions` input field.  
@@ -106,7 +106,7 @@ The following audio formats are supported:
 - WEBM
 - FLAC
 
-The configuration also allows for the specification of a Transcript value to enhance video accessibility.`
+The Audio/Video settings also provide an option to add a Transcript, enhancing accessibility for users.`
 `
 ### Achieving Skills through Audio/Video Playback
 
