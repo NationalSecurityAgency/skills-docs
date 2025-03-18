@@ -87,6 +87,9 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.visit('/test-skills-display/movies?enableTheme=true');
     cy.get('[data-cy="skillsDisplayHome"] [data-cy="pointHistoryChart-animationEnded"]')
     cy.get('[data-cy="skillsDisplayHome"] [data-cy="subjectTileBtn"]').should('have.length', 6);
+    cy.get('[data-cy="closeCelebrationMsgBtn"]').each(($button) => {
+      cy.wrap($button).click()
+    })
     cy.snap('client-display-themed-proj', '[data-cy="skillsDisplayHome"]');
   })
 

@@ -21,7 +21,7 @@ Users have a choice of a default landing page. If the majority of time is spent 
 
 Change this setting to true and you will not be shown on the Leaderboard or assigned a rank for all projects. 
 
-### Setting: Dark Mode <since project="skills-service" version="3.0" />
+### Setting: Dark Mode
 
 Enabling Dark Mode will switch UI into light-on-dark color scheme. For example:
 

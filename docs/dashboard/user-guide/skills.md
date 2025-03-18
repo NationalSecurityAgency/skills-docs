@@ -53,10 +53,12 @@ You can also disable the Time Window property of a Skill, which will force each 
 - "Repetition is the mother of learning" - use the ``Occurrences to Completion`` property in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property to balance between requiring repetition of an action and spacing out that repetition (for example, prevent users from spamming an action in one sitting to max out a Skill by setting a Time Window of 1-8 hours)
 - Help Url - configure the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) for the project and then enter a path relative to that root. It will then be an easy change if the location of help articles changes. You can also author external links into the description itself if more than one external resource needs to be linked to.
 
-## Videos
+## Audio/Video
 
-SkillTree supports embedding videos into the skill description and optionally configured to achieve that skill once the
-video is fully watched. You can either embed externally hosted videos OR upload a video directly into SkillTree.  
+SkillTree allows embedding videos or audios clips into skill descriptions, with optional configuration settings to achieve the skill upon full playback.
+
+### Videos
+You can either embed externally hosted videos OR upload a video directly into SkillTree.  
 
 - **SkillTree Hosted**: upload a video using file-upload form (Browse button) or by drag-n-dropping video files 
   - SkillTree supported video formats are:
@@ -65,7 +67,7 @@ video is fully watched. You can either embed externally hosted videos OR upload 
 - **Externally Hosted**: enter URL that points to a video hosted on another web server (ex. `https://someloca/.../../video.mp4`)
 
 
-To configure a video, please navigate to `Project -> Subject -> Skill -> Video`   
+To configure a video, please navigate to `Project -> Subject -> Skill -> Audio/Video`   
 
 ![Video Config Page](../../screenshots/admin/page-video-config.png)
 
@@ -76,7 +78,7 @@ To configure externally hosted video click on the `Switch to External Link` butt
 Please do not forget to click `Save and Preview` button to persist the changes. 
 
 
-To make the video accessible, the configuration offers the ability to specify `Captions` and `Transcript` values.
+To make the video accessible, the settings offer the ability to specify `Captions` and `Transcript` values.
 When captions are configured the video player will present an option to turn captions on or off.  
 Captions utilize [Web Video Text Tracks Format (WebVTT)](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API) format 
 and its input form offers an ability to prefill an example in WebVTT format by clicking `Add Example` button above the `Captions` input field.  
@@ -89,19 +91,37 @@ Trainees can also resize videos, and their personalized configurations will be a
 local storage and will take priority over the default.
 :::
 
-### Achieve Skill By Watching the Video 
+### Audio
 
-Once the video's settings are specified the skill can also be configured to be achieved after the trainee watched the entire video (>96%). 
-Video-based achievements are done using [Self Reporting](/dashboard/user-guide/self-reporting.html) mechanism and can be easily 
-selected by editing that skill and selecting `Video` Self Reporting type. 
+Users can upload audio files by navigating to `Project -> Subject -> Skill -> Audio/Video` and selecting the desired
+file using the Browse button or drag-n-drop functionality.
 
-::: tips
-Please note that self reporting by watching the video completes the skill, so when the `Video` type is
-selected, `Occurrences to Completion` are set to `1` and cannot be changed.
+The following audio formats are supported:
+- WAV
+- MPEG
+- MP4
+- AAC
+- AACP
+- OGG
+- WEBM
+- FLAC
+
+The Audio/Video settings also provide an option to add a Transcript, enhancing accessibility for users.`
+`
+### Achieving Skills through Audio/Video Playback
+
+Once the Audio/Video settings are specified, the skill can be configured to be achieved after the trainee has watched or
+listened to the entire audio/video clip (>96%). This is done using
+the [Self Reporting](/dashboard/user-guide/self-reporting.html) mechanism, which can be easily selected by editing the
+skill and choosing the `Audio/Video` Self Reporting type.
+
+::: tip
+Note that self-reporting via audio/video playback completes the skill. When the `Audio/Video` type is selected,
+`Occurrences to Completion` is set to `1` and cannot be changed.
 :::
 
-If a video has a transcript configured then users will also be allowed to earn the skill by reading its transcript
-and then self-certifying to receive the credit for the skill. 
+Additionally, if a transcript is configured for the audio/video, users can also earn the skill by reading the transcript
+and self-certifying to receive credit.
 
 ## Expire Points and Achievements
 
