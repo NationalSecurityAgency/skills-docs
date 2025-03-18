@@ -110,8 +110,8 @@ The Audio/Video settings also provide an option to add a Transcript, enhancing a
 `
 ### Achieving Skills through Audio/Video Playback
 
-Once the audio/video settings are specified, the skill can be configured to be achieved after the trainee has watched or
-listened to the entire video/audio (>96%). This is done using
+Once the Audio/Video settings are specified, the skill can be configured to be achieved after the trainee has watched or
+listened to the entire audio/video clip (>96%). This is done using
 the [Self Reporting](/dashboard/user-guide/self-reporting.html) mechanism, which can be easily selected by editing the
 skill and choosing the `Audio/Video` Self Reporting type.
 
