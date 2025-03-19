@@ -8,6 +8,22 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 3.5.0 <release-date date="March 2025" />
+- [Quiz Answer Hints](/dashboard/user-guide/quizzes-and-surveys.html#answer-hints)
+  - Implemented the ability to configure helpful answer hints for quizzes, which are displayed next to the question during the quiz.
+  - Added an option to only show answer hints on subsequent quiz retakes.
+- [Audio Skills](/dashboard/user-guide/skills.html#audio-video) 
+  - Introduced the ability to upload and configure audio for skills
+  - Skills can be configured to require audio completion for achievement
+- Added a new quiz setting, [Display Quiz Description During Quiz](/dashboard/user-guide/quizzes-and-surveys.html#setting-display-quiz-description-during-quiz), which, when enabled, displays the quiz description while the quiz is being taken.
+- Added validation for Video Captions WebVTT format
+- Upgraded Spring Boot
+- Upgraded PrimeVue and TailwindCSS libraries 
+- Bug Fixes
+
+## 3.4.1 <release-date date="February 2025" />
+- Bug Fixes
+
 ## 3.4.0 <release-date date="February 2025" />
 - Enhanced display of Learning Path when Badges have a lot of skills, therefore enabling users to better understand skills with configured prerequisites.
 - Implemented an optional quiz setting to [only include incorrect questions on retake attempts](/dashboard/user-guide/quizzes-and-surveys.html#setting-limit-retake-to-incorrect-questions)

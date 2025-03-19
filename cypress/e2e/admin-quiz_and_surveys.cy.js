@@ -21,7 +21,7 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.visit('/administrator/quizzes')
         cy.get('[data-cy="quizNameFilter"]')
         cy.get('[data-cy="btn_Quizzes And Surveys"]').click()
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[data-cy="quizName"]')
         cy.get('[data-cy="quizDescription"] [data-cy="markdownEditorInput"]')
 
@@ -35,18 +35,31 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
     })
 
     it('new questions modal', () => {
+        cy.viewport(1200, 870)
         cy.visit('/administrator/quizzes/ShortScienceQuiz')
-        cy.get('[data-cy="editQuestionButton_1"')
+        cy.get('[data-cy="editQuestionButton_1"]')
         cy.get('[data-cy="btn_Questions"]').click()
-        cy.get('[data-cy="questionText"] [data-cy="markdownEditorInput"]')
-
+        cy.get('[data-cy="discardContentButton"]').click({force: true})
+        cy.get('[data-cy="answer-0"] [data-cy="selectCorrectAnswer"]').click()
+        cy.get('[data-cy="answer-1"] [data-cy="selectCorrectAnswer"]').click()
+        cy.get('[data-cy="answer-0"] [data-cy="answerText"]').type('Blue')
+        cy.get('[data-cy="answer-1"] [data-cy="answerText"]').type('Yellow')
+        cy.get('[data-cy="questionText"] [data-cy="markdownEditorInput"]').clear()
+        cy.get('[data-cy="questionText"] [data-cy="markdownEditorInput"]').type('Select all the colors.')
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.snap('modal-new-question', '.p-dialog')
+
+        cy.get('[data-cy="answerHintEnableCheckbox"]').click()
+        cy.get('[data-cy="answerHint"]').clear()
+        cy.get('[data-cy="answerHint"]').type('A clever hint that will assist trainees')
+
+        cy.snap('modal-new-question-hint-component', '.p-dialog [data-cy="answerHintSection"]')
     })
 
     it('configure quiz', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/')
         cy.get('[data-cy="newSkillButton"]').click()
-        cy.get('[data-pc-section="maximizablebutton"]').click()
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[data-cy="descriptionMarkdownEditor"]')
         cy.get('[data-cy="selfReportEnableCheckbox"]').click();
         cy.get('[data-cy="quizRadio"]').click();
@@ -88,7 +101,7 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
     })
 
     it('quiz settings page', () => {
-        cy.viewport(1100, 500);
+        cy.viewport(1500, 500);
         cy.visit('/administrator/quizzes/ShortScienceQuiz/settings')
         cy.get('[data-cy="quizPassingSelector"]')
         cy.snap('page-quiz-settings');
@@ -108,15 +121,23 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
     it('quiz survey page', () => {
         // cy.viewport(1100, 500);
         cy.visit('/administrator/quizzes/CodingLanguageandFrameworksPreferences/')
-        cy.get('[data-cy="editQuestionButton_1"')
+        cy.get('[data-cy="editQuestionButton_1"]')
         cy.snap('page-survey');
     })
 
     it('new survey question modal', () => {
         cy.visit('/administrator/quizzes/CodingLanguageandFrameworksPreferences')
-        cy.get('[data-cy="editQuestionButton_1"')
+        cy.get('[data-cy="editQuestionButton_1"]')
         cy.get('[data-cy="btn_Questions"]').click()
         cy.get('[data-cy="questionText"] [data-cy="markdownEditorInput"]')
+
+        cy.get('[data-cy="discardContentButton"]').click({force: true})
+
+        cy.get('[data-cy="answer-0"] [data-cy="answerText"]').type('Blue')
+        cy.get('[data-cy="answer-1"] [data-cy="answerText"]').type('Yellow')
+        cy.get('[data-cy="questionText"] [data-cy="markdownEditorInput"]').clear()
+        cy.get('[data-cy="questionText"] [data-cy="markdownEditorInput"]').type('What is your favorite color?')
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
 
         cy.snap('modal-new-survey-question', '.p-dialog')
     })
@@ -124,7 +145,7 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
     it('quiz access page', () => {
         cy.viewport(1100, 700);
         cy.visit('/administrator/quizzes/ShortScienceQuiz/access')
-        cy.get('[id="quizUserRoleTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '1')
+        cy.get('[data-cy="roleManagerTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '1')
         cy.snap('page-quiz-access');
     })
 

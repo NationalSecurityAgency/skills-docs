@@ -64,8 +64,19 @@ includes a generous feature set including attaching or copy-and-pasting screensh
 Use the `Preview` button on the top left below the Quiz name in order to see what the quiz will look like to your users.
 :::
 
-### Answer Grading <since project="skills-service" version="3.2" />
+### Answer Hints <since project="skills-service" version="3.5" />
 
+When creating a question, quiz administrators can configure helpful answer hints, which are displayed next to the
+question during the quiz. To enter a hint, create a new question or edit an existing one and click the
+`Enable Answer Hint` switch.
+
+![modal-new-question-hint-component.png](../../screenshots/admin/modal-new-question-hint-component.png)
+
+Additionally, administrators can enable the [Only Show Hints on Retake Attempts](/dashboard/user-guide/quizzes-and-surveys.html#setting-only-show-hints-on-retake-attempts) option, which
+will only display answer hints on subsequent quiz retakes after the first attempt was unsuccessful.
+To enable or disable this option, navigate to the Quiz's Settings page.
+
+### Answer Grading
 
 If a quiz has at least 1 ``Input Text`` question then after a quiz taker submits an attempt a quiz administrator will be able to grade the answers for the ``Input Text`` questions.
 
@@ -123,20 +134,28 @@ If enabled, each question's answers are presented in a random order each time th
 If a time limit is set, users will have a specific duration to complete the quiz. 
 If they exceed the time limit, their attempt will be marked as 'Failed'.
 
-#### Setting: Allow Retakes After Completion <since project="skills-service" version="3.1" />
+#### Setting: Allow Retakes After Completion
 
 With this feature enabled, users can retake quizzes even after achieving a passing score. The system
 accurately tracks each successful attempt, providing a comprehensive view of user progress and performance. 
 
-#### Setting: Show Correct Answers On Failure: <since project="skills-service" version="3.1" />
+#### Setting: Show Correct Answers On Failure
 
 Enabling this feature will provide the correct answers on failed quiz attempts, allowing users to review and understand
 the correct answers, improving their learning and understanding of the material.
 
-#### Setting : Limit Retake to Incorrect Questions <since project="skills-service" version="3.4" />
+#### Setting: Limit Retake to Incorrect Questions <since project="skills-service" version="3.4" />
 
 Enabling this feature limits the questions presented to users when retaking a quiz to those that were answered
 incorrectly on the previous attempt.
+
+#### Setting: Only Show Hints on Retake Attempts  <since project="skills-service" version="3.5" />
+
+Enabling this feature will only display answer hints on subsequent quiz retakes after the first attempt was unsuccessful.
+
+#### Setting: Display Quiz Description During Quiz <since project="skills-service" version="3.5" />
+
+Enabling this feature will display the quiz description while the quiz is being taken.
 
 ## Survey
 
@@ -172,7 +191,7 @@ Use the `Preview` button on the top left below the Survey name in order to see w
 
 A Survey has customization parameters, to customize a survey please navigate to ``Quizzes and Surveys -> Survey -> Settings`` page.
 
-#### Setting: Allow Retakes After Completion <since project="skills-service" version="3.1" />
+#### Setting: Allow Retakes After Completion
 
 With this feature enabled, users can retake surveys unlimited number of times. The system
 accurately tracks each completion, providing a comprehensive view of user progress and performance.

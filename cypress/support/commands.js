@@ -35,7 +35,7 @@ Cypress.Commands.add('snap', (name, selector = null, options = {}) => {
     cy.log(`Screenshot: ${snapLoc} checked [${Cypress.currentTest.titlePath[0]}]`)
     const updatedOptions = {
         overwrite: true,
-        disableTimersAndAnimations: false,
+        disableTimersAndAnimations: true,
         ...options
     }
     if (selector) {
@@ -128,9 +128,9 @@ Cypress.Commands.add("createProject", (projNum = 1, overrideProps = {}) => {
 
 Cypress.Commands.add('selectItem', (selector, item, openPicker = true, autoCompleteDropdown = false) => {
     if (openPicker) {
-        const trigger = autoCompleteDropdown ? '[data-pc-name="dropdownbutton"]' : '[data-pc-section="trigger"]';
+        const trigger = autoCompleteDropdown ? '[data-pc-name="dropdownbutton"]' : '[data-pc-section="dropdownicon"]';
         const itemToSelect = `${selector} ${trigger}`;
         cy.get(itemToSelect).click();
     }
-    cy.get('[data-pc-section="item"]').contains(item).click();
+    cy.get('[data-pc-section="overlay"] [data-pc-section="optionlabel"]').contains(item).click();
 })
