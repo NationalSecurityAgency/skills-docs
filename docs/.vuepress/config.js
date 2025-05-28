@@ -140,10 +140,9 @@ sidebar = sidebar.concat([{
         collapsible: true,
         children: [
             '/training-participation/',
-            '/training-participation/manage',
+            '/training-participation/training-portfolio',
             '/training-participation/take-training',
             '/training-participation/accessibility',
-            '/training-participation/transcript',
         ]
     }, {
         text: 'Integration Guide',
