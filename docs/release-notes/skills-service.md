@@ -8,6 +8,20 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 3.6.0 <release-date date="May 2025" />
+- Enhanced [subject](/dashboard/user-guide/subjects.html#subject-creation-lifecycle) and [skill](/dashboard/user-guide/skills.html#skill-creation-lifecycle) creation with a hidden draft mode until fully configured
+- Added audio/video support for [quiz](/dashboard/user-guide/quizzes-and-surveys.html#audio-video-for-quiz) and [survey](/dashboard/user-guide/quizzes-and-surveys.html#audio-video-for-survey) questions
+- Implemented context-aware contact system:
+  - Admin pages: Direct to support page
+  - Progress & Ranking: Project-specific contact form
+- Accessibility Improvements
+  - Added keyboard shortcuts for skill page navigation during training
+  - Added hierarchical headings for screen reader navigation
+- Improved quiz access from skill overview Self Report card
+- Major Upgrade of font awesome icon set adding over 1,000 new icons
+- Various bug fixes
+
+
 ## 3.5.0 <release-date date="March 2025" />
 - [Quiz Answer Hints](/dashboard/user-guide/quizzes-and-surveys.html#answer-hints)
   - Implemented the ability to configure helpful answer hints for quizzes, which are displayed next to the question during the quiz.

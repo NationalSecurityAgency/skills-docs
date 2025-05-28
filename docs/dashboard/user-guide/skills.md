@@ -10,23 +10,51 @@ To create a skill, navigate to ``Project -> Subject`` then click on ``Skill +``,
 
 ![SkillTree Skills Page](../../screenshots/admin/modal-skills-new_skill.png)
 
-| Property                                                     | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 
-|:-------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| Skill Name                                                   | Display name of the skill                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Skill ID                                                     | Skill ID that will be used to report skill events                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Point Increment                                              | Number of points added for each skill event; used in conjunction with the 'Occurrences to Completion' property                                                                                                                                                                                                                                                                                                                                                                                                                      | 
-| Occurrences to Completion                                    | Number of successful occurrences to fully accomplish this skill; used in conjunction with the 'Point Increment' property                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [Time Window](/dashboard/user-guide/skills.html#time-window) | Used in conjunction with the 'Max Occurrences Within Window' property; once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window). When 'Time Window' is disabled skill events are applied immediately."                                                                                                                                                                                                                     
-| Max Occurrences Within Window                                | Used in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property; Once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window).                                                                                                                                                                                                                                                              |
-| [Self Reporting](/dashboard/user-guide/self-reporting.html)  | (Optional) When checked Self Reporting is enabled for this skill. The type of ``Approval Queue``, ``Honor System`` or ``Quiz/Survey`` can then be selected. When choosing Approval Queue, you may also choose to require users to submit a justification when self-reporting this skill by selecting the 'Justification Required' check box. When selecting ``Quiz/Survey`` you will also be prompted to pick an existing Quiz or a Survey. Please visit [Self Reporting](/dashboard/user-guide/self-reporting.html) to learn more. | 
-| Version                                                      | *(Optional)* Utilize [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) to support running multiple versions of client software                                                                                                                                                                                                                                                                                                                                                                               |
-| [Description](/dashboard/user-guide/rich-text-editor.html)   | *(Optional)* Description of how to perform this skill.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           
-| Help URL/Path                                                | *(Optional)* URL pointing to a help article providing further information about this skill or capability. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting. You can also author external links into the description itself if more than one external resource needs to be linked to.                                                                                                                                         |  
+| Property                                                                               | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 
+|:---------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| Skill Name                                                                             | Display name of the skill                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Skill ID                                                                               | Skill ID that will be used to report skill events                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| [Initial Visibility](/dashboard/user-guide/skills.html#skill-creation-lifecycle)   | If the skill is initially visible or hidden. Hidden skills will not be visible to trainees effectively keeping the skill in a draft mode until it is ready to be exposed.                                                                                                                                                                                                                                                                                                                                                           |
+| Point Increment                                                                        | Number of points added for each skill event; used in conjunction with the 'Occurrences to Completion' property                                                                                                                                                                                                                                                                                                                                                                                                                      | 
+| Occurrences to Completion                                                              | Number of successful occurrences to fully accomplish this skill; used in conjunction with the 'Point Increment' property                                                                                                                                                                                                                                                                                                                                                                                                            |
+| [Time Window](/dashboard/user-guide/skills.html#time-window)                           | Used in conjunction with the 'Max Occurrences Within Window' property; once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window). When 'Time Window' is disabled skill events are applied immediately."                                                                                                                                                                                                                     
+| Max Occurrences Within Window                                                          | Used in conjunction with the [Time Window](/dashboard/user-guide/skills.html#time-window) property; Once this Max Occurrences is reached, points will not be incremented until outside of the configured [Time Window](/dashboard/user-guide/skills.html#time-window).                                                                                                                                                                                                                                                              |
+| [Self Reporting](/dashboard/user-guide/self-reporting.html)                            | (Optional) When checked Self Reporting is enabled for this skill. The type of ``Approval Queue``, ``Honor System`` or ``Quiz/Survey`` can then be selected. When choosing Approval Queue, you may also choose to require users to submit a justification when self-reporting this skill by selecting the 'Justification Required' check box. When selecting ``Quiz/Survey`` you will also be prompted to pick an existing Quiz or a Survey. Please visit [Self Reporting](/dashboard/user-guide/self-reporting.html) to learn more. | 
+| Version                                                                                | *(Optional)* Utilize [Skills Versioning](/dashboard/user-guide/skills.html#skills-versioning) to support running multiple versions of client software                                                                                                                                                                                                                                                                                                                                                                               |
+| [Description](/dashboard/user-guide/rich-text-editor.html)                             | *(Optional)* Description of how to perform this skill.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           
+| Help URL/Path                                                                          | *(Optional)* URL pointing to a help article providing further information about this skill or capability. Please note that this property works in conjunction with the [Root Help Url](/dashboard/user-guide/projects.html#setting-root-help-url) project setting. You can also author external links into the description itself if more than one external resource needs to be linked to.                                                                                                                                         |  
 
 ::: tip
 To calculate the total points that completion of a particular skill will give a user:
 
 Total Points = Point Increment * Occurrences to Completion
+:::
+
+## Skill Creation Lifecycle <since project="skills-service" version="3.6" />
+
+Skills can be created with their Initial Visibility set to ``Hidden``. When hidden, skills
+remain invisible to trainees until the ``Initial Visibility`` is switched to ``Visible``. This feature allows you to
+keep skills in draft mode until they are ready for trainee access.
+
+::: tip
+Once a skill becomes visible, it cannot be hidden again. The `Initial Visibility` control will be removed from the
+interface.
+:::
+
+Hidden skills have specific constraints and **cannot**:
+- Be added to the Skills Catalog
+- Be added to a badge
+- Be added to a Learning Path
+- Be reused within the project
+
+Hidden skills **can be**:
+
+- Moved to another subject or group
+- Copied within a project or to another project
+
+::: tip
+- You can also create hidden subjects, please visit [Subject Creation Lifecycle](/dashboard/user-guide/subjects.html#subject-creation-lifecycle) section to learn more.  
+- Visible skills cannot be added or moved to a hidden subject
 :::
 
 ## Time Window
@@ -58,56 +86,19 @@ You can also disable the Time Window property of a Skill, which will force each 
 SkillTree allows embedding videos or audios clips into skill descriptions, with optional configuration settings to achieve the skill upon full playback.
 
 ### Videos
-You can either embed externally hosted videos OR upload a video directly into SkillTree.  
-
-- **SkillTree Hosted**: upload a video using file-upload form (Browse button) or by drag-n-dropping video files 
-  - SkillTree supported video formats are:
-    - [Webm](https://www.webmproject.org/about/) - free video format specifically created for the web 
-    - [MP4](https://en.wikipedia.org/wiki/MP4_file_format) - common video format often used in web applications
-- **Externally Hosted**: enter URL that points to a video hosted on another web server (ex. `https://someloca/.../../video.mp4`)
-
+<Content path="/dashboard/user-guide/common/videos-intro.md"/>
 
 To configure a video, please navigate to `Project -> Subject -> Skill -> Audio/Video`   
 
-![Video Config Page](../../screenshots/admin/page-video-config.png)
-
-The only required field is `Video` and once the video is configured it will be presented on the training above the skill's description. 
-
-To upload a video from you computer you can click on the `Browse` button or `drag-n-drop` a video file into the video input box.
-To configure externally hosted video click on the `Switch to External Link` button then enter the URL that points to an externally hosted video. 
-Please do not forget to click `Save and Preview` button to persist the changes. 
-
-
-To make the video accessible, the settings offer the ability to specify `Captions` and `Transcript` values.
-When captions are configured the video player will present an option to turn captions on or off.  
-Captions utilize [Web Video Text Tracks Format (WebVTT)](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API) format 
-and its input form offers an ability to prefill an example in WebVTT format by clicking `Add Example` button above the `Captions` input field.  
-
-::: tip
-Configure the video size by dragging the button on the bottom-right corner of the video. After resizing, click the 
-**Save Changes** button to persist the new dimensions.
-
-Trainees can also resize videos, and their personalized configurations will be automatically saved in the browser's
-local storage and will take priority over the default.
-:::
+<Content path="/dashboard/user-guide/common/videos-configure.md"/>
 
 ### Audio
 
 Users can upload audio files by navigating to `Project -> Subject -> Skill -> Audio/Video` and selecting the desired
 file using the Browse button or drag-n-drop functionality.
 
-The following audio formats are supported:
-- WAV
-- MPEG
-- MP4
-- AAC
-- AACP
-- OGG
-- WEBM
-- FLAC
+<Content path="/dashboard/user-guide/common/audio.md"/>
 
-The Audio/Video settings also provide an option to add a Transcript, enhancing accessibility for users.`
-`
 ### Achieving Skills through Audio/Video Playback
 
 Once the Audio/Video settings are specified, the skill can be configured to be achieved after the trainee has watched or

@@ -130,17 +130,17 @@ If this is the case, admins can customize the following labels displayed to user
 
 Toggle this setting to always show the group's descriptions in this project embedded Skills Display component and Progress and Ranking pages.
 
-### Setting: Hide Group Info On Skill Pages <since project="skills-service" version="3.3" />
+### Setting: Hide Group Info On Skill Pages
 
 By default, the skill page displays the group name and description when a skill is part of a Skill Group. Enabling this
 setting will hide the group's information from the skill page.
 
-### Setting: Hide Achievement Celebration <since project="skills-service" version="3.3" />
+### Setting: Hide Achievement Celebration
 
 Trainee achievement celebrations are displayed throughout training displays when levels, badges, and skills are
 achieved. These congratulatory messages can be hidden by enabling the `Hide Achievement Celebration` setting.
 
-### Setting: Project Deletion Protection <since project="skills-service" version="3.3" />
+### Setting: Project Deletion Protection
 
 When this setting is enabled, project deletion will be prevented, and the Delete button will be hidden. 
 
@@ -237,7 +237,7 @@ The following training profile elements are **NOT** copied into a new project:
 Once a project has been copied, the new project is disconnected from the original such that changes to the original project will not be reflected in the copy
 :::
 
-## Copy Subject to Another Project <since project="skills-service" version="3.3" />
+## Copy Subject to Another Project
 
 A subject in its entirety can be easily copied from one project to another. To do this, navigate to the Subject page and
 click the `Copy` button located on the top-left of the screen, right below the subject's name. Once the copy operation
@@ -267,7 +267,7 @@ When copying a subject to another project, the destination project must meet the
 * It must not have any skills with IDs or names that match the copied subject's skills.
 :::
 
-## Copy Skills to Another Project <since project="skills-service" version="3.3" />
+## Copy Skills to Another Project
 
 Skills can be copied individually or in batches from one project to another. To do so:
 
