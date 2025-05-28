@@ -71,10 +71,37 @@ $ java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/skills \
 
 <Content path="/dashboard/install-guide/common/service-install-output-and-backend.md" />
 
-## 3. Integrate Client Libraries
+## 3. Populate with sample Data (Optional)
+
+Download the latest ``java-backend-example`` from <external-url label="skills-client-examples/releases" url="https://github.com/NationalSecurityAgency/skills-client-examples/releases" />
+
+```bash
+curl -s https://api.github.com/repos/NationalSecurityAgency/skills-client-examples/releases/latest | grep browser_download_url | cut -d '"' -f 4 | wget -qi -
+```
+Start ``java-backend-example`` using the downloaded jar (make sure to substitute X.X.X for an actual version):
+```bash
+java -jar java-backend-example-X.X.X.jar
+```
+
+Please note that ``java-backend-example`` populates the skills-service with sample data so it may take few minutes to start.
+Once sample data population has completed, the following line appears on standard out:
+```bash
+o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+```
+
+On start, ``java-backend-example`` populates the ``skills-service`` with a sample project named Movies.
+Once it starts, logout from the dashboard and log back in as
+- username=bill@email.org
+- password=password
+  and explore the sample Movies project.
+
+
+## 4. Integrate Client Libraries (Optional)
 
 ::: tip Please Note
 Please note that integrating the SkillTree Client Libraries is **optional** and is only applicable when integrating gamification training directly into an existing or new web application.
+
+Important: step 3 needs to be completed in order for client integration example to properly work.  
 :::
 
 This section assumes that you already have running 

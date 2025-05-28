@@ -151,6 +151,35 @@ skills.config.ui.docsHost=https://code.nsa.gov/skills-docs
 
 ### SkillTree Support
 
+#### Support Center <since project="skills-service" version="3.6" />
+
+When enabled, the Help button in the header dropdown includes a page-aware contact link. The contact action varies based
+on the current page:
+
+- **Progress & Ranking Views**: Users are considered trainees and presented with a project-specific contact form
+- **Progress & Ranking Home Page**: Users are prompted to select which project they want to contact
+- **Administrative Pages**: Users are directed to a support page with a link to the ticketing system
+
+To configure the support center, set these required properties:
+```properties
+skills.config.ui.contactSupportEnabled=true
+skills.config.ui.contactSupportExternalUrl=<url to ticketing system>
+skills.config.ui.contactSupportExternalEmail=<email to SkillTree support team>
+```
+
+For additional customization, you can specify these optional properties:
+```properties
+skills.config.ui.contactSupportExternalTitle=Support Center
+skills.config.ui.contactSupportExternalDescription=If you have a feature request, need to report a bug, or simply have a question, the best way to get assistance is to visit the Support Center and create a ticket.
+skills.config.ui.contactSupportExternalEmailDescription=As an alternative, you can reach out to the SkillTree team by sending an email to
+```
+
+:::tip
+The project contact feature requires email settings to be configured. If email settings are not configured, users on
+Progress & Ranking views will be directed to the support center page instead.
+:::
+
+#### Support Links
 You can display options for your users to reach out to the support team (ex. email, chat, ticketing center, etc).
 
 Support options are displayed in the SkillTree Dashboard:

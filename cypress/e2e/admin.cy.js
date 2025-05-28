@@ -80,10 +80,9 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-badges');
     });
 
-    it('New Subject and Badge modals', () => {
-        cy.viewport(1350, 1200);
+    it('New Subject modal', () => {
+        cy.viewport(1350, 950);
 
-        // new subject modal
         cy.visit('/administrator/projects/movies')
         cy.get('[data-cy="subjectCard-Action"]');
         cy.get('[data-cy="btn_Subjects"]').click()
@@ -91,8 +90,11 @@ context('Admin: Generate Screenshots', () => {
         cy.get('[data-cy="subjectName"]')
         cy.wait(2000)
         cy.snap('modal-subjects-new_subject', '.p-dialog')
+    });
 
-        // new badge modal
+    it('New Badge modal', () => {
+        cy.viewport(1350, 1200);
+
         cy.visit('/administrator/projects/movies/badges')
         cy.get('[data-cy="btn_Badges"]').click();
         cy.get('[data-pc-name="pcmaximizebutton"]').click()
@@ -101,7 +103,7 @@ context('Admin: Generate Screenshots', () => {
     });
 
     it('New Skill modals', () => {
-        cy.viewport(1350, 1500);
+        cy.viewport(1350, 1800);
         // new skill modal
         cy.visit('/administrator/projects/movies/subjects/Action/');
         cy.get('[data-cy="newSkillButton"]').click();
@@ -349,7 +351,7 @@ context('Admin: Generate Screenshots', () => {
     it('Gen Video Settings page', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/skills/WonderWoman/config-video')
         cy.get('[data-cy="videoFileInputDropTarget"]')
-        cy.snap('page-video-config', '[data-cy="nav"]')
+        cy.snap('page-video-config', '#mainContent2')
     })
 
     it('Gen Expiration Settings page', () => {

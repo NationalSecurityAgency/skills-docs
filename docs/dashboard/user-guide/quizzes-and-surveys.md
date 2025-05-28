@@ -76,6 +76,30 @@ Additionally, administrators can enable the [Only Show Hints on Retake Attempts]
 will only display answer hints on subsequent quiz retakes after the first attempt was unsuccessful.
 To enable or disable this option, navigate to the Quiz's Settings page.
 
+### Audio/Video for Quiz <since project="skills-service" version="3.6" />
+
+SkillTree supports embedding video or audio clips into quiz questions, which will be available for playback during the quiz.
+
+#### Videos
+<Content path="/dashboard/user-guide/common/videos-intro.md"/>
+
+To configure a video, navigate to a quiz and click the `Add Audio/Video` link next to a question.
+
+::: tip
+Note that you can configure a different video for each question.
+:::
+
+<Content path="/dashboard/user-guide/common/videos-configure.md"/>
+
+#### Audio
+
+Similarly to videos, users can embed audio clips into their quizzes using the `Add Audio/Video` link. To upload audio files:
+1. Navigate to a quiz
+2. Click the `Add Audio/Video` link next to a question
+3. Select your file using either the Browse button or drag-and-drop functionality
+
+<Content path="/dashboard/user-guide/common/audio.md"/>
+
 ### Answer Grading
 
 If a quiz has at least 1 ``Input Text`` question then after a quiz taker submits an attempt a quiz administrator will be able to grade the answers for the ``Input Text`` questions.
@@ -186,6 +210,30 @@ Please use the Answer's dropdown to select the type.
 ::: tip
 Use the `Preview` button on the top left below the Survey name in order to see what the survey will look like to your users.
 :::
+
+### Audio/Video for Survey <since project="skills-service" version="3.6" />
+
+SkillTree supports embedding video or audio clips into survey questions, which will be available for playback during the survey.
+
+#### Videos
+<Content path="/dashboard/user-guide/common/videos-intro.md"/>
+
+To configure a video, navigate to a survey and click the `Add Audio/Video` link next to a question.
+
+::: tip
+Note that you can configure a different video for each question.
+:::
+
+<Content path="/dashboard/user-guide/common/videos-configure.md"/>
+
+#### Audio
+
+Similarly to videos, users can embed audio clips into their surveys using the `Add Audio/Video` link. To upload audio files:
+1. Navigate to a survey
+2. Click the `Add Audio/Video` link next to a question
+3. Select your file using either the Browse button or drag-and-drop functionality
+
+<Content path="/dashboard/user-guide/common/audio.md"/>
 
 ### Survey Settings
 
