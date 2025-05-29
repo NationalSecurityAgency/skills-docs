@@ -79,3 +79,5 @@ You can search badges by name and filter by ![Filter Component](../screenshots/p
 View your daily usage for selected projects by clicking the **Usage** button on a Project card.
 
 ![My Usage Page](../screenshots/progress-and-ranking/page-progress-and-rankings-view-my-usage.png)
+
+## Preferences

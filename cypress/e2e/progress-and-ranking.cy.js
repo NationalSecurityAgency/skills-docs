@@ -31,6 +31,21 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.snap('page-progress-and-rankings-view-my-usage');
   });
 
+  it('My Rank Page', () => {
+    cy.visit('/progress-and-rankings/projects/movies/rank')
+    cy.get('[data-cy="myRankPositionStatCard"] [data-cy="mediaInfoCardTitle"]').should('be.visible')
+    cy.get('[aria-label="Ranked number 1"]').should('be.visible')
+    cy.snap('page-progress-and-rankings-my-rank', '#mainContent2');
+  });
+
+  it('My Rank Page', () => {
+    cy.visit('/progress-and-rankings/projects/movies/badges')
+    cy.get('[data-cy="achievedBadges"]').should('be.visible')
+    cy.get('[data-cy="availableBadges"] [data-cy="badgeTitle"]').should('be.visible')
+    cy.snap('page-progress-and-rankings-my-badges', '#mainContent2');
+  });
+
+
   it('Gen View Badges page', () => {
     cy.visit('/progress-and-rankings/my-badges')
     cy.snap('page-progress-and-rankings-badges');
@@ -64,16 +79,60 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.get('[data-cy="skillProgress_index-0"]')
     cy.snap('client-display-subject', '[data-cy="skillsDisplayHome"]', { clip: clipScreenshot });
 
+    cy.visit('/progress-and-rankings/projects/movies/subjects/Comedy');
+    cy.get('[data-cy="skillsDisplayHome"] [data-cy="pointHistoryChart-animationEnded"]')
+    cy.get('[data-cy="skillProgress_index-0"]')
+    cy.snap('client-display-subject-comedy', '#mainContent2', { clip: clipScreenshot });
+
+
     cy.get('[data-cy="skillsDisplayHome"] [data-cy=toggleSkillDetails]').click()
     cy.get('[data-cy="skillsDisplayHome"]').contains('Overall Points Earned');
     cy.snap('client-display-subject-expandedSkills', '[data-cy="skillsDisplayHome"]', { clip: clipScreenshot });
   });
 
+  it('Gen Skills Display - single skill group', () => {
+    cy.visit('/progress-and-rankings/projects/movies/subjects/Action');
+    cy.get('[data-cy="skillsDisplayHome"] [data-cy="pointHistoryChart-animationEnded"]')
+    cy.get('[data-cy="skillProgress_index-0"]')
+
+    cy.snap('client-display-single-skill-group', '#skill-GuardiansoftheGalaxyGroupId');
+  });
+
+  it('Gen Skills Display - badge page', () => {
+    cy.visit('/progress-and-rankings/projects/movies/badges/TheTwilightCollection');
+    cy.get('[data-cy="badge_TheTwilightCollection"]').should('be.visible')
+    cy.get('[data-cy="skillProgress_index-0"]')
+
+    cy.snap('client-display-badge-page', '#mainContent2');
+  });
+
+  it('Gen Skills Display - skill page - avatar', () => {
+    cy.visit('/progress-and-rankings/projects/movies/subjects/Action/skills/Avatar');
+    cy.get('[data-cy="skillProgressTitle"]').should('be.visible')
+
+    cy.snap('client-display-skill-page-avatar', '#mainContent2');
+  });
+
+  it('self report honor tag', () => {
+    cy.visit('/progress-and-rankings/projects/movies/subjects/Comedy/skills/MonstersInc');
+    cy.get('[data-cy="skillProgressTitle"]').should('be.visible')
+
+    cy.snap('client-display-page-honor-tag', '#mainContent2');
+    cy.snap('client-display-self-report-honor-tag', '[data-cy="skillProgressTitle-MonstersInc"]');
+  })
+
+  it('prerequisites card', () => {
+    cy.visit('/progress-and-rankings/projects/movies/subjects/Action/skills/TheAvengers');
+    cy.get('[data-cy="skillProgressTitle"]').should('be.visible')
+
+    cy.wait(5000)
+    cy.snap('client-display-card-prerequisites', '[data-cy="prerequisitesCard"]');
+  })
+
   it('Gen Skills Display - skill with depts', () => {
     cy.visit('/test-skills-display/movies/subjects/Family/skills/HarryPotterandtheGobletofFire');
     cy.get('[data-cy="skillLink-movies-HarryPotterandthePhilosophersStone"]')
     cy.wait(5000)
-    cy.snap('client-display-skillWithDeps', '[data-cy="skillsDisplayHome"]');
   });
 
   it('Gen Self Report Skill', () => {
