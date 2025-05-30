@@ -1,6 +1,6 @@
 # Accessibility
 
-SkillTree is committed to providing an inclusive and accessible learning experience for all users. This guide outlines the accessibility features and best practices to enhance your experience with the platform.
+SkillTree is committed to providing an accessible learning experience for all users. This guide outlines the accessibility features and best practices to enhance your experience with the platform.
 
 ::: tip Please Note
 If you're interested in creating gamified training experiences rather than earning credits in existing trainings, please check out our [Administrative Accessibility Guide](/dashboard/user-guide/accessibility.html)  for more details.

@@ -1,6 +1,6 @@
 # Accessibility
 
-At SkillTree, we're dedicated to creating an inclusive learning environment that empowers everyone to succeed. This guide highlights our accessibility features and best practices to ensure you can navigate and engage with our platform effortlessly. 
+At SkillTree, we're dedicated to creating an accessible learning environment that empowers everyone to succeed. This guide highlights our accessibility features and best practices to ensure you can navigate and engage with our platform effortlessly. 
 
 This guide is broken down into two section where the first section outlines accessibility features of the SkillTree
 Dashboard and the second provides instructions about creating a SkillTree gamified accessible training in the platform.
