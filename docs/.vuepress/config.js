@@ -111,7 +111,7 @@ sidebar = sidebar.concat([{
             '/dashboard/install-guide/installModes',
         ]
     }, {
-        text: 'Dashboard User Guide',
+        text: 'Admin User Guide',
         collapsible: true,
         children: [
             '/dashboard/user-guide/',
@@ -134,6 +134,16 @@ sidebar = sidebar.concat([{
             '/dashboard/user-guide/inception',
             '/dashboard/user-guide/contact-admins',
             '/dashboard/user-guide/settings',
+            '/dashboard/user-guide/accessibility',
+        ]
+    }, {
+        text: 'Training Participation Guide',
+        collapsible: true,
+        children: [
+            '/training-participation/',
+            '/training-participation/training-portfolio',
+            '/training-participation/take-training',
+            '/training-participation/accessibility',
         ]
     }, {
         text: 'Integration Guide',

@@ -10,6 +10,7 @@ Ability to customize your personal user preference, including:
 - Default Home/Landing Page
 - Ability to opt-out from Ranking and Leaderboards
 - Enabling and/or disabling UI Dark Mode
+- Customize keyboard shortcuts for training navigation
 
 ![User Preferences](../../screenshots/admin/page-settings-preference.png)
 

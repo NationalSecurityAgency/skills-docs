@@ -44,10 +44,10 @@ A quiz is a knowledge check composed of multiple questions with a passing requir
 or can be executed independently. Associating a Quiz to an existing skill will require successful completion of that Quiz
 in order to earn the skill and its points. In the case of a quiz, then the quiz serves as the skill's knowledge check.
 
-Quizzes currently support two types of questions:
-- ``Multiple Choice`` - question will only have 1 correct answer 
-- ``Multiple Answers`` - question has 2 or more correct choices; all correct choices must be selected to get credit for the question
-- ``Input Text`` - question for test-takers to provide a free-form text answer that will later be graded by a quiz administrator
+Quizzes support three types of questions:
+- ``Multiple Choice`` - Single correct answer
+- ``Multiple Answers`` - Multiple correct choices; all must be selected to earn credit
+- ``Input Text`` - Free-form text response, graded by quiz administrators
 
 To administer a quiz click `Manage` button for that quiz on the `Quizzes and Surveys` page. 
 

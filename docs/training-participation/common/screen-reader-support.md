@@ -1,0 +1,9 @@
+- Decorative images and icons are labeled to be skipped by screen readers
+- Many actions are announced to screen readers for better accessibility, this is in addition to the default announcements provided by the browser
+- All form fields have associated labels
+- Clicking on a form field label will focus the field
+- Required fields are clearly indicated
+- Error messages are announced by screen readers
+- Buttons have descriptive text
+- Interactive elements are keyboard accessible
+- Focus indicators are visible for keyboard navigation
