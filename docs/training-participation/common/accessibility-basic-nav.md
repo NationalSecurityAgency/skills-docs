@@ -1,0 +1,7 @@
+- Use `Tab` to move forward through interactive elements
+- Use `Shift + Tab` to move backward
+- Press `Enter` or `Space` to activate buttons and links
+- Use arrow keys to navigate through menus and dropdowns
+- Use `Escape` to close modals and popups
+- Use `Alt + Left Arrow` to navigate to the previous page in the browser history
+- Use `Alt + Right Arrow` to navigate to the next page in the browser history

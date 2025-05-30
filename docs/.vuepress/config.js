@@ -134,6 +134,7 @@ sidebar = sidebar.concat([{
             '/dashboard/user-guide/inception',
             '/dashboard/user-guide/contact-admins',
             '/dashboard/user-guide/settings',
+            '/dashboard/user-guide/accessibility',
         ]
     }, {
         text: 'Training Participation Guide',

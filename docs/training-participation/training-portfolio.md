@@ -81,3 +81,18 @@ View your daily usage for selected projects by clicking the **Usage** button on 
 ![My Usage Page](../screenshots/progress-and-ranking/page-progress-and-rankings-view-my-usage.png)
 
 ## Preferences
+
+To customize your personal preferences:
+
+1. Click the User button in the top right corner of the page
+2. Select **Settings**
+3. Navigate to the **Preferences** tab
+
+![page-settings-preference.png](../screenshots/admin/page-settings-preference.png)
+
+Available customization options:
+
+- **Rank and Leaderboard Opt-Out**: When enabled, you'll be excluded from the Leaderboard and won't receive a rank in any trainings you're taking
+- **Dark Mode**: Switch to a light-on-dark color scheme
+- **Keyboard Shortcuts**: Customize keyboard shortcuts for training navigation
+- **Default Home Page**: Choose your default landing page (only applicable to training creators)

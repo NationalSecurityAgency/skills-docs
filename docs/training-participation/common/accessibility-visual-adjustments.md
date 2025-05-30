@@ -1,0 +1,4 @@
+- The application supports browser zoom up to 200%
+- Text and interactive elements maintain a minimum 4.5:1 contrast ratio
+- Color is not used as the sole means of conveying information
+- All color combinations meet WCAG 2.1 AA level compliance

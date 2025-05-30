@@ -174,6 +174,16 @@ Additional optional elements may appear in the skill details, depending on the s
 - **Enhanced Media**: Optional video or audio content to enrich the learning experience
 - **Expiration**: A clear deadline indicating when the skill will expire (if applicable)
 
+Use the **Next** and **Previous** buttons at the top of the skill page to move between skills.
+
+::: tip Keyboard Shortcuts
+Navigate between skills using these keyboard shortcuts:
+- Previous Skill: `Ctrl + Alt + p` (p for previous)
+- Next Skill: `Ctrl + Alt + n` (n for next)
+
+You can customize these shortcuts on your [Preferences](/training-participation/training-portfolio.html#preferences) page.
+:::
+
 ### Self Reporting
 
 Skills with a self-report tag can be marked as completed directly by the learner. For example, the skill below has an Honor tag and can be earned immediately.
@@ -256,4 +266,76 @@ to re-perform the skill are displayed above the progress bar, right below the ea
 
 ## Quizzes and Surveys
 
+### Take a Quiz
+
+Before taking a quiz, you'll see a splash page with important details:
+- Number of questions
+- Time limit (if applicable)
+- Number of attempts (which may be unlimited)
+- Quiz description (if provided)
+
+Click the **Start** button to begin the quiz.
+
+![Client Display Quiz Run Screenshot](../screenshots/progress-and-ranking/client-display-quiz-run.png)
+
+You may encounter three types of questions:
+- **Multiple Choice**: Select one correct answer
+- **Multiple Answers**: Select all correct choices to earn credit
+- **Input Text**: Free-form text response, graded by quiz administrators
+
+To finish the quiz, click the **Complete Quiz** button. The results page will then appear. If your quiz only includes Multiple Choice and Multiple Answers questions, it will be automatically graded by the system.
+
+If your quiz includes Input Text questions, these will be manually graded by quiz administrators. When you complete the quiz, administrators will be notified and the quiz will be marked as "Needs Grading."
+
+::: tip
+You can always review your quiz attempts, including those awaiting grading, on the [Quizzes and Surveys History](/training-participation/training-portfolio.html#quizzes-and-surveys-history) page.
+:::
+
+If you answer the required number of questions correctly, your quiz will be marked as **Passed** and you'll receive credit. Otherwise, it will be marked as **Failed**. You may be able to retake the quiz if you haven't exceeded the maximum number of attempts (some quizzes offer unlimited attempts).
+
+::: tip Good To Know
+Quiz creators have several configuration options:
+- Number of correct answers needed to pass
+- Time limit for completion
+- Maximum number of attempts
+- Randomization of questions and answers between attempts
+- Option to show correct answers on failed attempts
+- Option to retake only incorrect questions
+- Option to show quiz description during the quiz
+- Ability to add answer hints for each question
+:::
+
+### Take a Survey
+
+Before starting a survey, you'll see an overview page with:
+- The total number of questions
+- A description of the survey (if provided)
+
+Click the **Start** button to begin.
+
+You'll encounter four types of questions:
+- **Multiple Choice**: Choose one correct answer
+- **Multiple Answers**: Select all correct options to earn credit
+- **Input Text**: Provide a free-form text response
+- **Rating**: Use a star-based rating system
+
+To complete the survey, click the **Complete Survey** button.
+
+::: tip
+You can always review your survey completions on the [Quizzes and Surveys History](/training-participation/training-portfolio.html#quizzes-and-surveys-history) page.
+:::
+
 ## Transcript
+
+Download your training transcript using the **Download Transcript** button at the bottom of the training entry page. The
+transcript provides:
+
+- A comprehensive overview of your progress, including total points earned, badges, level, and skills
+- Detailed pages for each subject, listing all skills and their current completion status
+
+## Contact
+
+Each training is managed by dedicated administrators who have exclusive administrative access and specialized knowledge
+of that training. To reach them, click the **Contact Project** button in the top right of the page title.
+
+![contact project form](../dashboard/user-guide/screenshots/contact_admins_form.png)  
