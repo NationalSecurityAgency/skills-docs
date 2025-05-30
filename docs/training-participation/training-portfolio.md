@@ -1,6 +1,6 @@
 # Training Portfolio
 
-The first visit to the SkillTree's training home page will display an introductory splash page. 
+The first visit to SkillTree's training home page will display an introductory splash page. 
 To get started, click the 'Projects Catalog' button to view all available training projects.
 
 ## Projects Catalog
@@ -33,7 +33,7 @@ From the home page, you can navigate to:
 - [Quizzes and Surveys History](/training-participation/training-portfolio.html#quizzes-and-surveys-history): View your completed quizzes and surveys
 - [My Badges](/training-participation/training-portfolio.html#my-badges): View your earned and available badges
 - [Usage Page](/training-participation/training-portfolio.html#training-usage): View your daily usage for selected projects
-- [Individual Training](/training-participation/take-training.html): Click `View` button on a training card to proceed to that training
+- [Individual Training](/training-participation/take-training.html): Click the `View` button on a training card to proceed to that training
 
 ::: tip
 - You can remove trainings from your home page by clicking the "X" icon in the top-right corner of each training card.
@@ -55,7 +55,7 @@ A single quiz or survey attempt displays the results. For surveys, all questions
 
 For quizzes, the answers shown depend on the attempt's status:
 - `Passed` Quiz: all the questions and answers are shown
-- `Failed` Quiz: answers may be shown or not solely depending on how quiz administrator selected to configure the quiz
+- `Failed` Quiz: answers may be shown or not depending on how quiz administrator selected to configure the quiz
 - `Needs Grading` Quiz: answers are not displayed as they are not yet graded
 
 ## My Badges
@@ -70,7 +70,7 @@ Click an earned badge to see the skills and points that earned it.
 Available badges lists all badges that haven't been fully achieved from Trainings added to **My Projects** and currently shown on the home page.
 
 ::: tip
-You can search badges by name and filter by ![Filter Component](../screenshots/progress-and-ranking/component-progress-and-rankings-badge-filter.png) to **Project Badges**, **Gems**, or **Global Badges**
+You can search badges by name and filter by **Project Badges**, **Gems**, or **Global Badges**
 :::
 
 

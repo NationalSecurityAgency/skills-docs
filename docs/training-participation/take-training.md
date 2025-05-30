@@ -6,11 +6,11 @@ A single training is also known as a SkillTree Project.
 
 The training entry page provides an overview of your progress and includes the following key items:
 
-- **Overall Points**: Displays your total points progress across all skills
+- **Overall Points**: Displays your total points and progress across all skills
 - **Overall Level**: Shows your current level and progress toward the next level
 - **Level Progress**: Visual indicator showing your progress toward the next level
 - **Achieved Skills**: Progress bar showing completed skills versus total available
-- **Point History**: Time chart with historical depiction of your points progress
+- **Point History**: Time chart with historical depiction of your point progress
 - **Overall Rank**: Your current standing among all users
 - **My Badges**: Number of earned and available badges (only displayed if badges are configured for this training)
 - **Subjects**: Displays your progress for each subject, including achieved levels and point progress
@@ -31,7 +31,7 @@ To access the My Rank page, click the **View** button inside the **My Rank** car
 - **Total Points**: Your cumulative points across all skills
 - **Total Participants**: Number of users participating in the training
 - **Level Distribution Chart**: Visual breakdown of users across different levels
-- **Encouragements**: Number of motivational messages received
+- **Encouragements**: System notifications that celebrate your progress and encourage you to maintain your lead in the learning journey
 - **Leaderboard**: List of users ranked by points
 
 ![page-progress-and-rankings-my-rank.png](../screenshots/progress-and-ranking/page-progress-and-rankings-my-rank.png)
@@ -64,9 +64,9 @@ To navigate to a project page, click the **View** button inside the **Subject** 
 - **Subject Points**: Overall subject points progress
 - **Subject Level**: Shows your current level and progress toward the next level for this specific subject (which may differ from the overall training or other subjects)
 - **Subject Rank**: Your standing among all users in this subject (which differs from the overall training or other subjects)
-- **Point History**: Tracks your progress over time chart with historical depiction of your points progress in this subject
+- **Point History**: Tracks your progress over time using a chart of your point progress in this subject
 
-Following overall subject progression displays, you'll find a list of all skills and their progress in this subject.
+Following the overall subject progression displays, you'll find a list of all skills and their progress in the current subject.
 
 ![client-display-subject-comedy.png](../screenshots/progress-and-ranking/client-display-subject-comedy.png)
 
@@ -106,9 +106,9 @@ Use the expand/collapse all groups controls at the top of the skill list to mana
 
 ## Badge Page
 
-To access a Badge page, click the **View** button inside the **My Badges** card and then click on **View** button for a specific badge.
+To access a Badge page, click the **View** button inside the **My Badges** card and then click on the **View** button for a specific badge.
 
-Badge page shows badge's name, description, and overall badge progress followed by a list of skills and points that contribute to earning the badge.
+The badge page shows badge's name, description, and overall badge progress followed by a list of skills and points that contribute to earning the badge.
 Earn all the skills and you will get the badge! 
 
 ![client-display-badge-page.png](../screenshots/progress-and-ranking/client-display-badge-page.png)
@@ -120,7 +120,7 @@ Several optional items may appear based on the skill type and training configura
 - **Skill Tags**: Tags assigned to this skill by the training creator. If skills have tags, a tag filter appears above the skill list
 
 You can learn more about a skill in two ways:
-- Click on skill name or progress bar to visit the [Skill Page](/training-participation/take-training.html#skill-page)
+- Click on the skill name or progress bar to visit the [Skill Page](/training-participation/take-training.html#skill-page)
 - Enable the `Skill Details` switch in the top-right corner of the skills list. When enabled, additional skill details will appear under each skill, similar to the information on a [single skill](/training-participation/take-training.html#skill-page) page.
 
 ::: tip
@@ -170,7 +170,7 @@ Additional optional elements may appear in the skill details, depending on the s
 - **Badges**: Links to badges earned by completing this skill
 - **Self-Reporting**: Instructions for self-reporting progress and achieving consecutive completions (see [Self Reporting](/training-participation/take-training.html#self-reporting) for more details)
 - **Skill Tags**: Categories assigned by the training creator
-- **Prerequisites**: A list of required skills and a visual dependency graph
+- **Prerequisites**: A list of required skills and a visual diagram of their relationships
 - **Enhanced Media**: Optional video or audio content to enrich the learning experience
 - **Expiration**: A clear deadline indicating when the skill will expire (if applicable)
 
@@ -241,7 +241,7 @@ Resize the video by dragging the bottom right corner. Your preferred size will b
 
 Skills with prerequisites will display a locked icon on their progress bar.
 All the prerequisites must be completed before the skill can be unlocked. Below the skill description, you'll find a
-dependency graph showing all required skills and their progress.
+diagram showing all required skills and their progress.
 
 ::: tip
 You can navigate to prerequisite skills by clicking directly on a node in the graph or by selecting a skill name from
