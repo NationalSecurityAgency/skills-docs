@@ -19,20 +19,18 @@ Please note that a user has to earn at least 1 point in order to show up in on t
 :::
 
 ### Filters, Sorting And Export
-The User Progress Table offers filtering and sorting capabilities to help you analyze user performance. You can:
+The User Progress Table offers filtering, sorting, and export capabilities to help you analyze user performance. You can:
 
-- Filter by user ID, first name, and last name using the User Filter.
-- Filter by the minimum user progress using the Minimum User Progress filter.
-
-You can also sort the table by any of the columns by clicking on the column header.
-
-Additionally, you can export the table data into an Excel file by clicking the Export button located on the top right of the table.
+- Filter by user ID, first name, and last name using the User Filter
+- Filter by minimum and maximum user progress percentage using the User Progress filter
+- Sort any column by clicking its header
+- Export table data to Excel by clicking the Export button in the top right
 
 ::: tip
 Note that the export will respect any currently applied filters.
 :::
 
-## Users Archive <since project="skills-service" version="3.3" />
+## Users Archive 
 
 Users can be archived and restored in batches or individually. Archived users are excluded from project visualizations, metrics, and tables.
 

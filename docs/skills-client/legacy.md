@@ -78,7 +78,7 @@ SkillsDisplay component properties:
 
 <Content path="/skills-client/common/skillsDisplayArguments.md"/>
 
-#### Route changed event <since project="skills-client" version="3.3.0" />
+#### Route changed event
 
 Each time a user navigates within the Skills Client Display, the `handleRouteChanged` event is emitted containing the new path that was navigated to.  This can be useful if the hosting application displays a breadcrumb and would like to update the current location within the Skills Client Display component.
 

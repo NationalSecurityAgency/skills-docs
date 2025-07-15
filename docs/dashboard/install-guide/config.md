@@ -151,7 +151,7 @@ skills.config.ui.docsHost=https://code.nsa.gov/skills-docs
 
 ### SkillTree Support
 
-#### Support Center <since project="skills-service" version="3.6" />
+#### Support Center
 
 When enabled, the Help button in the header dropdown includes a page-aware contact link. The contact action varies based
 on the current page:

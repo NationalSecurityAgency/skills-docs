@@ -94,5 +94,5 @@ Available customization options:
 
 - **Rank and Leaderboard Opt-Out**: When enabled, you'll be excluded from the Leaderboard and won't receive a rank in any trainings you're taking
 - **Dark Mode**: Switch to a light-on-dark color scheme
-- **Keyboard Shortcuts**: Customize keyboard shortcuts for training navigation
+- **Keyboard Shortcuts**: Customize keyboard shortcuts for training navigation and search
 - **Default Home Page**: Choose your default landing page (only applicable to training creators)

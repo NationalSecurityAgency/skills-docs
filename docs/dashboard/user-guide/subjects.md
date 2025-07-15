@@ -28,7 +28,7 @@ To create a Subject navigate to ``Project -> Subjects`` and then click the ``Sub
 To navigate to a specific skill you can drill down into a subject card or use the ``Search and Navigate directly to a skill`` component
 :::
 
-## Subject Creation Lifecycle <since project="skills-service" version="3.6" />
+## Subject Creation Lifecycle
 
 Subjects can be created with their Initial Visibility set to ``Hidden``. When hidden, both the subject and its skills
 remain invisible to trainees until the ``Initial Visibility`` is switched to ``Visible``. This feature allows you to

@@ -22,7 +22,7 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('modal-projects-new_project', '.p-dialog')
     })
 
-    it('Gen User Progress Table', () => {
+    it.only('Gen User Progress Table', () => {
         // projects page
         cy.visit('/administrator/projects/movies/users')
         cy.get('[data-cy="usersTable"]').contains('Current Level:')
@@ -658,5 +658,17 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-admin-groups-quizzes')
 
     })
+
+    it('Notifications', () => {
+        cy.viewport(1000, 900);
+        cy.visit('/administrator/');
+        cy.get('[data-cy="notifBtn"]')
+
+        cy.snap('component-notifications-btn', null, {clip: { x: 800, y: 0, width: 200, height: 100 }});
+
+        cy.get('[data-cy="notifBtn"]').click()
+        cy.get('[data-cy="notifPanel"] [data-cy="notif-0"]')
+        cy.snap('component-notifications-dropdown', null, {clip: { x: 370, y: 0, width: 540, height: 550 }});
+    });
 
 })

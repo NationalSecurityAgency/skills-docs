@@ -69,7 +69,7 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.snap('component-quiz-skill', '[data-cy="selfReportTypeSelector"]')
     });
 
-    it('quiz results page', () => {
+    it.only('quiz results page', () => {
         cy.visit('/administrator/quizzes/ShortScienceQuiz/results')
         cy.get('[data-cy="metricsCardTotal"] [data-cy="statCardValue"]')
         cy.get('[data-cy="metrics-q1"]')
