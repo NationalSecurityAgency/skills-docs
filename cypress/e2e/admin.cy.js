@@ -22,7 +22,7 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('modal-projects-new_project', '.p-dialog')
     })
 
-    it.only('Gen User Progress Table', () => {
+    it('Gen User Progress Table', () => {
         // projects page
         cy.visit('/administrator/projects/movies/users')
         cy.get('[data-cy="usersTable"]').contains('Current Level:')
@@ -108,7 +108,6 @@ context('Admin: Generate Screenshots', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/');
         cy.get('[data-cy="newSkillButton"]').click();
         cy.get('[data-pc-name="pcmaximizebutton"]').click()
-        cy.get('[data-cy="discardContentButton"]').click({force: true})
         cy.wait(1000)
         cy.get('[data-cy="skillName"]').clear()
         cy.get('[data-cy="skillName"]').type('Test Skill')
@@ -117,7 +116,7 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('modal-skills-new_skill', '.p-dialog')
     })
 
-    it('Gen Self Report page', () => {
+    it.only('Gen Self Report page', () => {
         cy.viewport(1350, 1200);
 
         cy.visit('/administrator/projects/movies/badges')

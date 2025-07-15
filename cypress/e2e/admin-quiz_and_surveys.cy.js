@@ -39,7 +39,7 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.visit('/administrator/quizzes/ShortScienceQuiz')
         cy.get('[data-cy="editQuestionButton_1"]')
         cy.get('[data-cy="btn_Questions"]').click()
-        cy.get('[data-cy="discardContentButton"]').click({force: true})
+        // cy.get('[data-cy="discardContentButton"]').click({force: true})
         cy.get('[data-cy="answer-0"] [data-cy="selectCorrectAnswer"]').click()
         cy.get('[data-cy="answer-1"] [data-cy="selectCorrectAnswer"]').click()
         cy.get('[data-cy="answer-0"] [data-cy="answerText"]').type('Blue')
@@ -69,7 +69,7 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.snap('component-quiz-skill', '[data-cy="selfReportTypeSelector"]')
     });
 
-    it.only('quiz results page', () => {
+    it('quiz results page', () => {
         cy.visit('/administrator/quizzes/ShortScienceQuiz/results')
         cy.get('[data-cy="metricsCardTotal"] [data-cy="statCardValue"]')
         cy.get('[data-cy="metrics-q1"]')

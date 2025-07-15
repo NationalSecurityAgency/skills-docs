@@ -192,7 +192,7 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.snap('page-my-quiz-single-attempt');
   })
 
-  it.only('training wide search modal', () => {
+  it('training wide search modal', () => {
     cy.visit('/progress-and-rankings/projects/shows')
     cy.get('[data-cy="skillsDisplaySearchBtn"]').click()
     cy.get('[data-cy="trainingSearchDialog"]').should('be.visible')
