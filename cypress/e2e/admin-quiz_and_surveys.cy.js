@@ -39,7 +39,7 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.visit('/administrator/quizzes/ShortScienceQuiz')
         cy.get('[data-cy="editQuestionButton_1"]')
         cy.get('[data-cy="btn_Questions"]').click()
-        cy.get('[data-cy="discardContentButton"]').click({force: true})
+        // cy.get('[data-cy="discardContentButton"]').click({force: true})
         cy.get('[data-cy="answer-0"] [data-cy="selectCorrectAnswer"]').click()
         cy.get('[data-cy="answer-1"] [data-cy="selectCorrectAnswer"]').click()
         cy.get('[data-cy="answer-0"] [data-cy="answerText"]').type('Blue')

@@ -325,6 +325,32 @@ To complete the survey, click the **Complete Survey** button.
 You can always review your survey completions on the [Quizzes and Surveys History](/training-participation/training-portfolio.html#quizzes-and-surveys-history) page.
 :::
 
+## Training Wide Search
+
+Training-wide search functionality enables users to quickly find and navigate to any skill, subject, or badge by name.
+This is an effective method to jump directly to any skill, subject, or badge from any page of the training.
+
+The search can be activated either through a dedicated search button in the top right corner of the training or by using customizable keyboard shortcuts.
+- To initiate the search via the search button, click the **Search** button in the top right corner of the training page.
+- To initiate the search via a keyboard shortcut, press **Ctrl + K** to open the search box.
+
+Once the search is initiated, the search modal will appear in the middle of the screen.
+
+![component-training-wide-search.png](../screenshots/progress-and-ranking/component-training-wide-search.png)
+
+To use the search:
+- Type the name of the skill, subject, or badge you are searching for into the search box.
+- Use the up and down arrow keys to navigate through the search results.
+- Press **Enter** to select a skill, subject, or badge.
+- Press **Escape** to close the search modal.
+
+::: tip Shortcut Customization
+To customize the keyboard shortcuts for training-wide search:
+- Click on the User icon in the top right corner of the training page and select **Settings**.
+- Navigate to the [**Preferences**](/training-participation/training-portfolio.html#preferences) tab and select **Preferences** tab.
+- In the "Keyboard shortcuts when taking a training" section, update the "Search" input and click **Save**.
+:::
+
 ## Transcript
 
 Download your training transcript using the **Download Transcript** button at the bottom of the training entry page. The

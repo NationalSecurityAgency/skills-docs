@@ -108,7 +108,6 @@ context('Admin: Generate Screenshots', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/');
         cy.get('[data-cy="newSkillButton"]').click();
         cy.get('[data-pc-name="pcmaximizebutton"]').click()
-        cy.get('[data-cy="discardContentButton"]').click({force: true})
         cy.wait(1000)
         cy.get('[data-cy="skillName"]').clear()
         cy.get('[data-cy="skillName"]').type('Test Skill')
@@ -117,7 +116,7 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('modal-skills-new_skill', '.p-dialog')
     })
 
-    it('Gen Self Report page', () => {
+    it.only('Gen Self Report page', () => {
         cy.viewport(1350, 1200);
 
         cy.visit('/administrator/projects/movies/badges')
@@ -658,5 +657,17 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-admin-groups-quizzes')
 
     })
+
+    it('Notifications', () => {
+        cy.viewport(1000, 900);
+        cy.visit('/administrator/');
+        cy.get('[data-cy="notifBtn"]')
+
+        cy.snap('component-notifications-btn', null, {clip: { x: 800, y: 0, width: 200, height: 100 }});
+
+        cy.get('[data-cy="notifBtn"]').click()
+        cy.get('[data-cy="notifPanel"] [data-cy="notif-0"]')
+        cy.snap('component-notifications-dropdown', null, {clip: { x: 370, y: 0, width: 540, height: 550 }});
+    });
 
 })

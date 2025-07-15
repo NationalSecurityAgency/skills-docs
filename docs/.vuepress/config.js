@@ -131,6 +131,7 @@ sidebar = sidebar.concat([{
             '/dashboard/user-guide/levels',
             '/dashboard/user-guide/users',
             '/dashboard/user-guide/metrics',
+            '/dashboard/user-guide/notifications',
             '/dashboard/user-guide/inception',
             '/dashboard/user-guide/contact-admins',
             '/dashboard/user-guide/settings',
@@ -166,6 +167,7 @@ sidebar = sidebar.concat([{
     }, {
         text: 'Release Notes',
         collapsible: true,
+        sidebarDepth: 3,
         children: [
             '/release-notes/',
             '/release-notes/skills-service.md',

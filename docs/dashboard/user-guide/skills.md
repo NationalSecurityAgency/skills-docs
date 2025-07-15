@@ -30,7 +30,7 @@ To calculate the total points that completion of a particular skill will give a 
 Total Points = Point Increment * Occurrences to Completion
 :::
 
-## Skill Creation Lifecycle <since project="skills-service" version="3.6" />
+## Skill Creation Lifecycle
 
 Skills can be created with their Initial Visibility set to ``Hidden``. When hidden, skills
 remain invisible to trainees until the ``Initial Visibility`` is switched to ``Visible``. This feature allows you to

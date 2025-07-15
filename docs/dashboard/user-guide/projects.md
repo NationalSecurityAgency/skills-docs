@@ -289,23 +289,26 @@ Note that the destination project must not have any subjects, badges, or skills 
 
 ## Share Project
 
-Public projects that are configured to be [discoverable](/dashboard/user-guide/projects.html#setting-visibility) can be easily shared with users so they can begin consuming the micro-learning gamified training! 
+Projects can be easily shared with users so they can begin taking the micro-learning gamified training.
 
-To share a project click on the ``Share`` button on the project admin page:
+To share a project, click on the **Share** button on the project admin page:
 
 ![SkillTree Project](../../screenshots/admin/page-partial-share-proj.png)
 
-Once the ``Share`` button is clicked the share information modal is displayed:
+Once the **Share** button is clicked, the share information modal is displayed:
 
-![SkillTree Project Shared Modal](../../screenshots/admin/modal-share_proj.png)
+![SkillTree Project Share Modal](../../screenshots/admin/modal-share_proj.png)
 
-Copy the url and share it with your trainees. 
-When the link is visited, two things happen:
+Copy the URL and share it with your trainees. When the link is visited, two things happen:
 - The Progress and Ranking page for that project is displayed *AND*
-- the project is automatically added to [My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects).
+- The project is automatically added to [My Projects](/dashboard/user-guide/progress-and-ranking.html#progress-and-ranking-my-projects).
+
+::: tip Important
+Please note that once users click on the shared links, this project will appear in that user's [Project Catalog](/dashboard/user-guide/progress-and-ranking.html#projects-catalog) even if the project's [Discoverability](/dashboard/user-guide/projects.html#setting-project-discoverability) settings are set to "Not in the Project Catalog".
+:::
 
 ::: warning Important
-The ``Share`` button is only displayed if the [Project Discoverability](/dashboard/user-guide/projects.html#setting-project-discoverability) is configured to the ``Add to Project Catalog`` option. 
+The **Share** capability is only available if the project was **not** configured to use the "Private Invite Only" authorization mechanism.
 :::
 
 ## Activity History

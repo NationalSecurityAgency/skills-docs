@@ -13,6 +13,10 @@ If you're interested in creating gamified training experiences rather than earni
 
 ### Productivity Shortcuts
 
+To initiate the training-wide search via a keyboard shortcut, press `Ctrl + K` to open the search box.
+[Training-wide search](/training-participation/take-training.html#training-wide-search) functionality enables users to quickly find and navigate to any skill, subject, or badge by name. 
+This is an effective method to jump directly to any skill, subject, or badge from any page of the training.
+
 On the [Skill Page](/training-participation/take-training.html#skill-page):
 - `Ctrl + Alt + p` (p for previous): Navigate to the previous skill
 - `Ctrl + Alt + n` (n for next): Navigate to the next skill

@@ -64,7 +64,7 @@ includes a generous feature set including attaching or copy-and-pasting screensh
 Use the `Preview` button on the top left below the Quiz name in order to see what the quiz will look like to your users.
 :::
 
-### Answer Hints <since project="skills-service" version="3.5" />
+### Answer Hints
 
 When creating a question, quiz administrators can configure helpful answer hints, which are displayed next to the
 question during the quiz. To enter a hint, create a new question or edit an existing one and click the
@@ -76,7 +76,7 @@ Additionally, administrators can enable the [Only Show Hints on Retake Attempts]
 will only display answer hints on subsequent quiz retakes after the first attempt was unsuccessful.
 To enable or disable this option, navigate to the Quiz's Settings page.
 
-### Audio/Video for Quiz <since project="skills-service" version="3.6" />
+### Audio/Video for Quiz
 
 SkillTree supports embedding video or audio clips into quiz questions, which will be available for playback during the quiz.
 
@@ -168,16 +168,16 @@ accurately tracks each successful attempt, providing a comprehensive view of use
 Enabling this feature will provide the correct answers on failed quiz attempts, allowing users to review and understand
 the correct answers, improving their learning and understanding of the material.
 
-#### Setting: Limit Retake to Incorrect Questions <since project="skills-service" version="3.4" />
+#### Setting: Limit Retake to Incorrect Questions
 
 Enabling this feature limits the questions presented to users when retaking a quiz to those that were answered
 incorrectly on the previous attempt.
 
-#### Setting: Only Show Hints on Retake Attempts  <since project="skills-service" version="3.5" />
+#### Setting: Only Show Hints on Retake Attempts 
 
 Enabling this feature will only display answer hints on subsequent quiz retakes after the first attempt was unsuccessful.
 
-#### Setting: Display Quiz Description During Quiz <since project="skills-service" version="3.5" />
+#### Setting: Display Quiz Description During Quiz
 
 Enabling this feature will display the quiz description while the quiz is being taken.
 
@@ -211,7 +211,7 @@ Please use the Answer's dropdown to select the type.
 Use the `Preview` button on the top left below the Survey name in order to see what the survey will look like to your users.
 :::
 
-### Audio/Video for Survey <since project="skills-service" version="3.6" />
+### Audio/Video for Survey
 
 SkillTree supports embedding video or audio clips into survey questions, which will be available for playback during the survey.
 
@@ -265,14 +265,19 @@ The page features
 - in the case of quizzes, a bar chart breakdown for each question depicting the difference between the correct and the wrong question attempts
 - number of times each answer was selected and its associated selection percentage
 - for each answer, an ability to drill down to its history
+- Date range filter
 
-::: tip
+::: tip Filter
+Quiz results can be filtered by completion date range. To filter results, click the date range input in the top right
+corner of the quiz results page and click the "Apply" button.
+:::
+
+::: warning Good to know
 Please note that only the completed quizzes/surveys are shown on this page, if you are looking for `In Progress`
 runs please visit [Runs](/dashboard/user-guide/quizzes-and-surveys.html#runs) page.
 :::
 
 ![Quiz Results Page Screenshot](../../screenshots/admin/page-quiz-results.png)
-
 
 ## Runs
 To track individual quiz/survey runs please visit the Runs page (``Quizzes and Surveys -> Quiz/Survey -> Results ``). Each row represents a single Quiz/Survey for a single user.
