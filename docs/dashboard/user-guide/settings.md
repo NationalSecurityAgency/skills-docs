@@ -26,9 +26,12 @@ Change this setting to true and you will not be shown on the Leaderboard or assi
 
 Enabling Dark Mode will switch UI into light-on-dark color scheme. For example:
 
-![page-projects-dark-mode.png](../../screenshots/admin/page-projects-dark-mode.png)
+![page-project-dark-mode.png](../../screenshots/admin/page-project-dark-mode.png)
 
-## Security Settings <requires-role role="Root" />
+<conditional visibilityFlag="showDocsForRootRole">
+
+## Security Settings
+<requires-role role="Root" />
 
 The ```Security``` menu item supports the administration of [Root](/dashboard/user-guide/users.html#root) users and [Supervisor](/dashboard/user-guide/users.html#supervisor) users.
 
@@ -37,7 +40,8 @@ The ```Security``` menu item supports the administration of [Root](/dashboard/us
 
 To grant [Root](/dashboard/user-guide/users.html#root) or [Supervisor](/dashboard/user-guide/users.html#supervisor) privileges to a user, that user must have an existing account for the SkillTree Dashboard. User management will also prevent the removal of any permissions from the currently authenticated user.  
 
-## Email Settings <requires-role role="Root" />
+## Email Settings
+<requires-role role="Root" />
 
 The SkillTree dashboard will send emails in support of various tasks including: 
 - password reset requests for Dashboard users,
@@ -74,7 +78,9 @@ In order for the notifications to work the following must be configured:
 - Set ``Public URL`` in the [System Settings](/dashboard/user-guide/settings.html#system-settings)
 - Set ``From Email`` in the [System Settings](/dashboard/user-guide/settings.html#system-settings)
 
-## System Settings <requires-role role="Root" />
+## System Settings 
+
+<requires-role role="Root" />
 
 ![System Settings](../../screenshots/admin/page-settings-system.png)
 
@@ -104,4 +110,4 @@ The example below configures custom header and footer:
 
 ![Custom Header Input](../../screenshots/admin/page-custom-headerAndFooter.png)
 
-
+</conditional>

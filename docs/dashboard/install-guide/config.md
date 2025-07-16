@@ -419,12 +419,15 @@ on that instance of the SkillTree platform. It provides a single point of access
 user as well as a mechanism for Projects that consist entirely of self-reported Skills to provide access to the [Ranking and Progress](/dashboard/user-guide/progress-and-ranking.html) display
 for their users. 
 
-Progress and Ranking Views are disabled by default, but can be easily enabled: 
+Progress and Ranking Views are enabled by default, but can be easily disabled: 
 
 ```properties
 # enable Progress and Ranking Views
-skills.config.ui.rankingAndProgressViewsEnabled=true
+skills.config.ui.rankingAndProgressViewsEnabled=false
+```
 
+When enabled the default landing page can be customized:
+```properties
 # optionally change default for the landing page (admin is the default)
 skills.config.ui.defaultLandingPage=progress
 ```

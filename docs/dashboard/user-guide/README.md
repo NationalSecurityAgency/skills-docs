@@ -55,7 +55,6 @@ Consider the following items when designing your training profile:
    - The Skills dashboard supports two ways to manage levels: Percentage Based (default) and Point based. If you are not sure which to go with stick with the default.    
 1. [Badges](/dashboard/user-guide/badges.html): Badges add another facet to the overall gamification training profile and allow you to further reward your users by providing these prestigious symbols of achievement. 
    - Badges are a collection of skills and when all of the skills are completed that badge is awarded.
-1. [Global Badges](/dashboard/user-guide/badges.html#global-badges): Global Badges are a special kind of badge that is made up of a collection of skills and/or levels that span across project boundaries.
 1. [Learning Path](/dashboard/user-guide/learning-path.html): Learning Path adds another facet to the overall gamification training profile, which forces users to complete skills in a specified order.
 1. [Cross-Project Prerequisites](/dashboard/user-guide/learning-path.html#cross-project-prerequisites): Cross-Project Prerequisites facilitate cross-application training and enable users to become domain experts across several applications. 
    - These dependencies are critical when actions are required to be performed in more than one tool in order to complete a task.

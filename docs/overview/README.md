@@ -27,7 +27,7 @@ SkillTree Platform enables trainers, system owners and developers to:
 ::: tip Good to Know!
 - You can visit dashboard at <service-url />
 - Feel free to create a project while working through this guide! You can always remove the project if you are done exploring SkillTree features.  
-  :::
+:::
 
 </conditional>
 

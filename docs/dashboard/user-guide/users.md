@@ -79,7 +79,10 @@ The Project Approver role is allowed to approve and deny [Self Reporting](/dashb
 
 Please visit [Project's Access Page](/dashboard/user-guide/projects.html#access) in order to learn how to add/remove project's roles.
 
+<conditional visibilityFlag="showDocsForRootRole">
+
 ### Root
+
 The Root role is meant for administering the dashboard itself and not any specific project. Users with the Root role can view the Inception project. 
 Users with the Root role can also assign Supervisor and Root roles to other dashboard users. 
 
@@ -89,6 +92,8 @@ Please visit the [Security Setting Section](/dashboard/user-guide/settings.html#
 The Supervisor role allows users to manage Global Badges. Only users with the Root role can assign the Supervisor role.     
 
 Please visit the [Security Setting Section](/dashboard/user-guide/settings.html#security-settings) to learn how to assign this role.
+
+</conditional>
 
 ## Skills Display / Client Display
 

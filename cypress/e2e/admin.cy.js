@@ -22,6 +22,15 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('modal-projects-new_project', '.p-dialog')
     })
 
+    it('Gen Projects pages for non-root user', () => {
+        cy.request('POST', '/logout');
+        cy.login('user5@email.com');
+        cy.visit('/administrator')
+        cy.get('[data-cy="projectCard_movies"]');
+        cy.get('[data-cy="projectCard_shows"]');
+        cy.snap('page-projects-not-root');
+    })
+
     it('Gen User Progress Table', () => {
         // projects page
         cy.visit('/administrator/projects/movies/users')
@@ -51,10 +60,10 @@ context('Admin: Generate Screenshots', () => {
             'dirty': true
         }]);
         // projects page
-        cy.visit('/administrator')
-        cy.get('[data-cy="projectCard_movies"]');
-        cy.get('[data-cy="projectCard_shows"]');
-        cy.snap('page-projects-dark-mode');
+        cy.visit('/administrator/projects/movies')
+        cy.get('[data-cy="projectLastReportedSkillValue"]');
+        cy.get('[data-cy="manageBtn_Action"]');
+        cy.snap('page-project-dark-mode');
 
         cy.request('POST', '/app/userInfo/settings', [{
             'settingGroup': 'user.prefs',
@@ -116,7 +125,7 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('modal-skills-new_skill', '.p-dialog')
     })
 
-    it.only('Gen Self Report page', () => {
+    it('Gen Self Report page', () => {
         cy.viewport(1350, 1200);
 
         cy.visit('/administrator/projects/movies/badges')

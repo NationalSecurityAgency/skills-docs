@@ -3,20 +3,6 @@
 The Progress and Ranking pages visualize the user's current Progress and Ranking across **multiple** projects. 
 There is also a way to drill-down into a specific project to view its progress and ranking.    
 
-<ClientOnly><conditional visibilityFlag="progressAndRankingInstallNote">
-
-::: warning Please Note
-Progress and Ranking views are optional pages and not all of the SkillTree installations will have them enabled. 
-These views are enabled through start-up configuration [Progress and Ranking views properties](/dashboard/install-guide/config.html#progress-and-ranking-views).
-Progress and Ranking pages are generally only applicable when 
-- there are a number of applications integrated with this SkillTree installation
-- the same users utilize multiple integrated applications
-- the SkillTree dashboard is used to allow users access to [Self-Reported skills](/dashboard/user-guide/self-reporting.html).
-:::
-
-</conditional></ClientOnly>
-
-
 The Progress and Ranking views support:
 1. Customization of [My Projects](#manage-my-projects-page) - only view progress and ranking for the selected projects
 1. Customization of the sort order of 'My Projects'
@@ -29,6 +15,9 @@ will feature extra navigation options of ```Progress and Ranking``` and ```Proje
 
 ![SkillTree Dashboard Menu](../../screenshots/admin/component-settings-menu.png)
 
+::: tip
+Progress and Ranking views are covered in detail in the [Training Participation Guide](/training-participation/)
+:::
 
 ## Projects Catalog
 
@@ -113,11 +102,14 @@ The ``Contact Project`` button displays the contact form where users can enter a
 
 Once the ``Submit`` button is clicked an email with the provided message is sent to all project's admins. 
 
+<conditional visibilityFlag="showDocsForRootRole">
+
 ::: danger IMPORTANT
 Please note that the ``Contact Project`` button is only display if the [Email Server Settings](/dashboard/user-guide/settings.html#email-settings)
 are configured, otherwise the button is not displayed as emails cannot be sent.
 :::
 
+</conditional>
 
 ## Daily Usage Page
 
@@ -130,12 +122,8 @@ You can view your daily usage for the selected projects by visiting the ``My Usa
 The admin view provides access for project administrators to create and manage training profiles. 
 The page is clearly labeled with an ``Admin`` stamp which visually differentiates it from the Progress and Ranking view
 
-![SkillTree Dashboard Admin View](../../screenshots/admin/page-projects.png)
+<Content path="/dashboard/user-guide/common/projects-screenshot.md"/>
 
 To get started with managing a training profile create a [Project](/dashboard/user-guide/projects.html) followed by [Subjects](/dashboard/user-guide/subjects.html) and then [Skills](/dashboard/user-guide/skills.html). 
-Please visit the [Building Training Profile](/dashboard/user-guide/#building-training-profile) section to learn more. 
-
-::: tip NOTE
-Please note that in the rare case that a single user creates more than 10 projects, they will be displayed in tabular format instead of the default card display. 
-:::
+Please visit the [Building Training Profile](/dashboard/user-guide/#building-training-profile) section to learn more.
 
