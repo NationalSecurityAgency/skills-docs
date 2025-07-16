@@ -3,9 +3,9 @@ defineProps(['role'])
 </script>
 
 <template>
-    <span class="role">
-      🛡️ Requires <a :href="$withBase('/dashboard/user-guide/users.html#user-roles')" target="_blank"> <span class="">{{ role }}</span> Role</a>
-    </span>
+    <div class="role">
+      🛡️ <span>Requires <a :href="$withBase('/dashboard/user-guide/users.html#user-roles')" target="_blank"> <span class="">{{ role }}</span> Role</a></span>
+    </div>
 </template>
 
 
@@ -16,5 +16,7 @@ defineProps(['role'])
   background-color: #faf2da;
   padding: 0.2rem 0.8rem;
   border-radius: 10px;
+  margin-top: 0.5rem;
+  display: inline-block;
 }
 </style>

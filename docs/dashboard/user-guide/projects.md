@@ -3,13 +3,13 @@
 A Project is an overall container that represents the skills ruleset for a single application with gamified training. 
 Project's administrator(s) manage skill definitions, subjects, levels, dependencies and other attributes that make up an application's training profile.
 
-
-![SkillTree Projects Admin](../../screenshots/admin/page-projects.png)
+<Content path="/dashboard/user-guide/common/projects-screenshot.md"/>
 
 Creating a project is simple, all you need is a name. While the project id is required, it will be automatically generated (you can optionally override the generated id).
 
 ::: tip
-As of 2.1.0 there is now a description field available for projects. Where the project description is displayed is controlled by the new [Project Description](/dashboard/user-guide/projects.html#setting-project-description) setting in Project Settings
+You can optionally add a project description. Where project description is shown can be configured in Project Settings
+using the [Project Description](/dashboard/user-guide/projects.html#setting-project-description) setting.
 :::
 
 

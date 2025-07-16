@@ -25,12 +25,14 @@ const videosJson = require('./components/videos/skilltree-training-videos.json')
  *  removeProgressAndRankingPageFromDashboardUserGuide=true: remove Progress and Ranking section if Progress and Ranking views are disabled
  *  removeContributionsGuide=true: remove Contribution Guide form docs
  *  noExternalLinks=true: there will be no external links in the docs
+ *  removeDocsForRootRole=true: remove docs for root role
  */
 
 let removeInstallGuide = false;
 let removeProgressAndRankingPageFromDashboardUserGuide = false;
 let removeProgressAndRankingInstallNote = false;
 let removeContributionsGuide = false;
+let removeDocsForRootRole = false;
 
 let removeAuthPageFromIntegrationGuide = false;
 let pkiAuthInstallOnly = false;
@@ -75,10 +77,13 @@ if (confValue) {
             removeContributionsGuide = true;
         } else if (key === 'noExternalLinks' && val === 'true') {
             noExternalLinks = true;
+        } else if (key === 'removeDocsForRootRole' && val === 'true') {
+            removeDocsForRootRole = true;
         }
     })
 }
 
+const showDocsForRootRole = !removeDocsForRootRole;
 
 if (pkiAuthInstallOnly && passAuthInstallOnly) {
     throw '\n ----- \n ----- \n !!!!!! CONFIG ERROR: Can no have both pkiAuthInstallOnly=false and passAuthInstallOnly=false !!!!!!\n -----\n ----- \n'
@@ -87,7 +92,7 @@ if (pkiAuthInstallOnly && passAuthInstallOnly) {
 let nav = [
     { text: 'Overview', link: '/overview/' },
     { text: 'Install Guide', link: '/dashboard/install-guide/' },
-    { text: 'Dashboard User Guide', link: '/dashboard/user-guide/' },
+    { text: 'Admin User Guide', link: '/dashboard/user-guide/' },
     { text: 'Integration Guide', link: '/skills-client/' },
     { text: 'Contribute', link: '/contribution/' },
 ];
@@ -176,13 +181,17 @@ sidebar = sidebar.concat([{
     }
 ]);
 
+if (removeDocsForRootRole) {
+    const dashboardGuide = sidebar.find((item) => item.text === 'Admin User Guide');
+    dashboardGuide.children = dashboardGuide.children.filter((item) => !item.endsWith('contact-admins'))
+}
 if (removeInstallGuide) {
     const toFilter = 'Install Guide';
     nav = nav.filter((item) => item.text !== toFilter);
     sidebar = sidebar.filter((item) => item.text !== toFilter);
 }
 if (removeProgressAndRankingPageFromDashboardUserGuide) {
-    const dashboardGuide = sidebar.find((item) => item.text === 'Dashboard User Guide');
+    const dashboardGuide = sidebar.find((item) => item.text === 'Admin User Guide');
     dashboardGuide.children = dashboardGuide.children.filter((item) => !item.endsWith('progress-and-ranking'))
 }
 if (removeAuthPageFromIntegrationGuide) {
@@ -256,6 +265,7 @@ export default defineUserConfig({
             skillTreeServiceUrl: skillTreeServiceUrl && skillTreeServiceUrl.length > 0 && skillTreeServiceUrlDefaultValue !== skillTreeServiceUrl,
             showInstallGuide: !removeInstallGuide,
             showContributionGuide: !removeContributionsGuide,
+            showDocsForRootRole,
             noExternalLinks,
         },
         installType: installTypeProp,
