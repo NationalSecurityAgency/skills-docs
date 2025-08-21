@@ -1,8 +1,8 @@
 # Admin Groups
 
-Admin Groups streamline the ability to manage a list of administrators for one or more projects and/or quizzes.
-Once an Admin Group is created you can easily add and remove members to and from the group. A group can then be assigned to one or more projects and/or quizzes 
-which then allows the members of the group to have administrative privileges to the assigned projects and/or quizzes. 
+Admin Groups streamline the ability to manage a list of administrators for one or more projects, quizzes and global badges
+Once an Admin Group is created you can easily add and remove members to and from the group. A group can then be assigned to one or more projects, quizzes, or global badges 
+which then allows the members of the group to have administrative privileges to the assigned projects, quizzes and global badges. 
  
 To create an admin group please navigate to the ``Admin Groups`` page and then click the ``Admin Group +`` button.
 
@@ -15,3 +15,7 @@ To assign a group to a project please navigate to ``Adming Groups -> Projects`` 
 To assign a group to a quiz please navigate to ``Adming Groups -> Quizzes`` then select one of the existing quizzes from the dropdown.
 
 ![page-admin-groups-quizzes.png](../../screenshots/admin/page-admin-groups-quizzes.png)
+
+To assign a group to a global badge please navigate to ``Adming Groups -> Global Badges`` then select one of the existing global badges from the dropdown.
+
+![page-admin-groups-global-badges.png](../../screenshots/admin/page-admin-groups-global-badges.png)
