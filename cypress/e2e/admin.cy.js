@@ -670,7 +670,7 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-admin-groups-global-badges')
     })
 
-    it.only('page - global badges', () => {
+    it('page - global badges', () => {
         cy.visit('/administrator/globalBadges/MoviesandShowsExpertBadge')
         cy.get('[data-cy="noContent"]').contains('No Skills Added Yet');
         cy.selectSkill('[data-cy="skillsSelector"]', 'FindingNemo', 'nemo', 'movies');
