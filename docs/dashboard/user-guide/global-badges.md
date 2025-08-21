@@ -1,6 +1,6 @@
 # Global Badges
 
-Global Badges recognize and reward users for achieving skills and levels across multiple projects. These badges help track and celebrate comprehensive skill development that spans different project boundaries.
+Global Badges recognize and reward users for achieving skills and levels across multiple projects. These badges help track and celebrate comprehensive skill development that spans different project boundaries. Global Badges can include skills and levels from any project you have Admin access to.
 
 ## Overview
 
