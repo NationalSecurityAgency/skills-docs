@@ -665,6 +665,30 @@ context('Admin: Generate Screenshots', () => {
         cy.get('[data-cy="adminGroupQuizzesTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '3')
         cy.snap('page-admin-groups-quizzes')
 
+        cy.visit('/administrator/adminGroups/FancyGroup/group-global-badges')
+        cy.get('[data-cy="adminGroupGlobalBadgesTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '1')
+        cy.snap('page-admin-groups-global-badges')
+    })
+
+    it('page - global badges', () => {
+        cy.visit('/administrator/globalBadges/MoviesandShowsExpertBadge')
+        cy.get('[data-cy="noContent"]').contains('No Skills Added Yet');
+        cy.selectSkill('[data-cy="skillsSelector"]', 'FindingNemo', 'nemo', 'movies');
+        cy.selectSkill('[data-cy="skillsSelector"]', 'UnbreakableKimmySchmidt', 'kimmy', 'shows');
+        cy.snap('page-global-badge-skills')
+
+        cy.visit('/administrator/globalBadges/MoviesandShowsExpertBadge/levels')
+        cy.get('[data-cy="simpleLevelsTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '2')
+        cy.snap('page-global-badge-levels')
+
+        cy.visit('/administrator/globalBadges/MoviesandShowsExpertBadge/access')
+        cy.get('[data-cy="existingUserInput"]').type('bob1');
+        cy.wait(500);
+        cy.get('#existingUserInput_0').contains('bob1').click();
+        cy.get('[data-cy="addUserBtn"]').click();
+
+        cy.get('[data-cy="userCell_bob1@email.org"]')
+        cy.snap('page-global-badge-access')
     })
 
     it('Notifications', () => {
