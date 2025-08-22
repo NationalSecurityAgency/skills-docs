@@ -112,7 +112,7 @@ context('Admin: Generate Screenshots', () => {
     });
 
     it('New Skill modals', () => {
-        cy.viewport(1350, 1800);
+        cy.viewport(1200, 2000);
         // new skill modal
         cy.visit('/administrator/projects/movies/subjects/Action/');
         cy.get('[data-cy="newSkillButton"]').click();
@@ -360,6 +360,19 @@ context('Admin: Generate Screenshots', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/skills/WonderWoman/config-video')
         cy.get('[data-cy="videoFileInputDropTarget"]')
         cy.snap('page-video-config', '#mainContent2')
+    })
+
+    it('Slides Settings page', () => {
+        cy.visit('/administrator/projects/movies/subjects/Action/skills/WonderWoman/config-slides')
+        cy.get('[data-cy="saveSlidesSettingsBtn"]').should('be.disabled')
+        cy.snap('component-slides-config-empty', '#mainContent2')
+
+        cy.visit('/administrator/projects/movies/subjects/Action/skills/Avatar/config-slides')
+        cy.get('[data-cy="nextSlideBtn"]').should('be.enabled')
+        cy.get('[data-cy="nextSlideBtn"]').click()
+        cy.get('#movies-AvatarContainer').contains('This is a first slide')
+        cy.snap('component-slides-config-with-slides', '#mainContent2')
+
     })
 
     it('Gen Expiration Settings page', () => {
@@ -665,6 +678,30 @@ context('Admin: Generate Screenshots', () => {
         cy.get('[data-cy="adminGroupQuizzesTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '3')
         cy.snap('page-admin-groups-quizzes')
 
+        cy.visit('/administrator/adminGroups/FancyGroup/group-global-badges')
+        cy.get('[data-cy="adminGroupGlobalBadgesTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '1')
+        cy.snap('page-admin-groups-global-badges')
+    })
+
+    it('page - global badges', () => {
+        cy.visit('/administrator/globalBadges/MoviesandShowsExpertBadge')
+        cy.get('[data-cy="noContent"]').contains('No Skills Added Yet');
+        cy.selectSkill('[data-cy="skillsSelector"]', 'FindingNemo', 'nemo', 'movies');
+        cy.selectSkill('[data-cy="skillsSelector"]', 'UnbreakableKimmySchmidt', 'kimmy', 'shows');
+        cy.snap('page-global-badge-skills')
+
+        cy.visit('/administrator/globalBadges/MoviesandShowsExpertBadge/levels')
+        cy.get('[data-cy="simpleLevelsTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '2')
+        cy.snap('page-global-badge-levels')
+
+        cy.visit('/administrator/globalBadges/MoviesandShowsExpertBadge/access')
+        cy.get('[data-cy="existingUserInput"]').type('bob1');
+        cy.wait(500);
+        cy.get('#existingUserInput_0').contains('bob1').click();
+        cy.get('[data-cy="addUserBtn"]').click();
+
+        cy.get('[data-cy="userCell_bob1@email.org"]')
+        cy.snap('page-global-badge-access')
     })
 
     it('Notifications', () => {

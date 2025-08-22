@@ -164,9 +164,21 @@ The ``Project User: Invite`` and ``Project User: Revoke`` user interface control
 :::
 
 #### Invite Users
-Users are invited to join a project that has been configured as ``Private Invite Only`` via email. Invite recipients are added via the ``Email Addresses`` input field and can be added one at a time or by using a comma or semicolon separated list
-or by entering one email address per line in the ``Email Addresses`` input field (email addresses in the form of ``<some@email.address> Firstname Lastname`` are also supported). Once email addresses have been entered into the ``Email Addresses`` input field,
-they must be added as recipients using the ``Add Recipients`` button. These steps may be performed several times before the ``Send Invites`` button is pressed at which point all accumulated email addresses will be sent an email with a unique, one-time use invite to join the project.
+
+Users can be invited to join a project configured as ``Private Invite Only`` via email. To invite users:
+
+1. Enter email addresses in the ``Email Addresses`` field using any of these formats:
+    - One at a time
+    - Comma or semicolon separated list
+    - One per line
+    - With display names (e.g., ``<some@email.address> Firstname Lastname``) is also supported
+2. Click ``Add Recipients`` to add them to the recipient list
+3. Repeat to add more recipients if needed
+4. Optionally, add CC recipients in the ``CC Email Addresses`` field
+5. Click ``Send Invites`` to deliver one-time use invitations to all recipients
+
+Each recipient will receive a unique, one-time use invitation to join the project.
+
 
 ![Project Access](./screenshots/Component-Private-Project-Invite.png)
 
