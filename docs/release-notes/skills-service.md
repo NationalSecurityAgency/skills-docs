@@ -12,10 +12,10 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 <release-date date="Aug 2025" />
 - Implemented ability to upload and manage [PDF slide decks](/dashboard/user-guide/skills.html#slide-deck) per skill, which are presented [during training](/training-participation/take-training.html#slides) for that specific skill.
 - Implemented the ability to create [Global Badges](/dashboard/user-guide/global-badges.html) that can include skills and levels from any project for which you have Admin access
-- Added support for customizing icons for individual skills, similar to subjects and badges.
-- Added ability to require videos to be played multiple times for completion
+- Added support for customizing [icons](/dashboard/user-guide/icons.html) for individual skills, similar to subjects and badges.
+- Added ability to [require videos](/dashboard/user-guide/skills.html#achieving-skills-through-audio-video-playback) to be played multiple times for completion
 - Implemented Matomo Analytics support to the SkillTree dashboard
-- Added CC field for project invites
+- Added [CC field](/dashboard/user-guide/projects.html#invite-users) for project invites
 - Added Last Updated column to Skills Table
 - Updated locked history chart appearance and wording
 - Improved Dashboard loading performance by optimizing JS resource chunking and loading 

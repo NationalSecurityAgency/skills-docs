@@ -112,7 +112,7 @@ context('Admin: Generate Screenshots', () => {
     });
 
     it('New Skill modals', () => {
-        cy.viewport(1350, 1800);
+        cy.viewport(1200, 2000);
         // new skill modal
         cy.visit('/administrator/projects/movies/subjects/Action/');
         cy.get('[data-cy="newSkillButton"]').click();
