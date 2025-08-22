@@ -81,6 +81,8 @@ For example:
 - **Skills Catalog** - skills can be exported to the Catalog which makes those skills available for re-use in other projects
 - **Knowledge Checks** - requires successful passage of a quiz in order to earn the skill and its points
 - **Surveys** - method to get feedback about that skill or collect some pieces of important data related to the skill
+- **Slides** - A seamless integration of PDF-based slide decks directly into skills, allowing you to enhance training materials with professionally designed presentations created in tools like PowerPoint and exported as PDFs.
+- **Video/Audio** - SkillTree allows embedding videos or audios clips into skill descriptions and quiz questions, with optional configuration settings to achieve the skill upon full playback.
 - **Learning Path** - lay out a learning path for users to complete skills in a specified order
 - **Metrics** - corporate visibility of expertise and knowledge gaps
 

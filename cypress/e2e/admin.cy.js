@@ -362,6 +362,19 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-video-config', '#mainContent2')
     })
 
+    it('Slides Settings page', () => {
+        cy.visit('/administrator/projects/movies/subjects/Action/skills/WonderWoman/config-slides')
+        cy.get('[data-cy="saveSlidesSettingsBtn"]').should('be.disabled')
+        cy.snap('component-slides-config-empty', '#mainContent2')
+
+        cy.visit('/administrator/projects/movies/subjects/Action/skills/Avatar/config-slides')
+        cy.get('[data-cy="nextSlideBtn"]').should('be.enabled')
+        cy.get('[data-cy="nextSlideBtn"]').click()
+        cy.get('#movies-AvatarContainer').contains('This is a first slide')
+        cy.snap('component-slides-config-with-slides', '#mainContent2')
+
+    })
+
     it('Gen Expiration Settings page', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/skills/TheMatrix/config-expiration')
         cy.snap('page-expiration-config', '[data-cy="nav"]')
