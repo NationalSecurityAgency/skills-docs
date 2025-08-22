@@ -8,6 +8,32 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 3.8.0
+<release-date date="Aug 2025" />
+- Implemented ability to upload and manage [PDF slide decks](/dashboard/user-guide/skills.html#slide-deck) per skill, which are presented [during training](/training-participation/take-training.html#slides) for that specific skill.
+- Implemented the ability to create [Global Badges](/dashboard/user-guide/global-badges.html) that can include skills and levels from any project for which you have Admin access
+- Added support for customizing [icons](/dashboard/user-guide/icons.html) for individual skills, similar to subjects and badges.
+- Added ability to [require videos](/dashboard/user-guide/skills.html#achieving-skills-through-audio-video-playback) to be played multiple times for completion
+- Implemented Matomo Analytics support to the SkillTree dashboard
+- Added [CC field](/dashboard/user-guide/projects.html#invite-users) for project invites
+- Added Last Updated column to Skills Table
+- Updated locked history chart appearance and wording
+- Improved Dashboard loading performance by optimizing JS resource chunking and loading 
+- Upgraded Spring Boot
+- Bug Fixes
+
+## 3.7.3
+<release-date date="Aug 2025" />
+- Bug Fixes
+
+## 3.7.2
+<release-date date="Aug 2025" />
+- Bug Fixes
+
+## 3.7.3
+<release-date date="Aug 2025" />
+- Bug Fixes
+
 ## 3.7.0
 <release-date date="July 2025" />
 - [Training-wide Search](/training-participation/take-training.html#training-wide-search) - Training-wide search functionality that enables users to quickly find and navigate to any skill, subject, or badge by name

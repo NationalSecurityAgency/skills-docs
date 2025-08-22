@@ -171,6 +171,7 @@ Additional optional elements may appear in the skill details, depending on the s
 - **Self-Reporting**: Instructions for self-reporting progress and achieving consecutive completions (see [Self Reporting](/training-participation/take-training.html#self-reporting) for more details)
 - **Skill Tags**: Categories assigned by the training creator
 - **Prerequisites**: A list of required skills and a visual diagram of their relationships
+- **Slides**: Optional presentations to further enhance training materials
 - **Enhanced Media**: Optional video or audio content to enrich the learning experience
 - **Expiration**: A clear deadline indicating when the skill will expire (if applicable)
 
@@ -228,6 +229,25 @@ To earn points for this survey-based skill, you'll need to complete a survey by 
 Click the **Complete Survey** button to get started. Be sure to review the skill's description for any important details before you begin.
 
 Please visit [Quizzes and Surveys](#quizzes-and-surveys) section for further details on how to take a survey.
+
+### Slides
+
+Some skills may include additional presentation materials in the form of slides, which appear above the skill's description.
+
+The built-in slide viewer offers:
+- **Intuitive navigation between slides** - Use the previous and next buttons at the bottom of the slide viewer
+- **PDF download capability** - Access the download button at the bottom right of the slide viewer
+- **Full-screen presentation mode** - Click the full-screen button at the top right of the slide viewer
+- **Slide resizing** - Drag the bottom-right corner handle that appears on hover
+
+::: tip
+Resize the slides by dragging the bottom-right corner. Your preferred size will be saved in your browser's local storage.
+:::
+
+In **full-screen mode**:
+- Navigate using `left`/`right` arrow keys
+- Access navigation controls by hovering near the bottom
+- Exit using the `Escape` key or the exit button in the navigation controls
 
 ### Audio/Video
 

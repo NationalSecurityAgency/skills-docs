@@ -50,6 +50,8 @@ Consider the following items when designing your training profile:
 1. [Surveys](/dashboard/user-guide/quizzes-and-surveys.html): A Survey is a data collection technique utilizing one or more questions. 
    - Associating a Survey to an existing skill will require completion of that Survey in order to earn the skill and its points.
    - When associated to a skill, the survey is a method to gather feedback about that skill or collect some pieces of important data related to the skill.
+1. [Slides](/dashboard/user-guide/skills.html#slide-deck): A seamless integration of PDF-based slide decks directly into skills, allowing you to enhance training materials with professionally designed presentations created in tools like PowerPoint and exported as PDFs.
+1. [Video/Audio](/dashboard/user-guide/skills.html#audio-video): SkillTree allows embedding videos or audios clips into skill descriptions, with optional configuration settings to achieve the skill upon full playback.
 1. [Levels](/dashboard/user-guide/levels.html): Levels are users' achievement path - the overall goal of the training profile is to encourage users to achieve the highest level. 
    - Levels are tracked for the entire project as well as for each subject which provides users many ways to progress forward, as well as frequent positive reinforcement opportunities.
    - The Skills dashboard supports two ways to manage levels: Percentage Based (default) and Point based. If you are not sure which to go with stick with the default.    

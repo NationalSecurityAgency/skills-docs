@@ -333,6 +333,30 @@ skills.websocket.relayHost=
 skills.websocket.relayPort=
 ```
 
+### Matomo Integration 
+
+SkillTree can be configured to integrate with <external-url label="Matomo" url="https://matomo.org/" />, a free and open-source web analytics platform that serves as an alternative to Google Analytics. 
+This integration enables tracking of user activity and provides valuable insights into user behavior.
+
+To enable Matomo integration, configure the following properties:
+
+```properties
+skills.config.ui.matomoUrl: <Matomo Host such as https://my-matomo-server.com>
+skills.config.ui.matomoSiteId: <Matomo Site ID>
+```
+
+### UI Logging for Debugging
+
+SkillTree can be configured to log predefined UI events for debugging purposes. 
+These logs are accessible through your browser's developer tools console.
+
+To enable UI logging, configure the following property:
+
+```properties
+# Supported log levels: TRACE, DEBUG, INFO, WARN, ERROR
+skills.config.ui.logLevel=TRACE
+```
+
 ### JVM Heap
 These are System Properties.
 ```properties

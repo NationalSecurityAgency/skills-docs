@@ -112,7 +112,7 @@ context('Admin: Generate Screenshots', () => {
     });
 
     it('New Skill modals', () => {
-        cy.viewport(1350, 1800);
+        cy.viewport(1200, 2000);
         // new skill modal
         cy.visit('/administrator/projects/movies/subjects/Action/');
         cy.get('[data-cy="newSkillButton"]').click();
@@ -360,6 +360,19 @@ context('Admin: Generate Screenshots', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/skills/WonderWoman/config-video')
         cy.get('[data-cy="videoFileInputDropTarget"]')
         cy.snap('page-video-config', '#mainContent2')
+    })
+
+    it('Slides Settings page', () => {
+        cy.visit('/administrator/projects/movies/subjects/Action/skills/WonderWoman/config-slides')
+        cy.get('[data-cy="saveSlidesSettingsBtn"]').should('be.disabled')
+        cy.snap('component-slides-config-empty', '#mainContent2')
+
+        cy.visit('/administrator/projects/movies/subjects/Action/skills/Avatar/config-slides')
+        cy.get('[data-cy="nextSlideBtn"]').should('be.enabled')
+        cy.get('[data-cy="nextSlideBtn"]').click()
+        cy.get('#movies-AvatarContainer').contains('This is a first slide')
+        cy.snap('component-slides-config-with-slides', '#mainContent2')
+
     })
 
     it('Gen Expiration Settings page', () => {
