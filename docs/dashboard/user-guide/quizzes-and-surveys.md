@@ -76,6 +76,22 @@ Additionally, administrators can enable the [Only Show Hints on Retake Attempts]
 will only display answer hints on subsequent quiz retakes after the first attempt was unsuccessful.
 To enable or disable this option, navigate to the Quiz's Settings page.
 
+
+### Slide Deck for Quiz
+
+SkillTree enables seamless integration of PDF-based slide decks directly into quizzes, allowing you to enhance training
+materials with professionally designed presentations created in tools like PowerPoint and exported as PDFs.
+
+You have two methods to add slide decks:
+
+- **SkillTree Hosted:** Upload PDF files directly using the file upload form (Browse button) or via drag-and-drop
+- **Externally Hosted:** Provide a URL to a PDF hosted on an external web server (e.g., https://example.com/slides.pdf)
+
+To set up a slide deck, navigate to `Quiz -> Slides` and upload your PDF file.
+
+<Content path="/dashboard/user-guide/common/slide-deck.md"/>
+
+
 ### Audio/Video for Quiz
 
 SkillTree supports embedding video or audio clips into quiz questions, which will be available for playback during the quiz.
@@ -210,6 +226,20 @@ Please use the Answer's dropdown to select the type.
 ::: tip
 Use the `Preview` button on the top left below the Survey name in order to see what the survey will look like to your users.
 :::
+
+### Slide Deck for Survey
+
+SkillTree enables seamless integration of PDF-based slide decks directly into surveys, allowing you to enhance training
+materials with professionally designed presentations created in tools like PowerPoint and exported as PDFs.
+
+You have two methods to add slide decks:
+
+- **SkillTree Hosted:** Upload PDF files directly using the file upload form (Browse button) or via drag-and-drop
+- **Externally Hosted:** Provide a URL to a PDF hosted on an external web server (e.g., https://example.com/slides.pdf)
+
+To set up a slide deck, navigate to `Survey -> Slides` and upload your PDF file.
+
+<Content path="/dashboard/user-guide/common/slide-deck.md"/>
 
 ### Audio/Video for Survey
 
