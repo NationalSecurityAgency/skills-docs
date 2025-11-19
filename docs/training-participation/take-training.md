@@ -302,6 +302,7 @@ You may encounter three types of questions:
 - **Multiple Choice**: Select one correct answer
 - **Multiple Answers**: Select all correct choices to earn credit
 - **Input Text**: Free-form text response, graded by quiz administrators
+- **Matching**: Match items from one list with their correct matches in another list
 
 To finish the quiz, click the **Complete Quiz** button. The results page will then appear. If your quiz only includes Multiple Choice and Multiple Answers questions, it will be automatically graded by the system.
 

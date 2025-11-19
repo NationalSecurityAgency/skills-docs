@@ -8,6 +8,13 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 3.10
+<release-date date="November 2025" />
+- Implemented support for [matching](/dashboard/user-guide/quizzes-and-surveys.html#quiz) question type in quizzes
+  - Define terms and their matches so trainees can match items from one list with their correct matches in another list
+  - Drag-and-drop functionality for matching items
+- Bug Fixes
+- Library Upgrades
 
 ## 3.9
 <release-date date="September 2025" />

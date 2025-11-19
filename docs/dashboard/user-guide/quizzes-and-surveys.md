@@ -48,6 +48,7 @@ Quizzes support three types of questions:
 - ``Multiple Choice`` - Single correct answer
 - ``Multiple Answers`` - Multiple correct choices; all must be selected to earn credit
 - ``Input Text`` - Free-form text response, graded by quiz administrators
+- ``Matching`` - Match items from one list with their correct matches in another list
 
 To administer a quiz click `Manage` button for that quiz on the `Quizzes and Surveys` page. 
 
