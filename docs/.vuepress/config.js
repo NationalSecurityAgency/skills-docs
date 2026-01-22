@@ -131,6 +131,7 @@ sidebar = sidebar.concat([{
             '/dashboard/user-guide/admin-groups',
             '/dashboard/user-guide/badges',
             '/dashboard/user-guide/global-badges',
+            '/dashboard/user-guide/ai-assistant',
             '/dashboard/user-guide/learning-path',
             '/dashboard/user-guide/progress-and-ranking',
             '/dashboard/user-guide/icons',

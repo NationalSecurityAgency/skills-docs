@@ -19,6 +19,10 @@ Examples:
 
 ![SkillTree New Badge](../../screenshots/admin/modal-badges-new_badge.png)
 
+::: tip
+Did you know, you can use **SkillTree's AI Assistant** to generate descriptions, [Learn more](/dashboard/user-guide/ai-assistant.html#ai-powered-description-generation)
+:::
+
 Creating badges is simple: 
 1. Navigate to ``Project -> Badges`` and click ``Badge +``
    - You can (and should) assign an [Icon](/dashboard/user-guide/icons.html) to your badge.
