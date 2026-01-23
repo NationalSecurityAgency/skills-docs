@@ -541,8 +541,10 @@ skills.authorization.invite.validateEmail=true
 The AI Assistant enhances content creation by generating learning materials automatically. To enable this feature, configure the following settings:
 
 #### Prerequisites
-- OpenAI API key (required for AI functionality)
-- Internet access to OpenAI's API endpoints
+- **OpenAI API Key**: A valid API key with access to OpenAI's Chat Completions API
+- **API Endpoint Access**: The service requires outbound access to:
+    - `<openai-host>/v1/chat/completions` - Primary endpoint for AI text generation
+    - `<openai-host>/v1/models` - Endpoint for retrieving available models
 
 #### Enabling the AI Assistant
 Add this property to enable the AI Assistant in your SkillTree Dashboard:
@@ -566,6 +568,10 @@ skills.openai.key=your-api-key-here
 # Optional: Custom footer message to display in the AI Assistant interface
 # skills.config.ui.openaiFooterMsg=AI-generated content should be reviewed before use
 ```
+
+::: tip
+AI prompts can be customized via `Settings -> AI Prompts` in the Dashboard, which requires the `root` role.
+:::
 
 ### Spring Boot Properties
 

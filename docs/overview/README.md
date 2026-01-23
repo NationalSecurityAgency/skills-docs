@@ -78,6 +78,7 @@ For example:
 - **Arrange skills under Subjects** - a way to group and organize skill definitions within a gamified training profile.
 - **Badges** - further reward your users by providing these prestigious symbols
 - **Self Reporting** - users can self report completion with mutliple handling strategies including Approval Queues and an Honor System
+- **AI Assistant** - Streamline content creation with AI-powered generation of skill descriptions and quiz questions, integrated throughout the SkillTree Dashboard.
 - **Skills Catalog** - skills can be exported to the Catalog which makes those skills available for re-use in other projects
 - **Knowledge Checks** - requires successful passage of a quiz in order to earn the skill and its points
 - **Surveys** - method to get feedback about that skill or collect some pieces of important data related to the skill
@@ -150,11 +151,16 @@ Please visit [Contribution Guide](/contribution/#contribution-guidelines) if you
 </conditional>
 
 ## Accessibility
-SkillTree is committed to ensuring that Accessibility concerns are addressed. To that end we employ both manual and automated Accessibility testing. 
-Automated accessibility testing occurs for every commit, assessing the Dashboard and client-display.
+SkillTree is committed to accessibility, employing both manual and automated testing to ensure an inclusive experience. 
+Automated accessibility testing runs on every commit, evaluating both the Dashboard and client-facing components.
 
-In the event that any of the libraries we depend on for User Interface components fail to meet accessibility standards, we evaluate whether accessibility
-fixes are on the near-term development roadmap for those plugins or replace them with equivalents that address accessibility concerns.
+Comprehensive accessibility documentation is available for different user roles:
+- [Administrator Accessibility Guide](/dashboard/user-guide/accessibility.html)
+- [Trainee Accessibility Guide](/training-participation/accessibility.html)
+
+If any third-party UI components we use fall short of accessibility standards, we either:
+- Look for workarounds to improve accessibility, or
+- Replace them with more accessible alternatives
 
 ## License
 
@@ -220,6 +226,10 @@ points will be awarded toward Skill B until Skill A is fully accomplished.
 
 The screenshot below demonstrates visualization and management of a project's learning path:
 ![Project Learning Page](../screenshots/admin/page-project-learning-path.png)
+
+SkillTree's AI Assistant is a powerful tool that helps administrators create high-quality learning content quickly and efficiently. 
+The AI Assistant is integrated throughout the SkillTree Dashboard, providing automated content generation for various components of your learning ecosystem.
+![AI Generated Skill Description](../screenshots/admin/ai-gen-new-skill-description.png)
 
 Almost every page in the SkillTree dashboard exposes metrics and statistics about that particular entity/concept. These
 metrics are very much context aware so as an example, graphs and charts you see on a subject page will be for that
