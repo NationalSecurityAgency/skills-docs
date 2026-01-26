@@ -46,6 +46,10 @@ By clicking the settings button on the top right, an additional menu will allow 
 - Smooth Focus - When enabled, along with Focus On Select, the learning path will animate the pan and focus transition.
 - Dynamic Height - When enabled, the height of the learning path will adjust dynamically based on the dimensions of the path.
 
+::: tip Settings Are Saved
+Changes made to the settings will be saved to the browser's local storage and will persist between sessions.
+:::
+
 ## Best practices
 - Do not create very complex learning paths - a simple, direct and shallow prerequisite chain/tree is the best approach. 
 - Instead of adding a large amount of prerequisite skills consider adding all of those skills to a badge and then using that badge in the Learning Path instead 
