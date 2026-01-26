@@ -17,6 +17,9 @@ To create a project click the ``Project +`` button.
 
 ![SkillTree Projects Admin](../../screenshots/admin/modal-projects-new_project.png)
 
+::: tip
+Did you know, you can use **SkillTree's AI Assistant** to generate descriptions, [Learn more](/dashboard/user-guide/ai-assistant.html#ai-powered-description-generation)
+:::
 
 A Project is composed of Subjects which are made up of Skills and a single skill defines a training unit within the gamification framework. 
 Once the project is created you have an empty canvas on which to compose and manage your application's training profile. 

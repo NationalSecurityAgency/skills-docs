@@ -106,7 +106,7 @@ context('Admin: Generate Screenshots', () => {
 
         cy.visit('/administrator/projects/movies/badges')
         cy.get('[data-cy="btn_Badges"]').click();
-        cy.get('[data-pc-name="pcmaximizebutton"]').click()
+        // cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.get('[data-cy="name"]')
         cy.snap('modal-badges-new_badge', '.p-dialog')
     });
@@ -123,6 +123,43 @@ context('Admin: Generate Screenshots', () => {
         cy.wait(1000)
 
         cy.snap('modal-skills-new_skill', '.p-dialog')
+    })
+
+    it('New Skill modals - ai dialog', () => {
+        cy.intercept('GET', '/public/config', (req) => {
+            req.reply((res) => {
+                const conf = res.body;
+                conf.enableOpenAIIntegration = true;
+                res.send(conf);
+            });
+        }).as('getConfig');
+        cy.intercept('POST', '/admin/projects/movies/subjects/Action/skills/HowtoPlayChessSkill').as('saveSkill')
+        cy.viewport(1200, 2000);
+        // new skill modal
+        cy.visit('/administrator/projects/movies/subjects/Action/');
+        cy.get('@getConfig')
+        cy.get('[data-cy="newSkillButton"]').click();
+        cy.get('[data-cy="skillName"]').clear()
+        cy.get('[data-cy="skillName"]').type('How to Play Chess')
+        // cy.wait(1000)
+        cy.get('[data-cy="aiButton"]').click()
+        cy.get('[data-cy="instructionsInput"]').type('A brief description on how to play chess{enter}')
+        cy.wait(15000)
+        cy.get('[data-cy="aiMsg-2"] [data-cy="finalSegment"]').contains('Take a look at what I came up with!')
+        cy.get('div.p-dialog.p-component:has(span:contains("AI Assistant"))')
+        cy.snap('ai-gen-new-skill-description', 'div.p-dialog.p-component:has(span:contains("AI Assistant"))')
+        cy.get('[data-cy="useGenValueBtn-2"]').click()
+        cy.get('[data-cy="saveDialogBtn"]').click()
+        cy.get('@saveSkill')
+        cy.get('[data-cy="manageSkillLink_HowtoPlayChessSkill"]').click()
+        cy.get('[data-cy="generateQuizBtn"]')
+        cy.snap('ai-gen-new-quiz-for-skill-button', '[data-cy="selfReportMediaCard"]')
+        cy.get('[data-cy="generateQuizBtn"]').click()
+        cy.get('[data-cy="instructionsInput"]').type('Quiz chess{enter}')
+        cy.wait(15000)
+        cy.snap('ai-gen-new-quiz-for-skill', 'div.p-dialog.p-component:has(span:contains("AI Assistant"))')
+        cy.realPress('Escape');
+        cy.request('DELETE', '/admin/projects/movies/subjects/Action/skills/HowtoPlayChessSkill', {});
     })
 
     it('Gen Self Report page', () => {

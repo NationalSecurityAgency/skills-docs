@@ -18,6 +18,10 @@ To create a group, navigate to ``Project -> Subject`` then click on ``Group +``,
 
 ![New Skills Group Modal](../../screenshots/admin/modal-new-group.png)
 
+::: tip
+Did you know, you can use **SkillTree's AI Assistant** to generate descriptions, [Learn more](/dashboard/user-guide/ai-assistant.html#ai-powered-description-generation)
+:::
+
 | Property | Explanation | 
 |:------- |:----------- | 
 | Group Name | Display name of the skill |

@@ -536,6 +536,43 @@ prior giving access to that private project.
 skills.authorization.invite.validateEmail=true
 ```
 
+### AI Assistant Configuration
+
+The AI Assistant enhances content creation by generating learning materials automatically. To enable this feature, configure the following settings:
+
+#### Prerequisites
+- **OpenAI API Key**: A valid API key with access to OpenAI's Chat Completions API
+- **API Endpoint Access**: The service requires outbound access to:
+    - `<openai-host>/v1/chat/completions` - Primary endpoint for AI text generation
+    - `<openai-host>/v1/models` - Endpoint for retrieving available models
+
+#### Enabling the AI Assistant
+Add this property to enable the AI Assistant in your SkillTree Dashboard:
+
+```properties
+# Enable AI Assistant integration
+skills.config.ui.enableOpenAIIntegration=true
+
+# Required: Your OpenAI API key
+skills.openai.key=your-api-key-here
+
+# Optional: Set a different OpenAI API endpoint (default: http://localhost:50001)
+# skills.openai.host=https://your-custom-openai.com
+
+# Optional: Default model to use for AI generation (e.g., "gpt-4", "gpt-3.5-turbo")
+# skills.config.ui.openaiDefaultModel=gpt-4
+
+# Optional: Default temperature setting (0.0 to 1.0, where 0 is more deterministic)
+# skills.config.ui.openaiModelDefaultTemperature=0.5
+
+# Optional: Custom footer message to display in the AI Assistant interface
+# skills.config.ui.openaiFooterMsg=AI-generated content should be reviewed before use
+```
+
+::: tip
+AI prompts can be customized via `Settings -> AI Prompts` in the Dashboard, which requires the `root` role.
+:::
+
 ### Spring Boot Properties
 
 ``skills-service`` is a Spring Boot application and will respect the majority (if not all) of Spring Boot configuration properties.  

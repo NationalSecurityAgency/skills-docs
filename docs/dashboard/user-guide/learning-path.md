@@ -7,8 +7,8 @@ if you set up a simple Learning Path of ``Skill A -> Skill B`` then ``Skill A`` 
 ![Project Learning Path](../../screenshots/admin/page-project-learning-path.png)
 
 ::: tip
-Please note that setting up a Learning Path is an optional feature, so don't feel pressure to configure it right away or at all.
-You can always add at a later time. 
+Please note that setting up a Learning Path is an optional feature, so don't feel pressured to configure it right away or at all.
+You can always add it at a later time. 
 ::: 
 
 To add a dependency, navigate to ``Project -> Learning Path`` then use the `Add a new item to the learning path` component 
@@ -24,6 +24,34 @@ The great news is that you can build an extensive learning path for your student
 SkillTree will discover circular learning paths at the time of from and to selection and prevent administrators from adding an 
 erroneous learning path route. 
 ::: 
+
+## Orientation
+The Learning Path feature supports both vertical and horizontal orientations. The orientation can be toggled by clicking on
+the button at the top right of the Learning Path page.
+
+![Learning Path Orientation](../../screenshots/admin/page-project-learning-path-orientation.png)
+
+## Fullscreen Mode
+The Learning Path page supports fullscreen mode, which can be enabled by clicking on the fullscreen button at the top
+right of the Learning Path page.
+
+![Learning Path Fullscreen](../../screenshots/admin/page-project-learning-path-fullscreen.png)
+
+You can continue to make modifications to the Learning Path while in fullscreen mode. The management functions will be
+at the top of the Learning Path view.
+
+## Additional Settings
+By clicking the settings button on the top right, an additional menu will allow for further customization of the Learning Path.
+
+![Learning Path Fullscreen](../../screenshots/admin/page-project-learning-path-settings.png)
+
+- Focus On Select - When enabled, clicking on an item in the learning path will cause the learning path to pan and focus on that item. 
+- Smooth Focus - When enabled, along with Focus On Select, the learning path will animate the pan and focus transition.
+- Dynamic Height - When enabled, the height of the learning path will adjust dynamically based on the dimensions of the path. Dynamic Height is not available in fullscreen mode.
+
+::: tip Settings and Orientation Are Saved
+Changes made to the settings and orientation will be saved to the browser's local storage and will persist between sessions.
+:::
 
 ## Best practices
 - Do not create very complex learning paths - a simple, direct and shallow prerequisite chain/tree is the best approach. 

@@ -8,7 +8,27 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
-## 3.10
+## 4.0
+<release-date date="January 2026" />
+- ✨ [AI-Powered Content Generation](/dashboard/user-guide/ai-assistant.html)
+  - **AI Assistant Integration**: Streamline your content creation with our new AI Assistant, now available for generating high-quality skill descriptions and quiz questions
+  - **Smart Quiz Creation**: Automatically generate complete quizzes for skills based on their descriptions, complete with multiple-choice questions and answers
+- **Improved Learning Path Display**: Better handling of large skill sets with optimized rendering and navigation as well as full-screen display option
+- **Improved Skill Navigation**: Quick access to adjacent skills with Previous and Next buttons in the Admin Skill Details page
+- **Enhanced Badge Skills Table**: Added Subject and Group columns to the skills table on the Badge Skills page, providing better context and organization of skills within badges
+- **Persistent Table Preferences**: User's table state preferences, including page size and sorting, are now automatically saved in the browser's local storage for a more consistent experience across sessions
+- **Improved Quiz Analytics**: Added a date range filter to the Quiz Runs page, enabling administrators to easily analyze quiz attempts and results within specific time periods
+- **System Improvements**:
+  - Resolved various bugs and performance issues for a more stable user experience
+  - Updated core dependencies and third-party libraries to their latest secure versions
+  - Enhanced system security and performance through dependency updates
+  - Addressed minor UI/UX inconsistencies across the platform
+
+## Release History
+
+### 3.X Releases
+
+#### 3.10
 <release-date date="November 2025" />
 - Implemented support for [matching](/dashboard/user-guide/quizzes-and-surveys.html#quiz) question type in quizzes
   - Define terms and their matches so trainees can match items from one list with their correct matches in another list
@@ -16,7 +36,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Bug Fixes
 - Library Upgrades
 
-## 3.9
+#### 3.9
 <release-date date="September 2025" />
 - Implemented ability to upload, manage and display PDF slide decks in [quizzes](/dashboard/user-guide/quizzes-and-surveys.html#slide-deck-for-quiz) and [surveys](/dashboard/user-guide/quizzes-and-surveys.html#slide-deck-for-survey)
 - Enhanced Metric Page with time range filters and various improvements
@@ -25,7 +45,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Upgraded Spring Boot framework
 - Bug Fixes
 
-## 3.8
+#### 3.8
 <release-date date="August 2025" />
 - Implemented ability to upload and manage [PDF slide decks](/dashboard/user-guide/skills.html#slide-deck) per skill, which are presented [during training](/training-participation/take-training.html#slides) for that specific skill.
 - Implemented the ability to create [Global Badges](/dashboard/user-guide/global-badges.html) that can include skills and levels from any project for which you have Admin access
@@ -39,7 +59,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Upgraded Spring Boot
 - Bug Fixes
 
-## 3.7
+#### 3.7
 <release-date date="July 2025" />
 - [Training-wide Search](/training-participation/take-training.html#training-wide-search) - Training-wide search functionality that enables users to quickly find and navigate to any skill, subject, or badge by name
   - The search can be activated either through a dedicated button or by using customizable keyboard shortcuts
@@ -54,7 +74,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Implemented maximum percentage [progress filter](/dashboard/user-guide/users.html#filters-sorting-and-export) for the users table
 - Bug Fixes
 
-## 3.6
+#### 3.6
 <release-date date="May 2025" />
 - Enhanced [subject](/dashboard/user-guide/subjects.html#subject-creation-lifecycle) and [skill](/dashboard/user-guide/skills.html#skill-creation-lifecycle) creation with a hidden draft mode until fully configured
 - Added audio/video support for [quiz](/dashboard/user-guide/quizzes-and-surveys.html#audio-video-for-quiz) and [survey](/dashboard/user-guide/quizzes-and-surveys.html#audio-video-for-survey) questions
@@ -67,10 +87,6 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Improved quiz access from skill overview Self Report card
 - Major Upgrade of font awesome icon set adding over 1,000 new icons
 - Various bug fixes
-
-## Release History
-
-### 3.0 - 3.5 Releases
 
 #### 3.5
 <release-date date="March 2025" />

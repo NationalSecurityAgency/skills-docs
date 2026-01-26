@@ -65,6 +65,10 @@ includes a generous feature set including attaching or copy-and-pasting screensh
 Use the `Preview` button on the top left below the Quiz name in order to see what the quiz will look like to your users.
 :::
 
+::: tip
+Did you know, you can use **SkillTree's AI Assistant** to generate quiz questions, [Learn more](/dashboard/user-guide/ai-assistant.html#ai-powered-single-quiz-question-generation)
+:::
+
 ### Answer Hints
 
 When creating a question, quiz administrators can configure helpful answer hints, which are displayed next to the
@@ -327,6 +331,11 @@ A Quiz/Survey association to an existing skill requires successful completion of
 in order to earn the skill and its points. In the case of a quiz, then the quiz serves as the skill's knowledge check.
 On the other hand associating a survey is method to get feedback about that skill or collect some pieces of important
 data related to the skill.
+
+::: tip
+Did you know, you can use **SkillTree's AI Assistant** to auto generate new quizzes for existing skills amd associate the new quiz with the skill, [Learn more](/dashboard/user-guide/ai-assistant.html#ai-powered-quiz-generation-for-a-skill)
+:::
+
 
 To make a quiz-to-skill association when creating or editing a skill
 1. select ``Self Reporting`` checkbox

@@ -16,6 +16,10 @@ To create a Subject navigate to ``Project -> Subjects`` and then click the ``Sub
 
 ![SkillTree New Subject](../../screenshots/admin/modal-subjects-new_subject.png)
 
+::: tip
+Did you know, you can use **SkillTree's AI Assistant** to generate descriptions, [Learn more](/dashboard/user-guide/ai-assistant.html#ai-powered-description-generation)
+:::
+
 | Property                                                                              | Explanation                                                                                                                                                                                                                                                                                                                                                                       | 
 |:--------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | Subject Name                                                                          | Display name of the subject                                                                                                                                                                                                                                                                                                                                                       |

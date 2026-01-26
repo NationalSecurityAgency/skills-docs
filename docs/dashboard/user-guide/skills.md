@@ -10,6 +10,10 @@ To create a skill, navigate to ``Project -> Subject`` then click on ``Skill +``,
 
 ![SkillTree Skills Page](../../screenshots/admin/modal-skills-new_skill.png)
 
+::: tip
+Did you know, you can use **SkillTree's AI Assistant** to generate descriptions, [Learn more](/dashboard/user-guide/ai-assistant.html#ai-powered-description-generation)
+:::
+
 | Property                                                                         | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 
 |:---------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | Skill [Icon](/dashboard/user-guide/icons.html)                                   | Icon associated with the skill to be presented on the training pages                                                                                                                                                                                                                                                                                                                                                                                                                                                                |

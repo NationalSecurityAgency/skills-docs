@@ -44,6 +44,10 @@ the available Quizzes or Surveys.
 
 ![Quiz Skill Configuration Screenshot](../../screenshots/admin/component-quiz-skill.png)
 
+::: tip
+Did you know, you can use **SkillTree's AI Assistant** to generate descriptions, [Learn more](/dashboard/user-guide/ai-assistant.html#ai-powered-description-generation)
+:::
+
 ::: tip Useful Tips
 - Association of a Quiz or a Survey to an existing skill requires successful completion of that Quiz/Survey in order to
 earn the skill and its points

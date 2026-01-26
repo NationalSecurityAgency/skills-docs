@@ -56,6 +56,34 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.snap('modal-new-question-hint-component', '.p-dialog [data-cy="answerHintSection"]')
     })
 
+    it('new questions modal - ai dialog', () => {
+        cy.intercept('GET', '/public/config', (req) => {
+            req.reply((res) => {
+                const conf = res.body;
+                conf.enableOpenAIIntegration = true;
+                res.send(conf);
+            });
+        }).as('getConfig');
+        cy.viewport(1100, 900);
+        cy.visit('/administrator/quizzes/ShortScienceQuiz')
+        cy.get('@getConfig')
+        cy.get('[data-cy="editQuestionButton_1"]')
+        cy.get('[data-cy="btn_Questions"]').click()
+        cy.snap('ai-assistant-button', '.p-dialog button[data-cy="aiButton"]')
+
+        cy.get('[data-cy="aiButton"]').click()
+        cy.get('[data-cy="aiModelsSelector"]  [data-cy="modelSettingsButton"]').should('be.visible')
+        cy.snap('ai-model-settings-button', '[data-cy="aiModelsSelector"]  [data-cy="modelSettingsButton"]')
+        cy.get('[data-cy="aiModelsSelector"]  [data-cy="modelSettingsButton"]').click()
+        cy.get('[data-cy="aiModelsSelector"] [data-cy="modelSettings"]').should('be.visible')
+        cy.snap('ai-model-settings', '[data-cy="aiModelsSelector"]')
+        cy.get('[data-cy="instructionsInput"]').type('Off sides in ice hockey{enter}')
+        cy.get('[data-cy="aiMsg-2"] [data-cy="finalSegment"]').contains('Take a look at what I came up with!')
+        cy.get('div.p-dialog.p-component:has(span:contains("AI Assistant"))')
+        cy.snap('ai-gen-new-question', 'div.p-dialog.p-component:has(span:contains("AI Assistant"))')
+        cy.realPress('Escape');
+    })
+
     it('configure quiz', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/')
         cy.get('[data-cy="newSkillButton"]').click()
