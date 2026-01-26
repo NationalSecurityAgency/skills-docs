@@ -46,8 +46,8 @@ By clicking the settings button on the top right, an additional menu will allow 
 - Smooth Focus - When enabled, along with Focus On Select, the learning path will animate the pan and focus transition.
 - Dynamic Height - When enabled, the height of the learning path will adjust dynamically based on the dimensions of the path.
 
-::: tip Settings Are Saved
-Changes made to the settings will be saved to the browser's local storage and will persist between sessions.
+::: tip Settings and Orientation Are Saved
+Changes made to the settings and orientation will be saved to the browser's local storage and will persist between sessions.
 :::
 
 ## Best practices
