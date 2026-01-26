@@ -224,6 +224,13 @@ context('Admin: Generate Screenshots', () => {
         cy.wait(5000);
         cy.snap('page-project-learning-path');
         cy.snap('component-manage-learning-path', '[data-cy="addPrerequisiteToLearningPath"]')
+
+        cy.snap('page-project-learning-path-orientation', '.p-togglebutton')
+        cy.snap('page-project-learning-path-fullscreen', '[data-cy="learningPath-fullScreenButton"]')
+        cy.snap('page-project-learning-path-menu', '[data-cy="learningPathSettingsMenu"]')
+
+        cy.get('[data-cy="learningPathSettingsMenu"]').click()
+        cy.snap('page-project-learning-path-settings', '.p-popover')
     })
 
     it('user performed skills', () => {
