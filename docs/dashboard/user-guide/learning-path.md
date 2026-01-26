@@ -25,6 +25,27 @@ SkillTree will discover circular learning paths at the time of from and to selec
 erroneous learning path route. 
 ::: 
 
+## Orientation
+The Learning Path feature supports both vertical and horizontal orientations. The orientation can be toggled by clicking on
+the button at the top right of the Learning Path page.
+
+![Learning Path Orientation](../../screenshots/admin/page-project-learning-path-orientation.png)
+
+## Fullscreen Mode
+The Learning Path page supports fullscreen mode, which can be enabled by clicking on the fullscreen button at the top
+right of the Learning Path page.
+
+![Learning Path Fullscreen](../../screenshots/admin/page-project-learning-path-fullscreen.png)
+
+## Additional Settings
+By clicking the settings button on the top right, an additional menu will allow for further customization of the Learning Path.
+
+![Learning Path Fullscreen](../../screenshots/admin/page-project-learning-path-settings.png)
+
+- Focus On Select - When enabled, clicking on an item in the learning path will cause the learning path to pan and focus on that item. 
+- Smooth Focus - When enabled, along with Focus On Select, the learning path will animate the pan and focus transition.
+- Dynamic Height - When enabled, the height of the learning path will adjust dynamically based on the dimensions of the path.
+
 ## Best practices
 - Do not create very complex learning paths - a simple, direct and shallow prerequisite chain/tree is the best approach. 
 - Instead of adding a large amount of prerequisite skills consider adding all of those skills to a badge and then using that badge in the Learning Path instead 
