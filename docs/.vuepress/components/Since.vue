@@ -5,7 +5,7 @@ defineProps(['version', 'project', 'isBlock'])
 
 <template>
     <span class="since" :class="{ 'd-block' : isBlock }">
-      🕓 Since <span class="badge bg-warning text-dark"><span class="since-value">{{ project }}:{{ version }}</span></span>
+      🕓 Since <span class="badge bg-warning text-dark"><span class="since-value">version {{ version }}</span></span>
     </span>
 </template>
 

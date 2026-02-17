@@ -1,4 +1,4 @@
-# AI Assistant
+# AI Assistant <since project="skills-service" version="4.0" />
 
 SkillTree's AI Assistant is a powerful tool that helps administrators create high-quality learning content quickly and efficiently. The AI Assistant is integrated throughout the SkillTree Dashboard, providing automated content generation for various components of your learning ecosystem.
 

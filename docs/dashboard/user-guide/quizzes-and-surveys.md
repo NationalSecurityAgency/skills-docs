@@ -134,6 +134,79 @@ A table of quiz attempts that contain ``Input Text`` questions will be displayed
 Once expanded answers can be marked as either "Correct" or "Wrong", in addition a justification can be provided. 
 Once all the answers are marked as either correct or wrong, the system will grade the quiz attempt in its entirety considering all the questions in this quiz.
 
+#### **AI-Powered Grading for Text Input Questions** <since project="skills-service" version="4.1" />
+
+SkillTree now supports AI-powered grading for text input questions, enabling automated evaluation of free-form responses using Large Language Models (LLMs). This feature helps reduce the manual grading burden while maintaining consistent and accurate assessment.
+
+**Key Features:**
+- **Automated Grading**: Text input answers are automatically graded using AI models
+- **Confidence Scoring**: AI provides confidence levels for each grading decision
+- **Configurable Thresholds**: Administrators set minimum confidence levels for automatic grading
+
+##### Configuring AI Grading
+
+To enable AI grading for text input questions:
+
+1. Navigate to the ``Quizzes and Surveys -> Quiz -> Questions`` page
+2. Click on the **AI Grader** button next to the Input Text question
+3. Configure the following settings:
+
+| Setting                          | Description                                                                                                       |
+|:---------------------------------|:------------------------------------------------------------------------------------------------------------------|
+| **AI Grader Enabled**            | Toggle to activate AI-powered grading for text input questions                                                    |
+| **Grading Instructions**         | Enter grading instructions, including a preferred answer and any specific criteria for the AI to evaluate answers |
+| **Minimum Correct Confidence %** | Set the confidence threshold (1-100%) for automatic grading                                                       |
+
+##### AI Grading Process
+
+When AI grading is enabled:
+
+1. **Automatic Submission**: Text input answers are automatically submitted for AI evaluation after quiz completion
+2. **AI Evaluation**: The configured AI model assesses each answer based on your grading instructions
+3. **Confidence Assessment**: The AI provides a confidence score for each grading decision
+4. **Result Processing**: 
+   - Answers meeting or exceeding the minimum confidence level are automatically graded as correct
+   - Answers below the threshold are graded as incorrect
+5. **Final Grading**: The quiz attempt is finalized once all answers are graded (either automatically or manually)
+
+##### AI Grading Preview
+
+While configuring AI grading for your text input questions, you can test and refine your grading configuration using the AI Grading Preview feature. This allows you to enter sample answers and see how the AI model will grade them based on your current settings.
+
+To use the AI Grading Preview, enter a sample answer in the **Answer** field and click the **Test Answers** button.  This will show you the AI's grading decision, confidence level, and justification for each answer based on the current settings.
+
+**What the Preview Shows:**
+
+- **Grading Decision**: Whether the AI would mark the answer as correct or incorrect
+- **AI Confidence Level**: The AI's confidence level in its grading decision (0-100%)
+- **AI Justification**: The AI's explanation for why it made that particular grading decision
+
+**Using Preview Results to Refine Settings:**
+
+- **Adjust Grading Instructions**: If the AI is consistently grading incorrectly, modify your grading instructions to be more specific
+- **Fine-tune Confidence Thresholds**: Based on preview results, adjust your minimum confidence percentage
+- **Test Edge Cases**: Try various answer formats, partial answers, and common misconceptions
+- **Iterate and Improve**: Continue testing until the AI's grading aligns with your expectations
+
+**Best Practices for Preview Testing:**
+
+- **Use Real User Answers**: Test with actual answers users might provide, not just ideal responses
+- **Cover Multiple Scenarios**: Include correct answers, partially correct answers, and completely incorrect answers
+- **Validate Consistency**: Ensure similar answers receive similar grading decisions
+- **Document Decisions**: Keep notes of which preview results you agree or disagree with for future reference
+
+The AI Grading Preview helps ensure your AI grading configuration will work effectively before deploying it to live quiz attempts, reducing the need for manual corrections after implementation.
+
+##### Monitoring AI Grading
+
+Administrators can monitor AI grading results by visiting the [Runs](/dashboard/user-guide/quizzes-and-surveys.html#runs) page and then selecting the run details button to the right of the user to view details of that particular Quiz/Survey run..
+
+##### Best Practices for AI Grading
+
+- **Clear Grading Criteria**: Provide detailed, specific instructions for what constitutes correct answers
+- **Appropriate Confidence Thresholds**: Start with conservative thresholds (70-80%) and adjust based on AI performance
+- **Regular Review**: Periodically review AI-graded answers to ensure accuracy and consistency
+
 #### Grading Notifications
 SkillTree will send email notifications to quiz administrators when grading is requested, and also send email notifications to quiz takers when answers are graded.
 

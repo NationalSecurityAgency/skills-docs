@@ -145,6 +145,17 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.snap('component-quiz-grading-email-subscriptions', '[data-cy="quizRunsToGradeTable"] [data-pc-section="header"]');
     })
 
+    it('quiz configure ai grading page', () => {
+        // going to expect email server is already configured
+        cy.viewport(1100, 500);
+        cy.visit('/administrator/quizzes/ChessInsight')
+        cy.get('[data-cy="ai-grader-question-1"]').click()
+        cy.get('[data-cy="aiGraderEnabled"]').click()
+
+        const answerForGrading = '- Control the Center{enter}- Develop Your Pieces{enter}- Ensure King Safety (Castling)'
+        cy.get('[data-cy="answerForGrading"]').type(answerForGrading)
+        cy.snap('page-quiz-ai-grading-config');
+    })
 
     it('quiz survey page', () => {
         // cy.viewport(1100, 500);

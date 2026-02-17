@@ -565,6 +565,12 @@ skills.openai.key=your-api-key-here
 # Optional: Default temperature setting (0.0 to 1.0, where 0 is more deterministic)
 # skills.config.ui.openaiModelDefaultTemperature=0.5
 
+# Required: Model used for AI grading
+skills.config.ui.gradingModel=gpt-4
+
+# Optional: Temperature used for AI grading setting (default: 0.0)
+# skills.config.ui.gradingModelTemperature=0.5
+
 # Optional: Custom footer message to display in the AI Assistant interface
 # skills.config.ui.openaiFooterMsg=AI-generated content should be reviewed before use
 ```
