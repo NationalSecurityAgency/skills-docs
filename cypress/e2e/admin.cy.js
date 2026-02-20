@@ -7,6 +7,15 @@ context('Admin: Generate Screenshots', () => {
         cy.viewport(displayWidth, 900);
         cy.register('bob1@email.org', 'password', 'Bob', 'Smith')
         cy.login();
+
+        cy.intercept('GET', '/public/config', (req) => {
+            req.reply((res) => {
+                const conf = res.body;
+                conf.disableScrollToTop = true;
+                conf.enableOpenAIIntegration = true;
+                res.send(conf);
+            });
+        }).as('loadConfig');
     });
 
     it('Gen Projects pages', () => {
@@ -170,7 +179,7 @@ context('Admin: Generate Screenshots', () => {
         cy.clickNav('Self Report');
         cy.get('[data-cy="skillsReportApprovalTable"] [data-p-index="1"]')
 
-        cy.snap('page-project-self_report');
+        cy.snap('page-project-self_report', '#mainContent1 [data-cy="nav"]');
     });
 
     it('Skill Tags page', () => {

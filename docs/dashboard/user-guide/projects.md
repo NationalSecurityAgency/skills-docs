@@ -228,9 +228,17 @@ When a user's access to an Invite Only project has been revoked, only that user'
 
 ## Copy Project
 
-To use an existing Project as a template you can easily copy its training profile (subjects, skills, badges, etc..) into a brand-new project.  
-To copy a project please use the ![copy project button](./screenshots/copy_btn.png) button available on a project card on the Project page. 
-The system will prompt you to enter a new project name and optionally modify the project id. 
+To use an existing Project as a template, you can easily copy its training profile (subjects, skills, badges, etc.) into a brand-new project.
+
+To copy a project:
+- Navigate to the Projects Admin page
+- Locate the project card you want to copy
+- Click the copy project button ![copy project button](./screenshots/copy_btn.png) (positioned between the edit and delete buttons)
+- Enter a new project name in the dialog
+- Optionally modify the auto-generated project ID
+- Click Copy to create the new project
+ 
+The system will create a new project with the copied training profile.
 
 The following training profile elements are copied into the new project: 
 - [Subjects](/dashboard/user-guide/subjects.html) and their attributes (description, help url, etc..)

@@ -1,4 +1,4 @@
-# AI Assistant
+# AI Assistant <since project="skills-service" version="4.0" />
 
 SkillTree's AI Assistant is a powerful tool that helps administrators create high-quality learning content quickly and efficiently. The AI Assistant is integrated throughout the SkillTree Dashboard, providing automated content generation for various components of your learning ecosystem.
 
@@ -147,3 +147,16 @@ Adjust the temperature setting to control the AI's creativity:
 - **For most tasks**: The default Neutral setting works well
 
 Your settings will be remembered for future AI Assistant sessions.
+
+## AI-Powered Grading <since project="skills-service" version="4.1" />
+
+Transform your grading workflow with intelligent AI assistance for Input Text questions. This feature significantly reduces the effort of manual grading while delivering consistent, accurate assessments with complete transparency.
+
+Key Features:
+- **Smart AI Grading** - Automatic evaluation with confidence scores and detailed reasoning explanations
+- **Flexible Override Options** - Manual grade override with optional user email notifications
+- **AI Grading Preview** - Administrative testing function to preview how AI will grade different answer variations
+
+::: tip Ready to dive deeper?
+Check out the comprehensive [AI-Powered Grading](/dashboard/user-guide/quizzes-and-surveys.html#ai-powered-grading-for-text-input-questions) guide in our Quizzes and Surveys documentation.
+:::

@@ -7,6 +7,15 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.viewport(displayWidth, 800);
         cy.register('bob1@email.org', 'password', 'Bob', 'Smith')
         cy.login();
+
+        cy.intercept('GET', '/public/config', (req) => {
+            req.reply((res) => {
+                const conf = res.body;
+                conf.disableScrollToTop = true;
+                conf.enableOpenAIIntegration = true;
+                res.send(conf);
+            });
+        }).as('loadConfig');
     });
 
     it('quizzes page', () => {
@@ -113,6 +122,16 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.snap('page-quiz-runs');
     })
 
+    it('quiz runs table', () => {
+        cy.viewport(1500, 1800)
+        cy.visit('/administrator/quizzes/ShortScienceQuiz/runs')
+        cy.get('[data-cy="userFilterBtn"]')
+        cy.get('[data-cy="row0-userCell"]')
+
+        cy.snap('component-quiz-runs-table', '[data-cy="quizRunsHistoryTable"]')
+    })
+
+
     it('quiz single run page', () => {
         cy.visit('/administrator/quizzes/ShortScienceQuiz/runs')
         cy.get('[data-cy="userFilterBtn"]')
@@ -145,6 +164,17 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.snap('component-quiz-grading-email-subscriptions', '[data-cy="quizRunsToGradeTable"] [data-pc-section="header"]');
     })
 
+    it('quiz configure ai grading page', () => {
+        // going to expect email server is already configured
+        cy.viewport(1100, 500);
+        cy.visit('/administrator/quizzes/ChessInsight')
+        cy.get('[data-cy="ai-grader-question-1"]').click()
+        cy.get('[data-cy="aiGraderEnabled"]').click()
+
+        const answerForGrading = '- Control the Center{enter}- Develop Your Pieces{enter}- Ensure King Safety (Castling)'
+        cy.get('[data-cy="answerForGrading"]').type(answerForGrading)
+        cy.snap('page-quiz-ai-grading-config');
+    })
 
     it('quiz survey page', () => {
         // cy.viewport(1100, 500);
@@ -175,6 +205,16 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.visit('/administrator/quizzes/ShortScienceQuiz/access')
         cy.get('[data-cy="roleManagerTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '1')
         cy.snap('page-quiz-access');
+    })
+
+    it('ai grading', () => {
+        cy.visit('/administrator/quizzes/ChessInsight')
+        cy.get('[data-cy="ai-grader-question-1"]').click()
+        cy.get('[data-cy="aiGraderEnabled"]').click()
+        cy.get('[data-cy="answerForGrading"]')
+        cy.get('[data-cy="saveGraderSettingsBtn"]').should('be.disabled')
+
+        cy.snap('component-ai-text-input-grader', '#mainContent2');
     })
 
 })
