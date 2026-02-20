@@ -1,8 +1,7 @@
 <script setup>
 import { computed } from 'vue'
-import {useThemeData} from "@vuepress/theme-default/client";
+import {themeData} from "@vuepress/plugin-theme-data/client";
 
-const themeData = useThemeData()
 const serviceUrl = computed(() => themeData.value.skillTreeServiceUrl)
 </script>
 

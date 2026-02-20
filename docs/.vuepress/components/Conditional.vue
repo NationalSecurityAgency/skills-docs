@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import {useThemeData} from "@vuepress/theme-default/client";
+import {themeData} from "@vuepress/plugin-theme-data/client";
 const props = defineProps({
   visibilityFlag: String,
   visibilityValue: {
@@ -8,7 +8,6 @@ const props = defineProps({
     default: true,
   },
 })
-const themeData = useThemeData()
 const getVisible = computed(() => themeData.value.visibility[props.visibilityFlag] === props.visibilityValue)
 </script>
 
