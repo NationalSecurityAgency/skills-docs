@@ -169,8 +169,6 @@ Configure the following settings:
 | **Grading Instructions**         | Enter grading instructions, including a preferred answer and any specific criteria for the AI to evaluate answers |
 | **Minimum Correct Confidence %** | Set the confidence threshold (1-100%) for automatic grading                                                       |
 
-![page-quiz-ai-grading-config.png](../../screenshots/admin/page-quiz-ai-grading-config.png)
-
 ##### AI Grading Process
 
 When AI grading is enabled:
