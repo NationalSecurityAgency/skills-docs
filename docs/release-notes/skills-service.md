@@ -19,7 +19,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - **[Approval Queue Search](/dashboard/user-guide/self-reporting.html#approval-queue)** - Search by user and skill in the "Skills Requiring Approval" table
 - **[Quiz Results Review](/dashboard/user-guide/quizzes-and-surveys.html#runs)** - View correct answer counts directly in the Quiz Run table for better assessment insights
 - **[Quiz Answer Visibility Control](/dashboard/user-guide/quizzes-and-surveys.html#setting-hide-answers-for-completed-quizzes)** - New quiz setting to hide answers on passed quiz attempts for better assessment integrity
-- **Expanded Self-Reporting** - <Self-repo></Self-repo>rt skills directly on Global Badges and cross-project skills on Learning Paths
+- **Expanded Self-Reporting** - Self-report skills directly on Global Badges and cross-project skills on Learning Paths
 - Latency improvements for user and metrics pages
 - Bug Fixes
 
