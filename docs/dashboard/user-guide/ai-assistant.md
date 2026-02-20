@@ -150,12 +150,11 @@ Your settings will be remembered for future AI Assistant sessions.
 
 ## AI-Powered Grading <since project="skills-service" version="4.1" />
 
-Transform your grading workflow with intelligent AI assistance for Input Text questions. This feature significantly reduces manual grading effort while maintaining consistent, accurate assessment with full transparency.
+Transform your grading workflow with intelligent AI assistance for Input Text questions. This feature significantly reduces the effort of manual grading while delivering consistent, accurate assessments with complete transparency.
 
 Key Features:
 - **Smart AI Grading** - Automatic evaluation with confidence scores and detailed reasoning explanations
 - **Flexible Override Options** - Manual grade override with optional user email notifications
-- **Robust Admin Controls** - Complete workflow management including retry logic and submission tracking
 - **AI Grading Preview** - Administrative testing function to preview how AI will grade different answer variations
 
 ::: tip Ready to dive deeper?

@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import {themeData} from "@vuepress/plugin-theme-data/client";
+import {useThemeData} from "@vuepress/theme-default/client";
 const props = defineProps({
   url: String,
   label: String,
@@ -9,6 +9,7 @@ const props = defineProps({
     default: true,
   },
 })
+const themeData = useThemeData()
 const noExternalLinks = computed(() => themeData.value.visibility['noExternalLinks'] === true)
 </script>
 

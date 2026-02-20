@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import {themeData} from "@vuepress/plugin-theme-data/client";
+import {useThemeData} from "@vuepress/theme-default/client";
 
 const props = defineProps({
   pkiPath: {
@@ -12,6 +12,7 @@ const props = defineProps({
     required: true,
   },
 })
+const themeData = useThemeData()
 
 const getNavItems = () => {
   let res = [
