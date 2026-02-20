@@ -8,6 +8,21 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 4.1
+<release-date date="February 2026" />
+- ✨ **[AI-Powered Grading](/dashboard/user-guide/quizzes-and-surveys.html#ai-powered-grading)** - Streamlined grading experience for Input Text questions using AI technology
+  - Configure the AI grader with correct answers and confidence thresholds directly from question cards
+  - Automatic AI grading with transparency through confidence levels and detailed reasoning
+  - Manual grade-override functionality with optional user email notifications
+  - Failed grading attempts are automatically retried
+- **Self-Admin Removal** - Allow users to remove themselves from admin roles
+- **[Approval Queue Search](/dashboard/user-guide/self-reporting.html#approval-queue)** - Search by user and skill in the "Skills Requiring Approval" table
+- **[Quiz Results Review](/dashboard/user-guide/quizzes-and-surveys.html#runs)** - View correct answer counts directly in the Quiz Run table for better assessment insights
+- **[Quiz Answer Visibility Control](/dashboard/user-guide/quizzes-and-surveys.html#setting-hide-answers-for-completed-quizzes)** - New quiz setting to hide answers on passed quiz attempts for better assessment integrity
+- **Expanded Self-Reporting** - <Self-repo></Self-repo>rt skills directly on Global Badges and cross-project skills on Learning Paths
+- Latency improvements for user and metrics pages
+- Bug Fixes
+
 ## 4.0
 <release-date date="January 2026" />
 - ✨ [AI-Powered Content Generation](/dashboard/user-guide/ai-assistant.html)

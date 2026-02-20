@@ -78,13 +78,24 @@ Alternatively you can have only some skills configured with Self Reporting or no
 
 ## Approval Queue
 
-If a skill is configured with Self Reporting type of the ``Approval Queue`` then points will not be awarded right away but rather go
-through the simple approval workflow:
-1. User clicks ``Begin Request`` button and requests points
-1. Request appears on the project's Self Report page (see the Screenshot below)
-1. Project administrator approves or reject requests
+When a skill is configured with the **Approval Queue** self-reporting type, points are not awarded immediately. Instead, they go through the following approval workflow:
+
+1. **User Request**: The user clicks the **Begin Request** button to request points for the skill
+2. **Queue Display**: The request appears in the project's **Self Report** page under the Approval Queue (see screenshot below)
+3. **Admin Review**: A project administrator reviews and either approves or rejects the request
 
 ![SkillTree Skills Page](../../screenshots/admin/page-project-self_report.png)
+
+**To approve or deny requests:**
+1. Select one or more requests from the queue
+2. Click the **Approve** or **Reject** button
+3. Enter an optional justification for your decision
+4. Confirm the action
+
+**Filtering the Approval Queue:**
+The approval queue can be filtered by:
+- **Skill Name** - Search for specific skills
+- **User ID** - Filter by specific users
 
 ### Approval History 
 
