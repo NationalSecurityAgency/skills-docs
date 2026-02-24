@@ -158,5 +158,5 @@ Key Features:
 - **AI Grading Preview** - Administrative testing function to preview how AI will grade different answer variations
 
 ::: tip Ready to dive deeper?
-Check out the comprehensive [AI-Powered Grading](/dashboard/user-guide/quizzes-and-surveys.html#ai-powered-grading-for-text-input-questions) guide in our Quizzes and Surveys documentation.
+Check out the comprehensive [AI-Powered Grading](/dashboard/user-guide/quizzes-and-surveys.html#ai-powered-grading) guide in our Quizzes and Surveys documentation.
 :::
