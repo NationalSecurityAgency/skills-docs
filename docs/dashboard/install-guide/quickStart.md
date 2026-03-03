@@ -10,11 +10,11 @@ Please note that the integrating the SkillTree Client Library is **optional** an
 :::
 
 ## 1. Prerequisites
-- JDK 17+, we suggest <external-url label="Open JDK" url="https://openjdk.java.net/" />
+- JDK 24+, we suggest <external-url label="Open JDK" url="https://openjdk.java.net/" />
   - Please note that this is not relevant if you elect to go with the Docker based installation.
-- <external-url label="Git" url="https://git-scm.com/" /> version 2.23+
-- <external-url label="Node.js" url="https://nodejs.org/en/" /> v12+ and <external-url label="npm" url="https://www.npmjs.com/" /> 6+
-- <external-url label="PostgreSQL" url="https://www.postgresql.org/" /> 12+
+- <external-url label="Git" url="https://git-scm.com/" /> version 2.47+
+- <external-url label="Node.js" url="https://nodejs.org/en/" /> v22+ and <external-url label="npm" url="https://www.npmjs.com/" /> 10+
+- <external-url label="PostgreSQL" url="https://www.postgresql.org/" /> 17+
 
 ::: tip 
 If a PosgtgreSQL database is not already available, one can easily be started using a docker container (see example below), or visit the official please documentation <external-url label="https://www.postgresql.org" url="https://www.postgresql.org" /> for other installation options.
