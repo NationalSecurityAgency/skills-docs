@@ -5,11 +5,11 @@ We recommend developing SkillTree in a *nix environment.
 ## Prerequisites 
 
 - modern *nix environment
-- JDK 19+
-- [Git](https://git-scm.com/) version 2.34+
-- [Node.js](https://nodejs.org/en/) v20+ and [npm](https://www.npmjs.com/) 10+
+- JDK 24+
+- [Git](https://git-scm.com/) version 2.47+
+- [Node.js](https://nodejs.org/en/) v22+ and [npm](https://www.npmjs.com/) 10+
 - [Maven](https://maven.apache.org/) 3.9+
-- [PostgreSQL](https://www.postgresql.org/) 14+
+- [PostgreSQL](https://www.postgresql.org/) 17+
 
 ## Development Overview
 
