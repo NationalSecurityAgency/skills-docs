@@ -769,4 +769,37 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('component-notifications-dropdown', null, {clip: { x: 370, y: 0, width: 540, height: 550 }});
     });
 
+
+    it('user overall progress', () => {
+        cy.intercept('/app/progress-metrics**').as('progressMetrics')
+        cy.visit('/administrator/users-progress');
+        cy.wait('@progressMetrics')
+
+        cy.get('[data-pc-name="headercell"] [data-pc-section="columntitle"]').contains('User')
+        cy.snap('page-users-overall-progress')
+
+        cy.get('[data-cy="confQuizExclusionBtn"]').click()
+        cy.get('[data-cy="confIncludedMetricsDialog"] [data-pc-section="sourcelistcontainer"] [data-pc-section="option"][aria-posinset="1"]').click()
+        cy.get('[data-cy="confIncludedMetricsDialog"] [data-pc-name="pcmovetotargetbutton"]').click()
+        cy.snap('component-configure-quiz-metrics-inclusions', '[data-pc-name="dialog"]')
+    });
+
+    it('global quiz runs', () => {
+        cy.intercept('/app/quiz-runs**').as('quizRuns')
+        cy.visit('/administrator/quiz-runs');
+        cy.wait('@quizRuns')
+        cy.get('[data-cy="quizRunsHistoryTable"] [data-cy="skillsBTableTotalRows"]')
+
+        cy.snap('page-global-quiz-runs')
+    });
+
+    it('global metrics page', () => {
+        cy.intercept('/app/overall-metrics/overallDistinctUsersOverTimeMetricsBuilder**').as('overallDistinctUsersOverTime');
+        cy.visit('/administrator/overall-metrics');
+        cy.wait('@overallDistinctUsersOverTime');
+
+        cy.get('[data-cy="overallMetricsProjectsCard"]').should('be.visible');
+
+        cy.snap('page-global-metrics')
+    });
 })

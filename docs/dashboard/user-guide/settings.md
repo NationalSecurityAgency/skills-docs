@@ -38,7 +38,7 @@ The ```Security``` menu item supports the administration of [Root](/dashboard/us
 ![Security Settings](../../screenshots/admin/page-settings-security.png)
 
 
-To grant [Root](/dashboard/user-guide/users.html#root) or [Supervisor](/dashboard/user-guide/users.html#supervisor) privileges to a user, that user must have an existing account for the SkillTree Dashboard. User management will also prevent the removal of any permissions from the currently authenticated user.  
+To grant [Root](/dashboard/user-guide/users.html#root) privileges to a user, that user must have an existing account for the SkillTree Dashboard. User management will also prevent the removal of any permissions from the currently authenticated user.  
 
 ## Email Settings
 <requires-role role="Root" />

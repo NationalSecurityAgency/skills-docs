@@ -123,7 +123,6 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
     })
 
     it('quiz runs table', () => {
-        cy.viewport(1500, 1800)
         cy.visit('/administrator/quizzes/ShortScienceQuiz/runs')
         cy.get('[data-cy="userFilterBtn"]')
         cy.get('[data-cy="row0-userCell"]')
