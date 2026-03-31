@@ -54,6 +54,10 @@ To administer a quiz click `Manage` button for that quiz on the `Quizzes and Sur
 
 ![Quiz Page Screenshot](../../screenshots/admin/page-quiz.png)
 
+::: tip
+The answer portion of each question can be collapsed or expanded. Use the **Expand All**/**Collapse All** button (`+`/`-`) at the top of the page to control all questions at once, or click the individual expand/collapse icons (`>`/`⌄`) next to each question text.
+:::
+
 To add a new question please click `Question +` button.
 
 ![New Questions Modal Screenshot](../../screenshots/admin/modal-new-question.png)
@@ -323,6 +327,10 @@ A Survey currently supports four types of questions:
 To administer a survey click the `Manage` button for that survey on the `Quizzes and Surveys` page.
 
 ![Quiz Page Screenshot](../../screenshots/admin/page-survey.png)
+
+::: tip
+The answer portion of each question can be collapsed or expanded. Use the **Expand All**/**Collapse All** button (`+`/`-`) at the top of the page to control all questions at once, or click the individual expand/collapse icons (`>`/`⌄`) next to each question text.
+:::
 
 To add a new question please click the `Question +` button.
 
