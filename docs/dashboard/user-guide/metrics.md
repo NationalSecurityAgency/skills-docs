@@ -52,6 +52,35 @@ In addition to the skill metrics table, the page offers several useful filters t
 
 Admins can also export the entire table to Excel format using the `Export All Rows` button located at the top right of the table.
 
+## Global Metrics
+
+To view Global Metrics, please navigate to `Projects -> Metrics`. These metrics will be for all of the projects and
+quizzes that you are currently assigned as an administrator.
+
+![page-global-metrics.png](../../screenshots/admin/page-global-metrics.png)
+
+### Configuring Included Projects and Quizzes
+
+There are times where you may have a number of projects, quizzes, and surveys that you do not want to include in the overall
+progress page, metrics, and quizzes pages.
+
+There is a very easy way to include or exclude projects and quizzes from your view. Please note that the configuration
+buttons are within the projects and assessment information cards at the top of the page.
+
+Clicking on the settings button will open a modal where you can select the projects and quizzes that you want to include
+in the overall progress page, metrics, and quizzes pages.
+
+For example, for quizzes and surveys:
+
+![component-configure-quiz-metrics-inclusions.png](../../screenshots/admin/component-configure-quiz-metrics-inclusions.png)
+
+Select one or more items to exclude or include, then use the controls in the middle to move the items between inclusion and exclusion lists.
+
+::: tip
+- Please note that these inclusion/exclusion settings are user-specific and will only apply to you.
+- Please note that these settings apply to multiple pages, including the Global Metrics, Overall Users Progress and Global Quiz and Survey Runs.
+:::
+
 ## Single Skill Metrics
 
 The Single Skill Metrics Section provides detailed metrics for a specific skill, allowing admins to dive deeper into the performance and usage of that skill.

@@ -11,15 +11,15 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 ## 4.2
 <release-date date="March 2026" />
-- **Holistic User Progress Views** across all projects, quizzes, and surveys that you administer
+- **[Holistic User Progress Views](/dashboard/user-guide/users.html#overall-progress)** across all projects, quizzes, and surveys that you administer
   - Each user's overall progress is displayed across all projects, quizzes, surveys, badges, and global badges
   - Ability to easily expand a single user's progress to see details of each project and all quiz and survey attempts
   - Ability to filter and sort
   - Ability to export overall progress to Excel
-- **Global Quiz Runs Display**
+- **[Global Quiz Runs Display](/dashboard/user-guide/quizzes-and-surveys.html#global-runs)**
   - Display all quiz runs across all quizzes and surveys you administer
   - Ability to export quiz attempts to Excel
-- **Global Metrics** display all projects, quizzes, and surveys that you administer
+- **[Global Metrics](/dashboard/user-guide/metrics.html#global-metrics)** display all projects, quizzes, and surveys that you administer
 - **User-Driven Settings** added ability to exclude projects and quizzes from global user progress, global quiz runs, and global metrics
 - **User Progress Display for Global Badges**
   - Depicts progress across levels and skills configured for the Global Badge
