@@ -755,6 +755,12 @@ context('Admin: Generate Screenshots', () => {
 
         cy.get('[data-cy="userCell_bob1@email.org"]')
         cy.snap('page-global-badge-access')
+
+        cy.visit('/administrator/globalBadges/MoviesandShowsExpertBadge/users')
+        cy.get('[data-cy="usersTable"]').contains('Levels')
+        cy.get('[data-cy="usersTable"] [data-pc-name="pcrowperpagedropdown"]')
+          .click().get('[data-pc-section="option"]').contains('5').click();
+        cy.snap('page-global-badge-users')
     })
 
     it('Notifications', () => {
