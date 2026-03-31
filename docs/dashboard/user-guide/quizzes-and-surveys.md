@@ -54,6 +54,10 @@ To administer a quiz click `Manage` button for that quiz on the `Quizzes and Sur
 
 ![Quiz Page Screenshot](../../screenshots/admin/page-quiz.png)
 
+::: tip
+The answer portion of each question can be collapsed or expanded. Use the **Expand All**/**Collapse All** button (`+`/`-`) at the top of the page to control all questions at once, or click the individual expand/collapse icons (`>`/`⌄`) next to each question text.
+:::
+
 To add a new question please click `Question +` button.
 
 ![New Questions Modal Screenshot](../../screenshots/admin/modal-new-question.png)
@@ -324,6 +328,10 @@ To administer a survey click the `Manage` button for that survey on the `Quizzes
 
 ![Quiz Page Screenshot](../../screenshots/admin/page-survey.png)
 
+::: tip
+The answer portion of each question can be collapsed or expanded. Use the **Expand All**/**Collapse All** button (`+`/`-`) at the top of the page to control all questions at once, or click the individual expand/collapse icons (`>`/`⌄`) next to each question text.
+:::
+
 To add a new question please click the `Question +` button.
 
 ![New Questions Modal Screenshot](../../screenshots/admin/modal-new-survey-question.png)
@@ -426,13 +434,15 @@ To track individual quiz/survey attempts, visit the **Runs** page (`Quizzes and 
 **Runs Table Features:**
 - **User** - The user who attempted the quiz/survey
 - **Status** - Current state: **Passed**, **Failed**, or **Needs Grading**
-- **Runtime** - Time taken to complete the quiz/survey
 - **Started** - Date and time when the attempt began
-- **Results** - Number of correct answers out of total questions
 - **Actions** - Delete button to remove the attempt
+- **Runtime** - (Optional) Time taken to complete the quiz/survey
+- **Results** - (Optional) Number of correct answers out of total questions
 
-::: tip
-The runs table can be filtered by user to find specific attempts.
+::: tip Tips
+- The runs table can be filtered by user to find specific attempts.
+- To export quiz runs, click the `Export` button at the top of the table.
+- Optional fields can be added and removed using the dropdown above the table.
 :::
 
 Click the **run details button** next to a user to view comprehensive information about that specific quiz/survey attempt.
@@ -441,6 +451,48 @@ Click the **run details button** next to a user to view comprehensive informatio
 
 ::: tip 
 Quiz results will depict selected answer(s) and their correctness status. Survey results will simply display which answers were selected.
+:::
+
+## Global Runs
+
+To view runs across all of the Quizzes and Surveys that you are an administrator for, please navigate to `Projects -> Quiz/Survey Runs`.
+
+![page-global-quiz-runs.png](../../screenshots/admin/page-global-quiz-runs.png)
+
+**Runs Table Features:**
+- **User** - The user who attempted the quiz/survey
+- **Name** - The name of the quiz/survey
+- **Type** - Whether this is a quiz or survey
+- **Status** - Current state: **Passed**, **Failed**, **In Progress**, **Completed** or **Needs Grading**
+- **Started** - Date and time when the attempt began
+- **Runtime** - (optional) Time taken to complete the quiz/survey
+- **Results** - (optional) Number of correct answers out of total questions
+
+::: tip Tips
+- To export quiz runs, click the `Export` button at the top of the table.
+- Optional fields can be added and removed using the dropdown above the table.
+::: 
+
+### Configuring Included Quizzes
+
+There are times where you may have a number of quizzes and surveys that you do not want to include in the overall
+progress page, metrics, and quiz runs pages.
+
+There is a very easy way to include or exclude quizzes and surveys from your view. Please note the configuration
+button within the assessment information card at the top of the page.
+
+Clicking on the settings button will open a modal where you can select the quizzes and surveys that you want to include
+in the overall progress page, metrics, and quiz runs pages.
+
+For example, for quizzes and surveys:
+
+![component-configure-quiz-metrics-inclusions.png](../../screenshots/admin/component-configure-quiz-metrics-inclusions.png)
+
+Select one or more items to exclude or include, then use the controls in the middle to move the items between inclusion and exclusion lists.
+
+::: tip
+- Please note that these inclusion/exclusion settings are user-specific and will only apply to you.
+- Please note that these settings apply to multiple pages, including the Global Metrics, Overall Users Progress and Global Quiz and Survey Runs.
 :::
 
 ## Skill Association

@@ -8,6 +8,29 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+
+## 4.2
+<release-date date="March 2026" />
+- **[Holistic User Progress Views](/dashboard/user-guide/users.html#overall-progress)** across all projects, quizzes, and surveys that you administer
+  - Each user's overall progress is displayed across all projects, quizzes, surveys, badges, and global badges
+  - Ability to easily expand a single user's progress to see details of each project and all quiz and survey attempts
+  - Ability to filter and sort
+  - Ability to export overall progress to Excel
+- **[Global Quiz Runs Display](/dashboard/user-guide/quizzes-and-surveys.html#global-runs)**
+  - Display all quiz runs across all quizzes and surveys you administer
+  - Ability to export quiz attempts to Excel
+- **[Global Metrics](/dashboard/user-guide/metrics.html#global-metrics)** display all projects, quizzes, and surveys that you administer
+- **User-Driven Settings** added ability to exclude projects and quizzes from global user progress, global quiz runs, and global metrics
+- **User Progress Display for Global Badges**
+  - Depicts progress across levels and skills configured for the Global Badge
+  - Ability to filter and sort
+- **Quiz Questions Management Enhancement**
+  - Added the ability to collapse and expand quiz questions individually or in batch
+  - Making it easier to manage long questions with extensive answer options
+- **User Tag Filtering**: Enhanced the project's users table with the ability to filter by user tags
+- **Upgraded Spring Boot**
+- **Bug Fixes**
+
 ## 4.1
 <release-date date="February 2026" />
 - ✨ **[AI-Powered Grading](/dashboard/user-guide/quizzes-and-surveys.html#ai-powered-grading)** - Streamlined grading experience for Input Text questions using AI technology

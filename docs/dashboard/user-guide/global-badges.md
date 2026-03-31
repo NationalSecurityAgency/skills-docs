@@ -28,6 +28,33 @@ please navigate to ``Home -> Global Badges -> Manage -> Access`` page.
 
 ![Global BadgeAccess](../../screenshots/admin/page-global-badge-access.png)
 
+## User Progress Table
+
+Track user progress toward earning Global Badges using the User Progress Table, accessible via the Global Badges management interface. This table provides a comprehensive overview of user performance, including:
+
+- **User**: Display user ID, first name, and last name (if available)
+- **Badge Progress**: View total skills achieved, levels earned, and overall percent complete toward the Global Badge
+- **Skill Last Earned**: See the date and time when skills were last earned by each user
+
+![User Progress Table](../../screenshots/admin/page-global-badge-users.png)
+
+::: tip
+**Important**: A user that has to contributed to any project referenced in the Global Badge will show up in the Global Badges Users table.
+:::
+
+### Badge Progress Details
+
+The Badge Progress column shows:
+- **Skills Achieved**: Number of skills completed out of total required skills
+- **Levels Achieved**: Number of project levels earned out of total required levels
+- **Overall Progress**: Combined percentage of skills and levels completed
+
+### Filters, Sorting And Export
+
+The User Progress Table offers filtering, sorting, and export capabilities to help you analyze user performance. You can:
+- Filter by user ID, first name, and last name using the User Filter
+- Sort any column by clicking its header
+- 
 ## Creating Global Badges
 
 ### Step 1: Create a New Badge
