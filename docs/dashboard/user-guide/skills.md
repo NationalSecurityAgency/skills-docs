@@ -141,10 +141,29 @@ The default option for all skills is set to `Never`, so that the skill will neve
 
 The `Yearly` and `Monthly` options allow for the skill to be configured to expire on a recurring basis.  For example, you can configure a skill so that *all* user's points and achievements earned for this skill will be removed annually on December 31st.  
 
-The `Daily with the ability to retain` option allows for the skill to be configured to expire based on usage. This option requires the user to continue to exercise the skill after achieving it in order to avoid losing their points. Once a user achieves the skill, 
-the user must perform the skill at least once within the number of days configured.  After performing the skill, the "timer" will be reset and the user will once again be required to perform the skill within the configured number of days to avoid losing the points they have earned since achieving this skill.
+The `Daily with the ability to retain` option configures skills to expire based on user activity. After achieving this skill, users must continue performing it within the configured number of days to maintain their points. Each time the skill is performed, the timer resets, requiring users to repeat the skill within the specified timeframe to keep their earned points."
+
+**Notifications**
 
 Skills that are configured to expire will have warnings visualized in the Skills Display, letting the user know when the skill will is set to expire.
+
+Additionally, you can enable email notifications to alert users when their skills are about to expire or have expired. The `Email Notifications Enabled` checkbox allows you to:
+
+- Send automatic email notifications to users when their skills are approaching expiration
+- Provide users with advance warning so they can take action to maintain their skill achievements
+- Ensure users stay informed about the status of their expiring skills
+
+When enabled, users will receive different types of email notifications based on the expiration configuration:
+
+For skills configured with `Monthly` or `Yearly` expiration, users receive notifications **after** their achievements have expired. These notifications inform users that their skill achievements have been removed and provide information about the next scheduled expiration date.
+
+For skills configured with `Daily with ability to retain`, users receive **warning notifications** before their achievements expire. These notifications:
+- Are sent when a user's achievement is approaching expiration
+- Include the number of days remaining until expiration
+- Provide a retention deadline so users can take action to maintain their achievements
+- Are only sent once per expiration cycle to avoid notification fatigue
+
+This differentiated approach ensures users receive timely and relevant notifications based on their skill expiration configuration.
 
 ### Expiration History
 
