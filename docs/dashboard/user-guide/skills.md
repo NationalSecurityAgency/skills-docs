@@ -141,8 +141,6 @@ The default option for all skills is set to `Never`, so that the skill will neve
 
 The `Yearly` and `Monthly` options allow for the skill to be configured to expire on a recurring basis.  For example, you can configure a skill so that *all* user's points and achievements earned for this skill will be removed annually on December 31st.  
 
-Here's a more concise and clearer version:
-
 The `Daily with the ability to retain` option configures skills to expire based on user activity. After achieving this skill, users must continue performing it within the configured number of days to maintain their points. Each time the skill is performed, the timer resets, requiring users to repeat the skill within the specified timeframe to keep their earned points."
 
 **Notifications**
