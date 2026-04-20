@@ -8,6 +8,19 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 4.3
+<release-date date="April 2026" />
+- **Quiz Experience Enhancements**
+  - **Project Association Visibility** - Enhanced My Quiz Attempts table and single attempt pages to display project associations with navigation back to the originating skill
+  - **Try Again Functionality** - Added "Try Again" button on quiz-attempt pages when quizzes are failed and additional attempts remain available
+- **Native Skills Filter** - Added filter to project Users pages to display only users with points from native (non-imported) skills, with toggle option to show/hide imported points and achievements
+- **Automated Email Notifications**
+  - **Expiration Reminders** - Automated email notifications to remind users when skills with daily expiration settings are approaching expiration
+  - **Expiration Notifications** - Email notifications to inform users when monthly or yearly expiration skills have passed their expiration date and achievements were removed
+- **Skill Page Navigation** - Added Previous/Next skill navigation buttons to the bottom of trainee skill pages for easier progression through training content
+- **Global Badge Export** - Implemented Excel export functionality for the Global Badge users table, including all visible columns and respecting applied filters
+- **Character Limit Indicators** - Added character limit feedback for better user experience when entering plain multi-line text content
+- **Bug Fixes**
 
 ## 4.2
 <release-date date="March 2026" />
