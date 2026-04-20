@@ -429,6 +429,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Expiration Settings page', () => {
+        cy.intercept('/public/isFeatureSupported?feature=emailservice', 'true');
         cy.visit('/administrator/projects/movies/subjects/Action/skills/TheMatrix/config-expiration')
         cy.snap('page-expiration-config', '[data-cy="nav"]')
     })
