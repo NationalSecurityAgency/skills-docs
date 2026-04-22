@@ -188,7 +188,7 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.get('[data-cy="myQuizAttemptsTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', '9')
     cy.snap('page-my-quiz-attempts');
 
-    cy.get('[data-cy="myQuizAttemptsTable"] [data-p-index="0"] a').click()
+    cy.get('[data-cy="myQuizAttemptsTable"] [data-p-index="0"] [data-cy="viewQuizAttempt"]').click()
     cy.snap('page-my-quiz-single-attempt');
   })
 

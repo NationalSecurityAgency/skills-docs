@@ -46,8 +46,16 @@ View your completed quizzes and surveys by clicking the **History** button on th
 
 ![page-my-quiz-attempts.png](../screenshots/progress-and-ranking/page-my-quiz-attempts.png)
 
+The table contains the following columns:
+- **Name**: Quiz or survey name, click on a name to view details
+- **Type**: Quiz or Survey
+- **Status**: Completion status (Passed, Failed, Needs Grading)
+- **Skills**: Associated skills earned upon completion, click on a skill to view details
+- **Runtime**: Total time taken
+- **Started**: Date and time started
+
 The **My Quizzes and Surveys** page features a searchable and sortable history table of all your passed and failed quizzes, as well as completed surveys.
-You can drill down into a quiz or survey attempt by clicking on its name.
+Click on any quiz or survey name to view detailed information about that attempt.
 
 ![page-my-quiz-single-attempt.png](../screenshots/progress-and-ranking/page-my-quiz-single-attempt.png)
 
@@ -57,6 +65,14 @@ For quizzes, the answers shown depend on the attempt's status:
 - `Passed` Quiz: all the questions and answers are shown
 - `Failed` Quiz: answers may be shown or not depending on how quiz administrator selected to configure the quiz
 - `Needs Grading` Quiz: answers are not displayed as they are not yet graded
+
+::: tip
+If a quiz attempt is in a Failed state, you can re-take the quiz by clicking the **Retry** button.
+:::
+
+::: tip
+If a quiz is associated with one or more skills, they can be found in the Associated Skills card. Clicking on a skill will take you to its details page.
+:::
 
 ## My Badges
 
