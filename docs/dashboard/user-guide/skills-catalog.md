@@ -34,7 +34,7 @@ To import skills please follow these steps:
 
 1. **Import one or more skills** - skills will be disabled; disabled skills do not contribute to the overall points and skill occurrences do not propagate to the imported skills prior to import finalization (step 3)
 2. *(Optional)* **Adjust imported skills' ``Point Increment``** to match your project's point system/layout
-3. **Finalize imported skills** - user points from the original project are migrated and level achievements are calculated. After finalization, user points and achievements against the original exported skill will continue toi be propagated to the imported copy as they take place.
+3. **Finalize imported skills** - user points from the original project are migrated and level achievements are calculated. After finalization, user points and achievements against the original exported skill will continue to be propagated to the imported copy as they take place.
 
 Catalog Skills can be easily imported by navigating to the subject's page (``Project -> Subject``) 
 and clicking the ``Import`` button on the top right. The import dialog allows users to locate, select and
