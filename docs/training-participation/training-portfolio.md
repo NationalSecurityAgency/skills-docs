@@ -67,7 +67,7 @@ For quizzes, the answers shown depend on the attempt's status:
 - `Needs Grading` Quiz: answers are not displayed as they are not yet graded
 
 ::: tip
-If a quiz attempt is in a Failed state, you can re-take the quiz by clicking the **Retry** button.
+If a quiz attempt is in a Failed state, you can re-take the quiz by clicking the **Try Again** button.
 :::
 
 ::: tip
