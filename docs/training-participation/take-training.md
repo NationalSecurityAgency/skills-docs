@@ -175,7 +175,7 @@ Additional optional elements may appear in the skill details, depending on the s
 - **Enhanced Media**: Optional video or audio content to enrich the learning experience
 - **Expiration**: A clear deadline indicating when the skill will expire (if applicable)
 
-Use the **Next** and **Previous** buttons at the top of the skill page to move between skills.
+Use the **Next** and **Previous** buttons featured both at the top and the bottom of the skill page to move between skills.
 
 ::: tip Keyboard Shortcuts
 Navigate between skills using these keyboard shortcuts:

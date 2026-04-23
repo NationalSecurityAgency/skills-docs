@@ -143,7 +143,7 @@ The `Yearly` and `Monthly` options allow for the skill to be configured to expir
 
 The `Daily with the ability to retain` option configures skills to expire based on user activity. After achieving this skill, users must continue performing it within the configured number of days to maintain their points. Each time the skill is performed, the timer resets, requiring users to repeat the skill within the specified timeframe to keep their earned points."
 
-**Notifications**
+### Expiration Notifications
 
 Skills that are configured to expire will have warnings visualized in the Skills Display, letting the user know when the skill will is set to expire.
 

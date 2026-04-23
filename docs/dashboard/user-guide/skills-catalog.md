@@ -93,6 +93,13 @@ The Finalization process exists to protect importing projects from premature lev
 Please note that the finalization process is expensive and may take several minutes to complete.
 :::
 
+::: tip User Progress Filtering
+After skills are finalized, user progress tables will feature an **"Exclude Users that only earned points in imported skills"** toggle switch. 
+When enabled, only users who have earned at least one point in native (non-imported) skills will be displayed in the progress tables. 
+This filtering capability allows administrators to easily distinguish between users who have made progress specifically in their project's original skills versus those whose progress comes from a combination of both local and imported achievements.
+The toggle switch state is saved in the browser's local storage and will persist as you navigate between user progress tables for the overall project, subjects, skills, or badges.
+:::
+
 ## Good To Know
 
 This section will cover several features and inner-workings of the Skills Catalog. 
