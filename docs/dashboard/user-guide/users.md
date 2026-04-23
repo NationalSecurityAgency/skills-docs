@@ -25,12 +25,25 @@ The User Progress Table offers filtering, sorting, and export capabilities to he
 
 - Filter by user ID, first name, and last name using the User Filter
 - Filter by minimum and maximum user progress percentage using the User Progress filter
+- *"Exclude Users that only earned points in imported skills"* toggle switch - only shown when there are [Skill Catalog](/dashboard/user-guide/skills-catalog.html#importing-skills) imported skills.  
 - Sort any column by clicking its header
 - Export table data to Excel by clicking the Export button in the top right
 
 ::: tip
 Note that the export will respect any currently applied filters.
 :::
+
+##### Progress Table with Imported Skills
+
+If the project has imported and finalized skills from the [Skill Catalog](/dashboard/user-guide/skills-catalog.html#importing-skills), user progress tables will feature an **"Exclude Users that only earned points in imported skills"** toggle switch.
+When enabled, only users who have earned at least one point in native (non-imported) skills will be displayed in the progress tables.
+
+This filtering capability allows administrators to easily distinguish between users who have made progress specifically in their project's original skills versus those whose progress comes from a combination of both local and imported achievements.
+
+::: tip
+The toggle switch state is saved in the browser's local storage and will persist as you navigate between user progress tables for the overall project, subjects, skills, or badges.
+:::
+
 
 ### Users Archive 
 
