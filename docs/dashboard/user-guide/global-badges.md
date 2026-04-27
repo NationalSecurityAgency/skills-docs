@@ -54,7 +54,12 @@ The Badge Progress column shows:
 The User Progress Table offers filtering, sorting, and export capabilities to help you analyze user performance. You can:
 - Filter by user ID, first name, and last name using the User Filter
 - Sort any column by clicking its header
-- 
+- Export table data to Excel by clicking the Export button in the top right
+
+::: tip
+Filters are applied to the exported data.
+:::
+
 ## Creating Global Badges
 
 ### Step 1: Create a New Badge

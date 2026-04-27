@@ -429,6 +429,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Expiration Settings page', () => {
+        cy.intercept('/public/isFeatureSupported?feature=emailservice', 'true');
         cy.visit('/administrator/projects/movies/subjects/Action/skills/TheMatrix/config-expiration')
         cy.snap('page-expiration-config', '[data-cy="nav"]')
     })
@@ -755,11 +756,17 @@ context('Admin: Generate Screenshots', () => {
 
         cy.get('[data-cy="userCell_bob1@email.org"]')
         cy.snap('page-global-badge-access')
+    })
 
+    it('page - global badges users', () => {
+        cy.intercept('/admin/badges/MoviesandShowsExpertBadge/users**').as('getUsers')
         cy.visit('/administrator/globalBadges/MoviesandShowsExpertBadge/users')
+        cy.wait('@getUsers')
+        cy.get('[data-cy="users-skillIdFilter"]').type('uid{enter}')
+        cy.wait('@getUsers')
         cy.get('[data-cy="usersTable"]').contains('Levels')
         cy.get('[data-cy="usersTable"] [data-pc-name="pcrowperpagedropdown"]')
-          .click().get('[data-pc-section="option"]').contains('5').click();
+            .click().get('[data-pc-section="option"]').contains('5').click();
         cy.snap('page-global-badge-users')
     })
 
