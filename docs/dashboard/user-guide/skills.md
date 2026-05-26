@@ -353,10 +353,21 @@ to learn more please visit the [Self Reporting](/dashboard/user-guide/self-repor
 - Reused skills cannot be added to a badge; use the original skill instead
 - Removing the original skill will also delete all of its reused copies
 
-## Move Skills
-Move Skills is a feature that allows project administrators to move skills to other subjects or skill groups within the same project.
-When skills are moved, users' points are preserved for those skills and level-based achievements are 
-properly re-calculated for both origination and destination subject/group.
+## Moving Skills
+
+Moving Skills allows project administrators to move skills within the same project.
+
+Skills can be moved to:
+
+- another subject
+- another skill group
+
+Skill groups can also be moved.
+
+When skills are moved:
+
+- users keep their points for the moved skills
+- level-based achievements are recalculated for both the source and destination subject or group
 
 ::: tip
 The ability to move skills between subjects gives project administrators gives project administrators the ability to refine their training profile after the initial creation of skills.
