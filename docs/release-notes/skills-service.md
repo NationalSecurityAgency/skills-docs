@@ -13,13 +13,13 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 - Skill Group Enhancements
   * **Dedicated Management Page**: Created a centralized administrative view to define and manage Skill Groups and their associated skills.
   * **Progress Visualization**: Added a dedicated dashboard tracking overall user progress within a specific Skill Group.
-  * **Group Migration**: Enabled administrators to move an entire Skill Group and its skills to a different subject within the same project.
-  * **Expanded Metrics**: Integrated Skill Group data directly into the metrics achievement table.
-  * **Trainee View**: Launched a new trainee-facing Skill Group page for users to track their own skills and progress.
-  * **Search Integration**: Added Skill Groups to the skills search interface with support for direct navigation.
+  * **Group Migration**: Enabled administrators to [move an entire Skill Group](/dashboard/user-guide/skills-groups.html#moving-groups) and its skills to a different subject within the same project.
+  * **Expanded Metrics**: Integrated Skill Group data directly into the [metrics achievement table](/dashboard/user-guide/metrics.html#project-achievements-metrics).
+  * **Trainee View**: Launched a new trainee-facing [Skill Group](/training-participation/take-training.html#skill-groups) page for users to track their own skills and progress.
+  * **Search Integration**: Added Skill Groups to the [skills search interface](/training-participation/take-training.html#training-wide-search) with support for direct navigation.
 - Administrative Workflows
-  * **Bulk Skill Reporting**: Added an administrative function to manually report multiple skills for multiple users simultaneously.
-  * **Enhanced Request Tracking**: Upgraded the self-report approval requests table to display all active requests alongside their assigned approvers.
+  * **[Bulk Skill Reporting](/dashboard/user-guide/skills.html#manually-report-skills)**: Added an administrative function to manually report multiple skills for multiple users simultaneously.
+  * **Enhanced Request Tracking**: Upgraded the [self-report approval requests table](/dashboard/user-guide/self-reporting.html#approval-queue) to display all active requests alongside their assigned approvers.
 - Resolved various stability and performance issues to improve platform reliability.
 
 

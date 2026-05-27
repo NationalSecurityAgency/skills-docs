@@ -104,7 +104,10 @@ storage, so your preferences are maintained between sessions.
 Use the expand/collapse all groups controls at the top of the skill list to manage multiple groups at once.
 :::
 
-Additionally, you can click on the skill group title and navigate to that skill group's page to view its details and skills.
+::: note
+You can click on any Skill Group title to navigate to its dedicated page and view its details and skills.
+:::
+
 
 ## Badge Page
 
@@ -350,8 +353,8 @@ You can always review your survey completions on the [Quizzes and Surveys Histor
 
 ## Training Wide Search
 
-Training-wide search functionality enables users to quickly find and navigate to any skill, subject, or badge by name.
-This is an effective method to jump directly to any skill, subject, or badge from any page of the training.
+Training-wide search functionality enables users to quickly find and navigate to any skill, group, subject, or badge by name.
+This is an effective method to jump directly to any skill, group, subject, or badge from any page of the training.
 
 The search can be activated either through a dedicated search button in the top right corner of the training or by using customizable keyboard shortcuts.
 - To initiate the search via the search button, click the **Search** button in the top right corner of the training page.
