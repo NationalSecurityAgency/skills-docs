@@ -97,6 +97,18 @@ The approval queue can be filtered by:
 - **Skill Name** - Search for specific skills
 - **User ID** - Filter by specific users
 
+::: note
+Once at least one explicit workload handler is configured via
+the [Split Approval Workload](/dashboard/user-guide/self-reporting.html#split-approval-workload) configuration,
+administrators will see an additional `Assigned Approvers` column in the Approval Queue. This column displays the
+specific administrators or approvers assigned to handle each request.
+
+Additionally, a "My Requests Only" toggle allows administrators to filter the table to show only their assigned
+requests. Activating this toggle temporarily hides the `Assigned Approvers` column. The toggle state is saved in the
+browser's local storage, ensuring it persists across page refreshes.
+:::
+
+
 ### Approval History 
 
 Project administrators can can either approve or reject points/skill requests. 
@@ -207,6 +219,15 @@ Configuring explicit fallback users will then prevent requests from being forwar
 A very simple example is utilizing this feature to configure all the requests to go to a specific
 Approver only, as depicted in the screenshot above. 
 
+::: note
+Once at least one workload handler is configured, administrators will see an additional `Assigned Approvers` column in
+the [Approval Queue table](/dashboard/user-guide/self-reporting.html#approval-queue). This column displays the specific
+administrators or approvers assigned to handle each request.
+
+Additionally, a "My Requests Only" toggle allows administrators to filter the table to show only their assigned
+requests. Activating this toggle temporarily hides the `Assigned Approvers` column. The toggle state is saved in the
+browser's local storage, ensuring it persists across page refreshes.
+:::
 
 
 
