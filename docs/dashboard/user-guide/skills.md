@@ -238,18 +238,19 @@ Limitations:
   1. delete the skill using the dashboard
 - Edits to skills are not versioned and will be immediately visible to any display with this or earlier versions. This is mostly likely the behavior you want as any edit to a skill is a fix or an improvement.
 - Versioning is only applicable to new skills and doesn't apply to operations done on subjects, badges or other items within the gamificiation framework.  
-  
-     
-## Manually Add Skill Event
-There maybe a special situation when you want to give a user credit explicitly. Project admins can add Skill Events manually through the Dashboard:
-1. Locate the Subject that contains the Skill for which you would like to add an event
-1. Select ```Manage``` for the located Subject
-1. Locate the Skill and select ```Manage```
-    * The ```Filter``` box on the top left of the Skills table can be used to quickly locate a particular Skill
-1. Select ```Add Event``` from the Navigation menu on the left
-1. Enter the ```User Id``` of the user for whom the Skill Event will be added (note that the field supports type-ahead to locate existing users)
-1. Enter a date on which the Skill Event occurred (this will default to today's date)
-1. Select ```Add```
+
+
+## Manually Report Skills
+
+There may be special situations where you need to credit users explicitly. As a project administrator, you can manually
+report skill events across multiple skills for multiple users simultaneously. You can also specify the date against
+which those events are reported.
+
+To manually report skills:
+1. Navigate to the subject page (`Project -> Subject`).
+2. Select one or more skills from the table using the checkboxes.
+3. Click the `Actions` button, then select the `Report Skills for Users` option.
+4. Follow the step-by-step guidance in the skill reporting modal to complete the process.
 
 ## Incremental Changes
 This section explain how various scenarios are handled when skills are modified/removed/added 
@@ -353,10 +354,19 @@ to learn more please visit the [Self Reporting](/dashboard/user-guide/self-repor
 - Reused skills cannot be added to a badge; use the original skill instead
 - Removing the original skill will also delete all of its reused copies
 
-## Move Skills
-Move Skills is a feature that allows project administrators to move skills to other subjects or skill groups within the same project.
-When skills are moved, users' points are preserved for those skills and level-based achievements are 
-properly re-calculated for both origination and destination subject/group.
+## Moving Skills
+
+Moving Skills allows project administrators to move skills within the same project.
+
+Skills can be moved to:
+
+- another subject
+- another skill group
+
+When skills are moved:
+
+- users keep their points for the moved skills
+- level-based achievements are recalculated for both the source and destination subject or group
 
 ::: tip
 The ability to move skills between subjects gives project administrators gives project administrators the ability to refine their training profile after the initial creation of skills.
@@ -370,6 +380,12 @@ on the Action button located on the top-right above the skills' table. Select th
 ::: tip
 All the skills under a subject or group can be easily selected via the ``Select All`` button
 :::
+
+::: note
+You can also move one or more Skill Groups. Please visit
+the [Moving Groups Section](/dashboard/user-guide/skills-groups.html#moving-groups) to learn more.
+:::
+
 
 ## Skill Tags
 

@@ -12,6 +12,11 @@ If let's say a group has ``5`` skills, you can configure it to only require ``3`
 In this case, when any of the ``3`` skills under that group are completed then the group achievement is awarded!
 :::
 
+::: note Dedicated Skill Group Page
+Skill Groups now have a dedicated page that provides a focused view for managing the group and its skills. 
+You can navigate to a Skill Group page by selecting ``Project -> Subject -> Group``.
+:::
+
 ![Skills Group Screenshot](../../screenshots/admin/page-skills-group.png)
 
 To create a group, navigate to ``Project -> Subject`` then click on ``Group +``, the following group properties can be specified:
@@ -41,3 +46,12 @@ Once at least 1 skill is added the group will be rendered in the Skills Display.
 Groups have an option to only require ``N`` skills out of the total available number of skills added to the group.
 For example, if a group has ``5`` skills, you can configure it to only require the completion of ``3`` skills.
 In this case, when any ``3`` skills under that group are completed then the group achievement is awarded!
+
+## Moving Groups
+
+Moving a group enables project administrators to transfer an entire Skill Group and all of its associated skills to a
+different subject.
+
+To move a group, navigate to the subject page (`Project -> Subject`), select one or more groups from the table using the
+checkboxes, and click the `Actions` button, followed by the `Move` option. A move modal will appear to guide you through
+selecting the destination and initiating the transfer.
