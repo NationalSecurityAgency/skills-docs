@@ -7,3 +7,4 @@ The editor offers the following features:
 ![Description Editor Image 3](../../../screenshots/admin/rich-text-editor-3.png)
 ![Description Editor Image 4](../../../screenshots/admin/rich-text-editor-4.png)
 ![Description Editor Image 5](../../../screenshots/admin/rich-text-editor-5.png)
+![Description Editor Image 6](../../../screenshots/admin/rich-text-editor-6.png)
