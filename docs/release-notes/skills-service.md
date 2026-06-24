@@ -8,6 +8,23 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 4.5
+<release-date date="June 2026" />
+
+- Project and Skill Management
+    * **Batch Skill Editing**: Added the administrative capability to bulk-edit attributes across multiple skills simultaneously.
+    * **Description Copying**: Enhanced project administration to properly handle [copying project](/dashboard/user-guide/projects.html#copy-project) descriptions.
+    * **Tables in Descriptions**: Restored full formatting support for creating and configuring tables within the [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html).
+    * **Self-Report Approval Descriptions**: Added a toggle option to display the entire skill description directly within the [Self Reported Skills Requiring Approval](/dashboard/user-guide/self-reporting.html#approval-queue) table view.
+    * **Text Editor Alignment**: Resolved clipboard HTML styling conflicts to smoothly align pasted content with the native [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html).
+    * **Approver Assignment Skill Filtering**: Refined the [Split Approval Workload](/dashboard/user-guide/self-reporting.html#split-approval-workload) configuration to only display skills that are actually eligible for administrative approval when assigning specialized skill approvers.
+- Trainee Experience
+    * **Quiz File Attachments**: Introduced file attachment support for text input answers within quizzes and surveys.
+    * **Add Project Shortcut**: Introduced the `My Projects +` button directly on Project pages for seamless addition of projects to the user's dashboard.
+    * **Subject Navigation**: Enhanced project page usability by making subject titles clickable links.
+- Resolved various stability and performance issues to improve platform reliability.
+
+
 ## 4.4
 <release-date date="May 2026" />
 - Skill Group Enhancements
