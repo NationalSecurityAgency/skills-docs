@@ -617,6 +617,40 @@ context('Admin: Generate Screenshots', () => {
 
         cy.snap('rich-text-editor-5', markdownInput);
 
+        cy.get(markdownInput).clear()
+        cy.focused().type('Table:')
+        // Click the table button in the toolbar
+        cy.clickToolbarButton('table')
+
+        // Target the table selection container
+        cy.get('.toastui-editor-popup-body .toastui-editor-table')
+          .within(() => {
+            cy.get('.toastui-editor-table-row').eq(1)
+              .find('.toastui-editor-table-cell').eq(2)
+              .click();
+          });
+
+        // Target the inserted table cells inside the editor
+        cy.get('.toastui-editor-contents table').within(() => {
+          cy.get('thead tr').eq(0)
+            .find('th').eq(0)
+            .as('targetHeaderCell'); // Save cell as alias
+        });
+        cy.get('.toastui-editor-contents table').within(() => {
+        cy.get('tbody tr').eq(0)
+          .find('td').eq(0)
+          .as('targetBodyCell'); // Save cell as alias
+        });
+
+        // Click the cells to focus and type text
+        cy.get('@targetHeaderCell')
+          .click()
+          .type('First Name{rightArrow}Last Name{rightArrow}Address')
+        cy.get('@targetBodyCell')
+          .click()
+          .type('Jane{rightArrow}Doe{rightArrow}123 Main St')
+
+        cy.snap('rich-text-editor-6', markdownInput);
     })
 
     it('access page', () => {
