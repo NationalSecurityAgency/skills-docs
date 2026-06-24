@@ -252,6 +252,28 @@ To manually report skills:
 3. Click the `Actions` button, then select the `Report Skills for Users` option.
 4. Follow the step-by-step guidance in the skill reporting modal to complete the process.
 
+## Batch Skill Editing
+As a project admin, you can bulk-edit attributes across multiple skills simultaneously. To bulk-edit multiple skills, navigate to a Subject page (`Project -> Subject`) or a Skill Group page (`Project -> Subject -> Group`) and select the checkboxes next to the skills you want to edit. Click on the `Action` button located on the top-right above the skills table and select the `Batch Edit` option. Select at least one of the following attributes to edit and then click the `Update` button.
+
+The supported attributes for bulk-editing are:
+
+| Property | Explanation                                                                                                                                                                                                    |
+| --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Point Increment | Number of points added for each skill event; used in conjunction with the 'Occurrences to Completion' property.                                                                                                |
+| Occurrences to Completion | Number of successful occurrences required to fully accomplish this skill; used in conjunction with the 'Point Increment' property.                                                                             |
+| [Time Window](/dashboard/user-guide/skills.html#time-window) | Once the maximum occurrences limit is reached, points will not increment until the configured Time Window resets. Please note that only skills with Occurrences to Completion greater than 1 will be updated.  |
+| [Self Reporting Type](/dashboard/user-guide/self-reporting.html) | Only `Honor` and `Approval Queue` are supported for batch updates. Other types require additional per-skill management.                                                                                        |
+| [Visibility](/dashboard/user-guide/skills.html#skill-creation-lifecycle) | Only available if at least one selected skill has its visibility set to Hidden.                                                                                                                                |
+
+::: tip Good To Know
+Please note that you do not need to select all attributes; only configure the ones you want to change for the selected skills.
+:::
+
+::: tip
+To learn more about these attributes and skills in general, please visit the [Skills Section](/dashboard/user-guide/skills.html).
+:::
+
+
 ## Incremental Changes
 This section explain how various scenarios are handled when skills are modified/removed/added 
 *AFTER* your application users already earned points, completed skills, achieved levels and obtained badges.
