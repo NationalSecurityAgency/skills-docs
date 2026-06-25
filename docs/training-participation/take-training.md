@@ -395,4 +395,4 @@ transcript provides:
 Each training is managed by dedicated administrators who have exclusive administrative access and specialized knowledge
 of that training. To reach them, click the **Contact Project** button in the top right of the page title.
 
-![contact project form](../dashboard/user-guide/screenshots/contact_admins_form.png)  
+![contact project form](../screenshots/progress-and-ranking/contact_admins_form.png)  

@@ -211,4 +211,15 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.snap('component-training-wide-search', '[data-cy="trainingSearchDialog"]');
   })
 
+  it('contact form', () => {
+    cy.visit('/progress-and-rankings/projects/movies/')
+    cy.wait('@getConfig');
+    cy.get('[data-cy="skillsDisplaySearchBtn"]')
+    cy.get('[data-cy="contactOwnerBtn"]').click()
+    cy.get('[data-cy="contactProjectOwnerDialog"]').contains('Send your message to the administrators of Movies training')
+    cy.snap('contact_admins_form', '[data-cy="contactProjectOwnerDialog"]');
+  })
+
+
+
 })
