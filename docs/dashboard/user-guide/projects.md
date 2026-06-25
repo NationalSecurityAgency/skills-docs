@@ -241,6 +241,7 @@ To copy a project:
 The system will create a new project with the copied training profile.
 
 The following training profile elements are copied into the new project: 
+- Project's description
 - [Subjects](/dashboard/user-guide/subjects.html) and their attributes (description, help url, etc..)
 - [Skills](/dashboard/user-guide/skills.html) definitions and their attributes (description, points, self-reporting, etc...)
 - [Skill Groups](/dashboard/user-guide/skills-groups.html)

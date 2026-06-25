@@ -23,6 +23,11 @@ From here users can proceed to:
 
 At the bottom of the page, you'll find a **Download Transcript** button that allows you to save a detailed record of your training progress. For more information about the transcript and its contents, check out the [Transcript](/training-participation/take-training.html#transcript) section.
 
+::: tip
+If the project has not been added to your homepage, you will see a `My Projects +` button shortcut at the top of the page to seamlessly add this project to your training portfolio.
+To learn more about managing your training portfolio on the homepage, please visit the [Home Page](/training-participation/training-portfolio.html#home-page) section.
+:::
+
 ## My Rank Page
 
 To access the My Rank page, click the **View** button inside the **My Rank** card. The My Rank page provides a comprehensive overview of your ranking, including:
@@ -390,4 +395,4 @@ transcript provides:
 Each training is managed by dedicated administrators who have exclusive administrative access and specialized knowledge
 of that training. To reach them, click the **Contact Project** button in the top right of the page title.
 
-![contact project form](../dashboard/user-guide/screenshots/contact_admins_form.png)  
+![contact project form](../screenshots/progress-and-ranking/contact_admins_form.png)  

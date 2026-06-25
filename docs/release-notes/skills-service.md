@@ -12,7 +12,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 <release-date date="June 2026" />
 
 - Project and Skill Management
-    * **Batch Skill Editing**: Added the administrative capability to bulk-edit attributes across multiple skills simultaneously.
+    * **Batch Skill Editing**: Added the administrative capability to [bulk-edit attributes](/dashboard/user-guide/skills.html#batch-skill-editing) across multiple skills simultaneously.
     * **Description Copying**: Enhanced project administration to properly handle [copying project](/dashboard/user-guide/projects.html#copy-project) descriptions.
     * **Tables in Descriptions**: Restored full formatting support for creating and configuring tables within the [Rich Text Editor](/dashboard/user-guide/rich-text-editor.html).
     * **Self-Report Approval Descriptions**: Added a toggle option to display the entire skill description directly within the [Self Reported Skills Requiring Approval](/dashboard/user-guide/self-reporting.html#approval-queue) table view.

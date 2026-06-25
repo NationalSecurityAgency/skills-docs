@@ -98,7 +98,7 @@ specific training profile. After drilling down into a specific project to view t
 
 The ``Contact Project`` button displays the contact form where users can enter and submit a message for that project's admins. 
 
-![contact project form](./screenshots/contact_admins_form.png)
+![contact project form](../../screenshots/progress-and-ranking/contact_admins_form.png)
 
 Once the ``Submit`` button is clicked an email with the provided message is sent to all project's admins. 
 
