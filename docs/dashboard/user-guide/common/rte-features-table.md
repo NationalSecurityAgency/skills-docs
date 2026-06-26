@@ -12,6 +12,7 @@
 | Ordered List   | Ctrl+O          | A numbered list                                                                                                                                      |  
 | Indent         | Fn+Tab          | When creating a list, this will indent the list one level                                                                                            |
 | Outdent        | Fn+Shift+Tab    | When creating a list, this will outdent the list one level                                                                                           |
+| Table          | Ctrk+Alt+w      | Insert a table with the initial number rows and columns specified.                                                                                   | 
 | Image          | Ctrl+Alt+i      | Insert an image.  Images may be chosen from a local file, a URL, or copy and pasted.                                                                 |
 | Link           | Ctrl+Alt+r      | A hyperlink to an external resource                                                                                                                  |
 | Attachments    | Ctrl+Alt+a      | Attach a file to the description.  Attached files will be stored on the SkillTree server and a link for downloading the attachment will be provided. |

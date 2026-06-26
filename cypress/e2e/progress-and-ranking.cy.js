@@ -9,6 +9,15 @@ context('Progress and Ranking: Generate Screenshots', () => {
 
     cy.addToMyProjects('movies');
     cy.addToMyProjects('shows');
+
+    cy.intercept('GET', '/public/config', (req) => {
+      req.reply((res) => {
+        const conf = res.body;
+        conf.disableScrollToTop = true
+        conf.disableEncouragementsConfetti = true
+        res.send(conf);
+      });
+    }).as('getConfig');
   });
 
   it('Gen Select My Projects', () => {
@@ -38,7 +47,7 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.snap('page-progress-and-rankings-my-rank', '#mainContent2');
   });
 
-  it('My Rank Page', () => {
+  it('My Badges Page', () => {
     cy.visit('/progress-and-rankings/projects/movies/badges')
     cy.get('[data-cy="achievedBadges"]').should('be.visible')
     cy.get('[data-cy="availableBadges"] [data-cy="badgeTitle"]').should('be.visible')
@@ -57,14 +66,15 @@ context('Progress and Ranking: Generate Screenshots', () => {
   });
 
   it('Gen Skills Display - project', () => {
-    cy.visit('/test-skills-display/movies');
+    cy.visit('/progress-and-rankings/projects/movies');
+    cy.wait('@getConfig');
     cy.get('[data-cy="skillsDisplayHome"] [data-cy="pointHistoryChart-animationEnded"]')
     cy.get('[data-cy="skillsDisplayHome"] [data-cy="subjectTileBtn"]').should('have.length', 6);
     cy.snap('client-display-proj', '[data-cy="skillsDisplayHome"]');
   });
 
   it('Gen Skills Display - my rank', () => {
-    cy.visit('/test-skills-display/movies/rank');
+    cy.visit('/progress-and-rankings/projects/movies/rank');
     cy.get('[data-cy="skillsDisplayHome"]').contains('My Rank');
     cy.get('[data-cy="levelBreakdownChart-animationEnded"]')
     cy.get('[data-cy="userColumn"]').should('have.length', 10);
@@ -73,13 +83,14 @@ context('Progress and Ranking: Generate Screenshots', () => {
 
   it('Gen Skills Display - subject', () => {
     const clipScreenshot = { x: 0, y: 0, width: displayWidth, height: 1800 };
-
-    cy.visit('/test-skills-display/movies/subjects/Family');
+    cy.visit('/progress-and-rankings/projects/movies/subjects/Family');
+    cy.wait('@getConfig');
     cy.get('[data-cy="skillsDisplayHome"] [data-cy="pointHistoryChart-animationEnded"]')
     cy.get('[data-cy="skillProgress_index-0"]')
     cy.snap('client-display-subject', '[data-cy="skillsDisplayHome"]', { clip: clipScreenshot });
 
     cy.visit('/progress-and-rankings/projects/movies/subjects/Comedy');
+    cy.wait('@getConfig');
     cy.get('[data-cy="skillsDisplayHome"] [data-cy="pointHistoryChart-animationEnded"]')
     cy.get('[data-cy="skillProgress_index-0"]')
     cy.snap('client-display-subject-comedy', '#mainContent2', { clip: clipScreenshot });
@@ -199,5 +210,16 @@ context('Progress and Ranking: Generate Screenshots', () => {
 
     cy.snap('component-training-wide-search', '[data-cy="trainingSearchDialog"]');
   })
+
+  it('contact form', () => {
+    cy.visit('/progress-and-rankings/projects/movies/')
+    cy.wait('@getConfig');
+    cy.get('[data-cy="skillsDisplaySearchBtn"]')
+    cy.get('[data-cy="contactOwnerBtn"]').click()
+    cy.get('[data-cy="contactProjectOwnerDialog"]').contains('Send your message to the administrators of Movies training')
+    cy.snap('contact_admins_form', '[data-cy="contactProjectOwnerDialog"]');
+  })
+
+
 
 })

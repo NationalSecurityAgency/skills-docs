@@ -536,6 +536,35 @@ prior giving access to that private project.
 skills.authorization.invite.validateEmail=true
 ```
 
+### Project Expiration
+
+SkillTree allows users to easily experiment with training profiles by creating new projects or copying existing ones.
+Given this level of autonomy, organizations may see hundreds or even thousands of projects created.
+
+SkillTree provides a project expiration feature to automatically remove abandoned projects from the system.
+
+You can modify how the project expiration feature works by configuring the following properties:
+
+```properties
+# Projects are considered for removal after this many days of inactivity
+skills.config.expireUnusedProjectsOlderThan: 180
+# After projects are marked for removal, they will not be removed for this many days.
+# Project admins are notified daily and given a chance to retain the project.
+skills.config.expirationGracePeriod: 7
+# Project expiration schedule
+skills.config.projectExpirationSchedule: "0 4 0 * * *"
+```
+
+If a project has not been used for `expireUnusedProjectsOlderThan` days, it is flagged for removal.
+Activity includes editing project definitions on the administration panel or trainees reporting skills.
+
+Once a project is flagged for removal, project administrators are notified and can choose to retain the project.
+Notifications are sent via email, so ensure you configure your [email settings](/dashboard/user-guide/settings.html#email-settings) accordingly.
+
+The dashboard user interface will also display a warning message on a flagged project, alongside a button to retain it.
+
+If an administrator does not retain the project within the `expirationGracePeriod` days, the project is permanently removed.
+
 ### AI Assistant Configuration
 
 The AI Assistant enhances content creation by generating learning materials automatically. To enable this feature, configure the following settings:

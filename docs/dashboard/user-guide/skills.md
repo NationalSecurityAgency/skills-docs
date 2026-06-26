@@ -252,6 +252,28 @@ To manually report skills:
 3. Click the `Actions` button, then select the `Report Skills for Users` option.
 4. Follow the step-by-step guidance in the skill reporting modal to complete the process.
 
+## Batch Skill Editing
+As a project admin, you can bulk-edit attributes across multiple skills simultaneously. To bulk-edit multiple skills, navigate to a Subject page (`Project -> Subject`) or a Skill Group page (`Project -> Subject -> Group`) and select the checkboxes next to the skills you want to edit. Click on the `Action` button located on the top-right above the skills table and select the `Batch Edit` option. Select at least one of the following attributes to edit and then click the `Update` button.
+
+The supported attributes for bulk-editing are:
+
+| Property | Explanation                                                                                                                                                                                                    |
+| --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Point Increment | Number of points added for each skill event; used in conjunction with the 'Occurrences to Completion' property.                                                                                                |
+| Occurrences to Completion | Number of successful occurrences required to fully accomplish this skill; used in conjunction with the 'Point Increment' property.                                                                             |
+| [Time Window](/dashboard/user-guide/skills.html#time-window) | Once the maximum occurrences limit is reached, points will not increment until the configured Time Window resets. Please note that only skills with Occurrences to Completion greater than 1 will be updated.  |
+| [Self Reporting Type](/dashboard/user-guide/self-reporting.html) | Only `Honor` and `Approval Queue` are supported for batch updates. Other types require additional per-skill management.                                                                                        |
+| [Visibility](/dashboard/user-guide/skills.html#skill-creation-lifecycle) | Only available if at least one selected skill has its visibility set to Hidden.                                                                                                                                |
+
+::: tip Good To Know
+Please note that you do not need to select all attributes; only configure the ones you want to change for the selected skills.
+:::
+
+::: tip
+To learn more about these attributes and skills in general, please visit the [Skills Section](/dashboard/user-guide/skills.html).
+:::
+
+
 ## Incremental Changes
 This section explain how various scenarios are handled when skills are modified/removed/added 
 *AFTER* your application users already earned points, completed skills, achieved levels and obtained badges.
@@ -307,23 +329,21 @@ If so, those users will *NOT* lose their current level (per our overall strategy
 
 ## Same Project Skill Reuse
 
-In-Project Skill Reuse is a feature that facilitates the reuse of skills within the same project. 
-A skill can be easily reused within another Subject or Skill Group. 
-Reused skills are read-only copies and cannot be mutated. 
-As skill occurrences are reported to the original skill they are also automatically propagated to the reused skills.
-Changes to the original skill (ex. description, occurrences) are automatically synchronized to all the reused skills as well.
+In-Project Skill Reuse allows you to reuse skills within the same project.
+A skill can be reused within another Subject or Skill Group.
 
-To reuse a skill navigate to the Skills page (``Project -> Subject``), then select skills to reuse
-and click on the ``Action`` button located on the top-right above the skills' table. 
-Select the ``Reuse in this Project`` button to initiate the process.
+Key behavior of reused skills:
+* They are read-only copies and cannot be edited.
+* Skill actions reported to the original skill propagate to reused copies.
+* Changes to the original skill (e.g., description, occurrences) synchronize automatically.
 
-![Reuse skills](../../screenshots/admin/page-export-to-catalog.png)
+To reuse a skill:
+1. Navigate to the Skills page (**Project -> Subject**).
+2. Select the skills you want to reuse.
+3. Click the **Action** button above the skills table.
+4. Select **Reuse in this Project** to initiate the process.
 
-Once the skills are reused you will see a ``REUSED`` tag next to each skill.
-
-::: tip
-All the skills under a subject or group can be easily selected for reuse via the ``Select All`` button
-:::
+Once skills are reused, a **REUSED** tag will appear next to each copy.
 
 ### Skill occurrences propagation
 Please note that when skill occurrences are reported for an original skill, 
@@ -356,35 +376,33 @@ to learn more please visit the [Self Reporting](/dashboard/user-guide/self-repor
 
 ## Moving Skills
 
-Moving Skills allows project administrators to move skills within the same project.
+Moving skills allows project administrators to transfer skills within the same project.
 
 Skills can be moved to:
-
-- another subject
-- another skill group
+* Another subject
+* Another skill group
 
 When skills are moved:
+* Users keep earned points.
+* Level-based achievements are recalculated.
+* Recalculation applies to both source and destination.
 
-- users keep their points for the moved skills
-- level-based achievements are recalculated for both the source and destination subject or group
+The ability to move skills between subjects allows project administrators to refine their training profiles after initial creation.
+
+To move one or more skills:
+1. Navigate to the Skills page (**Project -> Subject**).
+2. Select the skills you want to move.
+3. Click the **Action** button above the skills table.
+4. Select **Move Skills** to start the process.
 
 ::: tip
-The ability to move skills between subjects gives project administrators gives project administrators the ability to refine their training profile after the initial creation of skills.
-:::
-
-To move one or more skills please navigate to the Skills page (``Project -> Subject``), then select the skills to move and click 
-on the Action button located on the top-right above the skills' table. Select the ``Move Skills`` button to initiate the process.
-
-![Move skills](../../screenshots/admin/page-export-to-catalog.png)
-
-::: tip
-All the skills under a subject or group can be easily selected via the ``Select All`` button
+Select all skills under a subject or group using the **Select All** button.
 :::
 
 ::: note
-You can also move one or more Skill Groups. Please visit
-the [Moving Groups Section](/dashboard/user-guide/skills-groups.html#moving-groups) to learn more.
+You can also move entire Skill Groups. Visit the [Moving Groups Section](/dashboard/user-guide/skills-groups.html#moving-groups) to learn more.
 :::
+
 
 
 ## Skill Tags
