@@ -157,128 +157,92 @@ Now that you can build the project and run integration tests, let's look at the 
 
 ### Day-to-day development
 
-Most IDEs (Intellij, Eclipse, etc...) provide first-class support for maven projects so the very first step would be to import the skills-service project into your favorite IDE. 
+Most IDEs (IntelliJ, Eclipse, etc.) provide first-class support for Maven projects, so the very first step is to import the skills-service project into your favorite IDE.
 
-Please note that code additions will generally fall into these categories:
-1. Enhancing the skills-service programmatic REST API
+Please note that code additions will generally fall into these two categories:
+1. Enhancing the `skills-service` programmatic REST API
 1. Making changes to the web-based dashboard application
 
 ###### skills-service programmatic REST API
 
-The code for the API can be found under ``skills-service/service`` which follows standard maven conventions. 
+The code for the API can be found under ``skills-service/service``, which follows standard Maven conventions.
 
-The programmatic API tests reside in ```service/src/test/java``` and you can run all the service tests via
+The programmatic API tests reside in ```service/src/test/java```. You can run a single test using the following command:
 ```bash
 cd skills-service/service
-mvn test
+# mvn test -Dtest=<test-name>, for example:
+mvn test -Dtest=skills.intTests.AdminBadgesSpecs
 ``` 
-You can also run any of the tests using your favorite IDE. 
+
+You can also run any of these tests directly using your favorite IDE.
 
 ::: tip
-SkillTree's overall testing strategy is to implement black-box integration tests and supplement with unit tests whenever an integration test is not possible.
+SkillTree's overall testing strategy is to implement black-box integration tests and supplement them with unit tests whenever an integration test is not possible.
 :::
 
-Generally, programmatic API service development is facilitated via the integration/service tests .
+Generally, programmatic API service development is driven and facilitated via integration/service tests.
 
-Skills Service integration tests stand-up the skills-service application and then execute various endpoints, validating the result.
-These integration tests reside in the ``skills.intTests`` package and extend the ``DefaultIntSpec.groovy`` class. 
+Skills Service integration tests stand up the skills-service application and then execute various endpoints to validate the results.
+These integration tests reside in the ``skills.intTests`` package and extend the ``DefaultIntSpec.groovy`` class.
 
-``DefaultIntSpec.groovy`` is annotated with the [``@SpringBootTest``](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) annotation
-which facilitates running the Spring Boot application, exposing endpoints on a random port. 
+``DefaultIntSpec.groovy`` is annotated with the [``@SpringBootTest``](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html) annotation,
+which handles running the Spring Boot application and exposing endpoints on a random port.
 
-A few things to note: 
-- You should interact with the skills-service using the test client ``skills.intTests.utils.SkillsService`` class 
-  - Available via ``skills.intTests.utils.DefaultIntSpec#skillsService``
-  - ``SkillsService`` class represents an authenticated dashboard user
-- Runtime port can be retrieved via ``skills.intTests.utils.DefaultIntSpec#localPort`` but should rarely be used directly; instead please use ``skills.intTests.utils.DefaultIntSpec#skillsService`` instead
-- ``DefaultIntSpec`` setup and cleanup methods purge data from DB between each test case
-- Use the ``skills.intTests.utils.DefaultIntSpec#createService`` method if you need a new ``SkillsService`` instance
-  - For example to represent another dashboard user       
+A few things to note:
+- You should interact with the skills-service using the test client ``skills.intTests.utils.SkillsService`` class.
+  - This is available via ``skills.intTests.utils.DefaultIntSpec#skillsService``.
+  - The ``SkillsService`` class represents an authenticated dashboard user.
+- The runtime port can be retrieved via ``skills.intTests.utils.DefaultIntSpec#localPort`` but should rarely be used directly; please use ``skills.intTests.utils.DefaultIntSpec#skillsService`` instead.
+- The ``DefaultIntSpec`` setup and cleanup methods purge data from the database between each test case.
+- Use the ``skills.intTests.utils.DefaultIntSpec#createService`` method if you need a new ``SkillsService`` instance (for example, to represent a different dashboard user).
 
-There are hundreds of tests in the ``skills.intTests`` package, please feel free to explore. 
+There are hundreds of tests in the ``skills.intTests`` package; please feel free to explore them.
 
 ###### Web-Based Dashboard
 
-Steps to develop the web-based dashboard are:
-1. Stand up the service (programmatic API)
-1. Bring up the vite dev server
-1. Use browser and cypress tests to drive development
+The steps to develop the web-based dashboard are:
+1. Stand up the service (programmatic API).
+1. Bring up the Vite dev server.
+1. Use a browser and Cypress tests to drive development.
 
-To stand up the service you can execute ``skills.SpringBootApp`` in the ``service`` project from your IDE. 
+To stand up the service, you can execute ``skills.SpringBootApp`` in the ``service`` project directly from your IDE.
 
-If that's not an option you can always build a jar and run it from the command line:
- ```bash
- java -jar service/target/skills-service-<version>.jar
- ```
-
-At a minimum will need to set DB connection properties:
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/skills
-spring.datasource.username=<username>
-spring.datasource.password=<password>
+If that is not an option, you can always build a JAR and run it from the command line:
+```bash
+java -jar service/target/skills-service-<version>.jar \
+--spring.datasource.url=jdbc:postgresql://localhost:5432/skills \
+--spring.datasource.username=postgres \
+--spring.datasource.password=skillsPassword
 ```
 
-The service will run on port 8080. 
+The service will run on port `8080`.
 
-Next is to start the vite dev server in the ``dashboard`` project:
+Next, start the Vite dev server in the ``dashboard`` project:
 
 ```bash
 cd dashboard
 npm run dev
 ```
-This vite dev server will run on port 5173 and will make requests for data to the service running on port 8080. 
+The Vite dev server will run on port `5173` and will forward data requests to the service running on port 8080.
 
-Generally development is facilitated by writing cypress tests:
+Generally, development is facilitated by writing Cypress tests:
 
 ```bash
 cd e2e-tests
 npm run cy:open:dev
 ``` 
-You can then start adding tests under e2e-tests/cypress/integration to an existing file or by creating a new file. 
+You can then start adding tests under `e2e-tests/cypress/e2e` to an existing file or by creating a new file.
 
 ###### Skills Display
-[Skills Display](/skills-client/js.html#skills-display) components provides a comprehensive visualization of a user's skill and progress profile!
-The code for the Skills Display is mostly encapsulated under `dashboard/src/skills-display` directory with an entry point of `SkillsDisplay.vue` Vue component. 
+The [Skills Display](/skills-client/js.html#skills-display) components provide a comprehensive visualization of a user's skill and progress profile!
+The code for the Skills Display is mostly encapsulated under the `dashboard/src/skills-display` directory.
 
 `SkillsDisplay.vue` is used in various scenarios:
-- to show user's progress within a single project on the Progress & Ranking pages
-- served as a dedicated url to power [skills-client](https://github.com/NationalSecurityAgency/skills-client) libraries
-- server under several urls for testing purposes
+- To show a user's progress within a single project on the Progress & Ranking pages.
+- Served as a dedicated URL to power [skills-client](https://github.com/NationalSecurityAgency/skills-client) libraries.
+- Served under several URLs for testing purposes.
 
-There are three places that Sills Display need to be tested:
-- `/test-skills-display/<project-id>` - most of the cypress tests utilize this url; Skills Display is served natively and is customized for testing
-- `/test-skills-client/<project-id>` - Skills Display is served within an iframe simulating [skills-client](https://github.com/NationalSecurityAgency/skills-client)'s usage; see cypress tests for examples
-- `/progress-and-rankings/projects/<project-id>` - Dashboard's usage of skills-display to show user's progress and rankings for a single project
-
-### Test Checklist
-
-::: tip
-SkillTree's overall testing strategy is to implement black-box integration tests and supplement with unit tests whenever an integration test is not possible.
-:::
-
-We like tests (especially integration tests), so please make sure you thoroughly test your code.  
-Prior to making a Pull Request make sure that ALL tests pass, once you push your branch GitHub Actions CI will execute all the service and Cypress tests.
-
-Provide the following properties to run the service tests against PostgreSQL:
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/skills
-spring.datasource.username=<username>
-spring.datasource.password=<password>
-```
-On the command line it would look something like this:
-```bash
-mvn --batch-mode test -Dspring.datasource.url=jdbc:postgresql://postgres:5432/skills -Dspring.datasource.username=user -Dspring.datasource.password=pass
-```
-
-To run all the cypress tests: 
-```bash
-cd skills-service/e2e-tests
-npm install
-
-# start servers in the background: skills-service and client-display to test
-npm run cyServices:start
-# run cypress integration tests
-npm run cy:run
-# kill background servers
-npm run cyServices:kill 
-```
+There are three places where the Skills Display needs to be tested:
+- `/test-skills-display/<project-id>` - Most Cypress tests utilize this URL; the Skills Display is served natively and is customized for testing.
+- `/test-skills-client/<project-id>` - The Skills Display is served within an iframe to simulate [skills-client](https://github.com/NationalSecurityAgency/skills-client) usage; see Cypress tests for examples.
+- `/progress-and-rankings/projects/<project-id>` - The Dashboard's native usage of skills-display to show a user's progress and rankings for a single project.
