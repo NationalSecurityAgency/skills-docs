@@ -8,14 +8,14 @@ To create an admin group please navigate to the ``Admin Groups`` page and then c
 
 ![page-admin-groups.png](../../screenshots/admin/page-admin-groups.png)
 
-To assign a group to a project please navigate to ``Admin Groups -> Projects`` then select one of the existing projects from the dropdown. 
+To assign a group to a project please navigate to ``Adming Groups -> Projects`` then select one of the existing projects from the dropdown. 
 
 ![page-admin-groups-projects.png](../../screenshots/admin/page-admin-groups-projects.png)
 
-To assign a group to a quiz please navigate to ``Admin Groups -> Quizzes`` then select one of the existing quizzes from the dropdown.
+To assign a group to a quiz please navigate to ``Adming Groups -> Quizzes`` then select one of the existing quizzes from the dropdown.
 
 ![page-admin-groups-quizzes.png](../../screenshots/admin/page-admin-groups-quizzes.png)
 
-To assign a group to a global badge please navigate to ``Admin Groups -> Global Badges`` then select one of the existing global badges from the dropdown.
+To assign a group to a global badge please navigate to ``Adming Groups -> Global Badges`` then select one of the existing global badges from the dropdown.
 
 ![page-admin-groups-global-badges.png](../../screenshots/admin/page-admin-groups-global-badges.png)
