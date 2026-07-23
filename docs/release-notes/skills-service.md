@@ -8,6 +8,28 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
 
 </conditional>
 
+## 4.6
+<release-date date="July 2026" />
+- **Elevated Skill Tag support to the project level** adding comprehensive management displays and display of tags on trainee's views  
+  - **Administrative Improvements**
+    - **Created Skill Tags page** to manage all tags across the project
+    - **Launched Single Skill Tag management page** that enables administrators to manage tagged skills with this particular tag
+    - **Introduced ability** to edit tag values and tag IDs
+    - **Introduced user progress page** tracking all project participants advancing within a specific tag
+  - **Trainee Views**
+    - **Displayed tags** on the project's overview page and subjects overview pages 
+    - **Implemented progress pages** for all tags across a project
+    - **Provided progress page** for a single tag tracking all tagged skills progress
+    - **Added tags** to the training-wide search
+- **Implemented admin project-wide search** with direct navigation to skills, subjects, badges, groups, and tags
+- **Implemented ability** to filter earned achievements using user tags
+- **Added support** for Skill Group icons
+- **Enhanced manual batch skill reporting workflow** with an ability to lookup existing users
+
+
+
+  
+
 ## 4.5
 <release-date date="June 2026" />
 
