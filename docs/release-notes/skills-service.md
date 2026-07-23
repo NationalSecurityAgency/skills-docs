@@ -15,6 +15,7 @@ To obtain deployable artifacts please visit [Distributions](/dashboard/install-g
     - **Created Skill Tags page** to manage all tags across the project
     - **Launched Single Skill Tag management page** that enables administrators to manage tagged skills with this particular tag
     - **Introduced ability** to edit tag values and tag IDs
+    - **Introduced user progress page** tracking all project participants advancing within a specific tag
   - **Trainee Views**
     - **Displayed tags** on the project's overview page and subjects overview pages 
     - **Implemented progress pages** for all tags across a project
