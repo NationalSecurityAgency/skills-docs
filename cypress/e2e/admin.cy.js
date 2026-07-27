@@ -809,8 +809,6 @@ context('Admin: Generate Screenshots', () => {
       cy.get('[data-cy="saveDialogBtn"]').should('be.enabled')
       cy.get('[data-cy="saveDialogBtn"]').click();
 
-      cy.snap('page-skill-tags')
-
       cy.visit('/administrator/projects/movies/skill-tags/harrypottercollection');
       cy.get('[data-cy="noContent"]').contains('No Skills Added Yet...')
       cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandthePhilosophersStone');
@@ -823,6 +821,29 @@ context('Admin: Generate Screenshots', () => {
       cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandtheHalfBloodPrince');
 
       cy.snap('page-skill-tag')
+
+      cy.visit('/administrator/projects/movies/skill-tags/despicablemecollection');
+      cy.get('[data-cy="noContent"]').contains('No Skills Added Yet...')
+      cy.selectSkill('[data-cy="skillsSelector"]', 'Minions');
+      cy.selectSkill('[data-cy="skillsSelector"]', 'DespicableMe');
+      cy.selectSkill('[data-cy="skillsSelector"]', 'DespicableMe2');
+      cy.selectSkill('[data-cy="skillsSelector"]', 'DespicableMe3');
+
+
+      cy.visit('/administrator/projects/movies/skill-tags/thetwilightcollection');
+      cy.get('[data-cy="noContent"]').contains('No Skills Added Yet...')
+      cy.selectSkill('[data-cy="skillsSelector"]', 'TheTwilightSagaEclipse');
+      cy.selectSkill('[data-cy="skillsSelector"]', 'Twilight');
+      cy.selectSkill('[data-cy="skillsSelector"]', 'TheTwilightSagaNewMoon');
+      cy.selectSkill('[data-cy="skillsSelector"]', 'TheTwilightSagaBreakingDawnPart2');
+
+      cy.visit('/administrator/projects/movies/skill-tags/harrypottercollection/users');
+      cy.wait(1000)
+      cy.snap('page-skill-tag-users')
+
+      cy.visit('/administrator/projects/movies/skill-tags/');
+      cy.wait(1000)
+      cy.snap('page-skill-tags')
 
       cy.deleteSkillTag('harrypottercollection')
       cy.deleteSkillTag('despicablemecollection')
