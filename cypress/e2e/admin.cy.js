@@ -257,7 +257,7 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-user-performed-skills');
     })
 
-    it.only('Gen Project pages - levels', () => {
+    it('Gen Project pages - levels', () => {
         cy.viewport(1400, 800);
 
         cy.visit('/administrator/projects/movies/levels')
