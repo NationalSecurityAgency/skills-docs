@@ -182,9 +182,8 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-project-self_report', '#mainContent1 [data-cy="nav"]');
     });
 
-    it('Skill Tags page', () => {
+    it('Skill Tags from subject page', () => {
         cy.viewport(1350, 1200);
-
         cy.visit('/administrator/projects/movies/subjects/Action')
 
         for (let i = 0; i < 3; i++) {
@@ -193,9 +192,17 @@ context('Admin: Generate Screenshots', () => {
         cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="skillsActionsMenu"] [aria-label="Add Tag"]').click()
 
+        cy.viewport(1350, 550);
         const tagName = 'Two Thumbs Up!'
-        cy.get('[data-cy="newTag"]').clear().type(tagName)
+        cy.get('[data-cy="noTagsMessage"]').should('be.visible')
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
+        cy.wait(1000)
+        cy.get('[data-pc-section="tablist"] [data-pc-name="tab"]').contains('Create New Tag').click()
+        cy.get('[data-cy="tagValue"]').clear().type(tagName)
+        cy.snap('create-new-tag-from-subject-page', '.p-dialog')
         cy.get('[data-cy="saveDialogBtn"]').click()
+
+        cy.viewport(1350, 1200);
 
         for (let i = 0; i < 3; i++) {
             cy.get(`[data-cy="skillsTable"] [data-p-index="${i}"] [data-pc-name="pcrowcheckbox"]`).click()
@@ -203,7 +210,7 @@ context('Admin: Generate Screenshots', () => {
         cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="skillsActionsMenu"] [aria-label="Add Tag"]')
 
-        cy.snap('skill-tags-page')
+        cy.snap('skill-tags-on-subject-page')
 
         cy.viewport(1350, 450);
         cy.visit('/administrator/projects/movies/subjects/Action')

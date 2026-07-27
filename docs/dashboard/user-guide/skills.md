@@ -417,8 +417,11 @@ Select the ``Tag Skill`` button to initiate the process.  After a tag has been a
 removed by selecting the skills you would like to remove the tag from, then click on the ``Action`` button, and then ``Remove Tags``.
 
 ::: tip
+To create a new tag for the first time, click on the "Create New Tag" tab and enter your new tag value.
+![Create new tag](../../screenshots/admin/create-new-tag-from-subject-page.png)
+
 Once a skill tag is created, you can easily reuse it to tag other skills by selecting it from the ``Existing Tag`` drop down menu.
 ![Existing tag menu](../../screenshots/admin/existing-tag-dropdown.png)
 :::
 
-![Tag skills](../../screenshots/admin/skill-tags-page.png)
+![Tag skills](../../screenshots/admin/skill-tags-on-subject-page.png)
