@@ -761,98 +761,20 @@ context('Admin: Generate Screenshots', () => {
 
     })
 
-    Cypress.Commands.add('deleteSkillTag', (tagId, projectId = 'movies') => {
-      cy.request('DELETE', `/admin/projects/${projectId}/skills/tag`, {
-        removeTagFully: true,
-        retainTag: false,
-        skillIds:  [],
-        tagId: tagId
-      });
-    });
-
-    Cypress.Commands.add('selectSkill', (selector, skillId, searchString = '', projId='movies') => {
-        cy.get(selector).blur({force: true})
-        cy.get(selector).click()
-        if (searchString) {
-            cy.get(selector).type(`{selectall}${searchString}`)
-        }
-        cy.get(`[data-cy="skillsSelectionItem-${projId}-${skillId}"]`).click()
-    })
-
     it('page - skill tags', () => {
       cy.visit('/administrator/projects/movies/skill-tags/');
-      cy.get('[data-cy="noContent"]').contains('No Tags Yet')
-
-      cy.get('[data-cy="btn_Skill Tags"]').click()
-      cy.get('[data-cy="tagValue"]').should("have.focus")
-      cy.get('[data-cy="saveDialogBtn"]').should('be.disabled')
-      cy.get('[data-cy="tagValue"]').should('be.visible')
-      cy.get('[data-cy="tagValue"]').type('Despicable Me Collection');
-      cy.get('[data-cy="saveDialogBtn"]').should('be.enabled')
-      cy.get('[data-cy="saveDialogBtn"]').click();
-
-      cy.get('[data-cy="noContent"]').should('not.exist');
-
-      cy.get('[data-cy="btn_Skill Tags"]').click()
-      cy.get('[data-cy="tagValue"]').should("have.focus")
-      cy.get('[data-cy="saveDialogBtn"]').should('be.disabled')
-      cy.get('[data-cy="tagValue"]').should('be.visible')
-      cy.get('[data-cy="tagValue"]').type('The Twilight Collection');
-      cy.get('[data-cy="saveDialogBtn"]').should('be.enabled')
-      cy.get('[data-cy="saveDialogBtn"]').click();
-
-      cy.get('[data-cy="btn_Skill Tags"]').click()
-      cy.get('[data-cy="tagValue"]').should("have.focus")
-      cy.get('[data-cy="saveDialogBtn"]').should('be.disabled')
-      cy.get('[data-cy="tagValue"]').should('be.visible')
-      cy.get('[data-cy="tagValue"]').type('Harry Potter Collection');
-      cy.get('[data-cy="saveDialogBtn"]').should('be.enabled')
-      cy.get('[data-cy="saveDialogBtn"]').click();
-
-      cy.visit('/administrator/projects/movies/skill-tags/harrypottercollection');
-      cy.get('[data-cy="noContent"]').contains('No Skills Added Yet...')
-      cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandthePhilosophersStone');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandtheChamberofSecrets');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandthePrisonerofAzkaban');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandtheDeathlyHallowsPart2');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandtheGobletofFire');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandtheDeathlyHallowsPart1');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandtheOrderofthePhoenix');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'HarryPotterandtheHalfBloodPrince');
-
-      cy.snap('page-skill-tag')
-
-      cy.visit('/administrator/projects/movies/skill-tags/despicablemecollection');
-      cy.get('[data-cy="noContent"]').contains('No Skills Added Yet...')
-      cy.selectSkill('[data-cy="skillsSelector"]', 'Minions');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'DespicableMe');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'DespicableMe2');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'DespicableMe3');
-
-
-      cy.visit('/administrator/projects/movies/skill-tags/thetwilightcollection');
-      cy.get('[data-cy="noContent"]').contains('No Skills Added Yet...')
-      cy.selectSkill('[data-cy="skillsSelector"]', 'TheTwilightSagaEclipse');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'Twilight');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'TheTwilightSagaNewMoon');
-      cy.selectSkill('[data-cy="skillsSelector"]', 'TheTwilightSagaBreakingDawnPart2');
-
-      cy.visit('/administrator/projects/movies/skill-tags/harrypottercollection/users');
-      cy.wait(1000)
-      cy.snap('page-skill-tag-users')
-
       cy.visit('/administrator/projects/movies/skill-tags/');
       cy.wait(1000)
       cy.snap('page-skill-tags')
 
-      cy.deleteSkillTag('harrypottercollection')
-      cy.deleteSkillTag('despicablemecollection')
-      cy.deleteSkillTag('thetwilightcollection')
-    })
+      cy.visit('/administrator/projects/movies/skill-tags/harrypottercollection');
+      cy.wait(1000)
+      cy.snap('page-skill-tag')
 
-    // it.only('page - single skill tag', () => {
-    //   cy.snap('page-skill-tag.png')
-    // })
+      cy.visit('/administrator/projects/movies/skill-tags/harrypottercollection/users');
+      cy.wait(1000)
+      cy.snap('page-skill-tag-users')
+    })
 
     it('page - admin groups', () => {
         cy.visit('/administrator/adminGroups/FancyGroup')
