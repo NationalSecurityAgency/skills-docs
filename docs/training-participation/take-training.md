@@ -358,8 +358,8 @@ You can always review your survey completions on the [Quizzes and Surveys Histor
 
 ## Training Wide Search
 
-Training-wide search functionality enables users to quickly find and navigate to any skill, group, subject, or badge by name.
-This is an effective method to jump directly to any skill, group, subject, or badge from any page of the training.
+Training-wide search functionality enables users to quickly find and navigate to any skill, group, subject, tag, or badge by name.
+This is an effective method to jump directly to any skill, group, subject, tag, or badge from any page of the training.
 
 The search can be activated either through a dedicated search button in the top right corner of the training or by using customizable keyboard shortcuts.
 - To initiate the search via the search button, click the **Search** button in the top right corner of the training page.
@@ -370,9 +370,9 @@ Once the search is initiated, the search modal will appear in the middle of the 
 ![component-training-wide-search.png](../screenshots/progress-and-ranking/component-training-wide-search.png)
 
 To use the search:
-- Type the name of the skill, group, subject, or badge you are searching for into the search box.
+- Type the name of the skill, group, subject, tag, or badge you are searching for into the search box.
 - Use the up and down arrow keys to navigate through the search results.
-- Press **Enter** to select and navigate directly to a skill, group, subject, or badge page.
+- Press **Enter** to select and navigate directly to a skill, group, subject, tag, or badge page.
 - Press **Escape** to close the search modal.
 
 ::: tip Shortcut Customization
