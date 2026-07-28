@@ -125,6 +125,8 @@ When Skill Tags are configured for a training, they may appear in several traine
 - **Skill page**: Displays tags assigned to the selected skill
 - **Training-wide search**: Allows you to search for and navigate directly to tag progress pages
 
+![Skill Tags List](../screenshots/progress-and-ranking/skill-tags-list.png)
+
 Skill Tags provide another way to explore training content beyond subjects, badges, and skill groups. For example, a single tag can bring together related skills from multiple subjects.
 
 ### All Skill Tags Progress Page
@@ -138,6 +140,8 @@ Use the All Skill Tags progress page to:
 - Identify tagged collections of skills that still need work
 - Navigate to a specific tag for more details
 
+![Skill Tags Page](../screenshots/progress-and-ranking/page-skill-tags.png)
+
 ### Single Skill Tag Progress Page
 
 Clicking a tag opens a dedicated progress page for that specific tag. The Single Skill Tag progress page tracks your progress through all skills associated with that tag.
@@ -150,6 +154,8 @@ From a tag progress page, you can:
 - Understand how tagged skills relate across the training
 
 This is useful when you want to focus on a particular topic or training collection without needing to browse each subject individually.
+
+![Skill Tag Page](../screenshots/progress-and-ranking/page-skill-tag.png)
 
 ::: tip
 You can also use [Training Wide Search](/training-participation/take-training.html#training-wide-search) to quickly find a tag by name and jump directly to its progress page.
