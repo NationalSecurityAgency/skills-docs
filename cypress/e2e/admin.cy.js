@@ -85,7 +85,7 @@ context('Admin: Generate Screenshots', () => {
 
     it('Gen Subject page with custom viewport', () => {
         // use custom ratio
-        cy.viewport(1350, 800);
+        cy.viewport(1400, 800);
 
         // subjects page
         cy.visit('/administrator/projects/movies')
@@ -99,7 +99,7 @@ context('Admin: Generate Screenshots', () => {
     });
 
     it('New Subject modal', () => {
-        cy.viewport(1350, 950);
+        cy.viewport(1400, 950);
 
         cy.visit('/administrator/projects/movies')
         cy.get('[data-cy="subjectCard-Action"]');
@@ -111,7 +111,7 @@ context('Admin: Generate Screenshots', () => {
     });
 
     it('New Badge modal', () => {
-        cy.viewport(1350, 1200);
+        cy.viewport(1400, 1200);
 
         cy.visit('/administrator/projects/movies/badges')
         cy.get('[data-cy="btn_Badges"]').click();
@@ -172,7 +172,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Self Report page', () => {
-        cy.viewport(1350, 1200);
+        cy.viewport(1400, 1200);
 
         cy.visit('/administrator/projects/movies/badges')
 
@@ -182,9 +182,8 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-project-self_report', '#mainContent1 [data-cy="nav"]');
     });
 
-    it('Skill Tags page', () => {
-        cy.viewport(1350, 1200);
-
+    it('Skill Tags from subject page', () => {
+        cy.viewport(1400, 1200);
         cy.visit('/administrator/projects/movies/subjects/Action')
 
         for (let i = 0; i < 3; i++) {
@@ -193,9 +192,17 @@ context('Admin: Generate Screenshots', () => {
         cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="skillsActionsMenu"] [aria-label="Add Tag"]').click()
 
+        cy.viewport(1400, 550);
         const tagName = 'Two Thumbs Up!'
-        cy.get('[data-cy="newTag"]').clear().type(tagName)
+        cy.get('[data-cy="noTagsMessage"]').should('be.visible')
+        cy.get('[data-pc-name="pcmaximizebutton"]').click()
+        cy.wait(1000)
+        cy.get('[data-pc-section="tablist"] [data-pc-name="tab"]').contains('Create New Tag').click()
+        cy.get('[data-cy="tagValue"]').clear().type(tagName)
+        cy.snap('create-new-tag-from-subject-page', '.p-dialog')
         cy.get('[data-cy="saveDialogBtn"]').click()
+
+        cy.viewport(1400, 1200);
 
         for (let i = 0; i < 3; i++) {
             cy.get(`[data-cy="skillsTable"] [data-p-index="${i}"] [data-pc-name="pcrowcheckbox"]`).click()
@@ -203,9 +210,9 @@ context('Admin: Generate Screenshots', () => {
         cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="skillsActionsMenu"] [aria-label="Add Tag"]')
 
-        cy.snap('skill-tags-page')
+        cy.snap('skill-tags-on-subject-page')
 
-        cy.viewport(1350, 450);
+        cy.viewport(1400, 450);
         cy.visit('/administrator/projects/movies/subjects/Action')
 
         for (let i = 0; i < 3; i++) {
@@ -228,6 +235,7 @@ context('Admin: Generate Screenshots', () => {
 
     it('Gen Learning Path', () => {
         cy.visit('/administrator/projects/movies/learning-path')
+        cy.viewport(1400, 1200);
         cy.get('[data-cy="graphLegend"]')
         cy.get('[data-cy="learningPathTable"] [data-cy="skillsBTableTotalRows"]')
         cy.wait(5000);
@@ -250,7 +258,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Project pages - levels', () => {
-        cy.viewport(1350, 800);
+        cy.viewport(1400, 800);
 
         cy.visit('/administrator/projects/movies/levels')
         cy.get('[data-cy="editLevelButton"]').should('have.length', 5);
@@ -258,14 +266,14 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Project pages - skill metrics', () => {
-        // cy.viewport(1350, 1200);
+        // cy.viewport(1400, 1200);
         cy.visit('/administrator/projects/movies/metrics/skills')
         cy.get('[data-cy="skillsNavigator-table"]');
         cy.snap('page-project-metrics-skills');
     })
 
     it('Gen Project pages - subjects metrics', () => {
-        // cy.viewport(1350, 1200);
+        // cy.viewport(1400, 1200);
         cy.visit('/administrator/projects/movies/metrics/subjects')
 
         cy.contains('Number of users for each level for each subject');
@@ -277,7 +285,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Project pages - achievements metrics', () => {
-        // cy.viewport(1350, 1200);
+        // cy.viewport(1400, 1200);
         cy.visit('/administrator/projects/movies/metrics/achievements')
         cy.contains('Overall Levels');
         cy.get('[data-cy="achievementsNavigator-table"]')
@@ -715,7 +723,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Create self report skills', () => {
-        cy.viewport(1350, 1200);
+        cy.viewport(1400, 1200);
 
         cy.visit('/administrator/projects/movies/subjects/Action/')
         cy.get('[data-cy="newSkillButton"]').click()
@@ -751,6 +759,21 @@ context('Admin: Generate Screenshots', () => {
 
         cy.removeApprover()
 
+    })
+
+    it('page - skill tags', () => {
+      cy.visit('/administrator/projects/movies/skill-tags/');
+      cy.visit('/administrator/projects/movies/skill-tags/');
+      cy.wait(1000)
+      cy.snap('page-skill-tags')
+
+      cy.visit('/administrator/projects/movies/skill-tags/harrypottercollection');
+      cy.wait(1000)
+      cy.snap('page-skill-tag')
+
+      cy.visit('/administrator/projects/movies/skill-tags/harrypottercollection/users');
+      cy.wait(1000)
+      cy.snap('page-skill-tag-users')
     })
 
     it('page - admin groups', () => {

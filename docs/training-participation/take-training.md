@@ -113,6 +113,53 @@ Use the expand/collapse all groups controls at the top of the skill list to mana
 You can click on any Skill Group title to navigate to its dedicated page and view its details and skills.
 :::
 
+## Skill Tags
+
+Training creators may assign Skill Tags to skills to organize related training across subjects. Tags can represent topics, learning tracks, collections, technologies, competencies, or any other grouping that helps describe how skills are related.
+
+When Skill Tags are configured for a training, they may appear in several trainee-facing views:
+
+- **Training overview page**: Displays tags available across the entire training
+- **Subject overview pages**: Displays tags associated with skills in that subject
+- **Skill lists**: Displays tags on individual skills and enables filtering by tag
+- **Skill page**: Displays tags assigned to the selected skill
+- **Training-wide search**: Allows you to search for and navigate directly to tag progress pages
+
+![Skill Tags List](../screenshots/progress-and-ranking/skill-tags-list.png)
+
+Skill Tags provide another way to explore training content beyond subjects, badges, and skill groups. For example, a single tag can bring together related skills from multiple subjects.
+
+### All Skill Tags Progress Page
+
+When a training includes Skill Tags, you can view progress across all tags in the project. This page provides a tag-focused summary of your progress and helps you quickly identify areas where related skills are grouped together.
+
+Use the All Skill Tags progress page to:
+
+- View all tags available in the training
+- See your progress for each tag
+- Identify tagged collections of skills that still need work
+- Navigate to a specific tag for more details
+
+![Skill Tags Page](../screenshots/progress-and-ranking/page-skill-tags.png)
+
+### Single Skill Tag Progress Page
+
+Clicking a tag opens a dedicated progress page for that specific tag. The Single Skill Tag progress page tracks your progress through all skills associated with that tag.
+
+From a tag progress page, you can:
+
+- View all skills associated with the tag
+- Track earned points and overall completion for that tag
+- Open individual skills to continue training
+- Understand how tagged skills relate across the training
+
+This is useful when you want to focus on a particular topic or training collection without needing to browse each subject individually.
+
+![Skill Tag Page](../screenshots/progress-and-ranking/page-skill-tag.png)
+
+::: tip
+You can also use [Training Wide Search](/training-participation/take-training.html#training-wide-search) to quickly find a tag by name and jump directly to its progress page.
+:::
 
 ## Badge Page
 
@@ -358,8 +405,8 @@ You can always review your survey completions on the [Quizzes and Surveys Histor
 
 ## Training Wide Search
 
-Training-wide search functionality enables users to quickly find and navigate to any skill, group, subject, or badge by name.
-This is an effective method to jump directly to any skill, group, subject, or badge from any page of the training.
+Training-wide search functionality enables users to quickly find and navigate to any skill, group, subject, tag, or badge by name.
+This is an effective method to jump directly to any skill, group, subject, tag, or badge from any page of the training.
 
 The search can be activated either through a dedicated search button in the top right corner of the training or by using customizable keyboard shortcuts.
 - To initiate the search via the search button, click the **Search** button in the top right corner of the training page.
@@ -370,9 +417,9 @@ Once the search is initiated, the search modal will appear in the middle of the 
 ![component-training-wide-search.png](../screenshots/progress-and-ranking/component-training-wide-search.png)
 
 To use the search:
-- Type the name of the skill, group, subject, or badge you are searching for into the search box.
+- Type the name of the skill, group, subject, tag, or badge you are searching for into the search box.
 - Use the up and down arrow keys to navigate through the search results.
-- Press **Enter** to select and navigate directly to a skill, group, subject, or badge page.
+- Press **Enter** to select and navigate directly to a skill, group, subject, tag, or badge page.
 - Press **Escape** to close the search modal.
 
 ::: tip Shortcut Customization

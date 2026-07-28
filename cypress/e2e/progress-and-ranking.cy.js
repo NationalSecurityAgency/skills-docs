@@ -220,6 +220,23 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.snap('contact_admins_form', '[data-cy="contactProjectOwnerDialog"]');
   })
 
+  it('Gen Project Tag pages', () => {
+    cy.intercept('GET', `/api/projects/movies/tags/summary`)
+      .as('loadSkillTagsSummary')
 
+    cy.intercept('GET', `/api/projects/movies/tags/harrypottercollection/summary`)
+      .as('loadSingleSkillTagSummary')
+    cy.visit('/progress-and-rankings/projects/movies');
+    cy.wait('@getConfig');
+    cy.snap('skill-tags-list', '[data-cy="skillTags"]');
+
+    cy.get('[data-cy="viewProjectTagsBtn"]').click()
+    cy.wait('@loadSkillTagsSummary')
+    cy.snap('page-skill-tags');
+
+    cy.get('[data-cy="tagLink-harrypottercollection"]').click()
+    cy.wait('@loadSingleSkillTagSummary')
+    cy.snap('page-skill-tag');
+  });
 
 })
