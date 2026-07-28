@@ -407,6 +407,10 @@ You can also move entire Skill Groups. Visit the [Moving Groups Section](/dashbo
 
 ## Skill Tags
 
+::: note
+Skill Tags can now also be managed at the project level. Visit the [Project-Level Skill Tag Management Section](/dashboard/user-guide/skills-tags.html) to learn more.
+:::
+
 Skill tagging is a feature that allows administrators to add one or more custom "tags" to skills.
 Adding tags to skills can help to categorize and group skills, giving users another way to search or filter a particular set of skills.
 Skill tags are visualized in the Skills Display to give users consuming the training another way to comprehend, categorize and filter skills.
