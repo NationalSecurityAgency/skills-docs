@@ -124,6 +124,7 @@ sidebar = sidebar.concat([{
             '/dashboard/user-guide/subjects',
             '/dashboard/user-guide/skills',
             '/dashboard/user-guide/self-reporting',
+            '/dashboard/user-guide/skills-tags',
             '/dashboard/user-guide/skills-catalog',
             '/dashboard/user-guide/skills-groups',
             '/dashboard/user-guide/rich-text-editor',

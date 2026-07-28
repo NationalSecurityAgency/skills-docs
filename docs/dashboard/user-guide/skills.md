@@ -407,6 +407,10 @@ You can also move entire Skill Groups. Visit the [Moving Groups Section](/dashbo
 
 ## Skill Tags
 
+::: note
+Skill Tags can now also be managed at the project level. Visit the [Project-Level Skill Tag Management Section](/dashboard/user-guide/skills-tags.html) to learn more.
+:::
+
 Skill tagging is a feature that allows administrators to add one or more custom "tags" to skills.
 Adding tags to skills can help to categorize and group skills, giving users another way to search or filter a particular set of skills.
 Skill tags are visualized in the Skills Display to give users consuming the training another way to comprehend, categorize and filter skills.
@@ -417,8 +421,11 @@ Select the ``Tag Skill`` button to initiate the process.  After a tag has been a
 removed by selecting the skills you would like to remove the tag from, then click on the ``Action`` button, and then ``Remove Tags``.
 
 ::: tip
+To create a new tag for the first time, click on the "Create New Tag" tab and enter your new tag value.
+![Create new tag](../../screenshots/admin/create-new-tag-from-subject-page.png)
+
 Once a skill tag is created, you can easily reuse it to tag other skills by selecting it from the ``Existing Tag`` drop down menu.
 ![Existing tag menu](../../screenshots/admin/existing-tag-dropdown.png)
 :::
 
-![Tag skills](../../screenshots/admin/skill-tags-page.png)
+![Tag skills](../../screenshots/admin/skill-tags-on-subject-page.png)
