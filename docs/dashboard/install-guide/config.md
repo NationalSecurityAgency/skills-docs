@@ -132,7 +132,21 @@ skills.config.ui.maxPointIncrement=10000
 skills.config.ui.maxNumPerformToCompletion=10000
 # maximum number of occurrences within a time window
 skills.config.ui.maxNumPointIncrementMaxOccurrences=999
+# Maximum badge bonus expiration duration (525,600 minutes = 365 days)
+skills.config.ui.maxBadgeBonusInMinutes=525600
 ```
+
+Bulk skill operations have separate limits:
+
+```properties
+# Maximum number of skills imported from the Skill Catalog in one bulk import
+skills.config.ui.maxSkillsInBulkImport=50
+# Maximum number of user/skill combinations in one bulk skill-reporting request
+skills.config.ui.maxSkillBatchSize=200
+```
+
+For bulk reporting, the batch size is the number of users multiplied by the number of skills.
+For example, reporting 10 skills for 20 users reaches the default limit of 200.
 
 Learning path validation checks prerequisite relationships for circular dependencies:
 
@@ -318,6 +332,13 @@ The project contact feature requires email settings to be configured. If email s
 Progress & Ranking views will be directed to the support center page instead.
 :::
 
+Limit the length of messages sent through the project contact form:
+
+```properties
+# Maximum number of characters in a message to project owners
+skills.config.ui.maxContactOwnersMessageLength=2500
+```
+
 #### Support Links
 You can display options for your users to reach out to the support team (ex. email, chat, ticketing center, etc).
 
@@ -366,6 +387,14 @@ skills.config.ui.maxSkillNameLength=100
 skills.config.ui.maxSubjectNameLength=50
 # Maximum number of characters for Level's name
 skills.config.ui.maxLevelNameLength=50
+# Maximum number of characters for an admin group name
+skills.config.ui.maxAdminGroupNameLength=100
+# Maximum number of characters for a custom project label (ex. Project, Subject, Skill)
+skills.config.ui.maxCustomLabelLength=20
+# Maximum number of characters for a skill tag
+skills.config.ui.maxSkillTagLength=50
+# Maximum number of characters for the Root Help Url configured in project settings
+skills.config.ui.maxHostLength=50
 # Minimum number of characters for id (ex. Subject, Badge, Skill, etc..)
 skills.config.ui.minIdLength=3
 # Maximum number of characters for id (ex. Subject, Badge, Skill, etc..)
@@ -383,6 +412,23 @@ skills.config.ui.paragraphValidationMessage=
 skills.config.ui.nameValidationRegex=
 # Message to display if regex validation fails
 skills.config.ui.nameValidationMessage=
+
+### Self-Reporting and Approval Workload
+
+Configure message lengths and user-tag limits used by self-reporting and approval workflows. These are the default values:
+
+```properties
+# Maximum number of characters in a self-report message
+# Defaults to the configured descriptionMaxLength (2,000,000 with packaged defaults)
+skills.config.ui.maxSelfReportMessageLength=${skills.config.ui.descriptionMaxLength}
+# Maximum number of characters in a self-report rejection message
+skills.config.ui.maxSelfReportRejectionMessageLength=250
+# Maximum number of characters in a user-tag key for approval workload configuration
+skills.config.ui.maxTagKeyLengthInApprovalWorkloadConfig=15
+# Maximum number of characters in a user-tag value for approval workload configuration
+skills.config.ui.maxTagValueLengthInApprovalWorkloadConfig=10
+# Number of roles/approvers requested per page by role and approval management views
+skills.config.ui.maxRolePageSize=200
 ```
 
 ### Latency Profiling
@@ -715,6 +761,24 @@ When enabled the default landing page can be customized:
 skills.config.ui.defaultLandingPage=progress
 ```
 
+Additional Dashboard and Skills Display presentation settings:
+
+```properties
+# Number of administered projects at which the Dashboard initially switches to the card-based view
+skills.config.ui.numProjectsToStartShowingAsCards=6
+# Disable achievement celebration confetti
+skills.config.ui.disableEncouragementsConfetti=false
+# Fraction of a motivational skill's inactivity period to wait before showing its expiration warning
+skills.config.ui.motivationalSkillWarningGracePeriod=0.3
+# Days after a badge's end date before an unearned badge is removed from the active Skills Display list
+skills.config.ui.daysToRollOff=2
+```
+
+For example, with a 10-day inactivity period, the default motivational skill warning grace period is 3 days.
+The warning appears after more than 3 days of inactivity. This setting controls warning visibility, not the
+skill's expiration date. Badge roll-off changes display visibility without deleting the badge definition or earned achievements.
+Restart ``skills-service`` after changing these properties.
+
 ### Upgrade-In-Progress State
 
 In order to safely upgrade the database engine, SkillTree can be easily transitioned to a Upgrade-In-Progress state. 
@@ -783,6 +847,13 @@ With `skills.config.ui.limitAdminAccess` enabled, only users assigned the `Train
 administrative portion of the SkillTree Dashboard.
 
 ### Private Invite Only Projects
+
+Limit the number of email addresses submitted in a project invitation request:
+
+```properties
+# Maximum number of recipients in one project invitation request
+skills.config.ui.maxProjectInviteEmails=50
+```
 
 In the case of Private Invite Only Projects, users are invited to join a project. 
 Invited recipients are emailed a one-time invite code and by default that invite code can be used by any valid user. 
