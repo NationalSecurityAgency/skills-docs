@@ -121,6 +121,39 @@ skills.config.ui.maxNumPerformToCompletion=10000
 skills.config.ui.maxNumPointIncrementMaxOccurrences=999
 ```
 
+### Quiz Limits and Grader Feedback
+
+Configure limits for quiz and survey definitions. The following properties show the default values:
+
+```properties
+# Maximum number of quiz and survey definitions that a single user can be administrator for
+skills.config.ui.maxQuizDefsPerAdmin=1000
+# Maximum number of questions in a quiz or survey
+skills.config.ui.maxQuestionsPerQuiz=500
+# Maximum number of answer options per question
+skills.config.ui.maxAnswersPerQuizQuestion=10
+# Maximum number of characters for a quiz or survey name
+skills.config.ui.maxQuizNameLength=75
+# Maximum number of characters in an author-defined answer option
+# Also applies separately to each term and value in a matching question
+skills.config.ui.maxQuizTextAnswerLength=2000
+# Maximum number of characters in a question's answer hint
+skills.config.ui.maxQuizAnswerHintLength=2000
+```
+
+Trainee responses to text-input questions and grader feedback have separate character limits:
+
+```properties
+# Maximum number of characters in a trainee's response to a text-input question
+skills.config.ui.maxTakeQuizInputTextAnswerLength=50000
+# Maximum number of characters in feedback provided when grading a text-input answer
+skills.config.ui.maxGraderFeedbackMessageLength=50000
+```
+
+``skills.config.ui.maxQuizTextAnswerLength`` limits answer text entered when creating a question;
+``skills.config.ui.maxTakeQuizInputTextAnswerLength`` limits the response entered when taking a quiz or survey.
+Restart ``skills-service`` after changing these properties.
+
 ### Dashboard: User Account Thresholds (Pass Auth Mode Only)
 
 ```properties
@@ -213,7 +246,7 @@ Any <external-url label="Free Font Awesome Icons" url="https://fontawesome.com/v
 Here are some basic thresholds that are applied at the Dashboard UI and the backend:
 ```properties
 # Maximum number of characters for a description (ex. Subject, Badge, Skill, etc..)
-skills.config.ui.descriptionMaxLength=2000
+skills.config.ui.descriptionMaxLength=2000000
 
 # Minimum number of characters for the name (ex. Subject, Badge, Skill, etc..) 
 skills.config.ui.minNameLength=3
@@ -675,10 +708,10 @@ skills.openai.key=your-api-key-here
 # skills.config.ui.openaiModelDefaultTemperature=0.5
 
 # Required: Model used for AI grading
-skills.config.ui.gradingModel=gpt-4
+skills.config.gradingModel=gpt-4
 
 # Optional: Temperature used for AI grading setting (default: 0.0)
-# skills.config.ui.gradingModelTemperature=0.5
+# skills.config.gradingModelTemperature=0.5
 
 # Optional: Custom footer message to display in the AI Assistant interface
 # skills.config.ui.openaiFooterMsg=AI-generated content should be reviewed before use
