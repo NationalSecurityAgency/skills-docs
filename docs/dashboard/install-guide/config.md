@@ -494,6 +494,46 @@ skills.config.ui.matomoUrl: <Matomo Host such as https://my-matomo-server.com>
 skills.config.ui.matomoSiteId: <Matomo Site ID>
 ```
 
+#### Skill API Usage Tracking
+
+In addition to browser activity, SkillTree can report skill-reporting API usage to Matomo from the backend.
+This tracking is disabled by default and uses the Matomo host and site ID configured above. To enable it:
+
+```properties
+# Enable backend reporting of skill API usage to Matomo (default: false)
+skills.matomo.enableSkillApiUsage=true
+```
+
+Customize the tracking request with the following properties. These are the default values:
+
+```properties
+# Tracking endpoint path appended to skills.config.ui.matomoUrl
+skills.matomo.endpoint=/matomo.php
+# Matomo Tracking API's rec parameter; 1 instructs Matomo to record the visit
+skills.matomo.rec=1
+# Prefix for the action name sent to Matomo
+skills.matomo.actionRootName=Report Skill
+```
+
+The backend sends tracking requests to ``<Matomo host>/<tracking endpoint>``. Each action name follows
+the format ``<actionRootName> / <projectId> / <skillId>``; for example, ``Report Skill / SafetyTraining / FirstAid``.
+Skill reporting for the built-in Inception project is excluded from this backend tracking.
+
+Tracking requests are sent asynchronously. Configure the reporting executor using these defaults:
+
+```properties
+# Core number of reporting threads
+skills.matomo.minNumOfThreads=3
+# Maximum number of reporting threads
+skills.matomo.maxNumOfThreads=10
+# Maximum number of reporting tasks waiting in the queue
+skills.matomo.queueCapacity=20000
+```
+
+If the reporting executor cannot accept a task because it is saturated, that tracking request is dropped and an error
+is logged. Failures when sending requests to Matomo are also logged.
+Restart ``skills-service`` after changing these properties.
+
 ### UI Logging for Debugging
 
 SkillTree can be configured to log predefined UI events for debugging purposes. 
