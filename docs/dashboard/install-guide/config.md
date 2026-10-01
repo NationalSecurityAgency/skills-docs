@@ -392,6 +392,51 @@ To enable UI logging, configure the following property:
 skills.config.ui.logLevel=TRACE
 ```
 
+### Skills Client Logging
+
+SkillTree can receive log messages from Skills Client integrations through ``/public/log`` and write them to the backend logs.
+Client logging is disabled by default. To enable it, configure the following properties:
+
+```properties
+# Enable logging of messages submitted by Skills Client integrations (default: false)
+skills.config.client.loggingEnabled=true
+# Client logging level (default: DEBUG)
+skills.config.client.loggingLevel=DEBUG
+```
+
+``skills.config.client.loggingLevel`` is provided to the client as part of its configuration. The backend writes accepted messages
+at their submitted level: ``TRACE``, ``DEBUG``, ``INFO``, ``WARN``, or ``ERROR``. The backend logger must also be configured
+to display that level. For example, to include DEBUG messages:
+
+```properties
+logging.level.skills.controller.ClientLoggingController=DEBUG
+```
+
+The following properties control message validation and request limits. These are the default values:
+
+```properties
+# Maximum number of characters in an individual log message
+skills.config.client.loggingMaxMessageLength=2000
+# Maximum log requests per remote IP address during a one-minute window
+skills.config.client.loggingMaxRequestsPerMinute=60
+# Maximum number of remote IP addresses retained in the rate-limit cache
+skills.config.client.loggingMaxTrackedClients=10000
+```
+
+Messages that are empty, exceed the message length limit, or specify an unsupported level are rejected with HTTP ``400``.
+Newlines and control characters in accepted messages are replaced with spaces before logging.
+When client logging is disabled, requests to ``/public/log`` are acknowledged without writing client messages to the backend logs.
+
+:::tip
+Rate limits are held in memory per ``skills-service`` instance and reset on restart. In addition to the per-IP limit,
+each instance enforces a global limit of 100 times ``skills.config.client.loggingMaxRequestsPerMinute``
+(6,000 requests per minute with the default configuration). Requests exceeding either limit receive HTTP ``429``.
+Per-IP counters expire after two minutes of inactivity and can be evicted when the cache reaches ``loggingMaxTrackedClients``.
+The remote IP is the address seen by the service; clients sharing a proxy address may share the same allowance.
+:::
+
+Restart ``skills-service`` after changing these properties.
+
 ### JVM Heap
 These are System Properties.
 ```properties
