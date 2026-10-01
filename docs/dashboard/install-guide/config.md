@@ -412,6 +412,7 @@ skills.config.ui.paragraphValidationMessage=
 skills.config.ui.nameValidationRegex=
 # Message to display if regex validation fails
 skills.config.ui.nameValidationMessage=
+```
 
 ### Self-Reporting and Approval Workload
 
@@ -430,6 +431,107 @@ skills.config.ui.maxTagValueLengthInApprovalWorkloadConfig=10
 # Number of roles/approvers requested per page by role and approval management views
 skills.config.ui.maxRolePageSize=200
 ```
+
+When an approval request has no eligible administrators or approvers subscribed to approval-request emails,
+SkillTree can create a project issue to alert project administrators:
+
+```properties
+# Create a project issue when no subscribed approval-email recipients remain (default: true)
+skills.selfReport.noEmailableAdmins.create-project-issue=true
+```
+
+### Notifications
+
+#### Email Dispatch and Retry
+
+Email notifications require configured [email settings](/dashboard/user-guide/settings.html#email-settings).
+Configure dispatch, batching, and failed-notification retention using these defaults:
+
+```properties
+# Dispatch new email notifications every minute
+skills.config.notifications.dispatchSchedule=0 * * * * *
+# Retry failed email notifications every hour
+skills.config.notifications.dispatchRetrySchedule=0 0 * * * *
+# Maximum recipients per queued notification batch
+skills.config.notifications.maxRecipients=50
+# Retain failed notifications for this many seconds (172,800 seconds = 2 days)
+skills.config.notifications.retainFailedNotificationsForNumSecs=172800
+```
+
+The schedules use Spring's six-field cron format (seconds, minutes, hours, day of month, month, day of week).
+Large notification recipient lists are split into batches of ``maxRecipients``. This property also limits
+the number of recipients accepted by the contact-users operation.
+Failed notifications that exceed the retention period measured from the notification record's creation time are removed
+when another send attempt fails.
+
+#### Dashboard Notifications
+
+Limit the number of latest in-app notifications returned for the current user:
+
+```properties
+# Maximum Dashboard notifications returned, ordered newest first
+skills.config.webNotifications.maxNumToReturn=20
+```
+
+### Background Tasks and Maintenance
+
+#### Asynchronous Task Scheduling and Retry
+
+Configure the initial delay and retry policy for one-time tasks, such as Skill Catalog synchronization,
+catalog import finalization, and removal of a user's skill events:
+
+```properties
+# Initial delay before a one-time task is scheduled to run, in seconds
+skills.config.taskSchedulingDelayInSeconds=5
+# Retry limit for general one-time tasks
+skills.config.taskMaxRetries=6
+```
+
+Retry delays use ``skills.config.exponentialBackOffSeconds`` (default: ``1`` for general tasks) as the base delay
+and ``skills.config.exponentialBackOffRate`` (default: ``2`` for general tasks) as the backoff multiplier.
+For example, explicitly setting these properties configures a base delay of 5 seconds and a multiplier of 2:
+
+```properties
+skills.config.exponentialBackOffSeconds=5
+skills.config.exponentialBackOffRate=2
+```
+
+:::tip
+These two backoff properties also configure AI grading retries. When omitted, AI grading uses different
+fallback defaults: a base delay of 1,800 seconds and a multiplier of 1. Explicitly setting either property
+overrides its fallback for both general tasks and AI grading.
+:::
+
+Tasks explicitly marked as non-retryable stop immediately instead of following this retry policy.
+
+#### Expired User Tokens and Database Locks 
+
+Configure removal of old user tokens and database lock records:
+
+```properties
+# Remove tokens whose expiration date is more than this many days in the past
+skills.config.userTokenCleanupDays=14
+# Token cleanup schedule: daily at midnight
+skills.config.cleanupExpiredTokensSchedule=0 0 0 * * *
+# Remove database lock records older than this many days
+skills.config.databaseLockCleanupDays=14
+# Database lock cleanup schedule: daily at 01:00
+skills.config.cleanupDatabaseLocksSchedule=0 0 1 * * *
+```
+
+These schedules use Spring's six-field cron format.
+
+#### Unachievable Levels
+
+Configure the recurring task that identifies levels users cannot achieve:
+
+```properties
+# Identify unachievable levels daily at 23:45
+skills.config.unachievableLevelIdentificationSchedule=DAILY|23:45
+```
+
+This task uses the database scheduler's schedule format, such as ``DAILY|HH:mm``, rather than a bare Spring cron expression.
+Restart ``skills-service`` after changing task or maintenance properties.
 
 ### Latency Profiling
 
@@ -779,6 +881,50 @@ The warning appears after more than 3 days of inactivity. This setting controls 
 skill's expiration date. Badge roll-off changes display visibility without deleting the badge definition or earned achievements.
 Restart ``skills-service`` after changing these properties.
 
+#### Point History and Event Compaction
+
+Configure how far back project and subject point-history responses look:
+
+```properties
+# Maximum point-history lookback in days (default: 1,825 days)
+skills.config.ui.pointHistoryInDays=1825
+```
+
+This limits returned point history; it does not delete older records.
+Daily user-event statistics are compacted into weekly statistics after a configurable age:
+
+```properties
+# Age in days after which daily user-event statistics are compacted into weekly statistics
+skills.config.compactDailyEventsOlderThan=30
+# Compaction schedule: every second during the 00:02 minute each day
+skills.config.eventCompactionSchedule=* 2 0 * * *
+```
+
+The compaction schedule uses Spring's six-field cron format. To run once daily at 00:02 instead,
+set ``skills.config.eventCompactionSchedule=0 2 0 * * *``.
+
+:::tip
+Increasing ``skills.config.compactDailyEventsOlderThan`` after compaction can hide weekly statistics that now
+fall inside the daily-statistics window. Decreasing it can temporarily hide older daily statistics until
+the next compaction run. Choose this threshold before accumulating compacted history where possible.
+:::
+
+### Skill Achievement Expiration
+
+Configure the recurring achievement-expiration task and the warning window for skills that expire after inactivity:
+
+```properties
+# Process achievement expiration daily at 01:00 using the database scheduler's schedule format
+skills.config.expireUserAchievementsSchedule=DAILY|01:00
+# Fraction of the inactivity-expiration period used to calculate the warning window
+skills.config.dailySkillExpirationNotificationThreshold=0.1
+```
+
+The warning window is the inactivity period multiplied by ``dailySkillExpirationNotificationThreshold``, rounded
+to the nearest whole day and bounded between 1 and 7 days. For example, a 30-day inactivity period produces
+a 3-day warning window with the default configuration. The threshold affects notifications, not the skill's expiration date.
+The expiration task uses a database-scheduler schedule, such as ``DAILY|HH:mm``, rather than a bare Spring cron expression.
+
 ### Upgrade-In-Progress State
 
 In order to safely upgrade the database engine, SkillTree can be easily transitioned to a Upgrade-In-Progress state. 
@@ -866,6 +1012,20 @@ prior giving access to that private project.
 skills.authorization.invite.validateEmail=true
 ```
 
+#### Invitation Cleanup
+
+Expired or claimed invitations are retained before being removed by a recurring cleanup task:
+
+```properties
+# Retention period for expired or claimed invitations (ISO-8601 duration; P30D = 30 days)
+skills.config.projectInvites.retention-time=P30D
+# Invitation cleanup schedule: daily at 23:30
+skills.config.inviteCleanupSchedule=DAILY|23:30
+```
+
+The retention period controls cleanup of expired or claimed invite records; it does not set the lifetime of an active invitation.
+The schedule uses the database scheduler's format, such as ``DAILY|HH:mm``, rather than a bare Spring cron expression.
+
 ### Project Expiration
 
 SkillTree allows users to easily experiment with training profiles by creating new projects or copying existing ones.
@@ -876,6 +1036,8 @@ SkillTree provides a project expiration feature to automatically remove abandone
 You can modify how the project expiration feature works by configuring the following properties:
 
 ```properties
+# Enable the scheduled unused-project expiration process (default: true)
+skills.config.unusedProjectDeletionEnabled=true
 # Projects are considered for removal after this many days of inactivity
 skills.config.expireUnusedProjectsOlderThan: 180
 # After projects are marked for removal, they will not be removed for this many days.
@@ -884,6 +1046,9 @@ skills.config.expirationGracePeriod: 7
 # Project expiration schedule
 skills.config.projectExpirationSchedule: "0 4 0 * * *"
 ```
+
+Set ``skills.config.unusedProjectDeletionEnabled=false`` to disable the scheduled process, including marking
+unused projects for removal, sending its notifications, and deleting projects after the grace period.
 
 If a project has not been used for `expireUnusedProjectsOlderThan` days, it is flagged for removal.
 Activity includes editing project definitions on the administration panel or trainees reporting skills.
@@ -925,10 +1090,10 @@ skills.openai.key=your-api-key-here
 # skills.config.ui.openaiModelDefaultTemperature=0.5
 
 # Required: Model used for AI grading
-skills.config.gradingModel=gpt-4
+skills.openai.gradingModel=gpt-4
 
 # Optional: Temperature used for AI grading setting (default: 0.0)
-# skills.config.gradingModelTemperature=0.5
+# skills.openai.gradingModelTemperature=0.5
 
 # Optional: Custom footer message to display in the AI Assistant interface
 # skills.config.ui.openaiFooterMsg=AI-generated content should be reviewed before use
@@ -938,7 +1103,69 @@ skills.config.gradingModel=gpt-4
 AI prompts can be customized via `Settings -> AI Prompts` in the Dashboard, which requires the `root` role.
 :::
 
-##### Request and Consumption Limits
+#### AI Grading
+
+``skills.openai.gradingModel`` selects the server-side model for grading text-input quiz answers and is unconfigured
+by default. ``skills.openai.gradingModelTemperature`` defaults to ``0.0``.
+Configure confidence, answer length, and retries with the following defaults:
+
+```properties
+# Default minimum confidence for AI grading (percentage; question settings may override it)
+skills.openai.textInputAiGraderDefaultMinimumConfidenceLevel=75
+# Maximum characters in the correct answer configured for AI grading
+skills.config.ui.maxTextInputAiGradingCorrectAnswerLength=10000
+# Retry limit for failed AI grading tasks
+skills.config.aiGraderMaxRetries=48
+```
+
+The confidence setting supplies the default for question-level AI grading configuration; valid question values are
+greater than 0 and no greater than 100. The correct-answer limit applies to the grading reference answer,
+not the trainee's submitted response.
+AI grading initially uses ``skills.config.taskSchedulingDelayInSeconds`` and, after failures, the shared
+``skills.config.exponentialBackOffSeconds`` and ``skills.config.exponentialBackOffRate`` properties described
+in [Asynchronous Task Scheduling and Retry](#asynchronous-task-scheduling-and-retry).
+When those backoff properties are omitted, AI grading retries use a 1,800-second base delay and a multiplier of 1.
+
+#### AI Prompt and Generation Status Settings
+
+Configure the length of prompts edited in ``Settings -> AI Prompts`` and the interval between status messages
+while content generation has not yet returned any content:
+
+```properties
+# Maximum characters in an AI prompt edited through Dashboard settings
+skills.config.ui.maxAiPromptLength=5000
+# Interval between generation status messages, in milliseconds
+skills.config.ui.openaiTakingLongerThanExpectedTimeoutPerMsg=12000
+```
+
+``skills.config.ui.maxAiPromptLength`` limits configured prompt templates, not AI chat conversation history.
+The status interval controls UI messages; it does not cancel the provider request or impose a generation timeout.
+
+The generation status messages can also be customized as an indexed list. The following are the defaults:
+
+```properties
+skills.config.ui.openaiTakingLongerThanExpectedMessages[0]=Just a moment while I get everything ready.
+skills.config.ui.openaiTakingLongerThanExpectedMessages[1]=Hang tight! Still processing your request.
+skills.config.ui.openaiTakingLongerThanExpectedMessages[2]=Still working on generating the best response for you.
+skills.config.ui.openaiTakingLongerThanExpectedMessages[3]=I am still trying, sorry for the delay!
+skills.config.ui.openaiTakingLongerThanExpectedMessages[4]=This is taking longer than expected but I am still working on it.
+skills.config.ui.openaiTakingLongerThanExpectedMessages[5]=I am trying but unfortunately it is still taking way longer than expected.
+```
+
+#### AI Grading Text Logging
+
+Full AI grading prompts and responses are excluded from logs by default. Enable text logging for debugging:
+
+```properties
+# Log AI grading prompt and response text (default: false)
+skills.openai.logPromptAndResponseText=true
+```
+
+This logs the grading system prompt and provider response text, which may include grading content. Normal prompt/response logging
+uses DEBUG level for ``skills.services.openai.OpenAIService``; response text may also be logged at ERROR level
+when parsing fails. Restart ``skills-service`` after changing these properties.
+
+#### Request and Consumption Limits
 
 The AI Assistant enforces server-side limits on chat requests, including requests made directly to `/openai/chat`.
 The following defaults are enabled automatically and can be overridden using application properties.
@@ -989,7 +1216,7 @@ Use a shared gateway if deployment-wide rate or concurrency enforcement is requi
 These controls apply to AI Assistant chat. AI quiz-answer grading uses its existing server-selected model and scheduled retry policy.
 Request limits do not impose a monetary budget; configure a hard usage or spending limit with the provider where supported, and verify that it rejects excess usage rather than only sending budget alerts.
 
-##### Measuring Requests During Testing
+#### Measuring Requests During Testing
 
 The backend logs input sizes at **INFO** level without including message contents:
 
