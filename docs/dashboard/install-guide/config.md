@@ -91,6 +91,8 @@ skills.config.ui.maxSubjectsPerProject=25
 skills.config.ui.maxBadgesPerProject=25
 # Maximum number of skills in a project
 skills.config.ui.maxSkillsPerSubject=100
+# Maximum number of levels that can be defined for a project or subject
+skills.levels.max=25
 ```
 
 When a project is first created it may not have enough total points to calculate a sensible levels breakdown.  
@@ -103,6 +105,17 @@ skills.config.ui.minimumSubjectPoints=100
 # subject before skill events are applied 
 # for skills under this subject
 skills.config.ui.minimumProjectPoints=100
+```
+
+The Skills Display also has separate thresholds for reporting project and subject levels. If the total available
+points are below the corresponding threshold, the reported level is set to ``0``. These are based on the defined
+training points, not the points earned by an individual user:
+
+```properties
+# Minimum total available project points before reporting a project level (default: 20)
+skills.project.minimumPoints=20
+# Minimum total available subject points before reporting a subject level (default: 20)
+skills.subjects.minimumPoints=20
 ```
 
 Skill definition thresholds: 
@@ -120,6 +133,18 @@ skills.config.ui.maxNumPerformToCompletion=10000
 # maximum number of occurrences within a time window
 skills.config.ui.maxNumPointIncrementMaxOccurrences=999
 ```
+
+Learning path validation checks prerequisite relationships for circular dependencies:
+
+```properties
+# Configured iteration limit supplied to the circular learning path checker (default: 1000)
+skills.circularLearningPathChecker.maxIterations=1000
+```
+
+:::tip
+The current circular learning path checker uses hard-coded recursion limits of 1,000, even though it receives
+``skills.circularLearningPathChecker.maxIterations``. Changing this property currently does not change those limits.
+:::
 
 ### Quiz Limits and Grader Feedback
 
