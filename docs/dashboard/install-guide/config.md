@@ -608,6 +608,86 @@ skills.config.ui.gradingModel=gpt-4
 AI prompts can be customized via `Settings -> AI Prompts` in the Dashboard, which requires the `root` role.
 :::
 
+##### Request and Consumption Limits
+
+The AI Assistant enforces server-side limits on chat requests, including requests made directly to `/openai/chat`.
+The following defaults are enabled automatically and can be overridden using application properties.
+They are intentionally generous starting values for local testing; tune them for your deployment's workload and provider capacity.
+Restart SkillTree after changing these settings.
+
+| Property | Default | Description |
+| --- | --- | --- |
+| `skills.openai.limits.allowedModels` | Empty list | Models permitted for AI chat. An empty list allows any model accessible to the configured provider key. When populated, matching is exact and case-sensitive, and the model selector only lists permitted models returned by the provider. |
+| `skills.openai.limits.maxRequestBytes` | `10485760` (10 MiB) | Maximum size of the entire JSON request body, enforced before deserialization. Also applies to chunked requests and requests without a `Content-Length` header. |
+| `skills.openai.limits.maxMessages` | `1000` | Maximum number of messages in the submitted conversation history, including both user and assistant messages. |
+| `skills.openai.limits.maxMessageCharacters` | `1000000` | Maximum content length of any individual submitted message. |
+| `skills.openai.limits.maxTotalMessageCharacters` | `5000000` | Maximum combined content length of all submitted messages. |
+| `skills.openai.limits.maxOutputTokens` | `32768` | Maximum completion tokens requested from the provider through `max_completion_tokens`. The selected provider/model must support and honor this parameter. This is a ceiling, not the number of tokens necessarily generated. |
+| `skills.openai.limits.requestsPerMinutePerUser` | `600` | Maximum admitted chat requests per authenticated user during a fixed one-minute window. Users are identified by their authenticated user ID, rather than their IP address. |
+| `skills.openai.limits.requestsPerMinuteGlobal` | `6000` | Maximum admitted chat requests across all users on one SkillTree instance during a fixed one-minute window. |
+| `skills.openai.limits.maxConcurrentRequestsGlobal` | `200` | Maximum active AI chat streams across all users on one SkillTree instance. Excess requests are rejected immediately rather than queued. |
+
+Character limits count UTF-16 code units in submitted message content, including conversation history.
+They do not count JSON formatting or the server's configured system prompt, and they are not token counts.
+The default model setting (`skills.config.ui.openaiDefaultModel`) chooses the initial model in the UI; use `allowedModels` or provider-side model restrictions to control which models may actually be requested.
+
+For example, these properties explicitly configure the default numeric limits and restrict chat to two provider models:
+
+```properties
+# Replace these example IDs with models available from your provider.
+skills.openai.limits.allowedModels=approved-model-1,approved-model-2
+
+skills.openai.limits.maxRequestBytes=10485760
+skills.openai.limits.maxMessages=1000
+skills.openai.limits.maxMessageCharacters=1000000
+skills.openai.limits.maxTotalMessageCharacters=5000000
+skills.openai.limits.maxOutputTokens=32768
+skills.openai.limits.requestsPerMinutePerUser=600
+skills.openai.limits.requestsPerMinuteGlobal=6000
+skills.openai.limits.maxConcurrentRequestsGlobal=200
+```
+
+Numeric limits must be positive integers. Omitting a property retains its default; zero, negative, or null values do not disable enforcement and are rejected during startup.
+Request validation takes place before rate-limit admission. Invalid requests and requests rejected by the local rate or concurrency limits do not consume request allowance.
+Admitted requests count even if the provider subsequently fails. Stream capacity is released on completion, failure, or cancellation; cancellation takes effect when the server observes the client disconnect.
+
+Rate counters and active-stream tracking are held in memory **per SkillTree instance** and reset on restart.
+In a deployment with multiple replicas, the effective request allowance and active-stream capacity multiply across instances.
+Fixed rate windows can also allow bursts around window boundaries; the separate active-stream cap limits simultaneous work.
+Use a shared gateway if deployment-wide rate or concurrency enforcement is required.
+
+These controls apply to AI Assistant chat. AI quiz-answer grading uses its existing server-selected model and scheduled retry policy.
+Request limits do not impose a monetary budget; configure a hard usage or spending limit with the provider where supported, and verify that it rejects excess usage rather than only sending budget alerts.
+
+##### Measuring Requests During Testing
+
+The backend logs input sizes at **INFO** level without including message contents:
+
+```text
+AI chat input sizes: model=[...], messageCount=[12], totalCharacters=[18432], largestMessageCharacters=[4096], maxOutputTokens=[32768]
+```
+
+`totalCharacters` measures all submitted message content, while `largestMessageCharacters` measures the largest individual message.
+Use these values to tune the message limits. `maxOutputTokens` is the configured ceiling, not actual output usage.
+
+Streaming token-usage collection is enabled by default:
+
+```properties
+# Request token-usage metadata from the provider and log it when chat completes.
+skills.openai.stream.stream-usage=true
+```
+
+When the provider returns usage metadata, successful completion produces an INFO log such as:
+
+```text
+Chat Usage: totalTokens=[5000], promptTokens=[3800], completionTokens=[1200], totalRuntimeMs=[2500]
+```
+
+`promptTokens` and `completionTokens` are the provider-reported input and output usage, respectively.
+Token usage can include provider-specific overhead or reasoning tokens and cannot be inferred directly from character counts.
+If the provider omits streaming usage metadata, SkillTree logs `Failed to collect chat usage`; consult the provider's dashboard for actual counts.
+These messages appear in the backend console or container logs. If logging levels have been overridden, enable INFO for `skills.services.openai.OpenAIRequestValidator` and `skills.services.openai.OpenAIService`.
+
 ### Spring Boot Properties
 
 ``skills-service`` is a Spring Boot application and will respect the majority (if not all) of Spring Boot configuration properties.  
