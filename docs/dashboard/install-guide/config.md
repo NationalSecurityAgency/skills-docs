@@ -324,6 +324,41 @@ spring.datasource.username=
 spring.datasource.password=
 ```
 
+### Cross-Origin Resource Sharing (CORS)
+
+Cross-Origin Resource Sharing (CORS) controls which browser origins can access SkillTree from another application, such as an embedded [Skills Display](http://localhost:9999/skills-client/js.html).
+An origin consists of the protocol, host, and port; do not include a URL path.
+
+The following properties configure allowed origins and credentialed requests:
+
+```properties
+# Comma-separated list of allowed origin patterns (default: * allows any origin)
+skills.authorization.corsAllowedOriginPatterns=*
+# Allow credentialed cross-origin requests to /api/** and /app/userInfo (default: false)
+skills.authorization.corsConf.allowCredentials=false
+```
+
+``skills.authorization.corsAllowedOriginPatterns`` supports exact origins and wildcard patterns, such as ``https://*.example.com``.
+It applies to ``/api/**``, ``/app/userInfo``, ``/public/log``, ``/public/status``, and ``/public/clientDisplay/config``,
+as well as the ``/skills-websocket`` WebSocket/SockJS endpoint. Whitespace around entries is trimmed and empty entries are ignored.
+Other HTTP endpoints do not receive cross-origin access through these properties.
+
+For example, to allow credentialed requests from trusted applications:
+
+```properties
+skills.authorization.corsAllowedOriginPatterns=https://training.example.com,https://*.apps.example.com
+skills.authorization.corsConf.allowCredentials=true
+```
+
+:::tip
+When enabling credentials, configure trusted origin patterns instead of ``*``. Combining ``*`` with
+``skills.authorization.corsConf.allowCredentials=true`` allows any origin to read credentialed responses from ``/api/**`` and ``/app/userInfo``.
+The listed ``/public`` endpoints always disable CORS credentials. WebSocket/SockJS uses the origin patterns independently of the HTTP credentials setting.
+CORS does not replace authentication or authorization.
+:::
+
+Restart ``skills-service`` after changing these properties.
+
 ### WebSocket Stomp Broker
 
 Configure external WebSocket Stomp Broker:
