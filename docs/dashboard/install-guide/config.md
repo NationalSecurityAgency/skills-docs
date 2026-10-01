@@ -154,6 +154,87 @@ skills.config.ui.maxGraderFeedbackMessageLength=50000
 ``skills.config.ui.maxTakeQuizInputTextAnswerLength`` limits the response entered when taking a quiz or survey.
 Restart ``skills-service`` after changing these properties.
 
+### Uploads, Attachments, and Streaming
+
+#### Attachments
+
+Configure attachments uploaded through the rich text editor. The following properties show the default values:
+
+```properties
+# Maximum size of an uploaded attachment
+skills.config.maxAttachmentSize=128MB
+# Comma-separated file extensions offered by the attachment file picker
+skills.config.allowedAttachmentFileTypes=.xlsx,.docx,.pptx,.doc,.odp,.ods,.odt,.pdf,.ppt,.xls
+# Comma-separated MIME types accepted by the backend for attachments
+skills.config.allowedAttachmentMimeTypes=application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/msword,application/vnd.oasis.opendocument.presentation,application/vnd.oasis.opendocument.spreadsheet,application/vnd.oasis.opendocument.text,application/pdf,application/vnd.ms-powerpoint,application/vnd.ms-excel
+```
+
+Keep the file-extension list and MIME-type list consistent when adding or removing supported attachment formats.
+The file-picker extensions guide file selection; the backend validates the uploaded file's MIME type and size.
+
+#### Video, Audio, and Slide Uploads
+
+Configure internally hosted video/audio files and PDF slide decks. The following properties show the default values:
+
+```properties
+# Maximum size of an uploaded video or audio file
+skills.config.ui.maxVideoUploadSize=250MB
+# Comma-separated MIME types accepted for video and audio uploads
+skills.config.allowedVideoUploadMimeTypes=video/webm,video/mp4,audio/wav,audio/mpeg,audio/mp4,audio/aac,audio/aacp,audio/ogg,audio/webm,audio/flac
+# Maximum size of an uploaded slide deck
+skills.config.ui.maxSlidesUploadSize=250MB
+# Comma-separated MIME types accepted for slide uploads
+skills.config.allowedSlidesUploadMimeTypes=application/pdf,application/x-bzpdf,application/x-gzpdf
+# Maximum number of characters in video captions
+skills.config.ui.maxVideoCaptionsLength=5000
+# Maximum number of characters in a video transcript
+skills.config.ui.maxVideoTranscriptLength=20000
+```
+
+:::tip
+Size properties accept units such as ``MB``. By default, ``skills.config.maxAttachmentSize`` also supplies Spring Boot's
+multipart file and request limits, so its default of ``128MB`` can reject a video or slide upload before the
+``250MB`` media-specific limit is checked. To allow larger media uploads, also increase the multipart limits
+(``spring.servlet.multipart.max-file-size`` and ``spring.servlet.multipart.max-request-size``), or increase
+``skills.config.maxAttachmentSize``. Allow room for multipart overhead in the request-size limit.
+:::
+
+The video/audio upload page also supports an optional progress-animation tuning:
+
+```properties
+# Divisor used to calculate the loading bar's update interval from the file size in bytes
+skills.config.ui.videoUploadLoadingBarLengthyCalculationTimeoutRatio=75000
+```
+
+The loading bar's interval is calculated as file size divided by the ratio, truncated to an integer and bounded
+between 100 and 1,000 milliseconds. A larger ratio produces a shorter interval. This setting controls the progress
+animation, not an upload timeout or file-size limit.
+
+#### Media Streaming
+
+Tune how internally hosted media is served from the database. These values are in bytes:
+
+```properties
+# Response size for an open-ended byte-range request (5 MiB)
+skills.config.videoStreamDefaultChunkSize=5242880
+# Maximum response size fetched as an in-memory database chunk (10 MiB)
+skills.config.videoStreamMaxOptimizedDbFetchSize=10485760
+# Handle recognized client-disconnect exceptions in the optimized chunk-write path at DEBUG level
+skills.config.suppressBrokenPipeException=true
+```
+
+``skills.config.videoStreamDefaultChunkSize`` applies to requests such as ``Range: bytes=0-``;
+it does not cap responses for explicit byte ranges or requests without a range.
+Responses larger than ``skills.config.videoStreamMaxOptimizedDbFetchSize`` use streaming instead of loading
+the requested chunk into memory. Both size values must be positive, and the default chunk size must not exceed
+the optimized database-fetch size; invalid values prevent startup.
+
+``skills.config.suppressBrokenPipeException`` handles recognized ``Broken pipe`` and ``Connection reset by peer``
+exceptions when writing an optimized chunk, which can occur when a player cancels a request.
+Set it to ``false`` to propagate those exceptions instead.
+
+Restart ``skills-service`` after changing these properties.
+
 ### Dashboard: User Account Thresholds (Pass Auth Mode Only)
 
 ```properties
