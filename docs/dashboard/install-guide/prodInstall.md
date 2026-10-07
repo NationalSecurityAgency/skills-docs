@@ -75,3 +75,7 @@ If ``User Info Service`` utilizes 2-way SSL then add the following client authen
 <Content path="/dashboard/install-guide/common/user-info-service-props-ssl.md"/>
 
 <Content path="/dashboard/install-guide/common/prod-install-basic-jvm-props.md"/>
+
+## Version 5 Migration Guide
+
+TBD - Describe the steps to upgrade from version 4 to 5
