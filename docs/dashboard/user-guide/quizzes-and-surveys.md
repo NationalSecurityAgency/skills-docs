@@ -668,6 +668,10 @@ A quiz/survey administrator can easily view which skills the quiz/survey is asso
 to the Skills page in that particular quiz/survey (``Quizzes and Surveys -> Quiz/Survey -> Skills ``)
 ![Quiz Skills Page Screenshot](../../screenshots/admin/page-quiz-skills.png):
 
+The **Associated Skills** table lists each skill's project ID, name, and skill ID. Use the **Skill Filter** to find skills by name. For projects you can administer, the project ID and skill name link to their administration pages.
+
+For projects you cannot administer, a **Contact** button appears next to the project ID. Click **Contact**, enter a message, and click **Send** to email that project's administrators. This lets quiz and survey administrators coordinate changes to associated training content with the administrators who manage it.
+
 ## Access
 
 The Quiz/Survey Access page supports adding or removing Quiz Administrators. To add and remove Administrators

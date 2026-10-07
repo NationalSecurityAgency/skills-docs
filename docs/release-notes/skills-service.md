@@ -24,7 +24,7 @@ Before upgrading from version 4 to version 5, review the [Version 5 Migration Gu
 - **[Video and Audio Downloads](/dashboard/user-guide/skills.html#video-and-audio-downloads)** - Added the ability to download video and audio files directly from the player when enabled by an administrator
 - **[Markdown Editing](/dashboard/user-guide/rich-text-editor.html)** - Enhanced the Rich Text Editor to support Markdown editing alongside the existing WYSIWYG (What You See Is What You Get) mode
 - **[Skill Copying](/dashboard/user-guide/skills.html#copying-skills-into-hidden-subjects)** - Added support for copying skills into hidden subjects, making it easier to prepare content before making it available to trainees
-- **Project Administrator Visibility** - Enhanced the skills table on quiz administration pages to show the administrators of the projects containing those skills
+- **[Contact Project Administrators](/dashboard/user-guide/quizzes-and-surveys.html#skill-association)** - Added a Contact button to the associated skills table on quiz and survey administration pages to email administrators of projects you cannot administer
 - **Software Stack Upgrades** - Upgraded Spring Boot, Spring AI, and Spring AWS
 - **Database Migration Tool** - Migrated database schema management from Liquibase to Flyway
 - **Bug Fixes**
