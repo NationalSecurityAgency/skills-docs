@@ -119,6 +119,10 @@ file using the Browse button or drag-n-drop functionality.
 
 <Content path="/dashboard/user-guide/common/audio.md"/>
 
+### Video and Audio Downloads
+
+<Content path="/dashboard/user-guide/common/media-downloads.md"/>
+
 ### Achieving Skills through Audio/Video Playback
 
 Once the Audio/Video settings are specified, the skill can be configured to be achieved after the trainee has watched or

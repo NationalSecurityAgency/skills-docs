@@ -21,7 +21,7 @@ Before upgrading from version 4 to version 5, review the [Version 5 Migration Gu
 
 - **[Interactive Learning Paths](/dashboard/user-guide/learning-path.html)** - Introduced an interactive, graph-based display of learning paths to help trainees track acquired and upcoming skills
 - **[Fill-in-the-Blank Questions](/dashboard/user-guide/quizzes-and-surveys.html#fill-in-the-blank-questions)** - Added a quiz question type that automatically grades answers against a predefined list of correct terms configured by quiz administrators
-- **Video and Audio Downloads** - Added the ability to download video and audio files directly from the player
+- **[Video and Audio Downloads](/dashboard/user-guide/skills.html#video-and-audio-downloads)** - Added the ability to download video and audio files directly from the player when enabled by an administrator
 - **[Markdown Editing](/dashboard/user-guide/rich-text-editor.html)** - Enhanced the Rich Text Editor to support Markdown editing alongside the existing WYSIWYG (What You See Is What You Get) mode
 - **[Skill Copying](/dashboard/user-guide/skills.html#copy-skill)** - Added support for copying skills into hidden subjects, making it easier to prepare content before making it available to trainees
 - **Project Administrator Visibility** - Enhanced the skills table on quiz administration pages to show the administrators of the projects containing those skills

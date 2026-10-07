@@ -238,6 +238,10 @@ Similarly to videos, users can embed audio clips into their quizzes using the `A
 
 <Content path="/dashboard/user-guide/common/audio.md"/>
 
+#### Video and Audio Downloads for Quiz
+
+<Content path="/dashboard/user-guide/common/media-downloads.md"/>
+
 ### Manual Answer Grading
 
 If a quiz has at least 1 ``Input Text`` question then after a quiz taker submits an attempt a quiz administrator will be able to grade the answers for the ``Input Text`` questions.
@@ -515,6 +519,10 @@ Similarly to videos, users can embed audio clips into their surveys using the `A
 3. Select your file using either the Browse button or drag-and-drop functionality
 
 <Content path="/dashboard/user-guide/common/audio.md"/>
+
+#### Video and Audio Downloads for Survey
+
+<Content path="/dashboard/user-guide/common/media-downloads.md"/>
 
 ### Survey Settings
 

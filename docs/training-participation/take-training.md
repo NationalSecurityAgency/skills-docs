@@ -352,6 +352,12 @@ To earn points for this audio/video-based skill, you must watch or listen to the
 Resize the video by dragging the bottom right corner. Your preferred size will be saved in your browser's local storage.
 :::
 
+#### Video and Audio Downloads
+
+When the training creator enables downloads, a download button appears in the video or audio player's control bar. Click it to download the media file for later reference. This is also available for media in quiz and survey questions when downloads are enabled for that item.
+
+Downloading or playing a file outside SkillTree does not record playback progress or earn points. To earn an audio/video-based skill through playback, watch or listen to the clip in the SkillTree player.
+
 ### Prerequisites
 
 Skills with prerequisites will display a locked icon on their progress bar.
