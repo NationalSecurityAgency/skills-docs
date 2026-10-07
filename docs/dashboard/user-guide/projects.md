@@ -159,6 +159,22 @@ There supported project roles are:
 - **Admin**: enables management of the training profile for that project such as creating and modifying subjects, skills, badges, etc. 
 - **Approver**: allowed to approve and deny [Self Reporting](/dashboard/user-guide/self-reporting.html#approval-queue) approval requests while only getting a read-only view of the project. 
 
+### Assign an Admin Group
+
+Assigning an Admin Group to a project grants all members of the group administrative privileges for that project. The Admin Group must already exist, and you must administer both the project and the Admin Group. See [Admin Groups](/dashboard/user-guide/admin-groups.html) for details on creating groups and managing their members.
+
+To add an existing Admin Group to a project:
+
+1. Navigate to ``Project -> Access``.
+2. Open the ``Assign Admin Group`` dropdown below the ``Add User`` controls.
+3. Select the Admin Group you want to assign. You can use the dropdown's search field to find a group by name.
+
+Selecting the group immediately assigns it to the project. The group appears in the access table with the ``Administrator`` role. Expand the group's row to view its members.
+
+::: tip
+The dropdown lists Admin Groups that you administer and that have not already been assigned to the project. You can also assign a project from the group's ``Admin Groups -> Projects`` page by selecting the project from the available projects dropdown.
+:::
+
 ### Invite Only
 If the project has been configured with a visibility of ``Private Invite Only``, invite and access revocation are controlled here.
 
@@ -350,6 +366,5 @@ Displays any errors that have been recorded for a Project, how many times they h
 There are a number of different issues that are captured here. One example includes attempts to report a Skill that doesn't exist in a Project. This commonly occurs when a typo has been made
 during the integration of skill reporting into an application, or when switching an application from using a staging project to a production project where
 the staging skills do not exist or have been created with different Skill IDs.
-
 
 
