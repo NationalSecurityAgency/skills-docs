@@ -18,6 +18,7 @@ The training entry page provides an overview of your progress and includes the f
 From here users can proceed to:
 - [My Rank Page](/training-participation/take-training.html#my-rank-page): View your rank on the training leaderboard
 - [My Badges Page](/training-participation/take-training.html#my-badges-page): View your earned and available badges
+- [Learning Path Page](/training-participation/take-training.html#learning-path-page): View prerequisites and track your progress along the training's learning path
 - [Subject Page](/training-participation/take-training.html#subject-page): View progress in a specific subject and all of its available skills
 - **Search and Jump to Skill**: Quickly find any skill by name across all subjects and navigate directly to it
 
@@ -62,6 +63,43 @@ Available badges show your current progress for each badge. You can drill down i
 :::
 
 You can also drill down into any earned [badge](/training-participation/take-training.html#badge-page) to see the skills and points that contributed to earning it.
+
+## Learning Path Page
+
+When a training has a learning path, its overview page includes a **Learning Path** card showing the number of items you have achieved in the learning path and your completion percentage. Click **View** in this card to open the Learning Path page.
+
+A learning path connects skills and badges in the order required by the training creator. For example, in `Skill A -> Skill B`, you must fully achieve **Skill A** before you can earn points toward **Skill B**. If an item has multiple prerequisites, you must complete all of them before proceeding.
+
+### Track Your Progress
+
+The page displays an interactive diagram of the training's learning path:
+
+- **Progress Summary**: Shows the number of achieved items out of the total items in the path, along with a completion percentage and progress bar. This tracks learning path items rather than overall training points.
+- **Skills and Badges**: Different icons identify skills and badges; achieved items display a check mark.
+- **Connections**: Show which items are prerequisites for later items in the path.
+
+Use the diagram to identify prerequisites you still need to complete, then open a skill or badge to review its requirements and continue training.
+
+### Learning Path Routes
+
+Below the diagram, the **Learning Path Routes** table lists each prerequisite relationship:
+
+| Column | Explanation |
+| --- | --- |
+| From | The prerequisite skill or badge |
+| From Status | Whether you have achieved the prerequisite: `Achieved` or `Not achieved` |
+| To | The skill or badge that requires the prerequisite |
+| To Status | Whether you have achieved the dependent item: `Achieved` or `Not achieved` |
+
+Click a skill or badge name in the table to open its details. You can sort the columns and use the pagination controls to browse longer paths. Prerequisites shared from another project include the source project's name.
+
+### Customize the Diagram
+
+Use the controls above the diagram to switch between vertical and horizontal orientations or open the diagram in fullscreen mode. Your orientation preference is saved in your browser between sessions.
+
+::: tip
+Learning paths are optional and are configured by the training creator. The Learning Path card appears only when the training has a learning path. To learn about configuring prerequisites, visit the [Learning Path administrative guide](/dashboard/user-guide/learning-path.html).
+:::
 
 ## Subject Page
 
