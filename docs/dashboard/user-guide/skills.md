@@ -196,6 +196,21 @@ Follow a 2-step process if you want to "copy" a skill into a different subject o
 2. Move the skill into another subject or group.
    :::
 
+### Copying Skills into Hidden Subjects
+
+When [copying skills to another project](/dashboard/user-guide/projects.html#copy-skills-to-another-project), you can select a hidden subject as the destination, including a skill group within that subject. This lets you prepare copies of existing training content without exposing them to trainees.
+
+To prepare content in a hidden subject:
+
+1. Create a subject in the destination project with **Initial Visibility** set to **Hidden**, or choose an existing hidden subject.
+2. On the source Subject page, select the skills to copy and choose **Actions -> Copy to another Project**.
+3. Select the destination project and hidden subject, optionally selecting a skill group, and complete the copy operation.
+4. Review and edit the copied skills in the destination project before making the content visible.
+
+Skills copied into a hidden subject are created with their visibility set to **Hidden**, even if the original skills are visible. The copies are independent of the originals, so editing them does not change the source content. When ready to publish, review both the [subject's visibility](/dashboard/user-guide/subjects.html#subject-creation-lifecycle) and the [copied skills' visibility](#skill-creation-lifecycle).
+
+Copying creates new skills; it does not move the originals. The restriction on moving existing visible skills into a hidden subject still applies.
+
 ## Skills Versioning
 
 Skill versioning is a mechanism that allows the addition of new skills without affecting existing software running with an older skill profile.

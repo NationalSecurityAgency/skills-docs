@@ -302,6 +302,8 @@ Skills can be copied individually or in batches from one project to another. To 
 
 Once the copy operation is initiated, you will be guided through the process of selecting a destination project and subject or skill group.
 
+The destination can be a hidden subject or a skill group within a hidden subject. Copied skills are created as hidden so you can prepare and review the content before making it available to trainees. See [Copying Skills into Hidden Subjects](/dashboard/user-guide/skills.html#copying-skills-into-hidden-subjects) for the workflow and visibility details.
+
 ::: tip
 After copying skills, the new skills become independent of the originals, and any changes made to the originals will not affect the copied skills.
 :::
@@ -350,6 +352,5 @@ Displays any errors that have been recorded for a Project, how many times they h
 There are a number of different issues that are captured here. One example includes attempts to report a Skill that doesn't exist in a Project. This commonly occurs when a typo has been made
 during the integration of skill reporting into an application, or when switching an application from using a staging project to a production project where
 the staging skills do not exist or have been created with different Skill IDs.
-
 
 
