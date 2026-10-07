@@ -393,13 +393,16 @@ Click the **Start** button to begin the quiz.
 
 ![Client Display Quiz Run Screenshot](../screenshots/progress-and-ranking/client-display-quiz-run.png)
 
-You may encounter three types of questions:
+You may encounter five types of questions:
 - **Multiple Choice**: Select one correct answer
 - **Multiple Answers**: Select all correct choices to earn credit
 - **Input Text**: Free-form text response, graded by quiz administrators
 - **Matching**: Match items from one list with their correct matches in another list
+- **Fill-in-the-Blank**: Enter the missing word or phrase in each blank within the question
 
-To finish the quiz, click the **Complete Quiz** button. The results page will then appear. If your quiz only includes Multiple Choice and Multiple Answers questions, it will be automatically graded by the system.
+For **Fill-in-the-Blank** questions, fill in every blank before submitting the quiz. Your answers are automatically checked against the accepted answers configured by the quiz administrator. Capitalization and leading or trailing spaces do not affect grading, but the rest of the answer must match an accepted word or phrase. Every blank must be correct to earn credit for the question; there is no partial credit.
+
+To finish the quiz, click the **Complete Quiz** button. The results page will then appear. Multiple Choice, Multiple Answers, Matching, and Fill-in-the-Blank questions are automatically graded by the system.
 
 If your quiz includes Input Text questions, these will be manually graded by quiz administrators. When you complete the quiz, administrators will be notified and the quiz will be marked as "Needs Grading."
 
