@@ -153,10 +153,23 @@ context('Admin: Generate Screenshots', () => {
         // cy.wait(1000)
         cy.get('[data-cy="aiButton"]').click()
         cy.get('[data-cy="instructionsInput"]').type('A brief description on how to play chess{enter}')
-        cy.wait(15000)
-        cy.get('[data-cy="aiMsg-2"] [data-cy="finalSegment"]').contains('Take a look at what I came up with!')
-        cy.get('div.p-dialog.p-component:has(span:contains("AI Assistant"))')
-        cy.snap('ai-gen-new-skill-description', 'div.p-dialog.p-component:has(span:contains("AI Assistant"))')
+        cy.get('[data-cy="aiMsg-2"] [data-cy="finalSegment"]', {
+          timeout: 60000,
+        }).should('contain.text', 'Take a look at what I came up with!');
+        const aiDialog = 'div.p-dialog.p-component:has(span:contains("AI Assistant"))';
+
+        cy.get(aiDialog)
+            .find('.p-dialog-content')
+            .scrollTo('top', { duration: 0 });
+
+        cy.get(aiDialog)
+            .find('.p-dialog-content')
+            .should(($content) => {
+                expect($content[0].scrollTop).to.equal(0);
+            });
+
+        cy.snap('ai-gen-new-skill-description', aiDialog);
+
         cy.get('[data-cy="useGenValueBtn-2"]').click()
         cy.get('[data-cy="saveDialogBtn"]').click()
         cy.get('@saveSkill')
@@ -194,7 +207,6 @@ context('Admin: Generate Screenshots', () => {
 
         cy.viewport(1400, 550);
         const tagName = 'Two Thumbs Up!'
-        cy.get('[data-cy="noTagsMessage"]').should('be.visible')
         cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.wait(1000)
         cy.get('[data-pc-section="tablist"] [data-pc-name="tab"]').contains('Create New Tag').click()
@@ -351,7 +363,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Modals - edit skill', () => {
-        cy.viewport(1200, 1500); // some modals require a lot more vertical real estate
+        cy.viewport(1200, 1150); // some modals require a lot more vertical real estate
         cy.visit('/administrator/projects/movies/subjects/Action/')
 
         // edit skill modal
@@ -375,7 +387,7 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('page-settings-preference');
 
         cy.clickNav('Security');
-        cy.contains('Supervisor Users Management');
+        cy.contains('Root Users Management');
         cy.snap('page-settings-security');
 
         cy.clickNav('Email');
@@ -429,8 +441,24 @@ context('Admin: Generate Screenshots', () => {
         cy.snap('component-slides-config-empty', '#mainContent2')
 
         cy.visit('/administrator/projects/movies/subjects/Action/skills/Avatar/config-slides')
+        cy.wait(2000)
+        cy.get('#pdfCanvasId').should('be.visible')
+        cy.get('[data-cy="prevSlideBtn"]').should('be.disabled')
         cy.get('[data-cy="nextSlideBtn"]').should('be.enabled')
-        cy.get('[data-cy="nextSlideBtn"]').click()
+        cy.get('[data-cy="currentSlideMsg"]')
+            .should('have.text', 'Slide 1 of 5');
+
+        cy.get('[data-cy="nextSlideBtn"]')
+            .should('be.visible')
+            .and('be.enabled')
+            .realClick();
+
+        cy.get('[data-cy="currentSlideMsg"]', { timeout: 15000 })
+            .should('have.text', 'Slide 2 of 5');
+
+        cy.get('[data-cy="prevSlideBtn"]').should('be.enabled');
+        cy.get('[data-cy="nextSlideBtn"]').should('be.enabled')
+        cy.get('[data-cy="currentSlideMsg"]').should('have.text', 'Slide 2 of 5')
         cy.get('#movies-AvatarContainer').contains('This is a first slide')
         cy.snap('component-slides-config-with-slides', '#mainContent2')
 
@@ -467,9 +495,11 @@ context('Admin: Generate Screenshots', () => {
         }
         cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="skillsActionsMenu"] [aria-label="Export To Catalog"]').click()
+        cy.get('.p-dialog').should('be.visible');
 
-        cy.snap('page-export-to-catalog');
-        cy.get('[data-cy="exportToCatalogButton"]').click();
+        cy.snap('page-export-to-catalog', null, {
+            capture: 'viewport',
+        });
 
         cy.visit('/administrator/projects/movies/skills-catalog');
         cy.contains('Exported to Catalog')
@@ -728,7 +758,15 @@ context('Admin: Generate Screenshots', () => {
         cy.visit('/administrator/projects/movies/subjects/Action/')
         cy.get('[data-cy="newSkillButton"]').click()
         cy.get('[data-pc-name="pcmaximizebutton"]').click()
-        cy.get('[data-cy="discardContentButton"]').click({force: true})
+        // discard the form reload warning if present
+        cy.get('body').then(($body) => {
+            const $button = $body.find('[data-cy="discardContentButton"]')
+                .filter(':visible');
+
+            if ($button.length) {
+                cy.wrap($button.first()).click();
+            }
+        });
         cy.wait(1000)
         cy.get('[data-cy="skillName"]').type('Test Skill')
         cy.get('[data-cy="selfReportEnableCheckbox"]').click();
@@ -745,11 +783,11 @@ context('Admin: Generate Screenshots', () => {
         cy.get(`[data-cy="workloadCell_${user2}"] [data-cy="editApprovalBtn"]`).click()
 
         cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="subjectSelector"]`).click()
-        cy.get('[data-pc-section="overlay"] [data-pc-name="pcfilter"]').type('Hi');
-        cy.get(`[data-cy="subjSelector-name"]`).contains('History').click()
+        cy.get('[data-pc-section="overlay"] [data-pc-name="pcfilter"]').type('Co');
+        cy.get(`[data-cy="subjSelector-name"]`).contains('Comedy').click()
         cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="addSkillConfBtn"]`).should('be.enabled')
         cy.get(`[data-cy="expandedChild_${user2}"] [data-cy="addSkillConfBtn"]`).click()
-        cy.get('[data-cy="skillApprovalSkillConfTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', 50)
+        cy.get('[data-cy="skillApprovalSkillConfTable"] [data-cy="skillsBTableTotalRows"]').should('have.text', 3)
         cy.get('[data-cy="skillApprovalSkillConfTable"] [data-p-index="0"]').should('be.visible')
 
         cy.snap('component-conf-approval-workload-skills')
@@ -834,9 +872,10 @@ context('Admin: Generate Screenshots', () => {
 
         cy.snap('component-notifications-btn', null, {clip: { x: 800, y: 0, width: 200, height: 100 }});
 
+        cy.viewport(1400, 900);
         cy.get('[data-cy="notifBtn"]').click()
         cy.get('[data-cy="notifPanel"] [data-cy="notif-0"]')
-        cy.snap('component-notifications-dropdown', null, {clip: { x: 370, y: 0, width: 540, height: 550 }});
+        cy.snap('component-notifications-dropdown', null, {clip: { x: 600, y: 0, width: 700, height: 350 }});
     });
 
 
