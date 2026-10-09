@@ -26,7 +26,7 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
     })
 
     it('new quiz/survey modal', () => {
-        cy.viewport(1350, 1000);
+        cy.viewport(1350, 850);
         cy.visit('/administrator/quizzes')
         cy.get('[data-cy="quizNameFilter"]')
         cy.get('[data-cy="btn_Quizzes And Surveys"]').click()
@@ -48,7 +48,15 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.visit('/administrator/quizzes/ShortScienceQuiz')
         cy.get('[data-cy="editQuestionButton_1"]')
         cy.get('[data-cy="btn_Questions"]').click()
-        // cy.get('[data-cy="discardContentButton"]').click({force: true})
+        // discard the form reload warning if present
+        cy.get('body').then(($body) => {
+            const $button = $body.find('[data-cy="discardContentButton"]')
+                .filter(':visible');
+
+            if ($button.length) {
+                cy.wrap($button.first()).click();
+            }
+        });
         cy.get('[data-cy="answer-0"] [data-cy="selectCorrectAnswer"]').click()
         cy.get('[data-cy="answer-1"] [data-cy="selectCorrectAnswer"]').click()
         cy.get('[data-cy="answer-0"] [data-cy="answerText"]').type('Blue')
@@ -87,7 +95,9 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.get('[data-cy="aiModelsSelector"] [data-cy="modelSettings"]').should('be.visible')
         cy.snap('ai-model-settings', '[data-cy="aiModelsSelector"]')
         cy.get('[data-cy="instructionsInput"]').type('Off sides in ice hockey{enter}')
-        cy.get('[data-cy="aiMsg-2"] [data-cy="finalSegment"]').contains('Take a look at what I came up with!')
+        cy.get('[data-cy="aiMsg-2"] [data-cy="finalSegment"]', {
+          timeout: 60000,
+        }).should('contain.text', 'Take a look at what I came up with!');
         cy.get('div.p-dialog.p-component:has(span:contains("AI Assistant"))')
         cy.snap('ai-gen-new-question', 'div.p-dialog.p-component:has(span:contains("AI Assistant"))')
         cy.realPress('Escape');
@@ -188,7 +198,15 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
         cy.get('[data-cy="btn_Questions"]').click()
         cy.get('[data-cy="questionText"] [data-cy="markdownEditorInput"]')
 
-        cy.get('[data-cy="discardContentButton"]').click({force: true})
+        // discard the form reload warning if present
+        cy.get('body').then(($body) => {
+            const $button = $body.find('[data-cy="discardContentButton"]')
+                .filter(':visible');
+
+            if ($button.length) {
+                cy.wrap($button.first()).click();
+            }
+        });
 
         cy.get('[data-cy="answer-0"] [data-cy="answerText"]').type('Blue')
         cy.get('[data-cy="answer-1"] [data-cy="answerText"]').type('Yellow')
