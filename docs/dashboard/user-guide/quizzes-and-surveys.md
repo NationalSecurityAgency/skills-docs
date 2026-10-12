@@ -44,11 +44,12 @@ A quiz is a knowledge check composed of multiple questions with a passing requir
 or can be executed independently. Associating a Quiz to an existing skill will require successful completion of that Quiz
 in order to earn the skill and its points. In the case of a quiz, then the quiz serves as the skill's knowledge check.
 
-Quizzes support three types of questions:
-- ``Multiple Choice`` - Single correct answer
-- ``Multiple Answers`` - Multiple correct choices; all must be selected to earn credit
-- ``Input Text`` - Free-form text response, graded by quiz administrators
-- ``Matching`` - Match items from one list with their correct matches in another list
+Quizzes support five types of questions:
+- [Multiple Choice](#multiple-choice-questions) - Single correct answer
+- [Multiple Answers](#multiple-answers-questions) - Multiple correct choices; all must be selected to earn credit
+- [Input Text](#input-text-questions) - Free-form text response, graded manually or with AI when configured
+- [Matching](#matching-questions) - Match items from one list with their correct matches in another list
+- [Fill-in-the-Blank](#fill-in-the-blank-questions) - Enter missing words or phrases; answers are automatically graded against the accepted answers configured for each blank
 
 To administer a quiz click `Manage` button for that quiz on the `Quizzes and Surveys` page. 
 
@@ -72,6 +73,118 @@ Use the `Preview` button on the top left below the Quiz name in order to see wha
 ::: tip
 Did you know, you can use **SkillTree's AI Assistant** to generate quiz questions, [Learn more](/dashboard/user-guide/ai-assistant.html#ai-powered-single-quiz-question-generation)
 :::
+
+### Multiple Choice Questions
+
+Multiple Choice questions let participants select one answer from a list of options. This question type is available for both quizzes and surveys. Quiz answers are automatically graded; survey responses have no correct or incorrect answer.
+
+To create a Multiple Choice question:
+
+1. Click `Question +`, or edit an existing question.
+2. Select `Multiple Choice` from the question type dropdown.
+3. Enter the question text and at least two answer options under **Answers**.
+4. For a quiz, check exactly one correct answer on the left. For a survey, enter the options without selecting a correct answer.
+5. Save the question and use `Preview` to check how it appears to participants.
+
+For example:
+
+```text
+Question: Which planet is closest to the Sun?
+Options: Mercury, Venus, Earth, Mars
+Correct answer: Mercury
+```
+
+Participants can select only one option. On a quiz, selecting the configured correct answer earns credit for the question.
+
+### Multiple Answers Questions
+
+Multiple Answers questions let participants select more than one option. This question type is available for both quizzes and surveys. Quiz answers are automatically graded; surveys collect selections without grading them.
+
+To create a Multiple Answers question:
+
+1. Click `Question +`, or edit an existing question.
+2. Select `Multiple Answers` from the question type dropdown.
+3. Enter the question text and at least two answer options under **Answers**.
+4. For a quiz, check two or more correct answers on the left. For a survey, enter the options without selecting correct answers.
+5. Save the question and use `Preview` to check how it appears to participants.
+
+For example:
+
+```text
+Question: Which of these are primary colors of light? Select all that apply.
+Options: Red, Green, Blue, Yellow
+Correct answers: Red, Green, Blue
+```
+
+On a quiz, participants must select all correct options and no incorrect options to earn credit for the question; partial credit is not awarded. On a survey, participants select one or more options that apply to them.
+
+### Input Text Questions
+
+Input Text questions let participants write a free-form response instead of choosing from predefined options. This question type is available for both quizzes and surveys. Quiz responses require [manual grading](#manual-answer-grading) or [AI grading](#ai-powered-grading) when configured; survey responses are collected without grading.
+
+To create an Input Text question:
+
+1. Click `Question +`, or edit an existing question.
+2. Select `Input Text` from the question type dropdown.
+3. Enter the question text, including any instructions about what the response should cover.
+4. Save the question. You do not need to enter answer options; the disabled text area in the editor represents the participant's response field.
+5. Use `Preview` to check how it appears to participants.
+
+For example:
+
+```text
+Question: Explain how you would identify and report a phishing email.
+```
+
+For manually graded quizzes, administrators mark each response as correct or wrong after submission. If AI grading is enabled for the question, the configured AI grader evaluates the response. Unlike Fill-in-the-Blank questions, Input Text responses are not automatically checked against a list of accepted words or phrases.
+
+### Matching Questions
+
+Matching questions ask participants to match terms with their corresponding values, such as definitions, categories, or related concepts. This question type is available for quizzes, not surveys, and is automatically graded.
+
+To create a Matching question:
+
+1. Click `Question +`, or edit an existing quiz question.
+2. Select `Matching` from the question type dropdown.
+3. Enter the question text with instructions about what participants should match.
+4. Under **Answers**, enter at least two pairs, with a term on the left and its matching value on the right. Use the `+` and `-` buttons to add or remove pairs.
+5. Provide text for both parts of every pair. Terms must be unique, and matching values must also be unique.
+6. Save the question and use `Preview` to check how it appears to participants.
+
+For example:
+
+```text
+Question: Match each country with its capital.
+Pairs:
+France -> Paris
+Japan -> Tokyo
+Canada -> Ottawa
+```
+
+Each configured pair defines a correct match; you do not need to check correct-answer boxes. Participants must match every pair correctly to earn credit for the question; partial credit is not awarded.
+
+### Fill-in-the-Blank Questions
+
+Fill-in-the-Blank questions let participants complete a statement by entering missing words or phrases directly into the question. This question type is available for quizzes, not surveys, and does not require manual or AI grading.
+
+To create a Fill-in-the-Blank question:
+
+1. Click `Question +`, or edit an existing quiz question.
+2. Select `Fill In the Blank` from the question type dropdown.
+3. Insert a sequence of two or more underscores, such as `___`, wherever an answer should go in the question text. Each sequence creates one blank.
+4. Enter the correct answer for each blank in the corresponding field under **Answers**, in the order the blanks appear in the question.
+5. To accept more than one answer for a blank, separate the alternatives with a semicolon (`;`).
+6. Save the question and use `Preview` to check how it appears to participants.
+
+For example:
+
+```text
+Question: The capital of France is ___, and the capital of the United States is ___.
+Answer for blank 1: Paris
+Answer for blank 2: Washington, D.C.;Washington DC;Washington
+```
+
+A question must contain at least one blank, and every blank must have a configured answer. Participants must fill in every blank before submitting the quiz. Answers are matched against the configured alternatives without regard to capitalization or leading and trailing spaces. All blanks must be answered correctly to earn credit for the question; partial credit is not awarded.
 
 ### Answer Hints
 
@@ -124,6 +237,10 @@ Similarly to videos, users can embed audio clips into their quizzes using the `A
 3. Select your file using either the Browse button or drag-and-drop functionality
 
 <Content path="/dashboard/user-guide/common/audio.md"/>
+
+#### Video and Audio Downloads for Quiz
+
+<Content path="/dashboard/user-guide/common/media-downloads.md"/>
 
 ### Manual Answer Grading
 
@@ -319,10 +436,10 @@ When associated to a skill, the survey is a method to gather feedback about that
 pieces of important data related to the skill. 
 
 A Survey currently supports four types of questions:
-- ``Multiple Choice`` - question will only allow a single choice to be selected
-- ``Multiple Answers`` - one or more choices are required to be selected  
-- ``Text Input`` - a freeform answer text is required
-- ``Rating`` - a star-based rating question with an ability configure between 3 and 10 stars  
+- [Multiple Choice](#multiple-choice-questions) - Select a single option
+- [Multiple Answers](#multiple-answers-questions) - Select one or more options
+- [Input Text](#input-text-questions) - Provide a free-form text response
+- [Rating](#rating-questions) - Select a star-based rating on a scale of 3 to 10 stars
 
 To administer a survey click the `Manage` button for that survey on the `Quizzes and Surveys` page.
 
@@ -343,6 +460,27 @@ Please use the Answer's dropdown to select the type.
 ::: tip
 Use the `Preview` button on the top left below the Survey name in order to see what the survey will look like to your users.
 :::
+
+### Rating Questions
+
+Rating questions collect feedback using a star-based scale. This question type is available for surveys, not quizzes. Responses are collected without grading.
+
+To create a Rating question:
+
+1. Click `Question +`, or edit an existing survey question.
+2. Select `Rating` from the question type dropdown.
+3. Enter the question text and explain what the low and high ends of the scale represent.
+4. Select a **Scale** from 3 to 10 stars. The default is 5 stars; no answer options are required.
+5. Save the question and use `Preview` to check how it appears to participants.
+
+For example:
+
+```text
+Question: How useful was this training? Rate from 1 star (not useful) to 5 stars (very useful).
+Scale: 5
+```
+
+Participants select a rating from one star up to the configured maximum. There is no correct or incorrect rating.
 
 ### Slide Deck for Survey
 
@@ -381,6 +519,10 @@ Similarly to videos, users can embed audio clips into their surveys using the `A
 3. Select your file using either the Browse button or drag-and-drop functionality
 
 <Content path="/dashboard/user-guide/common/audio.md"/>
+
+#### Video and Audio Downloads for Survey
+
+<Content path="/dashboard/user-guide/common/media-downloads.md"/>
 
 ### Survey Settings
 
@@ -525,6 +667,10 @@ A Quiz or a Survey can be associated to more than one skill in one or more proje
 A quiz/survey administrator can easily view which skills the quiz/survey is associated with by navigating 
 to the Skills page in that particular quiz/survey (``Quizzes and Surveys -> Quiz/Survey -> Skills ``)
 ![Quiz Skills Page Screenshot](../../screenshots/admin/page-quiz-skills.png):
+
+The **Associated Skills** table lists each skill's project ID, name, and skill ID. Use the **Skill Filter** to find skills by name. For projects you can administer, the project ID and skill name link to their administration pages.
+
+For projects you cannot administer, a **Contact** button appears next to the project ID. Click **Contact**, enter a message, and click **Send** to email that project's administrators. This lets quiz and survey administrators coordinate changes to associated training content with the administrators who manage it.
 
 ## Access
 

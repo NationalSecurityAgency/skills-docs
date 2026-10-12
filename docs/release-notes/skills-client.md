@@ -23,6 +23,29 @@ This approach ensures that integrators can rely on a stable and consistent libra
 ongoing evolution of the SkillTree Platform.
 :::
 
+
+## 3.6.5
+<release-date date="Oct. 2026" />
+- SkillTree 5.0 Support: Adds compatibility with the skills-service 5.0 major release.
+  - Prerequisite: Upgrade skills-service to v5.0.0+ before applying this skills-client-js update.
+
+## 3.6.4
+<release-date date="Sep. 2026" />
+- Upgraded JS libraries
+- Bug fixes
+
+## 3.6.3
+<release-date date="May. 2026" />
+- Upgraded JS libraries
+
+## 3.6.2
+<release-date date="May. 2026" />
+- Upgraded JS libraries
+
+## 3.6.1
+<release-date date="Nov. 2024" />
+- Updated README
+
 ## 3.6.0 
 <release-date date="Oct. 2024" />
 - Added the ability to place the skills-client library in a dormant state. When the library is in a dormant state, it

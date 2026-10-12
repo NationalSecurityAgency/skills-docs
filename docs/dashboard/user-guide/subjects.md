@@ -55,7 +55,7 @@ Skills under a hidden subject **can be**:
 - Copied within a project or to another project
 
 ::: tip
-Visible skills cannot be added or moved to a hidden subject
+Existing visible skills cannot be added or moved to a hidden subject. You can, however, [copy skills from another project into a hidden subject](/dashboard/user-guide/skills.html#copying-skills-into-hidden-subjects); the new copies are created with their visibility set to Hidden.
 :::
 
 ## Best practices   

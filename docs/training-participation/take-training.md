@@ -18,6 +18,7 @@ The training entry page provides an overview of your progress and includes the f
 From here users can proceed to:
 - [My Rank Page](/training-participation/take-training.html#my-rank-page): View your rank on the training leaderboard
 - [My Badges Page](/training-participation/take-training.html#my-badges-page): View your earned and available badges
+- [Learning Path Page](/training-participation/take-training.html#learning-path-page): View prerequisites and track your progress along the training's learning path
 - [Subject Page](/training-participation/take-training.html#subject-page): View progress in a specific subject and all of its available skills
 - **Search and Jump to Skill**: Quickly find any skill by name across all subjects and navigate directly to it
 
@@ -62,6 +63,45 @@ Available badges show your current progress for each badge. You can drill down i
 :::
 
 You can also drill down into any earned [badge](/training-participation/take-training.html#badge-page) to see the skills and points that contributed to earning it.
+
+## Learning Path Page
+
+When a training has a learning path, its overview page includes a **Learning Path** card showing the number of items you have achieved in the learning path and your completion percentage. Click **View** in this card to open the Learning Path page.
+
+A learning path connects skills and badges in the order required by the training creator. For example, in `Skill A -> Skill B`, you must fully achieve **Skill A** before you can earn points toward **Skill B**. If an item has multiple prerequisites, you must complete all of them before proceeding.
+
+### Track Your Progress
+
+The page displays an interactive diagram of the training's learning path:
+
+- **Progress Summary**: Shows the number of achieved items out of the total items in the path, along with a completion percentage and progress bar. This tracks learning path items rather than overall training points.
+- **Skills and Badges**: Different icons identify skills and badges; achieved items display a check mark.
+- **Connections**: Show which items are prerequisites for later items in the path.
+
+Use the diagram to identify prerequisites you still need to complete, then open a skill or badge to review its requirements and continue training.
+
+![Learning Path Page](../screenshots/admin/client-display-learning-path.png)
+
+### Learning Path Routes
+
+Below the diagram, the **Learning Path Routes** table lists each prerequisite relationship:
+
+| Column | Explanation |
+| --- | --- |
+| From | The prerequisite skill or badge |
+| From Status | Whether you have achieved the prerequisite: `Achieved` or `Not achieved` |
+| To | The skill or badge that requires the prerequisite |
+| To Status | Whether you have achieved the dependent item: `Achieved` or `Not achieved` |
+
+Click a skill or badge name in the table to open its details. You can sort the columns and use the pagination controls to browse longer paths. Prerequisites shared from another project include the source project's name.
+
+### Customize the Diagram
+
+Use the controls above the diagram to switch between vertical and horizontal orientations or open the diagram in fullscreen mode. Your orientation preference is saved in your browser between sessions.
+
+::: tip
+Learning paths are optional and are configured by the training creator. The Learning Path card appears only when the training has a learning path. To learn about configuring prerequisites, visit the [Learning Path administrative guide](/dashboard/user-guide/learning-path.html).
+:::
 
 ## Subject Page
 
@@ -314,6 +354,12 @@ To earn points for this audio/video-based skill, you must watch or listen to the
 Resize the video by dragging the bottom right corner. Your preferred size will be saved in your browser's local storage.
 :::
 
+#### Video and Audio Downloads
+
+When the training creator enables downloads, a download button appears in the video or audio player's control bar. Click it to download the media file for later reference. This is also available for media in quiz and survey questions when downloads are enabled for that item.
+
+Downloading or playing a file outside SkillTree does not record playback progress or earn points. To earn an audio/video-based skill through playback, watch or listen to the clip in the SkillTree player.
+
 ### Prerequisites
 
 Skills with prerequisites will display a locked icon on their progress bar.
@@ -355,13 +401,16 @@ Click the **Start** button to begin the quiz.
 
 ![Client Display Quiz Run Screenshot](../screenshots/progress-and-ranking/client-display-quiz-run.png)
 
-You may encounter three types of questions:
+You may encounter five types of questions:
 - **Multiple Choice**: Select one correct answer
 - **Multiple Answers**: Select all correct choices to earn credit
 - **Input Text**: Free-form text response, graded by quiz administrators
 - **Matching**: Match items from one list with their correct matches in another list
+- **Fill-in-the-Blank**: Enter the missing word or phrase in each blank within the question
 
-To finish the quiz, click the **Complete Quiz** button. The results page will then appear. If your quiz only includes Multiple Choice and Multiple Answers questions, it will be automatically graded by the system.
+For **Fill-in-the-Blank** questions, fill in every blank before submitting the quiz. Your answers are automatically checked against the accepted answers configured by the quiz administrator. Capitalization and leading or trailing spaces do not affect grading, but the rest of the answer must match an accepted word or phrase. Every blank must be correct to earn credit for the question; there is no partial credit.
+
+To finish the quiz, click the **Complete Quiz** button. The results page will then appear. Multiple Choice, Multiple Answers, Matching, and Fill-in-the-Blank questions are automatically graded by the system.
 
 If your quiz includes Input Text questions, these will be manually graded by quiz administrators. When you complete the quiz, administrators will be notified and the quiz will be marked as "Needs Grading."
 

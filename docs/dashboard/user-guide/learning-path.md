@@ -25,6 +25,14 @@ SkillTree will discover circular learning paths at the time of from and to selec
 erroneous learning path route. 
 ::: 
 
+## Learning Path Progress Page
+
+Trainees can view the project's learning path and their progress from the training overview page by clicking **View** in the **Learning Path** card. The card appears when the project has a learning path and summarizes achieved items and completion percentage.
+
+The learner-facing page includes an interactive prerequisite diagram, a progress summary, and a **Learning Path Routes** table with achievement statuses and links to skills and badges. This helps trainees identify remaining prerequisites and decide what to complete next.
+
+For instructions on using this page, visit the [Learning Path Page in the Training Participation Guide](/training-participation/take-training.html#learning-path-page).
+
 ## Orientation
 The Learning Path feature supports both vertical and horizontal orientations. The orientation can be toggled by clicking on
 the button at the top right of the Learning Path page.
@@ -74,5 +82,3 @@ To create a cross-project skill:
 6. Now in ``Project B`` ``Skill A`` can be added as a prerequisite to any local skill
    
   
-
-

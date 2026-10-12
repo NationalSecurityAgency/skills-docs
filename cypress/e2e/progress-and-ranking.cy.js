@@ -73,6 +73,14 @@ context('Progress and Ranking: Generate Screenshots', () => {
     cy.snap('client-display-proj', '[data-cy="skillsDisplayHome"]');
   });
 
+  it('Gen Skills Display - Learning Path', () => {
+    cy.viewport(1200, 1800);
+    cy.visit('/progress-and-rankings/projects/movies/learning-path');
+    cy.wait('@getConfig');
+    cy.get('[data-cy="learningPathTotalRows"] [data-cy="skillsBTableTotalRows"]').should('have.text', '7')
+    cy.snap('client-display-learning-path', '[data-cy="skillsDisplayHome"]');
+  });
+
   it('Gen Skills Display - my rank', () => {
     cy.visit('/progress-and-rankings/projects/movies/rank');
     cy.get('[data-cy="skillsDisplayHome"]').contains('My Rank');
