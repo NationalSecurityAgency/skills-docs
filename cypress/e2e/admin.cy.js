@@ -85,7 +85,7 @@ context('Admin: Generate Screenshots', () => {
 
     it('Gen Subject page with custom viewport', () => {
         // use custom ratio
-        cy.viewport(1400, 800);
+        cy.viewport(1450, 800);
 
         // subjects page
         cy.visit('/administrator/projects/movies')
@@ -185,7 +185,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Self Report page', () => {
-        cy.viewport(1400, 1200);
+        cy.viewport(1450, 1200);
 
         cy.visit('/administrator/projects/movies/badges')
 
@@ -205,7 +205,7 @@ context('Admin: Generate Screenshots', () => {
         cy.get('[data-cy="skillActionsBtn"]').click();
         cy.get('[data-cy="skillsActionsMenu"] [aria-label="Add Tag"]').click()
 
-        cy.viewport(1400, 550);
+        cy.viewport(1450, 550);
         const tagName = 'Two Thumbs Up!'
         cy.get('[data-pc-name="pcmaximizebutton"]').click()
         cy.wait(1000)
@@ -270,7 +270,7 @@ context('Admin: Generate Screenshots', () => {
     })
 
     it('Gen Project pages - levels', () => {
-        cy.viewport(1400, 800);
+        cy.viewport(1450, 800);
 
         cy.visit('/administrator/projects/movies/levels')
         cy.get('[data-cy="editLevelButton"]').should('have.length', 5);

@@ -157,7 +157,7 @@ context('Admin: Generate Quiz and Surveys Screenshots', () => {
     })
 
     it('quiz settings page', () => {
-        cy.viewport(1500, 500);
+        cy.viewport(1550, 500);
         cy.visit('/administrator/quizzes/ShortScienceQuiz/settings')
         cy.get('[data-cy="quizPassingSelector"]')
         cy.snap('page-quiz-settings');
