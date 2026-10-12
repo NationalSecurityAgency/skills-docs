@@ -80,6 +80,8 @@ The page displays an interactive diagram of the training's learning path:
 
 Use the diagram to identify prerequisites you still need to complete, then open a skill or badge to review its requirements and continue training.
 
+![Learning Path Page](../screenshots/admin/client-display-learning-path.png)
+
 ### Learning Path Routes
 
 Below the diagram, the **Learning Path Routes** table lists each prerequisite relationship:

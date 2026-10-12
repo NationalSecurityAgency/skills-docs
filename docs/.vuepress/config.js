@@ -92,6 +92,7 @@ if (pkiAuthInstallOnly && passAuthInstallOnly) {
 let nav = [
     { text: 'Overview', link: '/overview/' },
     { text: 'Install Guide', link: '/dashboard/install-guide/' },
+    { text: 'Training Participation Guide', link: '/training-participation/' },
     { text: 'Admin User Guide', link: '/dashboard/user-guide/' },
     { text: 'Integration Guide', link: '/skills-client/' },
     { text: 'Contribute', link: '/contribution/' },
