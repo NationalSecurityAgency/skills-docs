@@ -247,7 +247,7 @@ context('Admin: Generate Screenshots', () => {
 
     it('Gen Learning Path', () => {
         cy.visit('/administrator/projects/movies/learning-path')
-        cy.viewport(1400, 1200);
+        cy.viewport(1400, 1400);
         cy.get('[data-cy="graphLegend"]')
         cy.get('[data-cy="learningPathTable"] [data-cy="skillsBTableTotalRows"]')
         cy.wait(5000);
